@@ -377,7 +377,7 @@
 
 
 }
-=======
+
 @media all and (min-width: 1024px) { /*Pour les écrans de plus de 750pixels
 
   /* html */
@@ -431,6 +431,7 @@
     height: 65px;
     cursor: pointer;
   }
+}
 
 
   /*Menu Burger*/
@@ -730,3 +731,4 @@
     transform: scale(2);
     font-size: 1.5em;
   }
+}
