@@ -1,0 +1,29 @@
+.Fond {
+  width: 100%;
+  margin-left: 0%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Login {
+  width: 25%;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+}
+
+input {
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  margin-left: 28%;
+}
+
+input[type=submit] {
+  border: 1px solid white;
+  margin-left: 35%;
+  width: 30%;
+  margin-top: 20px;
+}

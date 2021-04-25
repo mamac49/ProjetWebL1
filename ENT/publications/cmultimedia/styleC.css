@@ -1,0 +1,62 @@
+.contenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.site {
+  display: flex;
+  justify-content: center;
+}
+
+.Center {
+  background-color: white;
+  height: 600px;
+  padding-top: 15px;
+  border-radius: 4px;
+}
+
+.Center h2 {
+  text-align: center;
+}
+
+.leaf {
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.texte {
+  font-size: 1.2em;
+}
+
+.liste {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Copybook i {
+  font-size: 2em;
+  margin: 5px;
+}
+
+.Copybook {
+  transform: scale(1);
+  font-size: 1em;
+  transition: transform 300ms ease-in-out;
+  transition: font-size 300ms ease-in-out;
+}
+
+.Copybook:hover {
+  font-size: 1.15em;
+  transform: scale(1.15);
+}
+
+.Copybook:visited {
+  text-decoration: none;
+}
+
+.Creation {
+  margin: 10px;
+}

@@ -1,0 +1,45 @@
+.contenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.site {
+  display: flex;
+  justify-content: center;
+}
+
+.Center {
+  height: 600px;
+  padding-top: 15px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.Center h4 {
+  text-align: center;
+}
+
+
+.Dropzone {
+  border: 3px dotted black;
+}
+
+.texte {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2px;
+  height: 45px;
+  text-align: left;
+}
+
+.file {
+  font-size: 2em;
+  margin: 5px;
+}
+
+.texte p {
+  height: auto;
+  margin: 0px;
+}

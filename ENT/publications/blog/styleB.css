@@ -1,0 +1,89 @@
+.Center {
+  padding-top: 50px;
+  background-color: white;
+  border-radius:8px;
+  width: 80%;
+  margin-left: 15%;
+  padding-bottom: 10px;
+}
+
+.Center h2{
+  text-align: center;
+  color:black;
+}
+
+.liste_sujets{
+  border:solid black 2px;
+  border-radius: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.espaces{
+  display:flex;
+  flex-direction: row;
+}
+
+.espaces hr{
+  flex:start;
+  margin-left: 20px;
+}
+
+.sujets{
+  display:flex;
+  flex-direction: row;
+}
+
+.sujets a{
+  flex:auto;
+  font-size: 19px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.sujets span{
+  flex:end;
+  color:black;
+  margin-right: 10px;
+}
+
+.Blog {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.Commentaire {
+  width: 500px;
+}
+
+.Comm {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.ComDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.ComDiv textarea {
+  float: right;
+}
+
+.Bouton-com {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.site {
+  width: 80%;
+}
+ input[type=button] {
+   width: 130px;
+   font-size: 1.2em;
+ }
