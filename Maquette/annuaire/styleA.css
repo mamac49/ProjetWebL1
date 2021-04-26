@@ -60,12 +60,15 @@
 
 #context_menu {
   width: 260px;
-  height: 130px;
+  height: 100px;
   padding-left: 10px;
-  padding-top: -10px;
   background-color: black;
   z-index: 1;
   text-decoration: none;
+}
+
+#show_profile{
+  margin-top: -17px;
 }
 
 #context_menu_icons {
