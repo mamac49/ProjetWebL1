@@ -9,7 +9,8 @@
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="../main.js"></script>
   </head>
-  <body onload="move_menu_burger();">
+  <body onload="move_menu_burger(); detect_clic();" id="site_container">
+
 
     <div class="site_container">
       <nav class="burger" id="menu_burger">
@@ -40,25 +41,28 @@
           <img src="../data/logo_millocheau.png" alt="Logo de l'école millocheau" class="taoki">
         </header>
 
+        <script src="menu_clic.js"></script>
         <div class="contenu">
           <div class="site">
             <div class="Center">
+              <!-- les contacts seront listé avec en premier le professeur
+                et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
               <h2 class="texte">Listes des contacts</h2>
               <ul class="contact_list">
                 <li class="contact">
-                  <a class="contact_link" onclick=open_context_menu(0)><i class="fas fa-user-tie icone"></i>M. Langlois</a>
+                  <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i>M. Langlois</a>
                 </li>
                 <li>
                   <hr class="hrcontact">
                 </li>
                 <li class="contact">
-                  <a class="contact_link" onclick=open_context_menu(1)><i class="fas fa-laugh-beam icone"></i>Romain</a>
+                  <a class="contact_link" id="contact1"><i class="fas fa-laugh-beam icone"></i>Romain</a>
                 </li>
                 <li>
                   <hr class="hrcontact">
                 </li>
                 <li class="contact">
-                  <a class="contact_link" onclick=open_context_menu(2)><i class="fas fa-laugh-beam icone"></i>Marie</a>
+                  <a class="contact_link" id="contact2"><i class="fas fa-laugh-beam icone"></i>Marie</a>
                 </li>
                 <li>
                   <hr class="hrcontact">
@@ -69,8 +73,7 @@
       </div>
 
       <!-- menu clic droit/-->
-      <script src="menu_clic.js"></script>
-      
+
       <div id="context_menu" class="context_menu" >
         <ul class="context_menu_list">
           <li class="context_menu_element" id="show_profile">
