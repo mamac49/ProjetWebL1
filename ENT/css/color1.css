@@ -4,7 +4,7 @@
   --main-color: rgb(29, 64, 65);
 }
 
-html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .Center, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link  {
+html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .Center, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer {
   color: var(--font-color);
 }
 
