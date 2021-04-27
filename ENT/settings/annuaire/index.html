@@ -4,67 +4,105 @@
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
     <link rel="stylesheet" href="styleA.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
-    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
+    <link rel="stylesheet" href="/ENT/css/style.css">
+    <link rel="stylesheet" href="/.css">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
-    <script src="/Projetwebl1/ENT/js/main.js"></script>
+    <script src="/ENT/js/main.js"></script>
   </head>
-<body onload="move_menu_burger(); ">
+  <body onload="move_menu_burger(); detect_clic();" id="site_container">
 
-  <div class="site_container">
-    <nav class="burger" id="menu_burger">
-      <ul class="menuListe">
-        <li><a class="menu_cross" id="burger_cross" href="index.html"><i class="fas fa-times icone"></i></a></li>
-        <li><a class="menu_link" href="/Projetwebl1/ENT/publications/cmultimedia/index.html"><div class="texteBurger"><i class="fas fa-book icone"></i>Cahiers multimédias</div></a></li>
-        <li><hr class="hrBurger"></li>
-        <li><a class="menu_link" href="/Projetwebl1/ENT/publications/blog/index.html"><div class="texteBurger"><i class="fas fa-book-open icone"></i>Blog</div></a></li>
-        <li><hr class="hrBurger"></li>
-        <li><a class="menu_link" href="/Projetwebl1/ENT/publications/files/index.html"><div class="texteBurger"><i class="fas fa-file-archive icone"></i>Archivage de fichier</div></a></li>
-        <li><hr class="hrBurger"></li>
-        <li><a class="menu_link" href="/Projetwebl1/ENT/settings/annuaire/index.html"><div class="texteBurger"><i class="far fa-address-book icone"></i>Annuaire</div></a></li>
-        <li><hr class="hrBurger"></li>
-      </ul>
-      <ul class="menuAutre">
-        <!--<li><input type="button" name="ChgtDeTheme" value="Jaune" onclick="LoadCSS" accesskey="t"> </li> Bouton pour changer de thème -->
-        <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/theme.html"><div class="texteBurger"><i class="fas fa-palette icone"></i>Thème</div></a></li>
-        <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.html"><div class="texteBurger"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
-        <li><div class="texteBurger"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></li>
-      </ul>
-    </nav>
-    <div class="site_pusher">
-      <header>
-        <span class="burger_icon" id="burger_button"><i class="fas fa-bars icone"></i></span>
-        <a href="index.html"><i class="fas fa-undo icone retour"></i></a>
-        <div class="Title">
-          <h1>Ecole Millocheau</h1>
-          <h2>GS - CP</h2>
-        </div>
-        <img src="/Projetwebl1/ENT/data/logo_millocheau.png" alt="Logo de l'école millocheau" class="taoki">
-      </header>
+
+    <div class="site_container">
+      <nav class="burger" id="menu_burger">
+        <ul class="menuListe">
+          <li><a class="menu_cross" id="burger_cross" href="index.html"><i class="fas fa-times icone"></i></a></li>
+          <li><a class="menu_link" href="../publications/cmultimedia/index.html"><i class="fas fa-book icone" id="icone"></i><div class="texteBurger">Cahiers multimédias</div></a></li>
+          <li><hr class="hrBurger"></li>
+          <li><a class="menu_link" href="../publications/blog/index.html"><i class="fas fa-book-open icone" id="icone"></i><div class="texteBurger">Blog</div></a></li>
+          <li><hr class="hrBurger"></li>
+          <li><i class="fas fa-file-archive icone"></i><div class="texteBurger">Archivage de fichier</div></li>
+          <li><hr class="hrBurger"></li>
+          <li><a class="menu_link" href="index.html"><i class="far fa-address-book icone" id="icone"></i><div class="texteBurger">Annuaire</div></a></li>
+          <li><hr class="hrBurger"></li>
+        </ul>
+        <ul class="menuAutre">
+          <li><a class="menu_link" href="../settings/theme.html"><i class="fas fa-palette icone" id="icone"></i><div class="texteBurger">Thème</div></a></li>
+          <li><a class="menu_link" href="../settings/parametres.html"><i class="fas fa-cogs icone" id="icone"></i><div class="texteBurger">Paramètres</div></a></li>
+          <li><i class="fas fa-sign-out-alt icone" id="icone"></i><div class="texteBurger">Se déconnecter</div></li>
+        </ul>
+      </nav>
+      <div class="site_pusher">
+        <header>
+          <span class="burger_icon" id="burger_button"><i class="fas fa-bars icone"></i></span>
+          <div class="Title">
+            <h1>Ecole Millocheau</h1>
+            <h2>GS - CP</h2>
+          </div>
+          <img src="../data/logo_millocheau.png" alt="Logo de l'école millocheau" class="taoki">
+        </header>
+
+        <script src="menu_clic.js"></script>
         <div class="contenu">
           <div class="site">
-            <div class="Centre">
+            <div class="Center">
+              <!-- les contacts seront listé avec en premier le professeur
+                et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
               <h2 class="texte">Listes des contacts</h2>
               <ul class="contact_list">
-                <li class="contact"><a class="contact_link" href=""><div class="textContact"><i class="fas fa-chalkboard-teacher icone"></i>M. Langlois</div></a></i></li>
-                <li><hr class="hrcontact"></li>
-                <li class="contact"><a class="contact_link" href=""><div class="textContact"><i class="fas fa-laugh-beam icone"></i>Prénom 1</div></a></i></li>
-                <li><hr class="hrcontact"></li>
-                <li class="contact"><a class="contact_link" href=""><div class="textContact"><i class="fas fa-laugh-beam icone"></i>Prénom 2</div></a></i></li>
-                <li><hr class="hrcontact"></li>
+                <li class="contact">
+                  <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i>M. Langlois</a>
+                </li>
+                <li>
+                  <hr class="hrcontact">
+                </li>
+                <li class="contact">
+                  <a class="contact_link" id="contact1"><i class="fas fa-laugh-beam icone"></i>Romain</a>
+                </li>
+                <li>
+                  <hr class="hrcontact">
+                </li>
+                <li class="contact">
+                  <a class="contact_link" id="contact2"><i class="fas fa-laugh-beam icone"></i>Marie</a>
+                </li>
+                <li>
+                  <hr class="hrcontact">
+                </li>
               </ul>
             </div>
           </div>
-
       </div>
+
+      <!-- menu clic droit/-->
+
+      <div id="context_menu" class="context_menu" >
+        <ul class="context_menu_list">
+          <li class="context_menu_element" id="show_profile">
+            <p class="context_menu_button"><i class="fa fa-address-card" id="context_menu_icons"></i>Profil</p>
+          </li>
+          <li>
+            <hr class="context_menu_hr">
+          </li>
+          <li class="context_menu_element" id="copy_phone">
+            <p class="context_menu_button"><i class="fa fa-copy" id="context_menu_icons"></i>Copier le numéro de téléphone</p>
+          </li>
+          <li>
+            <hr class="context_menu_hr">
+          </li>
+          <li class="context_menu_element" id="copy_mail">
+            <p class="context_menu_button"><i class="fa fa-envelope-open" id="context_menu_icons"></i>Copier le mail</p>
+          </li>
+        </ul>
+      </div>
+
       <footer>
         <ul>
-          <li><a href="/Projetwebl1/ENT/settings/contact/contact_bugreport.html" class="link_footer"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a></li>
-          <li><a href="/Projetwebl1/ENT/settings/credits.html" class="link_footer"><i class="fab fa-linux icone"></i>A propos</a></li>
+          <li><a href=" ../Contact/contact_bugreport.html"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a></li>
+          <li><a href="../credits.html"><i class="fab fa-linux icone"></i>A propos</a></li>
         </ul>
       </footer>
     </div>
+    
+    
 
 
   </div>
