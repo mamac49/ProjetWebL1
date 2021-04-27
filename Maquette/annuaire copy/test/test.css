@@ -1,0 +1,50 @@
+.MsgAlert
+{
+left:40%;
+top:40%;
+position:relative;
+width:200px;
+background:url(gfx/content00.gif) repeat-y;
+cursor:default;
+}
+
+.header
+{
+ margin-top:-20%;
+} 
+
+.bottom 
+{
+margin-top:3%;
+}
+
+.MsgAlert p 
+{
+margin-top: 0%; 
+font-family:Arial; 
+font-size:14px;
+ text-align:center; 
+color:white; 
+padding-left:10px; 
+padding-right:10px;
+} 
+
+.MsgAlert input 
+{
+margin-top: 3%;
+border:none;
+height:24px;
+width:80px;
+background:url(gfx/boutton_valider.gif);
+cursor: pointer;
+}
+
+.MsgAlert input:hover 
+{
+margin-top: 3%;
+border:none;
+height:24px;
+width:80px;
+background:url(gfx/boutton_valider_hover.gif);
+cursor:pointer;
+} 
