@@ -105,7 +105,6 @@
 
   .link_footer:visited .link_footer:checked .link_footer:link {
     text-decoration: none;
-    color: white;
   }
 
 
@@ -130,6 +129,7 @@
     padding-top: 50px;
   }
 
+ 
   /*Anniversaire*/
 
   .Anniversaire {
