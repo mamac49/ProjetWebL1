@@ -36,6 +36,6 @@ a:visited {
   color: var(--font-color);
 }
 
-.Centre {
+.Centre, .site {
   background-color: var(--font-color);
 }
