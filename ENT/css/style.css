@@ -122,7 +122,15 @@
     padding-top: 50px;
     background-color: white;
   }
- 
+
+  .Centre_main {
+    width: 1000px;
+    margin-left: 30%;
+    margin-right: 10%;
+    padding-top: 50px;
+    background-color: inherit;
+  }
+
   .site {
     background-color: white;
   }
