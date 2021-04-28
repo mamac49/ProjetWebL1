@@ -29,6 +29,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 }
 
 if ( isset($_POST['submit'])) {
+    echo "a";
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $mail = $_POST['mail'];
@@ -37,7 +38,6 @@ if ( isset($_POST['submit'])) {
     $pp = $_POST['pp'];
     $admin = $_POST['admin'];
 }
-echo $nom, $prenom, $mail, $password, $date, $pp, $admin;
 
 Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
