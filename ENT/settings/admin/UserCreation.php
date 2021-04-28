@@ -24,7 +24,14 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 
     $iduser = $nb + 1;
 
-    mysqli_query($link, "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `pp`, `admin`) VALUES ($iduser, $prenom, $nom, $mail, $password, $date, $pp, $admin);");
+    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `pp`, `admin`) VALUES ($iduser, $prenom, $nom, $mail, $password, $date, $pp, $admin);";
+
+    if (mysqli_query($link, $sql)) {
+        echo "succès";
+    } else {
+        echo "erreur";
+        mysqli_error($link);
+    }
 
 }
 
