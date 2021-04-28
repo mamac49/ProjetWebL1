@@ -14,7 +14,7 @@ function dbConnect() {
 
 
 
-function Create($nom, $prenom, $mail, $password, $date)
+function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 {
     $link = dbConnect();
     if ($result = mysqli_query($link, "SELECT * FROM users")); {
@@ -37,8 +37,7 @@ if ( isset($_POST['submit'])) {
     $pp = $_POST['pp'];
     $admin = $_POST['admin'];
 }
-
-Create($nom, $prenom, $mail, $password, $date);
+Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
 mysqli_close($link);
 
