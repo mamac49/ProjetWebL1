@@ -1,9 +1,31 @@
 <?php
 error_reporting(E_ALL);
 
-function Create($nom, $prenom, $mail, $password, $date)
+function dbConnect() {
+    $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
+
+    if (mysqli_connect_errno()) {
+            echo 'Erreur d accès à la base' . mysqli_connect_error();
+            exit;
+    }
+    echo 'accès réussi'."\n";
+    return $link;
+}
+
+
+
+function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 {
-    //* Ajouter tout ça dans la BD
+    $link = dbConnect();
+    if ($result = mysqli_query($link, "SELECT * FROM users")); {
+        $nb = mysqli_num_rows($result);
+    }
+    mysqli_free_result($result);
+
+    $iduser = $nb + 1;
+
+    mysqli_query($link, "INSERT INTO `users` ($iduser, $prenom, $nom, $mail, $password, $date, $pp, $admin)");
+
 }
 
 if ( isset($_POST['submit'])) {
@@ -12,11 +34,11 @@ if ( isset($_POST['submit'])) {
     $mail = $_POST['mail'];
     $password = $_POST['mdp'];
     $date = $_POST['datenaissance'];
-
-    exit;
+    $pp = $_POST['pp'];
+    $admin = $_POST['admin'];
 }
+Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
-Create($nom, $prenom, $mail, $password, $date);
-
+mysqli_close($link);
 
 ?>
