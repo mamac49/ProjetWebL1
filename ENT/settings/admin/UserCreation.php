@@ -24,7 +24,7 @@ function Create($nom, $prenom, $mail, $password, $date)
 
     $iduser = $nb + 1;
 
-    mysqli_query($link, "INSERT INTO `users` ($iduser, $prenom, $nom, $mail, $password, $date)");
+    mysqli_query($link, "INSERT INTO `users` ($iduser, $prenom, $nom, $mail, $password, $date, $pp, $admin)");
 
 }
 
@@ -34,8 +34,8 @@ if ( isset($_POST['submit'])) {
     $mail = $_POST['mail'];
     $password = $_POST['mdp'];
     $date = $_POST['datenaissance'];
-
-    exit;
+    $pp = $_POST['pp'];
+    $admin = $_POST['admin'];
 }
 
 Create($nom, $prenom, $mail, $password, $date);
