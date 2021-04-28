@@ -2,7 +2,7 @@
 Mouse_X = 0 ;
 Mouse_Y = 0 ;
 contextMenuOpened = false;
-function detect_clic(){
+function detect_click(){
   var contact = document.getElementById("contact0");
   contact.onclick = open_context_menu;
   var contact = document.getElementById("contact1");
@@ -11,7 +11,13 @@ function detect_clic(){
   contact.onclick = open_context_menu;
   
 }
- 
+
+
+
+function detect_click_outside(){
+  var site = document.getElementById("page") ;
+  site.onclick = close_context_menu;  
+}
 
 //on récupère la position du curseur en pixels
 function posCur(evt) {
@@ -34,8 +40,19 @@ function open_context_menu(){
   menu.style.left = (-10 + Mouse_X) + "px";
   //puis on change la classe du menu, pour qu'il s'affiche
   document.getElementById("context_menu").className = "show_context_menu";
+  contextMenuOpened = true;
+}
+
+function close_context_menu() {
+  if (contextMenuOpened == true) {
+  menu = document.getElementById("context_menu"); 
+  document.getElementById("context_menu").className = "context_menu";
+  contextMenuOpened = false;
+  }
   
 }
+
+
 
 
 

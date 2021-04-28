@@ -9,11 +9,10 @@
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="../main.js"></script>
   </head>
-  <body onload="move_menu_burger(); detect_clic();" id="site_container">
-
+  <body onload="move_menu_burger(); detect_click();" >
 
     <div class="site_container">
-      <nav class="burger" id="menu_burger">
+      <nav class="burger" id="menu_burger" >
         <ul class="menuListe">
           <li><a class="menu_cross" id="burger_cross" href="index.html"><i class="fas fa-times icone"></i></a></li>
           <li><a class="menu_link" href="../publications/cmultimedia/index.html"><i class="fas fa-book icone" id="icone"></i><div class="texteBurger">Cahiers multimédias</div></a></li>
@@ -72,27 +71,7 @@
           </div>
       </div>
 
-      <!-- menu clic droit/-->
-
-      <div id="context_menu" class="context_menu" >
-        <ul class="context_menu_list">
-          <li class="context_menu_element" id="show_profile">
-            <p class="context_menu_button"><i class="fa fa-address-card" id="context_menu_icons"></i>Profil</p>
-          </li>
-          <li>
-            <hr class="context_menu_hr">
-          </li>
-          <li class="context_menu_element" id="copy_phone">
-            <p class="context_menu_button"><i class="fa fa-copy" id="context_menu_icons"></i>Copier le numéro de téléphone</p>
-          </li>
-          <li>
-            <hr class="context_menu_hr">
-          </li>
-          <li class="context_menu_element" id="copy_mail">
-            <p class="context_menu_button"><i class="fa fa-envelope-open" id="context_menu_icons"></i>Copier le mail</p>
-          </li>
-        </ul>
-      </div>
+      
 
       <footer>
         <ul>
@@ -100,6 +79,28 @@
           <li><a href="../credits.html"><i class="fab fa-linux icone"></i>A propos</a></li>
         </ul>
       </footer>
+    </div>
+
+    <!-- menu clic droit/-->
+
+    <div id="context_menu" class="context_menu" >
+      <ul class="context_menu_list">
+        <li class="context_menu_element" id="show_profile">
+          <p class="context_menu_button"><i class="fa fa-address-card" id="context_menu_icons"></i>Profil</p>
+        </li>
+        <li>
+          <hr class="context_menu_hr">
+        </li>
+        <li class="context_menu_element" id="copy_phone">
+          <p class="context_menu_button"><i class="fa fa-copy" id="context_menu_icons"></i>Copier le numéro de téléphone</p>
+        </li>
+        <li>
+          <hr class="context_menu_hr">
+        </li>
+        <li class="context_menu_element" id="copy_mail">
+          <p class="context_menu_button"><i class="fa fa-envelope-open" id="context_menu_icons"></i>Copier le mail</p>
+        </li>
+      </ul>
     </div>
     
     
