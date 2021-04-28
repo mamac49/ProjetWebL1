@@ -37,7 +37,7 @@ if ( isset($_POST['submit'])) {
     $pp = $_POST['pp'];
     $admin = $_POST['admin'];
 }
-echo $nom;
+echo $nom, $prenom, $mail, $password, $date, $pp, $admin;
 
 Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
