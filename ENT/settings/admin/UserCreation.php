@@ -28,7 +28,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 
 }
 
-if ( isset($_POST['submit'])) {
+if ( isset($_POST['valider'])) {
     echo "a";
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
@@ -38,8 +38,6 @@ if ( isset($_POST['submit'])) {
     $pp = $_POST['pp'];
     $admin = $_POST['admin'];
 }
-
-echo $_POST['submit'];
 
 Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
