@@ -29,8 +29,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
     if (mysqli_query($link, $sql)) {
         echo "succès";
     } else {
-        echo "erreur";
-        mysqli_error($link);
+        echo "erreur" . mysqli_error($link);
     }
 
 }
