@@ -39,6 +39,8 @@ if ( isset($_POST['submit'])) {
     $admin = $_POST['admin'];
 }
 
+echo $_POST['submit'];
+
 Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
 mysqli_close($link);
