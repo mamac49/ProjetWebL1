@@ -1,0 +1,30 @@
+
+<html>
+<title></title>
+<script type="text/javascript">
+function clic(obj)
+{
+     if (obj.id=="idDiv1" || obj.id=="idDiv2")
+        document.getElementById("idOut").innerHTML += " vous avez cliquez dans "+obj.id+" ";
+     else
+        document.getElementById("idOut").innerHTML += " vous avez cliquez quelque part dans la page...<br>"; 
+}
+</script>
+<body onclick="clic(this)">
+ 
+<div id="idDiv1" onclick="clic(this)" style="border: 1px solid #000000">
+ceci est mon 1er div
+<input type="text" value="mon texte" />
+</div>
+ 
+<br><br>
+<div id="idDiv2" onclick="clic(this)" style="border: 1px solid #000000; width: 300px; height: 200px">
+ceci est mon 2ème div
+<input type="text" value="mon texte" />
+</div>
+ 
+ 
+<br><br><br><br>
+<div id="idOut"></div>
+</body>
+</html>
