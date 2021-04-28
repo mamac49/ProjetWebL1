@@ -17,7 +17,7 @@ function dbConnect() {
 function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 {
     $link = dbConnect();
-    if ($result = mysqli_query($link, "SELECT * FROM users")); {
+    if ($result = mysqli_query($link, "SELECT * FROM users")) {
         $nb = mysqli_num_rows($result);
     }
     mysqli_free_result($result);
@@ -37,9 +37,6 @@ if ( isset($_POST['valider'])) {
     $pp = $_POST['pp'];
     $admin = $_POST['admin'];
 }
-
-echo $nom, $prenom, $mail, $password, $date, $pp, $admin;
-
 
 Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
