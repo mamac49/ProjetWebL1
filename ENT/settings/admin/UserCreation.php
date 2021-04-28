@@ -14,7 +14,7 @@ function dbConnect() {
 
 
 
-function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
+function Create($nom, $prenom, $mail, $password, $date, $admin)
 {
     $link = dbConnect();
     if ($result = mysqli_query($link, "SELECT * FROM users")) {
@@ -24,7 +24,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 
     $iduser = $nb + 1;
 
-    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `pp`, `admin`) VALUES ($iduser, $prenom, $nom, $mail, $password, $date, $pp, $admin);";
+    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ($iduser, $prenom, $nom, $mail, $password, $date, $admin);";
 
     if (mysqli_query($link, $sql)) {
         echo "succès";
