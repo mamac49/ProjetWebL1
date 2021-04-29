@@ -18,7 +18,9 @@ function Connexion($mail, $password) {
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
-        $admin = $row['admin'];
+        if (isset ($row['admin']))  {
+          $admin = True
+        }
         $id = $row['iduser'];
     }
     //mysqli_free_result($result);
@@ -27,8 +29,6 @@ function Connexion($mail, $password) {
         $_SESSION["Connected"] = True;
         $_SESSION["Mail"] = $mail;
         $_SESSION["ID"] = $id;
-        var_dump($Admin);
-        var_dump($row['admin']);
         if ($admin == "1") {
           $_SESSION["Admin"] = True;
         }
