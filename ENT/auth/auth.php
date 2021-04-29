@@ -27,7 +27,7 @@ function Connexion($mail, $password) {
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
         exit();
     } else {
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/auth/');
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/auth/login.php');
         exit();
     }
 }
