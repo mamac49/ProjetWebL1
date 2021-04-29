@@ -3,7 +3,7 @@ session_start();
 
 $_SESSION['Connected'] = false;
 
-echo $_SESSION['Connected'];
+var_dump($_SESSION['Connected']);
 
 
 //header('Location: auth.php');
