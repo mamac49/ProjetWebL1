@@ -7,7 +7,14 @@ if ($_SESSION["Connected"] = "True") {
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
-  <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleB.css">
+    <meta charset="utf-8">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="styleB.css">
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
+    <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
+    <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
   <?php
       include 'base.php'
