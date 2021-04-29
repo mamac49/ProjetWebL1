@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 error_reporting(E_ALL);
 
 function dbConnect() {
@@ -50,4 +53,58 @@ Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
 mysqli_close($link);
 
+if ($_SESSION["Connected"] = "True" and $_SESSION["Admin"] = "True") {
+?>
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Page d'administration</title>
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
+    <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
+    <script src="/Projetwebl1/ENT/js/main.js"></script>
+    <link rel="stylesheet" href="styleAd.css">
+  </head>
+
+  <body onload="move_menu_burger(); ">
+
+    <div class="site_container">
+    <?php
+      include 'base.php'
+    ?>
+
+        <div class="Centre">
+            <form action="UserCreation.php" method="POST" class="Formulaire">
+                <input type="text" name="nom" placeholder="Nom" class="FormCrea" required>
+                <input type="text" name="prenom" placeholder="Prénom" class="FormCrea" required>
+                <input type="email" name="mail" placeholder="E-mail" class="FormCrea" required>
+                <input type="password" name="mdp" placeholder="Premier mot de passe" class="FormCrea" required>
+                <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
+                <label for="file">Sélectionner la PP</label>
+                <input type="file" id="file" name="pp" accept="image/*" required>
+                <label for="admin">Admin ?</label>
+                <input type="checkbox" value="1" name="admin">
+                <input type="submit" name="valider" value="Creer" class="FormCrea Bouton">
+            </form>
+
+        </div>
+
+
+        <footer>
+          <ul>
+            <li><a href="/Projetwebl1/ENT/settings/contact/contact_bugreport.html" class="link_footer"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a></li>
+            <li><a href="/Projetwebl1/ENT/settings/credits.html" class="link_footer"><i class="fab fa-linux icone"></i>A propos</a></li>
+          </ul>
+        </footer>
+        </div>
+    </div>
+  </div>
+  </div>
+</html>
+
+<?php
+}
 ?>

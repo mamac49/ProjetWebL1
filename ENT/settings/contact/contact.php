@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+if ($_SESSION["Connected"] = "True") {
 ?>
 
 <!DOCTYPE html>
@@ -25,3 +27,7 @@ session_start();
     </fieldset>
   </body>
 </html>
+
+<?php
+}
+?>

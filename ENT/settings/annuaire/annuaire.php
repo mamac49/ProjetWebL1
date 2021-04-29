@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+if ($_SESSION["Connected"] = "True") {
 ?>
 
 <!DOCTYPE html>
@@ -17,33 +19,9 @@ session_start();
 
 
     <div class="site_container">
-      <nav class="burger" id="menu_burger">
-        <ul class="menuListe">
-          <li><a class="menu_cross" id="burger_cross" href="index.html"><i class="fas fa-times icone"></i></a></li>
-          <li><a class="menu_link" href="../publications/cmultimedia/index.html"><i class="fas fa-book icone" id="icone"></i><div class="texteBurger">Cahiers multimédias</div></a></li>
-          <li><hr class="hrBurger"></li>
-          <li><a class="menu_link" href="../publications/blog/index.html"><i class="fas fa-book-open icone" id="icone"></i><div class="texteBurger">Blog</div></a></li>
-          <li><hr class="hrBurger"></li>
-          <li><i class="fas fa-file-archive icone"></i><div class="texteBurger">Archivage de fichier</div></li>
-          <li><hr class="hrBurger"></li>
-          <li><a class="menu_link" href="index.html"><i class="far fa-address-book icone" id="icone"></i><div class="texteBurger">Annuaire</div></a></li>
-          <li><hr class="hrBurger"></li>
-        </ul>
-        <ul class="menuAutre">
-          <li><a class="menu_link" href="../settings/theme.html"><i class="fas fa-palette icone" id="icone"></i><div class="texteBurger">Thème</div></a></li>
-          <li><a class="menu_link" href="../settings/parametres.html"><i class="fas fa-cogs icone" id="icone"></i><div class="texteBurger">Paramètres</div></a></li>
-          <li><i class="fas fa-sign-out-alt icone" id="icone"></i><div class="texteBurger">Se déconnecter</div></li>
-        </ul>
-      </nav>
-      <div class="site_pusher">
-        <header>
-          <span class="burger_icon" id="burger_button"><i class="fas fa-bars icone"></i></span>
-          <div class="Title">
-            <h1>Ecole Millocheau</h1>
-            <h2>GS - CP</h2>
-          </div>
-          <img src="../data/logo_millocheau.png" alt="Logo de l'école millocheau" class="taoki">
-        </header>
+    <?php
+      include 'base.php'
+    ?>
 
         <script src="menu_clic.js"></script>
         <div class="contenu">
@@ -112,3 +90,7 @@ session_start();
   </div>
 </body>
 </html>
+
+<?php
+}
+?>

@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+if ($_SESSION["Connected"] = "True") {
+?>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -28,3 +34,7 @@
     </footer>
 </body>
 </html>
+
+<?php
+}
+?>

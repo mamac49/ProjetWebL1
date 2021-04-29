@@ -1,0 +1,45 @@
+<?php
+session_start();
+
+if ($_SESSION["Connected"] = "True") {
+?>
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Theme</title>
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
+    <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
+    <script src="/Projetwebl1/ENT/js/main.js"></script>
+  </head>
+<body onload="move_menu_burger(); ">
+
+  <div class="site_container">
+  <?php
+      include 'base.php'
+    ?>
+
+      <div>
+        <form>
+          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')" value="light mode">
+          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')" value="dark mode">
+        </form>
+      </div>
+
+      <footer>
+        <ul>
+          <li><a href="/Projetwebl1/ENT/settings/contact/contact_bugreport.html" class="link_footer"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a></li>
+          <li><a href="/Projetwebl1/ENT/settings/credits.html" class="link_footer"><i class="fab fa-linux icone"></i>A propos</a></li>
+        </ul>
+      </footer>
+      </div>
+  </div>
+</body>
+</html>
+
+<?php
+}
+?>
