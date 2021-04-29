@@ -19,6 +19,7 @@ function Connexion($mail, $password) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
     }
+    mysqli_free_result($result);
 
     if (password_verify($password, $mdp)) {
         $_SESSION["Connected"] = "True";
