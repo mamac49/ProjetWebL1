@@ -24,7 +24,7 @@ function Connexion($mail, $password) {
         $id = $row['iduser'];
     }
     var_dump($admin);
-    echo $admin;
+    var_dump($row['admin']);
     mysqli_free_result($result);
 
     if (password_verify($password, $mdp)) {
