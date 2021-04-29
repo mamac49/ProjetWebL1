@@ -9,7 +9,7 @@ if ($_SESSION["Connected"] = "True") {
   <head>
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
-    <link rel="stylesheet" href="styleF.css">
+    <link rel="stylesheet" href="/ENT/css/styleF.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
