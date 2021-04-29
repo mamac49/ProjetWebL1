@@ -14,7 +14,7 @@ function dbConnect() {
 function ChgtMdp($mdpA, $mdpN) {
    $link = dbConnect();
 
-   $sql = 'SELECT * FROM `users` WHERE `mail`= $_SESSION["Mail"]';
+   $sql = "SELECT * FROM `users` WHERE `mail`= $_SESSION[Mail]";
    if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_assoc($result);
     $mdp = $row['mdp'];
