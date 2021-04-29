@@ -18,6 +18,7 @@ function Connexion($mail, $password) {
 
     if ($result = mysqli_query($link, $sql)) {
         while ( $row = mysqli_fetch_assoc($result)) {
+            echo "a";
             $mdp = $row['mdp'];
             var_dump($row);
         }
