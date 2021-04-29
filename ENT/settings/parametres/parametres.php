@@ -17,8 +17,8 @@ if ($_SESSION["Connected"] = "True") {
   </head>
 
   <?php
-      include 'base.php'
-    ?>
+      include ("base.php");
+  ?>
     <a href="../index.html"><i class="fas fa-undo icone retour"></i></a>
 
     <fieldset class="legal">

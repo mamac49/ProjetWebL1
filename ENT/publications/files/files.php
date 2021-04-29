@@ -17,7 +17,7 @@ if ($_SESSION["Connected"] = "True") {
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
     <?php
-      include 'base.php'
+      include ("base.php");
     ?>
       <div class="contenu">
         <div class="site">
