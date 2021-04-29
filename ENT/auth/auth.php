@@ -23,13 +23,14 @@ function Connexion($mail, $password) {
         }
         $id = $row['iduser'];
     }
+    var_dump($admin);
     mysqli_free_result($result);
 
     if (password_verify($password, $mdp)) {
         $_SESSION["Connected"] = True;
         $_SESSION["Mail"] = $mail;
         $_SESSION["ID"] = $id;
-        if ($admin == "1") {
+        if ($admin == True) {
           $_SESSION["Admin"] = True;
         }
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
