@@ -17,15 +17,11 @@ function Connexion($mail, $password) {
     $sql = "SELECT 'mdp' FROM `users` WHERE `mail`= '$mail' ";
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
-        $mdp = $row[`mdp`];
-        var_dump($row);
-        var_dump($result);
-        echo $mdp . "<br>";
+        $mdp = $row[`date_n`];
     } else {
         echo "erreur" . mysqli_error($link);
     }
-
-    echo $mdp . "<br>" . $password;
+    echo $mdp;
 
     if ($password == $mdp) {
         echo "connexion réussi";
