@@ -28,6 +28,8 @@ function Connexion($mail, $password) {
 
     if ($password == $mdp) {
         echo "connexion réussi";
+    } else {
+        echo "erreur"
     }
 }
 
