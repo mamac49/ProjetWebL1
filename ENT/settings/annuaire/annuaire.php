@@ -72,12 +72,9 @@ if ($_SESSION["Connected"] = "True") {
         </ul>
       </div>
 
-      <footer>
-        <ul>
-          <li><a href=" ../Contact/contact_bugreport.html"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a></li>
-          <li><a href="../credits.html"><i class="fab fa-linux icone"></i>A propos</a></li>
-        </ul>
-      </footer>
+      <?php
+      include ("../../footer.php");
+      ?>
     </div>
     
     

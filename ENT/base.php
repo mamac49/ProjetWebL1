@@ -40,5 +40,6 @@ if ($_SESSION["Connected"] = "True") {
       </header>
 
 <?php
+
 }
 ?>
