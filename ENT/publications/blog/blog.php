@@ -6,6 +6,9 @@ if ($_SESSION["Connected"] = "True") {
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
+  <head>
+  <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleB.css">
+  </head>
   <?php
       include 'base.php'
     ?>
