@@ -16,8 +16,8 @@ if ($_SESSION["Connected"] = "True") {
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
-  <?php
-      include 'base.php'
+    <?php
+      include 'base.php';
     ?>
 
 
