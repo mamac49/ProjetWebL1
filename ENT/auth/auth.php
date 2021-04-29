@@ -22,6 +22,8 @@ function Connexion($mail, $password) {
         if (isset ($row['admin'])) {
           $admin = True;
           echo "a";
+        } else {
+          $admin = False;
         }
         $id = $row['iduser'];
     }
