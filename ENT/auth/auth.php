@@ -36,6 +36,10 @@ if (isset($_POST['Valider'])) {
 }
 
 Connexion($mail, $password);
+
+if ($_SESSION["Connected"] = true) {
+    header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+} else {
 ?>
 
 <!DOCTYPE html>
@@ -65,3 +69,6 @@ Connexion($mail, $password);
 
   </body>
 </html>
+ <?php
+}
+?>
