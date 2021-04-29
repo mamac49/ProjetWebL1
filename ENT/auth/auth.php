@@ -28,8 +28,8 @@ function Connexion($mail, $password) {
         if ($admin == 1) {
           $_SESSION["Admin"] = True;
         }
-
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+        var_dump($admin);
+        //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
         exit();
     }
 }
