@@ -27,10 +27,11 @@ function Connexion($mail, $password) {
         $_SESSION["Connected"] = True;
         $_SESSION["Mail"] = $mail;
         $_SESSION["ID"] = $id;
+        var_dump($Admin);
         if ($admin == "1") {
           $_SESSION["Admin"] = True;
         }
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+        //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
         exit();
     }
 }
