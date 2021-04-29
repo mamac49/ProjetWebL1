@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-error_reporting(E_ALL);
-
 function dbConnect() {
     $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
 
