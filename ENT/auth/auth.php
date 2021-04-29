@@ -8,7 +8,6 @@ function dbConnect() {
             echo 'Erreur d accès à la base' . mysqli_connect_error();
             exit;
     }
-    echo 'accès réussi'."\n";
     return $link;
 }
 
@@ -18,13 +17,14 @@ function Connexion($mail, $password) {
     $sql = "SELECT 'mdp' FROM `users` WHERE 'mail'='$mail'";
 
     if ($result = mysqli_query($link, $sql)) {
-        echo "succès";
         while ( $row = mysqli_fetch_assoc($result)) {
             $mdp = $row['mdp'];
         }
     } else {
         echo "erreur" . mysqli_error($link);
     }
+
+    echo $mdp . $password;
 
     if ($password == $mdp) {
         echo "connexion réussi";
