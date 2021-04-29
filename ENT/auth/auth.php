@@ -1,8 +1,6 @@
 <?php
 session_start();
 
-mysqli_free_result($result);
-
 function dbConnect() {
     $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
 
@@ -41,7 +39,8 @@ if (isset($_POST['Valider'])) {
 Connexion($mail, $password);
 
 if ($_SESSION['Connected'] = bool(true)) {
-    header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+    //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+    echo "a";
 } else {
 ?>
 
