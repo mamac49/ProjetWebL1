@@ -28,6 +28,8 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 
     if (mysqli_query($link, $sql)) {
         echo "succès";
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin');
+        exit();
     } else {
         echo "erreur" . mysqli_error($link);
     }
