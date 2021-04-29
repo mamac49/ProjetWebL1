@@ -14,11 +14,10 @@ function dbConnect() {
 function Connexion($mail, $password) {
     $link = dbConnect();
 
-    $sql = "SELECT 'mdp' FROM `users` WHERE `mail`= '$mail' ";
+    $sql = "SELECT * FROM `users` WHERE `mail`= '$mail' ";
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
-        $mdp = $row[`date_n`];
-        echo "a";
+        $mdp = $row['date_n'];
     } else {
         echo "erreur récupération" . mysqli_error($link);
     }
