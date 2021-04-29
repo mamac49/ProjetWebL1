@@ -22,7 +22,7 @@ function Connexion($mail, $password) {
         echo "erreur récupération" . mysqli_error($link);
     }
 
-    if (password_verify($mdp, $hash)) {
+    if (password_verify($password, $mdp)) {
         echo "connexion réussi";
     } else {
         echo "erreur connexion";
