@@ -21,13 +21,14 @@ function Connexion($mail, $password) {
         $admin = $row['admin'];
         $id = $row['iduser'];
     }
-    mysqli_free_result($result);
+    //mysqli_free_result($result);
 
     if (password_verify($password, $mdp)) {
         $_SESSION["Connected"] = True;
         $_SESSION["Mail"] = $mail;
         $_SESSION["ID"] = $id;
         var_dump($Admin);
+        var_dump($row['admin']);
         if ($admin == "1") {
           $_SESSION["Admin"] = True;
         }
