@@ -40,3 +40,6 @@ a:visited {
   color: var(--font-color);
 }
 
+.sujets a:visited {
+  color: var(--font-color-nde)
+}
