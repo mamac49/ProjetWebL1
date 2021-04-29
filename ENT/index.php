@@ -17,7 +17,8 @@ if ($_SESSION["Connected"] = "True") {
   </head>
 
     <?php
-      include 'base.php'
+      include 'base.php';
+      var_dump($_SESSION["Admin"]);
     ?>
 
       <div class="contenu">

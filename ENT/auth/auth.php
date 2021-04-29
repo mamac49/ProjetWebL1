@@ -18,12 +18,17 @@ function Connexion($mail, $password) {
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
+        $admin = $row['admin'];
     }
     mysqli_free_result($result);
 
     if (password_verify($password, $mdp)) {
         $_SESSION["Connected"] = True;
         $_SESSION["Mail"] = $mail;
+        if ($admin == 1) {
+          $_SESSION["Admin"] = True;
+        }
+
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
         exit();
     }
