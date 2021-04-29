@@ -17,7 +17,7 @@ function Connexion($mail, $password) {
     $sql = "SELECT * FROM `users` WHERE `mail`= '$mail' ";
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
-        $mdp = $row['date_n'];
+        $mdp = $row['mdp'];
     } else {
         echo "erreur récupération" . mysqli_error($link);
     }
