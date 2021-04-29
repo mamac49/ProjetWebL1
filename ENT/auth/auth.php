@@ -19,14 +19,14 @@ function Connexion($mail, $password) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row[`date_n`];
     } else {
-        echo "erreur" . mysqli_error($link);
+        echo "erreur récupération" . mysqli_error($link);
     }
     echo $mdp;
 
     if ($password == $mdp) {
         echo "connexion réussi";
     } else {
-        echo "erreur";
+        echo "erreur connexion";
     }
 }
 
