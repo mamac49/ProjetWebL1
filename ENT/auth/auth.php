@@ -24,10 +24,10 @@ function Connexion($mail, $password) {
     if (password_verify($password, $mdp)) {
         $_SESSION["Connected"] = "True";
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
-        exit();
+        //exit();
     } else {
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/auth/auth.php');
-        exit();
+        //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/auth/auth.php');
+        //exit();
     }
 }
 
