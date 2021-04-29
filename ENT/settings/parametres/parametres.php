@@ -65,11 +65,11 @@ if ($_SESSION["Connected"] = true) {
         <p>
         <h2>Réinitialisation du mot de passe</h2>
         <label>Ancien mot de passe</label>
-        <input type="text" name="passwordA" minlengh="8" maxlength="16" required>
+        <input type="password" name="passwordA" minlengh="8" maxlength="16" required>
         </p>
         <p>
         <label>Nouveau mot de passe</label>
-        <input type="text" name="passwordN" minlengh="8" maxlength="16" required>
+        <input type="password" name="passwordN" minlengh="8" maxlength="16" required>
         </p>
         <input type="submit" name="Valider" value="Valider">
       </form>
