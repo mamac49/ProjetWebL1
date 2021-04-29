@@ -15,7 +15,7 @@ function dbConnect() {
 function Connexion($mail, $password) {
     $link = dbConnect();
 
-    $sql = "SELECT 'mdp' FROM `users` WHERE 'mail'=$mail";
+    $sql = "SELECT 'mdp' FROM `users` WHERE 'mail'='$mail'";
 
     if ($result = mysqli_query($link, $sql)) {
         echo "succès";
