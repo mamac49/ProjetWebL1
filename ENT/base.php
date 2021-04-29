@@ -1,3 +1,17 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styleC.css">
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
+    <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
+    <script src="/Projetwebl1/ENT/js/main.js"></script>
+  </head>
+<body onload="move_menu_burger(); ">
+
+  <div class="site_container">  
+    
+    
     <nav class="burger" id="menu_burger">
       <ul class="menuListe">
         <li><a class="menu_cross" id="burger_cross" href="index.html"><i class="fas fa-times icone"></i></a></li>
