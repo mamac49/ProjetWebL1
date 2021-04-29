@@ -26,9 +26,7 @@ function Connexion($mail, $password) {
         echo "erreur" . mysqli_error($link);
     }
 
-    echo $mdp. $password;
-
-    if (password_hash($password, PASSWORD_DEFAULT) == $mdp) {
+    if ($password == $mdp) {
         echo "connexion réussi";
     }
 }
@@ -38,6 +36,6 @@ if (isset($_POST['Valider'])) {
     $password = $_POST['MotDePasse'];
 }
 
-Connexion($mail, $password);
+Connexion($mail, password_hash($password, PASSWORD_DEFAULT));
 
 ?>
