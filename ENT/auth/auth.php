@@ -31,7 +31,7 @@ function Connexion($mail, $password) {
 
 if (isset($_POST['Valider'])) {
     $mail = $_POST['Id'];
-    $password = password_hash($_POST['MotDePasse'], PASSWORD_DEFAULT);
+    $password = $_POST['MotDePasse'];
 }
 
 Connexion($mail, $password);
