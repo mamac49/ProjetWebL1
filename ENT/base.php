@@ -22,7 +22,13 @@ if ($_SESSION["Connected"] = true) {
         <li><hr class="hrBurger"></li>
       </ul>
       <ul class="menuAutre">
-        <!--<li><input type="button" name="ChgtDeTheme" value="Jaune" onclick="LoadCSS" accesskey="t"> </li> Bouton pour changer de thème -->
+          <?php
+            if ($_SESSION["Admin"] = true) {
+          ?>
+        <li><a class="menu_link" href="/Projetwebl1/ENT/settings/admin/UserCreation.php"><div class="texteBurger"><i class="fas fa-user-cog icone"></i>Administration</div></a></li>
+        <?php
+        }
+        ?>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/theme.php"><div class="texteBurger"><i class="fas fa-palette icone"></i>Thème</div></a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="texteBurger"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="texteBurger"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
@@ -40,6 +46,5 @@ if ($_SESSION["Connected"] = true) {
       </header>
 
 <?php
-
 }
 ?>
