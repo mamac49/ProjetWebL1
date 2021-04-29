@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+if ($_SESSION["Connected"] = "True") {
+?>
+
 <body onload="move_menu_burger(); ">
 
   <div class="site_container">  
@@ -32,3 +38,7 @@
         </div>
         <img src="/Projetwebl1/ENT/data/logo_millocheau.png" alt="Logo de l'école millocheau" class="taoki">
       </header>
+
+<?php
+}
+?>
