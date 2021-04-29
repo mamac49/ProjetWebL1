@@ -19,12 +19,14 @@ function Connexion($mail, $password) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
         $admin = $row['admin'];
+        $id = $row['iduser'];
     }
     mysqli_free_result($result);
 
     if (password_verify($password, $mdp)) {
         $_SESSION["Connected"] = True;
         $_SESSION["Mail"] = $mail;
+        $_SESSION["ID"] = $id;
         if ($admin == "1") {
           $_SESSION["Admin"] = True;
         }
