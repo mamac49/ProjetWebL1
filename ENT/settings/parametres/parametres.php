@@ -21,7 +21,7 @@ function ChgtMdp($mdpA, $mdpN) {
   }
   mysqli_free_result($result);
 
-  $sql = "UPDATE `users` SET `mdp` = '$mdpN'";
+  $sql = "UPDATE `users` SET `mdp` = '$mdpN' WHERE `mail`= '$_SESSION[Mail]'";
   if (password_verify($mdpA, $mdp)) {
     if (mysqli_query($link, $sql)) {
         echo "succès";
