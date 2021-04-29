@@ -1,7 +1,40 @@
 <?php
 error_reporting(E_ALL);
 
-echo "Je suis la page de réception des données"
+function dbConnect() {
+    $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
+
+    if (mysqli_connect_errno()) {
+            echo 'Erreur d accès à la base' . mysqli_connect_error();
+            exit;
+    }
+    echo 'accès réussi'."\n";
+    return $link;
+}
+
+function Connexion($mail, $password) {
+    $link = dbConnect();
+
+    $sql = "SELECT 'mdp' FROM `users` WHERE 'mail'=$mail";
+
+    if ($result = mysqli_query($link, $sql)) {
+        echo "succès";
+        while ( $row = mysqli_fetch_assoc($result)) {
+            $mdp = $row['mdp'];
+        }
+    } else {
+        echo "erreur" . mysqli_error($link);
+    }
+
+    if (password_hash($password, PASSWORD_DEFAULT) == $mdp) {
+        echo "connexion réussi";
+    }
+}
+
+if (isset($_POST['Valider'])) {
+    $mail = $_POST['Id'];
+    $password = $_POST['MotDePasse'];
+}
 
 
 ?>
