@@ -30,14 +30,14 @@ function Connexion($mail, $password) {
         //exit();
     }
 }
-
+/*
 if (isset($_POST['Valider'])) {
     $mail = $_POST['Id'];
     $password = $_POST['MotDePasse'];
 }
 
 Connexion($mail, $password);
-
+*/
 if ($_SESSION['Connected'] = bool(true)) {
     //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     echo "a";
