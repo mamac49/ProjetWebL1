@@ -37,7 +37,7 @@ if (isset($_POST['Valider'])) {
 
 Connexion($mail, $password);
 
-if ($_SESSION["Connected"] = true) {
+if ($_SESSION['Connected'] = bool(true)) {
     header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
 } else {
 ?>
