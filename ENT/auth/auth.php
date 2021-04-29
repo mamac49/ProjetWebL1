@@ -18,6 +18,7 @@ function Connexion($mail, $password) {
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row[`date_n`];
+        echo "a";
     } else {
         echo "erreur récupération" . mysqli_error($link);
     }
