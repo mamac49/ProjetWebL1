@@ -13,6 +13,7 @@ function dbConnect() {
 
 function Connexion($mail, $password) {
     $link = dbConnect();
+    session_unset();
 
     $sql = "SELECT * FROM `users` WHERE `mail`= '$mail' ";
     if ($result = mysqli_query($link, $sql)) {
@@ -23,8 +24,6 @@ function Connexion($mail, $password) {
         }
         $id = $row['iduser'];
     }
-    var_dump($admin);
-    var_dump($row['admin']);
     mysqli_free_result($result);
 
     if (password_verify($password, $mdp)) {
