@@ -1,10 +1,9 @@
 <?php
 session_start();
 
-$_SESSION["Connected"] = false;
+$_SESSION['Connected'] = false;
 
-echo $_SESSION["Connected"];
-echo "a";
+echo $_SESSION['Connected'];
 
 
 //header('Location: auth.php');
