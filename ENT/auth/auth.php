@@ -19,7 +19,8 @@ function Connexion($mail, $password) {
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
-        if (isset ($row['admin'])) {
+        var_dump($row['admin']);
+        if ($row['admin'] == 1) {
           $admin = True;
           echo "a";
         } else {
