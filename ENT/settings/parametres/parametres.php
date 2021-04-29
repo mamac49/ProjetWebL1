@@ -1,6 +1,44 @@
 <?php
 session_start();
 
+function dbConnect() {
+  $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
+
+  if (mysqli_connect_errno()) {
+          echo 'Erreur d accès à la base' . mysqli_connect_error();
+          exit;
+  }
+  return $link;
+}
+
+function ChgtMdp($mdpA, $mdpN) {
+   $link = dbConnect();
+
+   $sql = 'SELECT * FROM `users` WHERE `mail`= $_SESSION["Mail"]';
+   if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_assoc($result);
+    $mdp = $row['mdp'];
+  }
+  mysqli_free_result($result);
+
+  $sql = "UPDATE `users` SET `mdp` = '$mdpN'";
+  if (password_verify($mdpA, $mdp)) {
+    if (mysqli_query($link, $sql)) {
+        echo "succès";
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/');
+    } else {
+      echo "erreur" . mysqli_error($link);
+    }
+  }
+}
+
+if (isset($_POST['Valider'])) {
+  $mdpA = $_POST['passwordA'];
+  $mdpN = password_hash($_POST['passwordN'], PASSWORD_DEFAULT);
+}
+
+ChgtMdp($mdpA, $mdpN);
+
 if ($_SESSION["Connected"] = true) {
 ?>
 
@@ -23,16 +61,17 @@ if ($_SESSION["Connected"] = true) {
 
     <fieldset class="legal">
       <legend class=legend>Réinitialisation des paramètres</legend>
-      <form method="get" name=password>
+      <form method="POST" name="password">
         <p>
         <h2>Réinitialisation du mot de passe</h2>
         <label>Ancien mot de passe</label>
-        <input type="text" name="password" minlengh="8" maxlength="16" required>
+        <input type="text" name="passwordA" minlengh="8" maxlength="16" required>
         </p>
         <p>
         <label>Nouveau mot de passe</label>
-        <input type="text" name="password" minlengh="8" maxlength="16" required>
+        <input type="text" name="passwordN" minlengh="8" maxlength="16" required>
         </p>
+        <input type="submit" name="Valider" value="Valider">
       </form>
         <h2>Changement de l'image de profil</h2>
         <img src="../data/PP.png" alt="Photo de profil" class="PP"><span><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>

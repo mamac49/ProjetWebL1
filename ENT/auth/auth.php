@@ -23,6 +23,7 @@ function Connexion($mail, $password) {
 
     if (password_verify($password, $mdp)) {
         $_SESSION["Connected"] = True;
+        $_SESSION["Mail"] = $mail;
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
         exit();
     }
