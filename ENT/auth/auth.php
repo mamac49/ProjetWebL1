@@ -36,7 +36,6 @@ if (isset($_POST['Valider'])) {
 }
 
 Connexion($mail, $password);
-
 ?>
 
 <!DOCTYPE html>
@@ -66,6 +65,3 @@ Connexion($mail, $password);
 
   </body>
 </html>
- <?php
-}
-?>
