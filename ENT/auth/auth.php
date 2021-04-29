@@ -21,6 +21,7 @@ function Connexion($mail, $password) {
         $mdp = $row['mdp'];
         if (isset ($row['admin'])) {
           $admin = True;
+          echo "a";
         }
         $id = $row['iduser'];
     }
@@ -33,8 +34,7 @@ function Connexion($mail, $password) {
         if ($admin == True) {
           $_SESSION["Admin"] = True;
         }
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
-        exit();
+        //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
 }
 
