@@ -20,7 +20,7 @@ function ChgtMdp($mdpA, $mdpN) {
     $mdp = $row['mdp'];
   }
   mysqli_free_result($result);
-  echo $_SESSION["Mail"];
+
   $sql = "UPDATE `users` SET `mdp` = '$mdpN'";
   if (password_verify($mdpA, $mdp)) {
     if (mysqli_query($link, $sql)) {
@@ -29,6 +29,8 @@ function ChgtMdp($mdpA, $mdpN) {
     } else {
       echo "erreur" . mysqli_error($link);
     }
+  } else {
+    echo "erreurs" . mysqli_error($link);
   }
 }
 
