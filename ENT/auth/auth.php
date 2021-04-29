@@ -19,7 +19,7 @@ function Connexion($mail, $password) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
         if (isset ($row['admin']))  {
-          $admin = True
+          $admin = True;
         }
         $id = $row['iduser'];
     }
