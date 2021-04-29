@@ -31,7 +31,16 @@ if ($_SESSION["Connected"] = true) {
               <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog3.html"><i class="fas fa-chess icone"></i> Sujet n°3</a> <span>Edité par M. Langlois le 09/03/2021</span></li>
             </ul>
-            <input type="button" name="CreationBlog" value="Créer Un Blog">
+            <br/>
+            <?php
+              if ($_SESSION["Admin"] = true) {
+                var_dump($_SESSION["Admin"]);
+            ?>
+              <input type="button" name="CreationBlog" value="Créer Un Blog">
+              <br/>
+            <?php
+            }
+            ?>
           </div>
 
         </div>
