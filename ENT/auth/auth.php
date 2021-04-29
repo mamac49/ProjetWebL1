@@ -24,6 +24,8 @@ function Connexion($mail, $password) {
 
     if (password_verify($password, $mdp)) {
         echo "connexion réussi";
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+        exit();
     } else {
         echo "erreur connexion";
     }
@@ -35,5 +37,4 @@ if (isset($_POST['Valider'])) {
 }
 
 Connexion($mail, $password);
-
 ?>
