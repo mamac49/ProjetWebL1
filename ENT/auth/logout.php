@@ -6,7 +6,7 @@ $_SESSION['Connected'] = false;
 var_dump($_SESSION['Connected']);
 
 
-//header('Location: auth.php');
-//exit();
+header('Location: auth.php');
+exit();
 
 ?>
