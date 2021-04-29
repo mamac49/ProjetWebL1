@@ -38,7 +38,7 @@ if ( isset($_POST['valider'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $mail = $_POST['mail'];
-    $password = $_POST['mdp'];
+    $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $date = $_POST['datenaissance'];
     $pp = $_POST['pp'];
     $admin = $_POST['admin'];
