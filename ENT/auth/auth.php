@@ -22,11 +22,8 @@ function Connexion($mail, $password) {
     mysqli_free_result($result);
 
     if (password_verify($password, $mdp)) {
-        $_SESSION["Connected"] = "True";
+        $_SESSION["Connected"] = True;
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
-        //exit();
-    } else {
-        //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/auth/auth.php');
         //exit();
     }
 }
@@ -38,7 +35,7 @@ if (isset($_POST['Valider'])) {
 
 Connexion($mail, $password);
 
-if ( true == false) {
+if ( $_SESSION["Connected"] == false) {
     //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     echo "a";
 } else {
