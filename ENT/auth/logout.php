@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-$_SESSION['Connected'] = false;
+session_unset();
+session_destroy();
+
 
 var_dump($_SESSION['Connected']);
 
