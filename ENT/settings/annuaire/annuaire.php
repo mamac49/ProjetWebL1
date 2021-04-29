@@ -16,7 +16,7 @@ if ($_SESSION["Connected"] = "True") {
     <script src="/ENT/js/main.js"></script>
   </head>
     <?php
-      include ("base.php");
+      include ("../../base.php");
     ?>
 
         <script src="menu_clic.js"></script>

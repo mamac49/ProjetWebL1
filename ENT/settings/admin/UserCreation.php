@@ -71,7 +71,7 @@ if ($_SESSION["Connected"] = "True" and $_SESSION["Admin"] = "True") {
   </head>
 
     <?php
-      include ("base.php");
+      include ("../../base.php");
     ?>
 
         <div class="Centre">
