@@ -29,8 +29,6 @@ function ChgtMdp($mdpA, $mdpN) {
     } else {
       echo "erreur" . mysqli_error($link);
     }
-  } else {
-    echo "erreurs" . mysqli_error($link);
   }
 }
 
