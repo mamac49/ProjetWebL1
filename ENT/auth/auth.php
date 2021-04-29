@@ -17,7 +17,7 @@ function Connexion($mail, $password) {
     $sql = "SELECT 'mdp' FROM `users` WHERE `mail`= '$mail' ";
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
-        $mdp = $row['mdp'];
+        $mdp = $row[`mdp`];
         var_dump($row);
     } else {
         echo "erreur" . mysqli_error($link);
