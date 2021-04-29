@@ -31,7 +31,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
     if (mysqli_query($link, $sql)) {
         echo "succès";
         reset($_POST);
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin');
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
         exit();
     } else {
         echo "erreur" . mysqli_error($link);
@@ -58,7 +58,7 @@ Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
 mysqli_close($link);
 
-if ($_SESSION["Connected"] = true and $_SESSION["Admin"] = "True") {
+if ($_SESSION["Connected"] = true and $_SESSION["Admin"] = true) {
 ?>
 
 <!DOCTYPE html>
