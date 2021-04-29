@@ -38,6 +38,7 @@ Connexion($mail, $password);
 if ( $_SESSION["Connected"] == false) {
     //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     echo "a";
+    var_dump($_SESSION["Connected"]);
 } else {
 ?>
 
