@@ -19,6 +19,7 @@ function Connexion($mail, $password) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row[`mdp`];
         var_dump($row);
+        echo $mdp . "<br>";
     } else {
         echo "erreur" . mysqli_error($link);
     }
