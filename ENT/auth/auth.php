@@ -21,7 +21,7 @@ function Connexion($mail, $password) {
     } else {
         echo "erreur récupération" . mysqli_error($link);
     }
-    echo $mdp;
+    echo $mdp . "<br>" . $password;
 
     if ($password == $mdp) {
         echo "connexion réussi";
