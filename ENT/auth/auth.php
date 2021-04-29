@@ -18,16 +18,14 @@ function Connexion($mail, $password) {
     if ($result = mysqli_query($link, $sql)) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
-    } else {
-        echo "erreur récupération" . mysqli_error($link);
     }
 
     if (password_verify($password, $mdp)) {
-        echo "connexion réussi";
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
         exit();
     } else {
-        echo "erreur connexion";
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/auth/');
+        exit();
     }
 }
 
