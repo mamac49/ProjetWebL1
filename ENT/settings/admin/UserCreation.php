@@ -11,7 +11,6 @@ function dbConnect() {
             echo 'Erreur d accès à la base' . mysqli_connect_error();
             exit;
     }
-    echo 'accès réussi'."\n";
     return $link;
 }
 
@@ -47,7 +46,12 @@ if ( isset($_POST['valider'])) {
     $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $date = $_POST['datenaissance'];
     $pp = $_POST['pp'];
-    $admin = $_POST['admin'];
+    if (isset($_POST['admin'])) {
+      $admin = $_POST['admin'];
+    } else {
+      $admin = 0;
+    }
+    
 }
 
 Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
