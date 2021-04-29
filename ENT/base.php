@@ -1,18 +1,3 @@
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleA.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleAd.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleB.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleC.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleF.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleP.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/stylePhone.css">
-    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
-    <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
-    <script src="/Projetwebl1/ENT/js/main.js"></script>
-  </head>
 <body onload="move_menu_burger(); ">
 
   <div class="site_container">  
