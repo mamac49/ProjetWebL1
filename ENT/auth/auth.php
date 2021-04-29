@@ -25,11 +25,10 @@ function Connexion($mail, $password) {
     if (password_verify($password, $mdp)) {
         $_SESSION["Connected"] = True;
         $_SESSION["Mail"] = $mail;
-        if ($admin == 1) {
+        if ($admin == "1") {
           $_SESSION["Admin"] = True;
         }
-        var_dump($admin);
-        //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
         exit();
     }
 }
