@@ -34,6 +34,7 @@ function Connexion($mail, $password) {
         if ($admin == True) {
           $_SESSION["Admin"] = True;
         }
+        echo "b";
         //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
 }
