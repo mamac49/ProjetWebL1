@@ -62,6 +62,7 @@ if ($_SESSION["Connected"] = "True" and $_SESSION["Admin"] = "True") {
     <meta charset="utf-8">
     <title>Page d'administration</title>
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" href="styleAd.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>

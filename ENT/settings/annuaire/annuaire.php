@@ -9,7 +9,7 @@ if ($_SESSION["Connected"] = "True") {
   <head>
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/styleA.css">
+    <link rel="stylesheet" href="styleA.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/ENT/js/main.js"></script>

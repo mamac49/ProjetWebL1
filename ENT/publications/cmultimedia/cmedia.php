@@ -9,7 +9,7 @@ if ($_SESSION["Connected"] = "True") {
   <head>
     <meta charset="utf-8">
     <title>Cahier Multimédia</title>
-    <link rel="stylesheet" href="/ENT/css/styleC.css">
+    <link rel="stylesheet" href="styleC.css">
     <link rel="stylesheet" href="/ENT/css/style.css">
     <link rel="stylesheet" href="/ENT/css/color1.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
