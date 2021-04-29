@@ -58,7 +58,7 @@ Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
 mysqli_close($link);
 
-if ($_SESSION["Connected"] = true and $_SESSION["Admin"] = true) {
+if ($_SESSION["Connected"] = true and $_SESSION["Admin"] = True) {
 ?>
 
 <!DOCTYPE html>
