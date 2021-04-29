@@ -20,7 +20,7 @@ function ChgtMdp($mdpA, $mdpN) {
     $mdp = $row['mdp'];
   }
   mysqli_free_result($result);
-
+  echo $_SESSION["Mail"];
   $sql = "UPDATE `users` SET `mdp` = '$mdpN'";
   if (password_verify($mdpA, $mdp)) {
     if (mysqli_query($link, $sql)) {
@@ -74,7 +74,7 @@ if ($_SESSION["Connected"] = true) {
         <input type="submit" name="Valider" value="Valider">
       </form>
         <h2>Changement de l'image de profil</h2>
-        <img src="../data/PP.png" alt="Photo de profil" class="PP"><span><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
+        <img src="Projetwebl1/ENT/data//PP.png" alt="Photo de profil" class="PP"><span><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
     </fieldset>
 
     <?php
