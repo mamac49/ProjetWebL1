@@ -36,10 +36,6 @@ input[type=button] {
   color: var(--font-color);
 }
 
-a:visited {
-  color: var(--font-color);
-}
-
 .sujets a:visited {
   color: var(--font-color-nde)
 }
