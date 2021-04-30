@@ -79,7 +79,7 @@ if ($_SESSION["Connected"] = true and $_SESSION["Admin"] = True) {
       include ("../../base.php");
     ?>
 
-        <div class="Centre">
+        <div class="Center">
             <form action="UserCreation.php" method="POST" class="Formulaire">
                 <input type="text" name="nom" placeholder="Nom" class="FormCrea" required>
                 <input type="text" name="prenom" placeholder="Prénom" class="FormCrea" required>
