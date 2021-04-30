@@ -29,7 +29,13 @@ if ($_SESSION["Connected"] = true) {
                 <li class="texte"><a class="Copybook" href="media/Cahier3.html"><i class="fas fa-book Icobook"></i> Cahier n°3</a></li>
                 <li class="texte"><a class="Copybook" href="media/Cahier4.html"><i class="fas fa-book Icobook"></i> Cahier n°4</a></li>
               </ul>
+              <?php
+                if ($_SESSION["Admin"] == true) {
+              ?>
               <input type="button" class="Creation" name="CreationC" value="Créer un Cahier Multimédia">
+              <?php
+                }
+              ?>
             </div>
     </div>
   </div>
