@@ -50,3 +50,7 @@ function LoadCSS( cssURL ) {
         };
     } );
 }
+
+function refresh() {
+  window.location.reload();
+}

@@ -11,9 +11,7 @@ if ($_SESSION["Connected"] = true) {
     
     <nav class="burger" id="menu_burger">
       <ul class="menuListe">
-        <li><a class="menu_cross" id="burger_cross" id="refresh"><i class="fas fa-times icone"></i></a></li>
-        <script>document.getElementById("refresh").onclick="window.location.reload()"</script>
-
+        <li><a class="menu_cross" id="burger_cross" onclick="refresh();"><i class="fas fa-times icone"></i></a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php"><div class="texteBurger"><i class="fas fa-book icone"></i>Cahiers multimédias</div></a></li>
         <li><hr class="hrBurger"></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/publications/blog/blog.php"><div class="texteBurger"><i class="fas fa-book-open icone"></i>Blog</div></a></li>
