@@ -31,7 +31,7 @@
   .Title {
     background-color: inherit;
     text-align: center;
-    width: 80%;
+    width: 75%;
     margin-left: 10%;
   }
 
@@ -258,7 +258,7 @@
 
 .craie {
   font-family: "Craies";
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 
 @font-face
