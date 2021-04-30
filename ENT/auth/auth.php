@@ -34,6 +34,8 @@ function Connexion($mail, $password) {
         $_SESSION["ID"] = $id;
         if ($admin == True) {
           $_SESSION["Admin"] = True;
+        } else {
+          $_SESSION["Admin"] = False;
         }
         //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
@@ -48,7 +50,6 @@ Connexion($mail, $password);
 
 if ( $_SESSION["Connected"] == true) {
     //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
-    var_dump($_SESSION["Connected"]);
     var_dump($_SESSION["Admin"]);
 } else {
 ?>
