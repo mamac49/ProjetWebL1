@@ -1,7 +1,7 @@
 :root {
   --font-color: black;
   --font-color-nde: white;
-  --main-color: rgb(216, 255, 24);
+  --main-color: rgb(41, 147, 235);
 }
 
 html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .Center, .legal, footer ul, footer ul:visited {
