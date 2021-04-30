@@ -20,8 +20,6 @@ if ($_SESSION["Connected"] = true) {
       include ("../../base.php");
     ?>
 
-      <div class="contenu">
-        <div class="site">
           <div class="Centre">
             <h2 class="texte">Listes des cahiers</h2>
             <div class="leaf">
@@ -33,9 +31,6 @@ if ($_SESSION["Connected"] = true) {
               </ul>
               <input type="button" class="Creation" name="CreationC" value="Créer un Cahier Multimédia">
             </div>
-          </div>
-
-        </div>
     </div>
   </div>
   </div>
