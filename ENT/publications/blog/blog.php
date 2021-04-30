@@ -20,8 +20,6 @@ if ($_SESSION["Connected"] = true) {
       include ("../../base.php");
     ?>
 
-
-        <div class="contenu">
           <div class="Centre">
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
@@ -41,12 +39,6 @@ if ($_SESSION["Connected"] = true) {
             }
             ?>
           </div>
-
-        </div>
-
-
-        <script src="../../burger.js"></script>
-        <div class="site-cache" id="site-cache"></div>
         </div>
       </div>
   </body>
