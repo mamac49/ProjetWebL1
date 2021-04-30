@@ -41,10 +41,10 @@ if ($_SESSION["Connected"] == "True") {
             </div>
           </div>
           <div class="ligne">
-              <div>
+              <div class="raccourci">
                 <a href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php"><i class="fas fa-book icone"></i><br>Cahiers Multimédia</a>
               </div>
-              <div>
+              <div class="raccourci">
                 <a href="/Projetwebl1/ENT/publications/blog/blog.php"><i class="fas fa-book-open icone"></i><br>Blogs</a>
               </div>
           </div>
