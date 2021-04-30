@@ -5,7 +5,7 @@
 }
 
 .Center, .site {
-  background-color: var(--font-color);
+  background-color: var(--main-color);
 }
 
 html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked {
