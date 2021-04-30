@@ -231,9 +231,12 @@
 }
 
 .raccourci {
-  width: 150px;
-  height: 150px;
+  width: 140px;
+  height: 140px;
   text-align: center;
-  font-size: 1.3em;
-  margin: 15px;
+  margin: 20px;
+}
+
+.raccourci icone {
+  font-size: 3em;
 }
