@@ -34,6 +34,8 @@ if ($_SESSION["Connected"] = "True") {
 </body>
 </html>
 <?php
+} else {
+  header(location: "/Projetwebl1/ENT/")
 }
 
 ?>
