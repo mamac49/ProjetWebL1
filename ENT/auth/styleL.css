@@ -25,3 +25,8 @@ input[type=submit] {
   width: 30%;
   margin-top: 20px;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
