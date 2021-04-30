@@ -110,12 +110,6 @@
 
   /*contenu*/
 
-  .contenu {
-    display: flex;
-    flex-direction: row;
-    margin-left: 30%;
-  }
-
   .Centre {
     width: 1000px;
     margin-left: 30%;
@@ -135,6 +129,7 @@
   .site {
     background-color: white;
     margin-left: 30%;
+    width: 1000px;
   }
 
   /*Anniversaire*/
