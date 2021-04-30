@@ -21,8 +21,8 @@ if ($_SESSION["Connected"] = true) {
 
       <div>
         <form>
-          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')" value="light mode">
-          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')" value="dark mode">
+          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')" value="Theme sombre">
+          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')" value="Theme clair">
         </form>
       </div>
 
