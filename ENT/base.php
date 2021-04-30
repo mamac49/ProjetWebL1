@@ -6,9 +6,7 @@ if ($_SESSION["Connected"] = true) {
 
 <body onload="move_menu_burger(); ">
 
-  <div class="site_container">  
-    
-    
+  <div class="site_container">
     <nav class="burger" id="menu_burger">
       <ul class="menuListe">
         <li><a class="menu_cross" id="burger_cross" onclick="refresh();"><i class="fas fa-times icone"></i></a></li>
