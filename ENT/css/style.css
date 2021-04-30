@@ -230,7 +230,7 @@
 }
 
 .raccourci {
-  width: 300px;
+  width: 320px;
   height: 200px;
   text-align: center;
   margin-left: 15px;
@@ -240,8 +240,6 @@
 
 .rac {
   width: 650px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .raccourci p {
