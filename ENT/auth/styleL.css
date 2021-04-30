@@ -29,4 +29,5 @@ input[type=submit] {
 form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
