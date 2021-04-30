@@ -1,13 +1,3 @@
-.contenu {
-  display: flex;
-  flex-direction: column;
-}
-
-.site {
-  display: flex;
-  justify-content: center;
-}
-
 .Center h2 {
   text-align: center;
 }
