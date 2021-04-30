@@ -18,7 +18,6 @@ input {
   height: 40px;
   width: 200px;
   text-align: center;
-  margin-left: 50px;
 }
 
 input[type=submit] {
