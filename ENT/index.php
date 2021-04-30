@@ -19,8 +19,9 @@ if ($_SESSION["Connected"] == "True") {
     <?php
       include 'base.php';
     ?>
-        <div class="ligne">
-          <div class="Centre_main">
+        
+        <div class="Centre_main">
+          <div class="ligne">
             <div class="Anniversaire">
               <h4><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
               <ul>
