@@ -9,9 +9,12 @@ function chgttheme() {
     }
 }
 
-if (isset(($_POST['theme']))) {
-  chgttheme();
+while (TRUE) {
+  if (isset(($_POST['theme']))) {
+    chgttheme();
+  }
 }
+
 
 if ($_SESSION["Connected"] = true) {
 ?>
