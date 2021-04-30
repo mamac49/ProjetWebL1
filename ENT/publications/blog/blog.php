@@ -20,7 +20,7 @@ if ($_SESSION["Connected"] = true) {
       include ("../../base.php");
     ?>
 
-          <div class="Centre">
+          <div class="Center">
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i> Sujet n°1</a> <span>Edité par M. Langlois le 07/03/2021</span></li>
