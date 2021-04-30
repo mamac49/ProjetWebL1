@@ -13,7 +13,7 @@ if ($_SESSION["Connected"] = true) {
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
-    <script src="/ENT/js/main.js"></script>
+    <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
     <?php
       include ("../../base.php");
