@@ -240,7 +240,7 @@
 }
 
 .raccourci p {
-  font-size: 1.5em;
+  font-size: 0.8em;
 }
 
 .racicone {
@@ -252,6 +252,6 @@
 }
 
 .racicone:hover {
-  font-size: 3.2em;
+  font-size: 4em;
 
 }
