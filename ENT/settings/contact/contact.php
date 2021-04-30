@@ -15,8 +15,10 @@ if ($_SESSION["Connected"] = true) {
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <title>Contact</title>
   </head>
+  <?php
+      include '../../base.php';
+  ?>
   <body>
-    <a href="../index.html"><i class="fas fa-undo icone"></i></a>
     <fieldset class="legal">
       <legend class=legend>Contact/Signaler une erreur</legend>
       <form>

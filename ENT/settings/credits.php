@@ -15,7 +15,9 @@ if ($_SESSION["Connected"] = "True") {
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <title>Crédits</title>
   </head>
-    <a href="index.html"><i class="fas fa-undo icone retour"></i></a>
+    <?php
+      include '../base.php';
+    ?>
     <fieldset class="legal">
       <legend class=legend>Crédits</legend>
       <h2>Mentions légales</h2>
@@ -26,12 +28,6 @@ if ($_SESSION["Connected"] = "True") {
     </fieldset>
     <script src="burger.js"></script>
     <div class="site-cache" id="site-cache"></div>
-    <footer>
-      <ul>
-        <li><a href="/Projetwebl1/ENT/settings/contact/contact_bugreport.html" class="link_footer"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a></li>
-        <li><a href="/Projetwebl1/ENT/settings/credits.html" class="link_footer"><i class="fab fa-linux icone"></i>A propos</a></li>
-      </ul>
-    </footer>
 </body>
 </html>
 
