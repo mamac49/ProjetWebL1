@@ -125,7 +125,7 @@
     padding-top: 50px;
     background-color: inherit;
   }
-  
+
   /*Anniversaire*/
 
   .Anniversaire {
@@ -154,7 +154,6 @@
   }
 
   footer ul:visited {
-    color: var(--font-color);
     text-decoration: none;
   }
 
@@ -185,7 +184,6 @@
     width: 200px;
     height: 40px;
     text-align: left;
-
   }
   /*
   input[type=button] {
