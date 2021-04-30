@@ -39,7 +39,7 @@ if ($_SESSION["Connected"] == true) {
         <a href="/Projetwebl1/ENT/"><i class="fas fa-home icone retour"></i></a>
         <div class="Title">
           <h1 class="craie">Ecole Millocheau</h1>
-          <h2 class="craie">GS - CP</h2>
+          <h2>GS - CP</h2>
         </div>
         <img src="/Projetwebl1/ENT/data/logo_millocheau.png" alt="Logo de l'école millocheau" class="taoki">
       </header>
