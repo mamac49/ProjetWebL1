@@ -57,7 +57,6 @@ if ($_SESSION["Connected"] = true) {
   <?php
       include ("../../base.php");
   ?>
-    <a href="../index.html"><i class="fas fa-undo icone retour"></i></a>
 
     <fieldset class="legal">
       <legend class=legend>Réinitialisation des paramètres</legend>
