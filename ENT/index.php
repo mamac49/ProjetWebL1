@@ -20,8 +20,6 @@ if ($_SESSION["Connected"] = "True") {
       include 'base.php';
     ?>
 
-      <div class="contenu">
-        <div class="site">
           <div class="Centre_main">
             <div class="Anniversaire">
               <h4><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
@@ -30,15 +28,6 @@ if ($_SESSION["Connected"] = "True") {
                 <li>Afficher tous ceux du mois actuel</li>
               </ul>
             </div>
-            <div class="">
-
-            </div>
-          </div>
-          <?php
-            include 'footer.php';
-          ?>
-
-        </div>
     </div>
   </div>
   </div>
