@@ -37,5 +37,4 @@ if ($_SESSION["Connected"] == "True") {
 } else {
   header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
-
 ?>

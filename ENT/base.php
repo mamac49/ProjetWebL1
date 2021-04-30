@@ -36,7 +36,7 @@ if ($_SESSION["Connected"] == true) {
     <div class="site_pusher">
       <header>
         <span class="burger_icon" id="burger_button"><i class="fas fa-bars icone"></i></span>
-        <a href="/Projetwebl1/ENT/"><i class="fas fa-undo icone retour"></i></a>
+        <a href="/Projetwebl1/ENT/"><i class="fas fa-home icone retour"></i></a>
         <div class="Title">
           <h1>Ecole Millocheau</h1>
           <h2>GS - CP</h2>
