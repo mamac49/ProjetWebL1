@@ -33,8 +33,9 @@ if ($_SESSION["Connected"] == "True") {
               <form action="https://www.qwantjunior.com/" method="GET" target="_blank">
                 <a href="https://www.qwantjunior.com/" target="_blank">
                   <img src="https://ent.e-primo.fr/assets/widgets/qwant-junior/logo.svg" alt="Qwant Junior">
-                  <input type="texte" name="q" size="31" maxlength="255" placeholder="Rechercher">
                 </a>
+                <input type="texte" name="q" size="31" maxlength="255" placeholder="Rechercher">
+                <button><i class="fas fa-search"></i></button>
               </form>
             </div>
     </div>
