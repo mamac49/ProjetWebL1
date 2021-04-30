@@ -20,7 +20,7 @@ if ($_SESSION["Connected"] = true) {
       include ("../../base.php");
     ?>
 
-          <div class="Centre">
+          <div class="Center">
             <h4 class="texte">Archivage des fichiers</h4>
             <fieldset class="Dropzone">
               <legend>Dropzone</legend>
