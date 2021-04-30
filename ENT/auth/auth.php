@@ -33,7 +33,7 @@ function Connexion($mail, $password) {
         $_SESSION["ID"] = $id;
         $_SESSION["Admin"] = $admin;
 
-        //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
 }
 
@@ -45,7 +45,7 @@ if (isset($_POST['Valider'])) {
 Connexion($mail, $password);
 
 if ( $_SESSION["Connected"] == true) {
-    //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+    header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
 } else {
 ?>
 
