@@ -243,4 +243,11 @@
   font-size: 3em;
   margin-top: 15px;
   margin-bottom: 15px;
+  text-decoration: none;
+  transition: font-size 400ms ease-in-out;
+}
+
+.racicone {
+  font-size: 3.2em;
+
 }
