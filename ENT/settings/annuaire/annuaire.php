@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_SESSION["Connected"] = true) {
+if ($_SESSION["Connected"] == true) {
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ if ($_SESSION["Connected"] = true) {
       </div>
 
     </div>
-    
+
   </div>
 </body>
 </html>

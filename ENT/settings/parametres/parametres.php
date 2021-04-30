@@ -39,7 +39,7 @@ if (isset($_POST['Valider'])) {
 
 ChgtMdp($mdpA, $mdpN);
 
-if ($_SESSION["Connected"] = true) {
+if ($_SESSION["Connected"] == true) {
 ?>
 
 <!DOCTYPE html>
