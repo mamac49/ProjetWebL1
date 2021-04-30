@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_SESSION["Connected"] = true) {
+if ($_SESSION["Connected"] == true) {
 ?>
 
 <body onload="move_menu_burger(); ">
