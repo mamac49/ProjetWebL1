@@ -229,11 +229,20 @@
   padding-bottom: 25px;
 }
 
-.raccourci {
-  width: 320px;
+.raccourciM {
+  width: 300px;
   height: 200px;
   text-align: center;
   margin-left: 15px;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.raccourciB {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  margin-left: 50px;
   margin-top: 50px;
   margin-right: 20px;
 }

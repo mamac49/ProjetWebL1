@@ -40,11 +40,11 @@ if ($_SESSION["Connected"] == "True") {
               </form>
             </div>
           </div>
-          <div class="ligne rac">
-              <div class="raccourci">
+          <div class="ligne">
+              <div class="raccourciM">
                 <a href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php" class="shortcut"><i class="fas fa-book racicone"></i><br><p>Cahiers Multimédia</p></a>
               </div>
-              <div class="raccourci">
+              <div class="raccourciB">
                 <a href="/Projetwebl1/ENT/publications/blog/blog.php" class="shortcut"><i class="fas fa-book-open racicone"></i><br><p>Blogs</p></a>
               </div>
           </div>
