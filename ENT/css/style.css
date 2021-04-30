@@ -115,6 +115,7 @@
     height: 600px;
     padding-top: 15px;
     border-radius: 4px;
+    width: 1000px;
   }
 
   .Centre_main {
@@ -124,13 +125,7 @@
     padding-top: 50px;
     background-color: inherit;
   }
-
-  .site {
-    background-color: white;
-    margin-left: 30%;
-    width: 1000px;
-  }
-
+  
   /*Anniversaire*/
 
   .Anniversaire {
