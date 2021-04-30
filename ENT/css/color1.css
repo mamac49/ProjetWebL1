@@ -8,7 +8,7 @@
   background-color: var(--font-color);
 }
 
-html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active {
+html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .raccourci, .raccourci:visited {
   color: var(--font-color);
 }
 
