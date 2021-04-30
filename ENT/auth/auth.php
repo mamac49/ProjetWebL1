@@ -13,7 +13,6 @@ function dbConnect() {
 
 function Connexion($mail, $password) {
     $link = dbConnect();
-    session_unset();
 
     $sql = "SELECT * FROM `users` WHERE `mail`= '$mail' ";
     if ($result = mysqli_query($link, $sql)) {
@@ -22,7 +21,6 @@ function Connexion($mail, $password) {
         var_dump($row['admin']);
         if ($row['admin'] == "1") {
           $admin = True;
-          echo "a";
         } else {
           $admin = False;
         }
@@ -37,7 +35,6 @@ function Connexion($mail, $password) {
         if ($admin == True) {
           $_SESSION["Admin"] = True;
         }
-        echo "b";
         //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
 }
@@ -51,8 +48,8 @@ Connexion($mail, $password);
 
 if ( $_SESSION["Connected"] == true) {
     //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
-    echo "a";
     var_dump($_SESSION["Connected"]);
+    var_dump($_SESSION["Admin"]);
 } else {
 ?>
 
