@@ -64,7 +64,7 @@ if ( $_SESSION["Connected"] == true) {
     <div class="Fond">
       <div class="Login">
         <h2>Se connecter</h2>
-        <p>Identifiant/Mail</p>
+        <p>E-Mail</p>
         <form action="auth.php" method="POST">
         <input type="text" name="Id" placeholder="E-Mail">
         <p>Mot de passe</p>
