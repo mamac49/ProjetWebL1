@@ -254,5 +254,15 @@
 
 .racicone:hover {
   font-size: 4em;
+}
 
+.craie {
+  font-family: "Craies";
+  font-size: 1.5em;
+}
+
+@font-face
+{
+    font-family: "Craies";
+    src: url("../data/HomemadeApple.ttf");
 }
