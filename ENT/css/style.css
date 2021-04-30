@@ -113,11 +113,11 @@
   .Center {
     background-color: white;
     height: 600px;
+    padding-left: 20px;
     padding-top: 15px;
     border-radius: 4px;
     width: 1000px;
     margin-left: 30%;
-    padding-left: 20px;
   }
 
   .Centre_main {
