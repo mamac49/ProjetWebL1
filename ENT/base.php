@@ -1,17 +1,6 @@
 <?php
 session_start();
 
-if (isset(($_POST['themeS']))) {
-    $_SESSION["theme"] = "Sombre";
-    reset($_POST['themeS']);
-}
-
-if (isset(($_POST['themeC']))) {
-  $_SESSION["theme"] = "Clair";
-  reset($_POST['themeC']);
-}
-
-
 if ($_SESSION["Connected"] = true) {
 ?>
 
@@ -40,7 +29,10 @@ if ($_SESSION["Connected"] = true) {
         <?php
         }
         ?>
-        <li><form action="base.php" method="POST"><input type="button" class="bouton" value="theme clair" name="themeC"><input type="button" class="bouton" value="theme sombre" name="themeS"></form></li>
+        <li><form>
+          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')" value="light mode">
+          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')" value="dark mode">
+        </form></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="texteBurger"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="texteBurger"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
       </ul>
