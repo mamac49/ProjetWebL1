@@ -3,10 +3,12 @@ session_start();
 
 if (isset(($_POST['themeS']))) {
     $_SESSION["theme"] = "Sombre";
+    reset($_POST['themeS']);
 }
 
 if (isset(($_POST['themeC']))) {
   $_SESSION["theme"] = "Clair";
+  reset($_POST['themeC']);
 }
 
 
