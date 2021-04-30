@@ -69,6 +69,7 @@ if ( $_SESSION["Connected"] == true) {
         <input type="text" name="Id" placeholder="E-Mail">
         <p>Mot de passe</p>
         <input type="password" name="MotDePasse" placeholder="Mot de Passe">
+        <p>valider</p>
         <input type="submit" name="Valider" value="Se connecter">
       </form>
       </div>
