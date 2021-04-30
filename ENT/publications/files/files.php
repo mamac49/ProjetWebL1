@@ -39,9 +39,6 @@ if ($_SESSION["Connected"] = true) {
           </div>
 
         </div>
-        <?php
-          include ("../../footer.php");
-        ?>
     </div>
   </div>
   </div>

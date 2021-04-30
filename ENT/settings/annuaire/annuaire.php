@@ -72,14 +72,8 @@ if ($_SESSION["Connected"] = true) {
         </ul>
       </div>
 
-      <?php
-      include ("../../footer.php");
-      ?>
     </div>
     
-    
-
-
   </div>
 </body>
 </html>

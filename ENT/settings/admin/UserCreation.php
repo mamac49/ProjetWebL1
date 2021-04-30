@@ -96,9 +96,6 @@ if ($_SESSION["Connected"] = true and $_SESSION["Admin"] = True) {
         </div>
 
 
-        <?php
-          include ("../../footer.php");
-        ?>
         </div>
     </div>
   </div>
