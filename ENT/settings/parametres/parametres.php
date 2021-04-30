@@ -58,8 +58,8 @@ if ($_SESSION["Connected"] = true) {
       include ("../../base.php");
   ?>
 
-    <fieldset class="legal">
-      <legend class=legend>Réinitialisation des paramètres</legend>
+  <div class="Center">
+    <h1>Paramètres</h1>
       <form method="POST" name="password">
         <p>
         <h2>Réinitialisation du mot de passe</h2>
@@ -74,7 +74,7 @@ if ($_SESSION["Connected"] = true) {
       </form>
         <h2>Changement de l'image de profil</h2>
         <img src="/Projetwebl1/ENT/data//PP.png" alt="Photo de profil" class="PP"><span><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
-    </fieldset>
+  </div>
 
   </div>
 </div>
