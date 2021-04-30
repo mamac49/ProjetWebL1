@@ -35,7 +35,7 @@ if ($_SESSION["Connected"] = "True") {
 </html>
 <?php
 } else {
-  header(location: "/Projetwebl1/ENT/auth/auth.php");
+  header('location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 
 ?>
