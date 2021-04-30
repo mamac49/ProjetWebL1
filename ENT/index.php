@@ -40,6 +40,14 @@ if ($_SESSION["Connected"] == "True") {
               </form>
             </div>
           </div>
+          <div class="ligne">
+              <div>
+                <a href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php"><i class="fas fa-book icone"></i><br>Cahiers Multimédia</a>
+              </div>
+              <div>
+                <a href="/Projetwebl1/ENT/publications/blog/blog.php"><i class="fas fa-book-open icone"></i><br>Blogs</a>
+              </div>
+          </div>
     </div>
   </div>
   </div>
