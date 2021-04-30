@@ -38,7 +38,7 @@ if ($_SESSION["Connected"] = true) {
         <?php
         }
         ?>
-        <li><form action="base.php" method="POST"><input type="button" value="theme clair" name="themeC"><<input type="button" value="theme sombre" name="themeS">/form></li>
+        <li><form action="base.php" method="POST"><input type="button" value="theme clair" name="themeC"><input type="button" value="theme sombre" name="themeS"></form></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="texteBurger"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="texteBurger"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
       </ul>
