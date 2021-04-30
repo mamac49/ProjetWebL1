@@ -1,15 +1,19 @@
 :root {
   --font-color: black;
   --font-color-nde: white;
-  --main-color: rgb(41, 147, 235);
+  --main-color: rgb(6, 154, 173);
 }
 
-html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .Center, .legal, footer ul, footer ul:visited {
+.Center, .site {
+  background-color: var(--font-color);
+}
+
+html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked {
   color: var(--font-color);
 }
 
 
-.move_menu, .burger, .Anniversaire {
+.move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourci {
   background-color: var(--main-color);
 }
 
@@ -22,12 +26,21 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .C
   color: var(--font-color-nde);
 }
 
-input[type=button] {
+input[type=button], .bouton {
   background-color: var(--main-color);
   color: var(--font-color);
+  border: 1px solid var(--font-color-nde);
 }
 
 .Login {
   background-color: var(--main-color);
   color: var(--font-color);
+}
+
+.sujets a:visited {
+  color: var(--font-color-nde)
+}
+
+html {
+  background: white;
 }
