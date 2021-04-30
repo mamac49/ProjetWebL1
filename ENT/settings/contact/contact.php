@@ -18,16 +18,15 @@ if ($_SESSION["Connected"] = true) {
   <?php
       include '../../base.php';
   ?>
-  <body>
-    <fieldset class="legal">
-      <legend class=legend>Contact/Signaler une erreur</legend>
+  <div class="Center texte">
       <form>
         <label><input type="radio" name="Type" value="Avis"><i class="fas fa-comment-dots icone"></i> Donner un avis?</label>
         <label><input type="radio" name="Type" value="Bug"><i class="fas fa-bug icone icone"></i> Signaler un bug</label>
         <p><textarea name="Rapport" placeholder="Donnez votre avis/Signaler votre problème(400 caractères maximum)" max-length=400 rows="5" cols="70" required></textarea></p>
       </form>
-    </fieldset>
-  </body>
+    </div>
+
+    </body>
 </html>
 
 <?php
