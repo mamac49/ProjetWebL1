@@ -30,8 +30,8 @@ if ($_SESSION["Connected"] = true) {
         }
         ?>
         <li><form>
-          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')" value="light mode">
-          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')" value="dark mode">
+          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')" value="Theme sombre">
+          <input type="button" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')" value="Theme clair">
         </form></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="texteBurger"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="texteBurger"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
