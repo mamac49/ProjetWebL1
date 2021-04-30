@@ -42,10 +42,10 @@ if ($_SESSION["Connected"] == "True") {
           </div>
           <div class="ligne">
               <div class="raccourci">
-                <a href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php"><i class="fas fa-book racicone"></i><br>Cahiers Multimédia</a>
+                <a href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php" class="shortcut"><i class="fas fa-book racicone"></i><br>Cahiers Multimédia</a>
               </div>
               <div class="raccourci">
-                <a href="/Projetwebl1/ENT/publications/blog/blog.php"><i class="fas fa-book-open racicone"></i><br>Blogs</a>
+                <a href="/Projetwebl1/ENT/publications/blog/blog.php" class="shortcut"><i class="fas fa-book-open racicone"></i><br>Blogs</a>
               </div>
           </div>
     </div>
