@@ -190,15 +190,20 @@
 
 
   /*???*/
+  .bouton {
+    width: 200px;
+    height: 40px;
+    text-align: left;
 
+  }
+  /*
   input[type=button] {
     width: 200px;
     height: 40px;
-    background-color: var(--main-color);
-    color: var(--font-color);
     border-style: hidden;
     margin-left: 15px;
 }
+*/
 
   .retour {
     position: absolute;
