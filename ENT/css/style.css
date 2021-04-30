@@ -231,6 +231,9 @@
 }
 
 .raccourci {
-  width: 100px;
-  height: 100px;
+  width: 1500px;
+  height: 150px;
+  text-align: center;
+  font-size: 1.3em;
+  margin: 15px;
 }
