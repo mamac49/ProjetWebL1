@@ -261,6 +261,10 @@
   font-size: 1.8em;
 }
 
+.craie h1 {
+  font-size: 2em;
+}
+
 @font-face
 {
     font-family: "Craies";
