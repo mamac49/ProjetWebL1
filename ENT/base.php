@@ -29,8 +29,8 @@ if ($_SESSION["Connected"] = true) {
         <?php
         }
         ?>
-        <li><a class="menu_link" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')">Theme Sombre</a></li>
-        <li><a class="menu_link" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')">Theme Clair</a></li>
+        <li><a class="menu_link" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')"><i class="fas fa-moon icone"></i>Theme Sombre</a></li>
+        <li><a class="menu_link" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')"><i class="fas fa-moon icone"></i>Theme Clair</a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="texteBurger"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="texteBurger"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
       </ul>
