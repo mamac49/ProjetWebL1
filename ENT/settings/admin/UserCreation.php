@@ -33,10 +33,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
         reset($_POST);
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
         exit();
-    } else {
-        echo "erreur" . mysqli_error($link);
     }
-
 }
 
 if ( isset($_POST['valider'])) {
