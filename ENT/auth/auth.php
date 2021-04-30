@@ -66,7 +66,7 @@ if ( $_SESSION["Connected"] == true) {
         <h2>Se connecter</h2>
         <p>Identifiant/Mail</p>
         <form action="auth.php" method="POST">
-        <input type="text" name="Id" placeholder="Identifiant/Mail">
+        <input type="text" name="Id" placeholder="E-Mail">
         <p>Mot de passe</p>
         <input type="password" name="MotDePasse" placeholder="Mot de Passe">
         <input type="submit" name="Valider" value="Se connecter">
