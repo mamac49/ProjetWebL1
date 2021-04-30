@@ -19,7 +19,7 @@ if ($_SESSION["Connected"] = true) {
     <?php
       include ("../../base.php");
     ?>
-      <div class="contenu">
+
         <div class="site">
           <div class="Centre">
             <h4 class="texte">Archivage des fichiers</h4>
@@ -39,7 +39,6 @@ if ($_SESSION["Connected"] = true) {
           </div>
 
         </div>
-    </div>
   </div>
   </div>
 </body>
