@@ -23,6 +23,5 @@ input {
 input[type=submit] {
   border: 1px solid white;
   width: 30%;
-  margin-left: 40px;
   margin-top: 20px;
 }
