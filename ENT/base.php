@@ -24,8 +24,6 @@ if ($_SESSION["Connected"] = true) {
       <ul class="menuAutre">
           <?php
             if ($_SESSION["Admin"] = True) {
-              var_dump($_SESSION["Admin"]);
-              var_dump($_SESSION["Mail"])
           ?>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/admin/UserCreation.php"><div class="texteBurger"><i class="fas fa-user-cog icone"></i>Administration</div></a></li>
         <?php

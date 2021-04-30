@@ -19,6 +19,7 @@ function Connexion($mail, $password) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
         var_dump($row['admin']);
+        echo "<br>";
         if ($row['admin'] == 1) {
           $admin = True;
         } else {
@@ -50,7 +51,6 @@ Connexion($mail, $password);
 
 if ( $_SESSION["Connected"] == true) {
     //header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
-    var_dump($_SESSION["Admin"]);
 } else {
 ?>
 
