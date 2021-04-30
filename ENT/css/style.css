@@ -234,9 +234,11 @@
   width: 140px;
   height: 140px;
   text-align: center;
-  margin: 20px;
+  margin-left: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 .raccourci icone {
-  font-size: 3em;
+  font-size: 4em;
 }
