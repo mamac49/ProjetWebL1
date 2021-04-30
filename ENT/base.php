@@ -7,13 +7,14 @@ function chgttheme() {
     } else {
       $_SESSION["theme"] = "Sombre";
     }
+    reset($_POST);
 }
 
-while (TRUE) {
-  if (isset(($_POST['theme']))) {
-    chgttheme();
-  }
+
+if (isset(($_POST['theme']))) {
+  chgttheme();
 }
+
 
 
 if ($_SESSION["Connected"] = true) {
