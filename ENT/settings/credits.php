@@ -18,16 +18,15 @@ if ($_SESSION["Connected"] = "True") {
     <?php
       include '../base.php';
     ?>
-    <fieldset class="legal">
+    <div class="Center">
       <legend class=legend>Crédits</legend>
       <h2>Mentions légales</h2>
       <p>©ENT Millocheau tous droits réservés</p>
       <h2>Sources</h2>
       <p>Icônes : <a href="https://fontawesome.com/icons?d=gallery&p=2&m=free">fontawesome</a></p>
       <p>Nous utilisons la license GNU General Public License v3.0 : <a href="https://choosealicense.com/license/gpl-3.0/">ChooseALicense</a></p>
-    </fieldset>
-    <script src="burger.js"></script>
-    <div class="site-cache" id="site-cache"></div>
+    </div>
+
 </body>
 </html>
 
