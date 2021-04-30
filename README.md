@@ -9,16 +9,16 @@ We should make a Website using PHP and make a Database with SQL.
 **Point :**
 
 - [x] Static Website
-- [ ] Database with simple requests and few forms
-- [ ] Database with middle requests thanks to forms
-- [ ] Database with hard requests, website using the BD, and a nice design
+- [x] Database with simple requests and few forms
+- [x] Database with middle requests thanks to forms
+- [x] Database with hard requests, website using the BD, and a nice design
 
 ----
 **Bonus :**
 
-- [ ] Use existing PHP
+- [x] Use existing PHP
 - [ ] Pictures in the Database
 - [ ] Advanced Requests (for example : group by)
 - [x] Responsive design
 - [ ] accessibility to the blind people.
-- [ ] User session management using PHP
+- [x] User session management using PHP
