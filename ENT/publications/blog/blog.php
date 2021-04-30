@@ -13,11 +13,11 @@ if ($_SESSION["Connected"] = true) {
     <?php
       if ($_SESSION["theme"] == "Sombre") {
     ?>
-      <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
+      <link rel="stylesheet" href="/Projetwebl1/ENT/css/color2.css">
     <?php
      } else {
     ?>
-      <link rel="stylesheet" href="/Projetwebl1/ENT/css/color2.css">
+      <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <?php
      }
     ?>

@@ -38,9 +38,9 @@ if ($_SESSION["Connected"] = true) {
         <li><hr class="hrBurger"></li>
       </ul>
       <ul class="menuAutre">
-          <?php
-            if ($_SESSION["Admin"] == True) {
-          ?>
+        <?php
+          if ($_SESSION["Admin"] == True) {
+        ?>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/admin/UserCreation.php"><div class="texteBurger"><i class="fas fa-user-cog icone"></i>Administration</div></a></li>
         <?php
         }
