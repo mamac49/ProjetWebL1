@@ -211,3 +211,19 @@
     transform: rotate(360deg);
   }
 }
+
+.ligne {
+  display: flex;
+  flex-direction: row;
+}
+
+.qwant {
+  width: 300px;
+  margin-left: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+.qwant img {
+  width: 200px;
+}

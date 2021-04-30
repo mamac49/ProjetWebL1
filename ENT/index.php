@@ -19,7 +19,7 @@ if ($_SESSION["Connected"] == "True") {
     <?php
       include 'base.php';
     ?>
-
+        <div class="ligne">
           <div class="Centre_main">
             <div class="Anniversaire">
               <h4><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
@@ -38,6 +38,7 @@ if ($_SESSION["Connected"] == "True") {
                 <button><i class="fas fa-search"></i></button>
               </form>
             </div>
+          </div>
     </div>
   </div>
   </div>
