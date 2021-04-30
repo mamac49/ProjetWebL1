@@ -113,6 +113,7 @@
   .contenu {
     display: flex;
     flex-direction: row;
+    margin-left: 30%;
   }
 
   .Centre {
