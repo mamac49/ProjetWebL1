@@ -57,25 +57,25 @@ if ($_SESSION["Connected"] = true) {
   <?php
       include ("../../base.php");
   ?>
-
-  <div class="Center">
-    <h1>Paramètres</h1>
-      <form method="POST" name="password">
-        <p>
-        <h2>Réinitialisation du mot de passe</h2>
-        <label>Ancien mot de passe</label>
-        <input type="password" name="passwordA" minlengh="8" maxlength="16" required>
-        </p>
-        <p>
-        <label>Nouveau mot de passe</label>
-        <input type="password" name="passwordN" minlengh="8" maxlength="16" required>
-        </p>
-        <input type="submit" name="Valider" value="Valider">
-      </form>
-        <h2>Changement de l'image de profil</h2>
-        <img src="/Projetwebl1/ENT/data//PP.png" alt="Photo de profil" class="PP"><span><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
-  </div>
-
+    <div class="contenu">
+      <div class="Center">
+        <h1>Paramètres</h1>
+          <form method="POST" name="password">
+            <p>
+            <h2>Réinitialisation du mot de passe</h2>
+            <label>Ancien mot de passe</label>
+            <input type="password" name="passwordA" minlengh="8" maxlength="16" required>
+            </p>
+            <p>
+            <label>Nouveau mot de passe</label>
+            <input type="password" name="passwordN" minlengh="8" maxlength="16" required>
+            </p>
+            <input type="submit" name="Valider" value="Valider">
+          </form>
+            <h2>Changement de l'image de profil</h2>
+            <img src="/Projetwebl1/ENT/data//PP.png" alt="Photo de profil" class="PP"><span><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
+      </div>
+    </div>
   </div>
 </div>
 </body>
