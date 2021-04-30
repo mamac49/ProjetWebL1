@@ -33,8 +33,7 @@ if ($_SESSION["Connected"] = true) {
             </ul>
             <br/>
             <?php
-              if ($_SESSION["Admin"] = true) {
-                var_dump($_SESSION["Admin"]);
+              if ($_SESSION["Admin"] == true) {
             ?>
               <input type="button" name="CreationBlog" value="Créer Un Blog">
               <br/>
