@@ -1,6 +1,18 @@
 <?php
 session_start();
 
+function chgttheme() {
+    if ($_SESSION["theme"] == "Sombre") {
+      $_SESSION["theme"] = "Clair";
+    } else {
+      $_SESSION["theme"] = "Sombre";
+    }
+}
+
+if (isset(($_POST['theme']))) {
+  chgttheme();
+}
+
 if ($_SESSION["Connected"] = true) {
 ?>
 
@@ -29,7 +41,7 @@ if ($_SESSION["Connected"] = true) {
         <?php
         }
         ?>
-        <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/theme.php"><div class="texteBurger"><i class="fas fa-palette icone"></i>Thème</div></a></li>
+        <li><form action="base.php" method="POST"><input type="button" value="theme clair/sombre" name="theme"></form></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="texteBurger"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
         <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="texteBurger"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
       </ul>
