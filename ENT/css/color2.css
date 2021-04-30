@@ -13,7 +13,7 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
 }
 
 
-.move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourci {
+.move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourciM, .raccourciB {
   background-color: var(--main-color);
 }
 
