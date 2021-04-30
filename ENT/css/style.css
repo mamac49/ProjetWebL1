@@ -199,8 +199,8 @@
 
   .retour {
     position: absolute;
-    top: 95%;
-    left: 8%;
+    top: 92%;
+    left: 10%;
     font-size: 2em;
     color: var(--font-color);
     transform: rotate(0deg);
