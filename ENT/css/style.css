@@ -32,7 +32,7 @@
     background-color: inherit;
     text-align: center;
     width: 70%;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 
   .taoki {
@@ -42,7 +42,7 @@
   .burger_icon{
     position: absolu;
     top: 98%;
-    left: 98%;
+    left: 99%;
     font-size: 35px;
     width: 65px;
     height: 65px;
