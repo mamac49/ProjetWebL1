@@ -221,10 +221,11 @@
   width: 300px;
   margin-left: 50px;
   padding: 10px;
+  padding-top: 15px;
   text-align: center;
 }
 
 .qwant img {
   width: 200px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
