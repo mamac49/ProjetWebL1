@@ -57,7 +57,6 @@ if ($_SESSION["Connected"] = true) {
   <?php
       include ("../../base.php");
   ?>
-    <div class="contenu">
       <div class="Center">
         <h1>Paramètres</h1>
           <form method="POST" name="password">
@@ -75,7 +74,6 @@ if ($_SESSION["Connected"] = true) {
             <h2>Changement de l'image de profil</h2>
             <img src="/Projetwebl1/ENT/data//PP.png" alt="Photo de profil" class="PP"><span><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
       </div>
-    </div>
   </div>
 </div>
 </body>

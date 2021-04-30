@@ -10,8 +10,8 @@ if ($_SESSION["Connected"] = true) {
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
     <link rel="stylesheet" href="styleF.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
+    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
