@@ -13,6 +13,7 @@ function chgttheme() {
 
 if (isset(($_POST['theme']))) {
   chgttheme();
+  reset($_POST);
 }
 
 
