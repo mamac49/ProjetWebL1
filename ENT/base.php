@@ -1,18 +1,12 @@
 <?php
 session_start();
 
-function chgttheme() {
-    if ($_SESSION["theme"] == "Sombre") {
-      $_SESSION["theme"] = "Clair";
-    } else {
-      $_SESSION["theme"] = "Sombre";
-    }
-    reset($_POST);
-}
-
-
 if (isset(($_POST['theme']))) {
-  chgttheme();
+  if ($_SESSION["theme"] == "Sombre") {
+    $_SESSION["theme"] = "Clair";
+  } else {
+    $_SESSION["theme"] = "Sombre";
+  }
   reset($_POST);
 }
 
