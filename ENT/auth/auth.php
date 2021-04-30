@@ -31,7 +31,7 @@ function Connexion($mail, $password) {
         $_SESSION["Connected"] = True;
         $_SESSION["Mail"] = $mail;
         $_SESSION["ID"] = $id;
-        $_SESSION["Admin"] = False;
+        $_SESSION["Admin"] = $admin;
 
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
