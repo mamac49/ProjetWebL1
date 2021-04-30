@@ -40,9 +40,7 @@
   }
 
   .burger_icon{
-    position: absolu;
-    top: 98%;
-    left: 99%;
+    padding: 10px;
     font-size: 35px;
     width: 65px;
     height: 65px;
