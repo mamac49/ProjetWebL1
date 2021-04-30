@@ -20,7 +20,7 @@ if ($_SESSION["Connected"] = true) {
       include ("../../base.php");
     ?>
 
-          <div class="Centre">
+          <div class="Center">
             <h2 class="texte">Listes des cahiers</h2>
             <div class="leaf">
               <ul class="liste">
