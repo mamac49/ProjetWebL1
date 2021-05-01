@@ -77,7 +77,7 @@ if ($_SESSION["Connected"] == true) {
               $link = dbConnect();
               $img = mysqli_query($link, "SELECT * FROM `users` WHERE `mail`= '$_SESSION[Mail]'");
               while ($row = mysqli_fetch_array($img)) {
-                echo "<img src='".$row['PP']."'>";
+                echo "<img src='image/".$row['PP']."'>";
               }
             ?>
             <span class="texte"><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
