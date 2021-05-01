@@ -14,6 +14,7 @@ if ($_SESSION["Connected"] == true) {
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
+    <script src="menu_clic.js"></script>
   </head>
     <?php
       include ("../../base.php");
