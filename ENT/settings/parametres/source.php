@@ -16,7 +16,7 @@ function dbConnect() {
 $link = dbConnect();
 
 $sql = "SELECT * FROM `PP` WHERE `idpic`= ?";
-$stmt = mysqli_prepare($link, $sql);
+$stmt = mysqli_prepare($sql);
 mysqli_stmt_bind_param($stmt, 1, $_GET['id']);
 $stmt = mysli_stmt_execute();
 
