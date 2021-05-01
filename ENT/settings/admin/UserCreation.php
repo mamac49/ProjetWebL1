@@ -26,13 +26,16 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 
     $iduser = $nb + 1;
 
-    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n` ,`pp`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$pp', '$admin');";
-
+    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin');";
+    $sql2 = "INSERT INTO `PP` (`data`) VALUES ($pp);";
     if (mysqli_query($link, $sql)) {
+      if (mysqli_query($link, $sql2)) {
         echo "succès";
         reset($_POST);
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
         exit();
+      }
+        
     }
 }
 
@@ -42,7 +45,7 @@ if ( isset($_POST['valider'])) {
     $mail = $_POST['mail'];
     $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $date = $_POST['datenaissance'];
-    $pp = file_get_encode($_POST['pp']);
+    $pp = file_get_content($_FILES['pp']['tmp_name']);
     if (isset($_POST['admin'])) {
       $admin = $_POST['admin'];
     } else {
