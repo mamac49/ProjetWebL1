@@ -105,5 +105,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
 </html>
 
 <?php
+} else {
+  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>
