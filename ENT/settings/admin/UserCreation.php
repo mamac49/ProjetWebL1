@@ -32,9 +32,9 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
         echo "succès";
         $request = "SELECT * FROM `PP`";
         if ($result = mysqli_query($link, $request)) {
-          $row = mysqli_fetch_assoc($result);
-          $nb = $row['idpic'];
-          var_dump($row);
+          $nb = mysqli_num_rows($result);
+          $nb = $nb + 1;
+          var_dump($nb);
           exit;
         }
         $sql = "UPDATE `users` set `idpic`=('$nb') WHERE `mail`= '$_SESSION[Mail]'";
