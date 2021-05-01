@@ -35,7 +35,6 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
           $nb = mysqli_num_rows($result);
           $nb = $nb + 1;
           var_dump($nb);
-          exit;
         }
         $sql = "UPDATE `users` set `idpic`=('$nb') WHERE `mail`= '$_SESSION[Mail]'";
         if (mysqli_query($link, $sql)) {
