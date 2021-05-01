@@ -14,13 +14,15 @@ function dbConnect() {
 $link = dbConnect();
     
 $sql = "SELECT * FROM `users` WHERE `mail`= '?'";
-$stmt = mysqli_prepare($sql);
-$stmt = mysqli_bindparam($_SESSION[Mail], $_GET['id']);
+$stmt = mysqli_prepare($link, $sql);
+$stmt = mysqli_stmt_bind_param($stmt, 1, $_GET["id"]);
 $stmt = mysli_execute();
 
 $row = mysqli_fetch_assoc($stmt);
 
 $ext = $row['extPP'];
+
+mysqli_close($link);
 
 header("Content-type: image/". $ext);
 print $row['PP'];
