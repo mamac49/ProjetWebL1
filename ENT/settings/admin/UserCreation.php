@@ -34,8 +34,8 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
         if ($result = mysqli_query($link, $request)) {
           $nb = mysqli_num_rows($result);
         }
-        $sql = "UPDATE `users` set `idpic`=('$nb')";
-        $sql2 = "UPDATE `PP` set `idpic`=('$nb')";
+        $sql = "UPDATE `users` set `idpic`=('$nb') WHERE `mail`= '$_SESSION[Mail]'";
+        $sql2 = "UPDATE `PP` set `idpic`=('$nb') WHERE `user.mail`= '$_SESSION[Mail]'";
         if (mysqli_query($link, $sql)) {
           if (mysqli_query($link, $sql2)) {
             reset($_POST);
