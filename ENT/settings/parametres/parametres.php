@@ -52,8 +52,6 @@ if (isset($_POST['Valider'])) {
   $mdpN = password_hash($_POST['passwordN'], PASSWORD_DEFAULT);
 }
 
-AffichageImg();
-
 ChgtMdp($mdpA, $mdpN);
 
 if ($_SESSION["Connected"] == true) {
@@ -90,7 +88,7 @@ if ($_SESSION["Connected"] == true) {
           </form>
             <h2 class="texte">Changement de l'image de profil</h2>
             <?php
-              echo '<img src="parametre.php?$img=<?php echo $img ?>" alt="Photo de profil" class="PP">';
+              echo '<img src="$img=<?php AffichageImg(); ?>" alt="Photo de profil" class="PP">';
             ?>
             <span class="texte"><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
       </div>
