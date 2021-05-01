@@ -32,8 +32,8 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
           echo 'Erreur d accès à la base de données - FIN';    
           mysqli_close($link);    
       }
-      //$pp = mysqli_real_escape_string($link, $pp);
-      mysqli_stmt_bind_param($stmt, "s", $pp);
+      $pp = mysqli_real_escape_string($link, $pp);
+      mysqli_stmt_bind_param($stmt, "b", $pp);
       if (mysqli_stmt_execute($stmt)) {
         echo "succès";
         reset($_POST);
