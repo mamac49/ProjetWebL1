@@ -20,6 +20,8 @@ $stmt = mysli_execute();
 
 $row = mysqli_fetch_assoc($stmt);
 
+echo $row;
+
 $ext = $row['extPP'];
 
 mysqli_close($link);
