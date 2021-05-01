@@ -32,10 +32,24 @@ function ChgtMdp($mdpA, $mdpN) {
   }
 }
 
+function AffichageImg () {
+  $link = dbConnect();
+  
+  $sql = "SELECT * FROM `users` WHERE `mail`= '$_SESSION[Mail]'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_assoc($result);
+
+    $img = $row['PP'];
+    $ext = $row['extPP'];
+  }
+}
+
 if (isset($_POST['Valider'])) {
   $mdpA = $_POST['passwordA'];
   $mdpN = password_hash($_POST['passwordN'], PASSWORD_DEFAULT);
 }
+
+AffichageImg();
 
 ChgtMdp($mdpA, $mdpN);
 
@@ -72,7 +86,11 @@ if ($_SESSION["Connected"] == true) {
             <input class="texte" type="submit" name="Valider" value="Valider">
           </form>
             <h2 class="texte">Changement de l'image de profil</h2>
-            <img src="/Projetwebl1/ENT/data//PP.png" alt="Photo de profil" class="PP"><span><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
+            <?php
+              header("Content-type: image/". $ext);
+              echo '<img src="'. $img .'" alt="Photo de profil" class="PP">';
+            ?>
+            <span class="texte"><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
       </div>
   </div>
 </div>
