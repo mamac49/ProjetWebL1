@@ -42,7 +42,7 @@ if ( isset($_POST['valider'])) {
     $mail = $_POST['mail'];
     $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $date = $_POST['datenaissance'];
-    $pp = $_POST['pp'];
+    $pp = file_get_encode($_POST['pp']);
     if (isset($_POST['admin'])) {
       $admin = $_POST['admin'];
     } else {
@@ -77,7 +77,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
     ?>
 
         <div class="Center">
-            <form action="UserCreation.php" method="POST" class="Formulaire">
+            <form action="UserCreation.php" method="POST" class="Formulaire" enctype="multipart/form-data">
                 <p class="texteF">Nom</p>
                   <input type="text" name="nom" placeholder="Nom" class="FormCrea" required>
                 <p class="texteF">Prenom</p>
