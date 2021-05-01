@@ -15,17 +15,15 @@ function dbConnect() {
 
 $link = dbConnect();
 
-$sql = "SELECT * FROM `users` WHERE `iduser`= ?";
+$sql = "SELECT * FROM `PP` WHERE `idpic`= ?";
 $stmt = mysqli_prepare($link, $sql);
 mysqli_stmt_bind_param($stmt, 1, $_GET['id']);
 $stmt = mysli_stmt_execute();
 
 $row = mysqli_fetch_array($stmt);
 
-$ext = $row['extPP'];
-
 header("Content-type: image/PNG");
-print $row['PP'];
+print $row['data'];
 exit;
 
 ?>

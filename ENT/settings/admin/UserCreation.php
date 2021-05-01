@@ -42,7 +42,7 @@ if ( isset($_POST['valider'])) {
     $mail = $_POST['mail'];
     $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $date = $_POST['datenaissance'];
-    $pp = base64_encode($_POST['pp']);
+    $pp = $_POST['pp'];
     if (isset($_POST['admin'])) {
       $admin = $_POST['admin'];
     } else {
