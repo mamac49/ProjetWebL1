@@ -22,7 +22,7 @@ $stmt = mysli_stmt_execute();
 
 $row = mysqli_fetch_array($stmt);
 
-header("Content-type: image/PNG");
+header("Content-type: image/png");
 print $row['data'];
 exit;
 
