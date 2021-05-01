@@ -35,10 +35,10 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
         exit();
       } else {
-          mysqli_error($link);
+         echo mysqli_error($link);
       }        
     } else {
-    mysqli_error($link);
+    echo mysqli_error($link);
     }
 }
 
