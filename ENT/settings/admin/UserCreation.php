@@ -32,6 +32,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
           echo 'Erreur d accès à la base de données - FIN';    
           mysqli_close($link);    
       }
+      $pp = mysqli_real_escape_string($link, $pp);
       mysqli_stmt_bind_param($stmt, "b", $pp);
       var_dump($pp);
       exit;
