@@ -28,6 +28,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
 
     $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin');";
     $sql2 = "INSERT INTO `PP` (`data`) VALUES ('$pp');";
+    var_dump("test");
     if (mysqli_query($link, $sql)) {
       if (mysqli_query($link, $sql2)) {
         echo "succès";
