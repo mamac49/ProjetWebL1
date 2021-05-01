@@ -22,7 +22,7 @@ if ( !$stmt ){
     echo 'Erreur d accès à la base de données - FIN';    
     mysqli_close($link);    
 }
-mysqli_stmt_bind_param($stmt, 1, $_GET['id']);
+mysqli_stmt_bind_param($stmt, 1, $_SESSION['Pic']);
 if ($stmt = mysqli_stmt_execute()) {
   $row = mysqli_fetch_array($stmt);
 } else {

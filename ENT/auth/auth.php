@@ -19,6 +19,7 @@ function Connexion($mail, $password) {
         $row = mysqli_fetch_assoc($result);
         $mdp = $row['mdp'];
         $id = $row['iduser'];
+        $pic = $row['idpic'];
         if ($row['admin'] == 1) {
           $admin = True;
         } else {
@@ -35,6 +36,7 @@ function Connexion($mail, $password) {
         $_SESSION["Admin"] = $admin;
         $_SESSION["theme"] = "Sombre";
         $_SESSION["Id"] = $id;
+        $_SESSION["Pic"] = $pic;
  
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
