@@ -57,10 +57,9 @@ if ( isset($_POST['valider'])) {
       $admin = 0;
     }
     Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
+    mysqli_close($link);
 
 }
-
-mysqli_close($link);
 
 if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
 ?>
