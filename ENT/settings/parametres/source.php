@@ -23,7 +23,7 @@ if ( !$stmt ){
     mysqli_close($link);    
 }
 mysqli_stmt_bind_param($stmt, 1, $_GET['id']);
-if ($stmt = mysli_stmt_execute()) {
+if ($stmt = mysqli_stmt_execute()) {
   $row = mysqli_fetch_array($stmt);
 } else {
   echo mysqli_connect_error();
