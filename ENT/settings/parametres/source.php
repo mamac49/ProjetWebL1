@@ -17,7 +17,7 @@ $link = dbConnect();
 
 $sql = "SELECT * FROM `users` WHERE `iduser`= ?";
 $stmt = mysqli_prepare($link, $sql);
-mysqli_stmt_bind_param($stmt, $_GET['id']);
+mysqli_stmt_bind_param($stmt, 1, $_GET['id']);
 $stmt = mysli_stmt_execute();
 
 $row = mysqli_fetch_array($stmt);
