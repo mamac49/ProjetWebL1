@@ -33,6 +33,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
         $request = "SELECT * FROM `PP`";
         if ($result = mysqli_query($link, $request)) {
           $row = mysqli_fetch_assoc($result);
+          $nb = $row['idpic'];
           var_dump($row);
           exit;
         }
