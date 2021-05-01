@@ -25,18 +25,10 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     $iduser = $nb + 1;
 
     $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin');";
-    $sql2 = "INSERT INTO `PP` (`data`) VALUE (?);";
     if (mysqli_query($link, $sql)) {
-      $stmt = mysqli_prepare($link, $sql2);
-      if ( !$stmt ){
-          echo 'Erreur d accès à la base de données - FIN';    
-          mysqli_close($link);    
-      }
       $pp = mysqli_real_escape_string($link, $pp);
-      mysqli_stmt_bind_param($stmt, "b", $pp);
-      var_dump($stmt);
-      exit;
-      if (mysqli_stmt_execute($stmt)) {
+      $sql2 = "INSERT INTO `PP` (`data`) VALUE ('$pp');";
+      if (mysqli_query($link, $sql2)) {
         echo "succès";
         reset($_POST);
         mysqli_close($link);
