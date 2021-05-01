@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 function dbConnect() {
     $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
@@ -15,7 +17,7 @@ $link = dbConnect();
     
 $sql = "SELECT * FROM `users` WHERE `mail`= ?";
 $stmt = mysqli_prepare($link, $sql);
-$stmt = mysqli_stmt_bind_param($stmt, 1, $_GET["id"]);
+$stmt = mysqli_stmt_bind_param($stmt, 1, $_SESSION['Mail']);
 $stmt = mysli_stmt_execute();
 
 $row = mysqli_fetch_assoc($stmt);
