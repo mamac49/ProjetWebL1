@@ -24,7 +24,7 @@ $ext = $row['extPP'];
 
 mysqli_close($link);
 
-header("Content-type: image/". $ext);
+header("Content-type: image/PNG");
 print $row['PP'];
 exit;
 
