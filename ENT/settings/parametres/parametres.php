@@ -58,7 +58,7 @@ if (isset($_POST['Valider'])) {
   ChgtMdp($mdpA, $mdpN);
 }
 
-var_dump($_SESSION['Pic']);
+var_dump(Affichage());
 
 if ($_SESSION["Connected"] == true) {
 ?>
