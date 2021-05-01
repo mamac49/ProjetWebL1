@@ -42,7 +42,7 @@ function AffichageImg () {
     $img = $row['PP'];
     $ext = $row['extPP'];
 
-    header("Content-type: image/". $ext);
+    header("Content-type: image/PNG");
     echo $img;
   }
 }
