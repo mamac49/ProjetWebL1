@@ -16,7 +16,7 @@ function dbConnect() {
 
 $link = dbConnect();
 
-$sql = "SELECT * FROM `PP` WHERE `idpic`= ?";
+$sql = "SELECT * FROM `PP` WHERE `idpic`= (?)";
 $stmt = mysqli_prepare($link, $sql);
 if ( !$stmt ){
     echo 'Erreur d accès à la base de données - FIN';    

@@ -1,7 +1,4 @@
 <?php
-
-session_start();
-
 error_reporting(E_ALL);
 
 function dbConnect() {
@@ -17,7 +14,6 @@ function dbConnect() {
 
 
 function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
-    var_dump("Hello");
     $link = dbConnect();
     if ($result = mysqli_query($link, "SELECT * FROM `users`")) {
         $nb = mysqli_num_rows($result);
@@ -27,20 +23,23 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     $iduser = $nb + 1;
 
     $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin');";
-    $sql2 = "INSERT INTO `PP` (`data`) VALUES ('$pp');";
-    var_dump("test");
+    $sql2 = "INSERT INTO `PP` (`data`) VALUE (?);";
     if (mysqli_query($link, $sql)) {
-      if (mysqli_query($link, $sql2)) {
+      $stmt = mysqli_prepare($link, $sql2);
+      if ( !$stmt ){
+          echo 'Erreur d accès à la base de données - FIN';    
+          mysqli_close($link);    
+      }
+      mysqli_stmt_send_long_data($stmt, 0, $pp);
+      if (mysli_stmt_execute()) {
         echo "succès";
         reset($_POST);
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
         exit();
       } else {
-        var_dump("a");
         echo mysqli_error($link);
       }        
     } else {
-      var_dump("b");  
       echo mysqli_error($link);
     }
 }
