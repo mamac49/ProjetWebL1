@@ -22,7 +22,7 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
 }
 
 
-.sujets a, .Dropzone, .texte, .Copybook:visited {
+.sujets a, .Dropzone, .texte, .Copybook:visited, .texteF {
   color: var(--font-color-nde);
 }
 
