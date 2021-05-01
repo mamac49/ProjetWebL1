@@ -44,7 +44,7 @@ function Affichage() {
       mysqli_close($link);    
   }
   mysqli_stmt_bind_param($stmt, 0, $_SESSION['Pic']);
-  if ($stmt = mysqli_stmt_execute()) {
+  if (mysqli_stmt_execute($stmt)) {
     $row = mysqli_fetch_array($stmt);
   } else {
     echo mysqli_connect_error();
