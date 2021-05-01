@@ -16,10 +16,10 @@ function dbConnect() {
 
 
 
-function Create($nom, $prenom, $mail, $password, $date, $pp, $admin)
-{
+function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
+    var_dump("Hello")
     $link = dbConnect();
-    if ($result = mysqli_query($link, "SELECT * FROM users")) {
+    if ($result = mysqli_query($link, "SELECT * FROM `users`")) {
         $nb = mysqli_num_rows($result);
     }
     mysqli_free_result($result);
