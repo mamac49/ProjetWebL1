@@ -78,14 +78,19 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
 
         <div class="Center">
             <form action="UserCreation.php" method="POST" class="Formulaire">
-                <input type="text" name="nom" placeholder="Nom" class="FormCrea" required>
-                <input type="text" name="prenom" placeholder="Prénom" class="FormCrea" required>
-                <input type="email" name="mail" placeholder="E-mail" class="FormCrea" required>
-                <input type="password" name="mdp" placeholder="Premier mot de passe" class="FormCrea" required>
-                <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
-                <label for="file">Sélectionner la PP</label>
-                <input type="file" id="file" name="pp" accept="image/*" required>
-                <label for="admin">Admin ?</label>
+                <p>Nom</p>
+                  <input type="text" name="nom" placeholder="Nom" class="FormCrea" required>
+                <p>Prenom</p>
+                  <input type="text" name="prenom" placeholder="Prénom" class="FormCrea" required>
+                <p>Email</p>
+                  <input type="email" name="mail" placeholder="E-mail" class="FormCrea" required>
+                <p>Mot de passe</p>
+                  <input type="password" name="mdp" placeholder="Mot de passe" class="FormCrea" required>
+                <p>Date de naissance</p>
+                  <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
+                <p>Sélectionner l'image de profil</p>
+                  <input type="file" id="file" name="pp" accept="image/*" required>
+                <p>Administrateur ?</p>
                 <input type="checkbox" value="1" name="admin">
                 <input type="submit" name="valider" value="Creer" class="FormCrea Bouton">
             </form>
