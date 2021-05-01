@@ -15,7 +15,7 @@ function dbConnect() {
 
 $link = dbConnect();
 
-$sql = "SELECT * FROM `users` WHERE `mail`= ?";
+$sql = "SELECT * FROM `users` WHERE `iduser`= ?";
 $stmt = mysqli_prepare($link, $sql);
 mysqli_stmt_bind_param($stmt, $_GET['id']);
 $stmt = mysli_stmt_execute();
