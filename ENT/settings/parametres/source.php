@@ -20,7 +20,7 @@ $stmt = mysqli_prepare($link, $sql);
 $stmt = mysqli_stmt_bind_param(1, $_GET['id']);
 $stmt = mysli_stmt_execute();
 
-$row = mysqli_fetch_assoc($stmt);
+$row = mysqli_fetch_array($stmt);
 
 $ext = $row['extPP'];
 
