@@ -19,9 +19,6 @@ if ($_SESSION["Connected"] == true) {
     <?php
       include ("../../base.php");
     ?>
-  <body onload="move_menu_burger(); detect_click();">
-
-    <div class="site_container">
       
       <script src="menu_clic.js"></script>
         <div class="contenu">
@@ -77,9 +74,6 @@ if ($_SESSION["Connected"] == true) {
       </div>
     </div>
     
-    
-
-
   </div>
 </body>
 </html>
