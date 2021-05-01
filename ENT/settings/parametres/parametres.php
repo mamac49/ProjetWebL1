@@ -35,9 +35,8 @@ function ChgtMdp($mdpA, $mdpN) {
 if (isset($_POST['Valider'])) {
   $mdpA = $_POST['passwordA'];
   $mdpN = password_hash($_POST['passwordN'], PASSWORD_DEFAULT);
+  ChgtMdp($mdpA, $mdpN);
 }
-
-ChgtMdp($mdpA, $mdpN);
 
 $Mail = $_SESSION[Mail];
 
@@ -74,7 +73,7 @@ if ($_SESSION["Connected"] == true) {
             <input class="texte" type="submit" name="Valider" value="Valider">
           </form>
             <h2 class="texte">Changement de l'image de profil</h2>
-            <img src="source.php?id=$Mail>" alt="Photo de profil" class="PP">
+            <img src='source.php?id="$Mail">' alt="Photo de profil" class="PP">
             <span class="texte"><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
       </div>
   </div>
