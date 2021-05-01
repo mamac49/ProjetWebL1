@@ -24,7 +24,7 @@ if ($_SESSION["Connected"] == true) {
             <div class="Center">
               <!-- les contacts seront listé avec en premier le professeur
                 et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
-              <h2 class="texte">Listes des contacts</h2>
+              <h2 class="texte">Liste des contacts</h2>
               <ul class="contact_list">
                 <li class="contact">
                   <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i>M. Langlois</a>
