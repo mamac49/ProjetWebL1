@@ -43,7 +43,6 @@ function Affichage() {
       echo 'Erreur d accès à la base de données - FIN';    
       mysqli_close($link);    
   }
-  var_dump($_SESSION['Pic']);
   mysqli_stmt_bind_param($stmt, 0, $_SESSION['Pic']);
   if ($stmt = mysqli_stmt_execute()) {
     $row = mysqli_fetch_array($stmt);
@@ -58,6 +57,8 @@ if (isset($_POST['Valider'])) {
   $mdpN = password_hash($_POST['passwordN'], PASSWORD_DEFAULT);
   ChgtMdp($mdpA, $mdpN);
 }
+
+var_dump($_SESSION['Pic']);
 
 if ($_SESSION["Connected"] == true) {
 ?>
