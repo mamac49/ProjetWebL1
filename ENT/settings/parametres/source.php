@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+echo "connexion réussi";
 
 function dbConnect() {
     $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
@@ -18,7 +19,7 @@ $link = dbConnect();
 $sql = "SELECT * FROM `PP` WHERE `idpic`= ?";
 $stmt = mysqli_prepare($link, $sql);
 if ( !$stmt ){
-    echo 'Erreur d\'accès à la base de données - FIN';    
+    echo 'Erreur d accès à la base de données - FIN';    
     mysqli_close($link);    
 }
 mysqli_stmt_bind_param($stmt, 1, 2);
