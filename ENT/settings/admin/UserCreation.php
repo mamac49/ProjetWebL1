@@ -30,10 +30,21 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
       $sql2 = "INSERT INTO `PP` (`data`) VALUE ('$pp');";
       if (mysqli_query($link, $sql2)) {
         echo "succès";
-        reset($_POST);
-        mysqli_close($link);
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
-        exit();
+        $request = "SELECT * FROM `PP`";
+        if ($result = mysqli_query($link, $request)) {
+          $nb = mysqli_num_rows($result);
+        }
+        $sql = "UPDATE `users` set `idpic`=('$nb')";
+        $sql2 = "UPDATE `PP` set `idpic`=('$nb')";
+        if (mysqli_query($link, $sql)) {
+          if (mysqli_query($link, $sql2)) {
+            reset($_POST);
+            mysqli_close($link);
+            header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
+            exit();
+          }
+        }
+        
       } else {
         echo mysqli_error($link);
       }        
