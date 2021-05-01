@@ -51,7 +51,7 @@ if ( isset($_POST['valider'])) {
     $mail = $_POST['mail'];
     $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
     $date = $_POST['datenaissance'];
-    $pp = file_get_content($_FILES['pp']['tmp_name']);
+    $pp = file_get_contents($_FILES['pp']['tmp_name']);
     if (isset($_POST['admin'])) {
       $admin = $_POST['admin'];
     } else {
