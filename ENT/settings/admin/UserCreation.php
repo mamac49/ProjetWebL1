@@ -36,6 +36,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
       if (mysqli_stmt_execute($stmt)) {
         echo "succès";
         reset($_POST);
+        mysqli_close($link);
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
         exit();
       } else {
@@ -44,6 +45,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     } else {
       echo mysqli_error($link);
     }
+    mysqli_close($link);
 }
 
 if ( isset($_POST['valider'])) {
@@ -59,8 +61,6 @@ if ( isset($_POST['valider'])) {
       $admin = 0;
     }
     Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
-    mysqli_close($link);
-
 }
 
 if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
