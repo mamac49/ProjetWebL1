@@ -32,17 +32,16 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
         echo "succès";
         $request = "SELECT * FROM `PP`";
         if ($result = mysqli_query($link, $request)) {
-          $nb = mysqli_num_rows($result);
+          $row = mysqli_fetch_assoc($result);
+          var_dump($row);
+          exit;
         }
         $sql = "UPDATE `users` set `idpic`=('$nb') WHERE `mail`= '$_SESSION[Mail]'";
-        $sql2 = "UPDATE `PP` set `idpic`=('$nb') WHERE `user.mail`= '$_SESSION[Mail]'";
         if (mysqli_query($link, $sql)) {
-          if (mysqli_query($link, $sql2)) {
-            reset($_POST);
-            mysqli_close($link);
-            header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
-            exit();
-          }
+          reset($_POST);
+          mysqli_close($link);
+          header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
+          exit();
         }
         
       } else {
