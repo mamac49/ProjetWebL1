@@ -20,9 +20,8 @@ if ($_SESSION["Connected"] == true) {
       include ("../../base.php");
     ?>
       
-      <script src="menu_clic.js"></script>
         <div class="contenu">
-            <div class="Centre">
+            <div class="Center">
               <!-- les contacts seront listé avec en premier le professeur
                 et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
               <h2 class="texte">Listes des contacts</h2>

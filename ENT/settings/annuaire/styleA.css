@@ -23,20 +23,20 @@
 
 .Center h2{
   text-align: center;
-  color:white;
+  color:black;
 }
 
 .contact_list{
   display: flex;
   flex-direction: column;
-  color:white;
+  color:black;
   }
 
 
 .contact{
   font-size: 19px;
   margin-right: 10px;
-  color:white;
+  color:black;
 }
 
 .contact_link {
