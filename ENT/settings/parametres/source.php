@@ -17,7 +17,7 @@ $link = dbConnect();
     
 $sql = "SELECT * FROM `users` WHERE `mail`= ?";
 $stmt = mysqli_prepare($link, $sql);
-$stmt = mysqli_stmt_bind_param($stmt, 1, $_SESSION['Mail']);
+$stmt = mysqli_stmt_bind_param(1, $_GET['id']);
 $stmt = mysli_stmt_execute();
 
 $row = mysqli_fetch_assoc($stmt);
