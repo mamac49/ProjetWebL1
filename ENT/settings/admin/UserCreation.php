@@ -34,6 +34,8 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
       }
       $pp = mysqli_real_escape_string($link, $pp);
       mysqli_stmt_bind_param($stmt, "b", $pp);
+      var_dump($stmt);
+      exit;
       if (mysqli_stmt_execute($stmt)) {
         echo "succès";
         reset($_POST);
