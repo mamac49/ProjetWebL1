@@ -22,8 +22,7 @@ if ($_SESSION["Connected"] == true) {
       
       <script src="menu_clic.js"></script>
         <div class="contenu">
-          <div class="site">
-            <div class="Center">
+            <div class="Centre">
               <!-- les contacts seront listé avec en premier le professeur
                 et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
               <h2 class="texte">Listes des contacts</h2>
@@ -48,7 +47,6 @@ if ($_SESSION["Connected"] == true) {
                 </li>
               </ul>
             </div>
-          </div>
       </div>
 
       <!-- menu clic droit/-->
@@ -56,19 +54,19 @@ if ($_SESSION["Connected"] == true) {
       <div id="context_menu" class="context_menu" >
       <ul class="context_menu_list">
         <li class="context_menu_element" id="show_profile">
-          <p class="context_menu_button texte"><i class="fa fa-address-card" id="context_menu_icons"></i>Profil</p>
+          <p class="context_menu_button"><i class="fa fa-address-card" id="context_menu_icons"></i>Profil</p>
         </li>
         <li>
           <hr class="context_menu_hr">
         </li>
         <li class="context_menu_element" id="copy_phone">
-          <p class="context_menu_button texte"><i class="fa fa-copy" id="context_menu_icons"></i>Copier le numéro de téléphone</p>
+          <p class="context_menu_button"><i class="fa fa-copy" id="context_menu_icons"></i>Copier le numéro de téléphone</p>
         </li>
         <li>
           <hr class="context_menu_hr">
         </li>
         <li class="context_menu_element" id="copy_mail">
-          <p class="context_menu_button texte"><i class="fa fa-envelope-open" id="context_menu_icons"></i>Copier le mail</p>
+          <p class="context_menu_button"><i class="fa fa-envelope-open" id="context_menu_icons"></i>Copier le mail</p>
         </li>
       </ul>
       </div>
