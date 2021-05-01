@@ -54,10 +54,9 @@ if ( isset($_POST['valider'])) {
     } else {
       $admin = 0;
     }
+    Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
 }
-
-Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
 
 mysqli_close($link);
 
