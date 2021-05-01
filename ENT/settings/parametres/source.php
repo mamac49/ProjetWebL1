@@ -22,7 +22,7 @@ if ( !$stmt ){
     echo 'Erreur d accès à la base de données - FIN';    
     mysqli_close($link);    
 }
-mysqli_stmt_bind_param($stmt, 1, 2);
+mysqli_stmt_bind_param($stmt, 1, $_GET['id']);
 if ($stmt = mysli_stmt_execute()) {
   $row = mysqli_fetch_array($stmt);
 } else {
