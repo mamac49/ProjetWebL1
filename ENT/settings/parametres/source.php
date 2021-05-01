@@ -29,9 +29,6 @@ if ($stmt = mysqli_stmt_execute()) {
   echo mysqli_connect_error();
 }
 
-
-
-
 header("Content-type: image/png");
 print $row['data'];
 exit;

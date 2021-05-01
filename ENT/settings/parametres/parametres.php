@@ -34,6 +34,24 @@ function ChgtMdp($mdpA, $mdpN) {
   }
 }
 
+function Affichage() {
+  $link = dbConnect();
+
+  $sql = "SELECT * FROM `PP` WHERE `idpic`= (?)";
+  $stmt = mysqli_prepare($link, $sql);
+  if ( !$stmt ){
+      echo 'Erreur d accès à la base de données - FIN';    
+      mysqli_close($link);    
+  }
+  mysqli_stmt_bind_param($stmt, 1, $_SESSION['Pic']);
+  if ($stmt = mysqli_stmt_execute()) {
+    $row = mysqli_fetch_array($stmt);
+  } else {
+    echo mysqli_connect_error();
+  }
+  return $row['data'];
+}
+
 if (isset($_POST['Valider'])) {
   $mdpA = $_POST['passwordA'];
   $mdpN = password_hash($_POST['passwordN'], PASSWORD_DEFAULT);
@@ -73,7 +91,7 @@ if ($_SESSION["Connected"] == true) {
             <input class="texte" type="submit" name="Valider" value="Valider">
           </form>
             <h2 class="texte">Changement de l'image de profil</h2>
-            <img src="<?php include (source.php); ?>" alt="Photo de profil" class="PP">
+            <img src="src = "<?php echo ' data:image/png;base64,' . base64_encode($Affichage()) . ' '?>" alt="Photo de profil" class="PP">
             <span class="texte"><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
       </div>
   </div>
