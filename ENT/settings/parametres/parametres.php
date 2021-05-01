@@ -41,6 +41,9 @@ function AffichageImg () {
 
     $img = $row['PP'];
     $ext = $row['extPP'];
+
+    header("Content-type: image/". $ext);
+    echo $img;
   }
 }
 
@@ -87,9 +90,7 @@ if ($_SESSION["Connected"] == true) {
           </form>
             <h2 class="texte">Changement de l'image de profil</h2>
             <?php
-              header("Content-type: image/". $ext);
-              echo $img . $ext;
-              echo '<img src="<?php echo $img ?>" alt="Photo de profil" class="PP">';
+              echo '<img src="parametre.php?$img=<?php echo $img ?>" alt="Photo de profil" class="PP">';
             ?>
             <span class="texte"><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
       </div>
