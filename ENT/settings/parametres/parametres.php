@@ -71,7 +71,7 @@ if ($_SESSION["Connected"] == true) {
             <input class="texte" type="submit" name="Valider" value="Valider">
           </form>
             <h2 class="texte">Changement de l'image de profil</h2>
-            <img src="source.php?id=$_SESSION[Mail]>" alt="Photo de profil" class="PP">
+            <img src="source.php?id=$_SESSION[Id]>" alt="Photo de profil" class="PP">
             <span class="texte"><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
       </div>
   </div>
