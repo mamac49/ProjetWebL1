@@ -22,10 +22,10 @@ if ($_SESSION["Connected"] == "True") {
       <h2>Mentions légales</h2>
       <ul class="texte">
         <li>Antoine Beunas</li>
-        <li >Benjamin Humbert</li>
+        <li><i class="fab fa-discord"></i> Benjamin Humbert</li>
         <li>Enzo Creuzet</li>
-        <li>Liam Kern</li>
-        <li>Mattéo Langlois</li>
+        <li><i class="fab fa-steam"></i> Liam Kern</li>
+        <li><i class="fab fa-linux icone"></i> Mattéo Langlois</li>
       </ul>
       <h2>Sources</h2>
       <p>Icônes : <a href="https://fontawesome.com/icons?d=gallery&p=2&m=free">fontawesome</a></p>
