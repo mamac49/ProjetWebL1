@@ -104,7 +104,7 @@ echo $_SESSION['Mail'];
           </form>
             <h2 class="texte">Changement de l'image de profil</h2>
             <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage()) . ' '?>" alt="Photo de profil" class="PP">
-            <span class="texte"><p class="pp"></p><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
+            <span class="texte"><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
       </div>
   </div>
 </div>
