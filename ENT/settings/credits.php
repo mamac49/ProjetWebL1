@@ -33,7 +33,7 @@ if ($_SESSION["Connected"] == "True") {
         <p>Nous utilisons la license GNU General Public License v3.0 : <a href="https://choosealicense.com/license/gpl-3.0/">ChooseALicense</a></p>
 
       <h2>Code source</h2>
-        <a href="https://github.com/matteolanglois/projetwebl1"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/matteolanglois/projetwebl1"><i class="fab fa-github icone"></i></a>
     </div>
 
 </body>
