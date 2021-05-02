@@ -13,7 +13,7 @@
       <li><hr class="hrBurger"></li>
       <li><a class="menu_link" href="/Projetwebl1/ENT/settings/annuaire/annuaire.php"><div class="texteBurger"><i class="far fa-address-book icone"></i>Annuaire</div></a></li>
       <li><hr class="hrBurger"></li>
-      <li><a class="menu_link" href="/Projetwebl1/ENT/publications/cahiertxt/cahier.php"><div class="texteBurger"><i class="fas fa-calendar-alt"></i>Cahier de texte</div></a></li>
+      <li><a class="menu_link" href="/Projetwebl1/ENT/publications/cahiertxt/cahier.php"><div class="texteBurger"><i class="fas fa-calendar-alt icone"></i>Cahier de texte</div></a></li>
       <li><hr class="hrBurger"></li>
     </ul>
     <ul class="menuAutre">
