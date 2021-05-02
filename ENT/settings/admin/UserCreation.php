@@ -94,7 +94,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <input type="file" id="file" name="pp" accept="image/*" required>
                 <p class="texteF">Administrateur ?</p>
                 <input type="checkbox" value="1" name="admin">
-                <input type="submit" name="valider" value="Creer" class="FormCrea Bouton">
+                <input type="submit" name="valider" value="Creer" class="FormCrea Bouton Centrer">
             </form>
 
         </div>
