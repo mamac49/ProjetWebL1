@@ -2,14 +2,19 @@
   --font-color: black;
   --font-color-nde: white;
   --main-color: rgb(6, 154, 173);
+  --second-color: rgb(87, 246, 232);
 }
 
-.move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourciM, .raccourciB, .FormCrea, input[type=button], .bouton, .Login  {
+.move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourciM, .raccourciB, input[type=button], .bouton, .Login  {
   background-color: var(--main-color);
 }
 
 .Center, .site {
   background-color: var(--font-color);
+}
+
+.FormCrea {
+  background-color: var(--second-color);
 }
 
 
@@ -18,12 +23,16 @@
 }
 
 
-html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login {
+html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type="button"], .bouton, .Login {
   color: var(--font-color);
 }
 
 .sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited  {
   color: var(--font-color-nde);
+}
+
+.FormCrea {
+  color: var(--font-color);
 }
 
 
