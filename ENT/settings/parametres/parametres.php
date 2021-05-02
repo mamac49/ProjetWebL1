@@ -44,7 +44,6 @@ function Affichage() {
       mysqli_close($link);    
   }
   mysqli_stmt_bind_param($stmt, "i", $_SESSION['Mail']);
-  exit;
   if (mysqli_stmt_execute($stmt)) {
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_array($result);
