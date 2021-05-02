@@ -75,7 +75,7 @@ if (isset($_POST['Valider'])) {
 
 
 if (isset($_POST['ChgtIMG'])) {
-  chgtPP(file_get_contents($_FILES['PP']['tmp_name']););
+  chgtPP(file_get_contents($_FILES['PP']['tmp_name']));
 }
 
 
