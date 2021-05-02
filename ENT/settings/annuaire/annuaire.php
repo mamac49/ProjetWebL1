@@ -43,7 +43,7 @@ if ($_SESSION["Connected"] == true) {
               <ul class="contact_list">
               <?php
                 $link = dbConnect();
-                $sql = "SELECT * FROM `users`";
+                $sql = "SELECT `prenom` FROM `users`";
                 if ($result = mysqli_query($link, $sql)) {
                   $nb = mysqli_num_rows($result);
                   $row = mysqli_fetch_assoc($result);
