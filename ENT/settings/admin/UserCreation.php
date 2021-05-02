@@ -27,23 +27,13 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin');";
     if (mysqli_query($link, $sql)) {
       $pp = mysqli_real_escape_string($link, $pp);
-      $sql2 = "INSERT INTO `PP` (`data`) VALUE ('$pp');";
+      $sql2 = "INSERT INTO `users` (`PP`) VALUE ('$pp');";
       if (mysqli_query($link, $sql2)) {
         echo "succès";
-        $request = "SELECT * FROM `PP`";
-        if ($result = mysqli_query($link, $request)) {
-          $nb = mysqli_num_rows($result);
-          $nb = $nb + 1;
-          var_dump($nb);
-        }
-        $sql = "UPDATE `users` set `idpic`=('$nb') WHERE `mail`= '$_SESSION[Mail]'";
-        if (mysqli_query($link, $sql)) {
-          reset($_POST);
-          mysqli_close($link);
-          header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
-          exit();
-        }
-        
+        reset($_POST);
+        mysqli_close($link);
+        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
+        exit();
       } else {
         echo mysqli_error($link);
       }        

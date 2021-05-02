@@ -37,13 +37,13 @@ function ChgtMdp($mdpA, $mdpN) {
 function Affichage() {
   $link = dbConnect();
 
-  $sql = "SELECT * FROM `PP` WHERE `idpic`= (?)";
+  $sql = "SELECT * FROM `users` WHERE `mail`= (?)";
   $stmt = mysqli_prepare($link, $sql);
   if ( !$stmt ){
       echo 'Erreur d accès à la base de données - FIN';    
       mysqli_close($link);    
   }
-  mysqli_stmt_bind_param($stmt, "i", $_SESSION['Pic']);
+  mysqli_stmt_bind_param($stmt, "i", $_SESSION['Mail']);
   if (mysqli_stmt_execute($stmt)) {
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_array($result);
