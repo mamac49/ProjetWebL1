@@ -15,6 +15,6 @@
 }
 
 .Centrer{
-    display:flex;
+    display:block;
     justify-content:center;
 }
