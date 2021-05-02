@@ -13,12 +13,13 @@ function dbConnect() {
 
 function nombre() {
   $link = dbConnect();
-  $sql = "SELECT `prenom` FROM `users`";
+  $sql = "SELECT `iduser` FROM `users`";
   if ($result = mysqli_query($link, $sql)) {
     $nb = mysqli_num_rows($result);
     $row = mysqli_fetch_assoc($result);
     var_dump($row);
-    mysqli_free_result($result);  
+    mysqli_free_result($result);
+    return $nb;
   }
 }
 
