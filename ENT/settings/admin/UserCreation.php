@@ -90,7 +90,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <input type="password" name="mdp" placeholder="Mot de passe" class="FormCrea" required>
                 <p class="texteF">Date de naissance</p>
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
-                <p class="texteF">Sélectionner l'image de profil</p>
+                <p class="texteF">Sélectionner l'image de profil (64ko maximum)</p>
                   <input type="file" id="file" name="pp" accept="image/*" required>
                 <p class="texteF">Administrateur ?</p>
                 <input type="checkbox" value="1" name="admin">
