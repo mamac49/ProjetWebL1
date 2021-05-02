@@ -11,6 +11,17 @@ function dbConnect() {
   return $link;
 }
 
+function nombre() {
+  $link = dbConnect();
+  $sql = "SELECT `prenom` FROM `users`";
+  if ($result = mysqli_query($link, $sql)) {
+    $nb = mysqli_num_rows($result);
+    $row = mysqli_fetch_assoc($result);
+    var_dump($row);
+    mysqli_free_result($result);  
+  }
+}
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -42,13 +53,7 @@ if ($_SESSION["Connected"] == true) {
               <h2 class="texte">Liste des contacts</h2>
               <ul class="contact_list">
               <?php
-                $link = dbConnect();
-                $sql = "SELECT `prenom` FROM `users`";
-                if ($result = mysqli_query($link, $sql)) {
-                  $nb = mysqli_num_rows($result);
-                  $row = mysqli_fetch_assoc($result);
-                  mysqli_free_result($result);  
-                }
+                $nb = nombre();
                 for ($x=0; $x=$nb; $x++) {
               ?>
                 <li class="contact">
