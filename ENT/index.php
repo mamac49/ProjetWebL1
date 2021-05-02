@@ -27,7 +27,7 @@ if ($_SESSION["Connected"] == "True") {
     <?php
       include 'base.php';
     ?>
-  <body>
+
     <div class="Centre_main">
       <div class="ligne">
         <!--affiche les anniversaires du mois actuel-->

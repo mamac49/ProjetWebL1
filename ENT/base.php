@@ -1,3 +1,5 @@
+<body onload="move_menu_burger();">
+  
 <div class="site_container">
   <!--menu sandwich (burger) pour pouvoir navigueur entre les différentes pages-->
   <nav class="burger" id="menu_burger">
