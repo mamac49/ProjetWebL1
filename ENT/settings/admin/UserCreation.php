@@ -29,7 +29,6 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
       $pp = mysqli_real_escape_string($link, $pp);
       $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
       if (mysqli_query($link, $sql2)) {
-        echo "succès";
         reset($_POST);
         mysqli_close($link);
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');

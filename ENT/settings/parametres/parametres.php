@@ -54,8 +54,17 @@ function Affichage() {
   return $row['data'];
 }
 
-function chgtPP() {
+function chgtPP($pp) {
+  $link = dbConnect();
 
+  $pp = mysqli_real_escape_string($link, $pp);
+  $request = "UPDATE `users` SET `data` = '$pp' WHERE `mail`= '$_SESSION[Mail]'";
+  if (mysqli_query($link, $request)) {
+    reset($_POST);
+    mysqli_close($link);
+    header("refresh: 0");
+    exit();
+  }
 }
 
 if (isset($_POST['Valider'])) {
@@ -64,10 +73,10 @@ if (isset($_POST['Valider'])) {
   ChgtMdp($mdpA, $mdpN);
 }
 
-/*
-if (isset($_POST[ChgtIMG])) {
-  chgtPP();
-}*/
+
+if (isset($_POST['ChgtIMG'])) {
+  chgtPP($_POST['PP']);
+}
 
 
 if ($_SESSION["Connected"] == true) {
@@ -105,7 +114,11 @@ echo $_SESSION['Mail'];
           </form>
             <h2 class="texte">Changement de l'image de profil</h2>
             <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage()) . ' '?>" alt="Photo de profil" class="PP">
-            <span class="texte"><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</span>
+            <form action="parametres.php" method="POST">
+            <p class="texte"><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</p>
+            <input type="file" id="file" name="pp" accept="image/*">
+            <input type="submit" name="ChgtIMG" value="Valider" class="Bouton">
+            </form>
       </div>
   </div>
 </div>
