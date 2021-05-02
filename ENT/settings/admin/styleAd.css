@@ -15,6 +15,6 @@
 }
 
 .Centrer{
-    object-position: center;
+    display: block;
     margin : auto;
 }
