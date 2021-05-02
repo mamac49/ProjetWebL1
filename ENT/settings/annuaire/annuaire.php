@@ -31,24 +31,24 @@ if ($_SESSION["Connected"] == true) {
                 et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
               <h2 class="texte">Liste des contacts</h2>
               <ul class="contact_list">
+              <?php
+                $sql = "SELECT * FROM `users`";
+                if ($result = mysqli_query($link, $sql)) {
+                  $nb = mysqli_num_rows($result);
+                  $row = mysqli_fetch_assoc($result);
+                  mysqli_free_result($result);  
+                }
+                for ($x=0; $x=$nb; $x++) {
+              ?>
                 <li class="contact">
                   <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i>M. Langlois</a>
                 </li>
                 <li>
                   <hr class="hrcontact">
                 </li>
-                <li class="contact">
-                  <a class="contact_link" id="contact1"><i class="fas fa-laugh-beam icone"></i>Romain</a>
-                </li>
-                <li>
-                  <hr class="hrcontact">
-                </li>
-                <li class="contact">
-                  <a class="contact_link" id="contact2"><i class="fas fa-laugh-beam icone"></i>Marie</a>
-                </li>
-                <li>
-                  <hr class="hrcontact">
-                </li>
+              <?php
+                 }
+              ?>
               </ul>
             </div>
       </div>
