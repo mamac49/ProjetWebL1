@@ -3,6 +3,30 @@
 <?php
 session_start();
 
+function dbConnect() {
+        $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
+
+        if (mysqli_connect_errno()) {
+                echo 'Erreur d accès à la base' . mysqli_connect_error();
+                exit;
+        }
+        echo 'accès réussi'."\n";
+        return $link;
+}
+
+function annivs() {
+    $link = dbConnect();
+    $moisactu = date(m);
+    dbConnect();
+    $anniv = "SQL SELECT * FROM `users` WHERE date_n=%."-".$moisactu."-".%";
+    if ($result = mysqli_query($link, $anniv)) {
+        $row = mysqli_fetch_array($result);
+        mysqli_free_result($result);
+        return $row;
+    }
+}
+
+
 if ($_SESSION["Connected"] == "True") {
 ?>
 
@@ -34,8 +58,7 @@ if ($_SESSION["Connected"] == "True") {
         <div class="Anniversaire">
           <h4><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
-            <li>Prénom, nom, Date</li>
-            <li>Afficher tous ceux du mois actuel</li>
+            <li><?php echo annivs() ?></li>
           </ul>
         </div>
         <!--permet d'avoir le moteur de recherche qwant junior sur la page-->
