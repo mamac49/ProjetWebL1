@@ -30,6 +30,7 @@ function nom($x) {
       mysqli_free_result($result);
       $contact = $row['prenom'] . "\n" . $row['nom'];
       echo $contact;
+      exit();
       return $contact;
   }
 }
