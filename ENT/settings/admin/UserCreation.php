@@ -81,15 +81,15 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
         <div class="Center">
             <form action="UserCreation.php" method="POST" class="Formulaire" enctype="multipart/form-data">
                 <p class="texteF">Nom</p>
-                  <input type="text" name="nom" placeholder="Nom" class="FormCrea" required>
+                  <input type="text" name="nom" placeholder="Nom" class="FormCrea Centrer" required>
                 <p class="texteF">Prenom</p>
-                  <input type="text" name="prenom" placeholder="Prénom" class="FormCrea" required>
+                  <input type="text" name="prenom" placeholder="Prénom" class="FormCrea Centrer" required>
                 <p class="texteF">Email</p>
-                  <input type="email" name="mail" placeholder="E-mail" class="FormCrea" required>
+                  <input type="email" name="mail" placeholder="E-mail" class="FormCrea Centrer" required>
                 <p class="texteF">Mot de passe</p>
-                  <input type="password" name="mdp" placeholder="Mot de passe" class="FormCrea" required>
+                  <input type="password" name="mdp" placeholder="Mot de passe" class="FormCrea Centrer" required>
                 <p class="texteF">Date de naissance</p>
-                  <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
+                  <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea Centrer" required>
                 <p class="texteF">Sélectionner l'image de profil (64ko maximum)</p>
                   <input type="file" id="file" name="pp" accept="image/*" required>
                 <p class="texteF">Administrateur ?</p>
