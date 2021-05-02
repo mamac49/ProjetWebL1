@@ -58,7 +58,7 @@ if ($_SESSION["Connected"] == "True") {
         <div class="Anniversaire">
           <h4><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
-            <li><?php echo annivs() ?></li>
+            <li><?php var_dump(annivs()); ?></li>
           </ul>
         </div>
         <!--permet d'avoir le moteur de recherche qwant junior sur la page-->
