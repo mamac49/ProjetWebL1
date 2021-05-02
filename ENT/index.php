@@ -3,6 +3,8 @@
 <?php
 session_start();
 
+setlocale(LC_TIME, 'fra_fra');
+
 function dbConnect() {
         $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
 
@@ -17,7 +19,6 @@ function dbConnect() {
 function annivs() {
     $link = dbConnect();
     $moisactu = date("m");
-    dbConnect();
     $anniv = "SQL SELECT * FROM `users` WHERE date_n=%."-".$moisactu."-".%";
     if ($result = mysqli_query($link, $anniv)) {
         $row = mysqli_fetch_array($result);
