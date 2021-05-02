@@ -1,6 +1,16 @@
 <?php
 session_start();
 
+function dbConnect() {
+  $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
+
+  if (mysqli_connect_errno()) {
+          echo 'Erreur d accès à la base' . mysqli_connect_error();
+          exit;
+  }
+  return $link;
+}
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -32,6 +42,7 @@ if ($_SESSION["Connected"] == true) {
               <h2 class="texte">Liste des contacts</h2>
               <ul class="contact_list">
               <?php
+                $link = dbConnect();
                 $sql = "SELECT * FROM `users`";
                 if ($result = mysqli_query($link, $sql)) {
                   $nb = mysqli_num_rows($result);
