@@ -27,7 +27,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin');";
     if (mysqli_query($link, $sql)) {
       $pp = mysqli_real_escape_string($link, $pp);
-      $sql2 = "INSERT INTO `users` (`PP`) VALUE ('$pp');";
+      $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
       if (mysqli_query($link, $sql2)) {
         echo "succès";
         reset($_POST);

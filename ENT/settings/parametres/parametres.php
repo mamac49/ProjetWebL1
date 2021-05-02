@@ -51,7 +51,7 @@ function Affichage() {
   } else {
     echo mysqli_connect_error();
   }
-  return $row['PP'];
+  return $row['data'];
 }
 
 function chgtPP() {
