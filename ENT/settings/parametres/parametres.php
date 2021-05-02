@@ -116,7 +116,7 @@ echo $_SESSION['Mail'];
             <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage()) . ' '?>" alt="Photo de profil" class="PP">
             <form action="parametres.php" method="POST">
             <p class="texte"><i class="fas fa-folder-open"></i> Charger une image à partir de mon ordinateur</p>
-            <input type="file" id="file" name="pp" accept="image/*">
+            <input type="file" id="file" name="PP" accept="image/*">
             <input type="submit" name="ChgtIMG" value="Valider" class="Bouton">
             </form>
       </div>
