@@ -17,7 +17,7 @@ if ($_SESSION["Connected"] == "True") {
   </head>
 
   <?php
-      include 'base.php';
+      include '../../base.php';
     ?>
 
 
