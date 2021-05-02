@@ -29,14 +29,12 @@
 .contact_list{
   display: flex;
   flex-direction: column;
-  color:white;
   }
 
 
 .contact{
   font-size: 19px;
   margin-right: 10px;
-  color:white;
 }
 
 .contact_link {

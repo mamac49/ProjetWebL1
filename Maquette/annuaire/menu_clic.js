@@ -1,22 +1,9 @@
-
 Mouse_X = 0 ;
 Mouse_Y = 0 ;
 contextMenuOpened = false;
 function detect_click(){
-  var contact = document.getElementById("contact0");
+  var contact = document.getElementById("contact");
   contact.onclick = open_context_menu;
-  var contact = document.getElementById("contact1");
-  contact.onclick = open_context_menu;
-  var contact = document.getElementById("contact2");
-  contact.onclick = open_context_menu;
-  
-}
-
-
-
-function detect_click_outside(){
-  var site = document.getElementById("page") ;
-  site.onclick = close_context_menu;  
 }
 
 //on récupère la position du curseur en pixels
@@ -43,31 +30,10 @@ function open_context_menu(){
   contextMenuOpened = true;
 }
 
-function close_context_menu() {
+/*function close_context_menu() {
   if (contextMenuOpened == true) {
   menu = document.getElementById("context_menu"); 
   document.getElementById("context_menu").className = "context_menu";
   contextMenuOpened = false;
   }
-  
-}
-
-
-
-
-
-/*function show_menu()
-{
-  document.getElementById("menu_burger").className = "move_menu";
-}
-
-function close_menu()
-{
-  var p = document.getElementById("burger_cross");
-  p.onclick = close_burger;
-};
-
-function hide_menu()
-{
-  document.getElementById("menu_burger").className = "burger";
 }*/

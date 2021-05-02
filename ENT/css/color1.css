@@ -36,7 +36,9 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
   color: var(--font-color);
 }
 
-
+.contact {
+  color: black;
+}
 
 
 html {
