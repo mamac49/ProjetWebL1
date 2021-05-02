@@ -80,7 +80,6 @@ if (isset($_POST['ChgtIMG'])) {
 
 
 if ($_SESSION["Connected"] == true) {
-echo $_SESSION['Mail'];
 ?>
 
 <!DOCTYPE html>
