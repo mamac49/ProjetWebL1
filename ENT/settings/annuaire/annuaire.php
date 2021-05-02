@@ -28,14 +28,12 @@ function nom($x) {
   if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
       mysqli_free_result($result);
-      $contact = $row['prenom'];// . "\n" . $row['nom'];
+      $contact = $row['prenom'] . "\n" . $row['nom'];
       return $contact;
   }
 }
 
 if ($_SESSION["Connected"] == true) {
-
-echo nom(2);
 ?>
 
 <!DOCTYPE html>
