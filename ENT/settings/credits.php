@@ -20,9 +20,9 @@ if ($_SESSION["Connected"] == "True") {
     ?>
     <div class="Center texte">
       <h2>Mentions légales</h2>
-      <ul>
+      <ul class="texte">
         <li>Antoine Beunas</li>
-        <li>Benjamin Humbert</li>
+        <li >Benjamin Humbert</li>
         <li>Enzo Creuzet</li>
         <li>Liam Kern</li>
         <li>Mattéo Langlois</li>
