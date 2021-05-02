@@ -35,6 +35,8 @@
     <header>
       <!--bouton cliquable pour le menu sandwich-->
       <span class="burger_icon" id="burger_button"><i class="fas fa-bars icone"></i></span>
+      <!--bouton cliquable pour retourner à l'accueil de l'ENT-->
+      <a href="/Projetwebl1/ENT/"><i class="fas fa-home icone retour"></i></a>
       <!--titre avec un style d'écriture à la craie-->
       <div class="Title">
         <h1 class="craie">Ecole Millocheau</h1>
@@ -44,8 +46,6 @@
     </header>
   <footer>
     <ul>
-      <!--bouton cliquable pour retourner à l'accueil de l'ENT-->
-      <a href="/Projetwebl1/ENT/"><i class="fas fa-home icone retour"></i></a>
       <!--liens en cas de problèmes, et à propos-->
       <li><a href="/Projetwebl1/ENT/settings/contact/contact.php" class="link_footer"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a></li>
       <li><a href="/Projetwebl1/ENT/settings/credits.php" class="link_footer"><i class="fab fa-linux icone"></i>A propos</a></li>
