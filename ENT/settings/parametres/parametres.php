@@ -44,6 +44,7 @@ function Affichage() {
       mysqli_close($link);    
   }
   mysqli_stmt_bind_param($stmt, "i", $_SESSION['Mail']);
+  echo $_SESSION['Mail'];
   if (mysqli_stmt_execute($stmt)) {
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_array($result);
@@ -53,11 +54,20 @@ function Affichage() {
   return $row['PP'];
 }
 
+function chgtPP() {
+
+}
+
 if (isset($_POST['Valider'])) {
   $mdpA = $_POST['passwordA'];
   $mdpN = password_hash($_POST['passwordN'], PASSWORD_DEFAULT);
   ChgtMdp($mdpA, $mdpN);
 }
+
+if (isset($_POST[ChgtIMG])) {
+  chgtPP();
+}
+
 
 if ($_SESSION["Connected"] == true) {
 ?>
