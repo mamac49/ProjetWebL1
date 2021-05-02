@@ -1,4 +1,4 @@
-@media all and (min-width: 1024px) { 
+@media all and (min-width: 1024px) {
 
   /* html */
   html {
@@ -149,7 +149,7 @@
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    bottom: 1%;
+    bottom: 0.5%;
     left: 35%;
     font-size: 1.2em;
     width: 30%;
@@ -169,7 +169,6 @@
 
   /*liens animés*/
   .menu_link {
-    color: var(--font-color);
     text-decoration: none;
     font-size: 1.1em;
     transition: font-size 400ms ease-in-out;
@@ -201,7 +200,6 @@
     top: 92%;
     left: 10%;
     font-size: 2em;
-    color: var(--font-color);
     transform: rotate(0deg);
     transition: transform 300ms ease-in-out;
   }
