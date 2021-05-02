@@ -16,7 +16,7 @@ function dbConnect() {
 
 function annivs() {
     $link = dbConnect();
-    $moisactu = date(m);
+    $moisactu = date("m");
     dbConnect();
     $anniv = "SQL SELECT * FROM `users` WHERE date_n=%."-".$moisactu."-".%";
     if ($result = mysqli_query($link, $anniv)) {
