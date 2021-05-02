@@ -64,9 +64,10 @@ if (isset($_POST['Valider'])) {
   ChgtMdp($mdpA, $mdpN);
 }
 
+/*
 if (isset($_POST[ChgtIMG])) {
   chgtPP();
-}
+}*/
 
 
 if ($_SESSION["Connected"] == true) {
