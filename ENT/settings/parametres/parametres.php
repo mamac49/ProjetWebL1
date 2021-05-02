@@ -47,6 +47,7 @@ function Affichage() {
   if (mysqli_stmt_execute($stmt)) {
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_array($result);
+    mysqli_free_result($result);
   } else {
     echo mysqli_connect_error();
   }
