@@ -50,7 +50,7 @@ function Affichage() {
   } else {
     echo mysqli_connect_error();
   }
-  return $row['data'];
+  return $row['PP'];
 }
 
 if (isset($_POST['Valider'])) {
