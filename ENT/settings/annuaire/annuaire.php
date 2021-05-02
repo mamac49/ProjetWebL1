@@ -17,9 +17,18 @@ function nombre() {
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     $nb = count($row);
-    var_dump($nb);
     mysqli_free_result($result);
     return $nb;
+  }
+}
+
+function nom($x) {
+  $link = dbConnect();
+  $sql = "SELECT * FROM `users` WHERE `idusers` = '$x';";
+  if ($result = mysqli_query($link, $sql)) {
+      $row = mysqli_fetch_array($result);
+      mysqli_free_result($result);
+      return $row['prenom'] . "\n" . $row['nom'];
   }
 }
 
@@ -58,7 +67,7 @@ if ($_SESSION["Connected"] == true) {
                 for ($x=0; $x<=$nb+1; $x++) {
               ?>
                 <li class="contact">
-                  <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i>M. Langlois</a>
+                  <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i><?php echo nom($x); ?></a>
                 </li>
                 <li>
                   <hr class="hrcontact">
