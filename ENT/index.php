@@ -12,7 +12,6 @@ function dbConnect() {
                 echo 'Erreur d accès à la base' . mysqli_connect_error();
                 exit;
         }
-        echo 'accès réussi'."\n";
         return $link;
 }
 
