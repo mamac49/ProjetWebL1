@@ -67,7 +67,7 @@ if ($_SESSION["Connected"] == true) {
                 for ($x=0; $x<=$nb+1; $x++) {
               ?>
                 <li class="contact">
-                  <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i><?php nom($x); ?></a>
+                  <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i><?php print nom($x); ?></a>
                 </li>
                 <li>
                   <hr class="hrcontact">
