@@ -15,6 +15,6 @@
 }
 
 .Centrer{
-    display: block;
-    margin : auto;
+    display:flex;
+    justify-content:center;
 }
