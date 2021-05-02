@@ -17,9 +17,10 @@ function nombre() {
   if ($result = mysqli_query($link, $sql)) {
     $nb = mysqli_num_rows($result);
     $row = mysqli_fetch_assoc($result);
-    var_dump($row);
+    var_dump($result);
+    var_dump($nb);
     mysqli_free_result($result);
-    return $nb;
+    //return $nb;
   }
 }
 
