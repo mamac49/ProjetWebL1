@@ -115,8 +115,8 @@ echo $_SESSION['Mail'];
             <h2 class="texte">Changement de l'image de profil</h2>
             <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage()) . ' '?>" alt="Photo de profil" class="PP">
             <form action="parametres.php" method="POST" enctype="multipart/form-data">
-            <p class="texte"></p>
-            <input type="file" id="file" name="PP" accept="image/*" value="<i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur">
+            <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
+            <input type="file" id="file" name="PP" accept="image/*">
             <input type="submit" name="ChgtIMG" value="Valider" class="Bouton">
             </form>
       </div>
