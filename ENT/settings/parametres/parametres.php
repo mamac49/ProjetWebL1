@@ -43,7 +43,7 @@ function Affichage() {
       echo 'Erreur d accès à la base de données - FIN';    
       mysqli_close($link);    
   }
-  mysqli_stmt_bind_param($stmt, "i", $_SESSION['Mail']);
+  mysqli_stmt_bind_param($stmt, "s", $_SESSION['Mail']);
   if (mysqli_stmt_execute($stmt)) {
     $result = mysqli_stmt_get_result($stmt);
     $row = mysqli_fetch_array($result);
