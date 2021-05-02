@@ -20,7 +20,13 @@ if ($_SESSION["Connected"] == "True") {
     ?>
     <div class="Center texte">
       <h2>Mentions légales</h2>
-      <p>ENT Millocheau</p>
+      <ul>
+        <li>Antoine Beunas</li>
+        <li>Benjamin Humbert</li>
+        <li>Enzo Creuzet</li>
+        <li>Liam Kern</li>
+        <li>Mattéo Langlois</li>
+      </ul>
       <h2>Sources</h2>
       <p>Icônes : <a href="https://fontawesome.com/icons?d=gallery&p=2&m=free">fontawesome</a></p>
       <p>Nous utilisons la license GNU General Public License v3.0 : <a href="https://choosealicense.com/license/gpl-3.0/">ChooseALicense</a></p>
@@ -30,5 +36,7 @@ if ($_SESSION["Connected"] == "True") {
 </html>
 
 <?php
+} else {
+  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>
