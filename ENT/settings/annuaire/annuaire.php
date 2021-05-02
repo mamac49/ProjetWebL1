@@ -55,7 +55,7 @@ if ($_SESSION["Connected"] == true) {
               <ul class="contact_list">
               <?php
                 $nb = nombre();
-                for ($x=0; $x<$nb; $x++) {
+                for ($x=0; $x<=$nb+1; $x++) {
               ?>
                 <li class="contact">
                   <a class="contact_link" id="contact0"><i class="fas fa-user-tie icone"></i>M. Langlois</a>
