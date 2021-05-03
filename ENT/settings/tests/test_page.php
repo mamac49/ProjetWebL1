@@ -21,9 +21,9 @@
 			return $iduser;
 		}
 	?>
-	<p>
+	<h1>
 		<?php echo "test";?>
-	</p>
+	</h1>
 	</body>
 </body>
 </html>
