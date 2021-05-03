@@ -92,12 +92,12 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
             </form>
             <form action="UserCreation.html" method="post" class="Formulaire">
               <h2 class="texte">Suppression d'utilisateur</h2>
-              <select name="user">
+              <select class="listeDeroul" name="user">
                 <?php
                 $nb = nombre();
                 for ($x=1; $x<=$nb+2; $x++) {
                 ?>
-                  <option class="texte" value="<?php $x ?>"><?php echo nom(1); ?></option>
+                  <option class="texte" value="<?php $x ?>"><?php echo nom($x); ?></option>
                 <?php } ?>
 
               </select>
