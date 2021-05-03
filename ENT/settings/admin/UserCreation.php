@@ -71,7 +71,9 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
     ?>
 
         <div class="Center">
+
             <form action="UserCreation.php" method="POST" class="Formulaire" enctype="multipart/form-data">
+                <h2>Création d'utilisateur</h2>
                 <p class="texteF">Nom</p>
                   <input type="text" name="nom" placeholder="Nom" class="FormCrea Centrer" required>
                 <p class="texteF">Prenom</p>
@@ -87,6 +89,21 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <p class="texteF">Administrateur ?</p>
                 <input type="checkbox" value="1" name="admin">
                 <input type="submit" name="valider" value="Creer" class="FormCrea Bouton Centrer">
+            </form>
+            <form action="UserCreation.html" method="post">
+              <h2>Suppression d'utilisateur</h2>
+              <select name="user">
+                <?php
+                $nb = nombre();
+                for ($x=0; $x<=$nb+1; $x++) {
+                ?>
+                  <option value="<?php $x ?>"><?php nom($x); ?></option>
+                <?php } ?>
+
+              </select>
+
+
+
             </form>
 
         </div>
