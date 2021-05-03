@@ -2,6 +2,17 @@
 session_start();
 
 if ($_SESSION["Connected"] == true) {
+
+  function Connexion() {
+
+      $connx = new mysqli("localhost", "root", "root", "ENT");
+
+      if ($connx->connect_errno)
+      {
+          die("Echec lors de la connexion MySQL");
+      }
+      return $connx;
+  }
 ?>
 
 <!DOCTYPE html>
@@ -23,8 +34,26 @@ if ($_SESSION["Connected"] == true) {
           <div class="Center">
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
-              <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i> Sujet n°1</a> <span>Edité par M. Langlois le 07/03/2021</span></li>
+              <?php
+              $lignes=SELECT COUNT(*) FROM Publications;
+              foreach (i=0;i<$lignes;i++){
+                echo idpublications;
+              ?>
               <li class="espaces"><hr></li>
+              <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
+                <?php
+                Sujet n°1
+                ?>
+                </a> <span>Edité par
+                  <?php
+                  M. Langlois
+                  ?>
+                  le
+                  <?php
+                  07/03/2021
+                  ?>
+                  </span></li>
+
               <li class="sujets"><a href="media/blog2.html"><i class="fas fa-paint-brush icone"></i> Sujet n°2</a> <span>Edité par M. Langlois le 08/03/2021</span></li>
               <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog3.html"><i class="fas fa-chess icone"></i> Sujet n°3</a> <span>Edité par M. Langlois le 09/03/2021</span></li>
@@ -33,8 +62,10 @@ if ($_SESSION["Connected"] == true) {
             <?php
               if ($_SESSION["Admin"] == true) {
             ?>
-              <input type="button" name="CreationBlog" value="Créer Un Blog">
+            <form>
+              <input type="button" name="CreationBlog" value="Créer Un Blog" onclick="creerpage();">
               <br/>
+            </form>
             <?php
             }
             ?>
@@ -45,7 +76,5 @@ if ($_SESSION["Connected"] == true) {
 </html>
 
 <?php
-} else {
-  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>
