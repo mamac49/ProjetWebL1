@@ -27,10 +27,9 @@ if ($_SESSION["Connected"] == true) {
             <ul class="liste_sujets">
               <?php
               $serveur = dbConnect();
-              $req="SELECT COUNT(*) FROM `Publications`";
+              $req=nombre();
               echo $req;
-              $lignes= $serveur->query($req);
-              for ($i=0;$i<$lignes;$i++){
+              for ($i=0;$i<$req;$i++){
                 echo idpublications;
               ?>
               <li class="espaces"><hr></li>
