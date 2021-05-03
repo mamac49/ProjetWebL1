@@ -28,7 +28,9 @@ if ($_SESSION["Connected"] == true) {
               <?php
               $serveur = dbConnect();
               $req="SELECT COUNT(*) FROM `Publications`";
+              echo $req;
               $lignes= $serveur->query($req);
+              echo $lignes;
               for ($i=0;$i<$lignes;$i++){
                 echo idpublications;
               ?>
