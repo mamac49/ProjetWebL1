@@ -1,4 +1,6 @@
-
+<?php
+      include '../../fonction.php';
+?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -6,9 +8,7 @@
     <meta charset="utf-8">
     <title>TEST</title>
   </head>
-    <?php
-      include '../../base.php';
-    ?>
+    
 </body>
 </html>
 
