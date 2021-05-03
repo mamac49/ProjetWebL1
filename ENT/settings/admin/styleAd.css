@@ -8,6 +8,7 @@
 .Formulaire {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .texteF {
