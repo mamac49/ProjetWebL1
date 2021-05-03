@@ -60,7 +60,7 @@ function nom($x) {
   $sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
   if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
-      $contact = strval($row['prenom'] . $row['nom']);
+      $contact = $row['prenom'] . " " . $row['nom'];
       mysqli_free_result($result);
       return $contact;
   }

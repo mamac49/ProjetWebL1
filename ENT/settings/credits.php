@@ -29,7 +29,6 @@ if ($_SESSION["Connected"] == "True") {
           <li><i class="fab fa-steam icone"></i> Liam Kern</li>
           <li><i class="fab fa-linux icone"></i> Mattéo Langlois</li>
         </ul>
-
       <h2>Sources</h2>
         <p>Icônes : <a href="https://fontawesome.com/icons?d=gallery&p=2&m=free">fontawesome</a></p>
         <p>Nous utilisons la license GNU General Public License v3.0 : <a href="https://choosealicense.com/license/gpl-3.0/">ChooseALicense</a></p>
