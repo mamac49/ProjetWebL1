@@ -36,7 +36,7 @@ if ($_SESSION["Connected"] == true) {
             <ul class="liste_sujets">
               <?php
               $serveur = Connexion();
-              $req=SELECT * FROM Publications;
+              $req=SELECT * FROM `Publications`;
               $lignes= $serveur->query($req);
               foreach (i=0;i<$lignes;i++){
                 echo idpublications;
