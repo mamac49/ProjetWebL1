@@ -19,6 +19,7 @@
 			$iduser = strval($row['iduser']);
 			mysqli_free_result($result);
 			return $iduser;
+			print $iduser;
 		}
 		?>
 	</body>
