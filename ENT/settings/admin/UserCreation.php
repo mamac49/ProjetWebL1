@@ -5,8 +5,6 @@ error_reporting(E_ALL);
 
 include '../../fonc.php';
 
-
-
 function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     $link = dbConnect();
     if ($result = mysqli_query($link, "SELECT * FROM `users`")) {
@@ -33,6 +31,13 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     }
     mysqli_close($link);
 }
+
+function Delete($Contact) {
+  $nom = $Contact;
+  $link = dbConnect();
+  $sql = "DETE FROM `users` WHERE `prenom`='$prenom' AND `nom` = '$nom'";
+}
+
 
 if ( isset($_POST['valider'])) {
     $nom = $_POST['nom'];
@@ -97,7 +102,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 $nb = nombre();
                 for ($x=1; $x<=$nb+2; $x++) {
                 ?>
-                  <option class="texte" value="<?php $x ?>"><?php echo nom($x); ?></option>
+                  <option class="texte" value="<?php echo $x ?>"><?php echo nom($x); ?></option>
                 <?php } ?>
               </select>
 
