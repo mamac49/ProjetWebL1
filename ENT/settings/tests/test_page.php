@@ -33,9 +33,6 @@ function dbConnect() {
     <meta charset="utf-8">
     <title>TEST</title>
   </head>
-  <?php
-      include '../../fonc.php';
-	?>
     <body>
 	
 	<p>
