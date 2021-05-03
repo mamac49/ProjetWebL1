@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 function dbConnect() {
     // On se connecte à la BD ENT en utilisant le nom d'utilisateur et le mot de passe
     $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
