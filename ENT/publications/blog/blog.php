@@ -44,15 +44,15 @@ if ($_SESSION["Connected"] == true) {
               <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
                 <?php
-                echo Sujet n°1;
+                echo bla;
                 ?>
                 </a> <span>Edité par
                   <?php
-                  echo M. Langlois;
+                  echo blou;
                   ?>
                   le
                   <?php
-                  echo 07/03/2021;
+                  echo bli;
                   ?>
                   </span></li>
               <?php
