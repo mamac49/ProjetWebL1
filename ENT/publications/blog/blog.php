@@ -35,15 +35,15 @@ if ($_SESSION["Connected"] == true) {
               <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
                 <?php
-                echo bla;
+                echo "bla";
                 ?>
                 </a> <span>Edité par
                   <?php
-                  echo blou;
+                  echo "blou";
                   ?>
                   le
                   <?php
-                  echo bli;
+                  echo "bli";
                   ?>
                   </span></li>
               <?php
