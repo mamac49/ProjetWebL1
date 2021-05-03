@@ -10,10 +10,10 @@ if ($_SESSION["Connected"] == true) {
     if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
       if gettype($row)==array{
-        $nb=0
+        $nb = count($row);
       }
       else{
-      $nb = count($row);
+        $nb=0
       }
       mysqli_free_result($result);
       return $nb;
