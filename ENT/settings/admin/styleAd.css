@@ -18,3 +18,8 @@
 .Centrer{
     text-align: center;
 }
+
+.Center {
+  display: flex;
+  flex-direction: row;
+}
