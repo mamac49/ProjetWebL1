@@ -43,7 +43,6 @@ if ($_SESSION["Connected"] == true) {
               <?php
               $serveur = dbConnect();
               $req=nombreblog();
-              echo $req;
               for ($i=0;$i<$req;$i++){
                 echo idpublications;
               ?>
