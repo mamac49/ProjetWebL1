@@ -9,10 +9,10 @@
     <title>TEST</title>
   </head>
     <body>
-	<ul class="contact_list">
-		<?php
+	<!--<ul class="contact_list">
+		<?php/*
 		$nb = nombre();
-		//for ($x=0; $x<=$nb; $x++) {
+		for ($x=0; $x<=$nb; $x++) {
 			$x = 1;
 			$contact_name = nom($x);
 			$contact_id = "contact" + iduser($x);
@@ -24,7 +24,16 @@
 			<hr class="hrcontact">
 		</li>
 		<?php
-			//}
+			}*/
+		?>-->
+		<?php 
+		$link = dbConnect();
+		$sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
+		if ($result = mysqli_query($link, $sql)) {
+			$row = mysqli_fetch_array($result);
+			$iduser = strval($row['iduser']);
+			mysqli_free_result($result);
+			return $iduser;
 		?>
 	</body>
 </body>
