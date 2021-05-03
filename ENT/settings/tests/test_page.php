@@ -11,6 +11,7 @@
     <body>
 	
 		<?php 
+		$x = 1;
 		$link = dbConnect();
 		$sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
 		if ($result = mysqli_query($link, $sql)) {
