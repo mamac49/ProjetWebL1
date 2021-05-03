@@ -34,8 +34,8 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
 
 function Delete($Contact) {
   $str = explode(" ", $Contact);
-  $prenom = $str[1];
-  $nom = $str[2];
+  $prenom = $str[0];
+  $nom = $str[1];
   $link = dbConnect();
   $sql = "DETE FROM `users` WHERE `prenom`='$prenom' AND `nom` = '$nom'";
 
@@ -109,7 +109,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <option class="texte" value="<?php echo $x ?>"><?php echo nom($x); ?></option>
                 <?php } ?>
               </select>
-              <p class="texte"><?php echo Delete(nom("2")); ?></p> 
+              <p class="texte"><?php echo Delete(nom("2")); ?></p>
 
               <input type="submit" name="ValiderSupp" value="Supprimer l'utilisateur" class="bouton">
 
