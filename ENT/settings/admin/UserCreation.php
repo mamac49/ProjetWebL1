@@ -42,8 +42,7 @@ function Delete($Contact) {
     echo "succès";
   } else {
     echo mysqli_error($link);
-
-  return $prenom . $nom;
+  }
 }
 
 
@@ -60,6 +59,11 @@ if ( isset($_POST['valider'])) {
       $admin = 0;
     }
     Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
+}
+
+if ( isset($_POST['ValiderSupp'])) {
+  $user = $_POST['user'];
+  Delete($user);
 }
 
 if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
