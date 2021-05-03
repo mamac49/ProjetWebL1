@@ -99,10 +99,9 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 ?>
                   <option class="texte" value="<?php $x ?>"><?php echo nom($x); ?></option>
                 <?php } ?>
-
               </select>
 
-
+              <input type="submit" name="ValiderSupp" value="Supprimer l'utilisateur" class="bouton">
 
             </form>
 
