@@ -55,6 +55,9 @@ if ($_SESSION["Connected"] == true) {
                   07/03/2021
                   ?>
                   </span></li>
+              <?php
+              }
+              ?>
 
               <li class="sujets"><a href="media/blog2.html"><i class="fas fa-paint-brush icone"></i> Sujet n°2</a> <span>Edité par M. Langlois le 08/03/2021</span></li>
               <li class="espaces"><hr></li>
