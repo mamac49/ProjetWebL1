@@ -18,8 +18,8 @@
 			$iduser = strval($row['iduser']);
 			mysqli_free_result($result);
 			return $iduser;
+		}
 		?>
 	</body>
 </body>
 </html>
-
