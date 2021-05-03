@@ -5,7 +5,7 @@ session_start();
 
 setlocale(LC_TIME, 'fra_fra');
 
-include '/Projetwebl1/ENT/fonc.php';
+include 'fonc.php';
 
 function annivs() {
     $link = dbConnect();
