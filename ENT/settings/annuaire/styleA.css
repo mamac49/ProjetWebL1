@@ -26,7 +26,7 @@
   color:black;
 }
 
-.contact_list{
+#contact{
   display: flex;
   flex-direction: column;
   color:black;

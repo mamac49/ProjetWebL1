@@ -60,9 +60,20 @@ function nom($x) {
   $sql = "SELECT * FROM `users` WHERE `idusers` = '$x';";
   if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
-      $contact = $row['prenom'] . "\n" . $row['nom'];
+      $contact = $row['prenom'] . $row['nom'];
       mysqli_free_result($result);
       return $contact;
+  }
+}
+
+function iduser($x) {
+  $link = dbConnect();
+  $sql = "SELECT * FROM `users` WHERE `idusers` = '$x';";
+  if ($result = mysqli_query($link, $sql)) {
+      $row = mysqli_fetch_array($result);
+      $iduser = $row['iduser'];
+      mysqli_free_result($result);
+      return $iduser;
   }
 }
 
