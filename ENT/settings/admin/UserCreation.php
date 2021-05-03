@@ -3,7 +3,7 @@ session_start();
 
 error_reporting(E_ALL);
 
-include '/Projetwebl1/ENT/fonc.php';
+include '../../fonc.php';
 
 
 
