@@ -19,9 +19,9 @@ function dbConnect() {
 		$iduser = 0;
 		if ($result = mysqli_query($link, $sql)) {
 			$row = mysqli_fetch_array($result);
-			$mail = strval($row['mail']);
+			$iduser = strval($row['iduser']);
 			mysqli_free_result($result);
-			return $mail;
+			return $iduser;
 		}
 	}
 ?>
@@ -33,7 +33,6 @@ function dbConnect() {
     <title>TEST</title>
   </head>
     <body>
-	
 	<p>
 		<?php echo test(2);?>
 	</p>
