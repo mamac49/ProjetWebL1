@@ -97,7 +97,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 $nb = nombre();
                 for ($x=1; $x<=$nb+2; $x++) {
                 ?>
-                  <option class="texte" value="<?php $x ?>"><?php echo nom($x); ?></option>
+                  <option class="texte" value="<?php $x ?>"><?php echo nom(1); ?></option>
                 <?php } ?>
 
               </select>
