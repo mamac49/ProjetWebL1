@@ -57,7 +57,7 @@ function nombre() {
 
 function nom($x) {
   $link = dbConnect();
-  $sql = "SELECT * FROM `users` WHERE `idusers` = '$x';";
+  $sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
   if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
       $contact = $row['prenom'] . $row['nom'];
@@ -68,7 +68,7 @@ function nom($x) {
 
 function iduser($x) {
   $link = dbConnect();
-  $sql = "SELECT * FROM `users` WHERE `idusers` = '$x';";
+  $sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
   if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
       $iduser = $row['iduser'];
