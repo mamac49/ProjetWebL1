@@ -10,21 +10,9 @@
       include '../../fonc.php';
 	?>
     <body>
-	<?php
-		$x = 1;
-		$link = dbConnect();
-		$sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
-		$iduser = 0;
-		if ($result = mysqli_query($link, $sql)) {
-			$row = mysqli_fetch_array($result);
-			$iduser = strval($row['iduser']);
-			mysqli_free_result($result);
-			return $iduser;
-		}
-	?>
-	<h1>
+	
+	<p>
 		<?php echo "test";?>
-	</h1>
+	</p>
 	</body>
-
 </html>
