@@ -37,7 +37,11 @@ function Delete($Contact) {
   $prenom = $str[0];
   $nom = $str[1];
   $link = dbConnect();
-  $sql = "DETE FROM `users` WHERE `prenom`='$prenom' AND `nom` = '$nom'";
+  $sql = "DELETE FROM `users` WHERE `prenom`='$prenom' AND `nom` = '$nom'";
+  if (mysqli_query($link, $sql)) {
+    echo "succès";
+  } else {
+    echo mysqli_error($link);
 
   return $prenom . $nom;
 }
@@ -109,7 +113,6 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <option class="texte" value="<?php echo $x ?>"><?php echo nom($x); ?></option>
                 <?php } ?>
               </select>
-              <p class="texte"><?php echo Delete(nom("2")); ?></p>
 
               <input type="submit" name="ValiderSupp" value="Supprimer l'utilisateur" class="bouton">
 
