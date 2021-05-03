@@ -3,28 +3,6 @@ session_start();
 
 include '../../fonc.php';
 
-function nombre() {
-  $link = dbConnect();
-  $sql = "SELECT `iduser` FROM `users`";
-  if ($result = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_array($result);
-    $nb = count($row);
-    mysqli_free_result($result);
-    return $nb;
-  }
-}
-
-function nom($x) {
-  $link = dbConnect();
-  $sql = "SELECT * FROM `users` WHERE `idusers` = '$x';";
-  if ($result = mysqli_query($link, $sql)) {
-      $row = mysqli_fetch_array($result);
-      mysqli_free_result($result);
-      $contact = $row['prenom'] . "\n" . $row['nom'];
-      return $contact;
-  }
-}
-
 if ($_SESSION["Connected"] == true) {
 ?>
 
