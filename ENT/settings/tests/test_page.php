@@ -1,13 +1,14 @@
-<?php
-      include '../../fonc.php';
-?>
+
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title><?php echo "test";?></title>
+    <title>TEST</title>
   </head>
+  <?php
+      include '../../fonc.php';
+	?>
     <body>
 	<?php
 		$x = 1;
@@ -25,5 +26,5 @@
 		<?php echo "test";?>
 	</h1>
 	</body>
-</body>
+
 </html>
