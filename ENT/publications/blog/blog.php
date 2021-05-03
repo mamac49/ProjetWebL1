@@ -38,7 +38,7 @@ if ($_SESSION["Connected"] == true) {
               $serveur = Connexion();
               $req="SELECT COUNT(*) FROM `Publications`";
               $lignes= $serveur->query($req);
-              foreach ($i=0;$i<$lignes;$i++){
+              for ($i=0;$i<$lignes;$i++){
                 echo idpublications;
               ?>
               <li class="espaces"><hr></li>
