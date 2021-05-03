@@ -39,6 +39,7 @@ if ($_SESSION["Connected"] == true) {
                 for ($x=0; $x<=$nb+1; $x++) {
                   $contact_name = strval(nom($x));
                   $contact_id = "contact" + iduser($x);
+                  
               ?>
                 <li class="contact">
                   <a class=<?php $contact_id;?> id="contact"><i class="fas fa-user-tie icone"></i><?php $contact_name;?></a>
