@@ -33,7 +33,9 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
 }
 
 function Delete($Contact) {
-  $nom = $Contact;
+  $str = explode(" ", $Contact);
+  $prenom = $str[1];
+  $nom = $str[2];
   $link = dbConnect();
   $sql = "DETE FROM `users` WHERE `prenom`='$prenom' AND `nom` = '$nom'";
 }
