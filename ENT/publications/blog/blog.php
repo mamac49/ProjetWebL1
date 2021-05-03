@@ -3,16 +3,7 @@ session_start();
 
 if ($_SESSION["Connected"] == true) {
 
-  function Connexion() {
-
-      $connx = new mysqli("localhost", "root", "root", "ENT");
-
-      if ($connx->connect_errno)
-      {
-          die("Echec lors de la connexion MySQL");
-      }
-      return $connx;
-  }
+  include ("../../fonc.php");
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +26,7 @@ if ($_SESSION["Connected"] == true) {
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
               <?php
-              $serveur = Connexion();
+              $serveur = dbConnect();
               $req="SELECT COUNT(*) FROM `Publications`";
               $lignes= $serveur->query($req);
               for ($i=0;$i<$lignes;$i++){
