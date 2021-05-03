@@ -90,14 +90,14 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <input type="checkbox" value="1" name="admin">
                 <input type="submit" name="valider" value="Creer" class="FormCrea Bouton Centrer">
             </form>
-            <form action="UserCreation.html" method="post">
+            <form action="UserCreation.html" method="post" class="Formulaire">
               <h2>Suppression d'utilisateur</h2>
               <select name="user">
                 <?php
                 $nb = nombre();
                 for ($x=0; $x<=$nb+1; $x++) {
                 ?>
-                  <option value="<?php $x ?>"><?php nom($x); ?></option>
+                  <option value="<?php $x ?>"><?php echo $x; ?></option>
                 <?php } ?>
 
               </select>
