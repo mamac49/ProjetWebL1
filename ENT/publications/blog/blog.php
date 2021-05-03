@@ -30,7 +30,6 @@ if ($_SESSION["Connected"] == true) {
               $req="SELECT COUNT(*) FROM `Publications`";
               echo $req;
               $lignes= $serveur->query($req);
-              echo strval($lignes);
               for ($i=0;$i<$lignes;$i++){
                 echo idpublications;
               ?>
