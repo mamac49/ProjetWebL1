@@ -21,7 +21,7 @@
 			mysqli_free_result($result);
 			return $iduser;
 		}
-		print $iduser; 
+		echo $iduser;
 		?>
 	</p>
 	</body>
