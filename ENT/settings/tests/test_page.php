@@ -35,7 +35,7 @@ function dbConnect() {
     <body>
 	
 	<p>
-		<?php echo test(1);?>
+		<?php echo test(0);?>
 	</p>
 	</body>
 </html>
