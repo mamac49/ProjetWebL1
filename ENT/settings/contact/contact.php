@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include '/Projetwebl1/ENT/fonc.php';
+include '../../fonc.php';
 
 if ($_SESSION["Connected"] == true) {
 ?>

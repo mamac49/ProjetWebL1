@@ -2,7 +2,7 @@
 session_start();
 
 $ID = $_SESSION['Id'];
-include '/Projetwebl1/ENT/fonc.php';
+include '../../fonc.php';
 
 function ChgtMdp($mdpA, $mdpN) {
    $link = dbConnect();
