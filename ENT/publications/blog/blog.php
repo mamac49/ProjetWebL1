@@ -13,7 +13,7 @@ if ($_SESSION["Connected"] == true) {
         $nb = count($row);
       }
       else{
-        $nb=0
+        $nb=0;
       }
       mysqli_free_result($result);
       return $nb;
