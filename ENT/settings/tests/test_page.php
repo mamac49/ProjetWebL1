@@ -6,7 +6,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TEST</title>
+    <title><?php echo "test";?></title>
   </head>
     <body>
 	<?php
