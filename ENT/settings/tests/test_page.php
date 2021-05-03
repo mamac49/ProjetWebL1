@@ -13,6 +13,7 @@
 		<?php
 		$nb = nombre();
 		//for ($x=0; $x<=$nb; $x++) {
+			$x = 1;
 			$contact_name = nom($x);
 			$contact_id = "contact" + iduser($x);
 		?>
