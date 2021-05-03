@@ -9,8 +9,7 @@
     <title>TEST</title>
   </head>
     <body>
-	<p>
-		<?php 
+	<?php
 		$x = 1;
 		$link = dbConnect();
 		$sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
@@ -21,8 +20,9 @@
 			mysqli_free_result($result);
 			return $iduser;
 		}
-		print $iduser; 
-		?>
+	?>
+	<p>
+		<?php echo "test";?>
 	</p>
 	</body>
 </body>
