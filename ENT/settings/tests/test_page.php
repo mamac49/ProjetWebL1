@@ -7,7 +7,7 @@
     <title>TEST</title>
   </head>
     <?php
-      include '../base.php';
+      include '../../base.php';
     ?>
 </body>
 </html>
