@@ -4,6 +4,16 @@ session_start();
 if ($_SESSION["Connected"] == true) {
 
   include ("../../fonc.php");
+  function nombreblog() {
+    $link = dbConnect();
+    $sql = "SELECT `idpublications` FROM `Publications`";
+    if ($result = mysqli_query($link, $sql)) {
+      $row = mysqli_fetch_array($result);
+      $nb = count($row);
+      mysqli_free_result($result);
+      return $nb;
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +37,7 @@ if ($_SESSION["Connected"] == true) {
             <ul class="liste_sujets">
               <?php
               $serveur = dbConnect();
-              $req=nombre();
+              $req=nombreblog();
               echo $req;
               for ($i=0;$i<$req;$i++){
                 echo idpublications;
