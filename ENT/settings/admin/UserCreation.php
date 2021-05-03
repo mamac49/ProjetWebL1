@@ -38,7 +38,7 @@ function Delete($Contact) {
   $nom = $str[1];
   $link = dbConnect();
   $sql = "DELETE FROM `users` WHERE `prenom`='$prenom' AND `nom` = '$nom'";
-  if ($result = mysqli_query($link, $sql)) {
+  if (mysqli_query($link, $sql)) {
     echo "succès";
   } else {
     echo mysqli_error($link);
