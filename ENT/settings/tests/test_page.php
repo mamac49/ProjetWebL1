@@ -12,7 +12,7 @@
 	<ul class="contact_list">
 		<?php
 		$nb = nombre();
-		for ($x=0; $x<=$nb; $x++) {
+		//for ($x=0; $x<=$nb; $x++) {
 			$contact_name = nom($x);
 			$contact_id = "contact" + iduser($x);
 		?>
@@ -23,7 +23,7 @@
 			<hr class="hrcontact">
 		</li>
 		<?php
-			}
+			//}
 		?>
 	</body>
 </body>
