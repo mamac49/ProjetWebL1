@@ -52,7 +52,7 @@ if ($_SESSION["Connected"] == true) {
               </ul>
             </div>
       </div>
-
+test
       <!-- menu clic droit/-->
 
       <div id="context_menu" class="context_menu" >
