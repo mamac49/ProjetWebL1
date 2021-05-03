@@ -13,8 +13,7 @@ function dbConnect() {
     # Retourner la variable link
     return $link;
 }
-	function test() {
-		$x = 1;
+	function test($x) {
 		$link = dbConnect();
 		$sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
 		$iduser = 0;
@@ -36,7 +35,7 @@ function dbConnect() {
     <body>
 	
 	<p>
-		<?php echo "test";?>
+		<?php echo test(1);?>
 	</p>
 	</body>
 </html>
