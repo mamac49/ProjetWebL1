@@ -35,9 +35,9 @@ if ($_SESSION["Connected"] == true) {
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
               <?php
-              $serveur = Connexion();
+              $server = Connexion();
               $req=SELECT COUNT(*) FROM Publications;
-              $lignes= $serveur->query($req);
+              $lignes= $server->query($req);
               foreach (i=0;i<$lignes;i++){
                 echo idpublications;
               ?>
