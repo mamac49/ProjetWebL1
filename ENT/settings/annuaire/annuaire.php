@@ -1,15 +1,7 @@
 <?php
 session_start();
 
-function dbConnect() {
-  $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
-
-  if (mysqli_connect_errno()) {
-          echo 'Erreur d accès à la base' . mysqli_connect_error();
-          exit;
-  }
-  return $link;
-}
+include '/Projetwebl1/ENT/fonc.php';
 
 function nombre() {
   $link = dbConnect();
@@ -56,7 +48,7 @@ if ($_SESSION["Connected"] == true) {
 
   <body onload="move_menu_burger(); detect_click();">
 
-    <div class="site_container">      
+    <div class="site_container">
       <script src="menu_clic.js"></script>
         <div class="contenu">
             <div class="Center">
@@ -103,7 +95,7 @@ if ($_SESSION["Connected"] == true) {
       </ul>
       </div>
     </div>
-    
+
   </div>
 </body>
 </html>

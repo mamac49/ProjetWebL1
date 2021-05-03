@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include '/Projetwebl1/ENT/fonc.php';
+
 if ($_SESSION["Connected"] == "True") {
 ?>
 

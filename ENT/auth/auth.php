@@ -1,15 +1,7 @@
 <?php
 session_start();
 
-function dbConnect() {
-    $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
-
-    if (mysqli_connect_errno()) {
-            echo 'Erreur d accès à la base' . mysqli_connect_error();
-            exit;
-    }
-    return $link;
-}
+include '/Projetwebl1/ENT/fonc.php';
 
 function Connexion($mail, $password) {
     $link = dbConnect();
@@ -37,7 +29,7 @@ function Connexion($mail, $password) {
         $_SESSION["theme"] = "Sombre";
         $_SESSION["Id"] = $id;
         $_SESSION["Pic"] = $pic;
- 
+
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
 }
