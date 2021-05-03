@@ -19,7 +19,7 @@ function dbConnect() {
 		$iduser = 0;
 		if ($result = mysqli_query($link, $sql)) {
 			$row = mysqli_fetch_array($result);
-			$iduser = strval($row['mail']);
+			$mail = strval($row['mail']);
 			mysqli_free_result($result);
 			return $mail;
 		}
@@ -35,7 +35,7 @@ function dbConnect() {
     <body>
 	
 	<p>
-		<?php echo test(4);?>
+		<?php echo test(2);?>
 	</p>
 	</body>
 </html>
