@@ -8,7 +8,24 @@
     <meta charset="utf-8">
     <title>TEST</title>
   </head>
-    
+    <body>
+	<ul class="contact_list">
+		<?php
+		$nb = nombre();
+		for ($x=0; $x<=$nb+1; $x++) {
+			$contact_name = strval(nom($x));
+			$contact_id = "contact" + strval(iduser($x));
+		?>
+		<li class="contact">
+			<a class=<?php $contact_id;?> id="contact"><i class="fas fa-user-tie icone"></i><?php $contact_name;?></a>
+		</li>
+		<li>
+			<hr class="hrcontact">
+		</li>
+		<?php
+			}
+		?>
+	</body>
 </body>
 </html>
 
