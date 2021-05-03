@@ -9,7 +9,7 @@ if ($_SESSION["Connected"] == true) {
     $sql = "SELECT `idpublications` FROM `Publications`";
     if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
-      if gettype($row)==array{
+      if (gettype($row)=="array"){
         $nb = count($row);
       }
       else{
