@@ -1,5 +1,5 @@
 <?php
-      include '../../fonction.php';
+      include '../../../fonction.php';
 ?>
 
 <!DOCTYPE html>
