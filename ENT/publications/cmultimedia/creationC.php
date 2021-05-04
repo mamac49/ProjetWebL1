@@ -41,7 +41,7 @@ include ("../../base.php");
     <?php
       for ($n=1 ; $n <= $y ; $n++) {
     ?>
-      <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
+      <textarea name="<?php echo "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
       }
