@@ -55,6 +55,18 @@ function refresh() {
   window.location.reload();
 }
 
+function getNbLines() {
+  var saisie = getElementById("textarea_cahier_multimedia");
+  var pulications = getElementById("publications_cahier_multimedia");
+  publications.value = saisie.nb_max;
+}
 function textarea() {
-  document.write('<textarea name="" rows="8" cols="80" resize="none" required></textarea>')
+  var saisie = document.getElementById("textarea_cahier_multimedia");
+  var nb_max = saisie.nb_max();
+  var nb = saisie.nb();
+  /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
+  if (nb < nb_max) {
+    
+  } 
+
 }
