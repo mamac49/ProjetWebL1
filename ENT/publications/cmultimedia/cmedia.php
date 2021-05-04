@@ -17,6 +17,7 @@ function titre($x) {
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row;
+  }
 }
 
 if ($_SESSION["Connected"] == true) {
