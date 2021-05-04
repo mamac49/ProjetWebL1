@@ -41,7 +41,7 @@ include ("../../base.php");
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
-      $n += 1
+      $n += 1;
       }
     }
     ?>
