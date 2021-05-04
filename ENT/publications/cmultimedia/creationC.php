@@ -4,6 +4,10 @@ session_start();
 
 include ("../../fonc.php");
 
+if (isset($_POST['Case'])) {
+  $y++;
+}
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -38,7 +42,10 @@ include ("../../base.php");
     ?>
     <input type="submit" name="Valider" value="Valider de cahier multimédia">
   </form>
-  <input type="button" value="Ajouter une case de texte">
+  <form action="CreationC.php" method="post">
+    <input type="button" name="Case" value="Ajouter une case de texte">
+  </form>
+
 </div>
 
 
