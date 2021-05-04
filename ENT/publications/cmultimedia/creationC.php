@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-$n = 1;
 $y = 1;
 
 include ("../../fonc.php");
@@ -42,7 +41,7 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-    for ($x=1 ; $x<=$n ; $x += $y) {
+    for ($x=1 ; $x<=$y ; $x++) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
