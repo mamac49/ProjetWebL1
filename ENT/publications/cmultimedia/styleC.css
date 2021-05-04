@@ -43,3 +43,7 @@
 .Creation {
   margin: 10px;
 }
+
+#textareaCahierMultimedia {
+  display: none;
+}
