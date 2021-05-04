@@ -7,7 +7,7 @@ if (empty($y)) {
 
 include ("../../fonc.php");
 
-if (isset($_POST['Case'])) {
+if (isset($_POST['case'])) {
   $y += 1;
 }
 
@@ -56,7 +56,7 @@ include ("../../base.php");
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
   <form action="CreationC.php" method="post">
-    <input type="button" name="Case" class="bouton" value="Ajouter une case de texte">
+    <input type="button" name="case" class="bouton" value="Ajouter une case de texte">
   </form>
 
 </div>
