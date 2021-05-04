@@ -1,6 +1,8 @@
 <?php
-
 session_start();
+
+$n = 1;
+$y = 1;
 
 include ("../../fonc.php");
 
@@ -31,8 +33,6 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-    $n = 1;
-    $y = 1;
     for ($x=1 ; $x<=$n ; $x = $x + $y) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
