@@ -44,6 +44,8 @@ if ($_SESSION["Connected"] == true) {
               $serveur = dbConnect();
               $req=nombreblog();
               for ($i=0;$i<$req;$i++){
+                $a=SELECT idpublications FROM Publications;
+                echo $a;
                 echo idpublications;
               ?>
               <li class="espaces"><hr></li>
