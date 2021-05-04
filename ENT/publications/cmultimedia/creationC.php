@@ -1,15 +1,7 @@
 <?php
 session_start();
 
-if (empty($y)) {
-  $y=1;
-}
-
 include ("../../fonc.php");
-
-if (isset($_POST['case'])) {
-  $y += 1;
-}
 
 if (isset($_POST['Valider'])) {
   $texte = array();
@@ -43,14 +35,14 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-    $x = 1;
-    while ($x <= $y) {
+    while True {
+      if (isset($_POST['case'])) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
-      <p class="texte"><?php echo $x . " " . $y; ?></p>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
-    $x += 1;
+      $n += 1
+      }
     }
     ?>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
