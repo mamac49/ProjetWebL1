@@ -10,6 +10,15 @@ if (isset($_POST['Case'])) {
   $y++;
 }
 
+if (isset($_POST['Valider'])) {
+  $texte = array();
+  $len = count($_POST);
+  for ($i = 1 ; $x < $len ; $i++) {
+    $texte[$i] = $_POST[$i];
+  }
+}
+
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -33,10 +42,10 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-    for ($x=1 ; $x<=$n ; $x = $x + $y) {
+    for ($x=1 ; $x<=$n ; $x += $y) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
-      <input type="file" name="<?php "img-".$n ?>">
+      <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
     }
     ?>
