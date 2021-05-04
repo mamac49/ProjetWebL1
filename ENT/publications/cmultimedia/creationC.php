@@ -28,10 +28,6 @@ if ($_SESSION["Connected"] == true) {
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
-    <script type="text/javascript">
-      let Area;
-      Area = '<textarea name="" rows="8" cols="80" resize="none" required></textarea>'
-    </script>
   </head>
 <?php
 include ("../../base.php");
@@ -40,8 +36,7 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
 
-      <!--<input type="file" name="<?php "img-".$n ?>"> -->
-      <button onclick="document.write(Area)" class="bouton">Ajouter une case</button>
+      <button onclick="textarea()" class="bouton">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 
