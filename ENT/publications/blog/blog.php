@@ -45,7 +45,7 @@ if ($_SESSION["Connected"] == true) {
               $req=nombreblog();
               for ($i=0;$i<$req;$i++){
                 $a= "SELECT `idpublications` FROM `Publications`";
-                echo $a;
+                $data = $serveur->query($a);
                 echo idpublications;
               ?>
               <li class="espaces"><hr></li>
