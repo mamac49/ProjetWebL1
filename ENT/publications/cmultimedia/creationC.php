@@ -35,16 +35,21 @@ include ("../../base.php");
 
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
-
+  <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
+    <textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=0 line=0 required></textarea>
+  </ul>
+  <!--<textarea class="textareaCahierMultimedia" id="textarea_cahier_multimedia" name="" rows="8" cols="80" resize="none" value=1 required></textarea>-->
       <button onclick="textarea()" class="bouton">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
-
 </div>
+<!--publication liée à la bdd-->
+<textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=0 line=0 required></textarea>
 
+<!--zone de texte éditable
+<textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=1 required></textarea>
+-->
 
 <?php
-} else {
-  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>
