@@ -54,7 +54,7 @@ if ($_SESSION["Connected"] == true) {
               <?php
                 if ($_SESSION["Admin"] == true) {
               ?>
-              <input type="button" class="Creation" name="CreationC" value="Créer un Cahier Multimédia">
+              <input type="button" class="Creation" href="creationC.php" value="Créer un Cahier Multimédia">
               <?php
                 }
               ?>
