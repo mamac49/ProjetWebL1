@@ -36,10 +36,8 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
 
 function Delete($Contact) {
   $str = explode(" ", $Contact);
-  $prenom = $str[0];
-  $nom = $str[1];
   $link = dbConnect();
-  $sql = "DELETE FROM `users` WHERE `prenom`='$prenom' AND `nom` = '$nom'";
+  $sql = "DELETE FROM `users` WHERE `prenom`='$str[0]' AND `nom` = '$str[1]'";
   if (mysqli_query($link, $sql)) {
     echo "succès";
   } else {
