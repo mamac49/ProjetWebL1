@@ -16,7 +16,7 @@ function titre($x) {
   $sql = "SELECT `titre` FROM `Publications` WHERE `nature`=2 AND `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    return $row;
+    return $row[0];
   }
 }
 
