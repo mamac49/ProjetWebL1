@@ -40,10 +40,10 @@ include ("../../base.php");
     <?php
     }
     ?>
-    <input type="submit" name="Valider" value="Valider de cahier multimédia">
+    <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
   <form action="CreationC.php" method="post">
-    <input type="button" name="Case" value="Ajouter une case de texte">
+    <input type="button" name="Case" class="bouton" value="Ajouter une case de texte">
   </form>
 
 </div>
