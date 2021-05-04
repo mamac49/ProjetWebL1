@@ -49,7 +49,7 @@ include ("../../base.php");
       <p class="texte"><?php echo $y . " " . $x; ?></p>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
-    $x += 1
+    $x += 1;
     }
     ?>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
