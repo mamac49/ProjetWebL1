@@ -33,7 +33,7 @@ include ("../../base.php");
     <?php
     $n = 2;
     $y = 1;
-    for ($x=1 ; $x=$n ; $x = $x + $y) {
+    for ($x=1 ; $x<=$n ; $x = $x + $y) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
       <input type="file" name="<?php "img-".$n ?>">
