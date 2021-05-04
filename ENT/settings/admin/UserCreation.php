@@ -113,6 +113,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <?php
                 $nb = nombre();
                 for ($x=1; $x<=$nb+3; $x++) {
+                  echo $nb . " " . $x;
                 ?>
                   <option class="texte" value="<?php echo $x ?>"><?php echo nom($x); ?></option>
                 <?php } ?>
