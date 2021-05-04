@@ -45,7 +45,7 @@ if ($_SESSION["Connected"] == true) {
               $req=nombreblog();
               for ($i=0;$i<$req;$i++){
                 $a= "SELECT `idpublications` FROM `Publications`  WHERE `nature` = 1";
-                if ($result = mysqli_query($serveur, $sql)) {
+                if ($result = mysqli_query($a, $serveur)) {
                   $row = mysqli_fetch_array($result);
                   echo $row[`idpublications`];
                 }
