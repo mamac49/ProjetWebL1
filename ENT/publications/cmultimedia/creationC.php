@@ -37,7 +37,7 @@ include ("../../base.php");
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
 
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
-      <button onclick="textarea()">Ajouter une case</button>
+      <button onclick="textarea()" class="bouton">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 
