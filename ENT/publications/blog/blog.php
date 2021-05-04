@@ -45,8 +45,10 @@ if ($_SESSION["Connected"] == true) {
               $req=nombreblog();
               for ($i=0;$i<$req;$i++){
                 $a= "SELECT `idpublications` FROM `Publications`  WHERE `nature` = 1";
-                $data = $serveur->query($a);
-                echo idpublications;
+                if ($result = mysqli_query($serveur, $sql)) {
+                  $row = mysqli_fetch_array($result);
+                  echo $row[`idpublications`];
+                }
               ?>
               <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
