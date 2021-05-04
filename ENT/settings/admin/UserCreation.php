@@ -9,12 +9,7 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     $link = dbConnect();
     mysqli_query($link, "FLUSH `users`");
 
-    if ($result = mysqli_query($link, "SELECT * FROM `users`")) {
-        $nb = mysqli_num_rows($result);
-    }
-    mysqli_free_result($result);
-
-    $iduser = $nb + 1;
+    $iduser = nombre() + 1;
 
     $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin');";
     if (mysqli_query($link, $sql)) {
