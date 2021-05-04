@@ -59,6 +59,7 @@ if ( $_SESSION["Connected"] == true) {
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="styleL.css">
     <link rel="stylesheet" href="../css/color1.css">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
   </head>
   <body>
 
