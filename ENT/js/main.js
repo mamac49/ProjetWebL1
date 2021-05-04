@@ -54,3 +54,7 @@ function LoadCSS( cssURL ) {
 function refresh() {
   window.location.reload();
 }
+
+function textarea() {
+  document.write('<textarea name="" rows="8" cols="80" resize="none" required></textarea>')
+}

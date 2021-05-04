@@ -32,7 +32,6 @@ function Connexion($mail, $password) {
         $_SESSION["theme"] = "Sombre";
         $_SESSION["Id"] = $id;
         $_SESSION["Pic"] = $pic;
-        $_SESSION["y"] = 1;
 
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     }
