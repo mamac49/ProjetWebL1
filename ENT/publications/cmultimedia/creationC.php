@@ -39,11 +39,13 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-      for ($n=1 ; $n <= $y ; $n++) {
+      $n = 1;
+      while ($n <= $y) {
     ?>
       <textarea name="<?php echo "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
+      $n += 1;
       }
     ?>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
