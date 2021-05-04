@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-$y = int();
+if (empty($y)) {
+  $y=1;
+}
 
 include ("../../fonc.php");
 
