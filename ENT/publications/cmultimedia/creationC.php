@@ -35,7 +35,6 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-    while (True) {
       if (isset($_POST['case'])) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
@@ -43,7 +42,6 @@ include ("../../base.php");
     <?php
       $n += 1;
       }
-    }
     ?>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
