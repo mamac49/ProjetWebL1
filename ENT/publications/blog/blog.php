@@ -48,7 +48,7 @@ if ($_SESSION["Connected"] == true) {
                 $a= "SELECT `idpublications` FROM `Publications`  WHERE `nature` = 1";
                 if ($result = mysqli_query($link, $a)) {
                   $row = mysqli_fetch_array($result);
-                  echo $row[`idpublications`];
+                  var_dump($row);
                 }
               ?>
               <li class="espaces"><hr></li>
