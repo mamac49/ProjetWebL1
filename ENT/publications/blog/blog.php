@@ -44,7 +44,7 @@ if ($_SESSION["Connected"] == true) {
               $serveur = dbConnect();
               $req=nombreblog();
               for ($i=0;$i<$req;$i++){
-                $a= "SELECT `idpublications` FROM `Publications`";
+                $a= "SELECT `idpublications` FROM `Publications`  WHERE `nature` = 1";
                 $data = $serveur->query($a);
                 echo idpublications;
               ?>
