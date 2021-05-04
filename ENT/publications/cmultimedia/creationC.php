@@ -35,7 +35,7 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-    while True {
+    while 1 {
       if (isset($_POST['case'])) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
