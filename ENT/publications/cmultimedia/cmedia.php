@@ -3,6 +3,14 @@ session_start();
 
 include '../../fonc.php';
 
+function nbCm() {
+  $link = dbConnect();
+  $sql = "SELECT `idpublications` FROM `Publications` WHERE `nature`=2";
+  if ($result = mysqli_query($link, $sql)) {
+    return mysqli_num_rows($result);
+  }
+}
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -26,10 +34,13 @@ if ($_SESSION["Connected"] == true) {
             <h2 class="texte">Listes des cahiers</h2>
             <div class="leaf">
               <ul class="liste">
-                <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i> Cahier n°1</a></li>
-                <li class="texte"><a class="Copybook" href="media/Cahier2.html"><i class="fas fa-book Icobook"></i> Cahier n°2</a></li>
-                <li class="texte"><a class="Copybook" href="media/Cahier3.html"><i class="fas fa-book Icobook"></i> Cahier n°3</a></li>
-                <li class="texte"><a class="Copybook" href="media/Cahier4.html"><i class="fas fa-book Icobook"></i> Cahier n°4</a></li>
+                <?php
+                for ($x=1 ; $x<=nbCm() ; $x++) {
+                ?>
+                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i> Cahier n°1</a></li>
+                <?php
+                }
+                ?>
               </ul>
               <?php
                 if ($_SESSION["Admin"] == true) {
