@@ -36,10 +36,10 @@ if ($_SESSION["Connected"] == true) {
               <ul class="contact_list">
               <?php
                 $nb = nombre();
-                for ($x=0; $x<=$nb+1; $x++) {
+                for ($x=1; $x<=$nb+2; $x++) {
                   $contact_name = strval(nom($x));
                   $contact_id = "contact" + iduser($x);
-                  
+
               ?>
                 <li class="contact">
                   <a class=<?php $contact_id;?> id="contact"><i class="fas fa-user-tie icone"></i><?php $contact_name;?></a>

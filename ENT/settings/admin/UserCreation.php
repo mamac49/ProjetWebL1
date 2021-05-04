@@ -7,6 +7,8 @@ include '../../fonc.php';
 
 function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
     $link = dbConnect();
+    mysqli_query($link, "FLUSH `users`");
+
     if ($result = mysqli_query($link, "SELECT * FROM `users`")) {
         $nb = mysqli_num_rows($result);
     }
