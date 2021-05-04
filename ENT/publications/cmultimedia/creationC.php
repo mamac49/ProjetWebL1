@@ -42,9 +42,9 @@ include ("../../base.php");
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
     for ($x=1 ; $x<=$y ; $x++) {
-    echo $y;
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
+      <p><<?php echo $y . " " . $x; ?></p>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
     }
