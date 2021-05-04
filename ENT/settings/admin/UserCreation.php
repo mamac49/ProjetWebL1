@@ -112,8 +112,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
               <select class="listeDeroul" name="user">
                 <?php
                 $nb = nombre();
-                for ($x=1; $x<=$nb+2; $x++) {
-                  echo $nb . " " . $x;
+                for ($x=1; $x=$nb+2; $x++) {
                 ?>
                   <option class="texte" value="<?php echo $x ?>"><?php echo nom($x); ?></option>
                 <?php } ?>
