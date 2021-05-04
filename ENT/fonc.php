@@ -46,10 +46,9 @@ function Affichage() {
 
 function nombre() {
   $link = dbConnect();
-  $sql = "SELECT COUNT(*) FROM `users`";
+  $sql = "SELECT `iduser` FROM `users`";
   if ($result = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_assoc($result);
-    return $row['count'];
+    return mysqli_num_rows($result);
   }
 }
 
