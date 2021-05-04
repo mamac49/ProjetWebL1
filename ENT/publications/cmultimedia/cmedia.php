@@ -11,6 +11,14 @@ function nbCm() {
   }
 }
 
+function titre($x) {
+  $link = dbConnect();
+  $sql = "SELECT `titre` FROM `Publications` WHERE `nature`=2 AND `idpublications`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row
+}
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -37,7 +45,7 @@ if ($_SESSION["Connected"] == true) {
                 <?php
                 for ($x=1 ; $x<=nbCm() ; $x++) {
                 ?>
-                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i> Cahier n°1</a></li>
+                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php echo titre($x); ?></a></li>
                 <?php
                 }
                 ?>
