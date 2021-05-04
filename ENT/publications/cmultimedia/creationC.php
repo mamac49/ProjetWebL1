@@ -43,7 +43,7 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-    $x = 0;
+    $x = 1;
     while ($x <= $y) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
