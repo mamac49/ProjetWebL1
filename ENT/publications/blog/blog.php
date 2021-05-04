@@ -29,7 +29,7 @@ if ($_SESSION["Connected"] == true) {
         $row = mysqli_fetch_array($result);
         return $row[`idpublications`];
       }
-
+  }
   }
 ?>
 
