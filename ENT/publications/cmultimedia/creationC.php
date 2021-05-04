@@ -31,7 +31,7 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-    $n = 2;
+    $n = 1;
     $y = 1;
     for ($x=1 ; $x<=$n ; $x = $x + $y) {
     ?>
