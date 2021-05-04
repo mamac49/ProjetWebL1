@@ -48,7 +48,8 @@ function nombre() {
   $link = dbConnect();
   $sql = "SELECT COUNT(*) FROM `users`";
   if ($result = mysqli_query($link, $sql)) {
-    return mysqli_result($result, 0);
+    $row = mysqli_fetch_assoc($result);
+    return $row['count'];
   }
 }
 
