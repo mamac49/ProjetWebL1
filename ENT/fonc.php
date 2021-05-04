@@ -46,12 +46,11 @@ function Affichage() {
 
 function nombre() {
   $link = dbConnect();
-  $sql = "SELECT `iduser` FROM `users`";
+  $sql = "SELECT COUNT(*) FROM `users`";
   if ($result = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_array($result);
-    $nb = count($row);
+    $data = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
-    return $nb;
+    return $data['total'];
   }
 }
 
