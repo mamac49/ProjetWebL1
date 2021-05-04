@@ -8,7 +8,7 @@ if (empty($y)) {
 include ("../../fonc.php");
 
 if (isset($_POST['Case'])) {
-  $y++;
+  $y += 1;
 }
 
 if (isset($_POST['Valider'])) {
