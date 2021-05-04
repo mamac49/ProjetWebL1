@@ -6,7 +6,7 @@ include '../fonc.php';
 function Connexion($mail, $password) {
     $link = dbConnect();
 
-    $sql = "SELECT * FROM `users` WHERE `mail`= '(?)' ";
+    $sql = "SELECT * FROM `users` WHERE `mail`= (?) ";
     $stmt = mysqli_prepare($link, $sql);
     mysqli_stmt_bind_param($stmt, "s", $mail);
     if (mysqli_stmt_execute($stmt)) {
