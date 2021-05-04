@@ -109,7 +109,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <input type="checkbox" value="1" name="admin">
                 <input type="submit" name="valider" value="Creer" class="FormCrea Bouton Centrer">
             </form>
-            <form action="UserCreation.html" method="post" class="Formulaire">
+            <form action="UserCreation.php" method="post" class="Formulaire">
               <h2 class="texte">Suppression d'utilisateur</h2>
               <select class="listeDeroul" name="user">
                 <?php
