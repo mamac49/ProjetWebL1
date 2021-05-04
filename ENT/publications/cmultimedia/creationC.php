@@ -4,12 +4,13 @@ session_start();
 include ("../../fonc.php");
 
 if (isset($_POST['case'])) {
-  $y += 1;
+  $_SESSION['y'] += 1;
 }
 
 if (isset($_POST['Valider'])) {
   $texte = array();
-  for ($i = 1 ; $x < $n ; $i++) {
+  $len = count($n);
+  for ($i = 1 ; $x < $len ; $i++) {
     $texte[$i] = $_POST[$i];
   }
 }
@@ -38,13 +39,11 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-      $n = 0;
-      while ($n <= $y) {
+      for ($n=1 ; $n <= $_SESSION['y'] ; $n++) {
     ?>
       <textarea name="<?php echo "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
-      $n += 1;
       }
     ?>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
