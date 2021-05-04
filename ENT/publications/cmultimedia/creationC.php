@@ -45,7 +45,7 @@ include ("../../base.php");
   </form>
 </div>
 <!--publication liée à la bdd-->
-<textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=0 line=0 required></textarea>
+<textarea class="textareaId" id="textareaCahierMultimedia" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 
 <!--zone de texte éditable
 <textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=1 required></textarea>

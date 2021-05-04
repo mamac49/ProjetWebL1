@@ -56,17 +56,20 @@ function refresh() {
 }
 
 function getNbLines() {
-  var saisie = getElementById("textarea_cahier_multimedia");
-  var pulications = getElementById("publications_cahier_multimedia");
+  var saisie = document.getElementById("textarea_cahier_multimedia");
+  var pulications = document.getElementById("publications_cahier_multimedia");
   publications.value = saisie.nb_max;
 }
 function textarea() {
-  var saisie = document.getElementById("textarea_cahier_multimedia");
-  var nb_max = saisie.nb_max();
-  var nb = saisie.nb();
-  /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
-  if (nb < nb_max) {
-    
-  } 
+  var saisie = document.getElementById("textareaCahierMultimedia");
+  /*var nb_max = saisie.nb_max();
+  var nb = saisie.nb();*/
+  var publications = document.getElementById("publications_cahier_multimedia");
 
+  /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
+  if (create = true) {
+    ligne = saisie.open();
+    line = 
+    publications.innerHTML();
+  }
 }
