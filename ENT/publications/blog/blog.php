@@ -42,11 +42,11 @@ if ($_SESSION["Connected"] == true) {
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
               <?php
-              $serveur = dbConnect();
+              $link = dbConnect();
               $req=nombreblog();
               for ($i=0;$i<$req;$i++){
                 $a= "SELECT `idpublications` FROM `Publications`  WHERE `nature` = 1";
-                if ($result = mysqli_query($a, $serveur)) {
+                if ($result = mysqli_query($link, $a)) {
                   $row = mysqli_fetch_array($result);
                   echo $row[`idpublications`];
                 }
