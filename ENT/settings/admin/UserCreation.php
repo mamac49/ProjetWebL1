@@ -43,6 +43,7 @@ function Delete($Contact) {
   } else {
     echo mysqli_error($link);
   }
+  mysqli_query($link, "FLUSH `users`");
 }
 
 

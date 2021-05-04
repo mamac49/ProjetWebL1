@@ -1,6 +1,6 @@
 <?php
 function dbConnect() {
-        $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
+        $link = new mysqli('localhost', 'user', 'mdp', 'BD');
 
         if (mysqli_connect_errno()) {
                 echo 'Erreur d accès à la base' . mysqli_connect_error();
