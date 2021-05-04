@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$y = 1;
+$y = int();
 
 include ("../../fonc.php");
 
