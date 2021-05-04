@@ -9,8 +9,7 @@ if (isset($_POST['case'])) {
 
 if (isset($_POST['Valider'])) {
   $texte = array();
-  $len = count($_POST);
-  for ($i = 1 ; $x < $len ; $i++) {
+  for ($i = 1 ; $x < $n ; $i++) {
     $texte[$i] = $_POST[$i];
   }
 }
@@ -39,7 +38,7 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
-      $n = 1;
+      $n = 0;
       while ($n <= $y) {
     ?>
       <textarea name="<?php echo "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
