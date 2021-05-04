@@ -6,9 +6,12 @@ include '../fonc.php';
 function Connexion($mail, $password) {
     $link = dbConnect();
 
-    $sql = "SELECT * FROM `users` WHERE `mail`= '$mail' ";
-    if ($result = mysqli_query($link, $sql)) {
-        $row = mysqli_fetch_assoc($result);
+    $sql = "SELECT * FROM `users` WHERE `mail`= '(?)' ";
+    $stmt = mysqli_prepare($link, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $mail);
+    if (mysqli_stmt_execute($stmt)) {
+        $result = mysqli_stmt_get_result($stmt);
+        $row = mysqli_fetch_array($result);
         $mdp = $row['mdp'];
         $id = $row['iduser'];
         $pic = $row['idpic'];
