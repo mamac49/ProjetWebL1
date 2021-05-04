@@ -46,7 +46,6 @@ if ($_SESSION["Connected"] == true) {
               for ($i=0;$i<$req;$i++){
                 $a= "SELECT `idpublications` FROM `Publications`";
                 $data = $serveur->query($a);
-                echo $data;
                 echo idpublications;
               ?>
               <li class="espaces"><hr></li>
