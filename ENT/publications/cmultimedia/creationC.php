@@ -43,10 +43,11 @@ include ("../../base.php");
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
     <?php
+    $x = 0
     while ($x <= $y) {
     ?>
       <textarea name="<?php "text-".$n ?>" rows="8" cols="80" resize="none" required></textarea>
-      <p class="texte"><?php echo $y . " " . $x; ?></p>
+      <p class="texte"><?php echo $x . " " . $y; ?></p>
       <!--<input type="file" name="<?php "img-".$n ?>"> -->
     <?php
     $x += 1;
