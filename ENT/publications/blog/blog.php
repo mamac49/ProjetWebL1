@@ -19,6 +19,18 @@ if ($_SESSION["Connected"] == true) {
       return $nb;
     }
   }
+
+  function IDpub() {
+    $serveur = dbConnect();
+    $req=nombreblog();
+    for ($i=0;$i<$req;$i++){
+      $a= "SELECT `idpublications` FROM `Publications`  WHERE `nature` = 1";
+      if ($result = mysqli_query($a, $serveur)) {
+        $row = mysqli_fetch_array($result);
+        return $row[`idpublications`];
+      }
+
+  }
 ?>
 
 <!DOCTYPE html>
@@ -41,14 +53,7 @@ if ($_SESSION["Connected"] == true) {
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
               <?php
-              $serveur = dbConnect();
-              $req=nombreblog();
-              for ($i=0;$i<$req;$i++){
-                $a= "SELECT `idpublications` FROM `Publications`  WHERE `nature` = 1";
-                if ($result = mysqli_query($a, $serveur)) {
-                  $row = mysqli_fetch_array($result);
-                  echo $row[`idpublications`];
-                }
+                echo IDpub();
               ?>
               <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
