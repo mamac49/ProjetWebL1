@@ -35,6 +35,8 @@ function Connexion($mail, $password) {
         $_SESSION["Pic"] = $pic;
 
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+    } else {
+      echo "<script> alert('Identifiant ou mot de passe faux'); </script>";
     }
 }
 
