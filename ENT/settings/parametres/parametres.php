@@ -45,6 +45,7 @@ function chgtThemeDef($theme) {
     reset($_POST);
     mysqli_close($link);
     header("refresh: 0");
+    $_SESSION['theme'] = $theme;
   }
 }
 
