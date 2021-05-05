@@ -109,26 +109,4 @@ function titre($x) {
   }
 }
 
-function theme_clair() {
-  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color1.css'); </script>";
-  $link = dbConnect();
-  $sql = "UPDATE `users` SET `theme` = 0 WHERE `mail`= '$_SESSION[Mail]'";
-  if (mysqli_query($link, $sql)) {
-    echo "succès";
-  } else {
-    echo mysqli_error($link);
-  }
-}
-
-function theme_sombre() {
-  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color2.css'); </script>";
-  $link = dbConnect();
-  $sql = "UPDATE `users` SET `theme` = 1 WHERE `mail`= '$_SESSION[Mail]'";
-  if (mysqli_query($link, $sql)) {
-    echo "succès";
-  } else {
-    echo mysqli_error($link);
-  }
-}
-
 ?>
