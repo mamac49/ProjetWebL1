@@ -14,7 +14,7 @@ function titre($x) {
 
 function Delete($Contact) {
   $link = dbConnect();
-  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$iduser'";
+  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Contact'";
   if (mysqli_query($link, $sql)) {
     echo "succès";
   } else {
@@ -69,7 +69,7 @@ if ($_SESSION["Connected"] == true) {
                     <option class="texte" value="<?php echo $x ?>"><?php echo titre($x); ?></option>
                   <?php }} ?>
                 </select>
-                <input type="submit" name="ValiderSupp" value="Supprimer l'utilisateur" class="bouton">
+                <input type="submit" name="ValiderSupp" value="Supprimer le cahier multimédia" class="bouton">
               </form>
 
               <?php
