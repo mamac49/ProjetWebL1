@@ -21,6 +21,7 @@ function titre($x) {
 }
 
 function nature($x) {
+  $link = dbConnect();
   $sql = "SELECT `nature` FROM `publications` WHERE `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
