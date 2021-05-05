@@ -63,7 +63,7 @@ if ($_SESSION["Connected"] == true) {
             <ul class="liste_sujets">
               <?php
               $link = dbConnect();
-              $req=nombrepubli();
+              $req=nbPub();
               for ($i=0;$i<$req;$i++){
                 $a= "SELECT `idpublications` FROM `Publications` WHERE `nature` = 1";
                 if ($result = mysqli_query($link, $a)) {
