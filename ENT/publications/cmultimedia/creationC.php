@@ -36,9 +36,10 @@ include ("../../base.php");
 
 <div class="Center">
   <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
-  <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
-    
-  </ul>
+    <input type="text" name="titre" placeholder="Titre du cahier">
+    <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
+
+    </ul>
   <!--<textarea class="textareaCahierMultimedia" id="textarea_cahier_multimedia" name="" rows="8" cols="80" resize="none" value=1 required></textarea>-->
       <button onclick="textarea()" class="bouton">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
