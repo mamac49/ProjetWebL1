@@ -1,0 +1,10 @@
+.animation_off {
+	font-size: 2em;
+	color: black;
+	background-color: white;
+}
+
+.animation_on {
+	color: white;
+	background-color: black;
+}
