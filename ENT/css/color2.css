@@ -2,7 +2,7 @@
   --font-color: black;
   --font-color-nde: white;
   --main-color: rgb(6, 154, 173);
-  --second-color: rgb(87, 246, 232);
+  --second-color: rgba(168, 168, 168, 0.74);
 }
 
 .move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourciM, .raccourciB, input[type=button], .bouton, .Login  {
