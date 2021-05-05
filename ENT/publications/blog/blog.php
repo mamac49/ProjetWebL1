@@ -72,11 +72,10 @@ if ($_SESSION["Connected"] == true) {
                   $date=jour($i);
               ?>
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
-              <li class="espaces"><hr></li>
                 <?php
                 echo $titre;
                 ?>
-                </a> <span>Edité par
+              </a> <span class="texte">Edité par
                   <?php
                   echo $auteur;
                   ?>
@@ -85,6 +84,7 @@ if ($_SESSION["Connected"] == true) {
                   echo $date;
                   ?>
                   </span></li>
+              <li class="espaces"><hr></li>
               <?php
                 }
               }
