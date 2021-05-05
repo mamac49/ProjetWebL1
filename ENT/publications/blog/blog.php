@@ -68,7 +68,7 @@ if ($_SESSION["Connected"] == true) {
                 $a= "SELECT `idpublications` FROM `Publications` WHERE `nature` = 1";
                 if ($result = mysqli_query($link, $a)) {
                   $row = mysqli_fetch_array($result);
-                  if (row[0]==$i){
+                  if ($row[0]==$i){
                     $titre=titre($i);
                     $auteur=auteur($i);
                     $date=jour($i);
