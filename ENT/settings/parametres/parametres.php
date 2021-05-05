@@ -70,6 +70,7 @@ if ($_SESSION["Connected"] == true) {
   ?>
       <div class="Center">
         <h1 class="texte">Paramètres</h1>
+        <div class="colonnes">
           <form method="POST" name="password">
             <p>
             <h2 class="texte">Réinitialisation du mot de passe</h2>
@@ -82,13 +83,25 @@ if ($_SESSION["Connected"] == true) {
             </p>
             <input class="texte" type="submit" name="Valider" value="Valider">
           </form>
+          <form action="parametres.php" method="POST" enctype="multipart/form-data">
             <h2 class="texte">Changement de l'image de profil</h2>
             <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage()) . ' '?>" alt="Photo de profil" class="PP">
-            <form action="parametres.php" method="POST" enctype="multipart/form-data">
             <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
             <input type="file" id="file" name="PP" accept="image/*">
             <input type="submit" name="ChgtIMG" value="Valider" class="Bouton">
-            </form>
+          </form>
+        </div>
+        <div class="colonnes">
+          <form action="parametres.php" method="post">
+            <h2 class="texte">Thème prédéfini</h2>
+            <label for="clair">Thème clair</label>
+            <input type="radio" checked name="clair" id="clair" value="clair">
+            <label for="sombre">Thème sombre</label>
+            <input type="radio" name="sombre" id="sombre" value="sombre">
+
+          </form>
+        </div>
+
       </div>
   </div>
 </div>
