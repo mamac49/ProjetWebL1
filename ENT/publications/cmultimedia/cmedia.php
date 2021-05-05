@@ -3,9 +3,9 @@ session_start();
 
 include '../../fonc.php';
 
-function nbCm() {
+function nbPub() {
   $link = dbConnect();
-  $sql = "SELECT `idpublications` FROM `Publications` WHERE `nature`=2";
+  $sql = "SELECT `idpublications` FROM `Publications` WHERE";
   if ($result = mysqli_query($link, $sql)) {
     return mysqli_num_rows($result);
   }
@@ -53,7 +53,7 @@ if ($_SESSION["Connected"] == true) {
             <div class="leaf">
               <ul class="liste">
                 <?php
-                for ($x=1 ; $x<=nbCm() ; $x++) {
+                for ($x=1 ; $x<=nbPub() ; $x++) {
                   if (nature($x) == "2") {
                 ?>
                   <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php titre($x); ?></a></li>
