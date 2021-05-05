@@ -1,4 +1,6 @@
-ht
+html {
+	background-color: blue;
+}
 
 .animation_off {
 	font-size: 2em;
@@ -9,4 +11,8 @@ ht
 .animation_on {
 	color: white;
 	background-color: black;
+}
+
+#bouton:hover {
+	font-size: 10em;
 }
