@@ -4,14 +4,6 @@ session_start();
 if ($_SESSION["Connected"] == true) {
 
   include ("../../fonc.php");
-  function nombrepubli() {
-    $link = dbConnect();
-    $sql = "SELECT COUNT(*) FROM `Publications`";
-    if ($result = mysqli_query($link, $sql)) {
-      $nb= mysqli_num_rows($result);
-      return $nb;
-    }
-  }
 
   function titre($x) {
     $link = dbConnect();
@@ -91,10 +83,6 @@ if ($_SESSION["Connected"] == true) {
               <?php
               }
               ?>
-
-              <li class="sujets"><a href="media/blog2.html"><i class="fas fa-paint-brush icone"></i> Sujet n°2</a> <span>Edité par M. Langlois le 08/03/2021</span></li>
-              <li class="espaces"><hr></li>
-              <li class="sujets"><a href="media/blog3.html"><i class="fas fa-chess icone"></i> Sujet n°3</a> <span>Edité par M. Langlois le 09/03/2021</span></li>
             </ul>
             <br/>
             <?php
