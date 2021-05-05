@@ -59,9 +59,6 @@ if ($_SESSION["Connected"] == true) {
                   <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php titre($x); ?></a></li>
                 <?php
                   }
-                ?>
-                <p class="texte"><?php var_dump(nature($x))?></p>
-                <?php
                 }
                 ?>
               </ul>
