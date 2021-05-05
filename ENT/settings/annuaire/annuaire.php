@@ -36,7 +36,7 @@ if ($_SESSION["Connected"] == true) {
               <ul class="contact_list">
               <?php
                 $nb = nombre();
-                for ($x=1; $x<=$nb+2; $x++) {
+                for ($x=1; $x<=$nb; $x++) {
                   $contact_name = strval(nom($x));
                   $contact_id = "contact" + iduser($x);
 
