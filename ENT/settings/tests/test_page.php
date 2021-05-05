@@ -7,8 +7,6 @@
     <title>TEST</title>
   </head>
     <body>
-	<p class="animation_off" id="bouton" onclick="bouton()">
-		Bouton
-	</p>
+	<a class="animation_off" id="bouton" onclick="bouton()">Bouton</a>
 	</body>
 </html>
