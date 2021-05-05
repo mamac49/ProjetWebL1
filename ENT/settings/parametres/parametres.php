@@ -70,25 +70,41 @@ if ($_SESSION["Connected"] == true) {
   ?>
       <div class="Center">
         <h1 class="texte">Paramètres</h1>
-          <form method="POST" name="password">
-            <p>
-            <h2 class="texte">Réinitialisation du mot de passe</h2>
-            <label class="texte">Ancien mot de passe</label>
-            <input type="password" class="texte" name="passwordA" minlengh="8" maxlength="16" required>
-            </p>
-            <p>
-            <label class="texte">Nouveau mot de passe</label>
-            <input class="texte" type="password" name="passwordN" minlengh="8" maxlength="16" required>
-            </p>
-            <input class="texte" type="submit" name="Valider" value="Valider">
-          </form>
-            <h2 class="texte">Changement de l'image de profil</h2>
-            <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage()) . ' '?>" alt="Photo de profil" class="PP">
-            <form action="parametres.php" method="POST" enctype="multipart/form-data">
-            <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
-            <input type="file" id="file" name="PP" accept="image/*">
-            <input type="submit" name="ChgtIMG" value="Valider" class="Bouton">
+        <div class="page">
+          <div class="colonnes">
+            <form method="POST" name="password">
+              <p>
+              <h2 class="texte">Réinitialisation du mot de passe</h2>
+              <label class="texte">Ancien mot de passe</label>
+              <input type="password" class="texte" name="passwordA" minlengh="8" maxlength="16" required>
+              </p>
+              <p>
+              <label class="texte">Nouveau mot de passe</label>
+              <input class="texte" type="password" name="passwordN" minlengh="8" maxlength="16" required>
+              </p>
+              <input class="texte" type="submit" name="Valider" value="Valider">
             </form>
+            <form action="parametres.php" method="POST" enctype="multipart/form-data">
+              <h2 class="texte">Changement de l'image de profil</h2>
+              <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage()) . ' '?>" alt="Photo de profil" class="PP">
+              <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
+              <input type="file" id="file" name="PP" accept="image/*">
+              <input type="submit" name="ChgtIMG" value="Valider" class="Bouton">
+            </form>
+          </div>
+          <div class="colonnes">
+            <form action="parametres.php" method="post">
+              <h2 class="texte">Thème par défault</h2>
+              <p>
+                <label class="texte" for="clair">Thème clair</label>
+                <input type="radio" checked name="theme" id="clair" value="clair">
+                <label class="texte" for="sombre">Thème sombre</label>
+                <input type="radio" name="theme" id="sombre" value="sombre">
+              </p>
+              <input type="submit" name="ValiderTheme" value="Valider le thème par défault">
+            </form>
+          </div>
+        </div>
       </div>
   </div>
 </div>

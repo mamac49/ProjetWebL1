@@ -4,3 +4,14 @@
   width: 199px;
   height: 199px;
 }
+
+.colonnes {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.page{
+  display: flex;
+  flex-direction: row;
+}
