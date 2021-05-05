@@ -63,7 +63,7 @@ function nom($x) {
   }
 }
 
-function idusers($x) {
+function iduser($x) {
   $link = dbConnect();
   $sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
   $iduser = 0;
