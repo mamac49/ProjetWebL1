@@ -61,12 +61,14 @@ if ($_SESSION["Connected"] == true) {
               ?>
               <form class="AdminMulti" action="cmedia.php" method="post">
                 <a href="creationC.php">Créer un cahier multimédia</a>
-                <?php
-                for ($x=1 ; $x<=nbPub() ; $x++) {
-                  if (nature($x) == "2") {
-                ?>
-                  <option class="texte" value="<?php echo $x ?>"><?php echo titre($x); ?></option>
-                <?php }} ?>
+                <select name="Cmulti">
+                  <?php
+                  for ($x=1 ; $x<=nbPub() ; $x++) {
+                    if (nature($x) == "2") {
+                  ?>
+                    <option class="texte" value="<?php echo $x ?>"><?php echo titre($x); ?></option>
+                  <?php }} ?>
+                </select>
               </form>
 
               <?php
