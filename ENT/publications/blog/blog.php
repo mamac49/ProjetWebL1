@@ -6,17 +6,37 @@ if ($_SESSION["Connected"] == true) {
   include ("../../fonc.php");
   function nombreblog() {
     $link = dbConnect();
-    $sql = "SELECT COUNT(*) FROM `Publications` WHERE `nature` = 1";
+    $sql = "SELECT COUNT(*) FROM `Publications`";
+    if ($result = mysqli_query($link, $sql)) {
+      $nb= mysqli_num_rows($result);
+      return $nb;
+    }
+  }
+
+  function titre($x) {
+    $link = dbConnect();
+    $sql = "SELECT `titre` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
     if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
-      if (gettype($row)=="array"){
-        $nb = count($row);
-      }
-      else{
-        $nb=0;
-      }
-      mysqli_free_result($result);
-      return $nb;
+      return $row[0];
+    }
+  }
+
+  function auteur($x) {
+    $link = dbConnect();
+    $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
+    if ($result = mysqli_query($link, $sql)) {
+      $row = mysqli_fetch_array($result);
+      return $row[0];
+    }
+  }
+
+  function date($x) {
+    $link = dbConnect();
+    $sql = "SELECT `date` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
+    if ($result = mysqli_query($link, $sql)) {
+      $row = mysqli_fetch_array($result);
+      return $row[0];
     }
   }
 
@@ -43,26 +63,28 @@ if ($_SESSION["Connected"] == true) {
             <ul class="liste_sujets">
               <?php
               $link = dbConnect();
-              $req=nombreblog();
+              $req=nombrepubli();
               for ($i=0;$i<$req;$i++){
-                $a= "SELECT `idpublications` FROM `Publications`  WHERE `nature` = 1";
+                $a= "SELECT `idpublications` FROM `Publications` WHERE `nature` = 1";
                 if ($result = mysqli_query($link, $a)) {
                   $row = mysqli_fetch_array($result);
-                  echo $row["idpublications"];
+                  $titre=titre($row);
+                  $auteur=auteur($row);
+                  $date=date($row);
                 }
               ?>
               <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
                 <?php
-                echo "bla";
+                echo $titre;
                 ?>
                 </a> <span>Edité par
                   <?php
-                  echo "blou";
+                  echo $auteur;
                   ?>
                   le
                   <?php
-                  echo "bli";
+                  echo $date;
                   ?>
                   </span></li>
               <?php
