@@ -60,7 +60,7 @@ if ($_SESSION["Connected"] == true) {
                 <?php
                   }
                 ?>
-                <p><?phpvar_dump(nature($x))?></p>
+                <p class="texte"><?php var_dump(nature($x))?></p>
                 <?php
                 }
                 ?>
