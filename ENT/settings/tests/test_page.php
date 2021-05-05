@@ -1,12 +1,20 @@
+<?php
+if (true == true) {
+?>
 
-<
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>TEST</title>
+    <title>ENT Millocheau</title>
+    <link rel="stylesheet" href="styletest.css">
+    <script src="maintest.js"></script>
   </head>
     <body>
-	<a class="animation_off" id="bouton" onclick="bouton()">Bouton</a>
+		<a class="animation_off" id="bouton" onclick="bouton()">Bouton</a>
 	</body>
 </html>
+
+<?php
+}
+?>
