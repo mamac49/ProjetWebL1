@@ -25,7 +25,7 @@ function nature($x) {
   $sql = "SELECT `nature` FROM `publications` WHERE `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    return $row['nature'];
+    return $row[0];
   }
 }
 
@@ -59,6 +59,9 @@ if ($_SESSION["Connected"] == true) {
                   <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php titre($x); ?></a></li>
                 <?php
                   }
+                ?>
+                <p><?phpvar_dump(nature($x))?></p>
+                <?php
                 }
                 ?>
               </ul>
