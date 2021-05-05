@@ -1,4 +1,8 @@
-
+.PPannuaire {
+  width: 20px;
+  height: auto;
+  border-radius: 5000px;
+}
 
 @media all and (min-width: 1024px) { /*Pour les écrans de plus de 750pixels
 
@@ -98,7 +102,7 @@
   position: relative;
   }
 
-/* context menu 
+/* context menu
 
 .context-menu {
   display: none;
@@ -145,4 +149,3 @@
 } */
 
 }
-
