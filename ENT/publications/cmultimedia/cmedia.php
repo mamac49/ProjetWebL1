@@ -5,7 +5,7 @@ include '../../fonc.php';
 
 function nbPub() {
   $link = dbConnect();
-  $sql = "SELECT `idpublications` FROM `Publications` WHERE";
+  $sql = "SELECT `idpublications` FROM `Publications`";
   if ($result = mysqli_query($link, $sql)) {
     return mysqli_num_rows($result);
   }
