@@ -61,20 +61,18 @@ if ($_SESSION["Connected"] == true) {
           <div class="Center">
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
+              <li class="espaces"><hr></li>
               <?php
               $link = dbConnect();
               $req=nbPub();
               for ($i=0;$i<$req;$i++){
-                $a= "SELECT `idpublications` FROM `Publications` WHERE `nature` = 1";
-                if ($result = mysqli_query($link, $a)) {
-                  $row = mysqli_fetch_array($result);
-                  if ($row[0]==$i){
-                    $titre=titre($i);
-                    $auteur=auteur($i);
-                    $date=jour($i);
+                if (nature($i) == "1")
+                  $titre=titre($i);
+                  $auteur=auteur($i);
+                  $date=jour($i);
               ?>
-              <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
+              <li class="espaces"><hr></li>
                 <?php
                 echo $titre;
                 ?>
