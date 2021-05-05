@@ -37,6 +37,7 @@ function Connexion($mail, $password) {
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     } else {
       echo "<script> alert('Identifiant ou mot de passe faux'); </script>";
+      header("refresh: 0");
     }
 }
 
