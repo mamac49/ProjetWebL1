@@ -88,6 +88,7 @@ if ($_SESSION["Connected"] == true) {
                   ?>
                   </span></li>
               <?php
+                  }
                 }
               }
               ?>
