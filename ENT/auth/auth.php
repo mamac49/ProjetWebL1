@@ -14,7 +14,6 @@ function Connexion($mail, $password) {
         $row = mysqli_fetch_array($result);
         $mdp = $row['mdp'];
         $id = $row['iduser'];
-        $pic = $row['idpic'];
         $theme = $row['theme'];
         if ($row['admin'] == 1) {
           $admin = True;
