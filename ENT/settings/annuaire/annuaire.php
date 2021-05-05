@@ -42,7 +42,7 @@ if ($_SESSION["Connected"] == true) {
 
               ?>
                 <li class="contact">
-                  <a class=<?php $contact_id;?> id="contact"><i class="fas fa-user-tie icone"></i><?php $contact_name;?></a>
+                  <a class="<?php $contact_id;?> texte" id="contact"><i class="fas fa-user-tie icone"></i><?php $contact_name;?></a>
                 </li>
                 <li>
                   <hr class="hrcontact">
