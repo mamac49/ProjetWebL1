@@ -11,7 +11,7 @@ if (true == true) {
     <script src="maintest.js"></script>
   </head>
     <body>
-		<a class="animation_off" id="bouton" onclick="bouton()">Bouton</a>
+		<a class="animation_off" id="bouton" onclick="bouton()" href="https://mlanglois.freeboxos.fr/">Bouton</a>
 	</body>
 </html>
 

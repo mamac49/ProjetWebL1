@@ -1,4 +1,4 @@
-buton_state = false ;
+/*buton_state = false ;
 
 function bouton() {
 	if(buton_state == false) {
@@ -11,3 +11,4 @@ function bouton() {
 		buton_state = false;
 	}
 }
+*/

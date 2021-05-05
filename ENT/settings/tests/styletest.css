@@ -2,17 +2,15 @@ html {
 	background-color: blue;
 }
 
-.animation_off {
+#bouton {
 	font-size: 2em;
 	color: black;
 	background-color: white;
+	transition: 1000ms ease-in-out;
+	text-decoration: none;
 }
-
-.animation_on {
-	color: white;
-	background-color: black;
-}
-
 #bouton:hover {
 	font-size: 10em;
+	color: white;
+	background-color: black;
 }
