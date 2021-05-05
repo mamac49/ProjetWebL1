@@ -8,7 +8,7 @@ function titre($x) {
   $sql = "SELECT * FROM `Publications` WHERE `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    return $row['titre'];
+    return $row;
   }
 }
 
@@ -37,7 +37,7 @@ if ($_SESSION["Connected"] == true) {
 
     <!--<p> <?php echo $_GET['id'] ?></p> -->
     <div class="Center">
-      <h2 class="texte"><?php echo titre($IDcahier); ?></h2>
+      <h2 class="texte"><?php var_dump(titre($IDcahier)); ?></h2>
 
 
     </div>
