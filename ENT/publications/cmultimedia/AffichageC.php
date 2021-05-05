@@ -23,7 +23,11 @@ if ($_SESSION["Connected"] == true) {
       include ("../../base.php");
     ?>
 
-    <p> <?php echo $_GET['id'] ?></p>
+    <!--<p> <?php echo $_GET['id'] ?></p> -->
+    <div class="Center">
+
+
+    </div>
 
   </div>
 </div>
