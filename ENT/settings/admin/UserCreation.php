@@ -43,14 +43,14 @@ function Delete($Contact) {
 
 
 if ( isset($_POST['valider'])) {
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $mail = $_POST['mail'];
-    $password = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
-    $date = $_POST['datenaissance'];
+    $nom = securisation($_POST['nom']);
+    $prenom = securisation($_POST['prenom']);
+    $mail = securisation($_POST['mail']);
+    $password = securisation(password_hash($_POST['mdp'], PASSWORD_DEFAULT));
+    $date = securisation($_POST['datenaissance']);
     $pp = file_get_contents($_FILES['pp']['tmp_name']);
     if (isset($_POST['admin'])) {
-      $admin = $_POST['admin'];
+      $admin = securisation($_POST['admin']);
     } else {
       $admin = 0;
     }

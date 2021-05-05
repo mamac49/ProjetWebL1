@@ -39,8 +39,8 @@ function chgtPP($pp) {
 }
 
 if (isset($_POST['Valider'])) {
-  $mdpA = $_POST['passwordA'];
-  $mdpN = password_hash($_POST['passwordN'], PASSWORD_DEFAULT);
+  $mdpA = securisation($_POST['passwordA']);
+  $mdpN = securisation(password_hash($_POST['passwordN'], PASSWORD_DEFAULT));
   ChgtMdp($mdpA, $mdpN);
 }
 

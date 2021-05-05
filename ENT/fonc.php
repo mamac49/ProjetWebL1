@@ -75,4 +75,12 @@ function iduser($x) {
   }
 }
 
+function securisation ($donnee){ // pour protéger les champs
+  $donnee = htmlspecialchars($donnee);
+  $donnee = trim($donnee);
+  $donnee = stripslashes($donnee);
+  $donnee = strip_tags($donnee);
+  return $donnee;
+}
+
 ?>

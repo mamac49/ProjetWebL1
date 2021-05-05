@@ -38,8 +38,8 @@ function Connexion($mail, $password) {
 }
 
 if (isset($_POST['Valider'])) {
-    $mail = $_POST['Id'];
-    $password = $_POST['MotDePasse'];
+    $mail = securisation($_POST['Id']);
+    $password = securisation($_POST['MotDePasse']);
 
     Connexion($mail, $password);
 }
