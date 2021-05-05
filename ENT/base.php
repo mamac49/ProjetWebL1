@@ -1,7 +1,7 @@
 <?php
 
 function theme_clair() {
-  LoadCSS('/Projetwebl1/ENT/css/color1.css')
+  LoadCSS('/Projetwebl1/ENT/css/color1.css');
 }
 
 
