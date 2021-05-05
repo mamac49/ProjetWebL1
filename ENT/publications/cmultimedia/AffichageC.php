@@ -3,8 +3,6 @@ session_start();
 
 include '../../fonc.php';
 
-
-
 $IDcahier = $_GET['id'];
 
 
