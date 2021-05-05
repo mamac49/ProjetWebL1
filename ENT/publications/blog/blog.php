@@ -4,7 +4,7 @@ session_start();
 if ($_SESSION["Connected"] == true) {
 
   include ("../../fonc.php");
-  
+
   function auteur($x) {
     $link = dbConnect();
     $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
@@ -53,7 +53,7 @@ if ($_SESSION["Connected"] == true) {
                   $auteur=auteur($i);
                   $date=jour($i);
               ?>
-              <li class="sujets"><a href="AffichageB.php?id=<?php print $x ?>"><i class="fas fa-robot icone"></i> <?php echo $titre; ?>
+              <li class="sujets"><a href="AffichageB.php?id=<?php print $i ?>"><i class="fas fa-robot icone"></i> <?php echo $titre; ?>
               </a> <span class="texte">Edité par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
               <li class="espaces"><hr></li>
               <?php
