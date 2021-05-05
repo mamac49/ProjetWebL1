@@ -105,7 +105,7 @@ function titre($x) {
   $sql = "SELECT * FROM `Publications` WHERE `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    return $row['titre'];
+    return $row;
   }
 }
 
@@ -113,7 +113,7 @@ function adPublication(/*$idpublication,*/ $titre, $texte, /*$image,*/ $date, $n
   $link = dbConnect();
   mysqli_query($link, "FLUSH `Publications`");
 
-  /*désactivé car auto increment 
+  /*désactivé car auto increment
   $Publications = nombre() + 1;*/
 
   $sql = "INSERT INTO `Publications` (`idpublication`, `titre`, `texte`, `image`, `date`, `nature`, `iduser`) VALUES (NULL, '$titre', '$texte', NULL, '$date', $nature, $iduser);";
