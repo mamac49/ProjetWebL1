@@ -1,7 +1,6 @@
+buton_state = false ;
+
 function bouton() {
-	if (buton_state == none){
-		buton_state = false;
-	} 
 	if(buton_state == false) {
 		var p = document.getElementById("bouton");
 		p.className = "animation_on";
