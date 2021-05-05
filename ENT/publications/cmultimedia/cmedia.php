@@ -11,22 +11,20 @@ function nbCm() {
   }
 }
 
-function IDCM() {
-  $link = dbConnect();
-  $sql = "SELECT `idpublications` FROM `Publications` WHERE `nature`=2";
-  if ($result = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_array($result);
-    return $row;
-  }
-}
-
-
 function titre($x) {
   $link = dbConnect();
   $sql = "SELECT `titre` FROM `Publications` WHERE `nature`=2 AND `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0];
+  }
+}
+
+function nature($x) {
+  $sql = "SELECT `nature` FROM `publications` WHERE `idpublications`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row['nature']
   }
 }
 
@@ -55,9 +53,11 @@ if ($_SESSION["Connected"] == true) {
               <ul class="liste">
                 <?php
                 for ($x=1 ; $x<=nbCm() ; $x++) {
+                  if (nature($x) == 2) {
                 ?>
-                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php var_dump(IDCM()); ?></a></li>
+                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php titre($x); ?></a></li>
                 <?php
+                  }
                 }
                 ?>
               </ul>
