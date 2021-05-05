@@ -105,7 +105,7 @@ function titre($x) {
   $sql = "SELECT * FROM `Publications` WHERE `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    return $row;
+    return $row['titre'];
   }
 }
 
