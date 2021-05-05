@@ -13,7 +13,7 @@ function dbConnect() {
     return $link;
 }
 
-function Affichage() {
+function Affichage($mail) {
   # On se connecte à la BD
   $link = dbConnect();
 
@@ -28,7 +28,7 @@ function Affichage() {
       mysqli_close($link);
   }
   # Sinon on définit le paramèetre le requète
-  mysqli_stmt_bind_param($stmt, "s", $_SESSION['Mail']);
+  mysqli_stmt_bind_param($stmt, "s", $mail);
   # On exécute le requête
   if (mysqli_stmt_execute($stmt)) {
     # On récupère le résultat
@@ -52,14 +52,13 @@ function nombre() {
   }
 }
 
-function nom($x) {
+function info($x) {
   $link = dbConnect();
   $sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
   if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
-      $contact = $row['prenom'] . " " . $row['nom'];
       mysqli_free_result($result);
-      return $contact;
+      return $row;
   }
 }
 

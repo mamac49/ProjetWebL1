@@ -37,12 +37,12 @@ if ($_SESSION["Connected"] == true) {
               <?php
                 $nb = nombre();
                 for ($x=1; $x<=$nb; $x++) {
-                  $contact_name = nom($x);
+                  $contact_name = info($x)['prenom'] . " " . info($x)['nom'];
                   $contact_id = "contact" . iduser($x);
-
+                  $mail = info($x)["mail"];
               ?>
                 <li class="contact">
-                  <a class="<?php echo $contact_id;?> texte" id="contact"><i class="fas fa-user-tie icone"></i><?php echo $contact_name;?></a>
+                  <a class="<?php echo $contact_id;?> texte" id="contact"><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></a>
                 </li>
                 <li><hr class="hrcontact"></li>
               <?php
