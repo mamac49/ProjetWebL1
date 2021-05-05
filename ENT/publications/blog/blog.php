@@ -56,7 +56,7 @@ if ($_SESSION["Connected"] == true) {
               <?php
               $link = dbConnect();
               $req=nbPub();
-              for ($i=0;$i<$req;$i++){
+              for ($i=1;$i<=$req;$i++){
                 if (nature($i) == "1"){
                   $titre=titre($i);
                   $auteur=auteur($i);
