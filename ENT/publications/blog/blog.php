@@ -6,7 +6,7 @@ if ($_SESSION["Connected"] == true) {
   include ("../../fonc.php");
   function nombreblog() {
     $link = dbConnect();
-    $sql = "SELECT `idpublications` FROM `Publications` WHERE `nature` = 1";
+    $sql = "SELECT COUNT(*) FROM `Publications` WHERE `nature` = 1";
     if ($result = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($result);
       if (gettype($row)=="array"){
