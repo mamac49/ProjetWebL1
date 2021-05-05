@@ -109,4 +109,30 @@ function titre($x) {
   }
 }
 
+function adPublication(/*$idpublication,*/ $titre, $texte, /*$image,*/ $date, $nature, $iduser) {
+  $link = dbConnect();
+  mysqli_query($link, "FLUSH `Publications`");
+
+  /*désactivé car auto increment 
+  $Publications = nombre() + 1;*/
+
+  $sql = "INSERT INTO `Publications` (`idpublication`, `titre`, `texte`, `image`, `date`, `nature`, `iduser`) VALUES (NULL, '$titre', '$texte', NULL, '$date', $nature, $iduser);";
+  /*Peut être utilisable pour image
+  if (mysqli_query($link, $sql)) {
+    $pp = mysqli_real_escape_string($link, $pp);
+    $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
+    if (mysqli_query($link, $sql2)) {
+      reset($_POST);
+      mysqli_close($link);
+      header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
+      exit();
+    } else {
+      echo mysqli_error($link);
+    }
+  } else {
+    echo mysqli_error($link);
+  }*/
+  mysqli_close($link);
+}
+
 ?>

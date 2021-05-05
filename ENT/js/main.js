@@ -14,18 +14,22 @@
 
 })(jQuery);*/
 
+/*Sans JQuery
 
+On lance une fonction si l'on clique sur la balise p*/
 function move_menu_burger()
 {
   var p = document.getElementById("burger_button");
   p.onclick = move_burger;
 };
 
+//On change la classe "menu_burger" en "move_menu" (problème avec l'ajout de classe à regler)
 function move_burger()
 {
   document.getElementById("menu_burger").className = "move_menu";
 }
 
+//même fonctionnement que précedemment en sens inverse, si l'on clique sur la croix
 function close_menu_burger()
 {
   var p = document.getElementById("burger_cross");
@@ -68,8 +72,6 @@ function textarea() {
 
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
   if (create = true) {
-    ligne = saisie.open();
-    line = 
     publications.innerHTML();
   }
 }
