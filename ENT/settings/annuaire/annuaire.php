@@ -44,16 +44,13 @@ if ($_SESSION["Connected"] == true) {
                 <li class="contact">
                   <a class="<?php echo $contact_id;?> texte" id="contact"><i class="fas fa-user-tie icone"></i><?php echo $contact_name;?></a>
                 </li>
-                <li>
-                  <hr class="hrcontact">
-                </li>
+                <li><hr class="hrcontact"></li>
               <?php
                  }
               ?>
               </ul>
             </div>
       </div>
-test
       <!-- menu clic droit/-->
 
       <div id="context_menu" class="context_menu" >
