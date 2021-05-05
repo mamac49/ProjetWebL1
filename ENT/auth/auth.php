@@ -15,7 +15,7 @@ function Connexion($mail, $password) {
         $mdp = $row['mdp'];
         $id = $row['iduser'];
         $pic = $row['idpic'];
-        $theme = $row['theme']
+        $theme = $row['theme'];
         if ($row['admin'] == 1) {
           $admin = True;
         } else {
