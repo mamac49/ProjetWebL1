@@ -62,18 +62,6 @@ function info($x) {
   }
 }
 
-function iduser($x) {
-  $link = dbConnect();
-  $sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
-  $iduser = 0;
-  if ($result = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_array($result);
-    $iduser = strval($row['iduser']);
-    mysqli_free_result($result);
-    return $iduser;
-  }
-}
-
 function securisation ($donnee){ // pour protéger les champs
   $donnee = htmlspecialchars($donnee);
   $donnee = trim($donnee);
