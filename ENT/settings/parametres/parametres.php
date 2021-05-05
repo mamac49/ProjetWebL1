@@ -95,9 +95,9 @@ if ($_SESSION["Connected"] == true) {
           <form action="parametres.php" method="post">
             <h2 class="texte">Thème prédéfini</h2>
             <label for="clair">Thème clair</label>
-            <input type="checkbox" checked name="clair" id="clair" value="clair">
+            <input type="radio" checked name="theme" id="clair" value="clair">
             <label for="sombre">Thème sombre</label>
-            <input type="checkbox" name="sombre" id="sombre" value="sombre">
+            <input type="radio" name="theme" id="sombre" value="sombre">
 
           </form>
         </div>
