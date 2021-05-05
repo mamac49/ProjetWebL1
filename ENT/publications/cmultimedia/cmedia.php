@@ -23,6 +23,12 @@ function Delete($Contact) {
   mysqli_query($link, "FLUSH `Publications`");
 }
 
+if ( isset($_POST['ValiderSupp'])) {
+  $Cmulti = $_POST['Cmulti'];
+  Delete($Cmulti);
+}
+
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
