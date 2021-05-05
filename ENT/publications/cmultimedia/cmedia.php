@@ -54,7 +54,7 @@ if ($_SESSION["Connected"] == true) {
               <ul class="liste">
                 <?php
                 for ($x=1 ; $x<=nbCm() ; $x++) {
-                  if (nature($x) == 2) {
+                  if (nature($x) == "2") {
                 ?>
                   <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php titre($x); ?></a></li>
                 <?php
