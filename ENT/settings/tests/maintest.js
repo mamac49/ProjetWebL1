@@ -1,5 +1,5 @@
 function bouton() {
-	if (buton_state = none){
+	if (buton_state == none){
 		buton_state = false;
 	} 
 	if(buton_state == false) {
