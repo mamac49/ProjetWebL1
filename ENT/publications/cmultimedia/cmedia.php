@@ -13,10 +13,10 @@ function nbPub() {
 
 function titre($x) {
   $link = dbConnect();
-  $sql = "SELECT `titre` FROM `Publications` WHERE `nature`=2 AND `idpublications`='$x'";
+  $sql = "SELECT `titre` FROM `Publications` WHERE `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    return $row[0];
+    return $row;
   }
 }
 
@@ -56,7 +56,7 @@ if ($_SESSION["Connected"] == true) {
                 for ($x=1 ; $x<=nbPub() ; $x++) {
                   if (nature($x) == "2") {
                 ?>
-                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php titre($x); ?></a></li>
+                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php var_dump(nature($x)); ?></a></li>
                 <?php
                   }
                 }
