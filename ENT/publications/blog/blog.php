@@ -52,7 +52,6 @@ if ($_SESSION["Connected"] == true) {
           <div class="Center">
             <h2 class="texte">Listes des sujets</h2>
             <ul class="liste_sujets">
-              <li class="espaces"><hr></li>
               <?php
               $link = dbConnect();
               $req=nbPub();
@@ -62,19 +61,8 @@ if ($_SESSION["Connected"] == true) {
                   $auteur=auteur($i);
                   $date=jour($i);
               ?>
-              <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
-                <?php
-                echo $titre;
-                ?>
-              </a> <span class="texte">Edité par
-                  <?php
-                  echo $auteur;
-                  ?>
-                  le
-                  <?php
-                  echo $date;
-                  ?>
-                  </span></li>
+              <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i> <?php echo $titre; ?>
+              </a> <span class="texte">Edité par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
               <li class="espaces"><hr></li>
               <?php
                 }
