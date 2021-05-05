@@ -94,11 +94,13 @@ if ($_SESSION["Connected"] == true) {
           </div>
           <div class="colonnes">
             <form action="parametres.php" method="post">
-              <h2 class="texte">Thème prédéfini</h2>
-              <label for="clair">Thème clair</label>
-              <input type="radio" checked name="theme" id="clair" value="clair">
-              <label for="sombre">Thème sombre</label>
-              <input type="radio" name="theme" id="sombre" value="sombre">
+              <h2 class="texte">Thème par défault</h2>
+              <p>
+                <label class="texte" for="clair">Thème clair</label>
+                <input type="radio" checked name="theme" id="clair" value="clair">
+                <label class="texte" for="sombre">Thème sombre</label>
+                <input type="radio" name="theme" id="sombre" value="sombre">
+              </p>
               <input type="submit" name="ValiderTheme" value="Valider le thème par défault">
             </form>
           </div>
