@@ -109,5 +109,24 @@ function titre($x) {
   }
 }
 
+function theme_clair() {
+  $link = dbConnect();
+  $sql = "UPDATE `users` SET `theme` = 0 WHERE `mail`= '$_SESSION[Mail]'";
+  if (mysqli_query($link, $sql)) {
+    echo "<script> LoadCSS('/Projetwebl1/ENT/css/color1.css'); </script>";
+  } else {
+    echo mysqli_error($link);
+  }
+}
+
+function theme_sombre() {
+  $link = dbConnect();
+  $sql = "UPDATE `users` SET `theme` = 1 WHERE `mail`= '$_SESSION[Mail]'";
+  if (mysqli_query($link, $sql)) {
+    echo "<script> LoadCSS('/Projetwebl1/ENT/css/color2.css'); </script>";
+  } else {
+    echo mysqli_error($link);
+  }
+}
 
 ?>
