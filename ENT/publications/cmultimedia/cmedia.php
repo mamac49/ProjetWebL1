@@ -16,7 +16,6 @@ function Delete($Contact) {
   $link = dbConnect();
   $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Contact'";
   if (mysqli_query($link, $sql)) {
-    echo "succès";
   } else {
     echo mysqli_error($link);
   }
