@@ -83,4 +83,21 @@ function securisation ($donnee){ // pour protéger les champs
   return $donnee;
 }
 
+function nbPub() {
+  $link = dbConnect();
+  $sql = "SELECT `idpublications` FROM `Publications`";
+  if ($result = mysqli_query($link, $sql)) {
+    return mysqli_num_rows($result);
+  }
+}
+
+function nature($x) {
+  $link = dbConnect();
+  $sql = "SELECT * FROM `Publications` WHERE `idpublications`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row["nature"];
+  }
+}
+
 ?>
