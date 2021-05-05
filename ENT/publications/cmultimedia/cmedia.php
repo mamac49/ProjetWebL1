@@ -12,6 +12,17 @@ function titre($x) {
   }
 }
 
+function Delete($Contact) {
+  $link = dbConnect();
+  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$iduser'";
+  if (mysqli_query($link, $sql)) {
+    echo "succès";
+  } else {
+    echo mysqli_error($link);
+  }
+  mysqli_query($link, "FLUSH `Publications`");
+}
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -48,7 +59,16 @@ if ($_SESSION["Connected"] == true) {
               <?php
                 if ($_SESSION["Admin"] == true) {
               ?>
-              <a href="creationC.php">Créer un cahier multimédia</a>
+              <form class="AdminMulti" action="cmedia.php" method="post">
+                <a href="creationC.php">Créer un cahier multimédia</a>
+                <?php
+                for ($x=1 ; $x<=nbPub() ; $x++) {
+                  if (nature($x) == "2") {
+                ?>
+                  <option class="texte" value="<?php echo $x ?>"><?php echo titre($x); ?></option>
+                <?php }} ?>
+              </form>
+
               <?php
                 }
               ?>
