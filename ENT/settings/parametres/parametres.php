@@ -40,7 +40,7 @@ function chgtPP($pp) {
 
 function chgtThemeDef($theme) {
   $link = dbConnect();
-  $sql = "UPDATE `users` SET `theme` = '$theme' WHERE `mail`= '$_SESSION[Mail]'"
+  $sql = "UPDATE `users` SET `theme` = '$theme' WHERE `mail`= '$_SESSION[Mail]'";
   if (mysqli_query($link, $sql)) {
     reset($_POST);
     mysqli_close($link);
