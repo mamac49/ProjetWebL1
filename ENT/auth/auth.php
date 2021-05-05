@@ -36,7 +36,7 @@ function Connexion($mail, $password) {
 
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     } else {
-      echo "<script> alert("Identifiant ou mot de passe faux !") </script>";
+      alerte();
     }
 }
 
@@ -76,6 +76,9 @@ if ( $_SESSION["Connected"] == true) {
         <input type="password" name="MotDePasse" placeholder="Mot de Passe">
         <p></p>
         <input type="submit" name="Valider" value="Se connecter">
+        <?php function alerte() {
+          echo "<script> alert("Identifiant ou mot de passe faux"); </script>";
+        } ?>
       </form>
       </div>
     </div>
