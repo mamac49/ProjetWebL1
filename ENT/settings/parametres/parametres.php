@@ -38,6 +38,16 @@ function chgtPP($pp) {
   }
 }
 
+function chgtThemeDef($theme) {
+  $link = dbConnect();
+  $sql = "UPDATE `users` SET `theme` = '$theme' WHERE `mail`= '$_SESSION[Mail]'"
+  if (mysqli_query($link, $sql)) {
+    reset($_POST);
+    mysqli_close($link);
+    header("refresh: 0");
+  }
+}
+
 if (isset($_POST['Valider'])) {
   $mdpA = securisation($_POST['passwordA']);
   $mdpN = securisation(password_hash($_POST['passwordN'], PASSWORD_DEFAULT));
@@ -47,6 +57,10 @@ if (isset($_POST['Valider'])) {
 
 if (isset($_POST['ChgtIMG'])) {
   chgtPP(file_get_contents($_FILES['PP']['tmp_name']));
+}
+
+if (isset($_POST['ValiderTheme'])) {
+  chgtThemeDef($_POST['theme']);
 }
 
 
@@ -97,9 +111,11 @@ if ($_SESSION["Connected"] == true) {
               <h2 class="texte">Thème par défault</h2>
               <p>
                 <label class="texte" for="clair">Thème clair</label>
-                <input type="radio" checked name="theme" id="clair" value="clair">
+                <input type="radio" checked name="theme" id="clair" value="0">
+              </p>
+              <p>
                 <label class="texte" for="sombre">Thème sombre</label>
-                <input type="radio" name="theme" id="sombre" value="sombre">
+                <input type="radio" name="theme" id="sombre" value="1">
               </p>
               <input type="submit" name="ValiderTheme" value="Valider le thème par défault">
             </form>
