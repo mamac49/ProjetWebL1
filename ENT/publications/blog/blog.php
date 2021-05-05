@@ -4,7 +4,7 @@ session_start();
 if ($_SESSION["Connected"] == true) {
 
   include ("../../fonc.php");
-  function nombreblog() {
+  function nombrepubli() {
     $link = dbConnect();
     $sql = "SELECT COUNT(*) FROM `Publications`";
     if ($result = mysqli_query($link, $sql)) {
