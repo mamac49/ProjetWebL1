@@ -4,6 +4,14 @@ session_start();
 if ($_SESSION["Connected"] == true) {
 
   include ("../../fonc.php");
+  function nombrepubli() {
+    $link = dbConnect();
+    $sql = "SELECT COUNT(*) FROM `Publications`";
+    if ($result = mysqli_query($link, $sql)) {
+      $nb= mysqli_num_rows($result);
+      return $nb;
+    }
+  }
 
   function titre($x) {
     $link = dbConnect();
@@ -60,11 +68,10 @@ if ($_SESSION["Connected"] == true) {
                 $a= "SELECT `idpublications` FROM `Publications` WHERE `nature` = 1";
                 if ($result = mysqli_query($link, $a)) {
                   $row = mysqli_fetch_array($result);
-                  echo $row[0];
-                  $titre=titre($row[0]);
-                  $auteur=auteur($row[0]);
-                  $date=jour($row[0]);
-                }
+                  if (row[0]==$i){
+                    $titre=titre($i);
+                    $auteur=auteur($i);
+                    $date=jour($i);
               ?>
               <li class="espaces"><hr></li>
               <li class="sujets"><a href="media/blog1.html"><i class="fas fa-robot icone"></i>
@@ -81,8 +88,13 @@ if ($_SESSION["Connected"] == true) {
                   ?>
                   </span></li>
               <?php
+                }
               }
               ?>
+
+              <li class="sujets"><a href="media/blog2.html"><i class="fas fa-paint-brush icone"></i> Sujet n°2</a> <span>Edité par M. Langlois le 08/03/2021</span></li>
+              <li class="espaces"><hr></li>
+              <li class="sujets"><a href="media/blog3.html"><i class="fas fa-chess icone"></i> Sujet n°3</a> <span>Edité par M. Langlois le 09/03/2021</span></li>
             </ul>
             <br/>
             <?php
