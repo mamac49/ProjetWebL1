@@ -1,28 +1,42 @@
 <?php
 session_start();
 
+include ("../../fonc.php");
+
+function auteur($x) {
+  $link = dbConnect();
+  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0];
+  }
+}
+
+function jour($x) {
+  $link = dbConnect();
+  $sql = "SELECT `date` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0];
+  }
+}
+
+function Delete($Contact) {
+  $link = dbConnect();
+  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+  mysqli_query($link, "FLUSH `Publications`");
+}
+
+if ( isset($_POST['ValiderSupp'])) {
+  $BlogD = $_POST['BlogD'];
+  Delete($BlogD);
+}
+
 if ($_SESSION["Connected"] == true) {
-
-  include ("../../fonc.php");
-
-  function auteur($x) {
-    $link = dbConnect();
-    $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
-    if ($result = mysqli_query($link, $sql)) {
-      $row = mysqli_fetch_array($result);
-      return $row[0];
-    }
-  }
-
-  function jour($x) {
-    $link = dbConnect();
-    $sql = "SELECT `date` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
-    if ($result = mysqli_query($link, $sql)) {
-      $row = mysqli_fetch_array($result);
-      return $row[0];
-    }
-  }
-
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +81,15 @@ if ($_SESSION["Connected"] == true) {
             ?>
             <form>
               <input type="button" name="CreationBlog" value="Créer Un Blog" onclick="creerpage();">
+              <select name="BlogD">
+                <?php
+                for ($x=1 ; $x<=nbPub() ; $x++) {
+                  if (nature($x) == "1") {
+                ?>
+                  <option class="texte" value="<?php echo $x ?>"><?php echo titre($x); ?></option>
+                <?php }} ?>
+              </select>
+              <input type="submit" name="ValiderSupp" value="Supprimer le blog" class="bouton">
               <br/>
             </form>
             <?php
