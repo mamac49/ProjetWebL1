@@ -38,7 +38,7 @@ if ($_SESSION["Connected"] == true) {
                 $nb = nombre();
                 for ($x=1; $x<=$nb; $x++) {
                   $contact_name = strval(nom($x));
-                  $contact_id = "contact" + iduser($x);
+                  $contact_id = "contact" . iduser($x);
 
               ?>
                 <li class="contact">
