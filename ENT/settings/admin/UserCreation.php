@@ -113,7 +113,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <?php } ?>
               </select>
 
-              <input type="submit" name="ValiderSupp" value="Supprimer l'utilisateur" class="bouton">
+              <input type="submit" name="ValiderSupp" value="Supprimer l'utilisateur" class="bouton Séparer">
 
             </form>
 
