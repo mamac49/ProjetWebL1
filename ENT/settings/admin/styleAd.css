@@ -16,7 +16,8 @@
 }
 
 .Centrer{
-    object-position: center;
+    display: flex;
+    text-align: center;
 }
 
 .Center {
