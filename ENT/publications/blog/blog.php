@@ -31,7 +31,7 @@ if ($_SESSION["Connected"] == true) {
     }
   }
 
-  function date($x) {
+  function jour($x) {
     $link = dbConnect();
     $sql = "SELECT `date` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
     if ($result = mysqli_query($link, $sql)) {
@@ -70,7 +70,7 @@ if ($_SESSION["Connected"] == true) {
                   $row = mysqli_fetch_array($result);
                   $titre=titre($row);
                   $auteur=auteur($row);
-                  $date=date($row);
+                  $date=jour($row);
                 }
               ?>
               <li class="espaces"><hr></li>
