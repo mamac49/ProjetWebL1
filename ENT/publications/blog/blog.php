@@ -66,7 +66,7 @@ if ($_SESSION["Connected"] == true) {
               $link = dbConnect();
               $req=nbPub();
               for ($i=0;$i<$req;$i++){
-                if (nature($i) == "1")
+                if (nature($i) == "1"){
                   $titre=titre($i);
                   $auteur=auteur($i);
                   $date=jour($i);
@@ -86,7 +86,6 @@ if ($_SESSION["Connected"] == true) {
                   ?>
                   </span></li>
               <?php
-                  }
                 }
               }
               ?>
