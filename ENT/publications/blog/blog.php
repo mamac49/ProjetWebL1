@@ -53,7 +53,7 @@ if ($_SESSION["Connected"] == true) {
                   $auteur=auteur($i);
                   $date=jour($i);
               ?>
-              <li class="sujets"><a href="AffichageB.php?id=<?php print $i ?>"><i class="fas fa-robot icone"></i> <?php echo $titre; ?>
+              <li class="sujets"><a href="AffichageB.php?id=<?php print $i ?>"><i class="fas fa-robot icone"></i> <?php var_dump($titre); ?>
               </a> <span class="texte">Edité par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
               <li class="espaces"><hr></li>
               <?php
