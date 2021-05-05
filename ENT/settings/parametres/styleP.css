@@ -4,3 +4,13 @@
   width: 199px;
   height: 199px;
 }
+
+.colonnes {
+  display: flex;
+  flex-direction: column;
+}
+
+.page{
+  display: flex;
+  flex-direction: row;
+}
