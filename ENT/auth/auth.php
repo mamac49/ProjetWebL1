@@ -15,6 +15,7 @@ function Connexion($mail, $password) {
         $mdp = $row['mdp'];
         $id = $row['iduser'];
         $pic = $row['idpic'];
+        $theme = $row['theme'];
         if ($row['admin'] == 1) {
           $admin = True;
         } else {
@@ -29,7 +30,7 @@ function Connexion($mail, $password) {
         $_SESSION["Mail"] = $mail;
         $_SESSION["ID"] = $id;
         $_SESSION["Admin"] = $admin;
-        $_SESSION["theme"] = "Sombre";
+        $_SESSION["theme"] = $theme;
         $_SESSION["Id"] = $id;
         $_SESSION["Pic"] = $pic;
 

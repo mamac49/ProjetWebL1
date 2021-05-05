@@ -5,7 +5,6 @@
   --second-color: rgb(19, 52, 42);
 }
 
-
 .move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourciM, .raccourciB, input[type=button], .bouton, .Login  {
   background-color: var(--main-color);
 }
@@ -24,7 +23,7 @@
 }
 
 
-html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type="button"], .bouton, .Login {
+html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login {
   color: var(--font-color);
 }
 
@@ -39,7 +38,6 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
 .contact {
   color: black;
 }
-
 
 html {
   background: radial-gradient(ellipse farthest-corner at 50% 140%, rgba(0, 0, 0, 0.75) 10%, rgba(0, 0, 0, 0.85) 90%);

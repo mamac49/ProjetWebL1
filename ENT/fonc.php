@@ -109,5 +109,4 @@ function titre($x) {
   }
 }
 
-
 ?>
