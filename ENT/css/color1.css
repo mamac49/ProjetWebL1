@@ -2,7 +2,7 @@
   --font-color: white;
   --font-color-nde: black;
   --main-color: rgb(29, 64, 65);
-  --second-color: rgb(19, 52, 42);
+  --second-color: rgba(168, 168, 168, 0.74);
 }
 
 
@@ -11,7 +11,7 @@
 }
 
 .Center, .site {
-  background-color: var(--font-color);
+  background-color: var(--second-color);
 }
 
 .FormCrea {
