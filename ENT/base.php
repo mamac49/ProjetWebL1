@@ -1,9 +1,9 @@
 <?php
 
 if ($_SESSION['theme'] == 0) {
-  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color2.css'); </script>",
+  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color2.css'); </script>";
 } else {
-  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color1.css'); </script>",
+  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color1.css'); </script>";
 }
 
 ?>
