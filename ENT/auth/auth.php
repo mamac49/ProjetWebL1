@@ -77,7 +77,7 @@ if ( $_SESSION["Connected"] == true) {
         <p></p>
         <input type="submit" name="Valider" value="Se connecter">
         <?php function alerte() {
-          echo "<script> alert("Identifiant ou mot de passe faux"); </script>";
+          echo "<script> alert('Identifiant ou mot de passe faux'); </script>";
         } ?>
       </form>
       </div>
