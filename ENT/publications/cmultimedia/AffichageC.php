@@ -31,6 +31,7 @@ if ($_SESSION["Connected"] == true) {
     <!--<p> <?php echo $_GET['id'] ?></p> -->
     <div class="Center">
       <h2 class="texte"><?php var_dump(titre($IDcahier)); ?></h2>
+      <p class="texte"><?php titre($IDcahier); ?></p>
 
 
     </div>
