@@ -46,7 +46,7 @@ if ($_SESSION["Connected"] == true) {
                 <?php
                 for ($x=1 ; $x<=nbCm() ; $x++) {
                 ?>
-                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php echo titre($x); ?></a></li>
+                  <li class="texte"><a class="Copybook" href="media/Cahier1.html"><i class="fas fa-book IcoBook"></i><?php var_dump(titre($x)); ?></a></li>
                 <?php
                 }
                 ?>
