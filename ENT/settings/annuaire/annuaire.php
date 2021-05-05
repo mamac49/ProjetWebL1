@@ -38,7 +38,7 @@ if ($_SESSION["Connected"] == true) {
                 $nb = nombre();
                 for ($x=1; $x<=$nb; $x++) {
                   $contact_name = info($x)['prenom'] . " " . info($x)['nom'];
-                  $contact_id = "contact" . iduser($x);
+                  $contact_id = "contact" . $x;
                   $mail = info($x)["mail"];
               ?>
                 <li class="contact">
