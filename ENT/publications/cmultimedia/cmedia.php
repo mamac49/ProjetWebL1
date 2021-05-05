@@ -55,7 +55,7 @@ if ($_SESSION["Connected"] == true) {
                 for ($x=1 ; $x<=nbPub() ; $x++) {
                   if (nature($x) == "2") {
                 ?>
-                  <li class="texte"><a class="Copybook" href="AffichageC.php"><i class="fas fa-book IcoBook"></i><br><?php echo titre($x); ?></a></li>
+                  <li class="texte"><a class="Copybook" href="AffichageC.php?id=1"><i class="fas fa-book IcoBook"></i><br><?php echo titre($x); ?></a></li>
                 <?php
                   }
                 }
