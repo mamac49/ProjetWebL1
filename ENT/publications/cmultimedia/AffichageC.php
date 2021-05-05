@@ -3,6 +3,9 @@ session_start();
 
 include '../../fonc.php';
 
+$IDcahier = $_GET['id'];
+
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -25,6 +28,7 @@ if ($_SESSION["Connected"] == true) {
 
     <!--<p> <?php echo $_GET['id'] ?></p> -->
     <div class="Center">
+      <h2><?php echo titre($x); ?></h2>
 
 
     </div>
