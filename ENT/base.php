@@ -1,7 +1,7 @@
 <?php
 
 function theme_clair() {
-  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color1.css'); </script>";
+  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color2.css'); </script>";
   $_SESSION['theme'] = 0;
   /*$link = dbConnect();
   $sql = "UPDATE `users` SET `theme` = 0 WHERE `mail`= '$_SESSION[Mail]'";
@@ -13,7 +13,7 @@ function theme_clair() {
 }
 
 function theme_sombre() {
-  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color2.css'); </script>";
+  echo "<script> LoadCSS('/Projetwebl1/ENT/css/color1.css'); </script>";
   $_SESSION['theme'] = 1;
   /*$link = dbConnect();
   $sql = "UPDATE `users` SET `theme` = 1 WHERE `mail`= '$_SESSION[Mail]'";
@@ -59,8 +59,8 @@ if ($_SESSION['theme'] == 0) {
       <?php
       }
       ?>
-      <li><a class="menu_link" onclick="<?php theme_clair(); ?>"><i class="fas fa-moon icone"></i>Theme Sombre</a></li>
-      <li><a class="menu_link" onclick="<?php theme_sombre(); ?>"><i class="fas fa-sun icone"></i>Theme Clair</a></li>
+      <li><a class="menu_link" onclick="<?php theme_sombre(); ?>"><i class="fas fa-moon icone"></i>Theme Sombre</a></li>
+      <li><a class="menu_link" onclick="<?php theme_clair(); ?>"><i class="fas fa-sun icone"></i>Theme Clair</a></li>
       <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="texteBurger"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
       <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="texteBurger"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
     </ul>
