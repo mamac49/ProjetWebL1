@@ -43,7 +43,7 @@ function Delete($Contact) {
 
 if ( isset($_POST['valider'])) {
     $password = securisation(password_hash($_POST['mdp'], PASSWORD_DEFAULT));
-    if (password_verify($password, $_POST['mdp2'])) {
+    if (password_verify($password, securisation($_POST['mdp2']))) {
       $nom = securisation($_POST['nom']);
       $prenom = securisation($_POST['prenom']);
       $mail = securisation($_POST['mail']);
