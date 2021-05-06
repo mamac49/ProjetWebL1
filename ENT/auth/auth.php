@@ -74,7 +74,7 @@ if ( $_SESSION["Connected"] == true) {
         <p>E-Mail</p>
         <div class="input-container">
           <i class="fa fa-envelope icon"></i>
-          <input type="mail" class="input-field" name="Id" placeholder="EMail">
+          <input type="text" class="input-field" name="Id" placeholder="E-Mail">
         </div>
         <p>Mot de passe</p>
         <div class="input-container">
