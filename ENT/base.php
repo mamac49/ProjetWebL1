@@ -12,7 +12,7 @@ if ($_SESSION['theme'] == 0) {
   <script src="/Projetwebl1/ENT/js/scroll.js"></script>
 </head>
 
-<body onload="move_menu_burger();">
+<body onload="move_menu_burger(); close_menu_burger();">
 
 <div class="site_container">
   <!--menu sandwich (burger) pour pouvoir navigueur entre les différentes pages-->
