@@ -79,6 +79,7 @@
     padding-left: 10px;
     transform: translateX(-275px);
     transition: 300ms all ease-in-out;
+    z-index: 1;
   }
 
 
