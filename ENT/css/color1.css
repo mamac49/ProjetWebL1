@@ -5,7 +5,7 @@
   --second-color: rgb(19, 52, 42);
 }
 
-.move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourciM, .raccourciB, input[type=button], .bouton, .Login  {
+.move_menu, .burger, .Anniversaire, .Login, .qwant, .raccourciM, .raccourciB, input[type=button], .bouton, .Login, #navbar  {
   background-color: var(--main-color);
 }
 

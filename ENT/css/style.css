@@ -146,11 +146,13 @@
   /*footer*/
 
   #navbar {
-    background-color: #333; /* Black background color */
     position: fixed; /* Make it stick/fixed */
     bottom: -50px; /* Hide the navbar 50 px outside of the top view */
     width: 100%; /* Full width */
     transition: bottom 0.3s; /* Transition effect when sliding down (and up) */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   /* Style the navbar links */
