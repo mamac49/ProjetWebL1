@@ -8,9 +8,9 @@ if ($_SESSION['theme'] == 0) {
 
 ?>
 
-<script type="text/javascript">
-  window.onscroll = function() {scrollFunction()};
-</script>
+<head>
+  <script src="/Projetwebl1/ENT/js/scroll.js"></script>
+</head>
 
 <body onload="move_menu_burger();">
 

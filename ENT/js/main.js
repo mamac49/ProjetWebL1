@@ -75,11 +75,3 @@ function textarea() {
     publications.innerHTML();
   }
 }
-
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.bottom = "0";
-  } else {
-    document.getElementById("navbar").style.bottom = "+50px";
-  }
