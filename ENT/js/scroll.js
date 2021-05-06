@@ -3,7 +3,7 @@
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollBottom > 20 || document.documentElement.scrollBottom > 20) {
     document.getElementById("navbar").style.bottom = "-50px";
   } else {
     document.getElementById("navbar").style.bottom = "0px";
