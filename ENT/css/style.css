@@ -61,8 +61,8 @@
     justify-content: space-between;
     text-align: left;
     padding-left: 10px;
-    transform: translateX(0px), scale(1);
-    transition-duration: 300ms;
+    transform: translateX(0px);
+    transition: 300ms transform ease-in-out;
     z-index: 1;
   }
 
@@ -77,8 +77,8 @@
     justify-content: space-between;
     text-align: left;
     padding-left: 10px;
-    transform: translateX(-275px), scale(0.75);
-    transition-duration: 300ms;
+    transform: translateX(-275px);
+    transition: 300ms transform ease-in-out;
   }
 
 
