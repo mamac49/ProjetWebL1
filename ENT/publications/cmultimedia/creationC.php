@@ -1,13 +1,19 @@
 <?php
 session_start();
 
+error_reporting(E_ALL);
+
 include ("../../fonc.php");
+include ("../../base.php");
 
 
 
 if ( isset($_POST['create'])) {
-  echo "<script> alert('test'); </script>";
+
+  echo "<script> alert('test alert'); </script>";
+
 }
+
 
 
 if (isset($_POST['Valider'])) {
@@ -22,7 +28,6 @@ if (isset($_POST['Valider'])) {
 if ($_SESSION["Connected"] == true) {
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
@@ -36,13 +41,11 @@ if ($_SESSION["Connected"] == true) {
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>   
-<?php
-include ("../../base.php");
-?>
+
 
 <div class="Center">
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
-    <input type="text" name="titre" placeholder="Titre du cahier" >
+    <input type="submit" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
       <!--<textarea class="textareaId" id="textareaCahierMultimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
