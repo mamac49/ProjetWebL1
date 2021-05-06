@@ -42,18 +42,24 @@ function Delete($Contact) {
 
 
 if ( isset($_POST['valider'])) {
-    $nom = securisation($_POST['nom']);
-    $prenom = securisation($_POST['prenom']);
-    $mail = securisation($_POST['mail']);
     $password = securisation(password_hash($_POST['mdp'], PASSWORD_DEFAULT));
-    $date = securisation($_POST['datenaissance']);
-    $pp = file_get_contents($_FILES['pp']['tmp_name']);
-    if (isset($_POST['admin'])) {
-      $admin = securisation($_POST['admin']);
-    } else {
-      $admin = 0;
-    }
-    Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
+    if (password_verify($password, $_POST['mdp2'])) {
+      $nom = securisation($_POST['nom']);
+      $prenom = securisation($_POST['prenom']);
+      $mail = securisation($_POST['mail']);
+
+      $date = securisation($_POST['datenaissance']);
+      $pp = file_get_contents($_FILES['pp']['tmp_name']);
+      if (isset($_POST['admin'])) {
+        $admin = securisation($_POST['admin']);
+      } else {
+        $admin = 0;
+      }
+      Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
+  } else {
+    echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
+    header("refresh: 0");
+  }
 }
 
 if ( isset($_POST['ValiderSupp'])) {
@@ -94,6 +100,8 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <input type="email" name="mail" placeholder="E-mail" class="FormCrea" required>
                 <p class="texteF">Mot de passe</p>
                   <input type="password" name="mdp" placeholder="Mot de passe" class="FormCrea" required>
+                <p class="texteF">Valider le mot de passe</p>
+                  <input type="password" name="mdp2" placeholder="Mot de passe" class="FormCrea" required>
                 <p class="texteF">Date de naissance</p>
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
                 <p class="texteF">Sélectionner l'image de profil (64ko maximum)</p>
