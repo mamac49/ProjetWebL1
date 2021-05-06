@@ -6,15 +6,11 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 include ("../../base.php");
 
-
-
 if ( isset($_POST['create'])) {
 
-  echo "<script> alert('test alert'); </script>";
+  echo "createLine()";
 
 }
-
-
 
 if (isset($_POST['Valider'])) {
   $texte = array();
@@ -23,7 +19,6 @@ if (isset($_POST['Valider'])) {
     $texte[$i] = $_POST[$i];
   }
 }
-
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -50,7 +45,7 @@ if ($_SESSION["Connected"] == true) {
       <!--<textarea class="textareaId" id="textareaCahierMultimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
     </ul>
-      <button type="submit" name="create" onclick="createLine()" class="bouton">Ajouter une case</button>
+      <button type="submit" name="create" class="bouton">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 </div>
