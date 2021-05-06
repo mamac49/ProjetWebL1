@@ -50,9 +50,8 @@ function chgtThemeDef($theme) {
 }
 
 if (isset($_POST['Valider'])) {
-  $mdpA = securisation($_POST['passwordA']);
-  $mdpN = securisation(password_hash($_POST['passwordN'], PASSWORD_DEFAULT));
-  if (password_verify($mdpN, securisation($_POST['passwordN2']))) {
+  if (securisation($_POST['passwordN']) == securisation($_POST['passwordNN'])) {
+    $mdpN = securisation(password_hash($_POST['passwordN'], PASSWORD_DEFAULT));
     ChgtMdp($mdpA, $mdpN);
   } else {
     echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
@@ -104,7 +103,7 @@ if ($_SESSION["Connected"] == true) {
               </p>
               <p>
                 <label class="texte">Valider le nouveau mot de passe</label>
-                <input class="texte" type="password" name="passwordN2" minlengh="8" maxlength="16" required>
+                <input class="texte" type="password" name="passwordNN" minlengh="8" maxlength="16" required>
               </p>
               <input class="texte" type="submit" name="Valider" value="Valider">
             </form>

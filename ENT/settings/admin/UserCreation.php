@@ -42,7 +42,7 @@ function Delete($Contact) {
 
 
 if ( isset($_POST['valider'])) {
-    if ($_POST['mdp'] = $_POST['mdp2']) {
+    if ($_POST['mdp'] == $_POST['mdp2']) {
       $password = securisation(password_hash($_POST['mdp'], PASSWORD_DEFAULT));
       $nom = securisation($_POST['nom']);
       $prenom = securisation($_POST['prenom']);
