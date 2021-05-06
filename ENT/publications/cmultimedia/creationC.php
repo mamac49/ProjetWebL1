@@ -8,7 +8,7 @@ include ("../../base.php");
 
 if ( isset($_POST['create'])) {
 
-  echo "createLine()";
+  echo "<script>createLine();</script>";
 
 }
 
