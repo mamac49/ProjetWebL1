@@ -228,7 +228,7 @@
 
   .retour {
     position: absolute;
-    top: 95%;
+    bottom: 10px;
     left: 10%;
     font-size: 2em;
     transform: rotate(0deg);
