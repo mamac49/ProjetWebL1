@@ -45,12 +45,12 @@ if ($_SESSION["Connected"] == true) {
 
 <div class="Center">
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
-    <input type="submit" name="titre" placeholder="Titre du cahier" >
+    <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
       <!--<textarea class="textareaId" id="textareaCahierMultimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
     </ul>
-      <button name="create" onclick="createLine()" class="bouton">Ajouter une case</button>
+      <button type="submit" name="create" onclick="createLine()" class="bouton">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 </div>
