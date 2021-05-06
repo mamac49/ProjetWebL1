@@ -65,6 +65,7 @@ function getNbLines() {
   publications.value = saisie.nb_max;
 }
 function createLine() {
+  create = true;
   //var saisie = document.getElementById("textareaCahierMultimedia");
   /*var nb_max = saisie.nb_max();
   var nb = saisie.nb();*/
