@@ -89,7 +89,7 @@ if ($_SESSION["Connected"] == true) {
       include ("../../base.php");
   ?>
       <div class="Center">
-        <h1 class="texte">Paramètres</h1>
+        <h1 class="texte titre_p">Paramètres</h1>
         <div class="page">
           <div class="colonnes">
             <form method="POST" name="password">
