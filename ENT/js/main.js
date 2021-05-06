@@ -41,7 +41,7 @@ function close_burger()
   document.getElementById("menu_burger").className = "burger";
 }
 
-/* pour les changement de thèmes 
+/* pour les changement de thèmes */
 function LoadCSS( cssURL ) {
     return new Promise( function( resolve, reject ) {
         let link = document.createElement( 'link' );
@@ -53,7 +53,7 @@ function LoadCSS( cssURL ) {
             console.log( 'CSS has loaded!' );
         };
     } );
-}*/
+}
 
 function refresh() {
   window.location.reload();
