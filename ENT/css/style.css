@@ -166,6 +166,7 @@
     text-align: center;
     padding: 10px;
     text-decoration: none;
+    transition: 300ms all ease-in-out;
   }
 
   #navbar a:hover {
