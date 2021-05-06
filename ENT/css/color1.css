@@ -13,8 +13,12 @@
   background-color: var(--font-color);
 }
 
-.FormCrea, #navbar {
+.FormCrea {
   background-color: var(--second-color);
+}
+
+#navbar {
+  background-color: rgb(235, 186, 127);
 }
 
 
