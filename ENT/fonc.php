@@ -96,7 +96,7 @@ function titre($x) {
   }
 }
 
-function adPublication(/*$idpublication,*/ $titre, $texte, /*$image,*/ $date, $nature, $iduser) {
+function adPublication($idpublication, $titre, $texte, $image, $date, $nature, $iduser) {
   $link = dbConnect();
   mysqli_query($link, "FLUSH `Publications`");
 
