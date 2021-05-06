@@ -62,7 +62,6 @@
     text-align: left;
     padding-left: 10px;
     transform: translateX(0px);
-    transform: scale(1);
     transition: 300ms all ease-in-out;
     z-index: 1;
   }
@@ -79,7 +78,6 @@
     text-align: left;
     padding-left: 10px;
     transform: translateX(-275px);
-    transform: scale(0.75);
     transition: 300ms all ease-in-out;
   }
 
