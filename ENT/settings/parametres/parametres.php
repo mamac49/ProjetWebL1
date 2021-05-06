@@ -52,7 +52,7 @@ function chgtThemeDef($theme) {
 if (isset($_POST['Valider'])) {
   if (securisation($_POST['passwordN']) == securisation($_POST['passwordNN'])) {
     $mdpN = securisation(password_hash($_POST['passwordN'], PASSWORD_DEFAULT));
-    $mdpA = securisation($_POST['passwordA'])
+    $mdpA = securisation($_POST['passwordA']);
     ChgtMdp($mdpA, $mdpN);
   } else {
     echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
