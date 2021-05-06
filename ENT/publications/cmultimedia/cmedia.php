@@ -39,7 +39,7 @@ if ($_SESSION["Connected"] == true) {
     ?>
 
           <div class="Center">
-            <h2 class="texte">Listes des cahiers</h2>
+            <h2 class="texte">Liste des cahiers</h2>
             <div class="leaf">
               <ul class="liste">
                 <?php

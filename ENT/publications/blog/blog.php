@@ -56,7 +56,7 @@ if ($_SESSION["Connected"] == true) {
     ?>
 
           <div class="Center">
-            <h2 class="texte">Listes des sujets</h2>
+            <h2 class="texte">Liste des sujets</h2>
             <ul class="liste_sujets">
               <?php
               $link = dbConnect();
