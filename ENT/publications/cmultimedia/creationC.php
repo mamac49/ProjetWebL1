@@ -7,18 +7,23 @@ include ("../../fonc.php");
 include ("../../base.php");
 
 if ( isset($_POST['create'])) {
-
-  echo "<script>alert('test alert');</script>";
-
+  $idpublication = NONE; 
+  $titre = NONE ;
+  $texte = NONE ;
+  $image = NONE ;
+  $date = NONE ;
+  $nature = NONE ;
+  $iduser = NONE ;
+  echo "<script>createLine();</script>";
 }
 
-if (isset($_POST['Valider'])) {
+/*if (isset($_POST['Valider'])) {
   $texte = array();
   $len = count($n);
   for ($i = 1 ; $x < $len ; $i++) {
     $texte[$i] = $_POST[$i];
   }
-}
+}*/
 
 if ($_SESSION["Connected"] == true) {
 ?>

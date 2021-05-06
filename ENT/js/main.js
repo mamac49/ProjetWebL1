@@ -73,5 +73,4 @@ function createLine() {
   var template = document.getElementById("template");
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
   publications.innerHTML = publications.innerHTML + template.innerHTML;
-  
 }
