@@ -4,6 +4,12 @@ session_start();
 include ("../../fonc.php");
 
 
+
+if ( isset($_POST['create'])) {
+  echo "<script> alert('test'); </script>";
+}
+
+
 if (isset($_POST['Valider'])) {
   $texte = array();
   $len = count($n);
@@ -35,13 +41,13 @@ include ("../../base.php");
 ?>
 
 <div class="Center">
-  <form class="" action="creationC.php" method="post" enctype="multipart/form-data">
+  <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
       <!--<textarea class="textareaId" id="textareaCahierMultimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
     </ul>
-      <button onclick="createLine()" class="bouton">Ajouter une case</button>
+      <button name="create" onclick="createLine()" class="bouton">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 </div>
@@ -49,6 +55,8 @@ include ("../../base.php");
 <template id="template">
   <textarea class="textareaId" id="template_cahier_multimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 </template>
+
+
 <!--zone de texte éditable
 <textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=1 required></textarea>
 -->
