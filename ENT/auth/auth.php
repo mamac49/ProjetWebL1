@@ -68,14 +68,21 @@ if ( $_SESSION["Connected"] == true) {
 
     <div class="Fond">
       <div class="Login">
+        <form action="auth.php" method="POST">
         <h2>Se connecter</h2>
         <p>E-Mail</p>
-        <form action="auth.php" method="POST">
-        <input type="text" name="Id" placeholder="E-Mail">
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input type="mail" class="input-field" name="Id" placeholder="EMail">
+        </div>
         <p>Mot de passe</p>
-        <input type="password" name="MotDePasse" placeholder="Mot de Passe">
+        <div class="input-container">
+          <i class="fa fa-key icon"></i>
+          <input type="password" class="input-field" name="MotDePasse" placeholder="Mot de Passe">
+        </div>
+
         <p></p>
-        <input type="submit" name="Valider" value="Se connecter">
+        <input type="submit" class="btn" name="Valider" value="Se connecter">
       </form>
       </div>
     </div>

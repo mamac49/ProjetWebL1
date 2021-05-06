@@ -14,14 +14,42 @@
   font-size: 1.2em;
 }
 
-input {
-  height: 40px;
-  width: 200px;
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
   text-align: center;
 }
 
-input[type=submit] {
-  border: 1px solid white;
-  width: 30%;
-  margin-top: 20px;
+.input-field {
+  width: 200px;
+  padding: 10px;
+  outline: none;
+  height: 40px;
+  text-align: center;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
 }
