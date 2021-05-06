@@ -38,7 +38,8 @@ function close_menu_burger()
 
 function close_burger()
 {
-  document.getElementById("menu_burger").className = "burger";
+  var element document.getElementById("menu_burger");
+  element.classList.remove("move_menu")
 }
 
 /* pour les changement de thèmes */
