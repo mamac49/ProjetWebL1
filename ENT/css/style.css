@@ -78,6 +78,7 @@
     text-align: left;
     padding-left: 10px;
     transform: translateX(-275px);
+    transition-duration: 300ms;
   }
 
 
