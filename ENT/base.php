@@ -8,6 +8,10 @@ if ($_SESSION['theme'] == 0) {
 
 ?>
 
+<script type="text/javascript">
+  window.onscroll = function() {scrollFunction()};
+</script>
+
 <body onload="move_menu_burger();">
 
 <div class="site_container">
