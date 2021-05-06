@@ -32,7 +32,8 @@ if ($_SESSION["Connected"] == true) {
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>   
-
+<!--ajout de la méthode PUT-->
+<input type="hidden" name="_METHOD" value="PUT"/>
 
 <div class="Center">
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
@@ -41,7 +42,7 @@ if ($_SESSION["Connected"] == true) {
       <!--<textarea class="textareaId" id="textareaCahierMultimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
     </ul>
-      <button type="submit" name="create" class="bouton">Ajouter une case</button>
+      <button name="create" class="bouton" method="PUT">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 </div>
@@ -56,8 +57,7 @@ if ($_SESSION["Connected"] == true) {
 -->
 
 <?php
-
-  if ( isset($_POST['create'])) {
+  if (isset($_PUT['create'])) {
     $idpublication = "NONE"; 
     $titre = "NONE" ;
     $texte = "NONE" ;
