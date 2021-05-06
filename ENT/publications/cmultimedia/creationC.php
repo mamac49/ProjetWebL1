@@ -7,13 +7,13 @@ include ("../../fonc.php");
 include ("../../base.php");
 
 if ( isset($_POST['create'])) {
-  $idpublication = NONE; 
-  $titre = NONE ;
-  $texte = NONE ;
-  $image = NONE ;
-  $date = NONE ;
-  $nature = NONE ;
-  $iduser = NONE ;
+  $idpublication = "NONE"; 
+  $titre = "NONE" ;
+  $texte = "NONE" ;
+  $image = "NONE" ;
+  $date = "NONE" ;
+  $nature = "NONE" ;
+  $iduser = "NONE" ;
   echo "<script>createLine();</script>";
 }
 
