@@ -80,7 +80,7 @@
     padding-left: 10px;
     transform: translateX(-275px);
     transform: scale(0.75);
-    transition: 300ms transform ease-in-out;
+    transition: 300ms all ease-in-out;
   }
 
 
