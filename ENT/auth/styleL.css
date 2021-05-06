@@ -53,3 +53,7 @@
 .btn:hover {
   opacity: 1;
 }
+
+.btn, .icon {
+  background-color: rgb(25, 125, 122);
+}
