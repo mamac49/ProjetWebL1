@@ -69,9 +69,9 @@ function createLine() {
   /*var nb_max = saisie.nb_max();
   var nb = saisie.nb();*/
   var publications = document.getElementById("publications_cahier_multimedia");
-
+  var template = document.getElementById("template").innerHTML;
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
   if (create == true) {
-    publications.innerHTML = publications.innerHTML + document.getElementById("template").innerHTML;
+    publications.innerHTML = publications.innerHTML + template.innerHTML;
   }
 }

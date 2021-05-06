@@ -46,7 +46,7 @@ include ("../../base.php");
   </form>
 </div>
 <!--publication liée à la bdd-->
-<template ud="template">
+<template id="template">
   <textarea class="textareaId" id="template_cahier_multimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 </template>
 <!--zone de texte éditable
