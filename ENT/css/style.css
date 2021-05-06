@@ -145,7 +145,31 @@
 
   /*footer*/
 
-  footer ul {
+  #navbar {
+    background-color: #333; /* Black background color */
+    position: fixed; /* Make it stick/fixed */
+    top: -50px; /* Hide the navbar 50 px outside of the top view */
+    width: 100%; /* Full width */
+    transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  }
+
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+/*
+  footer a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -154,11 +178,13 @@
     left: 35%;
     font-size: 1.2em;
     width: 30%;
-  }
-
-  footer ul:visited {
     text-decoration: none;
   }
+
+  footer a:visited {
+    text-decoration: none;
+  }
+  */
 
   /*icones fontawesome*/
 
