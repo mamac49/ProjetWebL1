@@ -48,10 +48,10 @@ if (isset($_POST['Valider'])) {
 }
 
 
-
-if ( $_SESSION["Connected"] == true) {
-    header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
-} else {
+if (isset($_SESSION["Connected"])) {
+  if ( $_SESSION["Connected"] == true) {
+      header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+  } else {
 ?>
 
 <!DOCTYPE html>
@@ -92,5 +92,6 @@ if ( $_SESSION["Connected"] == true) {
   </body>
 </html>
  <?php
+}
 }
 ?>
