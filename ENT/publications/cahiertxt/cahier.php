@@ -129,7 +129,7 @@ class="close" title="Close Modal">x</span>
           </select>
           <h3>Intitulé</h3>
           <input type="text" name="consigne">
-          <input type="sumbit" name="ValiderAdd" value="Ajouter">
+          <input type="submit" name="ValiderAdd" value="Ajouter">
         </div>
       </form>
     </div>

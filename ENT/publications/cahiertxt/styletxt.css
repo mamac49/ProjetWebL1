@@ -70,6 +70,7 @@
  width: 20%; /* Could be more or less, depending on screen size */
  display: flex;
  flex-direction: column;
+ padding: 5px;
 }
 
 /* The Close Button */
