@@ -1,6 +1,7 @@
 /* Style the tab */
 .semaine {
- float: left;
+ display: flex;
+ flex-direction: row;
  border: 1px solid #ccc;
  background-color: #f1f1f1;
  width: 30%;
