@@ -64,6 +64,16 @@ if ($_SESSION["Connected"] == "True") {
         </ul>
       </div>
 
+      <form action="cahier.php" method="post">
+      <?php
+        if ($_SESSION["Admin"] == True) {
+      ?>
+        <input type="button" class="bouton" name="ajout" value="ajouter des devoirs">
+        <input type="button" class="bouton" name="suppresion" value="enlever des devoirs">
+      <?php
+      }
+      ?>
+      </form>
     </div>
 
 
