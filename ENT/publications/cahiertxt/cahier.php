@@ -91,30 +91,30 @@ if ($_SESSION["Connected"] == "True") {
       }
       ?>
 
-      <div class="AddHW">
-        <form class="AddHW" action="cahier.php" method="post">
-          <h3>Classe</h3>
-          <p class="ADDHW">
-            <label class="texte" for="GS">GS</label>
-            <input type="radio" name="classe" id="GS" value="GS">
-          <br>
-            <label class="texte" for="CP">CP</label>
-            <input type="radio" name="classe" id="CP" value="CP">
-          </p>
-          <h3>Matière</h3>
-          <select class="ADDHW" name="matiere">
-            <option value="francais">Français</option>
-            <option value="maths">Mathématiques</option>
-            <option value="science">Science</option>
-            <option value="histoire">Histoire</option>
-            <option value="geo">Géographie</option>
-            <option value="autre">Autre</option>
-          </select>
-          <h3>Intitulé</h3>
-          <input type="text" name="consigne" class="ADDHW">
-        </form>
+    </div>
 
-      </div>
+    <div class="AddHW">
+      <form class="AddHW" action="cahier.php" method="post">
+        <h3>Classe</h3>
+        <p class="ADDHW">
+          <label class="texte" for="GS">GS</label>
+          <input type="radio" name="classe" id="GS" value="GS">
+        <br>
+          <label class="texte" for="CP">CP</label>
+          <input type="radio" name="classe" id="CP" value="CP">
+        </p>
+        <h3>Matière</h3>
+        <select class="ADDHW" name="matiere">
+          <option value="francais">Français</option>
+          <option value="maths">Mathématiques</option>
+          <option value="science">Science</option>
+          <option value="histoire">Histoire</option>
+          <option value="geo">Géographie</option>
+          <option value="autre">Autre</option>
+        </select>
+        <h3>Intitulé</h3>
+        <input type="text" name="consigne" class="ADDHW">
+      </form>
 
     </div>
 
