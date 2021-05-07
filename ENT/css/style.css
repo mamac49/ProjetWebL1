@@ -133,6 +133,7 @@
   min-height: 655px;
   margin-left: 25%;
   z-index: -2;
+  position: relative;
 }
 
   .Centre_main {
