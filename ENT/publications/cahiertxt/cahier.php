@@ -106,7 +106,7 @@ if ($_SESSION["Connected"] == "True") {
 
     <div id="AddHW" class="modal">
       <span onclick="document.getElementById('AddHW').style.display='none'"
-class="close" title="Close Modal">x</span>
+class="close" title="Close Modal"><i class="fas fa-times"></i></span>
 
       <form class="modal-content animate" action="cahier.php" method="post">
         <div class="container">
