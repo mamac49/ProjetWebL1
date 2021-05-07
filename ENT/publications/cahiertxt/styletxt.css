@@ -35,3 +35,8 @@
 .Center {
   padding: 0px;
 }
+
+.devoirs {
+  position: fixed;
+  bottom: 0;
+}

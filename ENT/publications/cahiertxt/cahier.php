@@ -64,7 +64,7 @@ if ($_SESSION["Connected"] == "True") {
         </ul>
       </div>
 
-      <form action="cahier.php" method="post">
+      <form action="cahier.php" method="post" class="devoirs">
       <?php
         if ($_SESSION["Admin"] == True) {
       ?>
