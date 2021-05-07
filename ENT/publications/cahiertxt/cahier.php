@@ -14,8 +14,10 @@ if ($_SESSION["Connected"] == "True") {
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
+    <link rel="stylesheet" href="styletxt.css">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
+    <script src="/Projetwebl1/ENT/js/cahiertxt.js"></script>
   </head>
 
   <?php
