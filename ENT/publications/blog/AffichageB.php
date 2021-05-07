@@ -39,7 +39,8 @@ if ($_SESSION["Connected"] == true) {
       <h2 class="texte"><?php echo titre($IDblog); ?></h2>
       <br/>
       <div class="corps">
-        <p class="Publication_texte"><?php echo textevide($IDblog); ?><p>
+        <div class="Publication_texte">
+          <p><?php echo textevide($IDblog); ?><p>
         <?php
 
         ?>
