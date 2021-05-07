@@ -10,7 +10,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`)";
   if (mysqli_query($link, $sql)) {
     echo "succès";
-    echo "<script> document.getElementById('AddHW').style.display='none' </script>"
+    echo "<script> document.getElementById('AddHW').style.display='none' </script>";
   }
 }
 
