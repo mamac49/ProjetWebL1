@@ -49,8 +49,6 @@ if ($_SESSION['theme'] == 1) {
     <header>
       <!--bouton cliquable pour le menu sandwich-->
       <span class="burger_icon" id="burger_button"><i class="fas fa-bars icone"></i></span>
-      <!--bouton cliquable pour retourner à l'accueil de l'ENT-->
-      <a href="/Projetwebl1/ENT/"><i class="fas fa-home icone retour"></i></a>
       <!--titre avec un style d'écriture à la craie-->
       <div class="Title">
         <h1 class="craie">Ecole Millocheau</h1>
@@ -59,6 +57,8 @@ if ($_SESSION['theme'] == 1) {
       <img src="/Projetwebl1/ENT/data/logo_millocheau.png" alt="Logo de l'école millocheau" class="taoki">
     </header>
   <footer id="navbar">
+      <!--bouton cliquable pour retourner à l'accueil de l'ENT-->
+      <a href="/Projetwebl1/ENT/"><i class="fas fa-home icone retour"></i></a>
       <!--liens en cas de problèmes, et à propos-->
       <a href="/Projetwebl1/ENT/settings/contact/contact.php" class="link_footer"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a>
       <a href="/Projetwebl1/ENT/settings/credits.php" class="link_footer"><i class="fab fa-linux icone"></i>A propos</a>
