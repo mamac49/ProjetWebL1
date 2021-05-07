@@ -29,7 +29,9 @@ if ($_SESSION["Connected"] == true) {
     <!--<p> <?php echo $_GET['id'] ?></p> -->
     <div class="Center">
       <h2 class="texte"><?php echo titre($IDblog); ?></h2>
+      <br/>
       <div class="corps">
+        
         <?php
 
         ?>

@@ -21,9 +21,9 @@ function jour($x) {
   }
 }
 
-function Delete($Contact) {
+function Delete($Blog) {
   $link = dbConnect();
-  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Contact'";
+  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Blog'";
   if (mysqli_query($link, $sql)) {
   } else {
     echo mysqli_error($link);
@@ -80,7 +80,7 @@ if ($_SESSION["Connected"] == true) {
               if ($_SESSION["Admin"] == true) {
             ?>
             <form>
-              <input type="button" name="CreationBlog" value="Créer Un Blog" onclick="creerpage();">
+              <input type="button" onclick="window.location.href = 'https://www.w3docs.com';" name="CreationBlog" value="Créer Un Blog"/>
               <select name="BlogD">
                 <?php
                 for ($x=1 ; $x<=nbPub() ; $x++) {
