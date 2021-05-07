@@ -11,13 +11,13 @@
 .semaine button {
  display: block;
  background-color: inherit;
- padding: 22px 16px;
+ padding: 5px;
  width: 100%;
  border: none;
  outline: none;
  text-align: left;
  cursor: pointer;
- font-size: 3em;
+ font-size: 1.5em;
 }
 
 /* Style the tab content */

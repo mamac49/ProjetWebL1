@@ -13,7 +13,7 @@
   background-color: var(--font-color);
 }
 
-.FormCrea, #navbar {
+.FormCrea, #navbar, .semaine button:hover, .semaine button.active {
   background-color: var(--second-color);
 }
 
