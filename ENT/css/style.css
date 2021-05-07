@@ -107,6 +107,7 @@
 
   .link_footer:visited .link_footer:checked .link_footer:link {
     text-decoration: none;
+    min-width: 30px;
   }
 
 
