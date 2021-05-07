@@ -72,7 +72,7 @@ if ($_SESSION["Connected"] == true) {
               $req=nbPub();
               for ($i=1;$i<=$req;$i++){
                 if (nature($i) == "1"){
-                  if (textevide($x)!="" or $_SESSION["Admin"] == true){
+                  if ($_SESSION["Admin"] == true){
                   $titre=titre($i);
                   $auteur=auteur($i);
                   $date=jour($i);
