@@ -12,11 +12,11 @@
     height: 100%;
   }
 
-  /*.site_pusher {
+  .site_pusher {
     transition-duration: 0.3s;
     transform: translateX(0px) 300ms;
     height: 100%;
-  }*/
+  }
 
 
   /*header*/
