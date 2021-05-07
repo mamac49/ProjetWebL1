@@ -8,6 +8,8 @@ function auteur($x) {
   $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
+    echo $row[0];
+    echo $row[1];
     return $row[0];
   }
 }
