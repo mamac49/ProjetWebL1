@@ -14,7 +14,7 @@ function textevide($x) {
   }
 }
 
-function temps_ecriture($x) {
+function temps_ecriture_P($x) {
   $link = dbConnect();
   $sql = "SELECT `date_ecriture`,`heure_ecriture` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
@@ -23,7 +23,7 @@ function temps_ecriture($x) {
   }
 }
 
-function auteur($x) {
+function auteurP($x) {
   $link = dbConnect();
   $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
@@ -32,7 +32,25 @@ function auteur($x) {
   }
 }
 
-function auteur2($x) {
+function temps_ecriture_C($x) {
+  $link = dbConnect();
+  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Commentaires WHERE `nature`=1 AND `idcom`='$x')";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0]." ".$row[1];
+  }
+}
+
+function auteurC($x) {
+  $link = dbConnect();
+  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Commentaires WHERE `nature`=1 AND `idcom`='$x')";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0]." ".$row[1];
+  }
+}
+
+function auteurB($x) {
   $link = dbConnect();
   $sql = "SELECT `iduser` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
@@ -40,8 +58,6 @@ function auteur2($x) {
     return $row[0];
   }
 }
-
-
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -74,14 +90,15 @@ if ($_SESSION["Connected"] == true) {
             <p>Il n'y a pas encore de publication!</p>
             <input type="button" value="Ajouter une publication">
           <?php } else {
-            $auteur=auteur($IDblog);
-            $temps=temps_ecriture($IDblog);?>
+            $auteur=auteurP($IDblog);
+            $temps=temps_ecriture_P($IDblog);?>
             <span class="texte"> Edité par <?php echo $auteur; ?> le <?php echo $temps; ?></span>
             <p><?php echo textevide($IDblog);
-            $res=auteur2($IDblog);?></p>
+            $res=auteurB($IDblog);?></p>
             <?php if ($_SESSION["ID"]==$res){ ?>
             <input type="button" value="Editer la publication">
-          <?php }}?>
+          <?php }}
+          ?>
           <span class="texte">Je fais les commentaires juste après :)</span>
 
 

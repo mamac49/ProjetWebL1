@@ -68,7 +68,6 @@ if ($_SESSION["Connected"] == true) {
             <h2 class="texte">Liste des sujets</h2>
             <ul class="liste_sujets">
               <?php
-              $link = dbConnect();
               $req=nbPub();
               for ($i=1;$i<=$req;$i++){
                 if (nature($i) == "1"){
