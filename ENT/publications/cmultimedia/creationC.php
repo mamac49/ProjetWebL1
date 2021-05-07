@@ -57,7 +57,7 @@ if ($_SESSION["Connected"] == true) {
 -->
 
 <?php
-  if (isset($_PUT['create'])) {
+  /*if ($_PUT != null) {
     $idpublication = "NONE";
     $titre = "NONE" ;
     $texte = "NONE" ;
@@ -66,7 +66,8 @@ if ($_SESSION["Connected"] == true) {
     $nature = "NONE" ;
     $iduser = "NONE" ;
     echo "<script>createLine();</script>";
-  }
+  }*/
+  echo "<script>alert($_PUT)</script>"
 
 }
 ?>
