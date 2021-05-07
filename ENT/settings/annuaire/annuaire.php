@@ -29,7 +29,7 @@ if ($_SESSION["Connected"] == true) {
     <div class="site_container">
       <script src="menu_clic.js"></script>
         <div class="contenu">
-            <div class="Center">
+            <div class="Center_adap">
               <!-- les contacts seront listé avec en premier le professeur
                 et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
               <h2 class="texte">Liste des contacts</h2>
