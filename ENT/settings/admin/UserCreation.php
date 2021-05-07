@@ -106,9 +106,8 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
                 <p class="texteF">Sélectionner l'image de profil (64ko maximum)</p>
                   <input type="file" id="file" name="pp" accept="image/*" required>
-                <p class="texteF">Administrateur ?</p>
-                <p><input type="checkbox" value="1" name="admin">
-                <input type="submit" name="valider" value="Creer" class="FormCrea Bouton Centrer"></p>
+                <p class="texteF">Administrateur ?
+                <input type="checkbox" value="1" name="admin"></p>
                 <p>
                   <label class="texte" for="GS">GS</label>
                   <input type="radio" checked name="classe" id="GS" value="0">
@@ -117,6 +116,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <label class="texte" for="CP">CP</label>
                   <input type="radio" name="classe" id="CP" value="1">
                 </p>
+                <input type="submit" name="valider" value="Creer" class="FormCrea Bouton Centrer">
             </form>
             <form action="UserCreation.php" method="post" class="Formulaire">
               <h2 class="texte">Suppression d'utilisateur</h2>
