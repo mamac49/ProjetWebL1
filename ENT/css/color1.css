@@ -27,7 +27,7 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .legal, #na
   color: var(--font-color);
 }
 
-.sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited  {
+.sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited, .tabcontent  {
   color: var(--font-color-nde);
 }
 
