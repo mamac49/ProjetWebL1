@@ -5,6 +5,14 @@ include '../../fonc.php';
 
 $IDblog = $_GET['id'];
 
+function textevide($x) {
+  $link = dbConnect();
+  $sql = "SELECT `texte` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0];
+  }
+}
 
 if ($_SESSION["Connected"] == true) {
 ?>
