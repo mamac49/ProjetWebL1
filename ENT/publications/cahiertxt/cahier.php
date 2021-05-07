@@ -29,7 +29,7 @@ if ($_SESSION["Connected"] == "True") {
         <button class="tablinks" onmouseover="openDay(event, 'Lundi')">Lundi</button>
         <button class="tablinks" onmouseover="openDay(event, 'Mardi')">Mardi</button>
         <button class="tablinks" onmouseover="openDay(event, 'Jeudi')">Jeudi</button>
-        <button class="tablinks" onmouseover="openDay(event, 'Vendredi')">Jeudi</button>
+        <button class="tablinks" onmouseover="openDay(event, 'Vendredi')">Vendredi</button>
       </div>
 
       <div id="Lundi" class="tabcontent">
