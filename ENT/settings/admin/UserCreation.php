@@ -111,8 +111,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <p>
                   <label class="texte" for="GS">GS</label>
                   <input type="radio" checked name="classe" id="GS" value="0">
-                </p>
-                <p>
+                <br>
                   <label class="texte" for="CP">CP</label>
                   <input type="radio" name="classe" id="CP" value="1">
                 </p>
