@@ -37,7 +37,7 @@
 }
 
 .matiere {
-  font-style: 2em;
+  font-size: 2em;
   transform: rotate(0);
   transition: 300 all ease-in-out;
 }
