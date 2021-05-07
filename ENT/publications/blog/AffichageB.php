@@ -88,6 +88,7 @@ if ($_SESSION["Connected"] == true) {
         <div class="Publication_texte">
           <?php if (textevide($IDblog)==""){ ?>
             <span>Il n'y a pas encore de publication!</span>
+            <br/>
             <input type="button" value="Ajouter une publication">
           <?php } else {
             $auteur=auteurP($IDblog);
