@@ -48,9 +48,9 @@ if ($_SESSION["Connected"] == "True") {
       <div class="ligne">
         <!--affiche les anniversaires du mois actuel-->
         <div class="Anniversaire texte">
-          <h4><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
+          <h4 class="texte"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
-            <li><?php var_dump(annivs()); ?></li>
+            <li class="texte"><?php var_dump(annivs()); ?></li>
           </ul>
         </div>
         <!--permet d'avoir le moteur de recherche qwant junior sur la page-->
