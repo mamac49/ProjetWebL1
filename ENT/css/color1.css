@@ -31,6 +31,12 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
   color: var(--font-color-nde);
 }
 
+.Publication_texte{
+  color: var(--font-color-nde);
+  border: solid var(--font-color-nde) 2pt;
+}
+
+
 .FormCrea {
   color: var(--font-color);
 }
