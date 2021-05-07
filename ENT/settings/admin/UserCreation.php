@@ -5,13 +5,13 @@ error_reporting(E_ALL);
 
 include '../../fonc.php';
 
-function Create($nom, $prenom, $mail, $password, $date, $pp, $admin) {
+function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe) {
     $link = dbConnect();
     mysqli_query($link, "FLUSH `users`");
 
     $iduser = nombre() + 1;
 
-    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin');";
+    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe');";
     if (mysqli_query($link, $sql)) {
       $pp = mysqli_real_escape_string($link, $pp);
       $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
@@ -47,7 +47,7 @@ if ( isset($_POST['valider'])) {
       $nom = securisation($_POST['nom']);
       $prenom = securisation($_POST['prenom']);
       $mail = securisation($_POST['mail']);
-
+      $classe = securisation($_POST['classe'])
       $date = securisation($_POST['datenaissance']);
       $pp = file_get_contents($_FILES['pp']['tmp_name']);
       if (isset($_POST['admin'])) {
@@ -55,7 +55,7 @@ if ( isset($_POST['valider'])) {
       } else {
         $admin = 0;
       }
-      Create($nom, $prenom, $mail, $password, $date, $pp, $admin);
+      Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe);
   } else {
     echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
     header("refresh: 0");
