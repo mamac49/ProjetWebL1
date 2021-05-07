@@ -55,9 +55,7 @@ if ($_SESSION["Connected"] == true) {
             <input type="button" value="Ajouter une publication">
           <?php } else { ?>
             <p><?php echo textevide($IDblog);
-            $res=auteur2($IDblog);
-            echo $res;
-            echo $_SESSION["ID"];?></p>
+            $res=auteur2($IDblog);?></p>
             <?php if ($_SESSION["ID"]==$res){ ?>
             <input type="button" value="Editer la publication">
           <?php }}?>
