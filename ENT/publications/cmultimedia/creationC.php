@@ -67,7 +67,7 @@ if ($_SESSION["Connected"] == true) {
     $iduser = "NONE" ;
     echo "<script>createLine();</script>";
   }*/
-  echo "<script>alert($_PUT)</script>"
-
+  echo "<script>alert($_PUT)</script>";
 }
+
 ?>
