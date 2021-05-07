@@ -4,7 +4,7 @@ session_start();
 include '../../fonc.php';
 
 function AjoutDevoir($classe, $matiere, $consigne, $jour) {
-  link = dbConnect();
+  $link = dbConnect();
   mysqli_query($link, "FLUSH `users`");
 
   $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`)";
