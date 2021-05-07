@@ -28,7 +28,7 @@ if ($_SESSION["Connected"] == "True") {
          modal.style.display = "none";
        }
       }
-      /script>
+      </script>
   </head>
 
   <?php
