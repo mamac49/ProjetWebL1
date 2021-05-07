@@ -38,7 +38,7 @@ if ($_SESSION["Connected"] == true) {
       include ("../../base.php");
     ?>
 
-          <div class="Center">
+          <div class="Center_adap">
             <h2 class="texte">Liste des cahiers</h2>
             <div class="leaf">
               <ul class="liste">

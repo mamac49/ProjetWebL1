@@ -123,6 +123,16 @@
     margin-left: 25%;
   }
 
+.Center_adap {
+  background-color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  border-radius: 4px;
+  width: 1000px;
+  margin-left: 25%;
+}
+
   .Centre_main {
     width: 1000px;
     margin-left: 30%;

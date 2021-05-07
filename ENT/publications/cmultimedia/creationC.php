@@ -31,11 +31,11 @@ if ($_SESSION["Connected"] == true) {
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
-  </head>   
+  </head>
 <!--ajout de la méthode PUT-->
 <input type="hidden" name="_METHOD" value="PUT"/>
 
-<div class="Center">
+<div class="Center_adap">
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
@@ -58,7 +58,7 @@ if ($_SESSION["Connected"] == true) {
 
 <?php
   if (isset($_PUT['create'])) {
-    $idpublication = "NONE"; 
+    $idpublication = "NONE";
     $titre = "NONE" ;
     $texte = "NONE" ;
     $image = "NONE" ;

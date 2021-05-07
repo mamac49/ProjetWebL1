@@ -27,7 +27,7 @@ if ($_SESSION["Connected"] == true) {
     ?>
 
     <!--<p> <?php echo $_GET['id'] ?></p> -->
-    <div class="Center">
+    <div class="Center_adap">
       <h2 class="texte"><?php echo titre($IDcahier); ?></h2>
       <div class="corps">
         <?php
