@@ -35,11 +35,11 @@ if ($_SESSION["Connected"] == "True") {
       <div id="Lundi" class="tabcontent">
         <h3>Lundi</h3>
         <ul>
-          <?php if ($_SESSION["Classe"] == "GS") { ?>
+        <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION['Admin'] == True) { ?>
           <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
           <li><i class="fas fa-flask matiere"></i> Science : </li>
           <li><i class="fas fa-landmark matiere"></i> Histoire : </li>
-        <?php } else {  ?>
+        <?php } else if ($_SESSION["Classe"] == "CP" OR $_SESSION['Admin'] == True) {  ?>
           <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
         <?php } ?>
         </ul>
@@ -48,26 +48,37 @@ if ($_SESSION["Connected"] == "True") {
       <div id="Mardi" class="tabcontent">
         <h3>Mardi</h3>
         <ul>
-          <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
-          <li><i class="fas fa-book matiere"></i> Français : </li>
-          <li><i class="fas fa-globe-americas matiere"></i> Géographie : </li>
+          <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION['Admin'] == True) { ?>
+            <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
+            <li><i class="fas fa-book matiere"></i> Français : </li>
+            <li><i class="fas fa-globe-americas matiere"></i> Géographie : </li>
+          <?php } else if ($_SESSION["Classe"] == "CP" OR $_SESSION['Admin'] == True) {  ?>
+            <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
+          <?php } ?>
         </ul>
       </div>
 
       <div id="Jeudi" class="tabcontent">
         <h3>Jeudi</h3>
         <ul>
+        <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION['Admin'] == True) { ?>
+          <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
+        <?php } else if ($_SESSION["Classe"] == "CP" OR $_SESSION['Admin'] == True) {  ?>
           <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
           <li><i class="fas fa-bicycle matiere"></i> Sport : </li>
           <li><i class="fas fa-landmark matiere"></i> Histoire : </li>
+        <?php } ?>
         </ul>
       </div>
 
       <div id="Vendredi" class="tabcontent">
         <h3>Vendredi</h3>
         <ul>
+        <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION['Admin'] == True) { ?>
           <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
+        <?php } else if ($_SESSION["Classe"] == "CP" OR $_SESSION['Admin'] == True) {  ?>
           <li><i class="fas fa-book matiere"></i> Français : </li>
+        <?php } ?>
         </ul>
       </div>
 
