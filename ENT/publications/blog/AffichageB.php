@@ -41,11 +41,8 @@ if ($_SESSION["Connected"] == true) {
       <br/>
       <div class="corpsB">
         <div class="Publication_texte">
-          <p><?php echo textevide($IDblog); ?><p>
+          <p><?php echo textevide($IDblog); ?></p>
         </div>
-        <?php
-
-        ?>
 
       </div>
 

@@ -33,7 +33,10 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
 
 .Publication_texte p{
   color: var(--font-color-nde);
-  border: solid black 2pt;
+  border: solid black 2px;
+  border-radius: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 
