@@ -249,9 +249,6 @@
 */
 
   .retour {
-    position: absolute;
-    bottom: 10px;
-    left: 10%;
     font-size: 2em;
     transform: rotate(0deg);
     transition: transform 300ms ease-in-out;
