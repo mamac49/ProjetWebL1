@@ -11,6 +11,8 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   if (mysqli_query($link, $sql)) {
     echo "succès";
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
+  } else {
+    echo mysqli_connect_error();
   }
 }
 
