@@ -24,7 +24,7 @@
 /* Style the tab content */
 .tabcontent {
  float: left;
- padding: 0px 12px;
+ padding-left: 12px;
  border-bottom: 1px solid #ccc;
  width: 1000px;
  border-left: none;
