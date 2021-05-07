@@ -125,7 +125,7 @@
     margin-left: 25%;
   }
 
-.Center_adap {
+.Center_adapt {
   background-color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -134,7 +134,7 @@
   width: 1000px;
   min-height: 655px;
   margin-left: 25%;
-  z-index: -2;
+  z-index: -1;
   position: relative;
 }
 
