@@ -14,6 +14,15 @@ function textevide($x) {
   }
 }
 
+function auteur2($x) {
+  $link = dbConnect();
+  $sql = "SELECT `idpublications` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0];
+  }
+}
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -41,7 +50,16 @@ if ($_SESSION["Connected"] == true) {
       <br/>
       <div class="corpsB">
         <div class="Publication_texte">
-          <p><?php echo textevide($IDblog); ?></p>
+          <?php if (textevide($IDblog)==""){ ?>
+            <p class="texte">Il n'y a pas encore de publication!</p>
+            <input type="button" value="Ajouter une publication">
+          <?php } else { ?>
+            <p><?php echo textevide($IDblog); ?></p>
+            <?php if ($_SESSION["ID"]==auteur2($IDblog)){ ?>
+            <input type="button" value="Editer la publication">
+          <?php }}?>
+
+
         </div>
 
       </div>
