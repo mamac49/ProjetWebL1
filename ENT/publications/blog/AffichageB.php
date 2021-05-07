@@ -14,6 +14,24 @@ function textevide($x) {
   }
 }
 
+function temps_ecriture($x) {
+  $link = dbConnect();
+  $sql = "SELECT `date_ecriture`,`heure_ecriture` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0]." à ".row[1];
+  }
+}
+
+function auteur($x) {
+  $link = dbConnect();
+  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0]." ".$row[1];
+  }
+}
+
 function auteur2($x) {
   $link = dbConnect();
   $sql = "SELECT `iduser` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
@@ -22,6 +40,8 @@ function auteur2($x) {
     return $row[0];
   }
 }
+
+
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -53,7 +73,10 @@ if ($_SESSION["Connected"] == true) {
           <?php if (textevide($IDblog)==""){ ?>
             <p>Il n'y a pas encore de publication!</p>
             <input type="button" value="Ajouter une publication">
-          <?php } else { ?>
+          <?php } else {
+            $auteur=auteur($IDblog);
+            $temps=temps_ecriture($IDblog);?>
+            <span class="texte"> Edité par <?php echo $auteur; ?> le <?php echo $temps; ?></span>
             <p><?php echo textevide($IDblog);
             $res=auteur2($IDblog);?></p>
             <?php if ($_SESSION["ID"]==$res){ ?>
