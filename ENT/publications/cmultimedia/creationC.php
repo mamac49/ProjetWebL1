@@ -66,6 +66,7 @@ if ($_SESSION["Connected"] == true) {
     echo "<script>createLine();</script>";
   }*/
   echo "<script>alert($_POST)</script>";
+}
 
 }
 ?>
