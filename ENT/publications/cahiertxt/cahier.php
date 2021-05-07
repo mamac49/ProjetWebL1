@@ -93,7 +93,6 @@ if ($_SESSION["Connected"] == "True") {
 
     </div>
 
-    <div class="AddHW">
       <form class="AddHW" action="cahier.php" method="post">
         <h3>Classe</h3>
         <p class="ADDHW">
@@ -115,8 +114,6 @@ if ($_SESSION["Connected"] == "True") {
         <h3>Intitulé</h3>
         <input type="text" name="consigne" class="ADDHW">
       </form>
-
-    </div>
 
 
 

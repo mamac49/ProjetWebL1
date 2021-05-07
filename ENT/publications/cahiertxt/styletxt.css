@@ -56,4 +56,6 @@
   transform: translateX(0px);
   transition: 300ms transform all ease-in-out;
   background-color: white;
+  color: black;
+  z-index: 50;
 }
