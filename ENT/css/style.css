@@ -13,7 +13,7 @@
   }
 
   .site_pusher {
-    z-index: -1;
+    z-index: 1;
     transition-duration: 0.3s;
     transform: translateX(0px) 300ms;
     height: 100%;
@@ -134,7 +134,7 @@
   width: 1000px;
   min-height: 655px;
   margin-left: 25%;
-  z-index: -1;
+  z-index: 2;
   position: relative;
 }
 
@@ -170,7 +170,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    z-index: -1;
+    z-index: 2;
   }
 
   /* Style the navbar links */
