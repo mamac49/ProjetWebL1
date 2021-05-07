@@ -33,7 +33,6 @@ if ($_SESSION["Connected"] == true) {
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
 <!--ajout de la méthode PUT-->
-<input type="hidden" name="_METHOD" value="PUT"/>
 
 <div class="Center_adap">
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
@@ -67,7 +66,7 @@ if ($_SESSION["Connected"] == true) {
     $iduser = "NONE" ;
     echo "<script>createLine();</script>";
   }*/
-  if ($_PUT != null) {
+  if ($_POST != null) {
   echo "<script>alert($_PUT)</script>";
 }
 }
