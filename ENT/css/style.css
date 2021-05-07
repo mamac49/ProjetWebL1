@@ -80,7 +80,7 @@
     padding-left: 10px;
     transform: translateX(-275px);
     transition: 300ms all ease-in-out;
-    z-index: 1;
+    z-index: 2;
   }
 
 
@@ -122,10 +122,8 @@
     padding-top: 15px;
     border-radius: 4px;
     width: 1000px;
-    /*margin-left: 25%*/
-    z-index: 1;
-    text-align: center;
-  }
+    margin-left: 25%;
+    }
 
 .Center_adapt {
   background-color: white;
@@ -136,8 +134,8 @@
   width: 1000px;
   min-height: 655px;
   margin-left: 25%;
-  
   position: relative;
+  z-index: 1
 }
 
   .Centre_main {
