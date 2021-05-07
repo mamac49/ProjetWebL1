@@ -16,10 +16,9 @@ function textevide($x) {
 
 function auteur2($x) {
   $link = dbConnect();
-  $sql = "SELECT `idpublications` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
+  $sql = "SELECT `iduser` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    echo $row[0];
     return $row[0];
   }
 }
