@@ -30,9 +30,9 @@ function textevide($x) {
   }
 }
 
-function Delete($Blog) {
+function Delete($x) {
   $link = dbConnect();
-  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Blog'";
+  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$x'";
   if (mysqli_query($link, $sql)) {
   } else {
     echo mysqli_error($link);

@@ -5,7 +5,7 @@ include '../../fonc.php';
 
 $IDblog = $_GET['id'];
 
-function textevide($x) {
+function textevide($x) { //renvoie le texte d'une publication, aussi utilisé pour savoir si il n'y a pas encore de texte (variable NULL)
   $link = dbConnect();
   $sql = "SELECT `texte` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
@@ -14,7 +14,7 @@ function textevide($x) {
   }
 }
 
-function temps_ecriture_P($x) {
+function temps_ecriture_P($x) { //renvoie l'heure et la date à laquelle est écrit ou édité la publication
   $link = dbConnect();
   $sql = "SELECT `date_ecriture`,`heure_ecriture` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
@@ -23,7 +23,7 @@ function temps_ecriture_P($x) {
   }
 }
 
-function auteurP($x) {
+function auteurP($x) { //renvoie le prénom et le nom de la personne qui a écrit ou édité la publication
   $link = dbConnect();
   $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
@@ -32,7 +32,7 @@ function auteurP($x) {
   }
 }
 
-function temps_ecriture_C($x) {
+function temps_ecriture_C($x) { //renvoie l'heure et la date à laquelle est écrit ou édité le commentaire
   $link = dbConnect();
   $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Commentaires WHERE `nature`=1 AND `idcom`='$x')";
   if ($result = mysqli_query($link, $sql)) {
@@ -41,7 +41,7 @@ function temps_ecriture_C($x) {
   }
 }
 
-function auteurC($x) {
+function auteurC($x) { //renvoie le prénom et le nom de la personne qui a écrit ou édité le commentaire
   $link = dbConnect();
   $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Commentaires WHERE `nature`=1 AND `idcom`='$x')";
   if ($result = mysqli_query($link, $sql)) {
@@ -50,7 +50,7 @@ function auteurC($x) {
   }
 }
 
-function auteurB($x) {
+function auteurB($x) { //renvoie l'id de la personne ayant créé le cette page du blog
   $link = dbConnect();
   $sql = "SELECT `iduser` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
@@ -59,7 +59,15 @@ function auteurB($x) {
   }
 }
 
-if ($_SESSION["Connected"] == true) {
+function nbCom() { //renvoie le nombre total de commentaire dans la table
+  $link = dbConnect();
+  $sql = "SELECT `idcom` FROM `Commentaires`";
+  if ($result = mysqli_query($link, $sql)) {
+    return mysqli_num_rows($result);
+  }
+}
+
+if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l'authentification (auth.php)
 ?>
 
 
@@ -67,7 +75,7 @@ if ($_SESSION["Connected"] == true) {
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title><?php echo titre($IDblog); ?></title>
+    <title><?php echo titre($IDblog); ?></title> <!--renvoie le titre du blog via l'id de ce dernier-->
     <link rel="stylesheet" href="styleC.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
@@ -75,11 +83,13 @@ if ($_SESSION["Connected"] == true) {
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
-    <?php
-      include ("../../base.php");
-    ?>
 
-    <!--<p> <?php echo $_GET['id'] ?></p> -->
+  <?php
+  include ("../../base.php");
+  ?>
+
+  <!--<p> <?php echo $_GET['id'] ?></p> -->
+
   <body>
     <div class="Center">
       <h2 class="texte"><?php echo titre($IDblog); ?></h2>
@@ -98,9 +108,17 @@ if ($_SESSION["Connected"] == true) {
             <p><?php echo textevide($IDblog);
             $res=auteurB($IDblog);?></p>
             <?php if ($_SESSION["ID"]==$res){ ?>
-            <input type="button" value="Editer la publication">
-          <?php }}
+              <input type="button" value="Editer la publication">
+              <?php }
+              $req=nbCom();
+              for ($i=1;$i<=$req;$i++){
+
+            }
+          }
+
           ?>
+
+
           <span class="texte">Je fais les commentaires juste après :)</span>
 
 
