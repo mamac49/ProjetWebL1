@@ -15,7 +15,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
 }
 
 if (isset($_POST['ValideAdd'])) {
-  AjoutDevoir(securisation($_POST['classe']), (securisation($_POST['matiere']), (securisation($_POST['consigne']), (securisation($_POST['jour']));
+  AjoutDevoir(securisation($_POST['classe']), securisation($_POST['matiere']), securisation($_POST['consigne']), securisation($_POST['jour']));
 }
 
 if ($_SESSION["Connected"] == "True") {
