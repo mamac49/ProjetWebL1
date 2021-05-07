@@ -19,8 +19,7 @@ function temps_ecriture($x) {
   $sql = "SELECT `date_ecriture`,`heure_ecriture` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    echo $row[1];
-    return $row[0]." à ".row[1];
+    return $row[0]." à ".$row[1];
   }
 }
 
