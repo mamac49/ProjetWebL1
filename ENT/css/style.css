@@ -306,5 +306,6 @@
   border: solid black 2px;
   border-radius: 4px;
   margin-left: 5pt;
-  padding-top: 9pt;
+  margin-right: 5pt;
+  padding: 10pt 6pt 10pt 6pt;
 }
