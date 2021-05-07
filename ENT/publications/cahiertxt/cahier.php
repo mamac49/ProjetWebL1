@@ -3,6 +3,21 @@ session_start();
 
 include '../../fonc.php';
 
+function AjoutDevoir($classe, $matiere, $consigne, $jour) {
+  link = dbConnect();
+  mysqli_query($link, "FLUSH `users`");
+
+  $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`)";
+  if mysqli_query($link, $sql) {
+    echo "succès";
+    echo "<script> document.getElementById('AddHW').style.display='none' </script>"
+  }
+}
+
+if (isset($_POST['ValideAdd'])) {
+  AjoutDevoir(securisation($_POST['classe'], (securisation($_POST['matiere'], (securisation($_POST['consigne'], (securisation($_POST['jour']))
+}
+
 if ($_SESSION["Connected"] == "True") {
 ?>
 
@@ -110,6 +125,12 @@ if ($_SESSION["Connected"] == "True") {
         <span onclick="document.getElementById('AddHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
           <h3>Classe</h3>
+          <select name="jour">
+            <option value="lundi">Lundi</option>
+            <option value="mardi">Mardi</option>
+            <option value="jeudi">Jeudi</option>
+            <option value="vendredi">Vendredi</option>
+          </select>
           <p>
             <label class="texte" for="GS">GS</label>
             <input type="radio" name="classe" id="GS" value="GS">
@@ -127,8 +148,8 @@ if ($_SESSION["Connected"] == "True") {
             <option value="autre">Autre</option>
           </select>
           <h3>Intitulé</h3>
-          <input type="text" name="consigne">
-          <input type="submit" name="ValiderAdd" value="Ajouter">
+          <p><input type="text" name="consigne"></p>
+          <p><input type="submit" name="ValiderAdd" value="Ajouter"></p>
         </div>
       </form>
     </div>

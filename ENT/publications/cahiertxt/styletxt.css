@@ -68,7 +68,6 @@
  margin: 5px auto; /* 15% from the top and centered */
  border: 1px solid #888;
  width: 20%; /* Could be more or less, depending on screen size */
- height: 30%;
  display: flex;
  flex-direction: column;
  padding: 5px;
