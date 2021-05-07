@@ -71,7 +71,8 @@ if ($_SESSION["Connected"] == true) {
               $link = dbConnect();
               $req=nbPub();
               for ($i=1;$i<=$req;$i++){
-                if (nature($i) == "1" AND textevide($x)!="" OR nature($i) == "1" AND $_SESSION["Admin"] == true){
+                if (nature($i) == "1"){
+                  if (textevide($x)!="" or $_SESSION["Admin"] == true){
                   $titre=titre($i);
                   $auteur=auteur($i);
                   $date=jour($i);
@@ -80,6 +81,7 @@ if ($_SESSION["Connected"] == true) {
               </a> <span class="texte">Edité par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
               <li class="espaces"><hr></li>
               <?php
+                  }
                 }
               }
               ?>
