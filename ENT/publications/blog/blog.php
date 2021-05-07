@@ -21,6 +21,15 @@ function jour($x) {
   }
 }
 
+function textevide($x) {
+  $link = dbConnect();
+  $sql = "SELECT `texte` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0];
+  }
+}
+
 function Delete($Blog) {
   $link = dbConnect();
   $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Blog'";
@@ -62,7 +71,7 @@ if ($_SESSION["Connected"] == true) {
               $link = dbConnect();
               $req=nbPub();
               for ($i=1;$i<=$req;$i++){
-                if (nature($i) == "1"){
+                if (nature($i) == "1" AND textevide($x)!="" OR nature($i) == "1" AND $_SESSION["Admin"] == true){
                   $titre=titre($i);
                   $auteur=auteur($i);
                   $date=jour($i);
