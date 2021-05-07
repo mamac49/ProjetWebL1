@@ -37,6 +37,8 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
   border-radius: 4px;
   margin-left: 2px;
   margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 
