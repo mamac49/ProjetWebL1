@@ -38,10 +38,11 @@
 
 .matiere {
   font-size: 2em;
-  transform: rotate(0);
+  transform: rotate(0deg);
   transition: 300 all ease-in-out;
+  padding-left: 5px;
 }
 
 .matiere:hover {
-  transform: rotate(360);
+  transform: rotate(360deg);
 }
