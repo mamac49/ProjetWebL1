@@ -67,7 +67,9 @@
  background-color: #fefefe;
  margin: 5px auto; /* 15% from the top and centered */
  border: 1px solid #888;
- width: 80%; /* Could be more or less, depending on screen size */
+ width: 20%; /* Could be more or less, depending on screen size */
+ display: flex;
+ flex-direction: column;
 }
 
 /* The Close Button */
@@ -102,4 +104,4 @@
 @keyframes animatezoom {
  from {transform: scale(0)}
  to {transform: scale(1)}
-} 
+}
