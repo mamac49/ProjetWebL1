@@ -82,6 +82,7 @@ if ($_SESSION["Connected"] == true) {
             <?php if ($_SESSION["ID"]==$res){ ?>
             <input type="button" value="Editer la publication">
           <?php }}?>
+          Je fais les commentaires juste après :)
 
 
         </div>
