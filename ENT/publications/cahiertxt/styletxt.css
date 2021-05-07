@@ -35,3 +35,13 @@
 .Center {
   padding: 0px;
 }
+
+.matiere {
+  font-style: 2em;
+  transform: rotate(0);
+  transition: 300 all ease-in-out;
+}
+
+.matiere:hover {
+  transform: rotate(360);
+}
