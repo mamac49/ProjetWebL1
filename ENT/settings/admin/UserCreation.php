@@ -47,7 +47,7 @@ if ( isset($_POST['valider'])) {
       $nom = securisation($_POST['nom']);
       $prenom = securisation($_POST['prenom']);
       $mail = securisation($_POST['mail']);
-      $classe = securisation($_POST['classe'])
+      $classe = securisation($_POST['classe']);
       $date = securisation($_POST['datenaissance']);
       $pp = file_get_contents($_FILES['pp']['tmp_name']);
       if (isset($_POST['admin'])) {
