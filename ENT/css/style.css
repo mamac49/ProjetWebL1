@@ -188,9 +188,10 @@
     color: black;
   }
 
-  #navbar return {
-    width: 50px;
+  #navbar icone {
+    font-size: 2em;
   }
+
 
 
 /*
@@ -249,7 +250,6 @@
 */
 
   .retour {
-    font-size: 2em;
     transform: rotate(0deg);
     transition: transform 300ms ease-in-out;
   }
