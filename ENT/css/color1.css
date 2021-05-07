@@ -33,7 +33,7 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
 
 .Publication_texte p{
   color: var(--font-color-nde);
-  border: solid var(--font-color-nde) 2pt;
+  border: solid black 2pt;
 }
 
 
@@ -42,7 +42,7 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
 }
 
 .contact {
-  color: black;
+  color: var(--font-color-nde);
 }
 
 html {
