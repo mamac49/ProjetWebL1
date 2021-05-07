@@ -85,7 +85,7 @@ if ($_SESSION["Connected"] == "True") {
       <?php
         if ($_SESSION["Admin"] == True) {
       ?>
-        <button type="button" onclick="AddWork" name="button">Ajouter des devoirs</button>
+        <button type="button" onclick="document.getElementById('ADDHW').style.display='block'" name="button">Ajouter des devoirs</button>
         <button type="button" onclick="DeleteWork" name="button">Supprimer des devoirs</button>
       <?php
       }
@@ -93,27 +93,36 @@ if ($_SESSION["Connected"] == "True") {
 
     </div>
 
-      <form class="AddHW" action="cahier.php" method="post">
-        <h3>Classe</h3>
-        <p class="ADDHW">
-          <label class="texte" for="GS">GS</label>
-          <input type="radio" name="classe" id="GS" value="GS">
-        <br>
-          <label class="texte" for="CP">CP</label>
-          <input type="radio" name="classe" id="CP" value="CP">
-        </p>
-        <h3>Matière</h3>
-        <select class="ADDHW" name="matiere">
-          <option value="francais">Français</option>
-          <option value="maths">Mathématiques</option>
-          <option value="science">Science</option>
-          <option value="histoire">Histoire</option>
-          <option value="geo">Géographie</option>
-          <option value="autre">Autre</option>
-        </select>
-        <h3>Intitulé</h3>
-        <input type="text" name="consigne" class="ADDHW">
+    <div id="AddHW" class="modal">
+      <span onclick="document.getElementById('AddHW').style.display='none'"
+class="close" title="Close Modal">x</span>
+
+      <form class="modal-content animate" action="cahier.php" method="post">
+        <div class="container">
+          <h3>Classe</h3>
+          <p>
+            <label class="texte" for="GS">GS</label>
+            <input type="radio" name="classe" id="GS" value="GS">
+          <br>
+            <label class="texte" for="CP">CP</label>
+            <input type="radio" name="classe" id="CP" value="CP">
+          </p>
+          <h3>Matière</h3>
+          <select name="matiere">
+            <option value="francais">Français</option>
+            <option value="maths">Mathématiques</option>
+            <option value="science">Science</option>
+            <option value="histoire">Histoire</option>
+            <option value="geo">Géographie</option>
+            <option value="autre">Autre</option>
+          </select>
+          <h3>Intitulé</h3>
+          <input type="text" name="consigne">
+          <input type="sumbit" name="ValiderAdd" value="Ajouter">
+        </div>
       </form>
+    </div>
+
 
 
 
