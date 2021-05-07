@@ -15,6 +15,7 @@ function Connexion($mail, $password) {
         $mdp = $row['mdp'];
         $id = $row['iduser'];
         $theme = $row['theme'];
+        $classe = $row['Classe'];
         if ($row['admin'] == 1) {
           $admin = True;
         } else {
@@ -31,7 +32,7 @@ function Connexion($mail, $password) {
         $_SESSION["Admin"] = $admin;
         $_SESSION["theme"] = $theme;
         $_SESSION["Id"] = $id;
-        $_SESSION["Pic"] = $pic;
+        $_SESSION["Classe"] = $classe;
 
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
     } else {

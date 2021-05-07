@@ -35,9 +35,13 @@ if ($_SESSION["Connected"] == "True") {
       <div id="Lundi" class="tabcontent">
         <h3>Lundi</h3>
         <ul>
+          <?php if $_SESSION["Classe"] == "GS" { ?>
           <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
           <li><i class="fas fa-flask matiere"></i> Science : </li>
           <li><i class="fas fa-landmark matiere"></i> Histoire : </li>
+        <?php } else {  ?>
+          <li><i class="fas fa-square-root-alt matiere"></i> Mathématiques : </li>
+        <?php } ?>
         </ul>
       </div>
 
