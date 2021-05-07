@@ -110,7 +110,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <input type="checkbox" value="1" name="admin"></p>
                 <p>
                   <label class="texte" for="GS">GS</label>
-                  <input type="radio" checked name="classe" id="GS" value="0">
+                  <input type="radio" name="classe" id="GS" value="0">
                 <br>
                   <label class="texte" for="CP">CP</label>
                   <input type="radio" name="classe" id="CP" value="1">
