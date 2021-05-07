@@ -80,7 +80,7 @@ if ($_SESSION["Connected"] == true) {
               if ($_SESSION["Admin"] == true) {
             ?>
             <form>
-              <input type="button" onclick="window.location.href = 'https://www.w3docs.com';" name="CreationBlog" value="Créer Un Blog"/>
+              <input type="button" onclick="window.location.href = 'creationB.php';" name="CreationBlog" value="Créer Un Blog"/>
               <select name="BlogD">
                 <?php
                 for ($x=1 ; $x<=nbPub() ; $x++) {
