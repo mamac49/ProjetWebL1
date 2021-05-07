@@ -130,6 +130,7 @@
   padding-top: 15px;
   border-radius: 4px;
   width: 1000px;
+  min-height: 655px;
   margin-left: 25%;
 }
 
