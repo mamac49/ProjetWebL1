@@ -18,7 +18,7 @@
 }
 
 
-.file, .IcoBook, .Copybook i {
+.file, .IcoBook, .Copybook i, .matiere {
   color: var(--main-color);
 }
 
