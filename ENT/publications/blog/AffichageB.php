@@ -35,6 +35,7 @@ if ($_SESSION["Connected"] == true) {
     ?>
 
     <!--<p> <?php echo $_GET['id'] ?></p> -->
+  <body>
     <div class="Center">
       <h2 class="texte"><?php echo titre($IDblog); ?></h2>
       <br/>
@@ -50,7 +51,7 @@ if ($_SESSION["Connected"] == true) {
 
     </div>
 
-</body>
+  </body>
 </html>
 
 <?php
