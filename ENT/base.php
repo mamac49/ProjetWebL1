@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION['theme'] == 0) {
+if ($_SESSION['theme'] == 1) {
   echo "<script> LoadCSS('/Projetwebl1/ENT/css/color1.css'); </script>";
 } else {
   echo "<script> LoadCSS('/Projetwebl1/ENT/css/color2.css'); </script>";
