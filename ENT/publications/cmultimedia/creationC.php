@@ -33,7 +33,6 @@ if ($_SESSION["Connected"] == true) {
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
 <!--ajout de la méthode PUT-->
-
 <div class="Center_adap">
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
@@ -41,7 +40,7 @@ if ($_SESSION["Connected"] == true) {
       <!--<textarea class="textareaId" id="textareaCahierMultimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
     </ul>
-      <button name="create" class="bouton" >Ajouter une case</button>
+      <button name="create" class="bouton" type="submit">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 </div>
@@ -56,8 +55,8 @@ if ($_SESSION["Connected"] == true) {
 -->
 
 <?php
-  /*if ($_PUT != null) {
-    $idpublication = "NONE";
+  if (isset($_POST['create'])) {
+    /*$idpublication = "NONE";
     $titre = "NONE" ;
     $texte = "NONE" ;
     $image = "NONE" ;
@@ -66,9 +65,7 @@ if ($_SESSION["Connected"] == true) {
     $iduser = "NONE" ;
     echo "<script>createLine();</script>";
   }*/
-  if ($_POST != null) {
-  echo "<script>alert($_PUT)</script>";
-}
-}
+  echo "<script>alert($_POST)</script>
 
+}
 ?>
