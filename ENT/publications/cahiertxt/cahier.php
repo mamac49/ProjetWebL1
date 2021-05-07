@@ -35,32 +35,35 @@ if ($_SESSION["Connected"] == "True") {
       <div id="Lundi" class="tabcontent">
         <h3>Lundi</h3>
         <ul>
-          <li>Mathématiques : </li>
-          <li>Français : </li>
+          <li><i class="fas fa-square-root-alt icone"></i> Mathématiques : </li>
+          <li><i class="fas fa-flask icone"></i> Science : </li>
+          <li><i class="fas fa-landmark icone"></i> Histoire : </li>
         </ul>
       </div>
 
       <div id="Mardi" class="tabcontent">
         <h3>Mardi</h3>
         <ul>
-          <li>Mathématiques : </li>
-          <li>Français : </li>
+          <li><i class="fas fa-square-root-alt icone"></i> Mathématiques : </li>
+          <li><i class="fas fa-book icone"></i> Français : </li>
+          <li><i class="fas fa-globe-americas icone"></i> Géographie : </li>
         </ul>
       </div>
 
       <div id="Jeudi" class="tabcontent">
         <h3>Jeudi</h3>
         <ul>
-          <li>Mathématiques : </li>
-          <li>Français : </li>
+          <li><i class="fas fa-square-root-alt icone"></i> Mathématiques : </li>
+          <li><i class="fas fa-bicycle"></i> Sport : </li>
+          <li><i class="fas fa-landmark icone"></i> Histoire : </li>
         </ul>
       </div>
 
       <div id="Vendredi" class="tabcontent">
         <h3>Vendredi</h3>
         <ul>
-          <li>Mathématiques : </li>
-          <li>Français : </li>
+          <li><i class="fas fa-square-root-alt icone"></i> Mathématiques : </li>
+          <li><i class="fas fa-book icone"></i> Français : </li>
         </ul>
       </div>
 
