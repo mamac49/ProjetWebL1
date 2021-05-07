@@ -58,7 +58,7 @@ if ($_SESSION['theme'] == 1) {
     </header>
   <footer id="navbar">
       <!--bouton cliquable pour retourner à l'accueil de l'ENT-->
-      <a href="/Projetwebl1/ENT/" class="link_footer"><i class="fas fa-home icone retour"></i></a>
+      <a href="/Projetwebl1/ENT/" class="link_footer return"><i class="fas fa-home icone retour"></i></a>
       <!--liens en cas de problèmes, et à propos-->
       <a href="/Projetwebl1/ENT/settings/contact/contact.php" class="link_footer"><i class="fas fa-bug icone"></i>Signaler un problème/Contact</a>
       <a href="/Projetwebl1/ENT/settings/credits.php" class="link_footer"><i class="fab fa-linux icone"></i>A propos</a>

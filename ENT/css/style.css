@@ -188,6 +188,11 @@
     color: black;
   }
 
+  #navbar return {
+    width: 50px;
+  }
+
+
 /*
   footer a {
     display: flex;
