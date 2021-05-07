@@ -19,6 +19,7 @@ function auteur2($x) {
   $sql = "SELECT `idpublications` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
+    echo $row[0];
     return $row[0];
   }
 }
@@ -51,7 +52,7 @@ if ($_SESSION["Connected"] == true) {
       <div class="corpsB">
         <div class="Publication_texte">
           <?php if (textevide($IDblog)==""){ ?>
-            <p class="texte">Il n'y a pas encore de publication!</p>
+            <p>Il n'y a pas encore de publication!</p>
             <input type="button" value="Ajouter une publication">
           <?php } else { ?>
             <p><?php echo textevide($IDblog); ?></p>
