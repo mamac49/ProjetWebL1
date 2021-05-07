@@ -192,26 +192,6 @@
     font-size: 2em;
   }
 
-
-
-/*
-  footer a {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0.5%;
-    left: 35%;
-    font-size: 1.2em;
-    width: 30%;
-    text-decoration: none;
-  }
-
-  footer a:visited {
-    text-decoration: none;
-  }
-  */
-
   /*icones fontawesome*/
 
   .icone {
@@ -240,14 +220,6 @@
     height: 40px;
     text-align: left;
   }
-  /*
-  input[type=button] {
-    width: 200px;
-    height: 40px;
-    border-style: hidden;
-    margin-left: 15px;
-}
-*/
 
   .retour {
     transform: rotate(0deg);
@@ -326,4 +298,13 @@
 {
     font-family: "Craies";
     src: url("../data/HomemadeApple.ttf");
+}
+
+.Publication_texte p {
+  border: solid black 2px;
+  border-radius: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
