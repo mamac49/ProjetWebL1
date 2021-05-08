@@ -4,7 +4,6 @@ session_start();
 include '../../fonc.php';
 
 function DevoirID() {
-  function DevoirID() {
   $link = dbConnect();
 
   $sql = "SELECT `idtxt` FROM `cahiertxt`";
@@ -13,7 +12,6 @@ function DevoirID() {
     $listID = $result->fetch_array(MYSQLI_NUM);
   }
   return $listID;
-}
 }
 
 function AfficherDevoir($jour, $classe) {
