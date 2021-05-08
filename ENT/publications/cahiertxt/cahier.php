@@ -4,16 +4,17 @@ session_start();
 include '../../fonc.php';
 
 function DevoirID() {
-  function DevoirID() {
   $link = dbConnect();
 
   $sql = "SELECT `idtxt` FROM `cahiertxt`";
-  $result = $link->query($sql)
+  $result = mysqli_query($link, $sql);
+  $cahiersIds = array();
   if ($result) {
-    $listID = $result->fetch_array(MYSQLI_NUM);
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $cahiersIds[] = $row;
+    }
   }
-  return $listID;
-}
+  return $cahiersIds;
 }
 
 function AfficherDevoir($jour, $classe) {
@@ -200,11 +201,15 @@ if ($_SESSION["Connected"] == "True") {
       <form class="modal-content animate" action="cahier.php" method="post">
         <span onclick="document.getElementById('RemoveHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
-          <p><?php var_dump(DevoirID()); ?> </p>
           <select name="devoirs">
-            <?php foreach ($devoirID as $i) { ?>
-              <option value="$i"><?php echo AfficherDevoir($i)['consigne'] ?></option>
-            <?php } ?>
+            <?php foreach (DevoirID() as $i) {
+                    foreach ($semaine as $jour) {
+                      if (null!==AfficherDevoir($jour, "GS")) { ?>
+                        <option value="$i"><?php echo AfficherDevoir($jour, "GS")['consigne'] ?></option>
+                      <?php }
+                      if (null!==AfficherDevoir($jour, "CP")) { ?>
+              <option value="$i"><?php echo AfficherDevoir($jour, "CP")['consigne'] ?></option>
+            <?php }}} ?>
 
           </select>
 

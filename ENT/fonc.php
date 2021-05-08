@@ -47,9 +47,14 @@ function Affichage($mail) {
 function nombre() {
   $link = dbConnect();
   $sql = "SELECT `iduser` FROM `users`";
-  if ($result = mysqli_query($link, $sql)) {
-    return mysqli_num_rows($result);
+  $result = mysqli_query($link, $sql);
+  $IDUser = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDUser[] = $row;
+    }
   }
+  return $IDUser;
 }
 
 function info($x) {

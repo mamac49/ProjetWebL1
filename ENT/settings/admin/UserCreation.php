@@ -121,9 +121,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
               <h2 class="texte">Suppression d'utilisateur</h2>
               <select class="listeDeroul" name="user">
                 <?php
-                $nb = nombre();
-                for ($x=1; $x<=$nb; $x++) {
-                ?>
+                foreach (nombre() as $x) { ?>
                   <option class="texte" value="<?php echo $x ?>"><?php echo info($x)["prenom"] . " " . info($x)["nom"]; ?></option>
                 <?php } ?>
               </select>
