@@ -7,7 +7,7 @@ function DevoirID() {
   $link = dbConnect();
 
   $sql = "SELECT `idtxt` FROM `cahiertxt`";
-  $result = $link->query($sql);
+  $result = mysqli_query($link, $sql);
   $cahiersIds = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
