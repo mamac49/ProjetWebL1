@@ -309,3 +309,8 @@
   margin-right: 5pt;
   padding: 10pt 6pt 10pt 6pt;
 }
+
+/*curseur en pointer sur les boutons de thème*/
+.pointer{
+  cursor: pointer
+}
