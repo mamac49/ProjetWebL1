@@ -7,11 +7,14 @@ function DevoirID() {
   $link = dbConnect();
 
   $sql = "SELECT `idtxt` FROM `cahiertxt`";
-  $result = $link->query($sql);
+  $result = $link->query($sql)
+  $cahiersIds = array()
   if ($result) {
-    $listID = $result->fetch_array(MYSQLI_NUM);
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $cahiersIds[] = $row
+    }
   }
-  return $listID;
+  return $cahiersIds;
 }
 
 function AfficherDevoir($jour, $classe) {
