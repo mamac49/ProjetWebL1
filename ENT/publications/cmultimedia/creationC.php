@@ -24,8 +24,6 @@ if (isset($_POST['Valider'])) {
   //echo "<script>createLine();</script>";
 }
 
-}
-
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -73,6 +71,5 @@ if ($_SESSION["Connected"] == true) {
 -->
 
 <?php
-
-
+}
 ?>
