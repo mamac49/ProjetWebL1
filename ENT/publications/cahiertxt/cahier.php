@@ -63,7 +63,7 @@ $mmatiere["Anglais"] = "fas fa-cloud-rain";
 $matiere["EPS"] = "fas fa-biking";
 $matiere["Contes"] = "fas fa-dragon";
 $matiere["Rituels"] = "fas fa-chalkboard-teacher";
-$matiere["Educ"] = "fas fa-school";
+$matiere["Education civique"] = "fas fa-school";
 
 if ($_SESSION["Connected"] == "True") {
 ?>
@@ -163,8 +163,8 @@ if ($_SESSION["Connected"] == "True") {
           <h3>Matière</h3>
           <select name="matiere">
             <option value="Francais">Français</option>
-            <option value="Mathematiques">Mathématiques</option>
-            <option value="Science">Science</option>
+            <option value="Maths">Mathématiques</option>
+            <option value="Sciences">Science</option>
             <option value="Espace">Espace</option>
             <option value="Temps">Temps</option>
             <option value="Musique">Musique</option>
