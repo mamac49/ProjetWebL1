@@ -2,13 +2,17 @@
 function move_menu_sandwich()
 {
   //On change la classe "menu_sandwich" en "move_menu" (problème avec l'ajout de classe à regler)
-  document.getElementById("menu_sandwich").className = "sandwich move_menu";
+  var sandwich = document.getElementById("menu_sandwich");
+  sandwich.style.transform.translateX = '0px';
+  sandwich.style.transform.transition = '300ms all ease-in-out';
 }
 
 //même fonctionnement que précedemment en sens inverse, si l'on clique sur la croix
 function close_menu_sandwich()
 {
-  document.getElementById("menu_sandwich").className = "sandwich";
+  var sandwich = document.getElementById("menu_sandwich");
+  sandwich.style.transform.translateX = '-275px';
+  sandwich.style.transform.transition = '300ms all ease-in-out';
 }
 
 /* pour les changement de thèmes */
@@ -31,7 +35,7 @@ function refresh() {
 
 function getNbLines() {
   var saisie = document.getElementById("textarea_cahier_multimedia");
-  var pulications = document.getElementById("publications_cahier_multimedia");
+  var publications = document.getElementById("publications_cahier_multimedia");
   publications.value = saisie.nb_max;
 }
 

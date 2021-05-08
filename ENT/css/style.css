@@ -62,14 +62,13 @@
     justify-content: space-between;
     text-align: left;
     padding-left: 10px;
-    transition: 300ms all ease-in-out;
     z-index: 2;
     transform: translateX(-275px);
     }
     
-  .move_menu {
+  /*.move_menu {
     transform: translateX(0px);
-    }
+    }*/
 
   .menu_cross {
     padding-top: 10px;
