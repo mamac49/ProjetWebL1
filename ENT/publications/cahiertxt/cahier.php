@@ -51,6 +51,20 @@ if (isset($_POST['ValideAdd'])) {
 
 $semaine = array("Lundi", "Mardi", "Jeudi", "Vendredi");
 
+$matiere = array();
+$matiere["Maths"] = "fas fa-square-root-alt";
+$matiere["Francais"] = "fas fa-book";
+$matiere["Sciences"] = "fas fa-flask";
+$matiere["Espace"] = "fas fa-map";
+$matiere["Temps"] = "fas fa-clock";
+$matiere["Musique"] = "fas fa-music";
+$matiere["Arts"] = "fas fa-palette";
+$mmatiere["Anglais"] = "fas fa-cloud-rain";
+$matiere["EPS"] = "fas fa-biking";
+$matiere["Contes"] = "fas fa-dragon";
+$matiere["Rituels"] = "fas fa-chalkboard-teacher";
+$matiere["Educ"] = "fas fa-school";
+
 if ($_SESSION["Connected"] == "True") {
 ?>
 
@@ -98,9 +112,9 @@ if ($_SESSION["Connected"] == "True") {
           <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
             for ($i=1; $i <= NbDevoir($jour, "GS"); $i++) {
               $info = AfficherDevoir($jour, "GS");
-              $matiere = $info['matiere'];
+              $matiereP = $info['matiere'];
               $consigne = $info['consigne']; ?>
-              <li class="texte"><?php echo $matiere . " : " . $consigne; ?></li>
+              <li class="texte"><?php echo "<i class="<?php echo $matiere[$matiereP] ?>"></i>" $matiereP . " : " . $consigne; ?></li>
             <?php }} ?>
 
           <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
