@@ -6,7 +6,7 @@ include '../../fonc.php';
 function DevoirID() {
   $link = dbConnect();
 
-  $sql = "SELECT `iduser` FROM `users`";
+  $sql = "SELECT `idtxt` FROM `cahiertxt`";
   if ($result = mysqli_query($link, $sql)) {
     $listID = mysqli_fetch_array($result);
   }
