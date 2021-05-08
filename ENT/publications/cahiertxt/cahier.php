@@ -4,7 +4,7 @@ session_start();
 include '../../fonc.php';
 
 function DevoirID() {
-  $link = $dbConnect;
+  $link = dbConnect();
 
   $sql = "SELECT * FROM `cahiertxt`";
   if ($resultat = mysqli_query($link, $sql)) {
