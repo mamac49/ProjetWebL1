@@ -61,16 +61,16 @@ if ($_SESSION["Connected"] == true) {
 
 <?php
 
-  if (isset($_POST['create'])) {
-    /*$idpublication = "NONE";
+  /*if (isset($_POST['create'])) {
+    $idpublication = "NONE";
     $titre = "NONE" ;
     $texte = "NONE" ;
     $image = "NONE" ;
     $date = "NONE" ;
     $nature = "NONE" ;
     $iduser = "NONE" ;
-    echo "<script>createLine();</script>";*/
-  }
+    echo "<script>createLine();</script>";
+  }*/
 
 }
 ?>
