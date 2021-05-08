@@ -18,8 +18,8 @@ function DevoirID() {
     $sql = "SELECT * FROM `cahiertxt`";
     if ($resultat = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($resultat);
-      $listID[$i] = $row['idtxt']
-      $i++
+      $listID[$i] = $row['idtxt'];
+      $i++;
     }
   }
 }
