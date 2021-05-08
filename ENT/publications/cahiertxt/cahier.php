@@ -88,14 +88,14 @@ if ($_SESSION["Connected"] == "True") {
         <div id="<?php echo $jour; ?>" class="tabcontent">
           <h3><?php echo $jour; ?></h3>
           <ul>
-          <?php if ($_SESSION["Classe"] == "GS" or $_SESSION["Admin"] == True) {
+          <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
             for ($i=0; $i < NbDevoir($jour, "GS"); $i++) {
               $matiere = AfficherDevoir($jour, "GS")['matiere'];
               $consigne = AfficherDevoir($jour, "GS")['consigne']; ?>
               <li><?php echo $matiere . ":" . $consigne; ?></li>
             <?php }} ?>
 
-          <?php if ($_SESSION["Classe"] == "CP" or $_SESSION["Admin"] == True) {
+          <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
             for ($i=0; $i < NbDevoir($jour, "CP"); $i++) {
               $matiere = AfficherDevoir($jour, "CP")['matiere'];
               $consigne = AfficherDevoir($jour, "CP")['consigne']; ?>
