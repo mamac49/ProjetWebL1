@@ -76,22 +76,22 @@ function addLine() {
   publications.innerHTML = publications.innerHTML + template.innerHTML;
 }
 
-function addLine() {
+function addText() {
   /*var saisie = document.getElementById("textareaCahierMultimedia");
   var nb_max = saisie.nb_max();
   var nb = saisie.nb();*/
   
   var textPublication = document.getElementById("publications_cahier_multimedia");
-  var textTemplate = document.getElementById("textTemplate");
+  var textTemplate = document.getElementById("template_cahier_multimedia");
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
   textPublication.innerHTML = textPublication.innerHTML + textTemplate.innerHTML;
 }
 
-function addLine() {
+function addImage() {
   /*var saisie = document.getElementById("textareaCahierMultimedia");
   var nb_max = saisie.nb_max();
   var nb = saisie.nb();*/
-  
+
   var imagePublication = document.getElementById("publications_cahier_multimedia");
   var imageTemplate = document.getElementById("imageTemplate");
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
