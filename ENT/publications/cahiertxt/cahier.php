@@ -4,14 +4,16 @@ session_start();
 include '../../fonc.php';
 
 function DevoirID() {
+  function DevoirID() {
   $link = dbConnect();
 
   $sql = "SELECT `idtxt` FROM `cahiertxt`";
-  if ($result = mysqli_query($link, $sql)) {
-    $listID = mysqli_fetch_array($result);
+  $result = $link->query($sql)
+  if ($result) {
+    $listID = $result->fetch_array(MYSQLI_NUM);
   }
-
   return $listID;
+}
 }
 
 function AfficherDevoir($jour, $classe) {
