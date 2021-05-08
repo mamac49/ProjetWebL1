@@ -90,7 +90,7 @@ if ($_SESSION["Connected"] == "True") {
           <ul>
           <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
             for ($i=0; $i < NbDevoir($jour, "GS"); $i++) {
-              $info = AfficherDevoir($jour, "GS")
+              $info = AfficherDevoir($jour, "GS");
               $matiere = $info['matiere'];
               $consigne = $info['consigne']; ?>
               <li><?php echo $matiere . ":" . $consigne; ?></li>
@@ -98,7 +98,7 @@ if ($_SESSION["Connected"] == "True") {
 
           <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
             for ($i=0; $i < NbDevoir($jour, "CP"); $i++) {
-              $info = AfficherDevoir($jour, "CP")
+              $info = AfficherDevoir($jour, "CP");
               $matiere = $info['matiere'];
               $consigne = $info['consigne']; ?>
               <li><?php echo $matiere . ":" . $consigne; ?></li>
