@@ -6,7 +6,7 @@ include '../../fonc.php';
 function AfficherDevoir($jour, $classe) {
   $link = dbConnect();
 
-  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`=$classe)";
+  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`=$classe);";
   if ($resultat = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($resultat);
     mysqli_free_result($resultat);
@@ -16,7 +16,7 @@ function AfficherDevoir($jour, $classe) {
 function NbDevoir($jour, $classe) {
   $link = dbConnect();
 
-  $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`=$classe)";
+  $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`=$classe);";
   if ($resultat = mysqli_query($link, $sql)) {
     $nb = mysqli_num_rows($resultat);
     mysqli_free_result($resultat);
@@ -28,7 +28,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   $link = dbConnect();
   mysqli_query($link, "FLUSH `users`");
 
-  $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
+  $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe');";
   if (mysqli_query($link, $sql)) {
     echo "succès";
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
