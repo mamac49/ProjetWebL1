@@ -48,11 +48,11 @@ if ($_SESSION["Connected"] == true) {
 </div>
 <!--publication liée à la bdd-->
 <textTemplate id="textTemplate">
-  <textarea class="templateClass" id="template_cahier_multimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
+  <textarea id="template_cahier_multimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 </textTemplate>
 
 <imageTemplate id="imageTemplate">
-  <input class="templateClass" type="templateFile" id="templateFile" name="templateImage" accept="image/*" required>
+  <input type="templateFile" id="template_cahier_multimedia" name="templateImage" accept="image/*" required>
 </imageTemplate>
 
 
