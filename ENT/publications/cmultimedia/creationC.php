@@ -51,8 +51,8 @@ if ($_SESSION["Connected"] == true) {
         <input class="templateCahierMulimedia" type="image_template_cahier_multimedia" id="template_cahier_multimedia" name="templateImage" accept="image/*" required>
       -->
     </ul>
-    <button name="createText">Ajouter une case</button>
-    <button name="createImage">Ajouter une image</button>
+    <button class="bouton" onclick="addText()">Ajouter une case</button>
+    <button class="bouton" onclick="addImage()">Ajouter une image</button>
     <!--<button name="create" class="bouton" onclick="addVideo()">Ajouter une case</button>-->
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
