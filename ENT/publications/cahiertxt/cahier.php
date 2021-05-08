@@ -22,6 +22,7 @@ function DevoirID() {
       $i++;
     }
   }
+  return $listID;
 }
 
 function AfficherDevoir($jour, $classe) {
