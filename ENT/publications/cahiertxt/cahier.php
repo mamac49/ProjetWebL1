@@ -92,7 +92,7 @@ if ($_SESSION["Connected"] == "True") {
           <h3><?php echo $jour; ?></h3>
           <ul>
           <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
-            for ($i=0; $i < NbDevoir($jour, "GS"); $i++) {
+            for ($i=1; $i <= NbDevoir($jour, "GS"); $i++) {
               $info = AfficherDevoir($jour, "GS");
               $matiere = $info['matiere'];
               $consigne = $info['consigne']; ?>
