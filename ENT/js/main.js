@@ -19,24 +19,12 @@
 On lance une fonction si l'on clique sur la balise p*/
 function move_menu_sandwich()
 {
-  var p = document.getElementById("sandwich_button");
-  p.onclick = move_sandwich;
-};
-
-//On change la classe "menu_sandwich" en "move_menu" (problème avec l'ajout de classe à regler)
-function move_sandwich()
-{
+  //On change la classe "menu_sandwich" en "move_menu" (problème avec l'ajout de classe à regler)
   document.getElementById("menu_sandwich").className = "move_menu";
 }
 
 //même fonctionnement que précedemment en sens inverse, si l'on clique sur la croix
 function close_menu_sandwich()
-{
-  var p = document.getElementById("sandwich_cross");
-  p.onclick = close_sandwich;
-};
-
-function close_sandwich()
 {
   document.getElementById("menu_sandwich").className = "sandwich";
 }

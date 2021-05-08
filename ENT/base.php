@@ -16,7 +16,7 @@ if ($_SESSION['theme'] == 1) {
   <!--menu sandwich (sandwich) pour pouvoir navigueur entre les différentes pages-->
   <nav class="sandwich" id="menu_sandwich">
     <ul class="menuListe">
-      <li><a class="menu_cross" id="sandwich_cross"><i class="fas fa-times icone"></i></a></li>
+      <li><a class="menu_cross" id="sandwich_cross" onclick="close_menu_sandwich()"><i class="fas fa-times icone"></i></a></li>
       <li><a class="menu_link" href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php"><div class="textesandwich"><i class="fas fa-book icone"></i>Cahiers multimédias</div></a></li>
       <li><hr class="hrsandwich"></li>
       <li><a class="menu_link" href="/Projetwebl1/ENT/publications/blog/blog.php"><div class="textesandwich"><i class="fas fa-book-open icone"></i>Blog</div></a></li>
@@ -46,7 +46,7 @@ if ($_SESSION['theme'] == 1) {
   <div class="site_pusher">
     <header>
       <!--bouton cliquable pour le menu sandwich-->
-      <span class="sandwich_icon" id="sandwich_button"><i class="fas fa-bars icone"></i></span>
+      <span class="sandwich_icon" id="sandwich_button" onclick="move_menu_sandwich()"><i class="fas fa-bars icone"></i></span>
       <!--titre avec un style d'écriture à la craie-->
       <div class="Title">
         <h1 class="craie">Ecole Millocheau</h1>
