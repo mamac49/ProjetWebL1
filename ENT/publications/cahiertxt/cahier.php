@@ -6,34 +6,38 @@ include '../../fonc.php';
 function AfficherDevoir($jour, $classe) {
   $link = dbConnect();
 
-  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`=$classe);";
+  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe');";
   if ($resultat = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($resultat);
     mysqli_free_result($resultat);
+    mysqli_close($link);
     return $row;
   }
 }
 function NbDevoir($jour, $classe) {
   $link = dbConnect();
 
-  $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`=$classe);";
+  $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe');";
   if ($resultat = mysqli_query($link, $sql)) {
     $nb = mysqli_num_rows($resultat);
     mysqli_free_result($resultat);
+    mysqli_close($link);
     return $nb;
   }
 }
 
 function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   $link = dbConnect();
-  mysqli_query($link, "FLUSH `cahiertxt`");
+  //mysqli_query($link, "FLUSH `cahiertxt`");
 
   $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe');";
   if (mysqli_query($link, $sql)) {
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
     echo "succès";
+    mysqli_close($link);
   } else {
     echo mysqli_error($link);
+    mysqli_close($link);
   }
 }
 
@@ -96,7 +100,7 @@ if ($_SESSION["Connected"] == "True") {
               $info = AfficherDevoir($jour, "GS");
               $matiere = $info['matiere'];
               $consigne = $info['consigne']; ?>
-              <li class="texte"><?php echo $matiere . ":" . $consigne; ?> Bonjour</li>
+              <li class="texte"><?php echo $matiere . " : " . $consigne; ?></li>
             <?php }} ?>
 
           <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
@@ -104,7 +108,7 @@ if ($_SESSION["Connected"] == "True") {
               $info = AfficherDevoir($jour, "CP");
               $matiere = $info['matiere'];
               $consigne = $info['consigne']; ?>
-              <li class="texte"><?php echo $matiere . ":" . $consigne; ?> Hello World</li>
+              <li class="texte"><?php echo $matiere . " : " . $consigne; ?></li>
             <?php }} ?>
           </ul>
         </div>
