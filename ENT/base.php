@@ -43,7 +43,7 @@ if ($_SESSION['theme'] == 1) {
       <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="textesandwich"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
     </ul>
   </nav>
-  <div class="site_pusher">
+  <div class="site_content">
     <header>
       <!--bouton cliquable pour le menu sandwich-->
       <span class="sandwich_icon" id="sandwich_button" onclick="move_menu_sandwich()"><i class="fas fa-bars icone"></i></span>
