@@ -10,6 +10,7 @@ function AfficherDevoir($jour, $classe) {
   if ($resultat = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($resultat);
     mysqli_free_result($resultat);
+    mysqli_close($link);
     return $row;
   }
 }
@@ -20,6 +21,7 @@ function NbDevoir($jour, $classe) {
   if ($resultat = mysqli_query($link, $sql)) {
     $nb = mysqli_num_rows($resultat);
     mysqli_free_result($resultat);
+    mysqli_close($link);
     return $nb;
   }
 }
@@ -32,8 +34,10 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   if (mysqli_query($link, $sql)) {
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
     echo "succès";
+    mysqli_close($link);
   } else {
     echo mysqli_error($link);
+    mysqli_close($link);
   }
 }
 
