@@ -58,19 +58,6 @@ if ($_SESSION["Connected"] == true) {
   </form>
 </div>
 
-<!--publication liée à la bdd-->
-<textTemplate id="textTemplate">
-  <textarea class="templateCahierMulimedia" id="text_template_cahier_multimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
-</textTemplate>
-
-<imageTemplate id="imageTemplate">
-  <input class="templateCahierMulimedia" type="image_template_cahier_multimedia" id="template_cahier_multimedia" name="templateImage" accept="image/*" required>
-</imageTemplate>
-
-<!--zone de texte éditable
-<textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=1 required></textarea>
--->
-
 <?php
 }
 ?>

@@ -50,14 +50,12 @@ function getNbLines() {
 
 function addText() {
   var textPublication = document.getElementById("publications_cahier_multimedia");
-  var textTemplate = document.getElementById("text_template_cahier_multimedia");
   textPublication.insertAdjacentHTML("afterbegin",
   '<textarea class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" name="texte_x" rows="8" cols="80" resize="none" create=false required></textarea>'  );
 }
 
 function addImage() {
   var imagePublication = document.getElementById("publications_cahier_multimedia");
-  var imageTemplate = document.getElementById("image_template_cahier_multimedia");
-  textPublication.insertAdjacentHTML("afterbegin",
+  imagePublication.insertAdjacentHTML("afterbegin",
   '<input class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" name="image_x" accept="image/*" required>');
 }
