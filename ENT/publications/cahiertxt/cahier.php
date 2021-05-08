@@ -13,8 +13,8 @@ function DevoirID() {
     $len = mysqli_num_rows($result);
   }
 
-  $i = 1
-  while (count($listID) <= $len) {
+  $i = 1;
+  while (count($listID) < $len) {
     $sql = "SELECT * FROM `cahiertxt`";
     if ($resultat = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($resultat);
