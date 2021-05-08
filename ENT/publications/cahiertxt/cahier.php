@@ -134,7 +134,7 @@ if ($_SESSION["Connected"] == "True") {
         if ($_SESSION["Admin"] == True) {
       ?>
         <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
-        <button type="button" onclick="DeleteWork" name="button">Supprimer des devoirs</button>
+        <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
       <?php
       }
       ?>
@@ -177,6 +177,17 @@ if ($_SESSION["Connected"] == "True") {
           </select>
           <h3>Intitulé</h3>
           <p><input type="text" name="consigne"></p>
+          <p><input type="submit" name="ValiderAdd" value="Ajouter"></p>
+        </div>
+      </form>
+    </div>
+
+    <div id="RemoveHW" class="modal">
+
+      <form class="modal-content animate" action="cahier.php" method="post">
+        <span onclick="document.getElementById('RemoveHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+        <div class="container">
+
           <p><input type="submit" name="ValiderAdd" value="Ajouter"></p>
         </div>
       </form>
