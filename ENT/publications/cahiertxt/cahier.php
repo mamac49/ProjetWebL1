@@ -42,7 +42,7 @@ if (isset($_POST['ValideAdd'])) {
   AjoutDevoir(securisation($_POST['classe']), securisation($_POST['matiere']), securisation($_POST['consigne']), securisation($_POST['jour']));
 }
 
-$semaine = array("Lundi", "Mardi", "Jeudi", "Vendredi")
+$semaine = array("Lundi", "Mardi", "Jeudi", "Vendredi");
 
 if ($_SESSION["Connected"] == "True") {
 ?>
