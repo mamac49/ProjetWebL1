@@ -40,14 +40,20 @@ if ($_SESSION["Connected"] == true) {
       <!--<textarea class="textareaId" id="textareaCahierMultimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
     </ul>
-    <button name="create" class="bouton" onclick="createLine()">Ajouter une case</button>
+    <button name="create" class="bouton" onclick="addLine()">Ajouter une case</button>
+    <button name="create" class="bouton" onclick="addImage()">Ajouter une case</button>
+    <!--<button name="create" class="bouton" onclick="addVideo()">Ajouter une case</button>-->
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 </div>
 <!--publication liée à la bdd-->
-<template id="template">
+<textTemplate id="textTemplate">
   <textarea class="textareaId" id="template_cahier_multimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
-</template>
+</textTemplate>
+
+<imageTemplate id="imageTemplate">
+  <input type="templateFile" id="templateFile" name="templateImage" accept="image/*" required>
+</imageTemplate>
 
 
 <!--zone de texte éditable

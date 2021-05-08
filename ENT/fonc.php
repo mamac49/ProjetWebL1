@@ -96,6 +96,7 @@ function titre($x) {
   }
 }
 
+
 function adPublication($idpublication, $titre, $texte, $image, $date, $nature, $iduser) {
   $link = dbConnect();
   mysqli_query($link, "FLUSH `Publications`");
@@ -104,7 +105,7 @@ function adPublication($idpublication, $titre, $texte, $image, $date, $nature, $
   $Publications = nombre() + 1;*/
 
   $sql = "INSERT INTO `Publications` (`idpublication`, `titre`, `texte`, `image`, `date`, `nature`, `iduser`) VALUES ($idpublication, '$titre', '$texte', $image, '$date', $nature, $iduser);";
-  /*Peut être utilisable pour image (voir avec mattéo ^^)
+  /*Peut être utilisable pour image (voir avec mattéo ^^)*/
   if (mysqli_query($link, $sql)) {
     $pp = mysqli_real_escape_string($link, $pp);
     $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
@@ -118,7 +119,7 @@ function adPublication($idpublication, $titre, $texte, $image, $date, $nature, $
     }
   } else {
     echo mysqli_error($link);
-  }*/
+  }
   mysqli_close($link);
 }
 
