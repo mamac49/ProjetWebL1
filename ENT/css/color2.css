@@ -40,5 +40,5 @@ html, ul, h4, .Title, .taoki, .burger_icon, .menu_cross, .menu_link, .retour, .l
 }
 
 html {
-  background: radial-gradient(ellipse at 100%, rgb(0,0,0), rgb(10,10,10));
+  background: radial-gradient(ellipse at 100%, rgb(255,255,255), rgb(200,200,200));
 }
