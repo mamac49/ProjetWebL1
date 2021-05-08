@@ -3,6 +3,16 @@ session_start();
 
 include '../../fonc.php';
 
+function DevoirID() {
+  $link = $dbConnect;
+
+  $sql = "SELECT * FROM `cahiertxt`";
+  if ($resultat = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($resultat);
+    return $row;
+  }
+}
+
 function AfficherDevoir($jour, $classe) {
   $link = dbConnect();
 
@@ -187,8 +197,15 @@ if ($_SESSION["Connected"] == "True") {
       <form class="modal-content animate" action="cahier.php" method="post">
         <span onclick="document.getElementById('RemoveHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
+          <select name="devoirs">
+            <p><?php var_dump(DevoirID()); ?> </p>
+            <?php foreach ($devoirID as $i) { ?>
+              <option value="$i"><?php echo AfficherDevoir($i)['consigne'] ?></option>
+            <?php } ?>
 
-          <p><input type="submit" name="ValiderAdd" value="Ajouter"></p>
+          </select>
+
+          <p><input type="submit" name="ValiderRem" value="Supprimer"></p>
         </div>
       </form>
     </div>
