@@ -6,10 +6,21 @@ include '../../fonc.php';
 function DevoirID() {
   $link = dbConnect();
 
-  $sql = "SELECT * FROM `cahiertxt`";
-  if ($resultat = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_array($resultat);
-    return $row['idtxt'];
+  $listID = array();
+
+  $sql = "SELECT `iduser` FROM `users`";
+  if ($result = mysqli_query($link, $sql)) {
+    $len = mysqli_num_rows($result);
+  }
+
+  $i = 1
+  while (count($listID) <= $len) {
+    $sql = "SELECT * FROM `cahiertxt`";
+    if ($resultat = mysqli_query($link, $sql)) {
+      $row = mysqli_fetch_array($resultat);
+      $listID[$i] = $row['idtxt']
+      $i++
+    }
   }
 }
 
