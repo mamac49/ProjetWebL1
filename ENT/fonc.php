@@ -48,13 +48,13 @@ function nombre() {
   $link = dbConnect();
   $sql = "SELECT `iduser` FROM `users`";
   $result = mysqli_query($link, $sql);
-  $cahiersIds = array();
+  $IDUser = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $cahiersIds[] = $row;
+      $IDUser[] = $row;
     }
   }
-  return $cahiersIds;
+  return $IDUser;
 }
 
 function info($x) {
