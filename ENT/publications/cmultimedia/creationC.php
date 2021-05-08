@@ -4,7 +4,6 @@ session_start();
 error_reporting(E_ALL);
 
 include ("../../fonc.php");
-include ("../../base.php");
 
 /*if (isset($_POST['Valider'])) {
   $texte = array();
@@ -12,7 +11,7 @@ include ("../../base.php");
   for ($i = 1 ; $x < $len ; $i++) {
     $texte[$i] = $_POST[$i];
   }
-}*/
+}
 if (isset($_POST['Valider'])) {
   $idpublication = "NONE";
   $titre = "NONE" ;
@@ -22,7 +21,7 @@ if (isset($_POST['Valider'])) {
   $nature = "NONE" ;
   $iduser = "NONE" ;
   //echo "<script>createLine();</script>";
-}
+}*/
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -39,6 +38,9 @@ if ($_SESSION["Connected"] == true) {
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
+  <?php
+      include ("../../base.php");
+  ?>
 <!--ajout de la méthode PUT-->
 <div class="Center_adap">
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
