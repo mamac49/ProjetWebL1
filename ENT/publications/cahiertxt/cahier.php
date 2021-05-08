@@ -19,7 +19,7 @@ function DevoirID() {
     if ($resultat = mysqli_query($link, $sql)) {
       $row = mysqli_fetch_array($resultat);
       $listID[$i] = $row['idtxt']
-      $i++
+      $i++;
     }
   }
 }
