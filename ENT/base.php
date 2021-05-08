@@ -10,10 +10,6 @@ if ($_SESSION['theme'] == 1) {
 }
 ?>
 
-<head>
-  <script src="/Projetwebl1/ENT/js/scroll.js"></script>
-</head>
-
 <body onload="move_menu_burger(); close_menu_burger();">
 
 <div class="site_container">
