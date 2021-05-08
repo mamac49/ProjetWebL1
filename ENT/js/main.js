@@ -52,13 +52,14 @@ function addText() {
   var textPublication = document.getElementById("publications_cahier_multimedia");
   var textTemplate = document.getElementById("text_template_cahier_multimedia");
   textTemplate.className = "texteCahierMulimedia";
-  textPublication.innerHTML = textPublication.innerHTML + textTemplate.innerHTML;
-
+  textPublication.insertAdjacentHTML("beforeend",
+  '<textarea class="templateCahierMulimedia" id="text_template_cahier_multimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>'  );
 }
 
 function addImage() {
   var imagePublication = document.getElementById("publications_cahier_multimedia");
   var imageTemplate = document.getElementById("image_template_cahier_multimedia");
   textTemplate.className = "imageCahierMulimedia";
-  imagePublication.innerHTML = imagePublication.innerHTML + imageTemplate.innerHTML;
+  textPublication.insertAdjacentHTML("beforeend",
+  '<input class="templateCahierMulimedia" type="image_template_cahier_multimedia" id="template_cahier_multimedia" name="templateImage" accept="image/*" required>');
 }
