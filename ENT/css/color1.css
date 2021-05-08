@@ -10,15 +10,15 @@
 }
 
 .Anniversaire{
-  background-color: red;
+  background-color: darkred;
 }
 
 .raccourciM{
-  background-color: green;
+  background-color: darkgreen;
 }
 
 .raccourciB{
-  background-color: yellow;
+  background-color: rgb(150,120,0);
 }
 
 .Center, .site {
