@@ -139,12 +139,18 @@ if ($_SESSION["Connected"] == "True") {
           </p>
           <h3>Matière</h3>
           <select name="matiere">
-            <option value="francais">Français</option>
-            <option value="maths">Mathématiques</option>
-            <option value="science">Science</option>
-            <option value="histoire">Histoire</option>
-            <option value="geo">Géographie</option>
-            <option value="autre">Autre</option>
+            <option value="Francais">Français</option>
+            <option value="Mathematiques">Mathématiques</option>
+            <option value="Science">Science</option>
+            <option value="Espace">Espace</option>
+            <option value="Temps">Temps</option>
+            <option value="Musique">Musique</option>
+            <option value="Arts">Arts</option>
+            <option value="Anglais">Anglais</option>
+            <option value="EPS">EPS</option>
+            <option value="Contes">Contes</option>
+            <option value="Rituels">Rituels</option>
+            <option value="Education civique">Education civique</option>
           </select>
           <h3>Intitulé</h3>
           <p><input type="text" name="consigne"></p>
