@@ -71,6 +71,6 @@ if ($_SESSION["Connected"] == true) {
     $iduser = "NONE" ;
     echo "<script>createLine();</script>";*/
   }
-  
+
 }
 ?>
