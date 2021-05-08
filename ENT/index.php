@@ -67,10 +67,10 @@ if ($_SESSION["Connected"] == "True") {
       <!--liens vers le cahier multimédia et le blog (à voir si l'on rajoute un aperçu sur la page d'accueil)-->
       <div class="ligne">
           <div class="raccourciM">
-            <a href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php" class="shortcut"><i class="fas fa-book racicone"></i><br><p>Cahiers Multimédia</p></a>
+            <a href="/Projetwebl1/ENT/publications/cmultimedia/cmedia.php" class="shortcut"><i class="fas fa-book racicone"></i><p>Cahiers Multimédia</p></a>
           </div>
           <div class="raccourciB">
-            <a href="/Projetwebl1/ENT/publications/blog/blog.php" class="shortcut"><i class="fas fa-book-open racicone"></i><br><p>Blogs</p></a>
+            <a href="/Projetwebl1/ENT/publications/blog/blog.php" class="shortcut"><i class="fas fa-book-open racicone"></i><p>Blogs</p></a>
           </div>
       </div>
     </div>

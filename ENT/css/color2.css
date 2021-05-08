@@ -5,7 +5,7 @@
   --second-color: rgba(168, 168, 168, 0.74);
 }
 
-.move_menu, .burger, .Login, .qwant, /*input[type=button]*/, .bouton, .Login  {
+.move_menu, .burger, .Login, .qwant, input[type=button], .bouton, .Login  {
   background-color: var(--main-color);
 }
 
@@ -28,7 +28,6 @@
 .FormCrea {
   background-color: var(--second-color);
 }
-
 
 .file, .IcoBook, .Copybook i {
   color: var(--main-color);
