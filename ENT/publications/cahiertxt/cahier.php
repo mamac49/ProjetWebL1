@@ -4,7 +4,7 @@ session_start();
 include '../../fonc.php';
 
 function DevoirID() {
-  $link = $dbConnect;
+  $link = dbConnect();
 
   $sql = "SELECT * FROM `cahiertxt`";
   if ($resultat = mysqli_query($link, $sql)) {
@@ -197,8 +197,8 @@ if ($_SESSION["Connected"] == "True") {
       <form class="modal-content animate" action="cahier.php" method="post">
         <span onclick="document.getElementById('RemoveHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
+          <p><?php var_dump(DevoirID()); ?> </p>
           <select name="devoirs">
-            <p><?php var_dump(DevoirID()); ?> </p>
             <?php foreach ($devoirID as $i) { ?>
               <option value="$i"><?php echo AfficherDevoir($i)['consigne'] ?></option>
             <?php } ?>
