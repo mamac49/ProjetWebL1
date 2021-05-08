@@ -24,8 +24,6 @@ function NbDevoir($jour, $classe) {
   }
 }
 
-
-
 function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   $link = dbConnect();
   mysqli_query($link, "FLUSH `users`");
@@ -40,7 +38,11 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
 }
 
 if (isset($_POST['ValideAdd'])) {
-  AjoutDevoir(securisation($_POST['classe']), securisation($_POST['matiere']), securisation($_POST['consigne']), securisation($_POST['jour']));
+  $classe = securisation($_POST['classe']);
+  $matiere = securisation($_POST['matiere']);
+  $consigne = securisation($_POST['consigne']);
+  $jour = securisation($_POST['jour']);
+  AjoutDevoir($classe, $matiere, $consigne, $jour);
 }
 
 $semaine = array("Lundi", "Mardi", "Jeudi", "Vendredi");
