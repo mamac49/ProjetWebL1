@@ -13,6 +13,18 @@ include ("../../base.php");
     $texte[$i] = $_POST[$i];
   }
 }*/
+if (isset($_POST['Valider'])) {
+  $idpublication = "NONE";
+  $titre = "NONE" ;
+  $texte = "NONE" ;
+  $image = "NONE" ;
+  $date = "NONE" ;
+  $nature = "NONE" ;
+  $iduser = "NONE" ;
+  //echo "<script>createLine();</script>";
+}
+
+}
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -62,16 +74,5 @@ if ($_SESSION["Connected"] == true) {
 
 <?php
 
-  if (isset($_POST['Valider'])) {
-    $idpublication = "NONE";
-    $titre = "NONE" ;
-    $texte = "NONE" ;
-    $image = "NONE" ;
-    $date = "NONE" ;
-    $nature = "NONE" ;
-    $iduser = "NONE" ;
-    echo "<script>createLine();</script>";
-  }
 
-}
 ?>
