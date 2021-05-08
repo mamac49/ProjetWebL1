@@ -204,10 +204,10 @@ if ($_SESSION["Connected"] == "True") {
           <select name="devoirs">
             <?php foreach (DevoirID() as $i) {
                     foreach ($semaine as $jour) {
-                      if (isset(AfficherDevoir($jour, "GS"))) { ?>
+                      if (null!==AfficherDevoir($jour, "GS")) { ?>
                         <option value="$i"><?php echo AfficherDevoir($jour, "GS")['consigne'] ?></option>
                       <?php }
-                      if (isset(AfficherDevoir($jour, "CP"))) { ?>
+                      if (null!==AfficherDevoir($jour, "CP")) { ?>
               <option value="$i"><?php echo AfficherDevoir($jour, "CP")['consigne'] ?></option>
             <?php }}} ?>
 
