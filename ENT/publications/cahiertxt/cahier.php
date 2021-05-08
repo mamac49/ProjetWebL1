@@ -11,8 +11,8 @@ function AfficherDevoir($jour, $classe) {
     $row = mysqli_fetch_array($resultat);
     mysqli_free_result($resultat);
     return $row;
+  }
 }
-
 function NbDevoir($jour, $classe) {
   $link = dbConnect();
 
@@ -23,7 +23,7 @@ function NbDevoir($jour, $classe) {
     return $nb;
   }
 }
-}
+
 
 
 function AjoutDevoir($classe, $matiere, $consigne, $jour) {
