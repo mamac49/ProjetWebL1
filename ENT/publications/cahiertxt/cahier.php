@@ -90,15 +90,17 @@ if ($_SESSION["Connected"] == "True") {
           <ul>
           <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
             for ($i=0; $i < NbDevoir($jour, "GS"); $i++) {
-              $matiere = AfficherDevoir($jour, "GS")['matiere'];
-              $consigne = AfficherDevoir($jour, "GS")['consigne']; ?>
+              $info = AfficherDevoir($jour, "GS")
+              $matiere = $info['matiere'];
+              $consigne = $info['consigne']; ?>
               <li><?php echo $matiere . ":" . $consigne; ?></li>
             <?php }} ?>
 
           <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
             for ($i=0; $i < NbDevoir($jour, "CP"); $i++) {
-              $matiere = AfficherDevoir($jour, "CP")['matiere'];
-              $consigne = AfficherDevoir($jour, "CP")['consigne']; ?>
+              $info = AfficherDevoir($jour, "CP")
+              $matiere = $info['matiere'];
+              $consigne = $info['consigne']; ?>
               <li><?php echo $matiere . ":" . $consigne; ?></li>
             <?php }} ?>
           </ul>
