@@ -6,8 +6,6 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 include ("../../base.php");
 
-
-
 /*if (isset($_POST['Valider'])) {
   $texte = array();
   $len = count($n);
@@ -61,7 +59,7 @@ if ($_SESSION["Connected"] == true) {
 
 <?php
 
-  /*if (isset($_POST['create'])) {
+  if (isset($_POST['create'])) {
     $idpublication = "NONE";
     $titre = "NONE" ;
     $texte = "NONE" ;
@@ -70,7 +68,7 @@ if ($_SESSION["Connected"] == true) {
     $nature = "NONE" ;
     $iduser = "NONE" ;
     echo "<script>createLine();</script>";
-  }*/
+  }
 
 }
 ?>
