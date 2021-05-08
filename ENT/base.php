@@ -52,7 +52,7 @@ if ($_SESSION['theme'] == 1) {
         <h1 class="craie">Ecole Millocheau</h1>
         <h2>GS - CP</h2>
       </div>
-      <img src="/Projetwebl1/ENT/data/logo_millocheau.png" alt="Logo de l'école millocheau" class="taoki">
+      <img src="/Projetwebl1/ENT/data/logo_millocheau.png" alt="Logo de l'école millocheau" class="logo_millocheau">
     </header>
   <footer id="navbar">
       <!--bouton cliquable pour retourner à l'accueil de l'ENT-->

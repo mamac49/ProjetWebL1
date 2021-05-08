@@ -62,7 +62,7 @@ if (isset($_SESSION["Connected"])) {
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="styleL.css">
     <link rel="stylesheet" href="../css/color1.css">
-    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
   </head>
   <body>

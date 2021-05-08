@@ -78,7 +78,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" href="styleAd.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
-    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <link rel="stylesheet" href="styleAd.css">
