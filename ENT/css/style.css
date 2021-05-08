@@ -36,10 +36,10 @@
   }
 
   .logo_millocheau {
-    /*width: 190px;
-    height: auto;*/
     display: block;
-  }
+    width: 190px;
+    height: auto;
+    }
 
   .burger_icon{
     padding: 10px;
