@@ -114,7 +114,7 @@ if ($_SESSION["Connected"] == "True") {
               $info = AfficherDevoir($jour, "GS");
               $matiereP = $info['matiere'];
               $consigne = $info['consigne']; ?>
-              <li class="texte"><?php echo "<i class='$matiere[$matiereP]'></i>" $matiereP . " : " . $consigne; ?></li>
+              <li class="texte"><?php echo "<i class='$matiere[$matiereP]'></i>" . $matiereP . " : " . $consigne; ?></li>
             <?php }} ?>
 
           <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
