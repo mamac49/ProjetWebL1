@@ -65,7 +65,7 @@ function getNbLines() {
   publications.value = saisie.nb_max;
 }
 
-function createLine() {
+function addLine() {
   /*var saisie = document.getElementById("textareaCahierMultimedia");
   var nb_max = saisie.nb_max();
   var nb = saisie.nb();*/
@@ -74,4 +74,26 @@ function createLine() {
   var template = document.getElementById("template");
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
   publications.innerHTML = publications.innerHTML + template.innerHTML;
+}
+
+function addLine() {
+  /*var saisie = document.getElementById("textareaCahierMultimedia");
+  var nb_max = saisie.nb_max();
+  var nb = saisie.nb();*/
+  
+  var textPublication = document.getElementById("publications_cahier_multimedia");
+  var textTemplate = document.getElementById("textTemplate");
+  /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
+  textPublication.innerHTML = textPublication.innerHTML + textTemplate.innerHTML;
+}
+
+function addLine() {
+  /*var saisie = document.getElementById("textareaCahierMultimedia");
+  var nb_max = saisie.nb_max();
+  var nb = saisie.nb();*/
+  
+  var imagePublication = document.getElementById("publications_cahier_multimedia");
+  var imageTemplate = document.getElementById("imageTemplate");
+  /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
+  imagePublication.innerHTML = imagePublication.innerHTML + imageTemplate.innerHTML;
 }
