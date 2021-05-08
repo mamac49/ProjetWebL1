@@ -82,7 +82,7 @@ function addText() {
   var nb = saisie.nb();*/
   
   var textPublication = document.getElementById("publications_cahier_multimedia");
-  var textTemplate = document.getElementById("textTemplate");
+  var textTemplate = document.getElementById("template_cahier_multimedia");
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
   textPublication.innerHTML = textPublication.innerHTML + textTemplate.innerHTML;
 }
