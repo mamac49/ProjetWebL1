@@ -43,6 +43,7 @@ if (isset($_POST['ValideAdd'])) {
   $consigne = securisation($_POST['consigne']);
   $jour = securisation($_POST['jour']);
   AjoutDevoir($classe, $matiere, $consigne, $jour);
+  echo "<script> document.getElementByClass('Center').style.background='pink' </script>";
 }
 
 $semaine = array("Lundi", "Mardi", "Jeudi", "Vendredi");
