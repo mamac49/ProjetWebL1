@@ -16,7 +16,7 @@ function AfficherDevoir($jour, $classe) {
 function NbDevoir($jour, $classe) {
   $link = dbConnect();
 
-  $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`=$classe);";
+  $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe');";
   if ($resultat = mysqli_query($link, $sql)) {
     $nb = mysqli_num_rows($resultat);
     mysqli_free_result($resultat);
@@ -92,7 +92,7 @@ if ($_SESSION["Connected"] == "True") {
           <h3><?php echo $jour; ?></h3>
           <ul>
           <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
-            echo $jour;
+            echo  NbDevoir($jour, "GS");
             for ($i=1; $i <= NbDevoir($jour, "GS"); $i++) {
               $info = AfficherDevoir($jour, "GS");
               $matiere = $info['matiere'];
