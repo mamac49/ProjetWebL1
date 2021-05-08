@@ -84,7 +84,7 @@ function addText() {
   var textPublication = document.getElementById("publications_cahier_multimedia");
   var textTemplate = document.getElementById("template_cahier_multimedia");
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
-  textTemplate.className = texteCahierMulimedia;
+  textTemplate.className = "texteCahierMulimedia";
   textPublication.innerHTML = textPublication.innerHTML + textTemplate.innerHTML;
 
 }
@@ -97,6 +97,6 @@ function addImage() {
   var imagePublication = document.getElementById("publications_cahier_multimedia");
   var imageTemplate = document.getElementById("imageTemplate");
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/
-  textTemplate.className = imageCahierMulimedia;
+  textTemplate.className = "imageCahierMulimedia";
   imagePublication.innerHTML = imagePublication.innerHTML + imageTemplate.innerHTML;
 }
