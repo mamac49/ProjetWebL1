@@ -28,7 +28,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   $link = dbConnect();
   mysqli_query($link, "FLUSH `users`");
 
-  $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`)";
+  $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
   if (mysqli_query($link, $sql)) {
     echo "succès";
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
