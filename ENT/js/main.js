@@ -47,13 +47,12 @@ function getNbLines() {
   var template = document.getElementById("template");
   publications.innerHTML = publications.innerHTML + template.innerHTML;
 }*/
-
+publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
 textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create=false required></textarea>';
 inputImage = '<input name="line_0" class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" accept="image/*" required>';
 line = 0;
 
 function addLine(lineType) {
-  var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
   if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
     publicationCahierMultimedia.insertAdjacentHTML("afterbegin", textArea);
   } else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
