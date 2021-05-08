@@ -91,6 +91,7 @@ if ($_SESSION["Connected"] == "True") {
         <div id="<?php echo $jour; ?>" class="tabcontent">
           <h3><?php echo $jour; ?></h3>
           <ul>
+            <li>Bonjour</li>
           <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
             for ($i=1; $i <= NbDevoir($jour, "GS"); $i++) {
               $info = AfficherDevoir($jour, "GS");
