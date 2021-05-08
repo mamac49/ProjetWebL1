@@ -35,7 +35,7 @@
       color: var(--font-color);
     }
   
-    .burger_icon{
+    .sandwich_icon{
       padding-top: 10px;
       padding-left: 10px;
       color: var(--font-color);
@@ -68,10 +68,10 @@
       margin-left: 15px;}
   
   
-    /*Menu burger horizontal si l'écran est trop petit*/
+    /*Menu sandwich horizontal si l'écran est trop petit*/
   
   
-    .burger {
+    .sandwich {
       position: absolute;
       left: 0;
       top: 0;
@@ -91,11 +91,11 @@
       flex-direction: row;
     }
   
-    .texteBurger, .hrBurger{
+    .textesandwich, .hrsandwich{
       display: none;
     }
   
-      /*Menu Burger*/
+      /*Menu sandwich*/
   
       ul {
         list-style: none;
@@ -209,7 +209,7 @@
       color: var(--font-color);
     }
   
-    .burger_icon{
+    .sandwich_icon{
       padding-top: 10px;
       padding-left: 10px;
       color: var(--font-color);
@@ -221,7 +221,7 @@
   }
   
   
-    /*Menu Burger*/
+    /*Menu sandwich*/
   
     .move_menu {
       position: absolute;
@@ -240,7 +240,7 @@
       transition-duration: 300ms;
     }
   
-    .burger {
+    .sandwich {
       position: absolute;
       left: 0;
       top: 0;
@@ -393,7 +393,7 @@
       color: var(--font-color);
     }
   
-    .burger_icon{
+    .sandwich_icon{
       padding-top: 10px;
       padding-left: 10px;
       color: var(--font-color);
@@ -426,10 +426,10 @@
       margin-left: 15px;}
   
   
-    /*Menu burger horizontal si l'écran est trop petit*/
+    /*Menu sandwich horizontal si l'écran est trop petit*/
   
   
-    .burger {
+    .sandwich {
       position: absolute;
       left: 0;
       top: 0;
@@ -449,11 +449,11 @@
       flex-direction: row;
     }
   
-    .texteBurger, .hrBurger{
+    .textesandwich, .hrsandwich{
       display: none;
     }
   
-      /*Menu Burger*/
+      /*Menu sandwich*/
   
       ul {
         list-style: none;

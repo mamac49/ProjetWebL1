@@ -1,15 +1,15 @@
 /*  Avec jQuery
 (function($){
 
-     Quand je clique sur l'icône hamburger je rajoute une classe au body
-    $('#burger_icon').click(function(e){
+     Quand je clique sur l'icône hamsandwich je rajoute une classe au body
+    $('#sandwich_icon').click(function(e){
         e.preventDefault();
-        $('burger').toggleClass('move_menu');
+        $('sandwich').toggleClass('move_menu');
     });
 
      Je veux pouvoir masquer le menu si on clique sur le cache
     $('#sitecache').click(function(e){
-        $('burger').removeClass('move_menu');
+        $('sandwich').removeClass('move_menu');
     })
 
 })(jQuery);*/
@@ -17,28 +17,28 @@
 /*Sans JQuery
 
 On lance une fonction si l'on clique sur la balise p*/
-function move_menu_burger()
+function move_menu_sandwich()
 {
-  var p = document.getElementById("burger_button");
-  p.onclick = move_burger;
+  var p = document.getElementById("sandwich_button");
+  p.onclick = move_sandwich;
 };
 
-//On change la classe "menu_burger" en "move_menu" (problème avec l'ajout de classe à regler)
-function move_burger()
+//On change la classe "menu_sandwich" en "move_menu" (problème avec l'ajout de classe à regler)
+function move_sandwich()
 {
-  document.getElementById("menu_burger").className = "move_menu";
+  document.getElementById("menu_sandwich").className = "move_menu";
 }
 
 //même fonctionnement que précedemment en sens inverse, si l'on clique sur la croix
-function close_menu_burger()
+function close_menu_sandwich()
 {
-  var p = document.getElementById("burger_cross");
-  p.onclick = close_burger;
+  var p = document.getElementById("sandwich_cross");
+  p.onclick = close_sandwich;
 };
 
-function close_burger()
+function close_sandwich()
 {
-  document.getElementById("menu_burger").className = "burger";
+  document.getElementById("menu_sandwich").className = "sandwich";
 }
 
 /* pour les changement de thèmes */

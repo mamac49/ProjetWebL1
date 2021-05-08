@@ -24,7 +24,7 @@ if ($_SESSION["Connected"] == true) {
     ?>
 
 
-  <body onload="move_menu_burger(); detect_click();">
+  <body onload="move_menu_sandwich(); detect_click();">
 
     <div class="site_container">
       <script src="menu_clic.js"></script>

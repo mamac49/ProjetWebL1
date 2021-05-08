@@ -41,7 +41,7 @@
     height: auto;
     }
 
-  .burger_icon{
+  .sandwich_icon{
     padding: 10px;
     font-size: 35px;
     width: 65px;
@@ -50,7 +50,7 @@
   }
 
 
-  /*Menu Burger*/
+  /*Menu sandwich*/
 
   .move_menu {
     position: absolute;
@@ -68,7 +68,7 @@
     z-index: 2;
   }
 
-  .burger {
+  .sandwich {
     position: absolute;
     left: 0;
     top: 0;
