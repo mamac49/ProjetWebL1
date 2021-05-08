@@ -47,6 +47,21 @@
 }
 
 .templateCahierMulimedia {
-
   display: none;
+}
+
+.texteCahierMulimedia {
+  display: block;
+  width: 50%;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageCahierMulimedia {
+  display: block;
+  width: 20%;
+  margin-top: 10px;
+  margin-right: auto;
+  margin-left: auto;
 }
