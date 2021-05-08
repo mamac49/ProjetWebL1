@@ -3,7 +3,7 @@ function move_menu_sandwich()
 {
   //On change la classe "menu_sandwich" en "move_menu" (problème avec l'ajout de classe à regler)
   var sandwich = document.getElementById("menu_sandwich");
-  sandwich.style.transform.translateX = '0px';
+  sandwich.style.transform = 'translateX(0px)';
   sandwich.style.transform.transition = '300ms all ease-in-out';
 }
 
@@ -11,7 +11,7 @@ function move_menu_sandwich()
 function close_menu_sandwich()
 {
   var sandwich = document.getElementById("menu_sandwich");
-  sandwich.style.transform.translateX = '-275px';
+  sandwich.style.transform = 'translateX(-275px)';
   sandwich.style.transform.transition = '300ms all ease-in-out';
 }
 
