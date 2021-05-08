@@ -41,7 +41,7 @@ if ($_SESSION["Connected"] == true) {
 -->
     </ul>
     <button name="create" class="bouton" onclick="addLine()">Ajouter une case</button>
-    <button name="create" class="bouton" onclick="addImage()">Ajouter une case</button>
+    <button name="create" class="bouton" onclick="addImage()">Ajouter une image</button>
     <!--<button name="create" class="bouton" onclick="addVideo()">Ajouter une case</button>-->
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
