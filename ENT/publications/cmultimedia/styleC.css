@@ -46,6 +46,7 @@
   margin: 10px;
 }
 
-#template_cahier_multimedia {
+.templateCahierMulimedia {
+
   display: none;
 }
