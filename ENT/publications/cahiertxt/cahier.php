@@ -203,10 +203,13 @@ if ($_SESSION["Connected"] == "True") {
         <div class="container">
           <select name="devoirs">
             <?php foreach (DevoirID() as $i) {
-                    foreach ($semaine as $jour) { ?>
-              <option value="$i"><?php echo AfficherDevoir($jour, "GS")['consigne'] ?></option>
+                    foreach ($semaine as $jour) {
+                      if (isset(AfficherDevoir($jour, "GS"))) { ?>
+                        <option value="$i"><?php echo AfficherDevoir($jour, "GS")['consigne'] ?></option>
+                      <?php }
+                      if (isset(AfficherDevoir($jour, "CP"))) { ?>
               <option value="$i"><?php echo AfficherDevoir($jour, "CP")['consigne'] ?></option>
-            <?php }} ?>
+            <?php }}} ?>
 
           </select>
 
