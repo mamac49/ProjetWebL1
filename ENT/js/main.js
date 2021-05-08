@@ -64,11 +64,12 @@ function getNbLines() {
   var pulications = document.getElementById("publications_cahier_multimedia");
   publications.value = saisie.nb_max;
 }
+
 function createLine() {
-  
-  //var saisie = document.getElementById("textareaCahierMultimedia");
-  /*var nb_max = saisie.nb_max();
+  /*var saisie = document.getElementById("textareaCahierMultimedia");
+  var nb_max = saisie.nb_max();
   var nb = saisie.nb();*/
+
   var publications = document.getElementById("publications_cahier_multimedia");
   var template = document.getElementById("template");
   /*teste si le nombre de ligne actuel est inférieur au nombre demandé, et rajoute le nécessaire*/

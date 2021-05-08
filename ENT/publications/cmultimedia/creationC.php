@@ -40,7 +40,7 @@ if ($_SESSION["Connected"] == true) {
       <!--<textarea class="textareaId" id="textareaCahierMultimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
     </ul>
-      <button name="create" class="bouton" type="submit">Ajouter une case</button>
+    <button name="create" class="bouton">Ajouter une case</button>
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
   </form>
 </div>
@@ -55,8 +55,9 @@ if ($_SESSION["Connected"] == true) {
 -->
 
 <?php
+
   if (isset($_POST['create'])) {
-    /*$idpublication = "NONE";
+    $idpublication = "NONE";
     $titre = "NONE" ;
     $texte = "NONE" ;
     $image = "NONE" ;
@@ -64,9 +65,7 @@ if ($_SESSION["Connected"] == true) {
     $nature = "NONE" ;
     $iduser = "NONE" ;
     echo "<script>createLine();</script>";
-  }*/
-  echo "<script>alert($_POST)</script>";
   }
-
+  
 }
 ?>
