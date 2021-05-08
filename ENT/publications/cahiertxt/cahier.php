@@ -23,6 +23,7 @@ function NbDevoir($jour, $classe) {
     return $nb;
   }
 }
+}
 
 
 function AjoutDevoir($classe, $matiere, $consigne, $jour) {
@@ -167,6 +168,5 @@ if ($_SESSION["Connected"] == "True") {
 <?php
 } else {
   header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
-}
 }
 ?>
