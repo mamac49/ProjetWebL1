@@ -46,10 +46,6 @@ if ($_SESSION["Connected"] == true) {
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
-      <!--
-        <textarea class="templateCahierMulimedia" id="text_template_cahier_multimedia" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
-        <input class="templateCahierMulimedia" type="image_template_cahier_multimedia" id="template_cahier_multimedia" name="templateImage" accept="image/*" required>
-      -->
     </ul>
     <button class="bouton" id="add_text" onclick="addText()">Ajouter une case</button>
     <button class="bouton" id="add_image" onclick="addImage()">Ajouter une image</button>

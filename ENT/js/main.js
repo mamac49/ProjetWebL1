@@ -48,14 +48,43 @@ function getNbLines() {
   publications.innerHTML = publications.innerHTML + template.innerHTML;
 }*/
 
+textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create=false required></textarea>';
+inputImage = '<input name="line_0" class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" accept="image/*" required>';
+line = 0;
+
+function addLine(lineType) {
+  var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+  if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
+    publicationCahierMultimedia.insertAdjacentHTML("afterbegin", textArea);
+  } else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
+    alert("Veuillez ajouter un texte avant votre image." );
+  } else {
+    textArea.replace('line_'+ line, 'line_' + line + 1);
+    inputImage.replace('line_'+ line, 'line_' + line + 1);
+    line += 1;
+  }
+  if (lineType == 'text') {
+    return textArea;
+  } else if (lineType == 'image') {
+    return inputImage
+  } else {
+    console.log('Error : Undefined lineType')
+  }
+}
+
 function addText() {
-  var textPublication = document.getElementById("publications_cahier_multimedia");
-  textPublication.insertAdjacentHTML("afterbegin",
-  '<textarea class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" name="texte_x" rows="8" cols="80" resize="none" create=false required></textarea>'  );
+  publicationCahierMultimedia.insertAdjacentHTML("afterbegin", addLine('text'));
 }
 
 function addImage() {
-  var imagePublication = document.getElementById("publications_cahier_multimedia");
-  imagePublication.insertAdjacentHTML("afterbegin",
-  '<input class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" name="image_x" accept="image/*" required>');
+  publicationCahierMultimedia.insertAdjacentHTML("afterbegin", addLine('image'));
 }
+
+/*if(publicationCahierMultimedia.innerHTML.slice(-51,-28) == "image_cahier_multimedia")*/
+/*var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+  if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1) {
+    alert("Veuillez ajouter un texte avant votre image." );
+  } else {
+    input.replace('line_'+ line, 'line_' + line + 1);
+    line += 1;
+  }*/
