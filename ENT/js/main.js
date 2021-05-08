@@ -20,7 +20,7 @@ On lance une fonction si l'on clique sur la balise p*/
 function move_menu_sandwich()
 {
   //On change la classe "menu_sandwich" en "move_menu" (problème avec l'ajout de classe à regler)
-  document.getElementById("menu_sandwich").className = "move_menu";
+  document.getElementById("menu_sandwich").className = "sandwich move_menu";
 }
 
 //même fonctionnement que précedemment en sens inverse, si l'on clique sur la croix

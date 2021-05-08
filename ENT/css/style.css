@@ -52,22 +52,6 @@
 
   /*Menu sandwich*/
 
-  .move_menu {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 275px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-    padding-left: 10px;
-    transform: translateX(0px);
-    transition: 300ms all ease-in-out;
-    z-index: 2;
-  }
-
   .sandwich {
     position: absolute;
     left: 0;
@@ -79,10 +63,28 @@
     justify-content: space-between;
     text-align: left;
     padding-left: 10px;
-    transform: translateX(-275px);
     transition: 300ms all ease-in-out;
     z-index: 2;
-  }
+    transform: translateX(-275px);
+    }
+    
+  .move_menu {
+    /*position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding-left: 10px;
+    transition: 300ms all ease-in-out;
+    z-index: 2;*/
+    transform: translateX(0px);
+    }
+
+  
 
 
   .menu_cross {
