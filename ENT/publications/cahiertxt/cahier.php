@@ -33,7 +33,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
     echo "succès";
   } else {
-    echo mysqli_connect_error();
+    echo mysqli_error($link);
   }
 }
 
