@@ -59,7 +59,7 @@ if ($_SESSION["Connected"] == true) {
 
 <?php
 
-  if (isset($_POST['create'])) {
+  if (isset($_POST['Valider'])) {
     $idpublication = "NONE";
     $titre = "NONE" ;
     $texte = "NONE" ;
