@@ -133,8 +133,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                 $message=message($i);
                 ?>
                 <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
-                <p><?php echo textevide($i);
-                $res=auteurC($i);?></p>
+                <p><?php echo $message;?></p>
               }
             }
           }
