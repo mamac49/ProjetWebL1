@@ -165,7 +165,7 @@ if ($_SESSION["Connected"] == "True") {
                   $matiere = $_POST['matiere'];
                   $consigne = $_POST['consigne'];
                   $jour = $_POST['jour'];
-                  echo AjoutDevoir($classe, $matiere, $consigne, $jour);
+                  print AjoutDevoir($classe, $matiere, $consigne, $jour);
                 }?></p>
       <?php
       } ?>
