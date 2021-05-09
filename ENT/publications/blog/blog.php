@@ -5,7 +5,7 @@ include ("../../fonc.php");
 
 function auteur($x) {
   $link = dbConnect();
-  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
+  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0]." ".$row[1];
