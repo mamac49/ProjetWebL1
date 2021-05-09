@@ -6,7 +6,6 @@ session_start();
 setlocale(LC_TIME, 'fra_fra');
 
 include 'fonc.php';
-echo "<script src='/Projetwebl1/ENT/js/main.js'></script>";
 
 function annivs() {
     $link = dbConnect();
@@ -78,6 +77,6 @@ if ($_SESSION["Connected"] == "True") {
 </html>
 <?php
 } else {
-  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
+  header('#/ENT/auth/auth.php');
 }
 ?>
