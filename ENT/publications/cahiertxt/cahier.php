@@ -131,7 +131,7 @@ if ($_SESSION["Connected"] == "True") {
                             $matiereP = $info['matiere'];
                             $consigne = $info['consigne']; ?>
                             <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-                    <?php } ?>
+                    <?php }} ?>
 
                     <?php foreach (NbPubJour($jour) as $i) {
                           if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
