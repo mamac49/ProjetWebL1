@@ -25,7 +25,7 @@ function temps_ecriture_P($x) { //renvoie l'heure et la date à laquelle est éc
 
 function auteurP($x) { //renvoie le prénom et le nom de la personne qui a écrit ou édité la publication
   $link = dbConnect();
-  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
+  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0]." ".$row[1];
@@ -34,7 +34,7 @@ function auteurP($x) { //renvoie le prénom et le nom de la personne qui a écri
 
 function temps_ecriture_C($x) { //renvoie l'heure et la date à laquelle est écrit ou édité le commentaire
   $link = dbConnect();
-  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Commentaires WHERE `nature`=1 AND `idcom`='$x')";
+  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM `Commentaires WHERE` `nature`=1 AND `idcom`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0]." ".$row[1];
@@ -43,7 +43,7 @@ function temps_ecriture_C($x) { //renvoie l'heure et la date à laquelle est éc
 
 function auteurC($x) { //renvoie le prénom et le nom de la personne qui a écrit ou édité le commentaire
   $link = dbConnect();
-  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM Commentaires WHERE `nature`=1 AND `idcom`='$x')";
+  $sql = "SELECT `prenom`, `nom` FROM `users` WHERE iduser=(SELECT `iduser` FROM `Commentaires` WHERE `nature`=1 AND `idcom`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0]." ".$row[1];
@@ -52,7 +52,7 @@ function auteurC($x) { //renvoie le prénom et le nom de la personne qui a écri
 
 function auteurB($x) { //renvoie l'id de la personne ayant créé le cette page du blog
   $link = dbConnect();
-  $sql = "SELECT `iduser` FROM `users` WHERE iduser=(SELECT `iduser` FROM Publications WHERE `nature`=1 AND `idpublications`='$x')";
+  $sql = "SELECT `iduser` FROM `users` WHERE iduser=(SELECT `iduser` FROM `Publications` WHERE `nature`=1 AND `idpublications`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0];
@@ -62,6 +62,22 @@ function auteurB($x) { //renvoie l'id de la personne ayant créé le cette page 
 function nbCom() { //renvoie le nombre total de commentaire dans la table
   $link = dbConnect();
   $sql = "SELECT `idcom` FROM `Commentaires`";
+  if ($result = mysqli_query($link, $sql)) {
+    return mysqli_num_rows($result);
+  }
+}
+
+function message($x) { //renvoie le texte de chaque commentaire relié à leur publication
+  $link = dbConnect();
+  $sql = "SELECT `message` FROM `Commentaires` WHERE `idpublications`=(SELECT `idpublications` FROM `Publications` WHERE `idcom`='$x')";
+  if ($result = mysqli_query($link, $sql)) {
+    return mysqli_num_rows($result);
+  }
+}
+
+function idCom($x) { //renvoie l'id du commentaire si il est relié à la bonne Publication (si le commentaire commente la bonne publication)
+  $link = dbConnect();
+  $sql = "SELECT `idcom` FROM `Commentaires` WHERE `idpublications`=(SELECT `idpublications` FROM `Publications` WHERE `idcom`='$x')";
   if ($result = mysqli_query($link, $sql)) {
     return mysqli_num_rows($result);
   }
@@ -110,17 +126,17 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             <?php if ($_SESSION["ID"]==$res){ ?>
               <input type="button" value="Editer la publication">
               <?php }
-              $req=nbCom();
-              for ($i=1;$i<=$req;$i++){
-
-            }
-          }
-
-          ?>
-
-
-          <span class="texte">Je fais les commentaires juste après :)</span>
-
+              foreach (nbPub() as $i){
+                if (idCom($i) == $IDblog){
+                  $auteurC=auteurC($i);
+                  $tempsC=temps_ecriture_C($i);
+                  $message=message($i);
+                  ?>
+                  <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
+                  <p><?php echo textevide($i);
+                  $res=auteurC($i);?></p>
+                  }
+                }
 
         </div>
 
@@ -132,7 +148,8 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
 </html>
 
 <?php
+}
 } else {
-header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
+  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>
