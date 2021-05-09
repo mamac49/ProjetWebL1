@@ -52,6 +52,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
     echo "succès";
     mysqli_close($link);
+    
   } else {
     echo mysqli_error($link);
     mysqli_close($link);
@@ -177,13 +178,13 @@ if ($_SESSION["Connected"] == "True") {
             <option value="jeudi">Jeudi</option>
             <option value="vendredi">Vendredi</option>
           </select>
-          <p>
+          <div>
+            <input type="radio" name="classe" id="GS" value="GS" checked>
             <label class="texte" for="GS">GS</label>
-            <input type="radio" name="classe" id="GS" value="GS">
           <br>
-            <label class="texte" for="CP">CP</label>
             <input type="radio" name="classe" id="CP" value="CP">
-          </p>
+            <label class="texte" for="CP">CP</label>
+          </div>
           <h3>Matière</h3>
           <select name="matiere">
             <option value="Francais">Français</option>
