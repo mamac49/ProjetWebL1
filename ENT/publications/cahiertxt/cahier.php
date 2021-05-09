@@ -134,8 +134,8 @@ if ($_SESSION["Connected"] == "True") {
         <div id="<?php echo $jour; ?>" class="tabcontent">
           <h3><?php echo $jour; ?></h3>
             <ul>
-              <?php var_dump(NbPubJour($jour, "GS"));
-                 for ($i=1; $i <= NbPubJour($jour, "GS"); $i++) {
+              <?php
+                 for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
                   foreach ($ListMatiere as $x) {
                     if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
                        $info = AfficherDevoir($jour, "GS", $x);
@@ -143,8 +143,8 @@ if ($_SESSION["Connected"] == "True") {
                       <li class="texte"><?php echo "<i class='$matiere[$x] matiere'></i>" . $x . " : " . $consigne; ?></li>
               <?php }}} ?>
 
-              <?php var_dump(NbPubJour($jour, "CP"));
-                for ($i=1; $i <= NbPubJour($jour, "CP"); $i++) {
+              <?php
+                for ($i=0; $i < NbPubJour($jour, "CP"); $i++) {
                   foreach ($ListMatiere as $x) {
                     if (gettype(AfficherDevoir($jour, "CP", $x)) != "NULL") {
                        $info = AfficherDevoir($jour, "CP", $x);
