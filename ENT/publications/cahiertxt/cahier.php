@@ -131,6 +131,7 @@ if ($_SESSION["Connected"] == "True") {
       <?php foreach ($semaine as $jour) {?>
         <div id="<?php echo $jour; ?>" class="tabcontent">
           <h3><?php echo $jour; ?></h3>
+            <?php foreach ($matiere as $x) {
             <ul>
               <?php for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
                    $info = AfficherDevoir($jour, "GS");
@@ -147,7 +148,7 @@ if ($_SESSION["Connected"] == "True") {
               <?php } ?>
             </ul>
         </div>
-      <?php } ?>
+      <?php }} ?>
 
 
 
