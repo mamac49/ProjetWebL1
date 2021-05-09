@@ -59,9 +59,9 @@ function auteurB($x) { //renvoie l'id de la personne ayant créé le cette page 
   }
 }
 
-function idCom($x,$IDblog) { //renvoie le texte de chaque commentaire relié à leur publication
+function idCom($x) { //renvoie le texte de chaque commentaire relié à leur publication
   $link = dbConnect();
-  $sql = "SELECT `idcom` FROM `Commentaires` WHERE `idpublications`=$IDblog";
+  $sql = "SELECT `idpublications` FROM `Publications` WHERE `idpublications`=(SELECT `idpublications` FROM `Commentaires` WHERE `idcom`=$x)";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0];
@@ -121,7 +121,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             <?php }
             foreach (nbCom() as $x){
               echo $x[0];
-              if (idCom($x[0],$IDblog) == $IDblog){
+              if (idCom($x[0]) == $IDblog){
                 $auteurC=auteurC($x[0]);
                 $tempsC=temps_ecriture_C($x[0]);
                 $message=message($x[0]);
