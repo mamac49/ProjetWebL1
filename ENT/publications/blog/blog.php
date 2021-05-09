@@ -69,7 +69,6 @@ if ($_SESSION["Connected"] == true) {
             <ul class="liste_sujets">
               <?php
               foreach (nbPub() as $i){
-                echo $i[0];
                 if (nature($i[0]) == "1"){
                   if (textevide($i[0])!=="" OR $_SESSION["Admin"] == true){
                   $titre=titre($i[0]);
