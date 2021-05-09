@@ -35,8 +35,7 @@ if ($_SESSION["Connected"] == true) {
               <h2 class="texte">Liste des contacts</h2>
               <ul class="contact_list">
               <?php
-                $nb = nombre();
-                for ($x=1; $x<=$nb; $x++) {
+                foreach (nombre() as $x) {
                   $contact_name = info($x)['prenom'] . " " . info($x)['nom'];
                   $contact_id = "contact" . $x;
                   $mail = info($x)["mail"];
