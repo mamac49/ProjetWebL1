@@ -122,7 +122,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
               <select class="listeDeroul" name="user">
                 <?php
                 foreach (nombre() as $x) { ?>
-                  <option class="texte" value="<?php echo $x ?>"><?php echo $x . info($x)["prenom"] . " " . info($x)["nom"]; ?></option>
+                  <option class="texte" value="<?php echo $x[0] ?>"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?></option>
                 <?php } ?>
               </select>
 

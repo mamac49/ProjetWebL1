@@ -36,12 +36,12 @@ if ($_SESSION["Connected"] == true) {
               <ul class="contact_list">
               <?php
                 foreach (nombre() as $x) {
-                  $contact_name = info($x)['prenom'] . " " . info($x)['nom'];
-                  $contact_id = "contact" . $x;
-                  $mail = info($x)["mail"];
+                  $contact_name = info($x[0])['prenom'] . " " . info($x[0])['nom'];
+                  $contact_id = "contact" . $x[0];
+                  $mail = info($x[0])["mail"];
               ?>
                 <li class="contact">
-                  <a class="<?php echo $contact_id;?> texte" id="contact"><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php var_dump($x) . $contact_name;?></a>
+                  <a class="<?php echo $contact_id;?> texte" id="contact"><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></a>
                 </li>
                 <li><hr class="hrcontact"></li>
               <?php
