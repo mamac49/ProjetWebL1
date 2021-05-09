@@ -31,10 +31,10 @@ function NbPubJour($jour, $classe) {
   return count($nb);
 }
 
-function AfficherDevoir($jour, $classe) {
+function AfficherDevoir($jour, $classe, $matiere) {
   $link = dbConnect();
 
-  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe');";
+  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe' AND `matiere`='$matiere');";
   if ($resultat = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($resultat);
     mysqli_free_result($resultat);
@@ -134,7 +134,7 @@ if ($_SESSION["Connected"] == "True") {
             <ul>
               <?php foreach ($matiere as $x) { ?>
               <?php for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
-                   $info = AfficherDevoir($jour, "GS");
+                   $info = AfficherDevoir($jour, "GS", $x);
                    $matiereP = $info['matiere'];
                    $consigne = $info['consigne']; ?>
                   <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
@@ -142,7 +142,7 @@ if ($_SESSION["Connected"] == "True") {
 
               <?php foreach ($matiere as $x) { ?>
               <?php for ($i=0; $i < NbPubJour($jour, "CP"); $i++) {
-                   $info = AfficherDevoir($jour, "CP");
+                   $info = AfficherDevoir($jour, "CP", $x);
                    $matiereP = $info['matiere'];
                    $consigne = $info['consigne']; ?>
                   <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
