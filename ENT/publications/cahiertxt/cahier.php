@@ -22,12 +22,13 @@ function NbPubJour($jour) {
 
   $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE `jour`='$jour'";
   $result = mysqli_query($link, $sql);
-  $cahiersIds = array();
+  $nb = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $cahiersIds[] = $row;
+      $nb[] = $row;
     }
   }
+  return $nb
 }
 
 function AfficherDevoir($jour, $classe) {
