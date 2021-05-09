@@ -137,13 +137,9 @@ if ($_SESSION["Connected"] == "True") {
                    $matiereP = $info[0];
                    $consigne = $info[1]*/ ?>
                    <p><?php echo $i; ?></p>
-                   <?php /* ?>
+                  <?php } ?>
 
-                    <!--<li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>-->
-              <?php } ?>
-                <?php $info = InfoDevoirs($jour, "CP") ?>
-                    <li class="texte"><?php /*echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-              <?php }*/ ?>
+
             </ul>
         </div>
       <?php } ?>
