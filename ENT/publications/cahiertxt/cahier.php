@@ -28,7 +28,7 @@ function NbPubJour($jour, $classe) {
       $nb[] = $row;
     }
   }
-  return $nb;
+  return $sql;
 }
 
 function AfficherDevoir($jour, $classe, $matiere) {
