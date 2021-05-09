@@ -9,7 +9,9 @@ function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe) {
     $link = dbConnect();
     mysqli_query($link, "FLUSH `users`");
 
-    $sql = "INSERT INTO `users` (`prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`) VALUES ('$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe');";
+    $iduser = max(nombre());
+
+    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe');";
     if (mysqli_query($link, $sql)) {
       $pp = mysqli_real_escape_string($link, $pp);
       $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
