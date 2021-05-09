@@ -77,6 +77,6 @@ if ($_SESSION["Connected"] == "True") {
 </html>
 <?php
 } else {
-  header('#/ENT/auth/auth.php');
+  header('#/Projetwebl1/ENT/auth/auth.php');
 }
 ?>

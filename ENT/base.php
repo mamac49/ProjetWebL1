@@ -2,11 +2,11 @@
 
 
 <?php
-echo "<script src='#/ENT/js/main.js''></script>";
+echo "<script src='#/Projetwebl1/ENT/js/main.js''></script>";
 if ($_SESSION['theme'] == 1) {
-  echo "<script>LoadCSS('#/ENT/css/color1.css''); </script>";
+  echo "<script>LoadCSS('#/Projetwebl1/ENT/css/color1.css''); </script>";
 } else {
-  echo "<script>LoadCSS('#/ENT/css/color2.css''); </script>";
+  echo "<script>LoadCSS('#/Projetwebl1/ENT/css/color2.css''); </script>";
 }
 ?>
 
@@ -37,8 +37,8 @@ if ($_SESSION['theme'] == 1) {
       <?php
       }
       ?>
-      <li><a class="menu_link" onclick="LoadCSS('Location: #/ENT/css/color1.css')'><div class="pointer"><i class="fas fa-moon icone"></i>Theme Sombre</div></a></li>
-      <li><a class="menu_link" onclick="LoadCSS('Location: #/ENT/css/color2.css'')"><div class="pointer"><i class="fas fa-sun icone"></i>Theme Clair</div></a></li>
+      <li><a class="menu_link" onclick="LoadCSS('Location: #/Projetwebl1/ENT/css/color1.css')'><div class="pointer"><i class="fas fa-moon icone"></i>Theme Sombre</div></a></li>
+      <li><a class="menu_link" onclick="LoadCSS('Location: #/Projetwebl1/ENT/css/color2.css'')"><div class="pointer"><i class="fas fa-sun icone"></i>Theme Clair</div></a></li>
       <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="textesandwich"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
       <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="textesandwich"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
     </ul>
