@@ -154,7 +154,8 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
 </html>
 
 <?php
-}} else {
-header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
+}
+} else {
+  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>
