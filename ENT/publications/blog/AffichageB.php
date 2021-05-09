@@ -135,14 +135,8 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                   <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
                   <p><?php echo textevide($i);
                   $res=auteurC($i);?></p>
-            }
-          }
-
-          ?>
-
-
-          <span class="texte">Je fais les commentaires juste après :)</span>
-
+                  }
+                }
 
         </div>
 
