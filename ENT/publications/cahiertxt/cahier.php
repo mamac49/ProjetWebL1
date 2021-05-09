@@ -93,11 +93,13 @@ $matiere["Espace"] = "fas fa-map";
 $matiere["Temps"] = "fas fa-clock";
 $matiere["Musique"] = "fas fa-music";
 $matiere["Arts"] = "fas fa-palette";
-$mmatiere["Anglais"] = "fas fa-cloud-rain";
+$matiere["Anglais"] = "fas fa-cloud-rain";
 $matiere["EPS"] = "fas fa-biking";
 $matiere["Contes"] = "fas fa-dragon";
 $matiere["Rituels"] = "fas fa-chalkboard-teacher";
 $matiere["Education civique"] = "fas fa-school";
+
+$ListMatiere = array("Maths", "Francais", "Sciences", "Espaces", "Temps", "Musique", "Arts", "Anglais", "EPS", "Contes", "Rituels", "Education civique")
 
 if ($_SESSION["Connected"] == "True") {
 ?>
@@ -132,7 +134,7 @@ if ($_SESSION["Connected"] == "True") {
         <div id="<?php echo $jour; ?>" class="tabcontent">
           <h3><?php echo $jour; ?></h3>
             <ul>
-              <?php foreach ($matiere as $x) { ?>
+              <?php foreach ($ListMatiere as $x) { ?>
               <?php for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
                 var_dump($x);
                 if (count(AfficherDevoir($jour, "GS", $x))>0) {
