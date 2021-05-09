@@ -34,7 +34,7 @@ function auteurP($x) { //renvoie le prénom et le nom de la personne qui a écri
 
 function temps_ecriture_C($x) { //renvoie l'heure et la date à laquelle est écrit ou édité le commentaire
   $link = dbConnect();
-  $sql = "SELECT `date_ecriture`,`heure_ecriture` FROM `Commentaires` WHERE `idcom`='$x')";
+  $sql = "SELECT `date_ecriture`,`heure_ecriture` FROM `Commentaires` WHERE `idcom`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0]." ".$row[1];
