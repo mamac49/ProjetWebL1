@@ -58,9 +58,11 @@ function addLine(lineType) {
     /* FIN DU MONDE !!!*/
   } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
   else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
+    /* FIN DU MONDE 2.0 !!!*/
     alert("Veuillez ajouter un texte avant votre image." );
   } /*une fois le tout vérifié on ajoute un ligne*/
   else {
+    /*PAS FIN DU MONDE !!!*/
     textArea.replace('line_'+ line, 'line_' + line + 1);
     inputImage.replace('line_'+ line, 'line_' + line + 1);
     line += 1;
