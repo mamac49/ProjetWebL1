@@ -28,7 +28,7 @@ function NbPubJour($jour) {
       $nb[] = $row;
     }
   }
-  return $nb;
+  return count($nb);
 }
 
 function AfficherDevoir($jour, $classe) {
