@@ -119,10 +119,10 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             <input type="button" value="Ajouter une publication">
           <?php } else {
             $auteur=auteurP($IDblog);
-            $temps=temps_ecriture_P($IDblog);?>
+            $temps=temps_ecriture_P($IDblog); ?>
             <span class="texte"> Edité par <?php echo $auteur; ?> le <?php echo $temps; ?></span>
             <p><?php echo textevide($IDblog);
-            $res=auteurB($IDblog);?></p>
+            $res=auteurB($IDblog); ?></p>
             <?php if ($_SESSION["ID"]==$res){ ?>
               <input type="button" value="Editer la publication">
             <?php }
@@ -133,7 +133,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                 $message=message($i);
                 ?>
                 <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
-                <p><?php echo $message;?></p>
+                <p><?php echo $message; ?></p>
               }
             }
           }
