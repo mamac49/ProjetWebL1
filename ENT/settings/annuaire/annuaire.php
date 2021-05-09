@@ -41,7 +41,7 @@ if ($_SESSION["Connected"] == true) {
                   $mail = info($x)["mail"];
               ?>
                 <li class="contact">
-                  <a class="<?php echo $contact_id;?> texte" id="contact"><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></a>
+                  <a class="<?php echo $contact_id;?> texte" id="contact"><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $x . $contact_name;?></a>
                 </li>
                 <li><hr class="hrcontact"></li>
               <?php
