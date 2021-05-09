@@ -178,8 +178,8 @@ if ($_SESSION["Connected"] == "True") {
             <option value="Rituels">Rituels</option>
             <option value="Education civique">Education civique</option>
           </select>
-          <h3>Intitulé</h3>
-          <p><input type="text" name="consigne"></p>
+          <h3>Consigne</h3>
+          <p><textarea name="consigne" rows="6" cols="50"></textarea></p>
           <p><input type="submit" name="ValiderAdd" value="Ajouter"></p>
         </div>
       </form>
