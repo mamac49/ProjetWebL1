@@ -49,7 +49,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
 
   $sql = "INSERT INTO `cahiertxt`(`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
   var_dump($sql);
-  /*if (mysqli_query($link, $sql)) {
+  if (mysqli_query($link, $sql)) {
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
     echo "succès";
     mysqli_close($link);
@@ -57,8 +57,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   } else {
     echo mysqli_error($link);
     mysqli_close($link);
-  }*/
-  return $sql;
+  }
 }
 
 function SuppressionDevoir($jour, $classe, $matiere) {
@@ -163,20 +162,7 @@ if ($_SESSION["Connected"] == "True") {
         <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
         <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
       <?php
-      }
-
-      if (isset($_POST['ValideAdd'])) {
-        $classe = $_POST['classe'];
-        $matiere = $_POST['matiere'];
-        $consigne = securisation($_POST['consigne']);
-        $jour = $_POST['jour'];
-        $test = AjoutDevoir($classe, $matiere, $consigne, $jour);
-      }
-      if (isset($test)) {?>
-        <p class="texte"><?php var_dump($test);?></p>
-      <?php
-      }
-      ?>
+      } ?>
 
     </div>
 
