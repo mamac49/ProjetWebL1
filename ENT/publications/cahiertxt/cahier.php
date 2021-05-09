@@ -160,7 +160,7 @@ if ($_SESSION["Connected"] == "True") {
       ?>
         <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
         <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
-        <p><?php if (isset($_POST['ValideAdd'])) {
+        <p><?php if (isset($_POST['ValiderAjout'])) {
                   echo "a";
                   $classe = $_POST['classe'];
                   $matiere = $_POST['matiere'];
@@ -209,7 +209,7 @@ if ($_SESSION["Connected"] == "True") {
           </select>
           <h3>Consigne</h3>
           <p><textarea name="consigne" rows="6" cols="40"></textarea></p>
-          <p><input type="submit" name="ValiderAdd" value="Ajouter"></p>
+          <p><input type="submit" name="ValiderAjout" value="Ajouter"></p>
         </div>
       </form>
     </div>
