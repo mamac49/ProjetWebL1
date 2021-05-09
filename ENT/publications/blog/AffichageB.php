@@ -111,6 +111,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
               <input type="button" value="Editer la publication">
             <?php }
             foreach (nbCom() as $x){
+              echo $x;
               if (idCom($x) == $IDblog){
                 $auteurC=auteurC($x);
                 $tempsC=temps_ecriture_C($x);
