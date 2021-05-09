@@ -49,7 +49,7 @@ if ( isset($_POST['valider'])) {
       $mail = securisation($_POST['mail']);
       $classe = securisation($_POST['classe']);
       $date = securisation($_POST['datenaissance']);
-      $pp = file_get_contents($_FILES['pp']['tmp_name']);
+      $pp = file_get_contents("https://mlanglois.freeboxos.fr/Projetwebl1/ENT/data/PP.png");
       if (isset($_POST['admin'])) {
         $admin = securisation($_POST['admin']);
       } else {
@@ -104,8 +104,6 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <input type="password" name="mdp2" placeholder="Mot de passe" class="FormCrea" required>
                 <p class="texteF">Date de naissance</p>
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
-                <p class="texteF">Sélectionner l'image de profil (64ko maximum)</p>
-                  <input type="file" id="file" name="pp" accept="image/*" required>
                 <p class="texteF">Administrateur ?
                 <input type="checkbox" value="1" name="admin"></p>
                 <p>
