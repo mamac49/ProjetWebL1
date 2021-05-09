@@ -45,7 +45,7 @@ function getNbLines() {
   -textArea : template de la saisie de texte
   -inputImage : template du dépot d'image
   -line : ligne de la zone*/
-textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create=false required></textarea>';
+textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create="false" required></textarea>';
 inputImage = '<input name="line_0" class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" accept="image/*" required>';
 line = 0;
 /*conditions pour poster image à corriger
@@ -54,11 +54,10 @@ function addLine(lineType) {
   /*publicationCahierMultimedia = liste où sont affichés les zones de saisie*/
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
   /*vérifie si l'on a commencé par un texte*/
-  if (publicationCahierMultimedia.innerHTML.indexOf('<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create=false required></textarea>')
-   == -1 && lineType == 'text') {
+  if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
     /* FIN DU MONDE !!!*/
   } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
-  else if (publicationCahierMultimedia.innerHTML.indexOf('<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create=false required></textarea>') == '-1' && lineType == 'image') {
+  else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
     /* FIN DU MONDE 2.0 !!!*/
     alert("Veuillez ajouter un texte avant votre image." );
   } /*une fois le tout vérifié on ajoute un ligne*/
