@@ -140,9 +140,9 @@ if ($_SESSION["Connected"] == "True") {
 
                     <!--<li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>-->
               <?php /*}*/ ?>
-              <?php $info = InfoDevoirs($jour, "CP") ?>
+              <!--<?php $info = InfoDevoirs($jour, "CP") ?>
                     <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-              <?php }  ?>
+              <?php }  ?>-->
             </ul>
         </div>
       <?php } ?>
