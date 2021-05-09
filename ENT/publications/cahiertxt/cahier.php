@@ -179,7 +179,7 @@ if ($_SESSION["Connected"] == "True") {
             <option value="Education civique">Education civique</option>
           </select>
           <h3>Consigne</h3>
-          <p><textarea name="consigne" rows="6" cols="50"></textarea></p>
+          <p><textarea name="consigne" rows="6" cols="40"></textarea></p>
           <p><input type="submit" name="ValiderAdd" value="Ajouter"></p>
         </div>
       </form>

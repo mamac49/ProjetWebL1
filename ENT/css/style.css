@@ -63,7 +63,7 @@
     z-index: 2;
     transform: translateX(-275px);
     }
-    
+
   /*.move_menu {
     transform: translateX(0px);
     }*/
@@ -298,4 +298,8 @@
 /*curseur en pointer sur les boutons de thème*/
 .pointer{
   cursor: pointer
+}
+
+textarea {
+  resize: none;
 }
