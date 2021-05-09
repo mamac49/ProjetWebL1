@@ -56,7 +56,7 @@ if ($_SESSION["Connected"] == true) {
                 if ($_SESSION["Admin"] == true) {
               ?>
               <form class="AdminMulti" action="cmedia.php" method="post">
-                <a href="creationC.php">Créer un cahier multimédia</a>
+                <input type="button" onclick="window.location.href = 'creationC.php';" name="CreationCmedia" value="Créer Un cahier multimédia"/>
                 <select name="Cmulti">
                   <?php
                   foreach (nbPub() as $x) {
