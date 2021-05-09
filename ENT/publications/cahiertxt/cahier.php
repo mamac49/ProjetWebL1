@@ -133,13 +133,18 @@ if ($_SESSION["Connected"] == "True") {
           <h3><?php echo $jour; ?></h3>
             <ul>
               <?php for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
-                   /*$info = InfoDevoirs($jour, "GS");
+                   $info = AfficherDevoir($jour, "GS");
                    $matiereP = $info[0];
-                   $consigne = $info[1]*/ ?>
-                   <p><?php echo $i; ?></p>
-                  <?php } ?>
+                   $consigne = $info[1]; ?>
+                  <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+              <?php } ?>
 
-
+              <?php for ($i=0; $i < NbPubJour($jour, "CP"); $i++) {
+                   $info = AfficherDevoir($jour, "CP");
+                   $matiereP = $info[0];
+                   $consigne = $info[1]; ?>
+                  <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+              <?php } ?>
             </ul>
         </div>
       <?php } ?>
