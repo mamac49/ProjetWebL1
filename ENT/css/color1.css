@@ -25,7 +25,7 @@
   background-color: var(--font-color);
 }
 
-.FormCrea, .semaine button:hover, .semaine button.active {
+.FormCrea, .semaine button:hover, .semaine button.active, #navbar {
   background-color: var(--second-color);
 }
 
