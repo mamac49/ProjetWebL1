@@ -61,7 +61,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
 function SuppressionDevoir($jour, $classe, $matiere) {
   $link = dbConnect();
 
-  $sql = "DELETE FROM `cahiertxt` WHERE (`jour`=$jour AND `classe`='$classe' AND `matiere`=$matiere)";
+  $sql = "DELETE FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe' AND `matiere`='$matiere')";
   if (mysqli_query($link, $sql)) {
     echo "succès";
   } else {
