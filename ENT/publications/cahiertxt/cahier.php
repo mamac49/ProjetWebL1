@@ -122,28 +122,27 @@ if ($_SESSION["Connected"] == "True") {
         <button class="tablinks" onmouseover="openDay(event, 'Vendredi')">Vendredi</button>
       </div>
 
-      <?php foreach ($semaine as $jour) {?>
+      <?php foreach ($semaine as $jour) {
+        for ($i=1 ; $i <= NbPubJour($jour) ; $i++) { ?>
               <div id="<?php echo $jour; ?>" class="tabcontent">
                 <h3><?php echo $jour; var_dump(NbPubJour($jour)); ?></h3>
                 <ul>
-                  <?php foreach (NbPubJour($jour) as $i) {
-                        if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
+                  <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
                             $info = AfficherDevoir($jour, "GS");
                             $matiereP = $info['matiere'];
                             $consigne = $info['consigne']; ?>
                             <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-                    <?php }} ?>
+                    <?php } ?>
 
-                    <?php foreach (NbPubJour($jour) as $i) {
-                          if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
+                    <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
                               $info = AfficherDevoir($jour, "CP");
                               $matiereP = $info['matiere'];
                               $consigne = $info['consigne']; ?>
                               <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-                    <?php }} ?>
+                    <?php } ?>
           </ul>
         </div>
-      <?php } ?>
+      <?php }} ?>
 
 
 
