@@ -45,9 +45,10 @@ function getNbLines() {
   -textArea : template de la saisie de texte
   -inputImage : template du dépot d'image
   -line : ligne de la zone*/
-textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create="false" required></textarea>';
+textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
 inputImage = '<input name="line_0" class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" accept="image/*" required>';
 line = 0;
+
 /*conditions pour poster image à corriger
 ajout des cases de texte par deux à corriger*/
 function addLine(lineType) {
@@ -60,14 +61,15 @@ function addLine(lineType) {
   else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
     /* FIN DU MONDE 2.0 !!!*/
     alert("Veuillez ajouter un texte avant votre image." );
+    return none;
   } /*une fois le tout vérifié on ajoute un ligne*/
-  else {
-    /*PAS FIN DU MONDE !!!*/
-    textArea.replace('line_'+ line, 'line_' + line + 1);
-    inputImage.replace('line_'+ line, 'line_' + line + 1);
-    line += 1;
-  }
-  /*en fonction du type de ligne demandé
+  
+  /*PAS FIN DU MONDE !!!*/
+  textArea.replace('line_'+ line, 'line_' + line + 1);
+  inputImage.replace('line_'+ line, 'line_' + line + 1);
+  line += 1;
+  
+  /* ajoute en fonction du type de ligne demandé
   -un texte*/
   if (lineType == 'text') {
     return textArea;
