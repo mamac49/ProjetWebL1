@@ -135,6 +135,7 @@ if ($_SESSION["Connected"] == "True") {
           <h3><?php echo $jour; ?></h3>
             <ul>
               <?php for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
+                echo "a";
                 foreach ($ListMatiere as $x) {
                 if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
                    $info = AfficherDevoir($jour, "GS", $x);
