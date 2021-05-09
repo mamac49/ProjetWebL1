@@ -225,6 +225,7 @@ if ($_SESSION["Connected"] == "True") {
       <form class="modal-content animate" action="cahier.php" method="post">
         <span onclick="document.getElementById('RemoveHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
+          <h3>Devoirs</h3>
           <select name="devoirs">
             <?php foreach ($semaine as $jour) {
                       for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
