@@ -17,6 +17,18 @@ function DevoirID() {
   return $cahiersIds;
 }
 
+function NbPubJour($jour) {
+  $link = dbConnect();
+
+  $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE `jour`='$jour'";
+  $result = mysqli_query($link, $sql);
+  $cahiersIds = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $cahiersIds[] = $row;
+    }
+}
+
 function AfficherDevoir($jour, $classe) {
   $link = dbConnect();
 
@@ -112,19 +124,21 @@ if ($_SESSION["Connected"] == "True") {
               <div id="<?php echo $jour; ?>" class="tabcontent">
                 <h3><?php echo $jour; ?></h3>
                 <ul>
-                  <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
+                  <?php foreach (NbPubJour($jour) as $i) {
+                        if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
                             $info = AfficherDevoir($jour, "GS");
                             $matiereP = $info['matiere'];
                             $consigne = $info['consigne']; ?>
                             <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
                     <?php } ?>
 
-                    <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
+                    <?php foreach (NbPubJour($jour) as $i) {
+                          if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
                               $info = AfficherDevoir($jour, "CP");
                               $matiereP = $info['matiere'];
                               $consigne = $info['consigne']; ?>
                               <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-                    <?php } ?>
+                    <?php }} ?>
           </ul>
         </div>
       <?php } ?>
