@@ -77,6 +77,6 @@ if ($_SESSION["Connected"] == "True") {
 </html>
 <?php
 } else {
-  header('https://mlanglois.freeboxos.fr/Projetwebl1/ENT/auth/auth.php');
+  header('Location : https://mlanglois.freeboxos.fr/Projetwebl1/ENT/auth/auth.php');
 }
 ?>
