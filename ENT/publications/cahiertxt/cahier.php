@@ -50,7 +50,6 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   $sql = "INSERT INTO `cahiertxt`(`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
   if (mysqli_query($link, $sql)) {
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
-    echo "succès";
     mysqli_close($link);
 
   } else {
