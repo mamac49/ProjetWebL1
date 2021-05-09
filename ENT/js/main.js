@@ -54,9 +54,11 @@ line = 0;
 /*conditions pour poster image à corriger
 ajout des cases de texte par deux à corriger*/
 function addLine(lineType) {
+  /*publicationCahierMultimedia = liste où sont affichés les zones de saisie*/
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+  /*vérifie si l'on a commencé par un texte*/
   if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
-    publicationCahierMultimedia.insertAdjacentHTML("afterbegin", textArea);
+    continue;
   } else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
     alert("Veuillez ajouter un texte avant votre image." );
   } else {

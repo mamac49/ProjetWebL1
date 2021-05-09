@@ -47,7 +47,7 @@ if ($_SESSION["Connected"] == true) {
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
     </ul>
-    <button class="bouton" id="add_text" onclick="addText()">Ajouter une case</button>
+    <button class="bouton" id="add_text" onclick="addText()">Ajouter un texte</button>
     <button class="bouton" id="add_image" onclick="addImage()">Ajouter une image</button>
     <!--<button name="create" class="bouton" onclick="addVideo()">Ajouter une case</button>-->
     <input type="submit" name="Valider" class="bouton" value="Valider de cahier multimédia">
