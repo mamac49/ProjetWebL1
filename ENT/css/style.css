@@ -36,6 +36,7 @@
     display: block;
     width: 190px;
     height: auto;
+    position: sticky;
     }
 
   .sandwich_icon{
