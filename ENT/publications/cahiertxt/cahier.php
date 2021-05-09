@@ -80,6 +80,7 @@ if (isset($_POST['ValideAdd'])) {
 
 if (isset($_POST['ValiderRem'])) {
   $str = explode($_POST['devoirs'], " ");
+  var_dump($str);
   $jour = $str[0];
   $classe = $str[1];
   $matiere = $str[2];
