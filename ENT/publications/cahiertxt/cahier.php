@@ -115,17 +115,6 @@ if ($_SESSION["Connected"] == "True") {
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <script src="/Projetwebl1/ENT/js/cahiertxt.js"></script>
-    <script>
-      // Get the modal
-      var modal = document.getElementById('AddHW');
-
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-       if (event.target != modal) {
-         modal.style.display = "none";
-       }
-      }
-      </script>
   </head>
 
   <?php
