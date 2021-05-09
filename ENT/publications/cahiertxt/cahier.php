@@ -58,10 +58,10 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   }
 }
 
-function SuppressionDevoir() {
+function SuppressionDevoir($jour, $classe, $matiere) {
   $link = dbConnect();
 
-  $sql = "DELETE FROM `cahiertxt` WHERE `iduser`='$Contact'";
+  $sql = "DELETE FROM `cahiertxt` WHERE (`jour`=$jour AND `classe`='$classe' AND `matiere`=$matiere)";
   if (mysqli_query($link, $sql)) {
     echo "succès";
   } else {
@@ -71,12 +71,21 @@ function SuppressionDevoir() {
 }
 
 if (isset($_POST['ValideAdd'])) {
-  $classe = securisation($_POST['classe']);
-  $matiere = securisation($_POST['matiere']);
+  $classe = $_POST['classe'];
+  $matiere = $_POST['matiere'];
   $consigne = securisation($_POST['consigne']);
-  $jour = securisation($_POST['jour']);
+  $jour = $_POST['jour'];
   AjoutDevoir($classe, $matiere, $consigne, $jour);
 }
+
+if (isset($_POST['ValiderRem'])) {
+  $str = explode($_POST['devoirs']);
+  $jour = $str[0];
+  $classe = $str[1];
+  $matiere = $str[2];
+  SuppressionDevoir($jour, $classe, $matiere);
+}
+
 
 $semaine = array("Lundi", "Mardi", "Jeudi", "Vendredi");
 
