@@ -163,8 +163,9 @@ if ($_SESSION["Connected"] == "True") {
         <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
       <?php
       }
-      if (isset($test)) {
-        var_dump($text);
+      if (isset($test)) {?>
+        <p><?php var_dump($text);?></p>  
+      <?php
       }
       ?>
 
