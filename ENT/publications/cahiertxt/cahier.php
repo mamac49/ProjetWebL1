@@ -48,7 +48,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   mysqli_query($link, "FLUSH `cahiertxt`");
 
   $sql = "INSERT INTO `cahiertxt`(`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
-  print($sql);
+  print $sql;
   if (mysqli_query($link, $sql)) {
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
     echo "succès";
@@ -77,7 +77,7 @@ if (isset($_POST['ValideAdd'])) {
   $matiere = $_POST['matiere'];
   $consigne = securisation($_POST['consigne']);
   $jour = $_POST['jour'];
-  $test = AjoutDevoir($classe, $matiere, $consigne, $jour);
+  AjoutDevoir($classe, $matiere, $consigne, $jour);
 }
 
 if (isset($_POST['ValiderRemo'])) {
