@@ -61,7 +61,7 @@ function addLine(lineType) {
   else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
     /* FIN DU MONDE !!!*/
     alert("Veuillez ajouter un texte avant votre image." );
-    return none;
+    return false;
   } /*une fois le tout vérifié on ajoute un ligne*/
   
   /*PAS FIN DU MONDE !!!*/
