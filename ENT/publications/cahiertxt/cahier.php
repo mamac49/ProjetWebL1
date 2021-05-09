@@ -25,7 +25,7 @@ function NbPubJour($jour, $classe) {
   $nb = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $nb[] = $row;
+      $nb[] = $row[0];
     }
   }
   return count($nb);
