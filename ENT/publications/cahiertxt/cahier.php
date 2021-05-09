@@ -220,11 +220,11 @@ if ($_SESSION["Connected"] == "True") {
             <?php foreach ($semaine as $jour) {
                       for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
                         if (null!==AfficherDevoir($jour, "GS")) { ?>
-                          <option value="<?php print $jour . " GS " . "AfficherDevoir($jour, 'GS')['matiere']" ?>"><?php echo AfficherDevoir($jour, "GS")['matiere'] ?></option>
+                          <option value="<?php print $jour . " GS " . AfficherDevoir($jour, 'GS')['matiere'] ?>"><?php echo AfficherDevoir($jour, "GS")['matiere'] ?></option>
                       <?php }}
                       for ($i=1 ; $i <= NbPubJour($jour, "CP") ; $i++) {
                         if (null!==AfficherDevoir($jour, "CP")) { ?>
-                          <option value="<?php print $jour . " CP " . "AfficherDevoir($jour, 'CP')['matiere']" ?>"><?php echo AfficherDevoir($jour, "CP")['matiere'] ?></option>
+                          <option value="<?php print $jour . " CP " . AfficherDevoir($jour, 'CP')['matiere'] ?>"><?php echo AfficherDevoir($jour, "CP")['matiere'] ?></option>
             <?php }}} ?>
 
           </select>
