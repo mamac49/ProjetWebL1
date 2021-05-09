@@ -24,11 +24,11 @@ function NbPubJour($jour, $classe) {
   $result = mysqli_query($link, $sql);
   $nb = array();
   if ($result) {
-    while($row = $result->fetch(MYSQLI_NUM)) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
       $nb[] = $row;
     }
   }
-  return count($nb);
+  return $nb;
 }
 
 function AfficherDevoir($jour, $classe, $matiere) {
