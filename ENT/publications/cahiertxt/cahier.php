@@ -163,7 +163,7 @@ if ($_SESSION["Connected"] == "True") {
         <p><?php if (isset($_POST['ValideAdd'])) {
                   $classe = $_POST['classe'];
                   $matiere = $_POST['matiere'];
-                  $consigne = securisation($_POST['consigne']);
+                  $consigne = $_POST['consigne'];
                   $jour = $_POST['jour'];
                   echo AjoutDevoir($classe, $matiere, $consigne, $jour);
                 }?></p>
