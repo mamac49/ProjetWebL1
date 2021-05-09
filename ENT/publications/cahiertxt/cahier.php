@@ -28,7 +28,7 @@ function NbPubJour($jour, $classe) {
       $nb[] = $row;
     }
   }
-  return $sql;
+  return $nb;
 }
 
 function AfficherDevoir($jour, $classe, $matiere) {
@@ -135,7 +135,7 @@ if ($_SESSION["Connected"] == "True") {
           <h3><?php echo $jour; ?></h3>
             <ul>
               <?php var_dump(NbPubJour($jour, "GS"));
-                /* for ($i=1; $i <= NbPubJour($jour, "GS"); $i++) {
+                 for ($i=1; $i <= NbPubJour($jour, "GS"); $i++) {
                   foreach ($ListMatiere as $x) {
                     if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
                        $info = AfficherDevoir($jour, "GS", $x);
@@ -143,7 +143,7 @@ if ($_SESSION["Connected"] == "True") {
                       <li class="texte"><?php echo "<i class='$matiere[$x] matiere'></i>" . $x . " : " . $consigne; ?></li>
               <?php }}} ?>
 
-              <?php
+              <?php var_dump(NbPubJour($jour, "GS"));
                 for ($i=1; $i <= NbPubJour($jour, "CP"); $i++) {
                   foreach ($ListMatiere as $x) {
                     if (gettype(AfficherDevoir($jour, "CP", $x)) != "NULL") {
@@ -151,7 +151,7 @@ if ($_SESSION["Connected"] == "True") {
                        $matiereP = $info['matiere'];
                        $consigne = $info['consigne']; ?>
                       <li class="texte"><?php echo "<i class='$matiere[$x] matiere'></i>" . $x . " : " . $consigne; ?></li>
-              <?php }}} */?>
+              <?php }}} ?>
             </ul>
         </div>
       <?php } ?>
