@@ -41,16 +41,16 @@ if ($_SESSION["Connected"] == true) {
       include ("../../base.php");
   ?>
 <!--ajout de la méthode PUT-->
-<div class="Center_adap">
+<div class="Center_adap Saisie">
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
     </ul>
     <div class="boutonsCahierMultimedia">
-      <button class="boutonAjouterTexte" id="add_text" onclick="addText()">Ajouter un texte</button>
-      <button class="boutonAjouterImage" id="add_image" onclick="addImage()">Ajouter une image</button>
+      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()">Ajouter un texte</button>
+      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()">Ajouter une image</button>
       <!--<button name="create" class="bouton" onclick="addVideo()">Ajouter une case</button>-->
-      <input type="submit" name="Valider" class="boutonValider" value="Valider de cahier multimédia">
+      <input type="submit" name="Valider" class="boutonValider bouton" value="Valider de cahier multimédia">
     </div>
   </form>
 </div>
