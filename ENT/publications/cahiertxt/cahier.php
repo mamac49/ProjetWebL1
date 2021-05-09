@@ -123,7 +123,7 @@ if ($_SESSION["Connected"] == "True") {
 
       <?php foreach ($semaine as $jour) {?>
               <div id="<?php echo $jour; ?>" class="tabcontent">
-                <h3><?php echo $jour; ?></h3>
+                <h3><?php echo $jour . NbPubJour($jour); ?></h3>
                 <ul>
                   <?php foreach (NbPubJour($jour) as $i) {
                         if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
