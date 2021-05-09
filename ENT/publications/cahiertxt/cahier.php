@@ -52,7 +52,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
     echo "<script> document.getElementById('AddHW').style.display='none' </script>";
     echo "succès";
     mysqli_close($link);
-    
+
   } else {
     echo mysqli_error($link);
     mysqli_close($link);
@@ -79,7 +79,7 @@ if (isset($_POST['ValideAdd'])) {
   AjoutDevoir($classe, $matiere, $consigne, $jour);
 }
 
-if (isset($_POST['ValiderRem'])) {
+if (isset($_POST['ValiderRemo'])) {
   $str = explode(" ", $_POST['devoirs']);
   SuppressionDevoir($str[0], $str[1], $str[2]);
 }
@@ -226,7 +226,7 @@ if ($_SESSION["Connected"] == "True") {
 
           </select>
 
-          <p><input type="submit" name="ValiderRem" value="Supprimer"></p>
+          <p><input type="submit" name="ValiderRemo" value="Supprimer"></p>
         </div>
       </form>
     </div>
