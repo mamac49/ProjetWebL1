@@ -75,14 +75,6 @@ function message($x) { //renvoie le texte de chaque commentaire relié à leur p
   }
 }
 
-function idCom($x) { //renvoie l'id du commentaire si il est relié à la bonne Publication (si le commentaire commente la bonne publication)
-  $link = dbConnect();
-  $sql = "SELECT `idcom` FROM `Commentaires` WHERE `idpublications`=(SELECT `idpublications` FROM `Publications` WHERE `idcom`='$x')";
-  if ($result = mysqli_query($link, $sql)) {
-    return mysqli_num_rows($result);
-  }
-}
-
 if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l'authentification (auth.php)
 ?>
 

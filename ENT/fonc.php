@@ -88,6 +88,19 @@ function nbPub() {
   return $IDpubli;
 }
 
+function nbCom() {
+  $link = dbConnect();
+  $sql = "SELECT `idcom` FROM `Commentaires`";
+  $result = mysqli_query($link, $sql);
+  $IDpubli = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDpubli[] = $row;
+    }
+  }
+  return $IDcommen;
+}
+
 function nature($x) {
   $link = dbConnect();
   $sql = "SELECT * FROM `Publications` WHERE `idpublications`='$x'";
