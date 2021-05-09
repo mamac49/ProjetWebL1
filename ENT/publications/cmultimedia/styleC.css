@@ -76,5 +76,9 @@
 .boutonsCahierMultimedia {
   display: flex;
   flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.Saisie {
   margin-bottom: 150px;
 }
