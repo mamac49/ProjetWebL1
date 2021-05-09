@@ -69,7 +69,7 @@ function SuppressionDevoir($jour, $classe, $matiere) {
   mysqli_query($link, "FLUSH `users`");
 }
 
-if (isset($_POST['ValideAdd'])) {
+if (isset($_POST['Validejout'])) {
   $classe = $_POST['classe'];
   $matiere = $_POST['matiere'];
   $consigne = securisation($_POST['consigne']);
