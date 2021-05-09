@@ -29,10 +29,6 @@
   background-color: var(--second-color);
 }
 
-#navbar{
-  background-color: rgba(19, 52, 42,0.74);
-}
-
 .file, .IcoBook, .Copybook i, .matiere {
   color: var(--main-color);
 }
