@@ -57,6 +57,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
     echo mysqli_error($link);
     mysqli_close($link);
   }
+  return $sql;
 }
 
 function SuppressionDevoir($jour, $classe, $matiere) {
