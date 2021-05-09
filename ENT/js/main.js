@@ -55,7 +55,7 @@ function addLine(lineType) {
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
   /*vérifie si l'on a commencé par un texte*/
   if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
-    rienDuTout();
+    /* FIN DU MONDE !!!*/
   } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
   else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
     alert("Veuillez ajouter un texte avant votre image." );
