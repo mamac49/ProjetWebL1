@@ -95,7 +95,7 @@ function nbCom() {
   $IDcommen = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $IDpubli[] = $row;
+      $IDcommen[] = $row;
     }
   }
   return $IDcommen;
