@@ -205,13 +205,14 @@ if ($_SESSION["Connected"] == "True") {
         <span onclick="document.getElementById('RemoveHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
           <select name="devoirs">
-            <?php foreach (DevoirID() as $i) {
-                    foreach ($semaine as $jour) {
-                      if (null!==AfficherDevoir($jour, "GS")) { ?>
-                        <option value="<?php print $i[0] ?>"><?php echo AfficherDevoir($jour, "GS")['consigne'] ?></option>
+            <?php foreach ($semaine as $jour) {
+                      for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
+                        if (null!==AfficherDevoir($jour, "GS")) { ?>
+                          <option value="<?php print $i[0] ?>"><?php echo AfficherDevoir($jour, "GS")['consigne'] ?></option>
                       <?php }
-                      if (null!==AfficherDevoir($jour, "CP")) { ?>
-              <option value="<?php print $i[0] ?>"><?php echo AfficherDevoir($jour, "CP")['consigne'] ?></option>
+                      for ($i=1 ; $i <= NbPubJour($jour, "CP") ; $i++) {
+                        if (null!==AfficherDevoir($jour, "CP")) { ?>
+                          <option value="<?php print $i[0] ?>"><?php echo AfficherDevoir($jour, "CP")['consigne'] ?></option>
             <?php }}} ?>
 
           </select>
