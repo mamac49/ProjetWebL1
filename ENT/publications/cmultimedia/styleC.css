@@ -70,6 +70,11 @@
   padding: 10px;
   width: 200px;
   height: 50px;
-  text-align: center;
-  
+  text-align: center; 
+}
+
+.boutonsCahierMultimedia {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 150px;
 }
