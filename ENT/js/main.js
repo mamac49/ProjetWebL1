@@ -73,7 +73,7 @@ function addLine(lineType) {
   -un texte*/
   if (lineType == 'text') {
     return textArea;
-  } 
+  }
 /*-ou une image*/
   else if (lineType == 'image') {
     return inputImage
@@ -87,10 +87,10 @@ function addLine(lineType) {
 /*ajoute au début de la liste l'élément souhaité (texte / image)*/
 function addText() {
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-  publicationCahierMultimedia.insertAdjacentHTML("afterbegin", addLine('text'));
+  publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('text'));
 }
 
 function addImage() {
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-  publicationCahierMultimedia.insertAdjacentHTML("afterbegin", addLine('image'));
+  publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
 }
