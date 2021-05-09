@@ -129,25 +129,21 @@ if ($_SESSION["Connected"] == "True") {
       </div>
 
       <?php foreach ($semaine as $jour) {?>
-              <div id="<?php echo $jour; ?>" class="tabcontent">
-                <h3><?php echo $jour; ?></h3>
-                <ul>
-                  <?php for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
-                        if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
-                            $info = AfficherDevoir($jour, "GS");
-                            $matiereP = $info['matiere'];
-                            $consigne = $info['consigne']; ?>
-                            <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-                    <?php }} ?>
+        <div id="<?php echo $jour; ?>" class="tabcontent">
+          <h3><?php echo $jour; ?></h3>
+            <ul>
+              <?php for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
+                   /*$info = InfoDevoirs($jour, "GS");
+                   $matiereP = $info[0];
+                   $consigne = $info[1]*/ ?>
+                   <p><?php echo $i; ?></p>
 
-                    <?php for ($i=1 ; $i <= NbPubJour($jour, "CP") ; $i++) {
-                          if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
-                              $info = AfficherDevoir($jour, "CP");
-                              $matiereP = $info['matiere'];
-                              $consigne = $info['consigne']; ?>
-                              <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-                    <?php }} ?>
-          </ul>
+                    <!--<li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>-->
+              <?php } ?>
+              <?php $info = InfoDevoirs($jour, "CP") ?>
+                    <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+              <?php }  ?>
+            </ul>
         </div>
       <?php } ?>
 
@@ -210,15 +206,7 @@ if ($_SESSION["Connected"] == "True") {
         <div class="container">
           <h3>Devoirs</h3>
           <select name="devoirs">
-            <?php foreach ($semaine as $jour) {
-                      for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
-                        if (null!==AfficherDevoir($jour, "GS")) { ?>
-                          <option value="<?php print $jour . " GS " . AfficherDevoir($jour, 'GS')['matiere'] ?>"><?php echo AfficherDevoir($jour, "GS")['matiere'] . ":" . AfficherDevoir($jour, "GS")['consigne'] ?></option>
-                      <?php }}
-                      for ($i=1 ; $i <= NbPubJour($jour, "CP") ; $i++) {
-                        if (null!==AfficherDevoir($jour, "CP")) { ?>
-                          <option value="<?php print $jour . " CP " . AfficherDevoir($jour, 'CP')['matiere'] ?>"><?php echo AfficherDevoir($jour, "CP")['matiere'] . ":" . AfficherDevoir($jour, "CP")['consigne'] ?></option>
-            <?php }}} ?>
+            <?php foreach ($semaine as $jour) { } ?>
 
           </select>
 
