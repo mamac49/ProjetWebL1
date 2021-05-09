@@ -138,9 +138,8 @@ if ($_SESSION["Connected"] == "True") {
               <?php for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
                 if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
                    $info = AfficherDevoir($jour, "GS", $x);
-                   $matiereP = $info['matiere'];
                    $consigne = $info['consigne']; ?>
-                  <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+                  <li class="texte"><?php echo "<i class='$matiere[$x] matiere'></i>" . $x . " : " . $consigne; ?></li>
               <?php }}} ?>
 
               <?php foreach ($ListMatiere as $x) { ?>
@@ -149,7 +148,7 @@ if ($_SESSION["Connected"] == "True") {
                    $info = AfficherDevoir($jour, "CP", $x);
                    $matiereP = $info['matiere'];
                    $consigne = $info['consigne']; ?>
-                  <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+                  <li class="texte"><?php echo "<i class='$matiere[$x] matiere'></i>" . $x . " : " . $consigne; ?></li>
               <?php }}} ?>
             </ul>
         </div>
