@@ -164,7 +164,7 @@ if ($_SESSION["Connected"] == "True") {
       <?php
       }
       if (isset($test)) {?>
-        <p class="texte"><?php var_dump($text);?></p>
+        <p class="texte"><?php var_dump($test);?></p>
       <?php
       }
       ?>
