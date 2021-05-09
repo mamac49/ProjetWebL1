@@ -112,7 +112,6 @@ if ($_SESSION["Connected"] == "True") {
               <div id="<?php echo $jour; ?>" class="tabcontent">
                 <h3><?php echo $jour; ?></h3>
                 <ul>
-                <?php foreach (DevoirID() as $i) { ?>
                   <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
                             $info = AfficherDevoir($jour, "GS");
                             $matiereP = $info['matiere'];
@@ -128,7 +127,7 @@ if ($_SESSION["Connected"] == "True") {
                     <?php } ?>
           </ul>
         </div>
-      <?php }} ?>
+      <?php } ?>
 
 
 
