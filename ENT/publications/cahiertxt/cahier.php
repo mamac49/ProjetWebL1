@@ -108,28 +108,27 @@ if ($_SESSION["Connected"] == "True") {
         <button class="tablinks" onmouseover="openDay(event, 'Vendredi')">Vendredi</button>
       </div>
 
-      <?php foreach ($semaine as $jour) {?>
-        <div id="<?php echo $jour; ?>" class="tabcontent">
-          <h3><?php echo $jour; ?></h3>
-          <ul>
-          <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
-                  foreach (DevoirID() as $i) {
-                    $info = AfficherDevoir($jour, "GS");
-                    $matiereP = $info['matiere'];
-                    $consigne = $info['consigne']; ?>
-                    <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-            <?php }} ?>
+      <?php foreach (DevoirID() as $i) {
+              foreach ($semaine as $jour) {?>
+              <div id="<?php echo $jour; ?>" class="tabcontent">
+                <h3><?php echo $jour; ?></h3>
+                <ul>
+                <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
+                          $info = AfficherDevoir($jour, "GS");
+                          $matiereP = $info['matiere'];
+                          $consigne = $info['consigne']; ?>
+                          <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+                  <?php } ?>
 
-            <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
-                    foreach (DevoirID() as $i) {
-                      $info = AfficherDevoir($jour, "CP");
-                      $matiereP = $info['matiere'];
-                      $consigne = $info['consigne']; ?>
-                      <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-            <?php }} ?>
+                  <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
+                            $info = AfficherDevoir($jour, "CP");
+                            $matiereP = $info['matiere'];
+                            $consigne = $info['consigne']; ?>
+                            <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+            <?php } ?>
           </ul>
         </div>
-      <?php } ?>
+      <?php }} ?>
 
 
 
