@@ -28,21 +28,10 @@ function AfficherDevoir($jour, $classe) {
     return $row;
   }
 }
-function NbDevoir($jour, $classe) {
-  $link = dbConnect();
-
-  $sql = "SELECT `idtxt` FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe');";
-  if ($resultat = mysqli_query($link, $sql)) {
-    $nb = mysqli_num_rows($resultat);
-    mysqli_free_result($resultat);
-    mysqli_close($link);
-    return $nb;
-  }
-}
 
 function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   $link = dbConnect();
-  //mysqli_query($link, "FLUSH `cahiertxt`");
+  mysqli_query($link, "FLUSH `cahiertxt`");
 
   $sql = "INSERT INTO `cahiertxt` (`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe');";
   if (mysqli_query($link, $sql)) {
@@ -124,19 +113,19 @@ if ($_SESSION["Connected"] == "True") {
           <h3><?php echo $jour; ?></h3>
           <ul>
           <?php if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
-            for ($i=1; $i <= NbDevoir($jour, "GS"); $i++) {
-              $info = AfficherDevoir($jour, "GS");
-              $matiereP = $info['matiere'];
-              $consigne = $info['consigne']; ?>
-              <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+                  foreach (DevoirID() as $i) {
+                    $info = AfficherDevoir($jour, "GS");
+                    $matiereP = $info['matiere'];
+                    $consigne = $info['consigne']; ?>
+                    <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
             <?php }} ?>
 
             <?php if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
-            for ($i=1; $i <= NbDevoir($jour, "CP"); $i++) {
-              $info = AfficherDevoir($jour, "CP");
-              $matiereP = $info['matiere'];
-              $consigne = $info['consigne']; ?>
-              <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
+                    foreach (DevoirID() as $i) {
+                      $info = AfficherDevoir($jour, "CP");
+                      $matiereP = $info['matiere'];
+                      $consigne = $info['consigne']; ?>
+                      <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
             <?php }} ?>
           </ul>
         </div>
