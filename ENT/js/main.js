@@ -56,10 +56,10 @@ function addLine(lineType) {
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
   /*vérifie si l'on a commencé par un texte*/
   if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
-    /* FIN DU MONDE !!!*/
+    /* DEBUT DU MONDE !!!*/
   } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
   else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
-    /* FIN DU MONDE 2.0 !!!*/
+    /* FIN DU MONDE !!!*/
     alert("Veuillez ajouter un texte avant votre image." );
     return none;
   } /*une fois le tout vérifié on ajoute un ligne*/
@@ -94,12 +94,3 @@ function addImage() {
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
   publicationCahierMultimedia.insertAdjacentHTML("afterbegin", addLine('image'));
 }
-
-/*if(publicationCahierMultimedia.innerHTML.slice(-51,-28) == "image_cahier_multimedia")*/
-/*var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-  if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1) {
-    alert("Veuillez ajouter un texte avant votre image." );
-  } else {
-    input.replace('line_'+ line, 'line_' + line + 1);
-    line += 1;
-  }*/
