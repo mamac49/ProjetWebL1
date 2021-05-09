@@ -50,7 +50,7 @@
   /*Menu sandwich*/
 
   .sandwich {
-    position: sticky;
+    position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
