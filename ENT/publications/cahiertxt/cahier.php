@@ -209,7 +209,7 @@ if ($_SESSION["Connected"] == "True") {
                       for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
                         if (null!==AfficherDevoir($jour, "GS")) { ?>
                           <option value="<?php print $i[0] ?>"><?php echo AfficherDevoir($jour, "GS")['consigne'] ?></option>
-                      <?php }
+                      <?php }}
                       for ($i=1 ; $i <= NbPubJour($jour, "CP") ; $i++) {
                         if (null!==AfficherDevoir($jour, "CP")) { ?>
                           <option value="<?php print $i[0] ?>"><?php echo AfficherDevoir($jour, "CP")['consigne'] ?></option>
