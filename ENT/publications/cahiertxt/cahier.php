@@ -161,6 +161,7 @@ if ($_SESSION["Connected"] == "True") {
         <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
         <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
         <p><?php if (isset($_POST['ValideAdd'])) {
+                  echo "a";
                   $classe = $_POST['classe'];
                   $matiere = $_POST['matiere'];
                   $consigne = $_POST['consigne'];
