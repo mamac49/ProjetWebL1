@@ -172,10 +172,10 @@ if ($_SESSION["Connected"] == "True") {
         <div class="container">
           <h3>Classe</h3>
           <select name="jour">
-            <option value="lundi">Lundi</option>
-            <option value="mardi">Mardi</option>
-            <option value="jeudi">Jeudi</option>
-            <option value="vendredi">Vendredi</option>
+            <option value="Lundi">Lundi</option>
+            <option value="Mardi">Mardi</option>
+            <option value="Jeudi">Jeudi</option>
+            <option value="Vendredi">Vendredi</option>
           </select>
           <div>
             <input type="radio" name="classe" id="GS" value="GS" checked>
