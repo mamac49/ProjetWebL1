@@ -160,7 +160,13 @@ if ($_SESSION["Connected"] == "True") {
       ?>
         <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
         <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
-        <p><?php echo AjoutDevoir("Lundi", "Francais", "Lire", "GS") ?></p>
+        <p><?php if (isset($_POST['ValideAdd'])) {
+                  $classe = $_POST['classe'];
+                  $matiere = $_POST['matiere'];
+                  $consigne = securisation($_POST['consigne']);
+                  $jour = $_POST['jour'];
+                  echo AjoutDevoir($classe, $matiere, $consigne, $jour);
+                }?></p>
       <?php
       } ?>
 
