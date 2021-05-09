@@ -163,6 +163,14 @@ if ($_SESSION["Connected"] == "True") {
         <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
       <?php
       }
+
+      if (isset($_POST['ValideAdd'])) {
+        $classe = $_POST['classe'];
+        $matiere = $_POST['matiere'];
+        $consigne = securisation($_POST['consigne']);
+        $jour = $_POST['jour'];
+        $test = AjoutDevoir($classe, $matiere, $consigne, $jour);
+      }
       if (isset($test)) {?>
         <p class="texte"><?php var_dump($test);?></p>
       <?php
