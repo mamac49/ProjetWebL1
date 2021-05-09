@@ -141,14 +141,14 @@ if ($_SESSION["Connected"] == "True") {
                   <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
               <?php }}} ?>
 
-              <?php foreach ($matiere as $x) { ?>
+              <!--<?php foreach ($matiere as $x) { ?>
               <?php for ($i=0; $i < NbPubJour($jour, "CP"); $i++) {
                 if (count(AfficherDevoir($jour, "CP", $x))>0) {
                    $info = AfficherDevoir($jour, "CP", $x);
                    $matiereP = $info['matiere'];
                    $consigne = $info['consigne']; ?>
                   <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-              <?php }}} ?>
+              <?php }}} ?>-->
             </ul>
         </div>
       <?php } ?>
