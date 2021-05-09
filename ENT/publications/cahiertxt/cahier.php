@@ -99,7 +99,7 @@ $matiere["Contes"] = "fas fa-dragon";
 $matiere["Rituels"] = "fas fa-chalkboard-teacher";
 $matiere["Education civique"] = "fas fa-school";
 
-$ListMatiere = array("Maths", "Francais", "Sciences", "Espaces", "Temps", "Musique", "Arts", "Anglais", "EPS", "Contes", "Rituels", "Education civique")
+$ListMatiere = array("Maths", "Francais", "Sciences", "Espaces", "Temps", "Musique", "Arts", "Anglais", "EPS", "Contes", "Rituels", "Education civique");
 
 if ($_SESSION["Connected"] == "True") {
 ?>
