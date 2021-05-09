@@ -92,10 +92,10 @@ if ($_SESSION["Connected"] == true) {
               <input type="button" onclick="window.location.href = 'creationB.php';" name="CreationBlog" value="Créer Un Blog"/>
               <select name="BlogD">
                 <?php
-                for ($x=1 ; $x<=nbPub() ; $x++) {
-                  if (nature($x) == "1") {
+              foreach (nbPub() as $x){
+                  if (nature($x[0]) == "1") {
                 ?>
-                  <option class="texte" value="<?php echo $x ?>"><?php echo titre($x); ?></option>
+                  <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                 <?php }} ?>
               </select>
               <input type="submit" name="ValiderSupp" value="Supprimer le blog" class="bouton">
