@@ -62,6 +62,7 @@
     padding-left: 10px;
     z-index: 3;
     transform: translateX(-275px);
+    transition: 300ms all ease-in-out;
     }
 
   /*.move_menu {
