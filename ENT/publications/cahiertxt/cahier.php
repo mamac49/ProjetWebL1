@@ -141,8 +141,8 @@ if ($_SESSION["Connected"] == "True") {
 
               <?php for ($i=0; $i < NbPubJour($jour, "CP"); $i++) {
                    $info = AfficherDevoir($jour, "CP");
-                   $matiereP = $info[0];
-                   $consigne = $info[1]; ?>
+                   $matiereP = $info['matiere'];
+                   $consigne = $info['consigne']; ?>
                   <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
               <?php } ?>
             </ul>
