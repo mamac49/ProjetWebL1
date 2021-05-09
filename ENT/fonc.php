@@ -78,9 +78,14 @@ function securisation ($donnee){ // pour protéger les champs
 function nbPub() {
   $link = dbConnect();
   $sql = "SELECT `idpublications` FROM `Publications`";
-  if ($result = mysqli_query($link, $sql)) {
-    return mysqli_num_rows($result);
+  $result = mysqli_query($link, $sql);
+  $IDpubli = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDpubli[] = $row;
+    }
   }
+  return $IDpubli;
 }
 
 function nature($x) {

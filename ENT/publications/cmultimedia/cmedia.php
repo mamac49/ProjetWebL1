@@ -43,10 +43,10 @@ if ($_SESSION["Connected"] == true) {
             <div class="leaf">
               <ul class="liste">
                 <?php
-                for ($x=1 ; $x<=nbPub() ; $x++) {
-                  if (nature($x) == "2") {
+                foreach (nbPub() as $x) {
+                  if (nature($x[0]) == "2") {
                 ?>
-                  <li class="texte"><a class="Copybook" href="AffichageC.php?id=<?php print $x ?>"><i class="fas fa-book IcoBook"></i><br><?php echo titre($x); ?></a></li>
+                  <li class="texte"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><i class="fas fa-book IcoBook"></i><br><?php echo titre($x[0]); ?></a></li>
                 <?php
                   }
                 }
@@ -59,10 +59,10 @@ if ($_SESSION["Connected"] == true) {
                 <a href="creationC.php">Créer un cahier multimédia</a>
                 <select name="Cmulti">
                   <?php
-                  for ($x=1 ; $x<=nbPub() ; $x++) {
-                    if (nature($x) == "2") {
+                  foreach (nbPub() as $x) {
+                    if (nature($x[0]) == "2") {
                   ?>
-                    <option class="texte" value="<?php echo $x ?>"><?php echo titre($x); ?></option>
+                    <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                   <?php }} ?>
                 </select>
                 <input type="submit" name="ValiderSupp" value="Supprimer le cahier multimédia" class="bouton">

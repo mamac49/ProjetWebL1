@@ -68,13 +68,12 @@ if ($_SESSION["Connected"] == true) {
             <h2 class="texte">Liste des sujets</h2>
             <ul class="liste_sujets">
               <?php
-              $req=nbPub();
-              for ($i=1;$i<=$req;$i++){
-                if (nature($i) == "1"){
-                  if (textevide($i)!=="" OR $_SESSION["Admin"] == true){
-                  $titre=titre($i);
-                  $auteur=auteur($i);
-                  $date=jour($i);
+              foreach (nbPub() as $i){
+                if (nature($i[0]) == "1"){
+                  if (textevide($i[0])!=="" OR $_SESSION["Admin"] == true){
+                  $titre=titre($i[0]);
+                  $auteur=auteur($i[0]);
+                  $date=jour($i[0]);
               ?>
               <li class="sujets"><a href="AffichageB.php?id=<?php print $i ?>"><i class="fas fa-robot icone"></i> <?php echo $titre; ?>
               </a> <span class="texte">Edité par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
