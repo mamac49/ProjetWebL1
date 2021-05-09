@@ -125,30 +125,26 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             $res=auteurB($IDblog);?></p>
             <?php if ($_SESSION["ID"]==$res){ ?>
               <input type="button" value="Editer la publication">
-              <?php }
-              foreach (nbPub() as $i){
-                if (idCom($i) == $IDblog){
-                  $auteurC=auteurC($i);
-                  $tempsC=temps_ecriture_C($i);
-                  $message=message($i);
-                  ?>
-                  <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
-                  <p><?php echo textevide($i);
-                  $res=auteurC($i);?></p>
-                  }
-                }
-
+            <?php }
+            foreach (nbPub() as $i){
+              if (idCom($i) == $IDblog){
+                $auteurC=auteurC($i);
+                $tempsC=temps_ecriture_C($i);
+                $message=message($i);
+                ?>
+                <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
+                <p><?php echo textevide($i);
+                $res=auteurC($i);?></p>
+              }
+            }
+          }
         </div>
-
       </div>
-
     </div>
-
   </body>
 </html>
 
 <?php
-}
 } else {
   header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
