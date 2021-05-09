@@ -39,15 +39,12 @@ function getNbLines() {
   publications.value = saisie.nb_max;
 }
 
-/*function addLine() {
-  var saisie = document.getElementById("textareaCahierMultimedia");
-  var nb_max = saisie.nb_max();
-  var nb = saisie.nb();
-  var publications = document.getElementById("publications_cahier_multimedia");
-  var template = document.getElementById("template");
-  publications.innerHTML = publications.innerHTML + template.innerHTML;
-}*/
+/*Fonction d'ajout de texte ou d'image*/
 
+/*déclaration des variables :
+  -textArea : template de la saisie de texte
+  -inputImage : template du dépot d'image
+  -line : ligne de la zone*/
 textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create=false required></textarea>';
 inputImage = '<input name="line_0" class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" accept="image/*" required>';
 line = 0;
@@ -59,22 +56,31 @@ function addLine(lineType) {
   /*vérifie si l'on a commencé par un texte*/
   if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
     continue;
-  } else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
+  } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
+  else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
     alert("Veuillez ajouter un texte avant votre image." );
-  } else {
+  } /*une fois le tout vérifié on ajoute un ligne*/
+  else {
     textArea.replace('line_'+ line, 'line_' + line + 1);
     inputImage.replace('line_'+ line, 'line_' + line + 1);
     line += 1;
   }
+  /*en fonction du type de ligne demandé
+  -un texte*/
   if (lineType == 'text') {
     return textArea;
-  } else if (lineType == 'image') {
+  } 
+/*-ou une image*/
+  else if (lineType == 'image') {
     return inputImage
-  } else {
+  } 
+/*-et une erreur si aucun type n'a été spécifié, peut arriver en cas de bug au niveau des boutons*/
+  else {
     console.log('Error : Undefined lineType')
   }
 }
 
+/*ajoute au début de la liste l'élément souhaité (texte / image)*/
 function addText() {
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
   publicationCahierMultimedia.insertAdjacentHTML("afterbegin", addLine('text'));
