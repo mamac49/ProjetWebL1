@@ -37,7 +37,7 @@ function temps_ecriture_C($x) { //renvoie l'heure et la date à laquelle est éc
   $sql = "SELECT `date_ecriture`,`heure_ecriture` FROM `Commentaires` WHERE `idcom`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    return $row[0]." ".$row[1];
+    return $row[0]." à ".$row[1];
   }
 }
 
