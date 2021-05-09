@@ -27,6 +27,7 @@ function NbPubJour($jour) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
       $cahiersIds[] = $row;
     }
+  }
 }
 
 function AfficherDevoir($jour, $classe) {
