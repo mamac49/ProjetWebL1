@@ -58,6 +58,18 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   }
 }
 
+function SuppressionDevoir() {
+  $link = dbConnect();
+
+  $sql = "DELETE FROM `cahiertxt` WHERE `iduser`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+    echo "succès";
+  } else {
+    echo mysqli_error($link);
+  }
+  mysqli_query($link, "FLUSH `users`");
+}
+
 if (isset($_POST['ValideAdd'])) {
   $classe = securisation($_POST['classe']);
   $matiere = securisation($_POST['matiere']);
@@ -208,11 +220,11 @@ if ($_SESSION["Connected"] == "True") {
             <?php foreach ($semaine as $jour) {
                       for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
                         if (null!==AfficherDevoir($jour, "GS")) { ?>
-                          <option value="<?php print $i[0] ?>"><?php echo AfficherDevoir($jour, "GS")['consigne'] ?></option>
+                          <option value="<?php print $jour . " GS " . "AfficherDevoir($jour, 'GS')['matiere']" ?>"><?php echo AfficherDevoir($jour, "GS")['matiere'] ?></option>
                       <?php }}
                       for ($i=1 ; $i <= NbPubJour($jour, "CP") ; $i++) {
                         if (null!==AfficherDevoir($jour, "CP")) { ?>
-                          <option value="<?php print $i[0] ?>"><?php echo AfficherDevoir($jour, "CP")['consigne'] ?></option>
+                          <option value="<?php print $jour . " CP " . "AfficherDevoir($jour, 'CP')['matiere']" ?>"><?php echo AfficherDevoir($jour, "CP")['matiere'] ?></option>
             <?php }}} ?>
 
           </select>
