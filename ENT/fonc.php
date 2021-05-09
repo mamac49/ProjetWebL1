@@ -92,7 +92,7 @@ function nbCom() {
   $link = dbConnect();
   $sql = "SELECT `idcom` FROM `Commentaires`";
   $result = mysqli_query($link, $sql);
-  $IDpubli = array();
+  $IDcommen = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
       $IDpubli[] = $row;
