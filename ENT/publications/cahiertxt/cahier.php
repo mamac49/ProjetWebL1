@@ -56,7 +56,6 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
     echo mysqli_error($link);
     mysqli_close($link);
   }
-  return $sql;
 }
 
 function SuppressionDevoir($jour, $classe, $matiere) {
@@ -160,16 +159,7 @@ if ($_SESSION["Connected"] == "True") {
       ?>
         <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
         <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
-        <p><?php if (isset($_POST['ValiderAjout'])) {
-                  echo "a";
-                  $classe = $_POST['classe'];
-                  $matiere = $_POST['matiere'];
-                  $consigne = $_POST['consigne'];
-                  $jour = $_POST['jour'];
-                  print AjoutDevoir($classe, $matiere, $consigne, $jour);
-                }?></p>
-      <?php
-      } ?>
+      <?php } ?>
 
     </div>
 
