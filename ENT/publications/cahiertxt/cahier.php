@@ -136,7 +136,7 @@ if ($_SESSION["Connected"] == "True") {
             <ul>
               <?php foreach ($ListMatiere as $x) { ?>
               <?php for ($i=0; $i < NbPubJour($jour, "GS"); $i++) {
-                if (gettype(AfficherDevoir($jour, "GS", $x)) == null) {
+                if (gettype(AfficherDevoir($jour, "GS", $x)) != null) {
                    $info = AfficherDevoir($jour, "GS", $x);
                    $matiereP = $info['matiere'];
                    $consigne = $info['consigne']; ?>
