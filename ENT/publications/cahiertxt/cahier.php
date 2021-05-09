@@ -80,10 +80,7 @@ if (isset($_POST['ValideAdd'])) {
 
 if (isset($_POST['ValiderRem'])) {
   $str = explode(" ", $_POST['devoirs']);
-  $jour = $str[0];
-  $classe = $str[1];
-  $matiere = $str[2];
-  SuppressionDevoir($jour, $classe, $matiere);
+  SuppressionDevoir($str[0], $str[1], $str[2]);
 }
 
 
