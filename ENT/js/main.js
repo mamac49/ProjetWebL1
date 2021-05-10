@@ -41,17 +41,19 @@ function getNbLines() {
 
 /*Fonction d'ajout de texte ou d'image*/
 
-
-function addLine(lineType) {
   /*déclaration des variables :
   -textArea : template de la saisie de texte
   -inputImage : template du dépot d'image
   -line : ligne de la zone
   -publicationCahierMultimedia : liste où sont affichés les zones de saisie*/
-  var textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
-  var inputImage = '<input name="line_0" class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" accept="image/*" required>';
-  var line = 0;
-  var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
+inputImage = '<input name="line_0" class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" accept="image/*" required>';
+line = 0;
+
+function addLine(lineType) {
+  /*-publicationCahierMultimedia : liste où sont affichés les zones de saisie*/
+  publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+
   /*vérifie si l'on a commencé par un texte*/
   if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
     /* DEBUT DU MONDE !!!*/
@@ -64,26 +66,16 @@ function addLine(lineType) {
   
   /*PAS FIN DU MONDE !!!*/
   /*logs tests*/
-  var line_test = "ceci est le test n test_0 de remplacement";
-  console.log(line_test);
-  line_test = "ceci est le test n test_1 de remplacemen";
-  console.log(line_test);
-
-  /*console.log('text area = ' + textArea);
-  console.log('image area = ' + inputImage);
-  console.log('line_' + line);
-  console.log('line_' + (line + 1));
-
-  console.log(line);
-  console.log(line);
-
-  textArea.replace('line_' + line, 'line_' + (line + 1));
-  inputImage.replace('line_' + line, 'line_' + (line + 1));
-  line += 1;*/
-  /*logs tests
   console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
-  console.log(line);*/
+  console.log(line);
+  textArea = textArea.replace('line_' + line, 'line_' + (line + 1));
+  inputImage = inputImage.replace('line_' + line, 'line_' + (line + 1));
+  line += 1;
+  /*logs tests*/
+  console.log('text area = ' + textArea);
+  console.log('image area = ' + inputImage);
+  console.log(line);
 
 
   /* ajoute en fonction du type de ligne demandé
