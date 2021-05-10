@@ -7,7 +7,7 @@
 
 /* Background Color */
 
-.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .semaine, .iconCrea, .ListeDeroulante {
+.move_menu, .sandwich, .Login, .qwant, .bouton, .Login, .semaine, .iconCrea, .ListeDeroulante {
   background-color: var(--main-color);
 }
 
@@ -42,7 +42,7 @@
   color: var(--font-color);
 }
 
-.FormCrea, .semaine button, #navbar a, input[type=button], .bouton, .Login, .texteB , .ListeDeroulante {
+.FormCrea, .semaine button, #navbar a, .bouton, .Login, .texteB , .ListeDeroulante {
   color: var(--font-color);
 }
 
