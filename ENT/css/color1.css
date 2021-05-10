@@ -50,6 +50,34 @@
   color: var(--font-color-nde);
 }
 
+/* pour avoir des boutons avec animation dynamique */
+.boutonanime{
+  border-radius: 10px;
+  background-color: var(--main-color);
+  border: none;
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.boutonanime span {
+  display: inline-block;
+  position: relative;
+  &after{
+    content: '\00bb';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    transition: 0.5s cubic-bezier(1,.19,.47,.96);
+  }
+}
+
+.boutonanime:hover span:after {
+  right: -150px;
+}
 
 html {
   background: radial-gradient(ellipse farthest-corner at 50% 140%, rgba(0, 0, 0, 0.75) 10%, rgba(0, 0, 0, 0.85) 90%);
