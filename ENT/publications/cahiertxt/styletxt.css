@@ -117,7 +117,10 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-right: 15px;
+}
+
+.modal-content {
   word-wrap: break-word;
   overflow: hidden;
-  padding-right: 15px;
 }
