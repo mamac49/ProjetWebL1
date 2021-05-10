@@ -48,3 +48,9 @@
 .input-field:focus {
   border: 2px solid;
 }
+
+.suppression {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

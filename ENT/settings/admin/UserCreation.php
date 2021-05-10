@@ -25,17 +25,6 @@ function Create($nom, $prenom, $mail, $password, $date, $admin, $classe) {
     mysqli_close($link);
 }
 
-function Delete($Contact) {
-  $link = dbConnect();
-  $sql = "DELETE FROM `users` WHERE `iduser`='$Contact'";
-  if (mysqli_query($link, $sql)) {
-    echo "succès";
-  } else {
-    echo mysqli_error($link);
-  }
-  mysqli_query($link, "FLUSH `users`");
-}
-
 
 if ( isset($_POST['valider'])) {
     if ($_POST['mdp'] == $_POST['mdp2']) {
@@ -55,11 +44,6 @@ if ( isset($_POST['valider'])) {
     echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
     header("refresh: 0");
   }
-}
-
-if ( isset($_POST['ValiderSupp'])) {
-  $user = $_POST['user'];
-  Delete($user);
 }
 
 if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
@@ -127,7 +111,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
               <ul>
                 <?php
                 foreach (nombre() as $x) { ?>
-                  <li class=texte><?php echo $x[0] ?>"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?></li>
+                  <li class="texte suppression"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?><a href="SupUser.php?id=<?php print $x[0] ?>"><i class="fas fa-times supprimer"></i></a></li>
                 <?php } ?>
               </ul>
 
