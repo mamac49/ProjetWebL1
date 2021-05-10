@@ -14,7 +14,7 @@ function Save($type, $message) {
 if (isset($_POST['Valider'])) {
   $type = $_POST['Type'];
   $message = $_POST['Rapport'];
-  Save($type, $message)
+  Save($type, $message);
 }
 
 if ($_SESSION["Connected"] == true) {
