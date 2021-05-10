@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 include '../../fonc.php';
 
-function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe) {
+function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe, $pp) {
     $link = dbConnect();
     mysqli_query($link, "FLUSH `users`");
 
@@ -55,7 +55,7 @@ if ( isset($_POST['valider'])) {
       } else {
         $admin = 0;
       }
-      Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe);
+      Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe, $pp);
   } else {
     echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
     header("refresh: 0");
