@@ -42,7 +42,7 @@
   color: var(--font-color);
 }
 
-.FormCrea, .semaine button, #navbar a, input[type=button], .bouton, .Login, .texteB {
+.FormCrea, .semaine button, #navbar a, input[type=button], .bouton, .Login, .texteB , .ListeDeroulante {
   color: var(--font-color);
 }
 
