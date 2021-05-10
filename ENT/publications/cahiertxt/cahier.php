@@ -79,11 +79,6 @@ if (isset($_POST['ValiderAjout'])) {
   AjoutDevoir($classe, $matiere, $consigne, $jour);
 }
 
-if (isset($_POST['ValiderRemo'])) {
-  $str = explode(" ", $_POST['devoirs']);
-  SuppressionDevoir($str[0], $str[1], $str[2]);
-}
-
 
 $semaine = array("Lundi", "Mardi", "Jeudi", "Vendredi");
 
@@ -141,7 +136,8 @@ if ($_SESSION["Connected"] == "True") {
                     if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
                        $info = AfficherDevoir($jour, "GS", $x);
                        $consigne = $info['consigne']; ?>
-                      <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div><?php if ($_SESSION["Admin"] == True) { ?><i class="fas fa-times fermer"></i><?php } ?></li>
+                      <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
+                        <?php if ($_SESSION["Admin"] == True) { ?> <i class="fas fa-times fermer"></i> <?php } ?></li>
               <?php }} ?>
 
               <?php
@@ -150,7 +146,8 @@ if ($_SESSION["Connected"] == "True") {
                        $info = AfficherDevoir($jour, "CP", $x);
                        $matiereP = $info['matiere'];
                        $consigne = $info['consigne']; ?>
-                       <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div><i class="fas fa-times fermer"></i></li>
+                       <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
+                         <?php if ($_SESSION["Admin"] == True) { ?> <i class="fas fa-times fermer"></i> <?php } ?></li>
               <?php }} ?>
             </ul>
         </div>
@@ -162,7 +159,6 @@ if ($_SESSION["Connected"] == "True") {
         if ($_SESSION["Admin"] == True) {
       ?>
         <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
-        <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
       <?php } ?>
 
     </div>
