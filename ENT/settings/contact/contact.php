@@ -1,16 +1,10 @@
 <?php
 session_start();
 
-$filename="logs.txt";
-chmod($filename, 0444);
-
 include '../../fonc.php';
 
 function Save($type, $message) {
-  $file = fopen("logs.txt", "w");
-  $txt = $_SESSION['Mail'] . " : " . date("d/m/Y-H:i") . "\n" . "Type =" . $type ."\n" . $message;
-  fwrite($file, $txt);
-  fclose($file);
+  $link = dbConnect();
 }
 
 
