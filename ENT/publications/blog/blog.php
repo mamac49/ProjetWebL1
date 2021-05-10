@@ -89,7 +89,7 @@ if ($_SESSION["Connected"] == true) {
               if ($_SESSION["Admin"] == true) {
             ?>
             <form>
-              <input type="button" onclick="window.location.href = 'creationB.php';" name="CreationBlog" value="Créer Un Blog"/>
+              <input type="button" class="boutonanime" onclick="window.location.href = 'creationB.php';" name="CreationBlog" value="Créer Un Blog"/>
               <select name="BlogD">
                 <?php
               foreach (nbPub() as $x){
@@ -98,7 +98,7 @@ if ($_SESSION["Connected"] == true) {
                   <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                 <?php }} ?>
               </select>
-              <input type="submit" name="ValiderSupp" value="Supprimer le blog" class="bouton">
+              <input type="submit" name="ValiderSupp" value="Supprimer le blog" class="boutonanime">
               <br/>
             </form>
             <?php
