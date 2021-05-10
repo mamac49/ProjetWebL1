@@ -46,7 +46,19 @@ if ($_SESSION["Connected"] == true) {
         <p><textarea name="Rapport" placeholder="Donnez votre avis/Signaler votre problème(400 caractères maximum)" max-length=400 rows="5" cols="70" required></textarea></p>
         <input type="submit" name="ValiderEnvoi" class="bouton" value="Valider le formulaire">
       </form>
+      <?php
+        if ($_SESSION["Admin"] == True) {
+      ?>
+        <button type="button" onclick="document.getElementById('ShowRate').style.display='block'" name="button" class="bouton">Afficher les avis</button>
+      <?php } ?>
+
+      <div class="modal" id="ShowRate">
+        <span onclick="document.getElementById('AddHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+        <h3 class="texte">Avis et bugs</h3>
+
+      </div>
     </div>
+
 
     </body>
 </html>
