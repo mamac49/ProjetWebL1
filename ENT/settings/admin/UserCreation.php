@@ -12,7 +12,8 @@ function Create($nom, $prenom, $mail, $password, $date, $admin, $classe) {
     $pp = file_get_contents("../../data/PP.png", True);
     $pp = mysqli_real_escape_string($link, $pp);
     $iduser = max(max(nombre())) + 1;
-
+    return $pp;
+    /*
     $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`, `data`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe', '$pp');";
     if (mysqli_query($link, $sql)) {
         reset($_POST);
@@ -21,7 +22,7 @@ function Create($nom, $prenom, $mail, $password, $date, $admin, $classe) {
     } else {
       echo mysqli_error($link);
     }
-    mysqli_close($link);
+    mysqli_close($link);*/
 }
 
 function Delete($Contact) {
@@ -121,6 +122,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
               <input type="submit" name="ValiderSupp" value="Supprimer l'utilisateur" class="bouton Séparer">
 
             </form>
+            <p class="texte"><?php var_dump(Create("zdf", "zqdzd", "zdzda", "zqdzqd", "dzq", "dqz", "esf")) ?></p>
 
         </div>
 
