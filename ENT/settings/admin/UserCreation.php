@@ -97,7 +97,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="input-field" required>
                 </div>
                 <p class="texteF">Administrateur ?
-                <input type="checkbox" value="1" name="admin" onclick="document.getElementById('classe').style.display='none'"></p>
+                <input type="checkbox" value="1" name="admin" onchange="document.getElementById('classe').style.display='none'"></p>
                 <div id="classe">
                   <p>
                     <label class="texte" for="GS">GS</label>
