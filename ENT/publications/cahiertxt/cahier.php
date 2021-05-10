@@ -90,10 +90,10 @@ if ($_SESSION["Connected"] == "True") {
 
     <div class="Center">
       <div class="semaine">
-        <button class="tablinks" onmouseover="openDay(event, 'Lundi')" autofocus>Lundi</button>
-        <button class="tablinks" onmouseover="openDay(event, 'Mardi')">Mardi</button>
-        <button class="tablinks" onmouseover="openDay(event, 'Jeudi')">Jeudi</button>
-        <button class="tablinks" onmouseover="openDay(event, 'Vendredi')">Vendredi</button>
+        <button class="tablinks bouton" onmouseover="openDay(event, 'Lundi')" autofocus>Lundi</button>
+        <button class="tablinks bouton" onmouseover="openDay(event, 'Mardi')">Mardi</button>
+        <button class="tablinks bouton" onmouseover="openDay(event, 'Jeudi')">Jeudi</button>
+        <button class="tablinks bouton" onmouseover="openDay(event, 'Vendredi')">Vendredi</button>
       </div>
 
       <?php foreach ($semaine as $jour) {?>
@@ -127,7 +127,7 @@ if ($_SESSION["Connected"] == "True") {
       <?php
         if ($_SESSION["Admin"] == True) {
       ?>
-        <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
+        <button type="button bouton" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
       <?php } ?>
 
     </div>
