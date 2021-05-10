@@ -52,14 +52,11 @@
 
 /* pour avoir des boutons avec animation dynamique */
 input[type=button], .bouton{
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: var(--main-color);
   border: none;
   color: #FFFFFF;
   text-align: left;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
   cursor: pointer;
 }
 
