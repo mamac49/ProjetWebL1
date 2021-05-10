@@ -43,27 +43,12 @@ function AfficherDevoir($jour, $classe, $matiere) {
   }
 }
 
-function AjoutDevoir($classe, $matiere, $consigne, $jour) {
-  $link = dbConnect();
-  mysqli_query($link, "FLUSH `cahiertxt`");
-
-  $sql = "INSERT INTO `cahiertxt`(`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
-  if (mysqli_query($link, $sql)) {
-    echo "<script> document.getElementById('AddHW').style.display='none' </script>";
-    mysqli_close($link);
-  } else {
-    echo mysqli_error($link);
-    mysqli_close($link);
-    reset($_POST);
-  }
-}
-
 if (isset($_POST['ValiderAjout'])) {
   $classe = $_POST['classe'];
   $matiere = $_POST['matiere'];
   $consigne = securisation($_POST['consigne']);
   $jour = $_POST['jour'];
-  AjoutDevoir($classe, $matiere, $consigne, $jour);
+  header("Location: AjoutDevoir.php?" . $classe . " " . $matiere . " " . $consigne . " " . $jour);
 }
 
 
