@@ -13,7 +13,7 @@ function annivs() {
     if ($result = mysqli_query($link, $anniv)) {
       $row = mysqli_fetch_array($result);
   }
-  return $row;
+  return $anniv;
 }
 
 
