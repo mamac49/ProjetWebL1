@@ -311,6 +311,7 @@ textarea {
   width: auto;
   padding: 5px;
   padding-right: 20px;
+  font-size: 1.5em;
 }
 
 .bouton span {
