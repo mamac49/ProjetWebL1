@@ -141,7 +141,7 @@ if ($_SESSION["Connected"] == "True") {
                     if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
                        $info = AfficherDevoir($jour, "GS", $x);
                        $consigne = $info['consigne']; ?>
-                      <li class="texte"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>"'$x' .  " : " . "</span>" . $consigne; ?></div><i class="fas fa-times fermer"></i></li>
+                      <li class="texte"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div><i class="fas fa-times fermer"></i></li>
               <?php }} ?>
 
               <?php
