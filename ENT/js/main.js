@@ -124,6 +124,7 @@ function ReadMore(x) {
   var moreText = document.getElementById("more-" + x);
   var btnText = document.getElementById("myBtn-" + x);
   console.log(moreText);
+  console.log(btnText);
 
   if (moreText.style.display === "inline") {
     btnText.innerHTML = "Lire plus";
