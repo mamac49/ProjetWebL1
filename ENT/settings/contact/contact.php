@@ -38,7 +38,7 @@ function AfficheAvis($id) {
     mysqli_free_result($result);
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
-      return $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['Mail'] . " : " . $row['message'];
+      return $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . " : " . $row['message'];
     } else {
       return mysqli_error($link);;
     }
