@@ -13,7 +13,8 @@ function Create($nom, $prenom, $mail, $password, $date, $admin, $classe) {
     $pp = mysqli_real_escape_string($link, $pp);
     $iduser = max(max(nombre())) + 1;
 
-    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`, `data`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe', '$pp');";
+    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`, `data`)
+    VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe', '$pp');";
     if (mysqli_query($link, $sql)) {
         reset($_POST);
         mysqli_close($link);
