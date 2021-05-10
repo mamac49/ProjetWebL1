@@ -42,7 +42,7 @@ if ($_SESSION["Connected"] == true) {
       <!--<textarea class="textareaId" id="textareaBlog" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
 -->
     </ul>
-      <button name="create" class="bouton" method="PUT">Ajouter une case</button>
+      <button name="create" class="bouton" method="PUT"><span>Ajouter une case </span></button>
     <input type="submit" name="Valider" class="bouton" value="Valider le blog">
   </form>
 </div>

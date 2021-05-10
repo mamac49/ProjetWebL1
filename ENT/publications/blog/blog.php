@@ -89,7 +89,7 @@ if ($_SESSION["Connected"] == true) {
               if ($_SESSION["Admin"] == true) {
             ?>
             <form>
-              <input type="button" onclick="window.location.href = 'creationB.php';" name="CreationBlog" value="Créer Un Blog" class="bouton"/>
+              <input type="button" onclick="window.location.href = 'creationB.php';" name="CreationBlog" value="Créer Un Blog" class="bouton"/><span></span>
               <select name="BlogD">
                 <?php
               foreach (nbPub() as $x){

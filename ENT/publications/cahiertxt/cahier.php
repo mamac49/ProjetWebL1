@@ -127,7 +127,7 @@ if ($_SESSION["Connected"] == "True") {
       <?php
         if ($_SESSION["Admin"] == True) {
       ?>
-        <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button" class="bouton">Ajouter des devoirs</button>
+        <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button" class="bouton"><span>Ajouter des devoirs </span></button>
       <?php } ?>
 
     </div>
