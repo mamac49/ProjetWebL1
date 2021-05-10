@@ -38,13 +38,16 @@ function AfficheAvis($id) {
     mysqli_free_result($result);
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
-      return $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . " : " . $row['message'];
+      return $icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . " : " . $row['message'];
     } else {
       return mysqli_error($link);;
     }
-
   }
 }
+
+$icone = array();
+$icone["Bug"] = "<i class='fas fa-bug icone icone'></i>";
+$icone["Avis"] = "<i class='fas fa-bug icone icone'></i>"
 
 if (isset($_POST['ValiderEnvoi'])) {
   $type = $_POST['Type'];
