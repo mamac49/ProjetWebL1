@@ -67,9 +67,9 @@
     transition: 300ms all ease-in-out;
     }
 
-  /*.move_menu {
+  .move_menu {
     transform: translateX(0px);
-    }*/
+    }
 
   .menu_cross {
     padding-top: 10px;
