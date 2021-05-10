@@ -40,7 +40,6 @@ function AfficheAvis($id) {
       $rowUser = mysqli_fetch_array($resultat);
       return $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['Mail'] . " : " . $row['message'];
     } else {
-      mysqli_close($link);
       return mysqli_error($link);;
     }
 
