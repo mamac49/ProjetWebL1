@@ -30,7 +30,8 @@ function nombreAvis() {
 
 function nombreAvisUser() {
   $link = dbConnect();
-  $sql = "SELECT `IDavis` FROM `avis` WHERE `iduser`=$_SESSION['ID']";
+  $id = $_SESSION['ID'];
+  $sql = "SELECT `IDavis` FROM `avis` WHERE `iduser`=$id";
   $result = mysqli_query($link, $sql);
   $IDavis = array();
   if ($result) {
