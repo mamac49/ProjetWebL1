@@ -97,6 +97,10 @@ function getNbLines() {
     else if (lineType == 'image') {
       return inputImage;
     }
+  /*-ou une video*/
+    else if (lineType == 'video') {
+      return videoArea;
+    }
   /*-et une erreur si aucun type n'a été spécifié, peut arriver en cas de bug au niveau des boutons*/
     else {
       console.log('Error : Undefined lineType');
