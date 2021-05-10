@@ -127,7 +127,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             <p><?php echo textevide($IDblog);
             $res=auteurB($IDblog); ?></p>
             <?php if ($_SESSION["ID"]==$res){ ?>
-              <input type="button" value="Editer la publication">
+              <input type="button" class="bouton" value="Editer la publication">
             <?php }
             foreach (nbCom() as $x){
               if (idCom($x[0]) == $IDblog){
