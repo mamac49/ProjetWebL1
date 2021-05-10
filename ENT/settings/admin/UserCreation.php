@@ -89,27 +89,27 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <h2 class="texte">Création d'utilisateur</h2>
                 <div class="input-container">
                   <i class="fas fa-user icon"></i>
-                  <input type="text" name="nom" placeholder="Nom" class="FormCrea input-field" required>
+                  <input type="text" name="nom" placeholder="Nom" class="input-field" required>
                 </div>
                 <div class="input-container">
                   <i class="far fa-user icon"></i>
-                  <input type="text" name="prenom" placeholder="Prénom" class="FormCrea input-field" required>
+                  <input type="text" name="prenom" placeholder="Prénom" class="input-field" required>
                 </div>
                 <div class="input-container">
                   <i class="fas fa-envelope icon"></i>
-                  <input type="email" name="mail" placeholder="E-mail" class="FormCrea input-field" required>
+                  <input type="email" name="mail" placeholder="E-mail" class="input-field" required>
                 </div>
                 <div class="input-container">
                   <i class="fas fa-key icon"></i>
-                  <input type="password" name="mdp" placeholder="Mot de passe" class="FormCrea input-field" required>
+                  <input type="password" name="mdp" placeholder="Mot de passe" class="input-field" required>
                 </div>
                 <div class="input-container">
                   <i class="fas fa-key icon"></i>
-                  <input type="password" name="mdp2" placeholder="Mot de passe" class="FormCrea input-field" required>
+                  <input type="password" name="mdp2" placeholder="Mot de passe" class="input-field" required>
                 </div>
                 <div class="input-container">
                 <i class="fas fa-calendar-day icon"></i>
-                  <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea input-field" required>
+                  <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="input-field" required>
                 </div>
                 <p class="texteF">Administrateur ?
                 <input type="checkbox" value="1" name="admin"></p>
