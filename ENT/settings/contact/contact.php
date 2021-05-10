@@ -34,7 +34,7 @@ function AfficheAvis($id) {
   $sql = "SELECT * FROM `avis` WHERE `IDavis`='$id'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    $sqlUser = "SELECT * FROM `user` WHERE `iduser`='$row[iduser]'";
+    $sqlUser = "SELECT * FROM `users` WHERE `iduser`='$row[iduser]'";
     mysqli_free_result($result);
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
