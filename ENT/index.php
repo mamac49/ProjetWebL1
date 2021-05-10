@@ -17,9 +17,9 @@ function annivs() {
         if (is_null($row)) {
             return "Pas d'anniversaire";
             }
+            }
         else {
           return $row;
-    }
   }
 }
 
