@@ -70,9 +70,10 @@ function idCom($x) { //renvoie le texte de chaque commentaire relié à leur pub
 
 function message($x) { //renvoie le texte de chaque commentaire relié à leur publication
   $link = dbConnect();
-  $sql = "SELECT `message` FROM `Commentaires` WHERE `idcom`='$x')";
+  $sql = "SELECT `message` FROM `Commentaires` WHERE `idcom`='$x'";
   if ($result = mysqli_query($link, $sql)) {
-    return mysqli_num_rows($result);
+    $row = mysqli_fetch_array($result);
+    return $row[0];
   }
 }
 
