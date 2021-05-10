@@ -62,6 +62,27 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <script src="/Projetwebl1/ENT/js/Admin.js"></script>
     <link rel="stylesheet" href="styleAd.css">
+    <script type="text/javascript">
+    let togg1 = document.getElementById("togg1");
+    let d1 = document.getElementById("classe");
+    togg1.addEventListener("click", () => {
+      if(getComputedStyle(d1).display != "none"){
+        d1.style.display = "none";
+      } else {
+        d1.style.display = "block";
+  }
+})
+
+function togg(){
+  if(getComputedStyle(d2).display != "none"){
+    d2.style.display = "none";
+  } else {
+    d2.style.display = "block";
+  }
+};
+togg2.onclick = togg;
+
+    </script>
   </head>
 
     <?php
@@ -97,7 +118,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="input-field" required>
                 </div>
                 <p class="texteF">Administrateur ?
-                <input type="checkbox" value="1" name="admin" onchange="document.getElementById('classe').style.display='none'"></p>
+                <input type="checkbox" value="1" name="admin" value="togg1" onchange="AfficheCache()"></p>
                 <div id="classe">
                   <p>
                     <label class="texte" for="GS">GS</label>
