@@ -123,6 +123,7 @@ function textAdapt(){
 function ReadMore(x) {
   var moreText = document.getElementById("more-" + x);
   var btnText = document.getElementById("myBtn-" + x);
+  console.log(moreText);
 
   if (moreText.style.display === "inline") {
     btnText.innerHTML = "Lire plus";
