@@ -40,38 +40,6 @@
   border: 2px solid dodgerblue;
 }
 
-.btn, .icon {
+.bouton, .icon {
   background-color: rgb(25, 125, 122);
-}
-
-.btn{
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin: 15px;
-  width: 200px;
-  padding: 5px;
-  font-size: 1em;
-}
-
-.btn span {
-  display: inline-block;
-  position: relative;
-  width: 100%
-}
-
-.btn span:after{
-    content: '\00bb';
-    font-size: 1.5em;
-    position: absolute;
-    top: -6px;
-    right: 25px;
-    transition: 0.5s cubic-bezier(1,.19,.47,.96);
-  }
-
-.bouton:hover span:after {
-  right: -100px;
 }
