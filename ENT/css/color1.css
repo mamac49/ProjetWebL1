@@ -52,27 +52,8 @@
 
 /* pour avoir des boutons avec animation dynamique */
 .bouton{
-  border-radius: 5px;
   background-color: var(--main-color);
-  border: none;
-  text-align: left;
-  cursor: pointer;
-}
-
-.bouton span {
-  display: inline-block;
-  position: relative;
-  &after{
-    content: '\00bb';
-    position: absolute;
-    top: 0;
-    right: 0px;
-    transition: 0.5s cubic-bezier(1,.19,.47,.96);
-  }
-}
-
-.bouton:hover span:after {
-  right: -100px;
+  color: var(--font-color)
 }
 
 html {
