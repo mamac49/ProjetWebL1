@@ -311,6 +311,7 @@ textarea {
   border: none;
   text-align: left;
   cursor: pointer;
+  margin: 15px;
 }
 
 .bouton span {
