@@ -58,7 +58,7 @@ function AfficheAvis($id) {
     $sqlUser = "SELECT * FROM `users` INNER JOIN `avis` ON `users`.`iduser` = `avis`.`iduser` WHERE `avis`.`idavis`='$id'";
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
-      return $icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . "<br>", $row['message'];
+      return array($icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . "<br>", $row['message']);
     } else {
       return mysqli_error($link);;
     }
@@ -108,7 +108,9 @@ if ($_SESSION["Connected"] == true) {
       <h3>Mes avis</h3>
       <ul>
         <?php foreach (nombreAvisUser() as $id) { ?>
-          <li class="texte suppression"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a>  </li>
+          <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id="dots">...</span><span id="more"><?php echo AfficheAvis($id[0][0])[1];?></span><a href="SupAvis.php?id=".<?php print $id[0][0];?>
+          <i class="fas fa-times fermer"></i></a></li>
+          <button onclick="ReadMore()" id="myBtn" class="bouton">Lire Plus</button>
         <?php } ?>
       </ul>
     </div>
@@ -120,7 +122,9 @@ if ($_SESSION["Connected"] == true) {
           <h3 class="texte">Avis et bugs</h3>
           <ul>
             <?php foreach (nombreAvis() as $id) { ?>
-              <li class="texte suppression"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
+              <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id="dots">...</span><span id="more"><?php echo AfficheAvis($id[0][0])[1];?></span><a href="SupAvis.php?id=".<?php print $id[0][0];?>
+              <i class="fas fa-times fermer"></i></a></li>
+              <button onclick="ReadMore()" id="myBtn" class="bouton">Lire Plus</button>
             <?php } ?>
           </ul>
         </div>
