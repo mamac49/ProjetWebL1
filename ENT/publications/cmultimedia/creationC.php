@@ -45,7 +45,7 @@ if ($_SESSION["Connected"] == true) {
   <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
-      <iframe name="line_0" width="65%" height="30%" src="https://youtu.be/clmOwRIVoaE" title="video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <input name="line_0" type="link" class="videoCahierMulimedia videoArea" id="video_cahier_multimedia" title="video" rows="8" cols="80" resize="none" create="false" required=""></input>
     </ul>
     <div class="boutonsCahierMultimedia">
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
