@@ -10,9 +10,8 @@ function Annivs() {
 
   $moisactu = date("m");
   $anniv = "SELECT * FROM `users` WHERE `date_n` LIKE '%$moisactu%'";
-  $result = mysqli_query($link, $sql);
   $IDUser = array();
-  if ($result) {
+  if ($result = mysqli_query($link, $sql);) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
       $IDUser[] = $row;
     }
