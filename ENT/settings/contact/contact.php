@@ -117,7 +117,7 @@ if ($_SESSION["Connected"] == true) {
           <h3 class="texte">Avis et bugs</h3>
           <ul>
             <?php foreach (nombreAvis() as $id) { ?>
-              <li class="texte suppression"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
+              <li class="texte"><p class="suppresion"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></p></li>
             <?php } ?>
           </ul>
         </div>
