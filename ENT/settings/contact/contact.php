@@ -53,9 +53,10 @@ if ($_SESSION["Connected"] == true) {
       <?php } ?>
 
       <div class="modal" id="ShowRate">
-        <span onclick="document.getElementById('AddHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
-        <h3 class="texte">Avis et bugs</h3>
-
+        <div class="modal-content animate">
+          <span onclick="document.getElementById('AddHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+          <h3 class="texte">Avis et bugs</h3>
+        </div>
       </div>
     </div>
 

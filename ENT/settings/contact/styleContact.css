@@ -1,0 +1,55 @@
+/* Modal Content/Box */
+.modal-content {
+ background-color: #fefefe;
+ margin: 5px auto; /* 15% from the top and centered */
+ border: 1px solid #888;
+ width: 20%; /* Could be more or less, depending on screen size */
+ display: flex;
+ flex-direction: column;
+ padding: 5px;
+}
+
+/* The Close Button */
+.close {
+ /* Position it in the top right corner outside of the modal */
+ position: absolute;
+ right: 775px;
+ top: 75px;
+ color: #000;
+ font-size: 35px;
+ font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+ color: red;
+ cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+ -webkit-animation: animatezoom 0.6s;
+ animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+ from {-webkit-transform: scale(0)}
+ to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+ from {transform: scale(0)}
+ to {transform: scale(1)}
+}
+
+.fermer {
+  color: rgba(88, 89, 93);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.fermer:hover {
+  color: red;
+  cursor: pointer;
+}
