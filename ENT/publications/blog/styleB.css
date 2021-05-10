@@ -65,3 +65,7 @@
   justify-content: flex-end;
   margin: 10px;
 }
+
+input[type=button] {
+   font-size: 1em;
+}
