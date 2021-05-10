@@ -314,14 +314,14 @@ textarea {
 .bouton span {
   display: inline-block;
   position: relative;
-  &:after{
+}
+.bouton span:after{
     content: '\00bb';
     position: absolute;
     top: 0;
     right: 0px;
     transition: 0.5s cubic-bezier(1,.19,.47,.96);
   }
-}
 
 .bouton:hover span:after {
   right: -100px;
