@@ -85,7 +85,7 @@ if ($_SESSION["Connected"] == true) {
           <h3 class="texte">Avis et bugs</h3>
           <ul>
             <?php foreach (nombreAvis() as $id[0]) { ?>
-              <li class="texte"><?php echo AfficheAvis($id[0]); var_dump($id); ?></li>
+              <li class="texte"><?php echo AfficheAvis($id[0]); var_dump($id[0]); ?></li>
             <?php } ?>
           </ul>
         </div>
