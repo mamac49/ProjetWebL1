@@ -64,7 +64,7 @@ function addLine(lineType) {
   
   /*PAS FIN DU MONDE !!!*/
   /*logs tests*/
-  const line_test = '<test name="test_0">';
+  var line_test = "ceci est le test n test_0 de remplcement";
   console.log(line);
   console.log(line_test);
   line += 1;
