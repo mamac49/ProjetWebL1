@@ -66,6 +66,10 @@ function addLine(lineType) {
   /*logs tests*/
   console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
+  console.log('line_' + line);
+  console.log('line_' + (line + 1));
+
+  console.log(line);
   console.log(line);
 
   textArea.replace('line_' + line, 'line_' + (line + 1));
