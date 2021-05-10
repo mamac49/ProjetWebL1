@@ -6,7 +6,7 @@ include '../../fonc.php';
 function Save($type, $message) {
   $link = dbConnect();
 
-  $date = date("d/m/Y H:i");
+  $date = date("Y-m-d H:i:s");
 
   $sql = "INSERT INTO `avis` (`type`, `message`, `date`, `idUser`) VALUES ('$type', '$message', '$date', '$_SESSION["ID"]')";
   if (mysqli_query($link, $sql)) {
