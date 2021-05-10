@@ -62,7 +62,7 @@ if (isset($_POST['ValiderAjout'])) {
   $matiereA = $_POST['matiere'];
   $consigne = securisation($_POST['consigne']);
   $jour = $_POST['jour'];
-  AjoutDevoir($classe, $matiereA, $consigne, $jour)
+  AjoutDevoir($classe, $matiereA, $consigne, $jour);
 }
 
 
