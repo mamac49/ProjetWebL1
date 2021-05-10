@@ -98,7 +98,7 @@ if ($_SESSION["Connected"] == true) {
                   <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                 <?php }} ?>
               </select>
-              <button type="submit" class="bouton"> name="ValiderSupp"><span>Supprimer</span></button>
+              <button type="submit" class="bouton" name="ValiderSupp"><span>Supprimer</span></button>
               <br/>
             </form>
             <?php
