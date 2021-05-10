@@ -110,6 +110,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 <div class="input-container">
                 <i class="fas fa-calendar-day icon"></i>
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
+                </div>
                 <p class="texteF">Administrateur ?
                 <input type="checkbox" value="1" name="admin"></p>
                 <p>
