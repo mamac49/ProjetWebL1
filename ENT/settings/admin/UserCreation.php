@@ -123,18 +123,14 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 </p>
                 <input type="submit" name="valider" value="Creer" class="FormCrea bouton Centrer">
             </form>
-            <form action="UserCreation.php" method="post" class="Formulaire">
               <h2 class="texte">Suppression d'utilisateur</h2>
-              <select class="ListeDeroulante" name="user">
+              <ul>
                 <?php
                 foreach (nombre() as $x) { ?>
-                  <option class="texte" value="<?php echo $x[0] ?>"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?></option>
+                  <li class=texte><?php echo $x[0] ?>"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?></li>
                 <?php } ?>
-              </select>
+              </ul>
 
-              <input type="submit" name="ValiderSupp" value="Supprimer l'utilisateur" class="bouton Séparer">
-
-            </form>
 
         </div>
 
