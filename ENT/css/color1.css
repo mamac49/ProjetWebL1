@@ -42,11 +42,11 @@
   color: var(--font-color);
 }
 
-.FormCrea, .semaine button {
+.FormCrea, .semaine button, #navbar a {
   color: var(--font-color);
 }
 
-.sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited, .tabcontent, .Publication_texte p, .contact, #navbar a {
+.sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited, .tabcontent, .Publication_texte p, .contact, #navbar a:hover {
   color: var(--font-color-nde);
 }
 
