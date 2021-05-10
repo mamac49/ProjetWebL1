@@ -33,7 +33,7 @@ function AfficheAvis($id) {
 
   $icone = array();
   $icone["Bug"] = "<i class='fas fa-bug icone icone'></i>";
-  $icone["Avis"] = "<i class='fas fa-bug icone icone'></i>";
+  $icone["Avis"] = "<i class='fas fa-comment-dots icone icone'></i>";
 
   $sql = "SELECT * FROM `avis` WHERE `IDavis`='$id'";
   if ($result = mysqli_query($link, $sql)) {
