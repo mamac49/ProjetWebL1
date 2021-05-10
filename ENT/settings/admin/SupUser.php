@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function Delete($Contact) {
   $link = dbConnect();
@@ -11,6 +12,8 @@ function Delete($Contact) {
   mysqli_query($link, "FLUSH `users`");
 }
 
-Delete($_GET['id']);
+if ($_SESSION["Admin"] == True) {
 
+Delete($_GET['id']);
+}
 ?>
