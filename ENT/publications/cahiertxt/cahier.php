@@ -49,7 +49,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
 
   $sql = "INSERT INTO `cahiertxt`(`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
   if (mysqli_query($link, $sql)) {
-    header("Location : cahier.php");
+    header("refresh: 0");
     mysqli_close($link);
   } else {
     echo mysqli_error($link);
