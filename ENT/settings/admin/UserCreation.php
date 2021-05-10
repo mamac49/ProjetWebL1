@@ -112,7 +112,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
               <ul>
                 <?php
                 foreach (nombre() as $x) { ?>
-                  <li class="texte suppression"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?><a href="SupUser.php?id=<?php print $x[0] ?>"><i class="fas fa-times supprimer"></i></a></li>
+                  <li class="texte suppression"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?><a href="SupUser.php?id=<?php print $x[0] ?>"><i class="fas fa-times fermer"></i></a></li>
                 <?php } ?>
               </ul>
             </div>
