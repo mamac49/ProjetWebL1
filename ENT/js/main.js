@@ -55,24 +55,22 @@ function addLine(lineType) {
   publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
 
   /*vérifie si l'on a commencé par un texte*/
-  if (publicationCahierMultimedia.innerHTML.indexOf(
-    '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>')
-    == -1 && lineType == 'text') {
-    /* DEBUT DU MONDE !!!*/
-  } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
-  else if (publicationCahierMultimedia.innerHTML.indexOf(
-    '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>')
-    == -1 && lineType == 'image') {
-    /* FIN DU MONDE !!!*/
-    alert("Veuillez ajouter un texte avant votre image." );
-    return false;
-  } /*une fois le tout vérifié on ajoute un ligne*/
-  
+  if (line == 0) {
+    if (publicationCahierMultimedia.innerHTML.indexOf(textArea == -1) && lineType == 'text') {
+      /*DEBUT DU MONDE !!!*/
+    } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
+    else if (publicationCahierMultimedia.innerHTML.indexOf(textArea == -1) && lineType == 'image') {
+      /*FIN DU MONDE !!!*/
+      alert("Veuillez ajouter un texte avant votre image." );
+      return false;
+    } /*une fois le tout vérifié on ajoute la première ligne*/
+  }
   /*PAS FIN DU MONDE !!!*/
-  /*logs tests
+
+  /*logs tests*/
   console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
-  console.log(line);*/
+  console.log(line);
   textArea = textArea.replace('line_' + line, 'line_' + (line + 1));
   inputImage = inputImage.replace('line_' + line, 'line_' + (line + 1));
   line += 1;
