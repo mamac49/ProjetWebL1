@@ -308,9 +308,8 @@ textarea {
   cursor: pointer;
   margin: 15px;
   height: 40px;
-  width: auto;
+  width: 150px;;
   padding: 5px;
-  padding-right: 50px;
   font-size: 1em;
 }
 
