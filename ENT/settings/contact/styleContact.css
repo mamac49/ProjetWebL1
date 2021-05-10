@@ -78,3 +78,7 @@
   display: flex;
   flex-direction: column;
 }
+
+.bouton {
+  width: 130px;
+}
