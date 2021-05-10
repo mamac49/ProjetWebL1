@@ -101,7 +101,7 @@ if ($_SESSION["Connected"] == true) {
       <?php
         if ($_SESSION["Admin"] == True) {
       ?>
-        <button type="button" onclick="document.getElementById('ShowRate').style.display='block'" name="button" class="bouton">Afficher les avis</button>
+        <button type="button" onclick="document.getElementById('ShowRate').style.display='block'" name="button" class="bouton"><span>Afficher les avis</span></button>
       <?php } ?>
     </div>
     <div class="colonne">
@@ -111,7 +111,7 @@ if ($_SESSION["Connected"] == true) {
           foreach (nombreAvisUser() as $id) { ?>
             <li class="texte suppression"><div class="avis"><p><?php echo AfficheAvis($id[0][0])[0];?></p><span style="display: none" id=<?php print "more-". $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span></div>
               <a href="<?php print "SupAvis.php?id=" . $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
-            <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton">Lire Plus</button>
+            <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton"><span>Lire Plus</span></button>
         <?php $x+=1; }  ?>
       </ul>
     </div>
@@ -126,7 +126,7 @@ if ($_SESSION["Connected"] == true) {
               foreach (nombreAvis() as $id) { ?>
                 <li class="texte suppression"><div class="avis"><p><?php echo AfficheAvis($id[0][0])[0];?></p><span style="display: none" id=<?php print "more-" . $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span></div>
                   <a href="<?php print "SupAvis.php?id=" . $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
-                <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-" . $x ?>" class="bouton">Lire Plus</button>
+                <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-" . $x ?>" class="bouton"><span>Lire Plus</span></button>
             <?php $x-=1; }  ?>
           </ul>
         </div>
