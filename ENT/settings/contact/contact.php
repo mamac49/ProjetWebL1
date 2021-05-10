@@ -12,7 +12,6 @@ function Save($type, $message) {
   $sql = "INSERT INTO `avis` (`type`, `message`, `date`, `iduser`) VALUES ('$type', '$message', '$date', '$id')";
   if (mysqli_query($link, $sql)) {
     echo "succès";
-    reset($_POST);
   }
 }
 
@@ -104,10 +103,11 @@ if ($_SESSION["Connected"] == true) {
     </div>
     <div class="colonne">
       <h3>Mes avis</h3>
+      <ul>
         <?php foreach (nombreAvisUser() as $id) { ?>
-          <!--<p class="suppression texte"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></p>-->
-          <li class="texte suppression"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
+          <li class="texte suppression"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a>  </li>
         <?php } ?>
+      </ul>
     </div>
 
 
@@ -115,9 +115,11 @@ if ($_SESSION["Connected"] == true) {
         <div class="modal-content animate">
           <span onclick="document.getElementById('ShowRate').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
           <h3 class="texte">Avis et bugs</h3>
+          <ul>
             <?php foreach (nombreAvis() as $id) { ?>
-              <p class="suppression texte"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></p>
+              <li class="texte suppression"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
             <?php } ?>
+          </ul>
         </div>
       </div>
     </div>
