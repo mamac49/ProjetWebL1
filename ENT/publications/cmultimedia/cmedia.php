@@ -56,7 +56,7 @@ if ($_SESSION["Connected"] == true) {
                 if ($_SESSION["Admin"] == true) {
               ?>
               <form class="AdminMulti" action="cmedia.php" method="post">
-                <input type="button" onclick="window.location.href = 'creationC.php';" name="CreationCmedia" value="Créer Un cahier multimédia" class="bouton"/><span></span>
+                <button type="button" class="bouton" name="CreationCmedia" onclick="window.location.href = 'creationC.php';"><span>Créer un cahier</span></button>
                 <select name="Cmulti">
                   <?php
                   foreach (nbPub() as $x) {
@@ -65,7 +65,7 @@ if ($_SESSION["Connected"] == true) {
                     <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                   <?php }} ?>
                 </select>
-                <input type="submit" name="ValiderSupp" value="Supprimer le cahier multimédia" class="bouton">
+                <button type="submit" class="bouton" name="ValiderSupp"><span>Supprimer</span> </button>
               </form>
 
               <?php
