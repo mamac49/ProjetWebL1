@@ -115,11 +115,9 @@ if ($_SESSION["Connected"] == true) {
         <div class="modal-content animate">
           <span onclick="document.getElementById('ShowRate').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
           <h3 class="texte">Avis et bugs</h3>
-          <ul>
             <?php foreach (nombreAvis() as $id) { ?>
-              <li class="texte"><p class="suppresion"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></p></li>
+              <p class="suppresion texte"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></p>
             <?php } ?>
-          </ul>
         </div>
       </div>
     </div>
