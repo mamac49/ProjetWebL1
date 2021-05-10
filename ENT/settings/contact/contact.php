@@ -82,7 +82,7 @@ if ($_SESSION["Connected"] == true) {
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="styleContact.css">
-    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/taoki.png">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <title>Contact</title>
@@ -124,9 +124,9 @@ if ($_SESSION["Connected"] == true) {
           <ul>
             <?php $x=0;
               foreach (nombreAvis() as $id) { ?>
-                <li class="texte suppression"><div class="avis"><p><?php echo AfficheAvis($id[0][0])[0];?></p><span style="display: none" id=<?php print "more-a". $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span></div>
+                <li class="texte suppression"><div class="avis"><p><?php echo AfficheAvis($id[0][0])[0];?></p><span style="display: none" id=<?php print "more-" . "a" . $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span></div>
                   <a href="<?php print "SupAvis.php?id=" . $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
-                <button onclick="ReadMore(<?php print "a" . $x ?>)" id="<?php print "Mybtn-a". $x ?>" class="bouton">Lire Plus</button>
+                <button onclick="ReadMore(<?php print "a" . $x ?>)" id="<?php print "Mybtn-" . "a" . $x ?>" class="bouton">Lire Plus</button>
             <?php $x+=1; }  ?>
           </ul>
         </div>
