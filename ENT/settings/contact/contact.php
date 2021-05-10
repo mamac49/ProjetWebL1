@@ -3,7 +3,7 @@ session_start();
 
 include '../../fonc.php';
 
-function Save($type, $message); {
+function Save($type, $message) {
   $file = fopen("logs.txt", "w");
   $txt = $_SESSION['Mail'] . " : " . date("d/m/Y-H:i") . "\n" . "Type =" . $type ."\n" . $message;
   fwrite($file, $txt);
@@ -14,6 +14,7 @@ function Save($type, $message); {
 if (isset($_POST['Valider'])) {
   $type = $_POST['Type'];
   $message = $_POST['Rapport'];
+  Save($type, $message)
 }
 
 if ($_SESSION["Connected"] == true) {
