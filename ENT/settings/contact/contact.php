@@ -90,7 +90,7 @@ if ($_SESSION["Connected"] == true) {
       <?php } ?>
     </div>
     <div class="colonne">
-      
+      <h3>Mes avis</h3>
     </div>
 
 
