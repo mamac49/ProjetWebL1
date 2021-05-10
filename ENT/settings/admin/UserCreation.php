@@ -10,14 +10,11 @@ function Create($nom, $prenom, $mail, $password, $date, $admin, $classe) {
     mysqli_query($link, "FLUSH `users`");
 
     $pp = file_get_contents("../../data/PP.png", True);
-
+    $pp = mysqli_real_escape_string($link, $pp);
     $iduser = max(max(nombre())) + 1;
 
-    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe');";
+    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`, `data`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe', '$pp');";
     if (mysqli_query($link, $sql)) {
-      $pp = mysqli_real_escape_string($link, $pp);
-      $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
-      if (mysqli_query($link, $sql2)) {
         reset($_POST);
         mysqli_close($link);
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
