@@ -109,9 +109,9 @@ if ($_SESSION["Connected"] == true) {
       <ul>
         <?php $x=0;
           foreach (nombreAvisUser() as $id) { ?>
-          <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id=<?php print "more-". $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span><a href="SupAvis.php?id=".<?php print $id[0][0];?>
-          <i class="fas fa-times fermer"></i></a></li>
-          <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton">Lire Plus</button>
+            <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id=<?php print "more-". $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span><a href="<?php print "SupAvis.php?id=" . $id[0][0];?>">
+            <i class="fas fa-times fermer"></i></a></li>
+            <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton">Lire Plus</button>
         <?php $x+=1; }  ?>
       </ul>
     </div>
@@ -124,9 +124,9 @@ if ($_SESSION["Connected"] == true) {
           <ul>
             <?php $x=0;
               foreach (nombreAvis() as $id) { ?>
-              <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id=<?php print "more-". $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span><a href="SupAvis.php?id=".<?php print $id[0][0];?>
-              <i class="fas fa-times fermer"></i></a></li>
-              <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton">Lire Plus</button>
+                <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id=<?php print "more-". $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span><a href="<?php print "SupAvis.php?id=" . $id[0][0];?>">
+                <i class="fas fa-times fermer"></i></a></li>
+                <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton">Lire Plus</button>
             <?php $x+=1; }  ?>
           </ul>
         </div>
