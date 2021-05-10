@@ -64,12 +64,9 @@ function addLine(lineType) {
   
   /*PAS FIN DU MONDE !!!*/
   /*logs tests*/
-  var line_test = "ceci est le test n test_0 de remplcement";
-  console.log(line);
+  var line_test = "ceci est le test n test_0 de remplacement";
   console.log(line_test);
-  line += 1;
-  line_test.replace("test_0", "test_1");
-  console.log(line);
+  line_test = "ceci est le test n test_1 de remplacemen";
   console.log(line_test);
 
   /*console.log('text area = ' + textArea);
