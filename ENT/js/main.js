@@ -46,7 +46,7 @@ function getNbLines() {
   -inputImage : template du dépot d'image
   -line : ligne de la zone
   -publicationCahierMultimedia : liste où sont affichés les zones de saisie*/
-textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
+textArea = '<textarea name="line_0" class="texteCahierMulimedia textArea" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
 inputImage = '<input name="line_0" class="imageCahierMulimedia" type="file" id="image_cahier_multimedia" accept="image/*" required>';
 line = 0;
 
@@ -104,5 +104,18 @@ function addImage() {
   if (addLine('image') != false) {
     var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
     publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
-  }  
+  }
 }
+
+/*Zone de saisie adaptative
+
+function textAdapt(){
+  var textadapt = document.getElementById("text_cahier_multimedia");
+  var textAreaHeight = textadapt.style.height;
+  Si l'on appuie sur entrée on adpate la taille de la zone de texte
+  textArea.addEventListener("keyup", function(event) {
+    if (event.keycode === 13) {
+      textAreaHeight = textAreaHeight.replace(textAreaHeight[0] + "rem", textAreaHeight = (textAreaHeight[0] + 1) + "rem")
+    }
+  });
+}*/
