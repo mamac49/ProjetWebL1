@@ -67,6 +67,5 @@
 }
 
 .commentairefield legend{
-  position:relative;
-  left:20px;
+  align-content: flex-end;
 }
