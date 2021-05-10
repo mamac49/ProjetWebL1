@@ -35,6 +35,7 @@ function AfficheAvis($id) {
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     $sqlUser = "SELECT * FROM `user` WHERE `iduser`='$row[iduser]'";
+    mysqli_free_result($result);
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
       return $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['Mail'] . " : " . $row['message'];
@@ -88,7 +89,7 @@ if ($_SESSION["Connected"] == true) {
           <h3 class="texte">Avis et bugs</h3>
           <ul>
             <?php foreach (nombreAvis() as $id) { ?>
-              <li class="texte"><?php echo AfficheAvis($id[0][0]); var_dump($id[0][0]); ?></li>
+              <li class="texte"><?php echo AfficheAvis($id[0][0]); ?></li>
             <?php } ?>
           </ul>
         </div>
