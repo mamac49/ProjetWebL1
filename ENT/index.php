@@ -21,7 +21,6 @@ function annivs() {
         $retour = $anniv;
       }
       return $retour;
-    }
 }
 
 
