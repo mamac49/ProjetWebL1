@@ -7,7 +7,7 @@
 
 /* Background Color */
 
-.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .semaine, .iconCrea {
+.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .semaine, .iconCrea, .ListeDeroulante {
   background-color: var(--main-color);
 }
 
@@ -38,11 +38,11 @@
 }
 
 
-.Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .legal, #navbar, #navbar a:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login, .texteB {
+.Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .legal, #navbar, #navbar a:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF {
   color: var(--font-color);
 }
 
-.FormCrea, .semaine button, #navbar a {
+.FormCrea, .semaine button, #navbar a, input[type=button], .bouton, .Login, .texteB {
   color: var(--font-color);
 }
 
