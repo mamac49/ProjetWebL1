@@ -68,3 +68,13 @@
   color: red;
   cursor: pointer;
 }
+
+.Center {
+  display: flex;
+  flex-direction: row;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+}
