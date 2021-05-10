@@ -49,7 +49,7 @@ if ( isset($_POST['valider'])) {
       $mail = securisation($_POST['mail']);
       $classe = securisation($_POST['classe']);
       $date = securisation($_POST['datenaissance']);
-      $pp = file_get_contents("PP.png", "../../Projetwebl1/ENT/data/");
+      $pp = file_get_contents("PP.png", ":/Projetwebl1/ENT/data/");
       if (isset($_POST['admin'])) {
         $admin = securisation($_POST['admin']);
       } else {
