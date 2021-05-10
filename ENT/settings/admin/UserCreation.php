@@ -5,8 +5,6 @@ error_reporting(E_ALL);
 
 include '../../fonc.php';
 
-include_path=":/var/www/html/Projetwebl1/ENT/data"
-
 function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe) {
     $link = dbConnect();
     mysqli_query($link, "FLUSH `users`");
@@ -51,7 +49,7 @@ if ( isset($_POST['valider'])) {
       $mail = securisation($_POST['mail']);
       $classe = securisation($_POST['classe']);
       $date = securisation($_POST['datenaissance']);
-      $pp = file_get_contents("PP.png", FILE_USE_INCLUDE_PATH);
+      $pp = file_get_contents("../../data/PP.png", FALSE);
       if (isset($_POST['admin'])) {
         $admin = securisation($_POST['admin']);
       } else {
