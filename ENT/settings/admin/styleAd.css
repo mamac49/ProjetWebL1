@@ -32,10 +32,10 @@
 /* Style the form icons */
 .icon {
   padding: 10px;
-  background: dodgerblue;
   color: white;
   min-width: 50px;
   text-align: center;
+  font-size: 2em;
 }
 
 /* Style the input fields */
@@ -46,5 +46,5 @@
 }
 
 .input-field:focus {
-  border: 2px solid dodgerblue;
+  border: 2px solid;
 }

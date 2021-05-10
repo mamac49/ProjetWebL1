@@ -5,7 +5,7 @@
   --second-color: rgba(168, 168, 168, 0.74);
 }
 
-.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login  {
+.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .icon  {
   background-color: var(--main-color);
 }
 
@@ -44,6 +44,10 @@ html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, 
 
 .sujets a, .Dropzone, .Copybook:visited, .texteF, .sujets a:visited  {
   color: var(--font-color-nde);
+}
+
+.input_field:focus {
+  border-color: var(--main-color);
 }
 
 html {

@@ -7,7 +7,7 @@
 
 /* Background Color */
 
-.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .semaine {
+.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .semaine, .icon {
   background-color: var(--main-color);
 }
 
@@ -48,6 +48,10 @@
 
 .sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited, .tabcontent, .Publication_texte p, .contact, #navbar a:hover {
   color: var(--font-color-nde);
+}
+
+.input_field:focus {
+  border-color: var(--main-color);
 }
 
 html {
