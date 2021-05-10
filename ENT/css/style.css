@@ -325,3 +325,13 @@ textarea {
 .bouton:hover span:after {
   right: -100px;
 }
+
+select {
+  width: 350px;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+option {
+  margin-bottom: 10px;
+}
