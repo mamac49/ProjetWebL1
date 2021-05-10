@@ -103,11 +103,9 @@ if ($_SESSION["Connected"] == true) {
     </div>
     <div class="colonne">
       <h3>Mes avis</h3>
-      <ul>
         <?php foreach (nombreAvisUser() as $id) { ?>
-          <li class="texte suppression"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a>  </li>
+          <p class="suppression texte"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></p>
         <?php } ?>
-      </ul>
     </div>
 
 
@@ -116,7 +114,7 @@ if ($_SESSION["Connected"] == true) {
           <span onclick="document.getElementById('ShowRate').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
           <h3 class="texte">Avis et bugs</h3>
             <?php foreach (nombreAvis() as $id) { ?>
-              <p class="suppresion texte"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></p>
+              <p class="suppression texte"><?php echo AfficheAvis($id[0][0]);?><a href="SupAvis.php?id=<?php print $id[0][0];?>"><i class="fas fa-times fermer"></i></a></p>
             <?php } ?>
         </div>
       </div>
