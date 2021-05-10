@@ -83,7 +83,7 @@ if (isset($_SESSION["Connected"])) {
         </div>
 
         <p></p>
-        <input type="submit" class="btn" name="Valider" value="Se connecter">
+        <button type="submit" class="btn bouton" name="Valider"><span>Se connecter</span></button>
       </form>
       </div>
     </div>
