@@ -51,7 +51,7 @@ if ($_SESSION["Connected"] == "True") {
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
             <?php foreach (Annivs() as $i) { ?>
-              <li class="texteB"><?php echo Annivs()[0][$i]; ?></li>
+              <li class="texteB"><?php var_dump(Annivs()); ?></li>
             <?php } ?>
           </ul>
         </div>
