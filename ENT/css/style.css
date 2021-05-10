@@ -326,12 +326,12 @@ textarea {
   right: -100px;
 }
 
-select {
+.ListeDeroulante {
   width: 350px;
   height: 30px;
   margin-bottom: 15px;
 }
 
-option {
-  margin-bottom: 10px;
+.ListeDeroulante option {
+  height: 50px;
 }
