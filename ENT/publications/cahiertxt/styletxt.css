@@ -117,5 +117,6 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  word-wrap: break-word;
   padding-right: 15px;
 }
