@@ -1,6 +1,9 @@
 <?php
+session_start();
 
 include '../../fonc.php';
+
+if ($_SESSION["Admin"] == True) {
 
 $id = $_GET['id'];
 
@@ -20,4 +23,5 @@ function SuppressionDevoir($id) {
 
 SuppressionDevoir($id);
 
+}
 ?>
