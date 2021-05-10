@@ -8,16 +8,13 @@
 }
 
 /* Style the buttons that are used to open the tab content */
-.semaine button {
+.bouton{
  display: block;
  background-color: inherit;
  padding: 5px;
  padding-left: 15px;
  width: 100%;
- border: none;
  outline: none;
- text-align: left;
- cursor: pointer;
  font-size: 1.5em;
 }
 
