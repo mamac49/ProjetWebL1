@@ -15,4 +15,7 @@ function SuppressionDevoir($id) {
     header("Location: cahier.php");
   }
 }
+
+SuppressionDevoir($id);
+
 ?>
