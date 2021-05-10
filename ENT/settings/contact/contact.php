@@ -28,6 +28,19 @@ function nombreAvis() {
   return $IDavis;
 }
 
+function nombreAvisUser() {
+  $link = dbConnect();
+  $sql = "SELECT `IDavis` FROM `avis` WHERE `iduser`=$_SESSION['ID']";
+  $result = mysqli_query($link, $sql);
+  $IDavis = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDavis[] = $row;
+    }
+  }
+  return $IDavis;
+}
+
 function AfficheAvis($id) {
   $link = dbConnect();
 
@@ -91,6 +104,11 @@ if ($_SESSION["Connected"] == true) {
     </div>
     <div class="colonne">
       <h3>Mes avis</h3>
+      <ul>
+        <?php foreach (nombreAvisUser() as $id) { ?>
+          <li class="texte"><?php echo AfficheAvis($id[0][0]); ?></li>
+        <?php } ?>
+      </ul>
     </div>
 
 
