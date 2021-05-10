@@ -59,7 +59,7 @@ function auteurB($x) { //renvoie l'id de la personne ayant créé le cette page 
   }
 }
 
-function idCom($x) { //renvoie le texte de chaque commentaire relié à leur publication
+function idCom($x) { //renvoie l'id de la publication à laquelle appartient le commentaire
   $link = dbConnect();
   $sql = "SELECT `idpublications` FROM `Publications` WHERE `idpublications`=(SELECT `idpublications` FROM `Commentaires` WHERE `idcom`=$x)";
   if ($result = mysqli_query($link, $sql)) {
@@ -68,14 +68,16 @@ function idCom($x) { //renvoie le texte de chaque commentaire relié à leur pub
   }
 }
 
-function message($x) { //renvoie le texte de chaque commentaire relié à leur publication
+function idauteurC($x) { //renvoie le texte de chaque commentaire relié à leur publication
   $link = dbConnect();
-  $sql = "SELECT `message` FROM `Commentaires` WHERE `idcom`='$x'";
+  $sql = "SELECT `iduser` FROM `Commentaires` WHERE `idcom`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
     return $row[0];
   }
 }
+
+
 
 if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l'authentification (auth.php)
 ?>
@@ -128,7 +130,10 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
               ?>
                 <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
                 <p><?php echo $message; ?></p>
-                <?php
+                <?php $res=idauteurC($x[0]);
+                if ($_SESSION["ID"]==$res){ ?>
+                  <input type="button" value="Editer le commentaire">
+                <?php }
               }
             }
           }
