@@ -23,7 +23,7 @@
   position: relative;
 }
 
-.listeDeroul select {
+.custom-select select {
   display: none;
 }
 
