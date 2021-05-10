@@ -104,7 +104,7 @@ function addImage() {
   if (addLine('image') != false) {
     var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
     publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
-  }  
+  }
 }
 
 /*Zone de saisie adaptative
