@@ -117,8 +117,6 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
               </ul>
             </div>
 
-
-
         </div>
 
 
