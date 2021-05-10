@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 include '../../fonc.php';
 
-include_path = "/var/www/html/Projetwebl1/ENT/data"
+include_path=":/var/www/html/Projetwebl1/ENT/data"
 
 function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe) {
     $link = dbConnect();
