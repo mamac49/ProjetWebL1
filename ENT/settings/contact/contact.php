@@ -1,9 +1,6 @@
 <?php
 session_start();
 
-$filename="logs.txt";
-chmod($filename, 0444);
-
 include '../../fonc.php';
 
 function Save($type, $message) {
