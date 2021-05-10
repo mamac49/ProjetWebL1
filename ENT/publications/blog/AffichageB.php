@@ -68,7 +68,16 @@ function idCom($x) { //renvoie l'id de la publication à laquelle appartient le 
   }
 }
 
-function idauteurC($x) { //renvoie le texte de chaque commentaire relié à leur publication
+function message($x) { //renvoie le texte de chaque commentaire relié à leur publication
+  $link = dbConnect();
+  $sql = "SELECT `message` FROM `Commentaires` WHERE `idcom`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row[0];
+  }
+}
+
+function idauteurC($x) { //renvoie l'id de l'auteur du commentaire
   $link = dbConnect();
   $sql = "SELECT `iduser` FROM `Commentaires` WHERE `idcom`='$x'";
   if ($result = mysqli_query($link, $sql)) {
@@ -76,8 +85,6 @@ function idauteurC($x) { //renvoie le texte de chaque commentaire relié à leur
     return $row[0];
   }
 }
-
-
 
 if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l'authentification (auth.php)
 ?>
