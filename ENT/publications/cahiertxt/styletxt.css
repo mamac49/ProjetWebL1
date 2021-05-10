@@ -109,8 +109,6 @@
 }
 
 .fermer {
-  position: absolute;
-  left: 15px;
   color: rgba(88, 89, 93, 0.88);
   font-size: 35px;
   font-weight: bold;
@@ -118,4 +116,11 @@
 
 .MG {
   font-weight: bold;
+}
+
+.ToDo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 15px;
 }
