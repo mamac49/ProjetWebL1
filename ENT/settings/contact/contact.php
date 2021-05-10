@@ -84,8 +84,8 @@ if ($_SESSION["Connected"] == true) {
           <span onclick="document.getElementById('ShowRate').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
           <h3 class="texte">Avis et bugs</h3>
           <ul>
-            <?php foreach (nombreAvis() as $id) { ?>
-              <li class="texte"><?php echo AfficheAvis($id) ?></li>
+            <?php foreach (nombreAvis() as $id[0]) { ?>
+              <li class="texte"><?php echo AfficheAvis($id[0]) ?></li>
             <?php } ?>
           </ul>
         </div>
