@@ -64,11 +64,11 @@ function addLine(lineType) {
   
   /*PAS FIN DU MONDE !!!*/
   /*logs tests*/
-  var line_test = "<test name='test_0'>";
+  var line_test = '<test name="test_0">';
   console.log(line);
   console.log(line_test);
-  line_test.replace("test_" + String(line), "test_" + String((line + 1)));
   line += 1;
+  line_test.[17] = line;
   console.log(line);
   console.log(line_test)
 
