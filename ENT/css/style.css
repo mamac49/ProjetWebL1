@@ -322,7 +322,7 @@ textarea {
     content: '\00bb';
     position: absolute;
     top: 0;
-    right: 0px;
+    right: 5px;
     transition: 0.5s cubic-bezier(1,.19,.47,.96);
   }
 
