@@ -124,7 +124,7 @@ if ($_SESSION["Connected"] == "True") {
                        $info = AfficherDevoir($jour, "GS", $x);
                        $consigne = $info['consigne']; ?>
                       <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
-                        <?php if ($_SESSION["Admin"] == True) { ?> <i class="fas fa-times fermer" href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"></i> <?php } ?></li>
+                        <?php if ($_SESSION["Admin"] == True) { ?> <a href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"><i class="fas fa-times fermer"></i></a> <?php } ?></li>
               <?php }} ?>
 
               <?php
@@ -134,7 +134,7 @@ if ($_SESSION["Connected"] == "True") {
                        $matiereP = $info['matiere'];
                        $consigne = $info['consigne']; ?>
                        <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
-                         <?php if ($_SESSION["Admin"] == True) { ?> <i class="fas fa-times fermer" href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"></i> <?php } ?></li>
+                         <?php if ($_SESSION["Admin"] == True) { ?> <a href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"><i class="fas fa-times fermer"></i></a> <?php } ?></li>
               <?php }} ?>
             </ul>
         </div>
