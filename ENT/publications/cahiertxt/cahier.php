@@ -64,6 +64,7 @@ function SuppressionDevoir($jour, $classe, $matiere) {
   $sql = "DELETE FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe' AND `matiere`='$matiere')";
   if (mysqli_query($link, $sql)) {
     echo "succès";
+    header("0: refresh");
   } else {
     echo mysqli_error($link);
   }
@@ -140,7 +141,7 @@ if ($_SESSION["Connected"] == "True") {
                     if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
                        $info = AfficherDevoir($jour, "GS", $x);
                        $consigne = $info['consigne']; ?>
-                      <li class="texte"><?php echo "<i class='$matiere[$x] matiere'></i>" . $x . " : " . $consigne; ?></li>
+                      <li class="texte"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>'$x' . " : "</span>" . $consigne; ?></div><i class="fas fa-times fermer"></i></li>
               <?php }} ?>
 
               <?php
@@ -149,7 +150,7 @@ if ($_SESSION["Connected"] == "True") {
                        $info = AfficherDevoir($jour, "CP", $x);
                        $matiereP = $info['matiere'];
                        $consigne = $info['consigne']; ?>
-                      <li class="texte"><?php echo "<i class='$matiere[$x] matiere'></i>" . $x . " : " . $consigne; ?></li>
+                      <li class="texte"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>'$x' . " : "</span>" . $consigne; ?></div><i class="fas fa-times fermer"></i></li>
               <?php }} ?>
             </ul>
         </div>
@@ -203,22 +204,6 @@ if ($_SESSION["Connected"] == "True") {
           <h3>Consigne</h3>
           <p><textarea name="consigne" rows="6" cols="40"></textarea></p>
           <p><input type="submit" name="ValiderAjout" value="Ajouter"></p>
-        </div>
-      </form>
-    </div>
-
-    <div id="RemoveHW" class="modal">
-
-        <form class="modal-content animate" action="cahier.php" method="POST">
-        <span onclick="document.getElementById('RemoveHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
-        <div class="container">
-          <h3>Devoirs</h3>
-          <select name="devoirs">
-            <?php foreach ($semaine as $jour) { } ?>
-
-          </select>
-
-          <p><input type="submit" name="ValiderRemo" value="Supprimer"></p>
         </div>
       </form>
     </div>

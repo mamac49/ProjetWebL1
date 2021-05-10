@@ -107,3 +107,15 @@
  from {transform: scale(0)}
  to {transform: scale(1)}
 }
+
+.fermer {
+  position: absolute;
+  left: 15px;
+  color: rgba(88, 89, 93, 0.88);
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.MG {
+  font-weight: bold;
+}
