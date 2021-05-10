@@ -127,7 +127,7 @@ if ($_SESSION["Connected"] == true) {
                 <label class="texte" for="sombre">Thème sombre</label>
                 <input type="radio" name="theme" id="sombre" value="1">
               </p>
-              <button type="submit" class="bouton" name="ValiderTheme"><span>Valider le thème par défaut</span></button>
+              <button type="submit" class="bouton" name="ValiderTheme"><span>Valider le thème</span></button>
             </form>
           </div>
         </div>

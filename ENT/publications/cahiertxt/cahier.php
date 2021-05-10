@@ -168,7 +168,7 @@ if ($_SESSION["Connected"] == "True") {
           </select>
           <h3>Consigne</h3>
           <p><textarea name="consigne" rows="6" cols="40"></textarea></p>
-          <p><input type="submit" name="ValiderAjout" value="Ajouter"></p>
+          <p><button type="submit" class="bouton" name="ValiderAjout"><span>Ajouter</span></button></p>
         </div>
       </form>
     </div>
