@@ -125,7 +125,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
             </form>
             <form action="UserCreation.php" method="post" class="Formulaire">
               <h2 class="texte">Suppression d'utilisateur</h2>
-              <select class="ListeDéroulante" name="user">
+              <select class="ListeDeroulante" name="user">
                 <?php
                 foreach (nombre() as $x) { ?>
                   <option class="texte" value="<?php echo $x[0] ?>"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?></option>
