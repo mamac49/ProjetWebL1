@@ -317,7 +317,7 @@ textarea {
 .bouton span {
   display: inline-block;
   position: relative;
-  &after{
+  &:after{
     content: '\00bb';
     position: absolute;
     top: 0;
