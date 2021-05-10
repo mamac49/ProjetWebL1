@@ -58,19 +58,6 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   }
 }
 
-function SuppressionDevoir($jour, $classe, $matiere) {
-  $link = dbConnect();
-
-  $sql = "DELETE FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe' AND `matiere`='$matiere')";
-  if (mysqli_query($link, $sql)) {
-    echo "succès";
-    header("0: refresh");
-  } else {
-    echo mysqli_error($link);
-  }
-  mysqli_query($link, "FLUSH `users`");
-}
-
 if (isset($_POST['ValiderAjout'])) {
   $classe = $_POST['classe'];
   $matiere = $_POST['matiere'];
@@ -137,7 +124,7 @@ if ($_SESSION["Connected"] == "True") {
                        $info = AfficherDevoir($jour, "GS", $x);
                        $consigne = $info['consigne']; ?>
                       <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
-                        <?php if ($_SESSION["Admin"] == True) { ?> <i class="fas fa-times fermer"></i> <?php } ?></li>
+                        <?php if ($_SESSION["Admin"] == True) { ?> <i class="fas fa-times fermer" href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"></i> <?php } ?></li>
               <?php }} ?>
 
               <?php
@@ -147,7 +134,7 @@ if ($_SESSION["Connected"] == "True") {
                        $matiereP = $info['matiere'];
                        $consigne = $info['consigne']; ?>
                        <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
-                         <?php if ($_SESSION["Admin"] == True) { ?> <i class="fas fa-times fermer"></i> <?php } ?></li>
+                         <?php if ($_SESSION["Admin"] == True) { ?> <i class="fas fa-times fermer" href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"></i> <?php } ?></li>
               <?php }} ?>
             </ul>
         </div>
