@@ -58,22 +58,7 @@ if ($_SESSION["Connected"] == "True") {
         </div>
         <!--permet d'avoir le moteur de recherche qwant junior sur la page-->
         <div class="qwant">
-          <form method="GET" action="https://www.qwant.com" id="form">
-            <div align="left">
-              <table bgcolor="#FFFFFF">
-                <tbody>
-                  <tr>
-                    <td>
-                      <a href="https://www.qwant.com"> <img src="https://www.qwant.com/img/logo/q-48.png" border="0" alt="Qwant" align="absmiddle"></a>
-                      <input type="text" name="q" id="query" size="31" maxlength="255" value="">
-                      <input type="hidden" name="l" value="fr">
-                      <input type="submit" name="btnG" value="go">
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </form>
+          <form action="https://www.qwantjunior.com/" method="GET" target="_blank">
             <a href="https://www.qwantjunior.com/" target="_blank">
               <img src="https://ent.e-primo.fr/assets/widgets/qwant-junior/logo.svg" alt="Qwant Junior">
             </a>
