@@ -21,7 +21,7 @@ function SuppressionDevoir($id) {
   }
 }
 
-SuppressionDevoir($_GET['id'];);
+SuppressionDevoir($_GET['id']);
 
 }
 ?>
