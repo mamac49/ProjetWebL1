@@ -122,7 +122,7 @@ function textAdapt(){
 
 function ReadMore(x) {
   var moreText = document.getElementById("more-" + x);
-  var btnText = document.getElementById("myBtn-" + x);
+  var btnText = document.getElementById("Mybtn-" + x);
   console.log(moreText);
   console.log(btnText);
 
