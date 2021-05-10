@@ -44,7 +44,7 @@ if ($_SESSION["Connected"] == true) {
         <label><input type="radio" name="Type" value="Avis"><i class="fas fa-comment-dots icone"></i> Donner un avis?</label>
         <label><input type="radio" name="Type" value="Bug"><i class="fas fa-bug icone icone"></i> Signaler un bug</label>
         <p><textarea name="Rapport" placeholder="Donnez votre avis/Signaler votre problème(400 caractères maximum)" max-length=400 rows="5" cols="70" required></textarea></p>
-        <input type="submit" name="Valider" class="Bouton" value="Valider le formulaire">
+        <input type="submit" name="Valider" class="bouton" value="Valider le formulaire">
       </form>
     </div>
 
