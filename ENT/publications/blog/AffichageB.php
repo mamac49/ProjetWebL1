@@ -147,10 +147,10 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                   <br/>
                 <?php }
                 ?>
-                <br/>
-                <input type="button" value="Ajouter un commentaire">
-              <?php }
-            }
+              }
+              <br/>
+              <input type="button" value="Ajouter un commentaire">
+            <?php }
           }
           ?>
         </div>
