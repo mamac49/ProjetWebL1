@@ -144,6 +144,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                     <input type="button" value="Editer le commentaire">
                   <?php } ?>
                   <br/>
+                  <br/>
                 <?php }
               }
             }
