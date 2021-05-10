@@ -48,7 +48,7 @@ if (isset($_POST['ValiderAjout'])) {
   $matiere = $_POST['matiere'];
   $consigne = securisation($_POST['consigne']);
   $jour = $_POST['jour'];
-  header("Location: AjoutDevoir.php?" . $classe . ";" . $matiere . ";" . $consigne . ";" . $jour);
+  header("Location: AjoutDevoir.php?" . $classe . "." . $matiere . "." . $consigne . "." . $jour);
 }
 
 
