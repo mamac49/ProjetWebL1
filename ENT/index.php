@@ -16,11 +16,8 @@ function annivs() {
         mysqli_free_result($result);
         if (is_null($row)) {
             return "Pas d'anniversaire";
-            }
-            }
-        else {
-          return $row;
-  }
+      }
+    }
 }
 
 
