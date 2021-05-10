@@ -10,7 +10,7 @@ include 'fonc.php';
 function annivs() {
     $link = dbConnect();
     $moisactu = date("m");
-    $anniv = "SQL SELECT * FROM `users` WHERE date_n=%"."-'$moisactu'-"."%";
+    $anniv = "SELECT * FROM `users` WHERE `date_n`=%"."-'$moisactu'-"."%";
 
     return $moisactu . "<br>" . $anniv;
 
