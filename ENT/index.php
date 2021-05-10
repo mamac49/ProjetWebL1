@@ -3,14 +3,12 @@
 <?php
 session_start();
 
-setlocale(LC_TIME, 'fra_fra');
-
 include 'fonc.php';
 
 function annivs() {
     $link = dbConnect();
     $moisactu = date("m");
-    $anniv = "SELECT * FROM `users` WHERE `date_n`=%"."-'$moisactu'-"."%";
+    $anniv = "SELECT * FROM `users` WHERE `date_n` LIKE '%'$moisactu'%'";
 
     if ($result = mysqli_query($link, $anniv)) {
       $row = mysqli_fetch_array($result);
