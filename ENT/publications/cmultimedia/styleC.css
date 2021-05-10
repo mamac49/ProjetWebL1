@@ -95,32 +95,20 @@ textarea{
   height:1rem;
 }
 
-/*.bouton{
-  border-radius: 5px;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  margin: 15px;
-  height: 40px;
-  width: auto;
+.bouton{
   padding: 5px;
   padding-right: 50px;
   font-size: 1em;
 }
 
-.bouton span {
-  display: inline-block;
-  position: relative;
-}*/
-
 .bouton span:after{
-    content: '\039b';
+    content: '\0394';
     top: 0px;
-    right: 0px;
+    right: -25px;
     transition: 0.5s cubic-bezier(1,.19,.47,.96);
   }
 
 .bouton:hover span:after {
   top : -10px;
-  right: 0px;
+  right: -25px;
 }
