@@ -19,3 +19,7 @@
 .titre_p, h1 {
   padding-bottom: 0px;
 }
+
+h2 {
+  padding-top: 0px;
+}
