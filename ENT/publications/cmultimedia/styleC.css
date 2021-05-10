@@ -71,7 +71,6 @@
   width: 200px;
   height: 50px;
   text-align: center; 
-  padding-bottom: 25px;
 }
 
 .boutonsCahierMultimedia {
@@ -81,4 +80,5 @@
 
 .Saisie {
   margin-bottom: 150px;
+  padding-bottom: 25px;
 }
