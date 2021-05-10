@@ -63,7 +63,6 @@ function AfficheAvis($id) {
 }
 
 
-
 if (isset($_POST['ValiderEnvoi'])) {
   $type = $_POST['Type'];
   $message = $_POST['Rapport'];
