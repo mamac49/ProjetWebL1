@@ -7,7 +7,7 @@
 
 /* Background Color */
 
-.move_menu, .sandwich, .Login, .qwant, .Login, .semaine {
+.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .semaine {
   background-color: var(--main-color);
 }
 
@@ -38,7 +38,7 @@
 }
 
 
-.Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .legal, #navbar, #navbar a:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, .Login, .texteB {
+.Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .legal, #navbar, #navbar a:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login, .texteB {
   color: var(--font-color);
 }
 
@@ -48,12 +48,6 @@
 
 .sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited, .tabcontent, .Publication_texte p, .contact, #navbar a:hover {
   color: var(--font-color-nde);
-}
-
-/* pour avoir des boutons avec animation dynamique */
-.bouton{
-  background-color: var(--main-color);
-  color: var(--font-color)
 }
 
 html {
