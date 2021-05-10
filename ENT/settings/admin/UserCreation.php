@@ -120,7 +120,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <label class="texte" for="CP">CP</label>
                   <input type="radio" name="classe" id="CP" value="CP">
                 </p>
-                <input type="submit" name="valider" value="Creer" class="FormCrea Bouton Centrer">
+                <input type="submit" name="valider" value="Creer" class="FormCrea bouton Centrer">
             </form>
             <form action="UserCreation.php" method="post" class="Formulaire">
               <h2 class="texte">Suppression d'utilisateur</h2>
