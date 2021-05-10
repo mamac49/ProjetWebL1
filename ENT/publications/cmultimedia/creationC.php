@@ -47,8 +47,8 @@ if ($_SESSION["Connected"] == true) {
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
     </ul>
     <div class="boutonsCahierMultimedia">
-      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()">Ajouter un texte</button>
-      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()">Ajouter une image</button>
+      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte </span></button>
+      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image </span></button>
       <!--<button name="create" class="bouton" onclick="addVideo()">Ajouter une case</button>-->
       <input type="submit" name="Valider" class="boutonValider bouton" value="Valider de cahier multimédia">
     </div>
