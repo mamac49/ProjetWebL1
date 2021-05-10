@@ -166,7 +166,6 @@
   #navbar a {
     float: left;
     display: block;
-    color: white;
     text-align: center;
     padding: 10px;
     text-decoration: none;
@@ -175,7 +174,6 @@
 
   #navbar a:hover {
     background-color: #ddd;
-    color: black;
   }
 
   #navbar .icone {
