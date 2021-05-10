@@ -308,7 +308,7 @@ textarea {
   cursor: pointer;
   margin: 15px;
   height: 40px;
-  width: 200px;;
+  width: 200px;
   padding: 5px;
   font-size: 1em;
 }
@@ -320,9 +320,9 @@ textarea {
 }
 .bouton span:after{
     content: '\00bb';
-    font-size: 1.1em;
+    font-size: 1.5em;
     position: absolute;
-    top: 0;
+    top: -6px;
     right: 25px;
     transition: 0.5s cubic-bezier(1,.19,.47,.96);
   }
