@@ -49,10 +49,13 @@
   text-align: left;
   cursor: pointer;
   color: white;
-  padding: 15px 20px;
   border: none;
   cursor: pointer;
+  margin: 15px;
+  height: 40px;
   width: 200px;
+  padding: 5px;
+  font-size: 1em;
 }
 
 .btn span {
