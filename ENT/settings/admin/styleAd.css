@@ -4,6 +4,10 @@
     width: 50%;
 }
 
+.bouton {
+  width: 200px;
+}
+
 .Centrer{
     margin-left: 20px;
     text-align: center;
