@@ -1,5 +1,4 @@
 <!--On vérifie si l'utilisateur est connecté, sinon on le redirige vers la page de connexion (voir à la fin)-->
-
 <?php
 session_start();
 
@@ -51,7 +50,7 @@ if ($_SESSION["Connected"] == "True") {
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
             <?php foreach (Annivs() as $i) { ?>
-              <li class="texteB"><?php echo $i; ?></li>
+              <li class="texteB"><?php var_dump($i); ?></li>
             <?php } ?>
           </ul>
         </div>
