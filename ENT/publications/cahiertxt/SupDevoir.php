@@ -1,5 +1,7 @@
 <?php
 
+include '../../fonc.php';
+
 $id = $_GET['id'];
 
 function SuppressionDevoir($id) {
