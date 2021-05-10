@@ -5,18 +5,19 @@ session_start();
 
 include 'fonc.php';
 
-function annivs() {
-    $link = dbConnect();
-    $moisactu = date("m");
-    $anniv = "SELECT * FROM `users` WHERE `date_n` LIKE '%$moisactu%'";
+function Annivs() {
+  $link = dbConnect();
 
-    if ($result = mysqli_query($link, $anniv)) {
-      $row = mysqli_fetch_array($result);
-      return $row;
-  } else {
-    return mysqli_error($link);
+  $moisactu = date("m");
+  $anniv = "SELECT * FROM `users` WHERE `date_n` LIKE '%$moisactu%'";
+  $result = mysqli_query($link, $sql);
+  $IDUser = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDUser[] = $row;
+    }
   }
-}
+  return $IDUser;
 
 
 if ($_SESSION["Connected"] == "True") {
@@ -50,7 +51,10 @@ if ($_SESSION["Connected"] == "True") {
         <div class="Anniversaire">
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
-            <li class="texteB"><?php var_dump(annivs()['nom']); ?></li>
+            <?php foreach (Annivs() as $i) { ?>
+              <li class="texteB"><?php echo Annivs()[$i]; ?></li>
+            <?php } ?>
+
           </ul>
         </div>
         <!--permet d'avoir le moteur de recherche qwant junior sur la page-->
