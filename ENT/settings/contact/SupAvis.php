@@ -13,7 +13,7 @@ function SuppressionDevoir($id) {
   $sql = "DELETE FROM `avis` WHERE `IDavis`='$id' ";
   if (mysqli_query($link, $sql)) {
     echo "succès";
-    mysqli_query($link, "FLUSH `users`");
+    mysqli_query($link, "FLUSH `avis`");
     header("Location: contact.php");
   } else {
     echo mysqli_error($link);

@@ -5,6 +5,7 @@ include '../../fonc.php';
 
 function Save($type, $message) {
   $link = dbConnect();
+  mysqli_query($link, "FLUSH `avis`");
 
   $date = date("Y-m-d H:i:s");
   $id = $_SESSION["ID"];
