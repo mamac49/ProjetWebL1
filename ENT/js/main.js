@@ -68,8 +68,8 @@ function addLine(lineType) {
   console.log("text area = " + textArea);
   console.log("image area = " + inputImage);
   console.log(line);
-  textArea[21] = line;
-  inputImage[18] = line;
+  textArea[21] = String(line);
+  inputImage[18] = String(line);
   line += 1;
   console.log("text area = " + textArea);
   console.log("image area = " + inputImage);
