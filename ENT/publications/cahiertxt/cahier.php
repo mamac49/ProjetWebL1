@@ -45,7 +45,7 @@ function AfficherDevoir($jour, $classe, $matiere) {
 
 if (isset($_POST['ValiderAjout'])) {
   $_SESSION['devoirs'] = array($_POST['classe'], $_POST['matiere'], securisation($_POST['consigne']), $_POST['jour']);
-  header("Location: AjoutDevoir.php")
+  header("Location: AjoutDevoir.php");
 }
 
 
