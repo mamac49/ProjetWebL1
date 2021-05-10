@@ -12,11 +12,10 @@ function annivs() {
     $moisactu = date("m");
     $anniv = "SELECT * FROM `users` WHERE `date_n`=%"."-'$moisactu'-"."%";
 
-    return $moisactu . "<br>" . $anniv;
-
-    /*if ($result = mysqli_query($link, $anniv)) {
+    if ($result = mysqli_query($link, $anniv)) {
       $row = mysqli_fetch_array($result);
-  }*/
+  }
+  return $row;
 }
 
 
