@@ -50,15 +50,6 @@
   display: none;
 }
 
-.texteCahierMulimedia {
-  display: block;
-  width: 65%;
-  height: 300pt;
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .imageCahierMulimedia {
   display: block;
   width: 40%;
@@ -80,4 +71,15 @@
 .Saisie {
   margin-bottom: 150px;
   padding-bottom: 25px;
+}
+
+.textarea{
+  display: block;
+  width: 65%;
+  font-size: 100%;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  height:1rem;
 }
