@@ -106,7 +106,7 @@ if ($_SESSION["Connected"] == true) {
                 <label class="texte">Valider le nouveau mot de passe</label>
                 <input class="texte" type="password" name="passwordNN" minlengh="8" maxlength="16" required>
               </p>
-              <input class="texte bouton" type="submit" name="Valider" value="Valider">
+              <input class="bouton" type="submit" name="Valider" value="Valider">
             </form>
             <form action="parametres.php" method="POST" enctype="multipart/form-data">
               <h2 class="texte">Changement de l'image de profil</h2>
