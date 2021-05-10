@@ -53,6 +53,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 1px black solid;
 }
 
 .fermer {
@@ -64,8 +65,4 @@
 .fermer:hover {
   color: red;
   cursor: pointer;
-}
-
-.Fine {
-  width: 30%;
 }
