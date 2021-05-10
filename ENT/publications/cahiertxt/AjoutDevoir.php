@@ -19,10 +19,10 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   }
 }
 
-$classe = $_SESSION['devoirs'][0]
-$matiereA = $_SESSION['devoirs'][1]
-$consigne = $_SESSION['devoirs'][2]
-$jour = $_SESSION['devoirs'][3]
+$classe = $_SESSION['devoirs'][0];
+$matiereA = $_SESSION['devoirs'][1];
+$consigne = $_SESSION['devoirs'][2];
+$jour = $_SESSION['devoirs'][3];
 
 AjoutDevoir($classe, $matiereA, $consigne, $jour);
 
