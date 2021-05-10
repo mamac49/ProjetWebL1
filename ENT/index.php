@@ -18,9 +18,9 @@ function annivs() {
       } else {
         $row = mysqli_fetch_array($result);
         mysqli_free_result($result);
-         $retour = $row;
+        $retour = $row;
       }
-      return $retour
+      return $retour;
     }
 }
 
