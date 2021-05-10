@@ -320,7 +320,7 @@ textarea {
 }
 .bouton span:after{
     content: '\00bb';
-    font-size: 1.1em;
+    font-size: 1.5em;
     position: absolute;
     top: 0;
     right: 25px;
