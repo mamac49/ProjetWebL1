@@ -64,7 +64,14 @@ function addLine(lineType) {
   
   /*PAS FIN DU MONDE !!!*/
   /*logs tests*/
-  console.log('text area = ' + textArea);
+  var line_test = '<test name="test_0"';
+  console.log(line);
+  console.log(line_test);
+  line_test.replace('test_' + line, 'test_' + (line + 1));
+  console.log(line);
+  console.log(line_test)
+
+  /*console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
   console.log('line_' + line);
   console.log('line_' + (line + 1));
@@ -74,11 +81,11 @@ function addLine(lineType) {
 
   textArea.replace('line_' + line, 'line_' + (line + 1));
   inputImage.replace('line_' + line, 'line_' + (line + 1));
-  line += 1;
-  /*logs tests*/
+  line += 1;*/
+  /*logs tests
   console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
-  console.log(line);
+  console.log(line);*/
 
 
   /* ajoute en fonction du type de ligne demandé
