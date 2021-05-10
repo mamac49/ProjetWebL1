@@ -10,7 +10,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
 
   $sql = "INSERT INTO `cahiertxt`(`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
   if (mysqli_query($link, $sql)) {
-    unset($_SESSION['devoirs'])
+    unset($_SESSION['devoirs']);
     header("Location: cahier.php");
     mysqli_close($link);
   } else {
