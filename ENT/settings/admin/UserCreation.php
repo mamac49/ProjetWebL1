@@ -5,9 +5,11 @@ error_reporting(E_ALL);
 
 include '../../fonc.php';
 
-function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe, $pp) {
+function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe) {
     $link = dbConnect();
     mysqli_query($link, "FLUSH `users`");
+
+    $pp = file_get_contents("../../data/PP.png", True);
 
     $iduser = max(max(nombre())) + 1;
 
@@ -49,13 +51,12 @@ if ( isset($_POST['valider'])) {
       $mail = securisation($_POST['mail']);
       $classe = securisation($_POST['classe']);
       $date = securisation($_POST['datenaissance']);
-      $pp = file_get_contents("../../data/PP.png", True);
       if (isset($_POST['admin'])) {
         $admin = securisation($_POST['admin']);
       } else {
         $admin = 0;
       }
-      Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe, $pp);
+      Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe);
   } else {
     echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
     header("refresh: 0");
