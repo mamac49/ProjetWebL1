@@ -308,6 +308,7 @@ textarea {
   cursor: pointer;
   margin: 15px;
   height: 40px;
+  padding: 5px;
 }
 
 .bouton span {
