@@ -68,7 +68,7 @@ function addLine(lineType) {
   console.log(line);
   console.log(line_test);
   line += 1;
-  line_test.replace("line_0", "line_1");
+  line_test.replace("test_0", "test_1");
   console.log(line);
   console.log(line_test);
 
