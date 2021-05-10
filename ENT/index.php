@@ -1,26 +1,22 @@
 <!--On vérifie si l'utilisateur est connecté, sinon on le redirige vers la page de connexion (voir à la fin)-->
-
 <?php
 session_start();
 
-setlocale(LC_TIME, 'fra_fra');
-
 include 'fonc.php';
 
-function annivs() {
-    $link = dbConnect();
-    $moisactu = date("m");
-    $anniv = "SQL SELECT * FROM `users` WHERE date_n=%"."-'$moisactu'-"."%";
-    if (is_null($anniv)) {
-        return "Pas d'anniversaire";
-    if ($result = mysqli_query($link, $anniv)) {
-        $row = mysqli_fetch_array($result);
-        mysqli_free_result($result);
-        return $row;
-      }
-    }
-}
+function Annivs() {
+  $link = dbConnect();
 
+  $moisactu = date("m");
+  $sql = "SELECT * FROM `users` WHERE `date_n` LIKE '%$moisactu%'";
+  $IDUser = array();
+  if ($result = mysqli_query($link, $sql)) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDUser[] = $row;
+    }
+  }
+  return $IDUser;
+}
 
 if ($_SESSION["Connected"] == "True") {
 ?>
@@ -53,7 +49,9 @@ if ($_SESSION["Connected"] == "True") {
         <div class="Anniversaire">
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
-            <li class="texteB"><?php var_dump(annivs()); ?></li>
+            <?php foreach (Annivs() as $i) { ?>
+              <li class="texteB"><?php echo $i[1] . " " . $i[2]; ?></li>
+            <?php } ?>
           </ul>
         </div>
         <!--permet d'avoir le moteur de recherche qwant junior sur la page-->

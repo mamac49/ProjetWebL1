@@ -28,6 +28,20 @@ function nombreAvis() {
   return $IDavis;
 }
 
+function nombreAvisUser() {
+  $link = dbConnect();
+  $id = $_SESSION['ID'];
+  $sql = "SELECT `IDavis` FROM `avis` WHERE `iduser`=$id";
+  $result = mysqli_query($link, $sql);
+  $IDavis = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDavis[] = $row;
+    }
+  }
+  return $IDavis;
+}
+
 function AfficheAvis($id) {
   $link = dbConnect();
 
@@ -42,7 +56,7 @@ function AfficheAvis($id) {
     mysqli_free_result($result);
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
-      return $icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . "\n" . $row['message'];
+      return $icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . "<br>" . $row['message'];
     } else {
       return mysqli_error($link);;
     }
@@ -76,6 +90,7 @@ if ($_SESSION["Connected"] == true) {
       include '../../base.php';
   ?>
   <div class="Center texte">
+    <div class="colonne">
       <form method="POST">
         <label><input type="radio" name="Type" value="Avis"><i class="fas fa-comment-dots icone"></i> Donner un avis?</label>
         <label><input type="radio" name="Type" value="Bug"><i class="fas fa-bug icone icone"></i> Signaler un bug</label>
@@ -87,6 +102,16 @@ if ($_SESSION["Connected"] == true) {
       ?>
         <button type="button" onclick="document.getElementById('ShowRate').style.display='block'" name="button" class="bouton">Afficher les avis</button>
       <?php } ?>
+    </div>
+    <div class="colonne">
+      <h3>Mes avis</h3>
+      <ul>
+        <?php foreach (nombreAvisUser() as $id) { ?>
+          <li class="texte"><?php echo AfficheAvis($id[0][0]); ?></li>
+        <?php } ?>
+      </ul>
+    </div>
+
 
       <div class="modal" id="ShowRate">
         <div class="modal-content animate">

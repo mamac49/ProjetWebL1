@@ -5,24 +5,20 @@ error_reporting(E_ALL);
 
 include '../../fonc.php';
 
-function Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe) {
+function Create($nom, $prenom, $mail, $password, $date, $admin, $classe) {
     $link = dbConnect();
     mysqli_query($link, "FLUSH `users`");
 
+    $pp = file_get_contents("../../data/PP.png", True);
+    $pp = mysqli_real_escape_string($link, $pp);
     $iduser = max(max(nombre())) + 1;
 
-    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`) VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe');";
+    $sql = "INSERT INTO `users` (`iduser`, `prenom`, `nom`, `mail`, `mdp`, `date_n`, `admin`, `Classe`, `data`)
+    VALUES ('$iduser', '$prenom', '$nom', '$mail', '$password', '$date', '$admin', '$classe', '$pp');";
     if (mysqli_query($link, $sql)) {
-      $pp = mysqli_real_escape_string($link, $pp);
-      $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
-      if (mysqli_query($link, $sql2)) {
         reset($_POST);
         mysqli_close($link);
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
-        exit();
-      } else {
-        echo mysqli_error($link);
-      }
     } else {
       echo mysqli_error($link);
     }
@@ -49,13 +45,12 @@ if ( isset($_POST['valider'])) {
       $mail = securisation($_POST['mail']);
       $classe = securisation($_POST['classe']);
       $date = securisation($_POST['datenaissance']);
-      $pp = file_get_contents("https://mlanglois.freeboxos.fr/Projetwebl1/ENT/data/PP.png");
       if (isset($_POST['admin'])) {
         $admin = securisation($_POST['admin']);
       } else {
         $admin = 0;
       }
-      Create($nom, $prenom, $mail, $password, $date, $pp, $admin, $classe);
+      Create($nom, $prenom, $mail, $password, $date, $admin, $classe);
   } else {
     echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
     header("refresh: 0");
