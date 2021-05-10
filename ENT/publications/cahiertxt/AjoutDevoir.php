@@ -19,7 +19,7 @@ function AjoutDevoir($classe, $matiere, $consigne, $jour) {
   }
 }
 
-$str = explode(" ", $_GET['id']);
+$str = explode(";", $_GET['id']);
 
 AjoutDevoir($str[0], $str[1], $str[2], $str[3]);
 
