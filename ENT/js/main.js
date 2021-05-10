@@ -64,13 +64,13 @@ function addLine(lineType) {
   
   /*PAS FIN DU MONDE !!!*/
   /*logs tests*/
-  var line_test = '<test name="test_0">';
+  const line_test = '<test name="test_0">';
   console.log(line);
   console.log(line_test);
   line += 1;
-  line_test.[17] = line;
+  line_test.replace("line_0", "line_1");
   console.log(line);
-  console.log(line_test)
+  console.log(line_test);
 
   /*console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
@@ -96,11 +96,11 @@ function addLine(lineType) {
   }
 /*-ou une image*/
   else if (lineType == 'image') {
-    return inputImage
+    return inputImage;
   } 
 /*-et une erreur si aucun type n'a été spécifié, peut arriver en cas de bug au niveau des boutons*/
   else {
-    console.log('Error : Undefined lineType')
+    console.log('Error : Undefined lineType');
   }
 }
 
