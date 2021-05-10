@@ -43,28 +43,7 @@
   width: 500px;
 }
 
-.Comm {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 5px;
-}
 
-.ComDiv {
-  display: flex;
-  flex-direction: column;
-}
-
-.ComDiv textarea {
-  float: right;
-}
-
-.Bouton-com {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 10px;
-}
 
 .commentairefield legend{
   align-content: flex-end;
