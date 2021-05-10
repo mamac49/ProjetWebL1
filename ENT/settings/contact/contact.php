@@ -107,11 +107,12 @@ if ($_SESSION["Connected"] == true) {
     <div class="colonne">
       <h3>Mes avis</h3>
       <ul>
-        <?php foreach (nombreAvisUser() as $id) { ?>
-          <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id="dots">...</span><span id="more"><?php echo AfficheAvis($id[0][0])[1];?></span><a href="SupAvis.php?id=".<?php print $id[0][0];?>
+        <?php $x=0;
+          foreach (nombreAvisUser() as $id) { ?>
+          <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id=<?php print "more-". $x ?><?php echo AfficheAvis($id[0][0])[1];?></span><a href="SupAvis.php?id=".<?php print $id[0][0];?>
           <i class="fas fa-times fermer"></i></a></li>
-          <button onclick="ReadMore()" id="myBtn" class="bouton">Lire Plus</button>
-        <?php } ?>
+          <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton">Lire Plus</button>
+        <?php $x+=1; }  ?>
       </ul>
     </div>
 
@@ -121,11 +122,12 @@ if ($_SESSION["Connected"] == true) {
           <span onclick="document.getElementById('ShowRate').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
           <h3 class="texte">Avis et bugs</h3>
           <ul>
-            <?php foreach (nombreAvis() as $id) { ?>
-              <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id="dots">...</span><span id="more"><?php echo AfficheAvis($id[0][0])[1];?></span><a href="SupAvis.php?id=".<?php print $id[0][0];?>
+            <?php $x=0;
+              foreach (nombreAvis() as $id) { ?>
+              <li class="texte suppression"><?php echo AfficheAvis($id[0][0])[0];?><span id=<?php print "more-". $x ?><?php echo AfficheAvis($id[0][0])[1];?></span><a href="SupAvis.php?id=".<?php print $id[0][0];?>
               <i class="fas fa-times fermer"></i></a></li>
-              <button onclick="ReadMore()" id="myBtn" class="bouton">Lire Plus</button>
-            <?php } ?>
+              <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton">Lire Plus</button>
+            <?php $x+=1; }  ?>
           </ul>
         </div>
       </div>
