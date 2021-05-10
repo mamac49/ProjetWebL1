@@ -83,3 +83,7 @@
 .bouton {
   width: 130px;
 }
+
+textarea {
+  width: 100%;
+}
