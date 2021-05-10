@@ -105,7 +105,8 @@ textarea{
     content: '\0394';
     top: 0px;
     right: -25px;
-    transition: 0.5s cubic-bezier(1,.19,.47,.96);
+    bottom: 5px;
+    transition: 0.25s cubic-bezier(1,.19,.47,.96);
   }
 
 .bouton:hover span:after {
