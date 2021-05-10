@@ -111,17 +111,16 @@ textarea{
 .bouton span {
   display: inline-block;
   position: relative;
-}
+}*/
 
 .bouton span:after{
-    content: '\00bb';
-    position: absolute;
+    content: '\039b';
     top: 0px;
     right: 0px;
     transition: 0.5s cubic-bezier(1,.19,.47,.96);
-  }*/
+  }
 
 .bouton:hover span:after {
-  top : -100px;
+  top : -10px;
   right: 0px;
 }
