@@ -51,7 +51,7 @@
 }
 
 /* pour avoir des boutons avec animation dynamique */
-input[type=button], .bouton{
+.bouton{
   border-radius: 5px;
   background-color: var(--main-color);
   border: none;
@@ -60,7 +60,7 @@ input[type=button], .bouton{
   cursor: pointer;
 }
 
-input[type=button] span, .bouton span {
+.bouton span {
   display: inline-block;
   position: relative;
   &after{
@@ -72,7 +72,7 @@ input[type=button] span, .bouton span {
   }
 }
 
-input[type=button]:hover span:after, .bouton:hover span:after {
+.bouton:hover span:after {
   right: -150px;
 }
 
