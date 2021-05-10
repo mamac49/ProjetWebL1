@@ -14,7 +14,7 @@ function annivs() {
     if ($result = mysqli_query($link, $anniv)) {
         $row = mysqli_fetch_array($result);
         mysqli_free_result($result);
-        if (is_null($result)) {
+        if (is_null($anniv)) {
             return "Pas d'anniversaire";
       }
     }
