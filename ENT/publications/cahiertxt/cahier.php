@@ -105,7 +105,7 @@ if ($_SESSION["Connected"] == "True") {
                     if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
                        $info = AfficherDevoir($jour, "GS", $x);
                        $consigne = $info['consigne']; ?>
-                      <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
+                      <li class="texte suppression"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
                         <?php if ($_SESSION["Admin"] == True) { ?> <a href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"><i class="fas fa-times fermer"></i></a> <?php } ?></li>
               <?php }} ?>
 
@@ -115,7 +115,7 @@ if ($_SESSION["Connected"] == "True") {
                        $info = AfficherDevoir($jour, "CP", $x);
                        $matiereP = $info['matiere'];
                        $consigne = $info['consigne']; ?>
-                       <li class="texte ToDo"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
+                       <li class="texte suppression"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
                          <?php if ($_SESSION["Admin"] == True) { ?> <a href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"><i class="fas fa-times fermer"></i></a> <?php } ?></li>
               <?php }} ?>
             </ul>

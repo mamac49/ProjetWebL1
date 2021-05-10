@@ -108,22 +108,11 @@
  to {transform: scale(1)}
 }
 
-.fermer {
-  color: rgba(88, 89, 93);
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.fermer:hover {
-  color: red;
-  cursor: pointer;
-}
-
 .MG {
   font-weight: bold;
 }
 
-.ToDo {
+.suppression {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
