@@ -309,6 +309,7 @@ textarea {
   margin: 15px;
   height: 40px;
   padding: 5px;
+  padding-right: 20px;
 }
 
 .bouton span {
