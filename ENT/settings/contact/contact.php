@@ -47,7 +47,7 @@ function AfficheAvis($id) {
 
 $icone = array();
 $icone["Bug"] = "<i class='fas fa-bug icone icone'></i>";
-$icone["Avis"] = "<i class='fas fa-bug icone icone'></i>"
+$icone["Avis"] = "<i class='fas fa-bug icone icone'></i>";
 
 if (isset($_POST['ValiderEnvoi'])) {
   $type = $_POST['Type'];
