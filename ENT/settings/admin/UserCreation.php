@@ -88,27 +88,27 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
             <form action="UserCreation.php" method="POST" class="Formulaire" enctype="multipart/form-data">
                 <h2 class="texte">Création d'utilisateur</h2>
                 <div class="input-container">
-                  <i class="fas fa-user icon"></i>
+                  <i class="fas fa-user iconCrea"></i>
                   <input type="text" name="nom" placeholder="Nom" class="input-field" required>
                 </div>
                 <div class="input-container">
-                  <i class="far fa-user icon"></i>
+                  <i class="far fa-user iconCrea"></i>
                   <input type="text" name="prenom" placeholder="Prénom" class="input-field" required>
                 </div>
                 <div class="input-container">
-                  <i class="fas fa-envelope icon"></i>
+                  <i class="fas fa-envelope iconCrea"></i>
                   <input type="email" name="mail" placeholder="E-mail" class="input-field" required>
                 </div>
                 <div class="input-container">
-                  <i class="fas fa-key icon"></i>
+                  <i class="fas fa-key iconCrea"></i>
                   <input type="password" name="mdp" placeholder="Mot de passe" class="input-field" required>
                 </div>
                 <div class="input-container">
-                  <i class="fas fa-key icon"></i>
+                  <i class="fas fa-key iconCrea"></i>
                   <input type="password" name="mdp2" placeholder="Mot de passe" class="input-field" required>
                 </div>
                 <div class="input-container">
-                <i class="fas fa-calendar-day icon"></i>
+                <i class="fas fa-calendar-day iconCrea"></i>
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="input-field" required>
                 </div>
                 <p class="texteF">Administrateur ?
