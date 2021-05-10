@@ -51,5 +51,6 @@
 
 .ListeDeroulante {
   width: 350px;
-  margin-bottom: 15px
+  height: 20px;
+  margin-bottom: 15px;
 }
