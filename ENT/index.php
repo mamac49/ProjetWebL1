@@ -9,7 +9,7 @@ function Annivs() {
   $link = dbConnect();
 
   $moisactu = date("m");
-  $anniv = "SELECT * FROM `users` WHERE `date_n` LIKE '%$moisactu%'";
+  $sql = "SELECT * FROM `users` WHERE `date_n` LIKE '%$moisactu%'";
   $IDUser = array();
   if ($result = mysqli_query($link, $sql)) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
