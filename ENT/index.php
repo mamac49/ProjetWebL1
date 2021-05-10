@@ -13,12 +13,14 @@ function annivs() {
     $anniv = "SQL SELECT * FROM `users` WHERE date_n=%"."-'$moisactu'-"."%";
 
     if ($result = mysqli_query($link, $anniv)) {
-      if (is_null($anniv)) {
-          return "Pas d'anniversaire";
+      if (is_null($row)) {
+          $retour = "Pas d'anniversaire";
+      } else {
         $row = mysqli_fetch_array($result);
         mysqli_free_result($result);
-        return $row;
+         $retour = $row;
       }
+      return $retour
     }
 }
 
