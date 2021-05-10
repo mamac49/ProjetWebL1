@@ -116,7 +116,7 @@ if ($_SESSION["Connected"] == "True") {
 
       <?php foreach ($semaine as $jour) {?>
         <div id="<?php echo $jour; ?>" class="tabcontent">
-          <h3><?php echo $jour; ?></h3>
+          <h3 class=texte><?php echo $jour; ?></h3>
             <ul>
               <?php
                   foreach ($ListMatiere as $x) {
