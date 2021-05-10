@@ -37,8 +37,11 @@ function AfficheAvis($id) {
     $sqlUser = "SELECT * FROM `user` WHERE `iduser`='$row[iduser]'";
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
+      return $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['Mail'] . " : " . $row['message'];
+    } else {
+      return "Bonjour";
     }
-    return $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['Mail'] . " : " . $row['message'];
+
   }
 }
 
