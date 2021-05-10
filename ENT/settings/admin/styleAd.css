@@ -18,7 +18,7 @@
   flex-direction: row;
 }
 
-.listeDeroul {
+.custom-select {
   width: 300px;
   position: relative;
 }
