@@ -96,5 +96,6 @@ textarea{
 }
 
 .commentairefield legend{
-  right: 10pt;
+  position:relative;
+  left:20px;
 }
