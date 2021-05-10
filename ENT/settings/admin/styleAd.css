@@ -11,10 +11,6 @@
     width: 50%;
 }
 
-.texteF {
-    margin: 1px;
-}
-
 .Centrer{
     margin-left: 20px;
     text-align: center;
@@ -31,4 +27,31 @@
 
 .Séparer{
   margin-top: 20px;
+}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
 }

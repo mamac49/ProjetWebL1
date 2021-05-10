@@ -87,18 +87,30 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
 
             <form action="UserCreation.php" method="POST" class="Formulaire" enctype="multipart/form-data">
                 <h2 class="texte">Création d'utilisateur</h2>
-                <p class="texteF">Nom</p>
+                <div class="input-container">
+                  <i class="fas fa-user icon"></i>
                   <input type="text" name="nom" placeholder="Nom" class="FormCrea" required>
-                <p class="texteF">Prenom</p>
+                </div>
+                <div class="input-container">
+                  <i class="far fa-user icon"></i>
                   <input type="text" name="prenom" placeholder="Prénom" class="FormCrea" required>
-                <p class="texteF">Email</p>
+                </div>
+                <div class="input-container">
+                  <i class="fas fa-envelope icon"></i>
                   <input type="email" name="mail" placeholder="E-mail" class="FormCrea" required>
-                <p class="texteF">Mot de passe</p>
+                </div>
+                <div class="input-container">
+                  <i class="fas fa-key icon"></i>
                   <input type="password" name="mdp" placeholder="Mot de passe" class="FormCrea" required>
-                <p class="texteF">Valider le mot de passe</p>
+                </div>
+                <div class="input-container">
+                  <i class="fas fa-key icon"></i>
                   <input type="password" name="mdp2" placeholder="Mot de passe" class="FormCrea" required>
-                <p class="texteF">Date de naissance</p>
+                </div>
+                <div class="input-container">
+                <i class="fas fa-calendar-day icon"></i>
                   <input type="date" name="datenaissance" placeholder="DD/MM/AAAA" class="FormCrea" required>
+                </div>
                 <p class="texteF">Administrateur ?
                 <input type="checkbox" value="1" name="admin"></p>
                 <p>

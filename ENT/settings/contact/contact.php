@@ -52,8 +52,7 @@ function AfficheAvis($id) {
   $sql = "SELECT * FROM `avis` WHERE `IDavis`='$id'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    $sqlUser = "SELECT * FROM `users` INNER JOIN `avis` ON `users`.`iduser` = `avis`.`iduser`";
-    mysqli_free_result($result);
+    $sqlUser = "SELECT * FROM `users` INNER JOIN `avis` ON `users`.`iduser` = `avis`.`iduser` WHERE `avis`.`idavis`='$id'";
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
       return $icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . "<br>" . $row['message'];
@@ -62,7 +61,6 @@ function AfficheAvis($id) {
     }
   }
 }
-
 
 
 if (isset($_POST['ValiderEnvoi'])) {
