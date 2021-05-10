@@ -58,7 +58,7 @@ function AfficheAvis($id) {
     $sqlUser = "SELECT * FROM `users` INNER JOIN `avis` ON `users`.`iduser` = `avis`.`iduser` WHERE `avis`.`idavis`='$id'";
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
-      return $icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . "<br>" . $row['message'];
+      return $icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . "<br>", $row['message'];
     } else {
       return mysqli_error($link);;
     }
