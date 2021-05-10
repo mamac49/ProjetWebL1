@@ -34,11 +34,11 @@
 }
 
 
-html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, .legal, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login, .texte {
+html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, .legal, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login, .texte {
   color: var(--font-color);
 }
 
-.FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer {
+.FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover {
   color: var(--font-color);
 }
 
