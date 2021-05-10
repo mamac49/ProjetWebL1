@@ -122,12 +122,12 @@ if ($_SESSION["Connected"] == true) {
           <span onclick="document.getElementById('ShowRate').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
           <h3 class="texte">Avis et bugs</h3>
           <ul>
-            <?php $x=0;
+            <?php $x=-1;
               foreach (nombreAvis() as $id) { ?>
-                <li class="texte suppression"><div class="avis"><p><?php echo AfficheAvis($id[0][0])[0];?></p><span style="display: none" id=<?php print "more-" . "a" . $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span></div>
+                <li class="texte suppression"><div class="avis"><p><?php echo AfficheAvis($id[0][0])[0];?></p><span style="display: none" id=<?php print "more-" . $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span></div>
                   <a href="<?php print "SupAvis.php?id=" . $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
-                <button onclick="ReadMore(<?php print "a" . $x ?>)" id="<?php print "Mybtn-" . "a" . $x ?>" class="bouton">Lire Plus</button>
-            <?php $x+=1; }  ?>
+                <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-" . $x ?>" class="bouton">Lire Plus</button>
+            <?php $x-=1; }  ?>
           </ul>
         </div>
       </div>
