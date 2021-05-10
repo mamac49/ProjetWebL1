@@ -81,3 +81,8 @@
 textarea {
   width: 90%;
 }
+
+.avis {
+  display: flex;
+  flex-direction: column;
+}
