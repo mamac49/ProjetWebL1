@@ -7,10 +7,7 @@ chmod($filename, 0444);
 include '../../fonc.php';
 
 function Save($type, $message) {
-  $file = fopen("logs.txt", "w");
-  $txt = $_SESSION['ID'] . " : " . date("d/m/Y-H:i") . "\n" . "Type =" . $type ."\n" . $message;
-  fwrite($file, $txt);
-  fclose($file);
+  $link = dbConnect();
 }
 
 
