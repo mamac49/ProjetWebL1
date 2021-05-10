@@ -107,6 +107,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 </p>
                 <input type="submit" name="valider" value="Creer" class="FormCrea bouton Centrer">
             </form>
+            <div class="colonne">
               <h2 class="texte">Suppression d'utilisateur</h2>
               <ul>
                 <?php
@@ -114,6 +115,8 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                   <li class="texte suppression"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?><a href="SupUser.php?id=<?php print $x[0] ?>"><i class="fas fa-times supprimer"></i></a></li>
                 <?php } ?>
               </ul>
+            </div>
+
 
 
         </div>

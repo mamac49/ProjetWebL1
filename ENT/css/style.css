@@ -331,3 +331,9 @@ textarea {
   height: 30px;
   margin-bottom: 15px;
 }
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}

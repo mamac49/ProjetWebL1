@@ -74,12 +74,6 @@
   flex-direction: row;
 }
 
-.colonne {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
 .bouton {
   width: 130px;
 }
