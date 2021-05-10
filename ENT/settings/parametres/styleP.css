@@ -16,10 +16,6 @@
   flex-direction: row;
 }
 
-.titre_p {
+.titre_p, h1 {
   padding-bottom: 0px;
-}
-
-.Titre {
-  padding-bottom: 5px;
 }
