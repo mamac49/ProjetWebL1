@@ -101,7 +101,7 @@ function addText() {
 }
 
 function addImage() {
-  if (addLine != false) {
+  if (addLine('image') != false) {
     var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
     publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
   }  
