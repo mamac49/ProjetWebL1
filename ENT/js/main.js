@@ -101,6 +101,8 @@ function addText() {
 }
 
 function addImage() {
-  var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-  publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
+  if (addLine != false) {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+    publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
+  }  
 }
