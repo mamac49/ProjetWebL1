@@ -135,8 +135,12 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                 $tempsC=temps_ecriture_C($x[0]);
                 $message=message($x[0]);
               ?>
-                <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
-                <p><?php echo $message; ?></p>
+                <fieldset class="commentairefield">
+                  <legend>
+                    <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
+                  </legend>
+                  <p><?php echo $message; ?></p>
+                </fieldset>
                 <?php $res=idauteurC($x[0]);
                 if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
                   <input type="button" value="Effacer le commentaire">
