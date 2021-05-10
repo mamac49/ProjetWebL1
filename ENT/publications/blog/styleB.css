@@ -27,23 +27,30 @@
   margin-left: 10px;
 }
 
-.sujets span{
-  flex:end;
-  color:black;
-  margin-right: 10px;
+
+
+.Comm {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 5px;
 }
 
-.Blog {
+.ComDiv {
   display: flex;
   flex-direction: column;
-  padding: 10px;
 }
 
-.Commentaire {
-  width: 500px;
+.ComDiv textarea {
+  float: right;
 }
 
-
+.Bouton-com {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 10px;
+}
 
 .commentairefield legend{
   align-content: flex-end;
