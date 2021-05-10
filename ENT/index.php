@@ -18,7 +18,7 @@ function annivs() {
           $retour = $anniv;
       } else {
         mysqli_free_result($result);
-        $retour = $row;
+        $retour = $anniv;
       }
       return $retour;
     }
