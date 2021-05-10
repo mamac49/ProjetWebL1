@@ -76,6 +76,7 @@ if ($_SESSION["Connected"] == true) {
       include '../../base.php';
   ?>
   <div class="Center texte">
+    <div class="colonne">
       <form method="POST">
         <label><input type="radio" name="Type" value="Avis"><i class="fas fa-comment-dots icone"></i> Donner un avis?</label>
         <label><input type="radio" name="Type" value="Bug"><i class="fas fa-bug icone icone"></i> Signaler un bug</label>
@@ -87,6 +88,11 @@ if ($_SESSION["Connected"] == true) {
       ?>
         <button type="button" onclick="document.getElementById('ShowRate').style.display='block'" name="button" class="bouton">Afficher les avis</button>
       <?php } ?>
+    </div>
+    <div class="colonne">
+      
+    </div>
+
 
       <div class="modal" id="ShowRate">
         <div class="modal-content animate">
