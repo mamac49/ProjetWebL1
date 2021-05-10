@@ -95,7 +95,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
   <head>
     <meta charset="utf-8">
     <title><?php echo titre($IDblog); ?></title> <!--renvoie le titre du blog via l'id de ce dernier-->
-    <link rel="stylesheet" href="styleC.css">
+    <link rel="stylesheet" href="styleB.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">

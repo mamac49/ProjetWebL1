@@ -95,7 +95,7 @@ textarea{
   height:1rem;
 }
 
-legend{
+.commentairefield legend{
   position:relative;
   left:20px;
 }
