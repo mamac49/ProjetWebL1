@@ -80,7 +80,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
           d1.style.display = "block";
         }
       };
-      togg1.onclick = togg;
+      togg1.onclick;
     </script>
   </head>
 
