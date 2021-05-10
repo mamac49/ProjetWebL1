@@ -72,7 +72,8 @@ function message($x) { //renvoie le texte de chaque commentaire relié à leur p
   $link = dbConnect();
   $sql = "SELECT `message` FROM `Commentaires` WHERE `idcom`='$x'";
   if ($result = mysqli_query($link, $sql)) {
-    return mysqli_num_rows($result);
+    $row = mysqli_fetch_array($result);
+    return $row[0];
   }
 }
 
