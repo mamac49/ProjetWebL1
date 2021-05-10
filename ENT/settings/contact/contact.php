@@ -7,8 +7,9 @@ function Save($type, $message) {
   $link = dbConnect();
 
   $date = date("Y-m-d H:i:s");
+  $id = $_SESSION["ID"];
 
-  $sql = "INSERT INTO `avis` (`type`, `message`, `date`, `idUser`) VALUES ('$type', '$message', '$date', '$_SESSION["ID"]')";
+  $sql = "INSERT INTO `avis` (`type`, `message`, `date`, `idUser`) VALUES ('$type', '$message', '$date', '$id')";
   if (mysqli_query($link, $sql)) {
     echo "succès";
   }
