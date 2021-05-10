@@ -15,7 +15,7 @@ function annivs() {
     if ($result = mysqli_query($link, $anniv)) {
       $row = mysqli_fetch_array($result);
       if (is_null($row)) {
-          $retour = $row;
+          $retour = $anniv;
       } else {
         mysqli_free_result($result);
         $retour = $row;
