@@ -49,7 +49,7 @@ if ( isset($_POST['valider'])) {
       $mail = securisation($_POST['mail']);
       $classe = securisation($_POST['classe']);
       $date = securisation($_POST['datenaissance']);
-      $pp = file_get_contents("https://mlanglois.freeboxos.fr/Projetwebl1/ENT/data/PP.png");
+      $pp = file_get_contents("/Projetwebl1/ENT/data/PP.png");
       if (isset($_POST['admin'])) {
         $admin = securisation($_POST['admin']);
       } else {
