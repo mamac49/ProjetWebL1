@@ -53,19 +53,14 @@
   border: none;
   cursor: pointer;
   width: 200px;
-  opacity: 0.9;
 }
-
-.btn:hover {
-  opacity: 1;
-}
-
 
 .btn span {
   display: inline-block;
   position: relative;
   width: 100%
 }
+
 .btn span:after{
     content: '\00bb';
     font-size: 1.5em;
