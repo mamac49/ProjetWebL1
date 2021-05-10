@@ -121,8 +121,8 @@ function textAdapt(){
 }*/
 
 function ReadMore(x) {
-  var moreText = document.getElementById("more" + x);
-  var btnText = document.getElementById("myBtn" + x);
+  var moreText = document.getElementById("more-" + x);
+  var btnText = document.getElementById("myBtn-" + x);
 
   if (moreText.style.display === "inline") {
     btnText.innerHTML = "Lire plus";
