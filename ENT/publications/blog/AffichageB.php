@@ -153,7 +153,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
               }
             } ?>
             <br/>
-            <input type="button" class="button" value="Ajouter un commentaire">
+            <input type="button" class="bouton" value="Ajouter un commentaire">
             <?php }
           ?>
         </div>
