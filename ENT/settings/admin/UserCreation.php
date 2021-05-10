@@ -105,7 +105,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                 </div>
                 <div class="input-container">
                   <i class="fas fa-key iconCrea"></i>
-                  <input type="password" name="mdp2" placeholder="Mot de passe" class="input-field" required>
+                  <input type="password" name="mdp2" placeholder="Vérification du mot de passe" class="input-field" required>
                 </div>
                 <div class="input-container">
                 <i class="fas fa-calendar-day iconCrea"></i>
