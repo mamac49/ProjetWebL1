@@ -10,24 +10,23 @@
   flex-direction: row;
 }
 
-.espaces hr{
-  flex:start;
-  margin-left: 20px;
+
+
+.sujets span{
+  flex:end;
+  color:black;
+  margin-right: 10px;
 }
 
-.sujets{
-  display:flex;
-  flex-direction: row;
+.Blog {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
-.sujets a{
-  flex:auto;
-  font-size: 19px;
-  text-decoration: none;
-  margin-left: 10px;
+.Commentaire {
+  width: 500px;
 }
-
-
 
 .Comm {
   display: flex;
