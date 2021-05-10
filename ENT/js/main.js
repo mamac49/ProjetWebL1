@@ -65,14 +65,14 @@ function addLine(lineType) {
   } /*une fois le tout vérifié on ajoute un ligne*/
   
   /*PAS FIN DU MONDE !!!*/
-  console.log("text area = " +String(textArea));
-  console.log("image area = " +String(inputImage));
+  console.log("text area = " + String(textArea));
+  console.log("image area = " + String(inputImage));
   console.log(line)
   textArea.replace('line_'+ line, 'line_' + line + 1);
   inputImage.replace('line_'+ line, 'line_' + line + 1);
   line += 1;
-  console.log("text area = " +String(textArea));
-  console.log("image area = " +String(inputImage));
+  console.log("text area = " + String(textArea));
+  console.log("image area = " + String(inputImage));
   console.log(line)
 
 
