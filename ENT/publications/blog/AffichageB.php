@@ -139,7 +139,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                   <legend>
                     <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
                   </legend>
-                  <?php echo "<script>$message.trim()</script>; ?>
+                  <?php echo $message; ?>
                 </fieldset>
                 <?php $res=idauteurC($x[0]);
                 if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
