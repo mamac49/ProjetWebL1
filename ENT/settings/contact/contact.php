@@ -15,6 +15,32 @@ function Save($type, $message) {
   }
 }
 
+function nombreAvis() {
+  $link = dbConnect();
+  $sql = "SELECT `IDavis` FROM `avis`";
+  $result = mysqli_query($link, $sql);
+  $IDavis = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDavis[] = $row;
+    }
+  }
+  return $IDavis;
+}
+
+function AfficheAvis($id) {
+  $link = dbConnect();
+
+  $sql = "SELECT * FROM `avis` WHERE `IDavis`='$id'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    $sqlUser = "SELECT * FROM `user` WHERE `iduser`='$row['iduser']'";
+    if ($resultat = mysqli_query($link, $sqlUser)) {
+      $rowUser = mysqli_fetch_array($resultat);
+    }
+    return $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['Mail'] . " : " . $row['message'];
+  }
+}
 
 if (isset($_POST['ValiderEnvoi'])) {
   $type = $_POST['Type'];
@@ -55,8 +81,13 @@ if ($_SESSION["Connected"] == true) {
 
       <div class="modal" id="ShowRate">
         <div class="modal-content animate">
-          <span onclick="document.getElementById('AddHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+          <span onclick="document.getElementById('ShowRate').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
           <h3 class="texte">Avis et bugs</h3>
+          <ul>
+            <?php foreach (nombreAvis() as $id) { ?>
+              <li class="texte"><?php echo AfficheAvis($id) ?></li>
+            <?php } ?>
+          </ul>
         </div>
       </div>
     </div>
