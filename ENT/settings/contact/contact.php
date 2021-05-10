@@ -31,6 +31,10 @@ function nombreAvis() {
 function AfficheAvis($id) {
   $link = dbConnect();
 
+  $icone = array();
+  $icone["Bug"] = "<i class='fas fa-bug icone icone'></i>";
+  $icone["Avis"] = "<i class='fas fa-bug icone icone'></i>";
+
   $sql = "SELECT * FROM `avis` WHERE `IDavis`='$id'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
@@ -45,9 +49,7 @@ function AfficheAvis($id) {
   }
 }
 
-$icone = array();
-$icone["Bug"] = "<i class='fas fa-bug icone icone'></i>";
-$icone["Avis"] = "<i class='fas fa-bug icone icone'></i>";
+
 
 if (isset($_POST['ValiderEnvoi'])) {
   $type = $_POST['Type'];
