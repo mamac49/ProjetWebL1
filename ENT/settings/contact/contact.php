@@ -3,6 +3,19 @@ session_start();
 
 include '../../fonc.php';
 
+function Save($type, $message); {
+  $file = fopen("logs.txt", "w");
+  $txt = $_SESSION['Mail'] . " : " . date("d/m/Y-H:i") . "\n" . "Type =" . $type ."\n" . $message;
+  fwrite($file, $txt);
+  fclose($file);
+}
+
+
+if (isset($_POST['Valider'])) {
+  $type = $_POST['Type'];
+  $message = $_POST['Rapport'];
+}
+
 if ($_SESSION["Connected"] == true) {
 ?>
 
@@ -21,10 +34,11 @@ if ($_SESSION["Connected"] == true) {
       include '../../base.php';
   ?>
   <div class="Center texte">
-      <form>
+      <form method="POST">
         <label><input type="radio" name="Type" value="Avis"><i class="fas fa-comment-dots icone"></i> Donner un avis?</label>
         <label><input type="radio" name="Type" value="Bug"><i class="fas fa-bug icone icone"></i> Signaler un bug</label>
         <p><textarea name="Rapport" placeholder="Donnez votre avis/Signaler votre problème(400 caractères maximum)" max-length=400 rows="5" cols="70" required></textarea></p>
+        <input type="submit" name="Valider" value="Valider le formulaire">
       </form>
     </div>
 
