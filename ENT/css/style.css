@@ -203,11 +203,6 @@
 
 
   /*???*/
-  .bouton {
-    width: 200px;
-    height: 40px;
-    text-align: left;
-  }
 
   .retour {
     transform: rotate(0deg);
@@ -312,6 +307,7 @@ textarea {
   text-align: left;
   cursor: pointer;
   margin: 15px;
+  height: 40px;
 }
 
 .bouton span {
