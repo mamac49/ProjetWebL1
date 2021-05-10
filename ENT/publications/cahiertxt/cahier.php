@@ -150,7 +150,7 @@ if ($_SESSION["Connected"] == "True") {
                        $info = AfficherDevoir($jour, "CP", $x);
                        $matiereP = $info['matiere'];
                        $consigne = $info['consigne']; ?>
-                      <li class="texte"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>'$x' . " : "</span>" . $consigne; ?></div><i class="fas fa-times fermer"></i></li>
+                       <li class="texte"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div><i class="fas fa-times fermer"></i></li>
               <?php }} ?>
             </ul>
         </div>
