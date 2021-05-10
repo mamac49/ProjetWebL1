@@ -18,7 +18,7 @@ function Annivs() {
     }
   }
   return $IDUser;
-
+}
 
 if ($_SESSION["Connected"] == "True") {
 ?>
@@ -54,7 +54,6 @@ if ($_SESSION["Connected"] == "True") {
             <?php foreach (Annivs() as $i) { ?>
               <li class="texteB"><?php echo Annivs()[$i]; ?></li>
             <?php } ?>
-
           </ul>
         </div>
         <!--permet d'avoir le moteur de recherche qwant junior sur la page-->
