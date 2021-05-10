@@ -322,12 +322,12 @@ textarea {
     content: '\00bb';
     position: absolute;
     top: 0;
-    right: 5px;
+    right: 0px;
     transition: 0.5s cubic-bezier(1,.19,.47,.96);
   }
 
 .bouton:hover span:after {
-  right: -100px;
+  right: -50px;
 }
 
 .ListeDeroulante {
