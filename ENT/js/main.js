@@ -64,26 +64,16 @@ function addLine(lineType) {
   
   /*PAS FIN DU MONDE !!!*/
   /*logs tests*/
-  var line_test = "ceci est le test n test_0 de remplacement";
-  console.log(line_test);
-  line_test = "ceci est le test n test_1 de remplacemen";
-  console.log(line_test);
-
-  /*console.log('text area = ' + textArea);
-  console.log('image area = ' + inputImage);
-  console.log('line_' + line);
-  console.log('line_' + (line + 1));
-
-  console.log(line);
-  console.log(line);
-
-  textArea.replace('line_' + line, 'line_' + (line + 1));
-  inputImage.replace('line_' + line, 'line_' + (line + 1));
-  line += 1;*/
-  /*logs tests
   console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
-  console.log(line);*/
+  console.log(line);
+  textArea = textArea.replace('line_' + line, 'line_' + (line + 1));
+  inputImage = inputImage.replace('line_' + line, 'line_' + (line + 1));
+  line += 1;
+  /*logs tests*/
+  console.log('text area = ' + textArea);
+  console.log('image area = ' + inputImage);
+  console.log(line);
 
 
   /* ajoute en fonction du type de ligne demandé
