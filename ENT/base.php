@@ -2,11 +2,11 @@
 
 
 <?php
-echo "<script src='\Projetwebl1\ENT\js\main.js'></script>";
+echo "<script src='/Projetwebl1/ENT/js/main.js'></script>";
 if ($_SESSION['theme'] == 1) {
-  echo "<script>LoadCSS('\Projetwebl1\ENT\css\color1.css'); </script>";
+  echo "<script>LoadCSS('/Projetwebl1/ENT/css/color1.css'); </script>";
 } else {
-  echo "<script>LoadCSS('\Projetwebl1\ENT\css\color2.css'); </script>";
+  echo "<script>LoadCSS('/Projetwebl1/ENT/css/color2.css'); </script>";
 }
 ?>
 
