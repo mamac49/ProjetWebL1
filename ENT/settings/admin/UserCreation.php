@@ -107,7 +107,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
                     <input type="radio" name="classe" id="CP" value="CP">
                   </p>
                 </div>
-                <input type="submit" name="valider" value="Creer" class="FormCrea bouton Centrer">
+                <button type="submit" name="valider" class="FormCrea bouton Centrer"><span>Créer</span></button>
             </form>
             <div class="colonne">
               <h2 class="texte">Suppression d'utilisateur</h2>

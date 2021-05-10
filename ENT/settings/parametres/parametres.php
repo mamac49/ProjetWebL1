@@ -106,14 +106,14 @@ if ($_SESSION["Connected"] == true) {
                 <label class="texte">Valider le nouveau mot de passe</label>
                 <input class="texte" type="password" name="passwordNN" minlengh="8" maxlength="16" required>
               </p>
-              <input class="bouton" type="submit" name="Valider" value="Valider">
+              <button type="submit" class="bouton" name="Valider"><span>Valider</span></button>
             </form>
             <form action="parametres.php" method="POST" enctype="multipart/form-data">
               <h2 class="texte">Changement de l'image de profil</h2>
               <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($_SESSION['Mail'])) . ' '?>" alt="Photo de profil" class="PP">
               <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
               <input type="file" id="file" name="PP" accept="image/*" required>
-              <input type="submit" name="ChgtIMG" class="bouton" value="Valider" class="Bouton">
+              <button type="submit" class="bouton" name="ChgtIMG"><span>Valider</span></button>
             </form>
           </div>
           <div class="colonnes">
@@ -127,7 +127,7 @@ if ($_SESSION["Connected"] == true) {
                 <label class="texte" for="sombre">Thème sombre</label>
                 <input type="radio" name="theme" id="sombre" value="1">
               </p>
-              <input type="submit" class="bouton" name="ValiderTheme" value="Valider le thème par défault">
+              <button type="submit" class="bouton" name="ValiderTheme"><span>Valider le thème par défaut</span></button>
             </form>
           </div>
         </div>
