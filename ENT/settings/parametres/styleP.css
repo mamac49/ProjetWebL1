@@ -16,8 +16,8 @@
   flex-direction: row;
 }
 
-.titre_p, h1 {
-  margin-bottom: 0px;
+.titre_p {
+  margin: 0px;
 }
 
 h2 {
