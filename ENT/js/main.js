@@ -67,7 +67,8 @@ function addLine(lineType) {
   var line_test = "<test name='test_0'>";
   console.log(line);
   console.log(line_test);
-  line_test.replace("test_" + line, "test_" + (line + 1));
+  line_test.replace("test_" + String(line), "test_" + String((line + 1)));
+  line += 1;
   console.log(line);
   console.log(line_test)
 
