@@ -94,7 +94,7 @@ if ($_SESSION["Connected"] == true) {
               <select name="BlogD">
                 <?php
               foreach (nbPub() as $x){
-                  if (nature($x[0]) == "1") {
+                  if (nature($x[0])["nature"] == "1") {
                 ?>
                   <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                 <?php }} ?>
