@@ -54,7 +54,7 @@ if ($_SESSION["Connected"] == "True") {
               echo "pas d'anniversaire";
                 } else {
               foreach (Annivs() as $i) { ?>
-              <li class="texteB"><?php echo "C'est' l' anniversaire de ".$i[1] . " " . $i[2]; ?></li>
+              <li class="texteB"><?php echo "C'est l'anniversaire de ".$i[1] . " " . $i[2]; ?></li>
             <?php } } ?>
           </ul>
         </div>
