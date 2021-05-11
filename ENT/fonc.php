@@ -76,12 +76,12 @@ function nombre() {
 
 function nombreTxt($table) {
   $link = dbConnect();
-  $sql = "SELECT `data` FROM `$table`";
+  $sql = "SELECT * FROM `$table`";
   $result = mysqli_query($link, $sql);
   $IDdata = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $IDdata[] = $row;
+      $IDdata["id".$table] = $row["data"];
     }
   } else {echo mysqli_error($link);}
   return $IDdata;

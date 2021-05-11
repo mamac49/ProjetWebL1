@@ -18,17 +18,15 @@
 
 .titre_liste{
   font-size: 200%;
-  text-decoration: underline;
-
-  color: --font-color;
+  color: var(--font-color);
 }
 
-
-
-
-
-
-
+/*animations texte*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 
