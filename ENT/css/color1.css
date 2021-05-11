@@ -46,7 +46,7 @@
   color: var(--font-color);
 }
 
-.sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited, .tabcontent, .Publication_texte p, .contact, #navbar a:hover, .Copybook, .Copybook a {
+.sujets a, .Dropzone, .texte, .Copybook:visited, .texteF, .sujets a:visited, .tabcontent, .Publication_texte p, .contact, #navbar a:hover, .chip, .chip a {
   color: var(--font-color-nde);
 }
 
