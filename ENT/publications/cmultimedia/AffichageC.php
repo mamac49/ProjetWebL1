@@ -12,12 +12,12 @@ function AffichageCahier($ID) {
   $sqlTxt = "SELECT `data`, `position`  FROM `texte` WHERE `idpublications`='$ID' ORDER BY `position`";
 
   if ($result = mysqli_query($link, $sqlLiens)) {
-    $rowLiens = mysqli_fetch_array($result);
+    $rowLiens = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
   }
 
   if ($result = mysqli_query($link, $sqlTxt)) {
-    $rowTxt = mysqli_fetch_array($result);
+    $rowTxt = mysqli_fetch_assoc($result);
     mysqli_free_result($result);
   }
 
