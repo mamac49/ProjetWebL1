@@ -8,7 +8,7 @@ if ($_SESSION["Connected"] == true) {
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-  <header>
+  <head>
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
@@ -18,7 +18,7 @@ if ($_SESSION["Connected"] == true) {
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <script src="annuaire.js"></script>
     <script src="/Projetwebl1/ENT/js/scroll.js"></script>
-  </header>
+  </head>
     <?php
       include ("../../base.php");
     ?>
