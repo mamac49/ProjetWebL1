@@ -123,7 +123,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
           <?php } else {
             $auteur=auteurP($IDblog);
             $temps=temps_ecriture_P($IDblog); ?>
-            <p><span class="texte"> Edité par <?php echo $auteur; ?> le <?php echo $temps; ?></span></p>
+            <span class="texte"> Edité par <?php echo $auteur; ?> le <?php echo $temps; ?></span>
             <p><?php echo textevide($IDblog);
             $res=auteurB($IDblog); ?></p>
             <?php if ($_SESSION["ID"]==$res){ ?>
@@ -142,6 +142,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                     </legend>
                     <?php echo $message; ?>
                   </fieldset>
+                  <br/>
                   <?php $res=idauteurC($x[0]);
                   if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
                     <input type="button" class="bouton" value="Effacer le commentaire">
