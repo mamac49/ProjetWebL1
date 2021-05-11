@@ -17,6 +17,7 @@ function AffichageCahier($ID) {
     while($row = mysqli_fetch_array($result)) {
       if (isset($row[`data`])) {
       $Txt[$row[`position`]] = $row[`data`];
+      echo "a";
     }}
   }
 
