@@ -29,7 +29,7 @@
   background-color: var(--second-color);
 }
 
-.file, .IcoBook, .Copybook i {
+.file, .IcoBook, .Copybook i, .IconeProfil {
   color: var(--main-color);
 }
 
