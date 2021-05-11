@@ -81,7 +81,7 @@ function nombreTxt($table) {
   $IDdata = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $IDdata["id".$table] = $row["data"];
+      $IDdata[$row["0"]] = $row["1"];
     }
   } else {echo mysqli_error($link);}
   return $IDdata;
