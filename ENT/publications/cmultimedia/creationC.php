@@ -66,6 +66,7 @@ if ($_SESSION["Connected"] == true) {
     <link rel="stylesheet" href="styleC.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
+    <script src="/Projetwebl1/ENT/js/scroll.js"></script>
     </head>
   <?php
       include ("../../base.php");
