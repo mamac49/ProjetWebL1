@@ -66,7 +66,7 @@ function nombreTxt($table) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
       $IDdata[] = $row;
     }
-  }
+  } else {echo mysqli_error($link);}
   return $IDdata;
 }
 
