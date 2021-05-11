@@ -1,6 +1,6 @@
 
 
-.site_container {
+.contenu_annuaire {
   font-size: 75%;
   display: block;
   width: 75%;
@@ -8,7 +8,11 @@
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
+  border: 1rem solid --main-color;
+  border-radius: 0.25rem;
 }
+
+
 
 
 

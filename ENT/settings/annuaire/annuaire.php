@@ -53,7 +53,7 @@ if ($_SESSION["Connected"] == true) {
               </ul>
             </div>
       </div>
-      </div>
+    </div>
 
   </div>
 </body>
