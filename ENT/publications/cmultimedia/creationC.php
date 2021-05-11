@@ -30,6 +30,7 @@ function Create($titre, $matiere, $contenu) {
         $nb = array_key_last(nombreTxt("texte"))+2;
         $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
+      var_dump(nombreTxt("texte"));
       $pos++;
       if (mysqli_query($link, $sqlp)) {
         echo "succès";
