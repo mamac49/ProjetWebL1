@@ -8,7 +8,7 @@ if ($_SESSION["Connected"] == true) {
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
-<link rel="stylesheet" href="styleA.css">
+
   <head>
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
@@ -20,8 +20,10 @@ if ($_SESSION["Connected"] == true) {
     <script src="annuaire.js"></script>
     <script src="/Projetwebl1/ENT/js/scroll.js"></script>
   </head>
+  
     <?php
       include ("../../base.php");
+      echo "<link rel="stylesheet" href="styleA.css">";
     ?>
 
 
