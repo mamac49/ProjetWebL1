@@ -22,7 +22,6 @@ function Create($titre, $matiere, $contenu) {
         $sqlp = "INSERT INTO `liens` (`idliens`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } elseif (substr_count($element, "ImageContenu") == 1) {
         $nb = array_key_last(nombreTxt("image"))+1;
-        var_dump(array_key_last(nombreTxt("image")));
         $line = str_replace("ImageContenu", "", $element);
         $img = mysqli_real_escape_string($link, $line);
         $sqlp = "INSERT INTO `image` (`idimage`, `data`, `position`, `idpublications`) VALUES ('$nb', '$img', '$pos', '$sqlID')";

@@ -10,7 +10,7 @@ function Save($type, $message) {
   $date = date("Y-m-d H:i:s");
   $id = $_SESSION["ID"];
 
-  $nb = max(max(nombreAvis())) + 1;
+  $nb = array_key_last(nombreAvis())+1;
 
   $sql = "INSERT INTO `avis` (`IDavis`, `type`, `message`, `date`, `iduser`) VALUES ('$nb', '$type', '$message', '$date', '$id')";
   if (mysqli_query($link, $sql)) {
@@ -20,11 +20,12 @@ function Save($type, $message) {
 
 function nombreAvis() {
   $link = dbConnect();
-  $sql = "SELECT `IDavis` FROM `avis`";
+  $sql = "SELECT * FROM `avis`";
   $result = mysqli_query($link, $sql);
   $IDavis = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
+      var_dump($row);
       $IDavis[] = $row;
     }
   }
