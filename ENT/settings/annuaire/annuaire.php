@@ -17,7 +17,7 @@ if ($_SESSION["Connected"] == true) {
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
-    <script src="menu_clic.js"></script>
+    <script src="annuaire.js"></script>
     <script src="/Projetwebl1/ENT/js/scroll.js">
 
     </script>
@@ -30,7 +30,7 @@ if ($_SESSION["Connected"] == true) {
   <body onload="move_menu_sandwich(); detect_click();">
 
     <div class="site_container">
-      <script src="menu_clic.js"></script>
+      <script src="annuaire.js"></script>
         <div class="contenu">
             <div class="Center_adap">
               <!-- les contacts seront listé avec en premier le professeur
