@@ -5,13 +5,13 @@ error_reporting(E_ALL);
 
 include ("../../fonc.php");
 
-function Create($titre, $contenu) {
+function Create($titre, $matiere, $contenu) {
   $link = dbConnect();
 
   $date = date("Y-m-d");
   $IDu = $_SESSION['ID'];
 
-  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', '$IDu')";
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`, `matiere`) VALUES ('$titre', '$date', '2', '$IDu', '$matiere')";
   if (mysqli_query($link, $sql)) {
     $sqlID = max(max(nbPub()));
     $pos = 0;
@@ -43,6 +43,7 @@ function Create($titre, $contenu) {
 
 if (isset($_POST['Valider'])) {
   $titre = securisation($_POST['titre']);
+  $matiere = securisation($_POST['matiere']);
   $contenu = array();
   $nb = 1;
   while (isset($_POST['line_' . $nb]) or isset($_FILES['line_' . $nb]['tmp_name'])) {
@@ -50,7 +51,7 @@ if (isset($_POST['Valider'])) {
     $contenu[] = $temp;
     $nb++;
   }
-  Create($titre, $contenu);
+  Create($titre, $matiere, $contenu);
 }
 
 if ($_SESSION["Connected"] == true) {
