@@ -81,7 +81,7 @@ textarea{
   margin-left: auto;
   margin-right: auto;
   padding: 0.5rem;
-  height:15rem;
+  height:10rem;
 }
 
 .videoArea{
@@ -107,7 +107,7 @@ textarea{
     right: -25px;
     bottom: 10px;
     transition: 0.25s cubic-bezier(1,.19,.47,.96);
-    font-family: comic sans-serif; 
+    font-family: comic sans-serif;
   }
 
 .bouton:hover span:after {
