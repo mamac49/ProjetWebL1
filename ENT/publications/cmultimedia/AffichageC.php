@@ -46,7 +46,6 @@ function AffichageCahier($ID) {
       $liste[$i] = $images[$i];
     }
   }
-  var_dump($liste);
   return $liste;
 }
 
@@ -120,7 +119,6 @@ if ($_SESSION["Connected"] == true) {
                 }
             } elseif (substr_count($line, "ImageContenu") == 1) {
               $line = str_replace("ImageContenu", "", $line); ?>
-                <p><?php echo AffichageCM($line) ?></p>
                 <img src="<?php echo ' data:image/png;base64,' . base64_encode(AffichageCM($line)) . ' '?>" alt="Image" class="ImgCM">
             <?php
             } else {
