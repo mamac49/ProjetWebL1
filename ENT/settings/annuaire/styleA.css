@@ -16,7 +16,12 @@
   text-align : center;
 }
 
-
+.titre_liste{
+  font-size: 200%;
+  text-decoration: underline;
+  font-weight: bold;
+  color: --font-color;
+}
 
 
 
