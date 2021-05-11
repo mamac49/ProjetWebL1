@@ -49,9 +49,13 @@ if ($_SESSION["Connected"] == "True") {
         <div class="Anniversaire">
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
-            <?php foreach (Annivs() as $i) { ?>
-              <li class="texteB"><?php echo "C'est l' anniversaire de ".$i[1] . " " . $i[2]; ?></li>
-            <?php } ?>
+            <?php
+            if (is_null(anniv())) {
+              echo "pas d'anniversaire";
+                } else {
+              foreach (Annivs() as $i) { ?>
+              <li class="texteB"><?php echo "C'est' l' anniversaire de ".$i[1] . " " . $i[2]; ?></li>
+            <?php } } ?>
           </ul>
         </div>
         <!--permet d'avoir le moteur de recherche qwant junior sur la page-->
