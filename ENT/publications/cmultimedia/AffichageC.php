@@ -11,14 +11,15 @@ function AffichageCahier($ID) {
   $sqlLiens = "SELECT `data`, `position`  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
   $sqlTxt = "SELECT `data`, `position`  FROM `texte` WHERE `idpublications`='$ID' ORDER BY `position`";
 
-  if ($result = mysqli_query($link, $sqlLiens)) {
-    $rowLiens = mysqli_fetch_array($result);
-    mysqli_free_result($result);
+  $result = mysqli_query($link, $sql);
+  $Txt = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $Txt[] = $row;
+    }
   }
 
-  $list = array();
-
-  foreach ($rowliens as $element) {
+  foreach ($rowLiens as $element) {
       $list[$rowliens[$element]] = $element;
   }
 
@@ -27,7 +28,7 @@ function AffichageCahier($ID) {
     mysqli_free_result($result);
   }
 
-  return $rowLiens;
+  return $Txt;
 
 }
 
