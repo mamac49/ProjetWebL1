@@ -23,7 +23,7 @@ function Create($titre, $contenu) {
         $sqlp = "INSERT INTO `texte` (`data`, `position`, `idpublications`) VALUES ('$element', '$pos', '$sqlID')";
       }
       $pos++;
-      mysqli_query($link, $sql) {
+      if (mysqli_query($link, $sql)) {
         echo "succès";
       } else { echo mysqli_error($link);}
     }
