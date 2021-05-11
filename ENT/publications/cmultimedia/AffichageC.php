@@ -109,6 +109,7 @@ if ($_SESSION["Connected"] == true) {
       <div class="corps">
         <?php
           foreach (AffichageCahier($IDcahier) as $line) {
+            echo $line;
             if (substr_count($line, "http") == 1) {
               if (substr_count($line, "https://www.deezer.com/") == 1) {
                 $track = str_replace("https://www.deezer.com/us/track/", "", $line); ?>
