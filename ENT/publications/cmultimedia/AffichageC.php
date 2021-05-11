@@ -16,6 +16,12 @@ function AffichageCahier($ID) {
     mysqli_free_result($result);
   }
 
+  $list = array();
+
+  foreach ($rowliens as $element) {
+      $list[$rowliens[$element]] = $element;
+  }
+
   if ($result = mysqli_query($link, $sqlTxt)) {
     $rowTxt = mysqli_fetch_array($result);
     mysqli_free_result($result);
