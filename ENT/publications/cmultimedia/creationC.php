@@ -31,8 +31,12 @@ function Create($titre, $contenu) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
         $table = "liens";
         mysqli_stmt_bind_param($stmt, 'ssii', $table, $element, $pos, $sqlID);
+      } else {
+        $table = "texte";
+        mysqli_stmt_bind_param($stmt, 'ssii', $table, $element, $pos, $sqlID);
       }
       $pos++;
+      $stmt = mysqli_stmt_execute()
     }
   }
 }
@@ -75,7 +79,7 @@ if ($_SESSION["Connected"] == true) {
   <form action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
-      
+
     </ul>
     <div class="boutonsCahierMultimedia">
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
