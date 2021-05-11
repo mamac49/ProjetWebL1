@@ -106,7 +106,7 @@ if ($_SESSION["Connected"] == true) {
               } else {
                 echo "<a href=". $line .">". $line ."</a><br>";
                 }
-            } elseif (substr_count($element, "/tmp/php") {
+            } elseif (substr_count($element, "/tmp/php")) {
                 echo "<img src=" .'data:image/png;base64,' . base64_encode(AffichageCM($element)) . " alt='Image' class='ImgCM'>"
             } else {
               echo "<pre>". $line ."</pre>";
