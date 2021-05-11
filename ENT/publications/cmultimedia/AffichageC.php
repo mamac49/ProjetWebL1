@@ -28,7 +28,6 @@ function AffichageCahier($ID) {
   }
 
   $liste = array_merge($Txt, $Liens);
-  ksort($liste);
 
   return $liste;
 
