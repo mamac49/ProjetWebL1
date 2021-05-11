@@ -23,3 +23,30 @@
 h2 {
   margin-top: 5px;
 }
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 350px;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.iconCrea {
+  padding: 10px;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid;
+}
