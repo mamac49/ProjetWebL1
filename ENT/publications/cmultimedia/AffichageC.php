@@ -8,8 +8,8 @@ $IDcahier = $_GET['id'];
 function AffichageCahier($ID) {
   $link = dbConnect();
 
-  $sqlLiens = "SELECT `data`  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
-  $sqlTxt = "SELECT `data`  FROM `texte` WHERE `idpublications`='$ID' ORDER BY `position`";
+  $sqlLiens = "SELECT `data`, `position`  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
+  $sqlTxt = "SELECT `data`, `position`  FROM `texte` WHERE `idpublications`='$ID' ORDER BY `position`";
 
   if ($result = mysqli_query($link, $sqlLiens)) {
     $rowLiens = mysqli_fetch_array($result);
