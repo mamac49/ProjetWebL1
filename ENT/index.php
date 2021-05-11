@@ -50,7 +50,7 @@ if ($_SESSION["Connected"] == "True") {
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
             <?php foreach (Annivs() as $i) { ?>
-              <li class="texteB"><?php echo "Ce mois_ci, on fête l' anniversaire de ".$i[1] . " " . $i[2]; ?></li>
+              <li class="texteB"><?php echo "Ce mois-ci, on fête l' anniversaire de ".$i[1] . " " . $i[2]; ?></li>
             <?php } ?>
           </ul>
         </div>
