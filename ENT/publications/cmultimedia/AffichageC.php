@@ -19,12 +19,15 @@ function AffichageCahier($ID) {
     }
   }
 
-  if ($result = mysqli_query($link, $sqlTxt)) {
-    $rowTxt = mysqli_fetch_array($result);
-    mysqli_free_result($result);
+  $result = mysqli_query($link, $sqlLiens);
+  $Liens = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $Liens[] = $row;
+    }
   }
 
-  return $Txt;
+  return $Liens;
 
 }
 
