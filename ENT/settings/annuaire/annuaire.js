@@ -1,7 +1,7 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function down(x) {
-  document.getElementById("myDropdown-"+x).classList.toggle("show");
+  document.getElementById("myDropdown-".concat(x)).classList.toggle("show");
 }
 
 // Close the dropdown menu if the user clicks outside of it
@@ -20,7 +20,7 @@ window.onclick = function(event) {
 
 function copy(x) {
   /* Get the text field */
-  var copyText = document.getElementById("ToCopyMail-"+x);
+  var copyText = document.getElementById("ToCopyMail-".concat(x));
 
   /* Select the text field */
   copyText.select();
