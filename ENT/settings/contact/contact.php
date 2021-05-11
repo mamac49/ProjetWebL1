@@ -15,6 +15,8 @@ function Save($type, $message) {
   $sql = "INSERT INTO `avis` (`IDavis`, `type`, `message`, `date`, `iduser`) VALUES ('$nb', '$type', '$message', '$date', '$id')";
   if (mysqli_query($link, $sql)) {
     echo "succès";
+  } else {
+      echo mysqli_error. 
   }
 }
 
