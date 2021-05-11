@@ -25,10 +25,10 @@ function nombreAvis() {
   $IDavis = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      var_dump($row);
-      $IDavis[] = $row;
+      $IDavis[$row[0]] = $row[2];
     }
   }
+  var_dump($IDavis)
   return $IDavis;
 }
 
