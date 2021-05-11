@@ -30,7 +30,6 @@
  border-left: none;
  height: 80%;
  display: none;
- overflow : auto;
 }
 
 .Center {
@@ -124,4 +123,8 @@
 .modal-content {
   word-wrap: break-word;
   overflow: hidden;
+}
+
+.devoirC{
+  overflow : auto;
 }
