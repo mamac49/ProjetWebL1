@@ -81,4 +81,5 @@ textarea {
 .avis {
   display: flex;
   flex-direction: column;
+  overflow : auto;
 }

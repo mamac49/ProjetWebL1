@@ -30,6 +30,7 @@
  border-left: none;
  height: 80%;
  display: none;
+ overflow : auto;
 }
 
 .Center {
