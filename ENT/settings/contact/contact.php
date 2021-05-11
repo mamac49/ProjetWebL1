@@ -29,7 +29,7 @@ function nombreAvis() {
   $IDavis = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $IDavis[] = $row[0];
+      $IDavis[$row[0]] = $row[0];
     }
   }
   return $IDavis;
