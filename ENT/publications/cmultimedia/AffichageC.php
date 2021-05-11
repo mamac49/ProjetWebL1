@@ -32,7 +32,7 @@ function AffichageCahier($ID) {
   $images = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_BOTH)) {
-      $images[$row["position"]] = $row["idimage"];
+      $images[$row["position"]] = "ImageContenu" . $row["idimage"];
     }
   }
   $liste = array();
