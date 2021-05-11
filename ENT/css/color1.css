@@ -33,7 +33,7 @@
 
 /* Color */
 
-.file, .IcoBook, .Copybook i, .matiere {
+.file, .IcoBook, .Copybook i, .matiere, .code {
   color: var(--main-color);
 }
 
