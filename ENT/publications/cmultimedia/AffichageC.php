@@ -117,7 +117,7 @@ if ($_SESSION["Connected"] == true) {
               } else {
                 echo "<a href=". $line .">". $line ."</a><br>";
                 }
-            } elseif (substr_count($element, "ImageContenu") == 1) {
+            } elseif (substr_count($line, "ImageContenu") == 1) {
               $line = str_replace("ImageContenu", "", $line); ?>
                 <img src="<?php echo ' data:image/png;base64,' . base64_encode(AffichageCM($line)) . ' '?>" alt="Image" class="ImgCM">
             <?php
