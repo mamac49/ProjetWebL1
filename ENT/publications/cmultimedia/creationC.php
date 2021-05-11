@@ -18,8 +18,8 @@ function Create($titre, $contenu) {
 
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
-        $nb = nombreTxt("liens");
-        var_dump(nombreTxt("liens"));
+        $nb = max(nombreTxt("liens"))+1;
+        var_dump( max(nombreTxt("liens"))+1);
         $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } else {
         $nb = nombreTxt("texte");
