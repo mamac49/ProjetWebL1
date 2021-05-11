@@ -27,7 +27,7 @@ function Create($titre, $contenu) {
 
     var_dump($contenu);
     foreach ($contenu as $element) {
-      if (filter_var($element), FILTER_VALIDATE_URL) {
+      if (filter_var($element, FILTER_VALIDATE_URL) {
         mysqli_stmt_bind_param($stmt, 4, "liens", $element, $pos, $id, $sqlID);
       }
       $pos++;
