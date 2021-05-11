@@ -39,13 +39,13 @@ function Create($titre, $contenu) {
 
 
 if (isset($_POST['Valider'])) {
-  var_dump($_POST);
   $titre = securisation($_POST['titre']);
   $contenu = array();
   $nb = 0;
   while (isset($_POST['line_' . $nb])) {
     $temp = $_POST['line_' . $nb];
     $contenu[] = $temp;
+    var_dump($temp);
     $nb++;
   }
   Create($titre, $contenu);
