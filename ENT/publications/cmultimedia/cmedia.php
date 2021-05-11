@@ -32,6 +32,7 @@ function Delete($Contact) {
   mysqli_query($link, "FLUSH `liens`");
 }
 
+
 if ( isset($_POST['ValiderSupp'])) {
   $Cmulti = $_POST['Cmulti'];
   Delete($Cmulti);

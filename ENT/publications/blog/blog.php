@@ -70,7 +70,7 @@ if ($_SESSION["Connected"] == true) {
               <li class="espaces"><hr></li>
               <?php
               foreach (nbPub() as $i){
-                if (nature($i[0]) == "1"){
+                if (nature($i[0])["nature"] == "1"){
                   if (textevide($i[0])!=="" OR $_SESSION["Admin"] == true){
                   $titre=titre($i[0]);
                   $auteur=auteur($i[0]);
