@@ -19,14 +19,14 @@ function Create($titre, $contenu) {
       foreach ($contenu as $element) {
         if (filter_var($element, FILTER_VALIDATE_URL)) {
           if ( $stmt = mysqli_prepare($link, $sqlp)){
-            $sqlp = "INSERT INTO "liens" (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
+            $sqlp = "INSERT INTO `liens` (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
             mysqli_stmt_bind_param($stmt, 'sii', $element, $pos, $sqlID);
-          }
+          } else { echo mysqli_error($link); }
         } else {
           if ( $stmt = mysqli_prepare($link, $sqlp)){
-            $sqlp = "INSERT INTO "texte" (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
+            $sqlp = "INSERT INTO `texte` (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
             mysqli_stmt_bind_param($stmt, 'sii', $element, $pos, $sqlID);
-          }
+          } else { echo mysqli_error($link); }
         }
         $pos++;
         $stmt = mysqli_stmt_execute();
