@@ -93,7 +93,7 @@ if ($_SESSION["Connected"] == true) {
   <?php
       include '../../base.php';
   ?>
-  <div class="Center texte">
+  <div class="Center_adap texte">
     <div class="colonne">
       <form method="POST">
         <label><input type="radio" name="Type" value="Avis"><i class="fas fa-comment-dots icone"></i> Donner un avis?</label>
