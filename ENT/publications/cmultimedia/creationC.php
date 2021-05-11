@@ -44,7 +44,7 @@ if (isset($_POST['Valider'])) {
   $contenu = array();
   $nb = 0;
   while (isset($_POST['line_' . $nb])) {
-    $temp = mysqli_real_escape_string(dbConnect(), $_POST['line_' . $nb]);
+    $temp = $_POST['line_' . $nb];
     $contenu[] = $temp;
     $nb++;
   }
