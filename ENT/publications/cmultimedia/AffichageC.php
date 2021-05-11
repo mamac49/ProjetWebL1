@@ -26,8 +26,15 @@ function AffichageCahier($ID) {
       $Txt[$row["position"]] = $row["data"];
     }
   }
+  $liste = array();
 
-  $liste = array_merge($Txt, $Liens);
+  for ($i=0; $i <= count($Txt) + count($Liens) ; $i++) {
+    if (array_key_exist($i, $Txt)) {
+      $liste[$i] = $Txt
+    } elseif (array_key_exist($i, $Liens)) {
+      $liste[$i] = $Liens
+    }
+  }
 
   return array($Txt, $Liens, $liste);
 
