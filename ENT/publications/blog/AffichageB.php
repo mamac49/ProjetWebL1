@@ -149,6 +149,8 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                   if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
                     <br/>
                     <br/>
+                    <br/>
+                    <br/>
                     <input type="button" class="bouton" value="Effacer le commentaire">
                     <?php if ($_SESSION["ID"]==$res){?>
                       <input type="button" class="bouton" value="Editer le commentaire">
