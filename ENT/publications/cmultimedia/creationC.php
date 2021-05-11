@@ -42,12 +42,11 @@ if (isset($_POST['Valider'])) {
   $contenu = array();
   $nb = 1;
   while (isset($_POST['line_' . $nb]) or isset($_FILES['line_' . $nb]['tmp_name'])) {
-    $temp = isset($_POST['line_' . $nb]) ? $_POST['line_' . $nb] : file_get_contents($_FILES['line_' . $nb]['tmp_name']);
+    $temp = isset($_POST['line_' . $nb]) ? $_POST['line_' . $nb] : $_FILES['line_' . $nb]['tmp_name'];
     $contenu[] = $temp;
     $nb++;
   }
-  var_dump($contenu);
-  /*Create($titre, $contenu);*/
+  Create($titre, $contenu);
 }
 
 if ($_SESSION["Connected"] == true) {
