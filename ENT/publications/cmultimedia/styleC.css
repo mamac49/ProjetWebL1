@@ -156,3 +156,9 @@ textarea{
   position: absolute;
   bottom: 15px;
 }
+
+.textePre {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: break-spaces
+}

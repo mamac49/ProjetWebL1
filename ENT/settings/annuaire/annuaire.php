@@ -32,32 +32,29 @@ if ($_SESSION["Connected"] == true) {
     <div class="site_container">
       <script src="annuaire.js"></script>
         <div class="contenu_annuaire">
-            <div class="center_annuaire">
-              <!-- les contacts seront listé avec en premier le professeur
-                et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
-              <h2 class="titre_liste texte">Liste des contacts</h2>
-              <ul class="contact_list">
-              <?php
-                foreach (nombre() as $x) {
-                  $contact_name = info($x[0])['prenom'] . " " . info($x[0])['nom'];
-                  $contact_id = "contact_" . $x[0];
-                  $mail = info($x[0])["mail"];
-              ?>
-                <li class="contact">
-                  <a class="<?php echo $contact_id;?> texte" id="contact"><span><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></span></a>
-                </li>
-                <li><hr class="hrcontact"></li>
-              <?php
-                 }
-              ?>
-              </ul>
-            </div>
-            <div class="overlay"></div>
+          <div class="center_annuaire">
+            <!-- les contacts seront listé avec en premier le professeur
+              et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
+            <h2 class="titre_liste texte">Liste des contacts</h2>
+            <ul class="contact_list">
+            <?php
+              foreach (nombre() as $x) {
+                $contact_name = info($x[0])['prenom'] . " " . info($x[0])['nom'];
+                $contact_id = "contact_" . $x[0];
+                $mail = info($x[0])["mail"];
+            ?>
+              <li class="contact">
+                <a class="<?php echo $contact_id;?> texte" id="contact"><span><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></span></a>
+              </li>
+              <li><hr class="hrcontact"></li>
+            <?php
+                }
+            ?>
+            </ul>
+        </div>
       </div>
     </div>
-
-  </div>
-</body>
+  </body>
 </html>
 
 <?php
