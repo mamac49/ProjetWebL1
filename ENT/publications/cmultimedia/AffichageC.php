@@ -50,7 +50,7 @@ if ($_SESSION["Connected"] == true) {
       <h2 class="texte"><?php echo titre($IDcahier); ?></h2>
       <div class="corps">
         <?php
-          echo AffichageCahier($IDcahier);
+          var_dump(AffichageCahier($IDcahier));
         ?>
 
       </div>
