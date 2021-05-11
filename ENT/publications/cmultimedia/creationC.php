@@ -5,23 +5,20 @@ error_reporting(E_ALL);
 
 include ("../../fonc.php");
 
-/*if (isset($_POST['Valider'])) {
-  $texte = array();
-  $len = count($n);
-  for ($i = 1 ; $x < $len ; $i++) {
-    $texte[$i] = $_POST[$i];
-  }
+function Create($titre, $contenu) {
+  var_dump($contenu);
+
 }
+
+
 if (isset($_POST['Valider'])) {
-  $idpublication = "NONE";
-  $titre = "NONE" ;
-  $texte = "NONE" ;
-  $image = "NONE" ;
-  $date = "NONE" ;
-  $nature = "NONE" ;
-  $iduser = "NONE" ;
-  //echo "<script>createLine();</script>";
-}*/
+  $titre = securisation($_POST['titre'])
+  $contenu = array();
+  while (isset($_POST['line_'+$nb])) {
+    $contenu[] = securisation($_POST['line_'+$nb]);
+  }
+  Create($titre, $contenu);
+}
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -52,7 +49,7 @@ if ($_SESSION["Connected"] == true) {
       <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
       <!--<button name="create" class="bouton" onclick="addVideo()">Ajouter une case</button>-->
-      <input type="submit" name="Valider" class="boutonValider bouton" value="Valider de cahier multimédia">
+      <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
     </div>
   </form>
 </div>
