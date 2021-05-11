@@ -96,19 +96,19 @@ if ($_SESSION["Connected"] == true) {
               <p>
               <h2 class="texte">Réinitialisation du mot de passe</h2>
                 <div class="input-container">
-                  <i class="fas fa-key"></i>
+                  <i class="fas fa-key iconCrea"></i>
                   <input type="password" class="texte" name="passwordA" placeholder="Ancien mot de passe" class="input-field" minlengh="8" maxlength="16" required>
                 </div>
               </p>
               <p>
                 <div class="input-container">
-                  <i class="fas fa-lock"></i>
+                  <i class="fas fa-lock iconCrea"></i>
                   <input class="texte" type="password" name="passwordN" placeholder="Nouveau mot de passe" class="input-field" minlengh="8" maxlength="16" required>
                 </div>
               </p>
               <p>
                 <div class="input-container">
-                  <i class="fas fa-unlock"></i>
+                  <i class="fas fa-unlock iconCrea"></i>
                   <input class="texte" type="password" name="passwordNN" placeholder="Valider le nouveau mot de passe" class="input-field" minlengh="8" maxlength="16" required>
                 </div>
               </p>
