@@ -21,7 +21,7 @@ function AffichageCahier($ID) {
     mysqli_free_result($result);
   }
 
-  return array_merge($rowLiens, $rowTxt);
+  return $rowLiens;
 
 }
 
