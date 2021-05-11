@@ -135,22 +135,25 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                 $tempsC=temps_ecriture_C($x[0]);
                 $message=message($x[0]);
               ?>
-                <fieldset class="commentairefield">
-                  <legend>
-                    <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
-                  </legend>
-                  <?php echo $message; ?>
-                </fieldset>
-                <?php $res=idauteurC($x[0]);
-                if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
-                  <input type="button" class="bouton" value="Effacer le commentaire">
-                  <?php if ($_SESSION["ID"]==$res){?>
-                    <input type="button" class="bouton" value="Editer le commentaire">
+                <div class="commentaireblog">
+                  <fieldset class="commentairefield">
+                    <legend>
+                      <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
+                    </legend>
+                    <?php echo $message; ?>
+                  </fieldset>
+                  <br/>
+                  <?php $res=idauteurC($x[0]);
+                  if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
+                    <input type="button" class="bouton" value="Effacer le commentaire">
+                    <?php if ($_SESSION["ID"]==$res){?>
+                      <input type="button" class="bouton" value="Editer le commentaire">
+                    <?php } ?>
+                    <br/>
+                    <br/>
                   <?php } ?>
-                  <br/>
-                  <br/>
-                <?php }
-              }
+                </div>
+              <?php }
             } ?>
             <br/>
             <input type="button" class="bouton" value="Ajouter un commentaire">
