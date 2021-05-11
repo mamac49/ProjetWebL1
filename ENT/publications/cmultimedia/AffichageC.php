@@ -29,9 +29,9 @@ function AffichageCahier($ID) {
   $liste = array();
 
   for ($i=0; $i <= count($Txt) + count($Liens) ; $i++) {
-    if (array_key_exist($i, $Txt)) {
+    if (array_key_exists($i, $Txt)) {
       $liste[$i] = $Txt;
-    } elseif (array_key_exist($i, $Liens)) {
+    } elseif (array_key_exists($i, $Liens)) {
       $liste[$i] = $Liens;
     }
   }
