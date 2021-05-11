@@ -70,4 +70,6 @@
   text-align:right;
 }
 
-.commentairefield
+.commentairefield{
+  width:50%;
+}
