@@ -321,6 +321,7 @@ textarea {
 .bouton span:after{
     content: '\00bb';
     font-size: 1.5em;
+    font-family: sans-serif;
     position: absolute;
     top: -6px;
     right: 25px;
@@ -329,7 +330,6 @@ textarea {
 
 .bouton:hover span:after {
   right: 0px;
-  
 }
 
 .ListeDeroulante {
