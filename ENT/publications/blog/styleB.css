@@ -68,5 +68,7 @@
 
 .commentairefield {
   width: 50%;
-  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
