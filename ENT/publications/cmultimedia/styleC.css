@@ -24,11 +24,13 @@
 .Copybook i {
   font-size: 2em;
   margin: 5px;
+  text-align: center;
 }
 
 .Copybook {
   transform: scale(1);
   font-size: 1em;
+  text-align: center;
   transition: transform 300ms ease-in-out;
   transition: font-size 300ms ease-in-out;
 }
