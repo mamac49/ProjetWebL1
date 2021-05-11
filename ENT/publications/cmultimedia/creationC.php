@@ -29,7 +29,7 @@ function Create($titre, $contenu) {
       $pos++;
       if (mysqli_query($link, $sqlp)) {
         echo "succès";
-        header("Location: cmedia.php")
+        header("Location: cmedia.php");
       } else { echo mysqli_error($link);}
     }
   } else {
