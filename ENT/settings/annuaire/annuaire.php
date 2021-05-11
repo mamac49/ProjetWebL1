@@ -24,6 +24,7 @@ if ($_SESSION["Connected"] == true) {
     <?php
       include ("../../base.php");
       echo '<link rel="stylesheet" href="styleA.css">';
+      echo '<link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">'
     ?>
 
 
