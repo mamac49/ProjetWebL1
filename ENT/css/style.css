@@ -328,7 +328,8 @@ textarea {
   }
 
 .bouton:hover span:after {
-  right: -100px;
+  right: 0px;
+  
 }
 
 .ListeDeroulante {

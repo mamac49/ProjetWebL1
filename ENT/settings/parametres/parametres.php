@@ -95,16 +95,22 @@ if ($_SESSION["Connected"] == true) {
             <form method="POST" name="password">
               <p>
               <h2 class="texte">Réinitialisation du mot de passe</h2>
-              <label class="texte">Ancien mot de passe</label>
-              <input type="password" class="texte" name="passwordA" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-key iconCrea"></i>
+                  <input type="password" class="texte" name="passwordA" placeholder="Ancien mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
+                </div>
               </p>
               <p>
-              <label class="texte">Nouveau mot de passe</label>
-              <input class="texte" type="password" name="passwordN" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-lock iconCrea"></i>
+                  <input class="texte" type="password" name="passwordN" placeholder="Nouveau mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
+                </div>
               </p>
               <p>
-                <label class="texte">Valider le nouveau mot de passe</label>
-                <input class="texte" type="password" name="passwordNN" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-unlock iconCrea"></i>
+                  <input class="texte" type="password" name="passwordNN" placeholder="Valider le nouveau mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
+                </div>
               </p>
               <button type="submit" class="bouton" name="Valider"><span>Valider</span></button>
             </form>

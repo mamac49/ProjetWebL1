@@ -1,8 +1,8 @@
 .PP {
   border: 3px black solid;
   border-radius: 5000px;
-  width: 199px;
-  height: 199px;
+  width: 150px;
+  height: 150px;
 }
 
 .colonnes {
@@ -35,9 +35,8 @@ h2 {
 .iconCrea {
   padding: 10px;
   color: white;
-  min-width: 50px;
+  min-width: 40px;
   text-align: center;
-  font-size: 1.5em;
 }
 
 /* Style the input fields */
@@ -49,4 +48,8 @@ h2 {
 
 .input-field:focus {
   border: 2px solid;
+}
+
+::placeholder {
+  text-align: center;
 }
