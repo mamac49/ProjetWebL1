@@ -37,8 +37,40 @@ function AffichageCahier($ID) {
   }
 
   return $liste;
-
 }
+
+function AffichageCM($element) {
+  # On se connecte à la BD
+  $link = dbConnect();
+
+  # On définit la requète
+  $sql = "SELECT * FROM `users` WHERE `mail`= (?)";
+  # On la prépare
+  $stmt = mysqli_prepare($link, $sql);
+  # Si la requète ne s'est pas faite
+  if ( !$stmt ){
+      # On affiche l'erreur et on se déconnecte
+      echo 'Erreur d accès à la base de données - FIN';
+      mysqli_close($link);
+  }
+  # Sinon on définit le paramèetre le requète
+  mysqli_stmt_bind_param($stmt, "s", $mail);
+  # On exécute le requête
+  if (mysqli_stmt_execute($stmt)) {
+    # On récupère le résultat
+    $result = mysqli_stmt_get_result($stmt);
+    # On le met dans un array pour le réutiliser plus tard
+    $row = mysqli_fetch_array($result);
+    # Vider le cache du résultat de la requête
+    mysqli_free_result($result);
+  } else {
+    echo mysqli_connect_error();
+  }
+  # Renvoyer l'image
+  return $row['data'];
+}
+
+
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -73,7 +105,9 @@ if ($_SESSION["Connected"] == true) {
               <?php
               } else {
                 echo "<a href=". $line .">". $line ."</a><br>";
-              }
+            } elseif (substr_count($element, "/tmp/php") { ?>
+                <img src="<?php echo ' data:image/png;base64,' . base64_encode(AffichageCM($element)) . ' '?>" alt="Image" class="ImgCM">
+            <?php
             } else {
               echo "<pre>". $line ."</pre>";
             }} ?>

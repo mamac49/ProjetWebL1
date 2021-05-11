@@ -19,11 +19,13 @@ function Create($titre, $contenu) {
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
         $nb = array_key_last(nombreTxt("liens"))+1;
-        var_dump(array_key_last(nombreTxt("liens"))+1);
         $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
+      } elseif (substr_count($element, "/tmp/php") == 1) {
+        $nb = array_key_last(nombreTxt("image"))+1;
+        $img = mysqli_real_escape_string($link, $element);
+        $sqlp = "INSERT INTO `image` (`idimage`, `data`, `position`, `idpublications`) VALUES ('$nb', '$img', '$pos', '$sqlID')";
       } else {
         $nb = array_key_last(nombreTxt("texte"))+1;
-        var_dump(array_key_last(nombreTxt("texte"))+1);
         $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
       $pos++;
