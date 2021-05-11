@@ -29,7 +29,7 @@ function Create($titre, $contenu) {
           } else { echo mysqli_error($link); }
         }
         $pos++;
-        $stmt = mysqli_stmt_execute();
+        $stmt = mysqli_stmt_execute($link);
       }
     } else {
       echo 'Erreur d accès à la base de données - FIN' . mysqli_error($link); }
