@@ -46,6 +46,7 @@ function AffichageCahier($ID) {
       $liste[$i] = $images[$i];
     }
   }
+  var_dump($liste);
   return $liste;
 }
 
