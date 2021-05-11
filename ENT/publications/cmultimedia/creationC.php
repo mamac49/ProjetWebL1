@@ -62,7 +62,7 @@ if ($_SESSION["Connected"] == true) {
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" href="styleC.css">
-    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     </head>
   <?php
@@ -70,7 +70,7 @@ if ($_SESSION["Connected"] == true) {
   ?>
 <!--ajout de la méthode PUT-->
 <div class="Center_adap Saisie">
-  <form class="" action="creationC.php" method="POST" enctype="multipart/form-data">
+  <form action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
       <input name="line_0" type="url" class="videoCahierMulimedia videoArea" id="video_cahier_multimedia" title="video" rows="8" cols="80" resize="none" create="false" required=""></input>
