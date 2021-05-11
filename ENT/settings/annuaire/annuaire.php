@@ -24,7 +24,6 @@ if ($_SESSION["Connected"] == true) {
     <?php
       include ("../../base.php");
       echo '<link rel="stylesheet" href="styleA.css">';
-      echo '<link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">'
     ?>
 
 
@@ -32,7 +31,7 @@ if ($_SESSION["Connected"] == true) {
 
     <div class="site_container">
       <script src="annuaire.js"></script>
-          <div class="center_adap">
+          <div class="Center_adap">
             <!-- les contacts seront listé avec en premier le professeur
               et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
             <h2 class="titre_liste texte">Liste des contacts</h2>
