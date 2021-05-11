@@ -66,7 +66,7 @@ if ($_SESSION["Connected"] == true) {
       <div class="corps">
         <?php
           foreach (AffichageCahier($IDcahier) as $line) {
-            if (str_contains($line, "http")) {
+            if (substr_count($line, "http") == 1) {
               echo "<a href=". $line .">". $line ."</a>";
             } else {
               echo "<pre>". $line ."</pre>";
