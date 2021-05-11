@@ -5,7 +5,7 @@ include '../../fonc.php';
 
 $IDcahier = $_GET['id'];
 
-function Affichage($ID); {
+function Affichage($ID) {
   $link = dbConnect();
 
   $sqlLiens = "SELECT `data`  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
