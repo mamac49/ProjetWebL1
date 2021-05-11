@@ -23,7 +23,7 @@ function Create($titre, $contenu) {
         $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } else {
         $nb = nombreTxt("texte");
-        var_dump(nombreTxt("liens"));
+        var_dump(nombreTxt("texte"));
         $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
       $pos++;
