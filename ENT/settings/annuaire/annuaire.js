@@ -1,10 +1,23 @@
+
+
+
+
+
+
+
+
+
+
+/*
+Menu Contextuel
+Abandonné pour une solution plus pratique d'utilisation
+
 Mouse_X = 0 ;
 Mouse_Y = 0 ;
 contextMenuOpened = false;
 function detect_click(){
   var contact = document.getElementById("contact");
   contact.onclick = open_context_menu;
- 
 }
 
 //on récupère la position du curseur en pixels
@@ -31,7 +44,7 @@ function open_context_menu(){
   contextMenuOpened = true;
 }
 
-/*function close_context_menu() {
+function close_context_menu() {
   if (contextMenuOpened == true) {
   menu = document.getElementById("context_menu"); 
   document.getElementById("context_menu").className = "context_menu";
