@@ -8,7 +8,7 @@ include ("../../fonc.php");
 function Create($titre, $contenu) {
   $link = dbConnect();
 
-  $date = date("m");
+  $date = date("Y-m-d");
   $IDu = $_SESSION['ID'];
 
   $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', 'IDu')";
