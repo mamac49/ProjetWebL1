@@ -14,7 +14,7 @@ function AffichageCahier($ID) {
   $result = mysqli_query($link, $sqlTxt);
   $Txt = array();
   if ($result) {
-    while($row = $result->fetch_array(MYSQLI_NUM)) {
+    while($row = mysqli_fetch_array($result)) {
       $Txt[$row[`position`]] = $row[`data`];
     }
   }
@@ -22,7 +22,7 @@ function AffichageCahier($ID) {
   $result = mysqli_query($link, $sqlLiens);
   $Liens = array();
   if ($result) {
-    while($row = $result->fetch_array(MYSQLI_NUM)) {
+    while($row = mysqli_fetch_array($result)) {
       var_dump($row);
       $Liens[$row[`position`]] = $row[`data`];
     }
