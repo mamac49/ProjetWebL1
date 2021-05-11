@@ -47,13 +47,13 @@ function getNbLines() {
   -inputImage : template du dépot d'image
   -line : ligne de la zone
   -publicationCahierMultimedia : liste où sont affichés les zones de saisie*/
-  publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
   textArea = '<textarea name="line_0" class="texteCahierMulimedia textArea" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
   inputImage = '<input name="line_0" class="imageCahierMulimedia" type="file" id="image_cahier_multimedia" accept="image/*" required>';
   videoArea = '<input name="line_0" type="url" class="videoCahierMulimedia videoArea" id="video_cahier_multimedia" title="video" rows="8" cols="80" resize="none" create="false" required=""></videoarea>';
   line = 0;
   
 function addLine(lineType) {
+  var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
 
   /*vérifie si l'on a commencé par un texte*/
   if (line == 0) {
@@ -108,16 +108,19 @@ function addLine(lineType) {
 
   /*ajoute au début de la liste l'élément souhaité (texte / image)*/
   function addText() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
     publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('text'));
   }
   
   function addImage() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
     if (addLine('image') != false) {
       publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
     }
   }
   
   function addVideo() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
     if (addLine('video') != false) {
       publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('video'));
     }
