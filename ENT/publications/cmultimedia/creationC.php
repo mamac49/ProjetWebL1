@@ -46,6 +46,7 @@ if (isset($_POST['Valider'])) {
   while (isset($_POST['line_' . $nb])) {
     $temp = $_POST['line_' . $nb];
     $contenu[] = $temp;
+    var_dump($temp)
     $nb++;
   }
   Create($titre, $contenu);
