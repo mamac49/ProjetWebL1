@@ -23,8 +23,8 @@ function Create($titre, $contenu) {
       } elseif (substr_count($element, "ImageContenu") == 1) {
         $nb = array_key_last(nombreTxt("image"))+2;
         var_dump(array_key_last(nombreTxt("image")));
-        $line = str_replace("ImageContenu", "", $line);
-        $img = mysqli_real_escape_string($link, $element);
+        $line = str_replace("ImageContenu", "", $element);
+        $img = mysqli_real_escape_string($link, $line);
         $sqlp = "INSERT INTO `image` (`idimage`, `data`, `position`, `idpublications`) VALUES ('$nb', '$img', '$pos', '$sqlID')";
       } else {
         $nb = array_key_last(nombreTxt("texte"))+1;
@@ -33,7 +33,7 @@ function Create($titre, $contenu) {
       $pos++;
       if (mysqli_query($link, $sqlp)) {
         echo "succès";
-        header("Location: cmedia.php");
+        /*header("Location: cmedia.php");*/
       } else { echo mysqli_error($link);}
     }
   } else {
