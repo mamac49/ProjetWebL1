@@ -59,7 +59,7 @@ function nombre() {
 
 function nombreTxt($table) {
   $link = dbConnect();
-  $sql = "SELECT `data` FROM '$table'";
+  $sql = "SELECT `data` FROM `$table`";
   $result = mysqli_query($link, $sql);
   $IDdata = array();
   if ($result) {
