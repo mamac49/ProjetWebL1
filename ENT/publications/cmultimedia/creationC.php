@@ -79,7 +79,7 @@ if ($_SESSION["Connected"] == true) {
     </ul>
     <div class="boutonsCahierMultimedia">
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
-      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
+      <!--<button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>-->
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
       <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
     </div>
