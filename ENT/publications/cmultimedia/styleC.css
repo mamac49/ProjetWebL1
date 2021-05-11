@@ -117,3 +117,8 @@ textarea{
   top : -5px;
   right: -25px;
 }
+
+.AdminMulti {
+  position: absolute;
+  border-bottom: 15px;
+}
