@@ -10,6 +10,8 @@ function Save($type, $message) {
   $date = date("Y-m-d H:i:s");
   $id = $_SESSION["ID"];
 
+  echo array_key_last(nombreAvis());
+
   $nb = array_key_last(nombreAvis())+1;
 
   $sql = "INSERT INTO `avis` (`IDavis`, `type`, `message`, `date`, `iduser`) VALUES ('$nb', '$type', '$message', '$date', '$id')";
