@@ -20,7 +20,7 @@ if ($_SESSION["Connected"] == "True") {
     <?php
       include '../base.php';
     ?>
-    <div class="Center texte">
+    <div class="Center_adap texte">
       <h2>Mentions légales</h2>
         <ul class="texte">
           <li><i class="fas fa-user-circle IconeProfil"></i>Antoine Beunas</li>
