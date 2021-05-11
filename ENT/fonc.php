@@ -59,13 +59,12 @@ function nombre() {
 
 function nombreTxt($table) {
   $link = dbConnect();
-  $sql = "SELECT '$table' FROM `data`";
+  $sql = "SELECT `data` FROM '$table'";
   $result = mysqli_query($link, $sql);
   $IDdata = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
       $IDdata[] = $row;
-      var_dump($IDdata);
     }
   }
   return max(max($IDdata));
