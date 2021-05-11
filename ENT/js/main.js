@@ -114,14 +114,20 @@ function addLine(lineType) {
   
   function addImage() {
     var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-    if (line == 0 && addLine('image') != false) {
+    if (line == 0 && addLine('image') == false) {
+      /*FIN DU MONDE!!!*/
+    } else {
+      /*PAS FIN DU MONDE !!!*/
       publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
     }
   }
   
   function addVideo() {
     var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-    if (line == 0 && addLine('video') != false) {
+    if (line == 0 && addLine('video') == false) {
+      /*FIN DU MONDE!!!*/      
+    } else {
+      /*PAS FIN DU MONDE !!!*/
       publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('video'));
     }
   }
