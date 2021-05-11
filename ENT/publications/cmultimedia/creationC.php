@@ -75,7 +75,7 @@ if ($_SESSION["Connected"] == true) {
   <form action="creationC.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
-      <input name="line_1" class="imageCahierMulimedia" type="file" id="image_cahier_multimedia" accept="image/*" required>
+      
     </ul>
     <div class="boutonsCahierMultimedia">
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
