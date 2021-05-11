@@ -97,7 +97,7 @@ if ($_SESSION["Connected"] == true) {
               <h2 class="texte">Réinitialisation du mot de passe</h2>
                 <div class="input-container">
                   <i class="fas fa-key iconCrea"></i>
-                  <input type="password" class="texte" name="passwordA" placeholder="Ancien mot de passe" class="input-field" size="300px" minlengh="8" maxlength="16" required>
+                  <input type="password" class="texte" name="passwordA" placeholder="Ancien mot de passe" class="input-field" size="50px" minlengh="8" maxlength="16" required>
                 </div>
               </p>
               <p>
