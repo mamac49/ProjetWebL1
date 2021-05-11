@@ -15,7 +15,7 @@ function AffichageCahier($ID) {
   $Txt = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $Txt[] = $row;
+      $Txt[$row] = $row[0];
     }
   }
 
@@ -23,7 +23,7 @@ function AffichageCahier($ID) {
   $Liens = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
-      $Liens[] = $row;
+      $Liens[$row] = $row[0]
     }
   }
 
