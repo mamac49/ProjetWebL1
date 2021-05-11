@@ -100,7 +100,10 @@ if ($_SESSION["Connected"] == true) {
               </p>
               <p>
               <label class="texte">Nouveau mot de passe</label>
-              <input class="texte" type="password" name="passwordN" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-user iconCrea"></i>
+                  <input class="texte" type="password" name="passwordN" minlengh="8" maxlength="16" required>
+                </div>
               </p>
               <p>
                 <label class="texte">Valider le nouveau mot de passe</label>
