@@ -113,7 +113,11 @@ if ($_SESSION["Connected"] == true) {
                 $track = str_replace("https://www.deezer.com/us/track/", "", $line); ?>
                 <iframe title='deezer-widget' src=<?php print 'https://widget.deezer.com/widget/dark/track/'. $track .'?tracklist=false' ?> width='400' height='300' frameborder='0' allowtransparency='true' allow='encrypted-media; clipboard-write'></iframe>
               <?php
-              } else {
+            } elseif (substr_count($line, "https://youtu.be/") == 1) {
+                $track = str_replace("https://youtube.be/", "https://www.youtube.com/embed/", $line); ?>
+                <iframe width="450" height="330" src="<?php echo $video ?>" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <?php
+          } else {
                 echo "<a href=". $line .">". $line ."</a><br>";
                 }
             } elseif (substr_count($line, "ImageContenu") == 1) {
