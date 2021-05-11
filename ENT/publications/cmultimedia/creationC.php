@@ -37,7 +37,7 @@ function Create($titre, $contenu) {
       $stmt = mysqli_stmt_execute();
     }
   } else {
-    echo mysqli_error();
+    echo mysqli_error($link);
   }
 }
 
