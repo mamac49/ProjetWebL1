@@ -52,6 +52,7 @@ if ($_SESSION["Connected"] == true) {
               ?>
               </ul>
             </div>
+            <div class="overlay"></div>
       </div>
     </div>
 
