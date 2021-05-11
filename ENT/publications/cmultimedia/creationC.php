@@ -25,7 +25,7 @@ function Create($titre, $contenu) {
         $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
       $pos++;
-      if (mysqli_query($link, $sql)) {
+      if (mysqli_query($link, $sqlp)) {
         echo "succès";
       } else { echo mysqli_error($link);}
     }
