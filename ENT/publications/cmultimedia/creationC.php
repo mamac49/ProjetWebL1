@@ -36,7 +36,7 @@ function Create($titre, $contenu) {
         mysqli_stmt_bind_param($stmt, 'ssii', $table, $element, $pos, $sqlID);
       }
       $pos++;
-      $stmt = mysqli_stmt_execute()
+      $stmt = mysqli_stmt_execute();
     }
   }
 }
