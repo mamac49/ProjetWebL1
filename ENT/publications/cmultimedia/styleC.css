@@ -23,6 +23,7 @@
   background-color: #f1f1f1;
   margin-top: 15px;
   padding-left: 0px;
+  transition: 300ms background-color ease-in-out; 
 }
 
 .chip i {
@@ -34,7 +35,7 @@
 }
 
 .chip:hover {
-  background-color: rgb(77, 78, 77);
+  background-color: rgb(100, 100, 100);
 }
 
 
