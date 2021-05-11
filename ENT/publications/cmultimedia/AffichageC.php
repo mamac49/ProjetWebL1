@@ -65,12 +65,20 @@ if ($_SESSION["Connected"] == true) {
       <h2 class="texte"><?php echo titre($IDcahier); ?></h2>
       <div class="corps">
         <?php
-          var_dump(AffichageCahier($IDcahier));
-        ?>
+          foreach (AffichageCahier($IDcahier) as $line) {
+            if (str_contains($line), "http") {
+              echo "<a href=". $line .">". $line ."</a>"
+            } else {
+              echo "<pre>." $line ".</pre>"
+            }
+
+          ?>
+        <?php } ?>
 
       </div>
 
     </div>
+
 
   </div>
 </div>
