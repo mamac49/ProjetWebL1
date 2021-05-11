@@ -32,6 +32,7 @@ function AffichageCahier($ID) {
   $images = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_BOTH)) {
+      var_dump($row);
       $images[$row["position"]] = $row["idimage"];
     }
   }
