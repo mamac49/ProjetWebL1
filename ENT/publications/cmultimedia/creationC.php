@@ -20,8 +20,9 @@ function Create($titre, $contenu) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
         $nb = array_key_last(nombreTxt("liens"))+1;
         $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
-      } elseif (substr_count($element, "/tmp/php") == 1) {
+      } elseif (substr_count($element, "ImageContenu") == 1) {
         $nb = array_key_last(nombreTxt("image"))+1;
+        $element = str_replace("ImageContenu", "", $element);
         $img = mysqli_real_escape_string($link, $element);
         $sqlp = "INSERT INTO `image` (`idimage`, `data`, `position`, `idpublications`) VALUES ('$nb', '$img', '$pos', '$sqlID')";
       } else {
@@ -44,7 +45,7 @@ if (isset($_POST['Valider'])) {
   $contenu = array();
   $nb = 1;
   while (isset($_POST['line_' . $nb]) or isset($_FILES['line_' . $nb]['tmp_name'])) {
-    $temp = isset($_POST['line_' . $nb]) ? $_POST['line_' . $nb] : "Image" . file_get_contents($_FILES['line_' . $nb]['tmp_name']);
+    $temp = isset($_POST['line_' . $nb]) ? $_POST['line_' . $nb] : "ImageContenu" . file_get_contents($_FILES['line_' . $nb]['tmp_name']);
     $contenu[] = $temp;
     $nb++;
   }
