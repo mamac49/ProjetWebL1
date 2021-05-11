@@ -6,7 +6,33 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 
 function Create($titre, $contenu) {
-  var_dump($contenu);
+  $link = bdConnect();
+
+  $date = date("m"),
+  $IDu = $_SESSION['ID'];
+
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', 'IDu')"
+  if (mysqli_query($link, $sql)) {
+
+    $sqlID = max(max(nbPub()));
+
+    $sqlp = "INSERT INTO `(?)` (`data`, `position`, `idpublications`) VALUES ('(?)', '(?)', '(?)')"
+    $stmt = mysqli_prepare($link, $sqlp);
+    if ( !$stmt ){
+        echo 'Erreur d accès à la base de données - FIN';
+        mysqli_close($link);
+    }
+
+    $pos = 0;
+
+    var_dump($contenu);
+    foreach ($contenu as $element) {
+      if (filter_var($element), FILTER_VALIDATE_URL) {
+        mysqli_stmt_bind_param($stmt, 4, "liens", $element, $pos, $id, $sqlID);
+      }
+      $pos++;
+    }
+  }
 }
 
 
