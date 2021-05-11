@@ -33,6 +33,10 @@
   border-radius: 50%;
 }
 
+.chip:hover {
+  background-color: rgb(77, 78, 77);
+}
+
 
 .liste {
   display: flex;
