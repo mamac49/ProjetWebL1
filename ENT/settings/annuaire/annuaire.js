@@ -18,7 +18,7 @@ window.onclick = function(event) {
   }
 }
 
-function copy(x) {
+function copyMail(x) {
   /* Get the text field */
   var copyText = document.getElementById("ToCopyMail-".concat(x.toString()));
 
@@ -33,7 +33,7 @@ function copy(x) {
   alert("Copied the text: " + copyText.value);
 }
 
-function copy(x) {
+function copyContact(x) {
   /* Get the text field */
   var copyText = document.getElementById("ToCopyContact-".concat(x.toString()));
 
