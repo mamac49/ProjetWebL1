@@ -16,7 +16,7 @@ function Save($type, $message) {
   if (mysqli_query($link, $sql)) {
     echo "succès";
   } else {
-      echo mysqli_error;
+      echo mysqli_error($link);
   }
 }
 
