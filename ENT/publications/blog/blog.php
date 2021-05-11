@@ -77,7 +77,7 @@ if ($_SESSION["Connected"] == true) {
                   $date=jour($i[0]);
               ?>
               <li class="sujets"><a href="AffichageB.php?id=<?php print $i[0]?>"><i class="fas fa-robot icone"></i> <?php echo $titre; ?>
-              </a> <span class="texte">Edité par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
+              </a> <span class="texte">Créé par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
               <li class="espaces"><hr></li>
               <?php
                   }
