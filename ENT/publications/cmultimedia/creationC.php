@@ -39,6 +39,7 @@ function Create($titre, $contenu) {
 
 
 if (isset($_POST['Valider'])) {
+  var_dump($_POST);
   $titre = securisation($_POST['titre']);
   $contenu = array();
   $nb = 0;
@@ -79,7 +80,6 @@ if ($_SESSION["Connected"] == true) {
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
       <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
-      <!--<button name="create" class="bouton" onclick="addVideo()">Ajouter une case</button>-->
       <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
     </div>
   </form>
