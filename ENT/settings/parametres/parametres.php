@@ -33,7 +33,7 @@ function chgtPP($pp) {
   if (mysqli_query($link, $request)) {
     reset($_POST);
     mysqli_close($link);
-    header("refresh: 0");
+    /*header("refresh: 0");*/
     exit();
   }
 }
@@ -44,7 +44,7 @@ function chgtThemeDef($theme) {
   if (mysqli_query($link, $sql)) {
     reset($_POST);
     mysqli_close($link);
-    header("refresh: 0");
+    /*header("refresh: 0");*/
     $_SESSION['theme'] = $theme;
   }
 }
@@ -56,7 +56,7 @@ if (isset($_POST['Valider'])) {
     ChgtMdp($mdpA, $mdpN);
   } else {
     echo "<script> alert('les deux mots de passe ne correspondent pas'); </script>";
-    header("refresh: 0");
+    /*header("refresh: 0");*/
   }
 }
 
