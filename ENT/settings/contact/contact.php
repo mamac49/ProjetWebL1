@@ -28,7 +28,7 @@ function nombreAvis() {
       $IDavis[$row[0]] = $row[2];
     }
   }
-  var_dump($IDavis)
+  var_dump($IDavis);
   return $IDavis;
 }
 
