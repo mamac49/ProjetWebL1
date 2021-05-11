@@ -43,11 +43,11 @@ if (isset($_POST['Valider'])) {
   $titre = securisation($_POST['titre']);
   $contenu = array();
   $nb = 0;
-  do {
+  while (isset($_POST['line_' . $nb])) {
     $temp = mysqli_real_escape_string(dbConnect(), $_POST['line_' . $nb]);
     $contenu[] = $temp;
     $nb++;
-  } while (isset($_POST['line_' . $nb]));
+  }
   Create($titre, $contenu);
 }
 
