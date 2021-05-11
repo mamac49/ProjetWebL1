@@ -58,9 +58,6 @@ function AfficheAvis($id) {
     $sqlUser = "SELECT * FROM `users` INNER JOIN `avis` ON `users`.`iduser` = `avis`.`iduser` WHERE `avis`.`idavis`='$id'";
     if ($resultat = mysqli_query($link, $sqlUser)) {
       $rowUser = mysqli_fetch_array($resultat);
-      var_dump($row);
-      echo "<br>";
-      var_dump($rowUser);
       return array($icone[$row['type']] . $row['type'] . " - " . "(" . $row['date'] . ") " . $rowUser['mail'] . "<br>", $row['message']);
     } else {
       return mysqli_error($link);;
@@ -112,8 +109,8 @@ if ($_SESSION["Connected"] == true) {
       <ul>
         <?php $x=0;
           foreach (nombreAvisUser() as $id) { ?>
-            <li class="texte suppression"><div class="avis"><p><?php echo AfficheAvis($id[0][0])[0];?></p><span style="display: none" id=<?php print "more-". $x ?>><?php echo AfficheAvis($id[0][0])[1];?></span></div>
-              <a href="<?php print "SupAvis.php?id=" . $id[0][0];?>"><i class="fas fa-times fermer"></i></a></li>
+            <li class="texte suppression"><div class="avis"><p><?php echo AfficheAvis($id[0])[0];?></p><span style="display: none" id=<?php print "more-". $x ?>><?php echo AfficheAvis($id[0])[1];?></span></div>
+              <a href="<?php print "SupAvis.php?id=" . $id[0];?>"><i class="fas fa-times fermer"></i></a></li>
             <button onclick="ReadMore(<?php print $x ?>)" id="<?php print "Mybtn-". $x ?>" class="bouton"><span>Lire Plus</span></button>
         <?php $x+=1; }  ?>
       </ul>
