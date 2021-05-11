@@ -1,5 +1,3 @@
-
-
 .contenu_annuaire {
   font-size: 75%;
   display: block;
@@ -21,22 +19,14 @@
   color: var(--font-color);
 }
 
-
-
-
-
-
-
-
-
-
-/*.PPannuaire {
+.PPannuaire {
   width: 75px;
   height: 75px;
   border-radius: 5000px;
   border: 1px black solid;
 }
 
+/*
 Pour les écrans de plus de 750pixels
 
 html
