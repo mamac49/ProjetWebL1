@@ -80,7 +80,7 @@ if ($_SESSION["Connected"] == true) {
                 <select name="Cmulti">
                   <?php
                   foreach (nbPub() as $x) {
-                    if (nature($x[0]) == "2") {
+                    if (nature($x[0])["nature"] == "2") {
                   ?>
                     <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                   <?php }} ?>
