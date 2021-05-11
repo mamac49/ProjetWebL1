@@ -31,8 +31,8 @@ if ($_SESSION["Connected"] == true) {
 
     <div class="site_container">
       <script src="annuaire.js"></script>
-        <div class="contenu">
-            <div class="Center_adap">
+        <div class="contenu_annuaire">
+            <div class="Center_annuaire">
               <!-- les contacts seront listé avec en premier le professeur
                 et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
               <h2 class="texte">Liste des contacts</h2>
@@ -40,7 +40,7 @@ if ($_SESSION["Connected"] == true) {
               <?php
                 foreach (nombre() as $x) {
                   $contact_name = info($x[0])['prenom'] . " " . info($x[0])['nom'];
-                  $contact_id = "contact" . $x[0];
+                  $contact_id = "contact_" . $x[0];
                   $mail = info($x[0])["mail"];
               ?>
                 <li class="contact">
