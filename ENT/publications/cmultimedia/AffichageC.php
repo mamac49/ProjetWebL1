@@ -77,7 +77,6 @@ function AffichageCM($element) {
     echo mysqli_connect_error();
   }
   # Renvoyer l'image
-  var_dump($row);
   return $row['data'];
 }
 
