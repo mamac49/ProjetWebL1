@@ -10,7 +10,7 @@ function AffichageCahier($ID) {
 
   $sqlLiens = "SELECT *  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
   $sqlTxt = "SELECT *  FROM `texte` WHERE `idpublications`='$ID' ORDER BY `position`";
-  $sqlTxt = "SELECT *  FROM `image` WHERE `idpublications`='$ID' ORDER BY `position`";
+  $sqlImg = "SELECT *  FROM `image` WHERE `idpublications`='$ID' ORDER BY `position`";
 
   $result = mysqli_query($link, $sqlTxt);
   $Txt = array();
@@ -28,7 +28,7 @@ function AffichageCahier($ID) {
     }
   }
 
-  $result = mysqli_query($link, $sqlLiens);
+  $result = mysqli_query($link, $sqlImg);
   $images = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_BOTH)) {
@@ -47,8 +47,6 @@ function AffichageCahier($ID) {
       $liste[$i] = $images[$i];
     }
   }
-
-  var_dump($liste);
   return $liste;
 }
 
