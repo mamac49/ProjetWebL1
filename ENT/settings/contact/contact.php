@@ -10,7 +10,7 @@ function Save($type, $message) {
   $date = date("Y-m-d H:i:s");
   $id = $_SESSION["ID"];
 
-  echo array_key_last(nombreAvis());
+  var_dump(nombreAvis());
 
   $nb = array_key_last(nombreAvis())+1;
 
