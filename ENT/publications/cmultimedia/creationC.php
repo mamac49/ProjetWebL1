@@ -50,6 +50,8 @@ if (isset($_POST['Valider'])) {
     $contenu[] = $temp;
     $nb++;
   }
+  var_dump($contenu);
+  echo "<br>";
   Create($titre, $contenu);
 }
 
