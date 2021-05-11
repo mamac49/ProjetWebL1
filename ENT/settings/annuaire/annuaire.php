@@ -20,7 +20,7 @@ if ($_SESSION["Connected"] == true) {
     <script src="annuaire.js"></script>
     <script src="/Projetwebl1/ENT/js/scroll.js"></script>
   </head>
-  
+
     <?php
       include ("../../base.php");
       echo '<link rel="stylesheet" href="styleA.css">';
@@ -32,7 +32,7 @@ if ($_SESSION["Connected"] == true) {
     <div class="site_container">
       <script src="annuaire.js"></script>
         <div class="contenu_annuaire">
-          <div class="center_annuaire">
+          <div class="center_adap">
             <!-- les contacts seront listé avec en premier le professeur
               et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
             <h2 class="titre_liste texte">Liste des contacts</h2>
@@ -44,7 +44,15 @@ if ($_SESSION["Connected"] == true) {
                 $mail = info($x[0])["mail"];
             ?>
               <li class="contact">
-                <a class="<?php echo $contact_id;?> texte" id="contact"><span><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></span></a>
+                <div class="debut"><a class="<?php echo $contact_id;?> texte" id="contact"><span><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></span></a></div>
+                <div class="fin">
+                  <div class="dropdown"><button onclick="down()" class="dropbtn">Information</button></div>
+                  <div id="myDropdown" class="dropdown-content">
+                    <button class="btn-info" onclick="copy()"><i class="fa fa-home"></i><p id="ToCopy"><?php echo $mail; ?></p></button>
+                    <button class="btn-info" onclick="copy()"><i class="fa fa-home"></i><p id="ToCopy"><?php echo $contact_name; ?></p></button>
+                  </div>
+
+                </div>
               </li>
               <li><hr class="hrcontact"></li>
             <?php
