@@ -71,6 +71,9 @@
 }
 
 .commentaireblog{
-  width:50%;
   float:right;
+}
+
+.commentaireblog fieldset{
+  width:50%;
 }
