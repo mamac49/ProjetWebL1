@@ -33,7 +33,7 @@ function Create($titre, $contenu) {
       }
     } else {
       echo 'Erreur d accès à la base de données - FIN' . mysqli_error($link); }
-  }}
+  }
 
 
 if (isset($_POST['Valider'])) {
