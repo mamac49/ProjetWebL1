@@ -49,3 +49,7 @@ h2 {
 .input-field:focus {
   border: 2px solid;
 }
+
+input[placeholder] {
+  text-align: center;
+}
