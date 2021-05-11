@@ -146,7 +146,6 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                         <?php echo $message; ?>
                       </fieldset>
                     </div>
-                  <br/>
                   <div class="Bouton-com">
                     <?php $res=idauteurC($x[0]);
                     if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
@@ -154,6 +153,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                       <?php if ($_SESSION["ID"]==$res){?>
                         <input type="button" class="bouton" value="Editer le commentaire">
                       <?php } ?>
+                      <br/>
                       <br/>
                       <br/>
                     <?php } ?>
