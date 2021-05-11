@@ -27,7 +27,7 @@ function AffichageCahier($ID) {
     while($row = $result->fetch_array(MYSQLI_BOTH)) {
       if (isset($row[`data`])) {
       $Txt[$row[`position`]] = $row[`data`];
-    }
+    }}
   }
 
   $liste = array_merge($Txt, $Liens);
