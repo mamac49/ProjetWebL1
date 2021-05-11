@@ -49,7 +49,11 @@ if ($_SESSION["Connected"] == "True") {
         <div class="Anniversaire">
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
-            <?php foreach (Annivs() as $i) { ?>
+            <?php
+            if anniv() is_null;
+            echo "Pas d'anniversaire à souhaiter";
+            else; 
+            foreach (Annivs() as $i) { ?>
               <li class="texteB"><?php echo "C'est l' anniversaire de ".$i[1] . " " . $i[2]; ?></li>
             <?php } ?>
           </ul>
