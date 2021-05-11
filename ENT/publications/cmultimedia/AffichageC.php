@@ -47,7 +47,7 @@ function AffichageCahier($ID) {
     }
   }
 
-  var_dump($liste)
+  var_dump($liste);
   return $liste;
 }
 
