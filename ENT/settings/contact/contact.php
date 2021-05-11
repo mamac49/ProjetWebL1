@@ -28,7 +28,6 @@ function nombreAvis() {
       $IDavis[$row[0]] = $row[2];
     }
   }
-  var_dump($IDavis);
   return $IDavis;
 }
 
@@ -40,6 +39,7 @@ function nombreAvisUser() {
   $IDavis = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
+      var_dump($row);
       $IDavis[] = $row;
     }
   }
