@@ -7,12 +7,12 @@ include ("../../fonc.php");
 
 function Create($titre, $contenu) {
   var_dump($contenu);
-
+  console.log($contenu);
 }
 
 
 if (isset($_POST['Valider'])) {
-  $titre = securisation($_POST['titre'])
+  $titre = securisation($_POST['titre']);
   $contenu = array();
   while (isset($_POST['line_'+$nb])) {
     $contenu[] = securisation($_POST['line_'+$nb]);
