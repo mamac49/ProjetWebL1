@@ -22,8 +22,8 @@ function Create($titre, $contenu) {
         var_dump( max(nombreTxt("liens"))+1);
         $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } else {
-        $nb = nombreTxt("texte");
-        var_dump(nombreTxt("texte"));
+        $nb = max(nombreTxt("texte"))+1;
+        var_dump(max(nombreTxt("texte"))+1);
         $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
       $pos++;
