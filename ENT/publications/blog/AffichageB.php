@@ -135,7 +135,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                 $tempsC=temps_ecriture_C($x[0]);
                 $message=message($x[0]);
               ?>
-                <div class="commentaire">
+                <div class="commentaireblog">
                   <fieldset class="commentairefield">
                     <legend>
                       <span class="texte"> Edité par <?php echo $auteurC; ?> le <?php echo $tempsC; ?></span>
