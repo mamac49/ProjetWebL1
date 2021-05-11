@@ -5,7 +5,7 @@ include '../../fonc.php';
 
 $IDcahier = $_GET['id'];
 
-function Affichage($ID) {
+function AffichageCahier($ID) {
   $link = dbConnect();
 
   $sqlLiens = "SELECT `data`  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
@@ -50,7 +50,7 @@ if ($_SESSION["Connected"] == true) {
       <h2 class="texte"><?php echo titre($IDcahier); ?></h2>
       <div class="corps">
         <?php
-          echo Affichage($IDcahier)
+          echo AffichageCahier($IDcahier);
         ?>
 
       </div>
