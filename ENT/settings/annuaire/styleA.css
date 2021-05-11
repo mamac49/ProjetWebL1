@@ -4,13 +4,18 @@
   font-size: 75%;
   display: block;
   width: 75%;
-  /*height adapt with js;*/
   margin-left: auto;
   margin-right: auto;
   padding: 2rem;
-  border: 1rem solid --main-color;
-  border-radius: 0.25rem;
+  border: 1rem solid;
+  border-radius: .5rem 4rem 4rem 4rem;
 }
+
+.center_annuaire{
+  display: block;
+  text-align : center;
+}
+
 
 
 

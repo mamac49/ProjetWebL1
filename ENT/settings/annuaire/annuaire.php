@@ -32,10 +32,10 @@ if ($_SESSION["Connected"] == true) {
     <div class="site_container">
       <script src="annuaire.js"></script>
         <div class="contenu_annuaire">
-            <div class="Center_annuaire">
+            <div class="center_annuaire">
               <!-- les contacts seront listé avec en premier le professeur
                 et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
-              <h2 class="texte">Liste des contacts</h2>
+              <h2 class="titre_liste texte">Liste des contacts</h2>
               <ul class="contact_list">
               <?php
                 foreach (nombre() as $x) {
