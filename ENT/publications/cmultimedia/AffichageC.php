@@ -126,7 +126,7 @@ if ($_SESSION["Connected"] == true) {
                 <img src="<?php echo ' data:image/png;base64,' . base64_encode(AffichageCM($line)) . ' '?>" alt="Image" class="ImgCM">
             <?php
             } else {
-              echo "<pre width='950px'>". $line ."</pre>";
+              echo "<pre width='950px' class='textePre'>". $line ."</pre>";
             }} ?>
 
       </div>
