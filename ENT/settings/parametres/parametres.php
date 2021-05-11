@@ -102,13 +102,13 @@ if ($_SESSION["Connected"] == true) {
               </p>
               <p>
                 <div class="input-container">
-                  <i class="fas fa-unlock"></i>
+                  <i class="fas fa-lock"></i>
                   <input class="texte" type="password" name="passwordN" placeholder="Nouveau mot de passe" class="input-field" minlengh="8" maxlength="16" required>
                 </div>
               </p>
               <p>
                 <div class="input-container">
-                  <i class="fas fa-lock-open"></i>
+                  <i class="fas fa-unlock"></i>
                   <input class="texte" type="password" name="passwordNN" placeholder="Valider le nouveau mot de passe" class="input-field" minlengh="8" maxlength="16" required>
                 </div>
               </p>
