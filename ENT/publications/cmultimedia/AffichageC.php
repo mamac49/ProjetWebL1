@@ -29,7 +29,7 @@ function AffichageCahier($ID) {
 
   $liste = array_merge($Txt, $Liens);
 
-  return array($Txt, $Liens);
+  return array($Txt, $Liens, $liste);
 
 }
 
