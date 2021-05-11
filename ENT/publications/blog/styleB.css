@@ -70,7 +70,7 @@
   text-align:right;
 }
 
-.commentairefield{
+.commentaire fieldset{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
