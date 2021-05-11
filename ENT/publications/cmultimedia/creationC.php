@@ -6,6 +6,7 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 
 function Create($titre, $contenu) {
+  var_dump($contenu);
   $link = dbConnect();
 
   $date = date("m");
