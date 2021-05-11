@@ -47,7 +47,6 @@ function AffichageCahier($ID) {
     }
   }
 
-  var_dump($liste);
   return $liste;
 }
 
@@ -66,7 +65,7 @@ function AffichageCM($element) {
       mysqli_close($link);
   }
   # Sinon on définit le paramètre le requète
-  mysqli_stmt_bind_param($stmt, "i", $element);
+  mysqli_stmt_bind_param($stmt, 'i', $element);
   # On exécute le requête
   if (mysqli_stmt_execute($stmt)) {
     # On récupère le résultat
@@ -79,6 +78,7 @@ function AffichageCM($element) {
     echo mysqli_connect_error();
   }
   # Renvoyer l'image
+  var_dump($row);
   return $row['data'];
 }
 
