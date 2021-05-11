@@ -45,10 +45,10 @@ if ($_SESSION["Connected"] == true) {
               <li class="contact">
                 <div class="debut"><a class="<?php echo $contact_id;?> texte" id="contact"><span><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></span></a></div>
                 <div class="fin">
-                  <div class="dropdown"><button onclick="down()" class="dropbtn">Information</button></div>
-                  <div id="myDropdown" class="dropdown-content">
-                    <button class="btn-info" onclick="copy()"><i class="fa fa-home"></i><p id="ToCopy"><?php echo $mail; ?></p></button>
-                    <button class="btn-info" onclick="copy()"><i class="fa fa-home"></i><p id="ToCopy"><?php echo $contact_name; ?></p></button>
+                  <div class="dropdown"><button onclick="down(<?php print $x;?>)" class="dropbtn">Information</button></div>
+                  <div id="myDropdown-<?php echo $x;?>" class="dropdown-content">
+                    <button class="btn-info" onclick="copy(<?php print $x;?>)"><i class="fa fa-home"></i><p id="ToCopyMail-<?php echo $x;?>"><?php echo $mail; ?></p></button>
+                    <button class="btn-info" onclick="copy(<?php print $x;?>)"><i class="fa fa-home"></i><p id="ToCopyContact-<?php echo $x;?>"><?php echo $contact_name; ?></p></button>
                   </div>
 
                 </div>
