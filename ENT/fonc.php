@@ -65,6 +65,7 @@ function nombreTxt($table) {
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
       $IDdata[] = $row;
+      var_dump($IDdata);
     }
   }
   return max(max($IDdata));
