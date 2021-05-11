@@ -13,34 +13,27 @@ function Create($titre, $contenu) {
 
   $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', '$IDu')";
   if (mysqli_query($link, $sql)) {
-
     $sqlID = max(max(nbPub()));
-
-    $sqlp = "INSERT INTO (?) (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
-
-    if ( $stmt = mysqli_prepare($link, $sqlp)){
-        echo 'Erreur d accès à la base de données - FIN';
-        mysqli_close($link);
-
-        $pos = 0;
+    $pos = 0;
 
       foreach ($contenu as $element) {
         if (filter_var($element, FILTER_VALIDATE_URL)) {
-          $table = "liens";
-          mysqli_stmt_bind_param($stmt, 'ssii', $table, $element, $pos, $sqlID);
+          if ( $stmt = mysqli_prepare($link, $sqlp)){
+            $sqlp = "INSERT INTO "liens" (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
+            mysqli_stmt_bind_param($stmt, 'sii', $element, $pos, $sqlID);
+          }
         } else {
-          $table = "texte";
-          mysqli_stmt_bind_param($stmt, 'ssii', $table, $element, $pos, $sqlID);
+          if ( $stmt = mysqli_prepare($link, $sqlp)){
+            $sqlp = "INSERT INTO "texte" (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
+            mysqli_stmt_bind_param($stmt, 'sii', $element, $pos, $sqlID);
+          }
         }
         $pos++;
         $stmt = mysqli_stmt_execute();
       }
     } else {
       echo 'Erreur d accès à la base de données - FIN' . mysqli_error($link); }
-  } else {
-    echo mysqli_error($link);
-  }
-}
+  }}
 
 
 if (isset($_POST['Valider'])) {
