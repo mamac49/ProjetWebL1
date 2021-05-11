@@ -27,7 +27,10 @@ function AffichageCahier($ID) {
     }
   }
 
-  return $Liens;
+  $liste = array_merge($Txt, $Liens);
+  ksort($liste);
+
+  return $liste;
 
 }
 
