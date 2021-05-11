@@ -10,7 +10,7 @@ function Create($titre, $contenu) {
 }
 
 
-if (isempty($_POST['Valider'])) {
+if (isset($_POST['Valider'])) {
   $titre = securisation($_POST['titre']);
   $contenu = array();
   $nb = 0;
