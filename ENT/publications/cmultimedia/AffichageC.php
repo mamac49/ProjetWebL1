@@ -32,7 +32,7 @@ function AffichageCahier($ID) {
   $images = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_BOTH)) {
-      $images[$row["position"]] = $row["data"];
+      $images[$row["position"]] = "ImageContenu" . $row["idimage"];
     }
   }
   $liste = array();
@@ -51,8 +51,34 @@ function AffichageCahier($ID) {
 }
 
 function AffichageCM($element) {
-  $line = str_replace("ImageContenu", "", $line);
-  return $line;
+  # On se connecte à la BD
+  $link = dbConnect();
+
+  # On définit la requète
+  $sql = "SELECT * FROM `image` WHERE `idimage`= (?)";
+  # On la prépare
+  $stmt = mysqli_prepare($link, $sql);
+  # Si la requète ne s'est pas faite
+  if ( !$stmt ){
+      # On affiche l'erreur et on se déconnecte
+      echo 'Erreur d accès à la base de données - FIN';
+      mysqli_close($link);
+  }
+  # Sinon on définit le paramètre le requète
+  mysqli_stmt_bind_param($stmt, "i", $element);
+  # On exécute le requête
+  if (mysqli_stmt_execute($stmt)) {
+    # On récupère le résultat
+    $result = mysqli_stmt_get_result($stmt);
+    # On le met dans un array pour le réutiliser plus tard
+    $row = mysqli_fetch_array($result);
+    # Vider le cache du résultat de la requête
+    mysqli_free_result($result);
+  } else {
+    echo mysqli_connect_error();
+  }
+  # Renvoyer l'image
+  return $row['data'];
 }
 
 
@@ -91,7 +117,8 @@ if ($_SESSION["Connected"] == true) {
               } else {
                 echo "<a href=". $line .">". $line ."</a><br>";
                 }
-            } elseif (substr_count($line, "ImageContenu") == 1) { ?>
+            } elseif (substr_count($element, "ImageContenu") == 1) {
+              $line = str_replace("ImageContenu", "", $line); ?>
                 <img src="<?php echo ' data:image/png;base64,' . base64_encode(AffichageCM($line)) . ' '?>" alt="Image" class="ImgCM">
             <?php
             } else {
