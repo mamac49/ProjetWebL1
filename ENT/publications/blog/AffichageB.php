@@ -142,8 +142,8 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                     </legend>
                     <?php echo $message; ?>
                   </fieldset>
-                  <br/>
                 </div>
+                <br/>
                 <?php $res=idauteurC($x[0]);
                 if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
                   <input type="button" class="bouton" value="Effacer le commentaire">
