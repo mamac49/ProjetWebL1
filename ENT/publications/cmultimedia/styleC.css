@@ -160,4 +160,5 @@ textarea{
 .textePre {
   display: flex;
   flex-wrap: wrap;
+  white-space: break-spaces
 }
