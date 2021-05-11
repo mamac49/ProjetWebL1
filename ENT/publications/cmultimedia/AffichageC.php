@@ -70,8 +70,8 @@ if ($_SESSION["Connected"] == true) {
               if (substr_count($line, "https://www.deezer.com/") == 1) {
                 $track = str_replace("https://www.deezer.com/us/track/", "", $line);
                 echo "<iframe title='deezer-widget'
-                src='https://widget.deezer.com/widget/dark/track/'. $track .'?tracklist=false' width="300px" height="150px" frameborder="0" allowtransparency="true"
-                 allow="encrypted-media; clipboard-write"></iframe>";
+                src='https://widget.deezer.com/widget/dark/track/'. $track .'?tracklist=false' width='300px' height='150px' frameborder='0' allowtransparency='true'
+                 allow='encrypted-media; clipboard-write'></iframe>";
               } else {
                 echo "<a href=". $line .">". $line ."</a><br>";
               }
