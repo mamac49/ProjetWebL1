@@ -115,8 +115,6 @@ if ($_SESSION["Connected"] == true) {
               <?php
             } elseif (substr_count($line, "https://youtu.be/") == 1) {
                 $video = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $line); ?>
-                <p>a</p>
-                <p><?php echo $video ?></p>
                 <iframe width="450" height="330" src="<?php echo $video ?>" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
             <?php
           } else {
