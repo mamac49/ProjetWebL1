@@ -59,7 +59,7 @@ if ($_SESSION["Connected"] == true) {
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Cahier multimédia</title>
+    <title>Nouveau cahier multimédia</title>
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" href="styleC.css">
