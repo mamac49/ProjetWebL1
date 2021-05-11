@@ -5,6 +5,25 @@ include '../../fonc.php';
 
 $IDcahier = $_GET['id'];
 
+function Affichage($ID); {
+  $link = dbConnect();
+
+  $sqlLiens = "SELECT `data`  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
+  $sqlTxt = "SELECT `data`  FROM `texte` WHERE `idpublications`='$ID' ORDER BY `position`";
+
+  if ($result = mysqli_query($link, $sqlLiens)) {
+    $rowLiens = mysqli_fetch_array($result);
+    mysqli_free_result($result);
+  }
+
+  if ($result = mysqli_query($link, $sqlTxt)) {
+    $rowTxt = mysqli_fetch_array($result);
+    mysqli_free_result($result);
+  }
+
+  return array_merge($rowLiens, $rowTxt);
+
+}
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -31,7 +50,7 @@ if ($_SESSION["Connected"] == true) {
       <h2 class="texte"><?php echo titre($IDcahier); ?></h2>
       <div class="corps">
         <?php
-
+          echo Affichage($IDcahier)
         ?>
 
       </div>
