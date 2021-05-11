@@ -1,4 +1,21 @@
 <?php
+
+$matiere = array();
+$matiere["Maths"] = "fas fa-square-root-alt";
+$matiere["Francais"] = "fas fa-book";
+$matiere["Sciences"] = "fas fa-flask";
+$matiere["Espace"] = "fas fa-map";
+$matiere["Temps"] = "fas fa-clock";
+$matiere["Musique"] = "fas fa-music";
+$matiere["Arts"] = "fas fa-palette";
+$matiere["Anglais"] = "fas fa-cloud-rain";
+$matiere["EPS"] = "fas fa-biking";
+$matiere["Contes"] = "fas fa-dragon";
+$matiere["Rituels"] = "fas fa-chalkboard-teacher";
+$matiere["Education civique"] = "fas fa-school";
+
+$ListMatiere = array("Maths", "Francais", "Sciences", "Espace", "Temps", "Musique", "Arts", "Anglais", "EPS", "Contes", "Rituels", "Education civique");
+
 function dbConnect() {
     // On se connecte à la BD ENT en utilisant le nom d'utilisateur et le mot de passe
     $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
