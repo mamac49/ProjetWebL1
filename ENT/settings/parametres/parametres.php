@@ -96,7 +96,7 @@ if ($_SESSION["Connected"] == true) {
               <p>
               <h2 class="texte">Réinitialisation du mot de passe</h2>
               <label class="texte">Ancien mot de passe</label>
-              <input type="password" class="texte" name="passwordA" minlengh="8" maxlength="16" required>
+              <input type="password" class="texte" name="passwordA" placeholder="MDP..." class="input-field" minlengh="8" maxlength="16" required>
               </p>
               <p>
               <label class="texte">Nouveau mot de passe</label>
