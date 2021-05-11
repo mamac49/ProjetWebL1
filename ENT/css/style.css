@@ -329,7 +329,7 @@ textarea {
 
 .bouton:hover span:after {
   right: 0px;
-  
+
 }
 
 .ListeDeroulante {
@@ -360,4 +360,8 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
   padding-right: 15px;
+}
+
+.code {
+  font-size: 2em;
 }
