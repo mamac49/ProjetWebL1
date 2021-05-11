@@ -14,20 +14,19 @@ function AffichageCahier($ID) {
   $result = mysqli_query($link, $sqlTxt);
   $Txt = array();
   if ($result) {
-    while($row = mysqli_fetch_array($result)) {
-      if (isset($row[`data`])) {
+    while(mysqli_num_rows($result)) {
+      $row = mysqli_fetch_array($result)
       $Txt[$row[`position`]] = $row[`data`];
-      echo "a";
-    }}
+    }
   }
 
   $result = mysqli_query($link, $sqlLiens);
   $Liens = array();
   if ($result) {
-    while($row = mysqli_fetch_array($result)) {
-      if (isset($row[`data`])) {
+    while(mysqli_num_rows($result)) {
+      $row = mysqli_fetch_array($result)
       $Liens[$row[`position`]] = $row[`data`];
-    }}
+    }
   }
 
   $liste = array_merge($Txt, $Liens);
