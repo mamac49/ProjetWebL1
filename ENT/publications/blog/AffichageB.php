@@ -143,22 +143,21 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                     <?php echo $message; ?>
                   </fieldset>
                   <br/>
-                  <?php $res=idauteurC($x[0]);
-                  if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
-                    <input type="button" class="bouton" value="Effacer le commentaire">
-                    <?php if ($_SESSION["ID"]==$res){?>
-                      <input type="button" class="bouton" value="Editer le commentaire">
-                    <?php } ?>
-                    <br/>
-                    <br/>
-                  <?php } ?>
                 </div>
-              <?php }
+                <?php $res=idauteurC($x[0]);
+                if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
+                  <input type="button" class="bouton" value="Effacer le commentaire">
+                  <?php if ($_SESSION["ID"]==$res){?>
+                    <input type="button" class="bouton" value="Editer le commentaire">
+                  <?php } ?>
+                  <br/>
+                  <br/>
+                <?php }
+              }
             } ?>
             <br/>
             <input type="button" class="bouton" value="Ajouter un commentaire">
-            <?php }
-          ?>
+          <?php } ?>
         </div>
       </div>
     </div>
