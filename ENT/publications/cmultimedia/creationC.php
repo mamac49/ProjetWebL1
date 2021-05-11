@@ -18,12 +18,12 @@ function Create($titre, $contenu) {
 
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
-        $nb = max(nombreTxt("liens"))+1;
-        var_dump( max(nombreTxt("liens"))+1);
+        $nb = array_key_last(nombreTxt("liens"))+1;
+        var_dump(array_key_last(nombreTxt("liens"))+1);
         $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } else {
-        $nb = max(nombreTxt("texte"))+1;
-        var_dump(max(nombreTxt("texte"))+1);
+        $nb = array_key_last(nombreTxt("texte"))+1;
+        var_dump(array_key_last(nombreTxt("texte"))+1);
         $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
       $pos++;
