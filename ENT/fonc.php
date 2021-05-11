@@ -67,7 +67,7 @@ function nombreTxt($table) {
       $IDdata[] = $row;
     }
   } else {echo mysqli_error($link);}
-  return $IDdata;
+  return $sql;
 }
 
 function info($x) {
