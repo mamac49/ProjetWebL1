@@ -6,7 +6,6 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 
 function Create($titre, $contenu) {
-  var_dump($contenu);
   $link = dbConnect();
 
   $date = date("m");
@@ -26,7 +25,6 @@ function Create($titre, $contenu) {
 
     $pos = 0;
 
-    var_dump($contenu);
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
         $table = "liens";
@@ -38,20 +36,19 @@ function Create($titre, $contenu) {
       $pos++;
       $stmt = mysqli_stmt_execute();
     }
+  } else {
+    echo mysqli_error();
   }
 }
 
 
 if (isset($_POST['Valider'])) {
-  var_dump($_POST);
   $titre = securisation($_POST['titre']);
   $contenu = array();
   $nb = 1;
   while (isset($_POST['line_' . $nb])) {
     $temp = $_POST['line_' . $nb];
     $contenu[] = $temp;
-    var_dump($temp);
-    var_dump($contenu);
     $nb++;
   }
   Create($titre, $contenu);
