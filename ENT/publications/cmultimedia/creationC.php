@@ -16,7 +16,7 @@ function Create($titre, $contenu) {
 
     $sqlID = max(max(nbPub()));
 
-    $sqlp = "INSERT INTO ? (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
+    $sqlp = "INSERT INTO (?) (`data`, `position`, `idpublications`) VALUES (?, ?, ?)";
 
     if ( $stmt = mysqli_prepare($link, $sqlp)){
         echo 'Erreur d accès à la base de données - FIN';
