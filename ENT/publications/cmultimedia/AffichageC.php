@@ -30,9 +30,9 @@ function AffichageCahier($ID) {
 
   for ($i=0; $i <= count($Txt) + count($Liens) ; $i++) {
     if (array_key_exists($i, $Txt)) {
-      $liste[$i] = $Txt;
+      $liste[$i] = $Txt[$i];
     } elseif (array_key_exists($i, $Liens)) {
-      $liste[$i] = $Liens;
+      $liste[$i] = $Liens[$i];
     }
   }
 
