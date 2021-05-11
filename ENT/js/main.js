@@ -114,14 +114,14 @@ function addLine(lineType) {
   
   function addImage() {
     var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-    if (addLine('image') != false) {
+    if (line == 0 && addLine('image') != false) {
       publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
     }
   }
   
   function addVideo() {
     var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-    if (addLine('video') != false) {
+    if (line == 0 && addLine('video') != false) {
       publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('video'));
     }
   }
