@@ -55,10 +55,6 @@
   flex-direction: column;
 }
 
-.ComDiv textarea {
-  float: right;
-}
-
 .Bouton-com {
   display: flex;
   flex-direction: row;
@@ -66,11 +62,11 @@
   margin: 10px;
 }
 
-.commentairefield legend{
+.Comm legend{
   text-align:right;
 }
 
-.commentaireblog{
-  width:50%;
-  float:right;
+.commentairefield {
+  width: 50%;
+  float: right;
 }
