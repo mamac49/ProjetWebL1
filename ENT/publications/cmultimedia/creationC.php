@@ -82,6 +82,20 @@ if ($_SESSION["Connected"] == true) {
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
       <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
+      <select name="matiere">
+        <option value="Francais">Français</option>
+        <option value="Maths">Mathématiques</option>
+        <option value="Sciences">Science</option>
+        <option value="Espace">Espace</option>
+        <option value="Temps">Temps</option>
+        <option value="Musique">Musique</option>
+        <option value="Arts">Arts</option>
+        <option value="Anglais">Anglais</option>
+        <option value="EPS">EPS</option>
+        <option value="Contes">Contes</option>
+        <option value="Rituels">Rituels</option>
+        <option value="Education civique">Education civique</option>
+      </select>
       <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
     </div>
   </form>
