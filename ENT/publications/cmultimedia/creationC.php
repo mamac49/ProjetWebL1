@@ -11,12 +11,12 @@ function Create($titre, $contenu) {
   $date = date("m");
   $IDu = $_SESSION['ID'];
 
-  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', 'IDu')"
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', 'IDu')";
   if (mysqli_query($link, $sql)) {
 
     $sqlID = max(max(nbPub()));
 
-    $sqlp = "INSERT INTO `(?)` (`data`, `position`, `idpublications`) VALUES ('(?)', '(?)', '(?)')"
+    $sqlp = "INSERT INTO `(?)` (`data`, `position`, `idpublications`) VALUES ('(?)', '(?)', '(?)')";
     $stmt = mysqli_prepare($link, $sqlp);
     if ( !$stmt ){
         echo 'Erreur d accès à la base de données - FIN';
