@@ -101,12 +101,16 @@ if ($_SESSION["Connected"] == true) {
                 </div>
               </p>
               <p>
-              <label class="texte">Nouveau mot de passe</label>
-                <input class="texte" type="password" name="passwordN" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-unlock"></i>
+                  <input class="texte" type="password" name="passwordN" placeholder="Nouveau mot de passe" class="input-field" minlengh="8" maxlength="16" required>
+                </div>
               </p>
               <p>
-                <label class="texte">Valider le nouveau mot de passe</label>
-                <input class="texte" type="password" name="passwordNN" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-unlock"></i>
+                  <input class="texte" type="password" name="passwordNN" placeholder="Valider le nouveau mot de passe" minlengh="8" maxlength="16" required>
+                </div>
               </p>
               <button type="submit" class="bouton" name="Valider"><span>Valider</span></button>
             </form>
