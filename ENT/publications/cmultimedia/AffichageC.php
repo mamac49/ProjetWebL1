@@ -36,7 +36,7 @@ function AffichageCahier($ID) {
     }
   }
 
-  return array($Txt, $Liens, $liste);
+  return array($liste);
 
 }
 
