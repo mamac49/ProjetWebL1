@@ -36,7 +36,7 @@ function Create($titre, $contenu) {
         $stmt = mysqli_stmt_execute();
       }
     } else {
-      echo 'Erreur d accès à la base de données - FIN'; }
+      echo 'Erreur d accès à la base de données - FIN' . mysqli_error($link); }
   } else {
     echo mysqli_error($link);
   }
