@@ -32,7 +32,7 @@ function AffichageCahier($ID) {
   $images = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_BOTH)) {
-      $images[$row["position"]] = "ImageContenu" . $row["idimage"];
+      $images[$row["position"]] = $row["idimage"];
     }
   }
   $liste = array();
@@ -43,7 +43,7 @@ function AffichageCahier($ID) {
     } elseif (array_key_exists($i, $Liens)) {
       $liste[$i] = $Liens[$i];
     } elseif (array_key_exists($i, $images)) {
-      $liste[$i] = $îmages[$i];
+      $liste[$i] = $images[$i];
     }
   }
 
