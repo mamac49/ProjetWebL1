@@ -35,9 +35,8 @@ h2 {
 .iconCrea {
   padding: 10px;
   color: white;
-  min-width: 50px;
+  min-width: 40px;
   text-align: center;
-  font-size: 1.5em;
 }
 
 /* Style the input fields */
