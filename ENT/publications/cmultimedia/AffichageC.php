@@ -10,6 +10,7 @@ function AffichageCahier($ID) {
 
   $sqlLiens = "SELECT *  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
   $sqlTxt = "SELECT *  FROM `texte` WHERE `idpublications`='$ID' ORDER BY `position`";
+  $sqlTxt = "SELECT *  FROM `image` WHERE `idpublications`='$ID' ORDER BY `position`";
 
   $result = mysqli_query($link, $sqlTxt);
   $Txt = array();
@@ -26,13 +27,23 @@ function AffichageCahier($ID) {
       $Txt[$row["position"]] = $row["data"];
     }
   }
+
+  $result = mysqli_query($link, $sqlLiens);
+  $images = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_BOTH)) {
+      $images[$row["position"]] = $row["data"];
+    }
+  }
   $liste = array();
 
-  for ($i=0; $i <= count($Txt) + count($Liens) ; $i++) {
+  for ($i=0; $i <= count($Txt) + count($Liens) + count($images) ; $i++) {
     if (array_key_exists($i, $Txt)) {
       $liste[$i] = $Txt[$i];
     } elseif (array_key_exists($i, $Liens)) {
       $liste[$i] = $Liens[$i];
+    } elseif (array_key_exists($i, $images)) {
+      $liste[$i] = $îmages[$i];
     }
   }
 
@@ -44,7 +55,7 @@ function AffichageCM($element) {
   $link = dbConnect();
 
   # On définit la requète
-  $sql = "SELECT * FROM `users` WHERE `mail`= (?)";
+  $sql = "SELECT * FROM `image` WHERE `data` = '$element'";
   # On la prépare
   $stmt = mysqli_prepare($link, $sql);
   # Si la requète ne s'est pas faite
