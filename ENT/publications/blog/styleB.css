@@ -69,3 +69,8 @@
 .commentairefield legend{
   text-align:right;
 }
+
+.commentaireblog{
+  width:50%;
+  float:right;
+}

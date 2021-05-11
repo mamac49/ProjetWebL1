@@ -10,8 +10,28 @@ function Delete($Contact) {
   } else {
     echo mysqli_error($link);
   }
+  $sql = "DELETE FROM `texte` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+  $sql = "DELETE FROM `image` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+  $sql = "DELETE FROM `liens` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+
   mysqli_query($link, "FLUSH `Publications`");
+  mysqli_query($link, "FLUSH `texte`");
+  mysqli_query($link, "FLUSH `image`");
+  mysqli_query($link, "FLUSH `liens`");
 }
+
 
 if ( isset($_POST['ValiderSupp'])) {
   $Cmulti = $_POST['Cmulti'];
@@ -44,9 +64,9 @@ if ($_SESSION["Connected"] == true) {
               <ul class="liste">
                 <?php
                 foreach (nbPub() as $x) {
-                  if (nature($x[0]) == "2") {
+                  if (nature($x[0])["nature"] == "2") {
                 ?>
-                  <li class="texte"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><i class="fas fa-book IcoBook"></i><br><?php echo titre($x[0]); ?></a></li>
+                  <li class="texte"><div class="chip"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><?php echo "<i class='". $matiere[nature($x[0])["matiere"]] ."'></i>"?></i><?php echo titre($x[0]); ?></a></div></li>
                 <?php
                   }
                 }
@@ -60,7 +80,7 @@ if ($_SESSION["Connected"] == true) {
                 <select name="Cmulti">
                   <?php
                   foreach (nbPub() as $x) {
-                    if (nature($x[0]) == "2") {
+                    if (nature($x[0])["nature"] == "2") {
                   ?>
                     <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                   <?php }} ?>

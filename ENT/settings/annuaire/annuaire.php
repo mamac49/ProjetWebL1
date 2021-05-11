@@ -8,22 +8,22 @@ if ($_SESSION["Connected"] == true) {
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
-    <link rel="stylesheet" href="styleA.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <script src="annuaire.js"></script>
-    <script src="/Projetwebl1/ENT/js/scroll.js">
-
-    </script>
+    <script src="/Projetwebl1/ENT/js/scroll.js"></script>
   </head>
+  
     <?php
       include ("../../base.php");
+      echo '<link rel="stylesheet" href="styleA.css">';
     ?>
 
 
@@ -31,16 +31,16 @@ if ($_SESSION["Connected"] == true) {
 
     <div class="site_container">
       <script src="annuaire.js"></script>
-        <div class="contenu">
-            <div class="Center_adap">
+        <div class="contenu_annuaire">
+            <div class="center_annuaire">
               <!-- les contacts seront listé avec en premier le professeur
                 et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
-              <h2 class="texte">Liste des contacts</h2>
+              <h2 class="titre_liste texte">Liste des contacts</h2>
               <ul class="contact_list">
               <?php
                 foreach (nombre() as $x) {
                   $contact_name = info($x[0])['prenom'] . " " . info($x[0])['nom'];
-                  $contact_id = "contact" . $x[0];
+                  $contact_id = "contact_" . $x[0];
                   $mail = info($x[0])["mail"];
               ?>
                 <li class="contact">
@@ -53,7 +53,7 @@ if ($_SESSION["Connected"] == true) {
               </ul>
             </div>
       </div>
-      </div>
+    </div>
 
   </div>
 </body>
@@ -64,4 +64,3 @@ if ($_SESSION["Connected"] == true) {
   header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>
-

@@ -10,7 +10,7 @@ function AffichageCahier($ID) {
 
   $sqlLiens = "SELECT *  FROM `liens` WHERE `idpublications`='$ID' ORDER BY `position`";
   $sqlTxt = "SELECT *  FROM `texte` WHERE `idpublications`='$ID' ORDER BY `position`";
-  $sqlTxt = "SELECT *  FROM `image` WHERE `idpublications`='$ID' ORDER BY `position`";
+  $sqlImg = "SELECT *  FROM `image` WHERE `idpublications`='$ID' ORDER BY `position`";
 
   $result = mysqli_query($link, $sqlTxt);
   $Txt = array();
@@ -28,7 +28,7 @@ function AffichageCahier($ID) {
     }
   }
 
-  $result = mysqli_query($link, $sqlLiens);
+  $result = mysqli_query($link, $sqlImg);
   $images = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_BOTH)) {
@@ -43,10 +43,9 @@ function AffichageCahier($ID) {
     } elseif (array_key_exists($i, $Liens)) {
       $liste[$i] = $Liens[$i];
     } elseif (array_key_exists($i, $images)) {
-      $liste[$i] = $îmages[$i];
+      $liste[$i] = $images[$i];
     }
   }
-
   return $liste;
 }
 
@@ -65,7 +64,7 @@ function AffichageCM($element) {
       mysqli_close($link);
   }
   # Sinon on définit le paramètre le requète
-  mysqli_stmt_bind_param($stmt, "i", $element);
+  mysqli_stmt_bind_param($stmt, 'i', $element);
   # On exécute le requête
   if (mysqli_stmt_execute($stmt)) {
     # On récupère le résultat
@@ -114,10 +113,14 @@ if ($_SESSION["Connected"] == true) {
                 $track = str_replace("https://www.deezer.com/us/track/", "", $line); ?>
                 <iframe title='deezer-widget' src=<?php print 'https://widget.deezer.com/widget/dark/track/'. $track .'?tracklist=false' ?> width='400' height='300' frameborder='0' allowtransparency='true' allow='encrypted-media; clipboard-write'></iframe>
               <?php
-              } else {
+            } elseif (substr_count($line, "https://youtu.be/") == 1) {
+                $video = str_replace("https://youtu.be/", "https://www.youtube.com/embed/", $line); ?>
+                <iframe width="450" height="330" src="<?php echo $video ?>" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            <?php
+          } else {
                 echo "<a href=". $line .">". $line ."</a><br>";
                 }
-            } elseif (substr_count($element, "ImageContenu") == 1) {
+            } elseif (substr_count($line, "ImageContenu") == 1) {
               $line = str_replace("ImageContenu", "", $line); ?>
                 <img src="<?php echo ' data:image/png;base64,' . base64_encode(AffichageCM($line)) . ' '?>" alt="Image" class="ImgCM">
             <?php

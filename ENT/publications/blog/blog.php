@@ -67,16 +67,17 @@ if ($_SESSION["Connected"] == true) {
           <div class="Center">
             <h2 class="texte">Liste des sujets</h2>
             <ul class="liste_sujets">
+              <li class="espaces"><hr></li>
               <?php
               foreach (nbPub() as $i){
-                if (nature($i[0]) == "1"){
+                if (nature($i[0])["nature"] == "1"){
                   if (textevide($i[0])!=="" OR $_SESSION["Admin"] == true){
                   $titre=titre($i[0]);
                   $auteur=auteur($i[0]);
                   $date=jour($i[0]);
               ?>
               <li class="sujets"><a href="AffichageB.php?id=<?php print $i[0]?>"><i class="fas fa-robot icone"></i> <?php echo $titre; ?>
-              </a> <span class="texte">Edité par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
+              </a> <span class="texte">Créé par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
               <li class="espaces"><hr></li>
               <?php
                   }
@@ -93,7 +94,7 @@ if ($_SESSION["Connected"] == true) {
               <select name="BlogD">
                 <?php
               foreach (nbPub() as $x){
-                  if (nature($x[0]) == "1") {
+                  if (nature($x[0])["nature"] == "1") {
                 ?>
                   <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
                 <?php }} ?>

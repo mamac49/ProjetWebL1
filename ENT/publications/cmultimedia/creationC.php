@@ -5,34 +5,35 @@ error_reporting(E_ALL);
 
 include ("../../fonc.php");
 
-function Create($titre, $contenu) {
+function Create($titre, $matiere, $contenu) {
   $link = dbConnect();
 
   $date = date("Y-m-d");
   $IDu = $_SESSION['ID'];
 
-  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', '$IDu')";
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`, `matiere`) VALUES ('$titre', '$date', '2', '$IDu', '$matiere')";
   if (mysqli_query($link, $sql)) {
     $sqlID = max(max(nbPub()));
     $pos = 0;
 
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
-        $nb = array_key_last(nombreTxt("liens"))+1;
+        $nb = array_key_last(nombreTxt("liens"))+2;
         $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } elseif (substr_count($element, "ImageContenu") == 1) {
-        $nb = array_key_last(nombreTxt("image"))+1;
-        $line = str_replace("ImageContenu", "", $line);
-        $img = mysqli_real_escape_string($link, $element);
+        $nb = array_key_last(nombreTxt("image"))+2;
+        var_dump(array_key_last(nombreTxt("image")));
+        $line = str_replace("ImageContenu", "", $element);
+        $img = mysqli_real_escape_string($link, $line);
         $sqlp = "INSERT INTO `image` (`idimage`, `data`, `position`, `idpublications`) VALUES ('$nb', '$img', '$pos', '$sqlID')";
       } else {
-        $nb = array_key_last(nombreTxt("texte"))+1;
+        $nb = array_key_last(nombreTxt("texte"))+2;
         $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
       $pos++;
       if (mysqli_query($link, $sqlp)) {
         echo "succès";
-        header("Location: cmedia.php");
+        /*header("Location: cmedia.php");*/
       } else { echo mysqli_error($link);}
     }
   } else {
@@ -42,6 +43,7 @@ function Create($titre, $contenu) {
 
 if (isset($_POST['Valider'])) {
   $titre = securisation($_POST['titre']);
+  $matiere = securisation($_POST['matiere']);
   $contenu = array();
   $nb = 1;
   while (isset($_POST['line_' . $nb]) or isset($_FILES['line_' . $nb]['tmp_name'])) {
@@ -49,7 +51,7 @@ if (isset($_POST['Valider'])) {
     $contenu[] = $temp;
     $nb++;
   }
-  Create($titre, $contenu);
+  Create($titre, $matiere, $contenu);
 }
 
 if ($_SESSION["Connected"] == true) {
@@ -65,6 +67,7 @@ if ($_SESSION["Connected"] == true) {
     <link rel="stylesheet" href="styleC.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
+    <script src="/Projetwebl1/ENT/js/scroll.js"></script>
     </head>
   <?php
       include ("../../base.php");
@@ -80,6 +83,20 @@ if ($_SESSION["Connected"] == true) {
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
       <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
+      <select name="matiere">
+        <option value="Francais">Français</option>
+        <option value="Maths">Mathématiques</option>
+        <option value="Sciences">Science</option>
+        <option value="Espace">Espace</option>
+        <option value="Temps">Temps</option>
+        <option value="Musique">Musique</option>
+        <option value="Arts">Arts</option>
+        <option value="Anglais">Anglais</option>
+        <option value="EPS">EPS</option>
+        <option value="Contes">Contes</option>
+        <option value="Rituels">Rituels</option>
+        <option value="Education civique">Education civique</option>
+      </select>
       <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
     </div>
   </form>

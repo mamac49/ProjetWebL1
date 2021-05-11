@@ -1,13 +1,60 @@
-.PPannuaire {
+
+
+.contenu_annuaire {
+  font-size: 75%;
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  border: 1rem solid;
+  border-radius: .5rem 4rem 4rem 4rem;
+}
+
+.center_annuaire{
+  display: block;
+  text-align : center;
+}
+
+.titre_liste{
+  font-size: 200%;
+  text-decoration: underline;
+
+  color: --font-color;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.PPannuaire {
   width: 75px;
   height: 75px;
   border-radius: 5000px;
   border: 1px black solid;
 }
 
-/*Pour les écrans de plus de 750pixels
+Pour les écrans de plus de 750pixels
 
-/*html*/
+html
 
 .task {
   display: flex;
@@ -56,7 +103,7 @@
   margin-bottom: 25px;
 }
 
-/*menu contextuel
+menu contextuel
 
 .context_menu {
   width: 260px;

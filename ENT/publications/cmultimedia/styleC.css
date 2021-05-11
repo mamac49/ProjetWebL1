@@ -13,6 +13,33 @@
   font-size: 1.2em;
 }
 
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  margin-top: 15px;
+  padding-left: 0px;
+  transition: 300ms background-color ease-in-out;
+  color: black;
+}
+
+.chip i {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.chip:hover {
+  background-color: rgb(100, 100, 100);
+}
+
+
 .liste {
   display: flex;
   flex-direction: row;
@@ -24,11 +51,14 @@
 .Copybook i {
   font-size: 2em;
   margin: 5px;
+  text-align: center;
 }
 
 .Copybook {
   transform: scale(1);
   font-size: 1em;
+  text-align: center;
+  text-decoration: none;
   transition: transform 300ms ease-in-out;
   transition: font-size 300ms ease-in-out;
 }
@@ -38,9 +68,15 @@
   transform: scale(1.15);
 }
 
-.Copybook:visited {
+.chip a:visited {
   text-decoration: none;
 }
+
+.chip a{
+  text-decoration: none;
+}
+
+
 
 .Creation {
   margin: 10px;
@@ -113,4 +149,9 @@ textarea{
 .bouton:hover span:after {
   top : -5px;
   right: -25px;
+}
+
+.AdminMulti {
+  position: absolute;
+  bottom: 15px;
 }

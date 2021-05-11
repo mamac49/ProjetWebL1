@@ -361,3 +361,11 @@ textarea {
   justify-content: space-between;
   padding-right: 15px;
 }
+
+.code {
+  font-size: 4em;
+}
+
+.IconeProfil {
+  font-size: 1.8em;
+}
