@@ -68,8 +68,9 @@ if ($_SESSION["Connected"] == true) {
           foreach (AffichageCahier($IDcahier) as $line) {
             if (substr_count($line, "http") == 1) {
               if (substr_count($line, "https://www.deezer.com/") == 1) {
-                $track = str_replace("https://www.deezer.com/us/track/", "", $line);
-                echo "<iframe title='deezer-widget' src='https://widget.deezer.com/widget/dark/track/'. $track .'?tracklist=false' width='400' height='300' frameborder='0' allowtransparency='true' allow='encrypted-media; clipboard-write'></iframe>";
+                $track = str_replace("https://www.deezer.com/us/track/", "", $line); ?>
+                <iframe title='deezer-widget' src=<?php 'https://widget.deezer.com/widget/dark/track/'. $track .'?tracklist=false' ?> width='400' height='300' frameborder='0' allowtransparency='true' allow='encrypted-media; clipboard-write'></iframe>";
+              <?php
               } else {
                 echo "<a href=". $line .">". $line ."</a><br>";
               }
