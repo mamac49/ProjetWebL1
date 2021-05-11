@@ -23,6 +23,7 @@ function AffichageCahier($ID) {
   $Liens = array();
   if ($result) {
     while($row = $result->fetch_array(MYSQLI_NUM)) {
+      var_dump($row);
       $Liens[$row[1]] = $row[0];
     }
   }
