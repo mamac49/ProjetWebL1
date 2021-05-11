@@ -19,7 +19,7 @@ function Create($titre, $matiere, $contenu) {
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
         $nb = array_key_last(nombreTxt("liens"))+2;
-        $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
+        $sqlp = "INSERT INTO `liens` (`idliens`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } elseif (substr_count($element, "ImageContenu") == 1) {
         $nb = array_key_last(nombreTxt("image"))+2;
         var_dump(array_key_last(nombreTxt("image")));
