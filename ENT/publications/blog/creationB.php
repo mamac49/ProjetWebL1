@@ -24,11 +24,10 @@ if ($_SESSION["Connected"] == true) {
   <head>
     <meta charset="utf-8">
     <title>Nouveau blog</title>
-    <link rel="stylesheet" href="styleB.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
-    <link rel="stylesheet" href="styleC.css">
-    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
+    <link rel="stylesheet" href="styleB.css">
+    <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
