@@ -10,13 +10,11 @@ function Save($type, $message) {
   $date = date("Y-m-d H:i:s");
   $id = $_SESSION["ID"];
 
-  var_dump(nombreAvis());
-
   $nb = array_key_last(nombreAvis())+1;
 
   $sql = "INSERT INTO `avis` (`IDavis`, `type`, `message`, `date`, `iduser`) VALUES ('$nb', '$type', '$message', '$date', '$id')";
   if (mysqli_query($link, $sql)) {
-    echo "succès";
+    echo  "<script>console.log('succès')</script>"
   } else {
       echo mysqli_error($link);
   }
