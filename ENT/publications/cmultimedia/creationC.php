@@ -18,7 +18,7 @@ function Create($titre, $contenu) {
 
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
-        $nb = nombreTxt("image")  +1;
+        $nb = nombreTxt("image");
         $sqlp = "INSERT INTO `liens` (`idlien`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } else {
         $nb = nombreTxt("texte") +1;

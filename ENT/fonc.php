@@ -67,7 +67,7 @@ function nombreTxt($table) {
       $IDdata[] = $row;
     }
   }
-  return count($IDdata);
+  return max(max($IDdata));
 }
 
 function info($x) {
