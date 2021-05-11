@@ -69,7 +69,7 @@ if ($_SESSION["Connected"] == true) {
             if (str_contains($line, "http")) {
               echo "<a href=". $line .">". $line ."</a>";
             } else {
-              echo "<pre>." $line ".</pre>";
+              echo "<pre>". $line ."</pre>";
             }} ?>
 
       </div>
