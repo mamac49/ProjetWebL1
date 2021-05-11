@@ -20,14 +20,14 @@ if ($_SESSION["Connected"] == "True") {
     <?php
       include '../base.php';
     ?>
-    <div class="Center texte">
+    <div class="Center_adap texte">
       <h2>Mentions légales</h2>
         <ul class="texte">
-          <li>Antoine Beunas</li>
-          <li><i class="fab fa-discord icone"></i> Benjamin Humbert</li>
-          <li>Enzo Creuzet</li>
-          <li><i class="fab fa-steam icone"></i> Liam Kern</li>
-          <li><i class="fab fa-linux icone"></i> Mattéo Langlois</li>
+          <li><i class="fas fa-user-circle IconeProfil"></i>Antoine Beunas</li>
+          <li><i class="fab fa-discord IconeProfil"></i> Benjamin Humbert</li>
+          <li><i class="fas fa-cocktail IconeProfil"></i>Enzo Creuzet</li>
+          <li><i class="fab fa-steam IconeProfil"></i> Liam Kern</li>
+          <li><i class="fab fa-linux IconeProfil"></i> Mattéo Langlois</li>
         </ul>
       <h2>Sources</h2>
         <p>Icônes : <a href="https://fontawesome.com/icons?d=gallery&p=2&m=free">fontawesome</a></p>
