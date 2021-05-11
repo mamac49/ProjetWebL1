@@ -77,11 +77,11 @@ function addLine(lineType) {
   console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
   console.log('image area = ' + inputImage);*/
-  console.log('Line ' + line + ' added.');
+
   textArea = textArea.replace('line_' + line, 'line_' + (line + 1));
   inputImage = inputImage.replace('line_' + line, 'line_' + (line + 1));
   videoArea = videoArea.replace('line_' + line, 'line_' + (line += 1));
-
+  console.log('Line ' + line + ' added.');
   /*logs tests
   console.log('text area = ' + textArea);
   console.log('image area = ' + inputImage);
