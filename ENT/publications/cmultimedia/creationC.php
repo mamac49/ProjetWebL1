@@ -6,7 +6,7 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 
 function Create($titre, $contenu) {
-  $link = bdConnect();
+  $link = dbConnect();
 
   $date = date("m");
   $IDu = $_SESSION['ID'];
