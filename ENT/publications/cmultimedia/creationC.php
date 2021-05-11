@@ -18,16 +18,16 @@ function Create($titre, $matiere, $contenu) {
 
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
-        $nb = array_key_last(nombreTxt("liens"))+2;
+        $nb = array_key_last(nombreTxt("liens"))+1;
         $sqlp = "INSERT INTO `liens` (`idliens`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } elseif (substr_count($element, "ImageContenu") == 1) {
-        $nb = array_key_last(nombreTxt("image"))+2;
+        $nb = array_key_last(nombreTxt("image"))+1;
         var_dump(array_key_last(nombreTxt("image")));
         $line = str_replace("ImageContenu", "", $element);
         $img = mysqli_real_escape_string($link, $line);
         $sqlp = "INSERT INTO `image` (`idimage`, `data`, `position`, `idpublications`) VALUES ('$nb', '$img', '$pos', '$sqlID')";
       } else {
-        $nb = array_key_last(nombreTxt("texte"))+2;
+        $nb = array_key_last(nombreTxt("texte"))+1;
         $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
       var_dump(nombreTxt("texte"));
