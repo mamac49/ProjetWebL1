@@ -11,7 +11,7 @@ function Create($titre, $contenu) {
   $date = date("Y-m-d");
   $IDu = $_SESSION['ID'];
 
-  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', 'IDu')";
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '2', '$IDu')";
   if (mysqli_query($link, $sql)) {
 
     $sqlID = max(max(nbPub()));
