@@ -50,6 +50,6 @@ h2 {
   border: 2px solid;
 }
 
-.input-container[placeholder] {
+::placeholder {
   text-align: center;
 }
