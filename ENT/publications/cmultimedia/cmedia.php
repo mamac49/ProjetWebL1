@@ -10,8 +10,28 @@ function Delete($Contact) {
   } else {
     echo mysqli_error($link);
   }
+  $sql = "DELETE FROM `texte` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+  $sql = "DELETE FROM `image` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+  $sql = "DELETE FROM `liens` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+
   mysqli_query($link, "FLUSH `Publications`");
+  mysqli_query($link, "FLUSH `texte`");
+  mysqli_query($link, "FLUSH `image`");
+  mysqli_query($link, "FLUSH `liens`");
 }
+
 
 if ( isset($_POST['ValiderSupp'])) {
   $Cmulti = $_POST['Cmulti'];
