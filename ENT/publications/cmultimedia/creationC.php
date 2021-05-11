@@ -15,7 +15,7 @@ if (isset($_POST['Valider'])) {
   $contenu = array();
   $nb = 0;
   while (isset($_POST['line_' . $nb])) {
-    $temp = $_POST['line_' . $nb;
+    $temp = $_POST['line_' . $nb];
     $contenu[] = securisation($temp);
   }
   Create($titre, $contenu);
