@@ -22,6 +22,9 @@
   border-radius: 25px;
   background-color: #f1f1f1;
   margin-top: 15px;
+  padding-left: 0px;
+  transition: 300ms background-color ease-in-out;
+  color: black;
 }
 
 .chip i {
@@ -30,6 +33,10 @@
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
+
+.chip:hover {
+  background-color: rgb(100, 100, 100);
 }
 
 
@@ -61,9 +68,15 @@
   transform: scale(1.15);
 }
 
-.Copybook a:visited {
+.chip a:visited {
   text-decoration: none;
 }
+
+.chip a{
+  text-decoration: none;
+}
+
+
 
 .Creation {
   margin: 10px;
