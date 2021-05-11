@@ -18,9 +18,11 @@ function Create($titre, $contenu) {
 
     foreach ($contenu as $element) {
       if (filter_var($element, FILTER_VALIDATE_URL)) {
-        $sqlp = "INSERT INTO `liens` (`data`, `position`, `idpublications`) VALUES ('$element', '$pos', '$sqlID')";
+        $nb = nombreTxt("image");
+        $sqlp = "INSERT INTO `liens` (`data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       } else {
-        $sqlp = "INSERT INTO `texte` (`data`, `position`, `idpublications`) VALUES ('$element', '$pos', '$sqlID')";
+        $nb = nombreTxt("texte");
+        $sqlp = "INSERT INTO `texte` (`data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
       }
       $pos++;
       if (mysqli_query($link, $sql)) {

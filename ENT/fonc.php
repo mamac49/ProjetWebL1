@@ -57,6 +57,19 @@ function nombre() {
   return $IDUser;
 }
 
+function nombreTxt($table) {
+  $link = dbConnect();
+  $sql = "SELECT '$table' FROM `data`";
+  $result = mysqli_query($link, $sql);
+  $IDdata = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDdata[] = $row;
+    }
+  }
+  return count($IDdata);
+}
+
 function info($x) {
   $link = dbConnect();
   $sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
