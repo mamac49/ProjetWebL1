@@ -104,7 +104,8 @@ if ($_SESSION["Connected"] == true) {
                 <iframe title='deezer-widget' src=<?php print 'https://widget.deezer.com/widget/dark/track/'. $track .'?tracklist=false' ?> width='400' height='300' frameborder='0' allowtransparency='true' allow='encrypted-media; clipboard-write'></iframe>
               <?php
               } else {
-                echo "<a href=". $line .">". $line ."</a><br>"; }
+                echo "<a href=". $line .">". $line ."</a><br>";
+                }
             } elseif (substr_count($element, "/tmp/php") { ?>
                 <img src="<?php echo ' data:image/png;base64,' . base64_encode(AffichageCM($element)) . ' '?>" alt="Image" class="ImgCM">
             <?php
