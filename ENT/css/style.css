@@ -678,7 +678,8 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 /* Cahier Multimédia */
