@@ -19,7 +19,7 @@ function SuppressionCom($id) {
     header("Location: AffichageB.php?id=". $IDPubli);
   } else {
     echo mysqli_error($link);
-    header("Location: AffichageB.php?id=". $IDPubli;
+    header("Location: AffichageB.php?id=". $IDPubli);
   }
 }
 
