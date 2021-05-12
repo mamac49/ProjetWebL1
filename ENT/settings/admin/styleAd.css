@@ -13,11 +13,6 @@
     text-align: center;
 }
 
-.Center {
-  display: flex;
-  flex-direction: row;
-}
-
 .Séparer{
   margin-top: 20px;
 }
@@ -65,9 +60,4 @@
 .fermer:hover {
   color: red;
   cursor: pointer;
-}
-
-.Center_adap {
-  display: flex;
-  flex-direction: row;
 }

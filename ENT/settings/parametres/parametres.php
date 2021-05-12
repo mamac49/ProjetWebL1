@@ -88,9 +88,8 @@ if ($_SESSION["Connected"] == true) {
   <?php
       include ("../../base.php");
   ?>
-      <div class="Center">
+      <div class="Center_apad has_cols">
         <h1 class="texte titre_p">Paramètres</h1>
-        <div class="page">
           <div class="colonnes">
             <form method="POST" name="password">
               <p>
@@ -136,7 +135,6 @@ if ($_SESSION["Connected"] == true) {
               <button type="submit" class="bouton" name="ValiderTheme"><span>Valider le thème</span></button>
             </form>
           </div>
-        </div>
       </div>
   </div>
 </div>

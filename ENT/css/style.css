@@ -124,7 +124,6 @@
   margin-left: 25%;
   position: relative;
   z-index: 1
-
 }
 
   .Centre_main {
@@ -369,4 +368,9 @@ textarea {
 .IconeProfil {
   font-size: 1.8em;
   padding-right: 10px;
+}
+
+.has_cols {
+  display: flex;
+  flex-direction: row;
 }

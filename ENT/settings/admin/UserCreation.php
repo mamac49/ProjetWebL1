@@ -68,7 +68,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
       include ("../../base.php");
     ?>
 
-        <div class="Center_adap">
+        <div class="Center_adap has_cols">
 
             <form action="UserCreation.php" method="POST" class="Formulaire" enctype="multipart/form-data">
                 <h2 class="texte">Création d'utilisateur</h2>

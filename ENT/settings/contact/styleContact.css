@@ -69,11 +69,6 @@
   cursor: pointer;
 }
 
-.Center_adap {
-  display: flex;
-  flex-direction: row;
-}
-
 textarea {
   width: 90%;
 }
