@@ -46,7 +46,7 @@ if ($_SESSION["Connected"] == "True") {
     ?>
 
     <div class="Centre_main">
-      <div class="colonne">
+      <div class="has_cols">
         <!--affiche les anniversaires du mois actuel-->
         <div class="Anniversaire">
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
