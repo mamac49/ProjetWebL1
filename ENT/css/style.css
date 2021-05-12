@@ -651,24 +651,16 @@ textarea {
 }
 
 .debut {
-  display: flex;
+  display: inline;
   flex-direction: row;
   justify-content: space-between;
   width: 45%;
 }
 
-.contact-test {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 45%;  
+.debut img {
+  float: left;
 }
 
-.midContact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 /* ---------------------------------------- */
 /* Fichier */
