@@ -11,7 +11,7 @@
 	text-align: center;
 }
 
-.infos_basiques {
+.contact {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;

@@ -61,21 +61,6 @@ if ($_SESSION["Connected"] == true) {
                 <button class="infos_button" onclick="copy(<?php echo $x[0]; ?>)"><i class="fas fa-envelope"></i></button>
                 <textarea id="<?php echo 'ToCopy' . $x[0]; ?>" class="AreaMail"><?php echo $mail; ?></textarea>
               </div>
-              <!--<div class="line_block_annuaire">
-                <button type="button" id="add_com" onclick="document.getElementById('infos_block').style.display='block'" class="infos_button">Informations</button>
-              </div>
-            </div>
-            <div class="infos_detaillee">
-              <div id="infos_block" class="modal">
-                <div class="modal-content animate" method="POST">
-                  <span onclick="document.getElementById('infos_block').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
-                    <div class="container">
-                      <div id="myInfos-<?php echo $x[0];?>" class="contenu_infos_detaillee">
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>-->
           </li>
         <?php
           }
