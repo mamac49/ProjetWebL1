@@ -109,7 +109,7 @@ if ($_SESSION["Connected"] == true) {
               <p>
                 <div class="input-container">
                   <i class="fas fa-unlock iconCrea"></i>
-                  <input class="texte" type="password" name="passwordNN" placeholder="Valider le nouveau mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
+                  <input class="texte" type="password" name="passwordNN" placeholder="Répéter le nouveau mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
                 </div>
               </p>
               <button type="submit" class="bouton" name="Valider"><span>Valider</span></button>
