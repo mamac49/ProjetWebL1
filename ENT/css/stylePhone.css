@@ -218,7 +218,7 @@
   padding: 10px;
   padding-top: 25px;
   text-align: center;
-  height: 176.5px;
+  height: auto;
 }
 
 .qwant form {
@@ -239,7 +239,7 @@
 }
 
 .qwant img {
-  width: 200px;
+  width: 300px;
   padding-bottom: 25px;
 }
 
