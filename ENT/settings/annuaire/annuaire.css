@@ -1,0 +1,83 @@
+
+/* ------------------------------------------ */
+/* Annuaire */
+
+	.center_rem {
+	font-size: 100%;
+  }
+  
+  .titre_liste{
+	font-size: 2rem;
+	color: var(--font-color);
+	text-align: center;
+  }
+  
+  .PPannuaire {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 40rem;
+	border: 0.1rem black solid;
+  }
+  
+  /* Style buttons */
+  .btn-info {
+   border: none; /* Remove borders */
+   padding: 0.5rem 1.5rem; /* Some padding */
+   font-size: 1.5rem; /* Set a font size */
+   cursor: pointer; /* Mouse pointer on hover */
+   width: 3rem;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+  }
+  
+  .btn-info i {
+	/*font-size: 2em;*/
+	font-size: 1.5rem;
+  }
+  
+  /* Darker background on mouse-over */
+  
+  /* Dropdown Button */
+  .dropbtn {
+	padding: 16px;
+	font-size: 16px;
+	height: 3rem;
+	padding: revert;
+	border: none;
+	cursor: pointer;
+  }
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  
+  .contact {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+  }
+  
+  .debut {
+	display: inline;
+	/*padding: 0 25px;
+	height: 50px;
+	line-height: 50px;*/
+	padding: 0rem 2.5rem;
+	height: 4rem;
+	line-height: 4rem;
+  }
+  
+  .line_block_annuaire {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 4rem;
+  }
+  
+  .hrcontact {
+	width: 100%;
+  }
+  
+  .user_name {
+	margin-top: auto;
+	margin-bottom: auto;
+  }
