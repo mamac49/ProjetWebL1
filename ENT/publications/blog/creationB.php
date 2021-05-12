@@ -71,15 +71,16 @@ if ($_SESSION["Connected"] == true) {
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <script src="/Projetwebl1/ENT/js/scroll.js"></script>
+    <script src="/Projetwebl1/ENT/js/blog.js"></script>
   </head>
 <!--ajout de la méthode PUT-->
 <div class="Center_adap Saisie">
   <form action="creationB.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
-    <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
+    <ul class="publicationsBlog" id="publications_blog">
 
     </ul>
-    <div class="boutonsCahierMultimedia">
+    <div class="boutonsblog">
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
       <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
