@@ -45,6 +45,7 @@ if ($_SESSION["Connected"] == "True") {
       include 'base.php';
     ?>
 
+  <div class="Site_mid">
     <div class="Centre_main has_cols">
       <div class="colonne">
         <!--affiche les anniversaires du mois actuel-->
@@ -81,6 +82,7 @@ if ($_SESSION["Connected"] == "True") {
             <a href="/Projetwebl1/ENT/publications/blog/blog.php" class="shortcut"><i class="fas fa-book-open racicone"></i><br><p>Blogs</p></a>
           </div>
       </div>
+    </div>
     </div>
   </body>
 </html>
