@@ -6,25 +6,51 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 include ("../../base.php");
 
-function Create($titre) {
+function Create($titre, $matiere, $contenu) {
   $link = dbConnect();
 
   $date = date("Y-m-d");
   $IDu = $_SESSION['ID'];
 
-  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '1', '$IDu')";
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`, `matiere`) VALUES ('$titre', '$date', '1', '$IDu', '$matiere')";
   if (mysqli_query($link, $sql)) {
-    echo "succès";
+    $sqlID = max(max(nbPub()));
+    $pos = 0;
+
+    foreach ($contenu as $element) {
+      if (filter_var($element, FILTER_VALIDATE_URL)) {
+        $nb = array_key_last(nombreTxt("liens"))+1;
+        $sqlp = "INSERT INTO `liens` (`idliens`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
+      } elseif (substr_count($element, "ImageContenu") == 1) {
+        $nb = array_key_last(nombreTxt("image"))+1;
+        $line = str_replace("ImageContenu", "", $element);
+        $img = mysqli_real_escape_string($link, $line);
+        $sqlp = "INSERT INTO `image` (`idimage`, `data`, `position`, `idpublications`) VALUES ('$nb', '$img', '$pos', '$sqlID')";
+      } else {
+        $nb = array_key_last(nombreTxt("texte"))+1;
+        $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
+      }
+      $pos++;
+      if (mysqli_query($link, $sqlp)) {
+        echo "succès";
+      } else { echo mysqli_error($link);}
+    }
   } else {
-    echo 'Erreur d accès à la base de données - FIN' . mysqli_error($link);
-  }
+    echo 'Erreur d accès à la base de données - FIN' . mysqli_error($link); }
 }
 
 
 if (isset($_POST['Valider'])) {
   $titre = securisation($_POST['titre']);
-  Create($titre);
-}
+  $matiere = securisation($_POST['matiere']);
+  $contenu = array();
+  $nb = 1;
+  while (isset($_POST['line_' . $nb]) or isset($_FILES['line_' . $nb]['tmp_name'])) {
+    $temp = isset($_POST['line_' . $nb]) ? $_POST['line_' . $nb] : "ImageContenu" . file_get_contents($_FILES['line_' . $nb]['tmp_name']);
+    $contenu[] = $temp;
+    $nb++;
+  }
+  Create($titre, $matiere, $contenu);
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -44,18 +70,34 @@ if ($_SESSION["Connected"] == true) {
     <script src="/Projetwebl1/ENT/js/scroll.js"></script>
   </head>
 <!--ajout de la méthode PUT-->
-  <input type="hidden" name="_METHOD" value="PUT"/>
+<div class="Center_adap Saisie">
+  <form action="creationC.php" method="POST" enctype="multipart/form-data">
+    <input type="text" name="titre" placeholder="Titre du cahier" >
+    <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
-  <div class="Center_adap">
-    <form class="" action="creationB.php" method="POST" enctype="multipart/form-data">
-      <input type="text" name="titre" placeholder="Titre du blog" >
-      <ul class="publicationsBlog" id="publications_blog">
-
-      </ul>
-      <button name="create" class="bouton" method="PUT"><span>Ajouter une case </span></button>
+    </ul>
+    <div class="boutonsCahierMultimedia">
+      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
+      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
+      <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
+      <select name="matiere">
+        <option value="Francais">Français</option>
+        <option value="Maths">Mathématiques</option>
+        <option value="Sciences">Science</option>
+        <option value="Espace">Espace</option>
+        <option value="Temps">Temps</option>
+        <option value="Musique">Musique</option>
+        <option value="Arts">Arts</option>
+        <option value="Anglais">Anglais</option>
+        <option value="EPS">EPS</option>
+        <option value="Contes">Contes</option>
+        <option value="Rituels">Rituels</option>
+        <option value="Education civique">Education civique</option>
+      </select>
       <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
-    </form>
-  </div>
+    </div>
+  </form>
+</div>
 </html>
 
 <?php
