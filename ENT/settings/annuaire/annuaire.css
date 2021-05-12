@@ -19,25 +19,7 @@
 	border: 0.1rem black solid;
   }
   
-  /* Style buttons */
-  .btn-info {
-   border: none; /* Remove borders */
-   padding: 0.5rem 1.5rem; /* Some padding */
-   font-size: 1.5rem; /* Set a font size */
-   cursor: pointer; /* Mouse pointer on hover */
-   width: 3rem;
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-  }
-  
-  .btn-info i {
-	/*font-size: 2em;*/
-	font-size: 1.5rem;
-  }
-  
-  /* Darker background on mouse-over */
-  
+
   /* Dropdown Button */
   .dropbtn {
 	padding: 16px;
