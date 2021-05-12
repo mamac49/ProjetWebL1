@@ -31,7 +31,6 @@ if ($_SESSION["Connected"] == true) {
   <body onload="move_menu_sandwich(); detect_click();">
 
     <div class="site_container">
-      <script src="annuaire.js"></script>
           <div class="Center_adap">
             <!-- les contacts seront listé avec en premier le professeur
               et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
