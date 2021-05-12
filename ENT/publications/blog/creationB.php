@@ -77,13 +77,13 @@ if ($_SESSION["Connected"] == true) {
 <div class="Center_adap Saisie">
   <form action="creationB.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
-    <ul class="publicationsBlog" id="publications_blog">
+    <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
     </ul>
-    <div class="boutonsblog">
-      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
-      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
-      <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
+    <div class="boutonsCahierMultimedia">
+      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addTextB()"><span>Ajouter un texte</span></button>
+      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImageB()"><span>Ajouter une image</span></button>
+      <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideoB()"><span>Ajouter une vidéo</span></button>
       <select name="matiere">
         <option value="Francais">Français</option>
         <option value="Maths">Mathématiques</option>

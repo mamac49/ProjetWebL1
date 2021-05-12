@@ -1,6 +1,6 @@
 function getNbLines() {
-  var saisie = document.getElementById("textarea_blog");
-  var publications = document.getElementById("publicationsBlog");
+  var saisie = document.getElementById("textarea_cahier_multimedia");
+  var publications = document.getElementById("publications_cahier_multimedia");
   publications.value = saisie.nb_max;
 }
 
@@ -12,25 +12,25 @@ function getNbLines() {
   -inputImage : template du dépot d'image
   -line : ligne de la zone
   -publicationCahierMultimedia : liste où sont affichés les zones de saisie*/
-  textArea = '<textarea name="line_0" class="texteblog blog-area" id="text_blog"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
-  inputImage = '<input name="line_0" class="imageblog" type="file" id="image_blog" accept="image/*" required>';
-  videoArea = '<input name="line_0" type="url" class="videoBlog videoArea" id="video_cahier_multimedia" title="video" rows="8" cols="80" resize="none" create="false" required=""></videoarea>';
+  textArea = '<textarea name="line_0" class="texteCahierMulimedia CM-area" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
+  inputImage = '<input name="line_0" class="imageCahierMulimedia" type="file" id="image_cahier_multimedia" accept="image/*" required>';
+  videoArea = '<input name="line_0" type="url" class="videoCahierMulimedia videoArea" id="video_cahier_multimedia" title="video" rows="8" cols="80" resize="none" create="false" required=""></videoarea>';
   line = 0;
 
-function addLine(lineType) {
-  var publicationBlog = document.getElementById("publicationsBlog");
+function addLineB(lineType) {
+  var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
 
   /*vérifie si l'on a commencé par un texte*/
   if (line == 0) {
-    if (publicationBlog.innerHTML.indexOf(textArea == -1) && lineType == 'text') {
+    if (publicationCahierMultimedia.innerHTML.indexOf(textArea == -1) && lineType == 'text') {
       /*DEBUT DU MONDE !!!*/
     } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
-    else if (publicationBlog.innerHTML.indexOf(textArea == -1) && lineType == 'image') {
+    else if (publicationCahierMultimedia.innerHTML.indexOf(textArea == -1) && lineType == 'image') {
       /*FIN DU MONDE !!!*/
       alert("Veuillez ajouter un texte avant votre image." );
       return false;
     }
-    else if (publicationBlog.innerHTML.indexOf(textArea == -1) && lineType == 'video') {
+    else if (publicationCahierMultimedia.innerHTML.indexOf(textArea == -1) && lineType == 'video') {
       /*FIN DU MONDE !!!*/
       alert("Veuillez ajouter un texte avant votre lien vidéo." );
       return false;
@@ -72,27 +72,27 @@ function addLine(lineType) {
 }
 
   /*ajoute au début de la liste l'élément souhaité (texte / image)*/
-  function addText() {
-    var publicationBlog = document.getElementById("publications_blog");
-    publicationBlog.insertAdjacentHTML("beforeend", addLine('text'));
+  function addTextB() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+    publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLineB('text'));
   }
 
-  function addImage() {
-    var publicationBlog = document.getElementById("publications_blog");
+  function addImageB() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
     if (line == 0 && addLine('image') == false) {
       /*FIN DU MONDE!!!*/
     } else {
       /*PAS FIN DU MONDE !!!*/
-      publicationBlog.insertAdjacentHTML("beforeend", addLine('image'));
+      publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLineB('image'));
     }
   }
 
-  function addVideo() {
-    var publicationBlog = document.getElementById("publications_blog");
+  function addVideoB() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
     if (line == 0 && addLine('video') == false) {
       /*FIN DU MONDE!!!*/
     } else {
       /*PAS FIN DU MONDE !!!*/
-      publicationBlog.insertAdjacentHTML("beforeend", addLine('video'));
+      publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLineB('video'));
     }
   }
