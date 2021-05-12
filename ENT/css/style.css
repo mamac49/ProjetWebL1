@@ -614,7 +614,8 @@ textarea {
   height: 90%;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .chip {
