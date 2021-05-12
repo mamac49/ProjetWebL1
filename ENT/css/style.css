@@ -654,7 +654,7 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 15%;
+  width: 45%;
 }
 
 .midContact {
