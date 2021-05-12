@@ -271,7 +271,7 @@
   padding-bottom: 15px;
 }
 
-.Publication_texte p {
+.Publication_texte {
   border: solid black 2px;
   border-radius: 4px;
   margin-left: 5pt;
@@ -858,9 +858,9 @@ textarea {
 /* Style buttons */
 .btn-info {
  border: none; /* Remove borders */
- padding: 6px 16px;  /*Some padding*/ 
+ padding: 6px 16px;  /*Some padding*/
  font-size: 16px;  /*Set a font size */
- cursor: pointer;  /*Mouse pointer on hover*/ 
+ cursor: pointer;  /*Mouse pointer on hover*/
 
  width: 150%;
  border: none; /* Remove borders */
