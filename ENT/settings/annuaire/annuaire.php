@@ -50,8 +50,6 @@ if ($_SESSION["Connected"] == true) {
                     <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
                   </span>
                 </a>
-              </div>
-              <div class="milieu line_block_annuaire">
                 <p class="user_name">
                   <?php echo $contact_name;?>
                 </p>
