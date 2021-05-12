@@ -5,7 +5,7 @@ function Delete($Contact) {
   $link = dbConnect();
   $sql = "DELETE FROM `users` WHERE `iduser`='$Contact'";
   if (mysqli_query($link, $sql)) {
-    echo "succès";
+    echo "<script>console.log('succes')</script>";
   } else {
     echo mysqli_error($link);
   }

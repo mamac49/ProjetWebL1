@@ -165,7 +165,7 @@ function UpdatePubli($contenu, $ID) {
     }
     $pos++;
     if (mysqli_query($link, $sqlp)) {
-      echo "succès";
+      echo "<script>console.log('succes')</script>";
     } else { echo mysqli_error($link);}
   }
 }

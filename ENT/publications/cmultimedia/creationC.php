@@ -31,7 +31,7 @@ function Create($titre, $matiere, $contenu) {
       }
       $pos++;
       if (mysqli_query($link, $sqlp)) {
-        echo "succès";
+        echo "<script>console.log('succes')</script>";
       } else { echo mysqli_error($link);}
     }
   } else {

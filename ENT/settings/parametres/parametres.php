@@ -17,7 +17,7 @@ function ChgtMdp($mdpA, $mdpN) {
   $sql = "UPDATE `users` SET `mdp` = '$mdpN' WHERE `mail`= '$_SESSION[Mail]'";
   if (password_verify($mdpA, $mdp)) {
     if (mysqli_query($link, $sql)) {
-        echo "succès";
+        echo "<script>console.log('succes')</script>";
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/');
     } else {
       echo "erreur" . mysqli_error($link);
