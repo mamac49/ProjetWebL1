@@ -32,40 +32,21 @@ if ($_SESSION["Connected"] == true) {
     <script src="/Projetwebl1/ENT/js/main.js"></script>
   </head>
 <!--ajout de la méthode PUT-->
-<input type="hidden" name="_METHOD" value="PUT"/>
+  <input type="hidden" name="_METHOD" value="PUT"/>
 
-<div class="Center">
-  <form class="" action="creationB.php" method="POST" enctype="multipart/form-data">
-    <input type="text" name="titre" placeholder="Titre du blog" >
-    <ul class="publicationsBlog" id="publications_blog">
-      <!--<textarea class="textareaId" id="textareaBlog" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
--->
-    </ul>
+  <div class="Center">
+    <form class="" action="creationB.php" method="POST" enctype="multipart/form-data">
+      <input type="text" name="titre" placeholder="Titre du blog" >
+      <ul class="publicationsBlog" id="publications_blog">
+
+      </ul>
       <button name="create" class="bouton" method="PUT"><span>Ajouter une case </span></button>
     <input type="submit" name="Valider" class="bouton" value="Valider le blog">
   </form>
 </div>
-<!--publication liée à la bdd-->
-<template id="template">
-  <textarea class="textareaId" id="template_blog" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
-</template>
-
-
-<!--zone de texte éditable
-<textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=1 required></textarea>
--->
 
 <?php
-  if (isset($_PUT['create'])) {
-    $idpublication = "NONE";
-    $titre = "NONE" ;
-    $texte = "NONE" ;
-    $image = "NONE" ;
-    $date = "NONE" ;
-    $nature = "NONE" ;
-    $iduser = "NONE" ;
-    echo "<script>createLine();</script>";
-  }
-
+} else {
+  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>
