@@ -275,7 +275,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
         <div class="container">
           <h3 class="titre">Commentaire</h3>
           <p><textarea name="commentaire" rows="6" cols="40"></textarea></p>
-          <p><button type="submit" class="bouton" name="ValiderEnvoi"><span>Envoyer</span></button></p>
+          <p><button type="submit" class="bouton" name="ValiderEnvoi">Envoyer</button></p>
         </div>
       </form>
     </div>
