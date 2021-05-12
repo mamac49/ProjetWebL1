@@ -265,8 +265,10 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
               <?php }
             } ?>
             <br/>
-            <button type="button" id="add_com" onclick="addComm()" class="bouton"><span>Ajouter un commentaire</span></button>
-          <?php } ?>
+            <div class="ajoutcommentaire">
+              <button type="button" id="add_com" onclick="addComm()" class="bouton"><span>Ajouter un commentaire</span></button>
+            </div>
+            <?php } ?>
         </div>
       </div>
     </div>
