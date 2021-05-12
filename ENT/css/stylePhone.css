@@ -35,7 +35,7 @@
   .logo_millocheau {
     display: block;
     width: 180px;
-    height: 180px ;
+    height: auto;
     position: sticky;
     right: 0;
     }
