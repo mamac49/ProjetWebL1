@@ -7,7 +7,7 @@
 
 /* Background Color */
 
-.move_menu, .sandwich, .Login, .qwant, .bouton, .Login, .semaine, .iconCrea, .ListeDeroulante, .btn-info, .drop-btn {
+.move_menu, .sandwich, .Login, .qwant, .bouton, .Login, .semaine, .iconCrea, .ListeDeroulante, .btn-info, .dropbtn {
   background-color: var(--main-color);
 }
 
@@ -27,7 +27,7 @@
   background-color: var(--font-color);
 }
 
-.FormCrea, .semaine button:hover, .semaine button.active, #navbar, .btn-info:hover {
+.FormCrea, .semaine button:hover, .semaine button.active, #navbar, .btn-info:hover, .dropbtn:hover {
   background-color: var(--second-color);
 }
 
@@ -42,7 +42,7 @@
   color: var(--font-color);
 }
 
-.FormCrea, .semaine button, #navbar a, .bouton, .Login, .texteB , .ListeDeroulante, .btn-info, .drop-btn {
+.FormCrea, .semaine button, #navbar a, .bouton, .Login, .texteB , .ListeDeroulante, .btn-info, .dropbtn {
   color: var(--font-color);
 }
 
