@@ -33,14 +33,14 @@ if ($_SESSION['theme'] == 1) {
       <?php
         if ($_SESSION["Admin"] == True) {
       ?>
-        <li><a class="menu_link" href="/Projetwebl1/ENT/settings/admin/UserCreation.php"><div class="textesandwich"><i class="fas fa-user-cog icone"></i>Administration</div></a></li>
+        <li class="LiSandwich"><a class="menu_link" href="/Projetwebl1/ENT/settings/admin/UserCreation.php"><div class="textesandwich"><i class="fas fa-user-cog icone"></i>Administration</div></a></li>
       <?php
       }
       ?>
-      <li><a class="menu_link" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')"><div class="pointer"><i class="fas fa-moon icone"></i>Theme Sombre</div></a></li>
-      <li><a class="menu_link" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')"><div class="pointer"><i class="fas fa-sun icone"></i>Theme Clair</div></a></li>
-      <li><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="textesandwich"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
-      <li><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="textesandwich"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
+      <li class="LiSandwich"><a class="menu_link" onclick="LoadCSS('/Projetwebl1/ENT/css/color1.css')"><div class="pointer"><i class="fas fa-moon icone"></i>Theme Sombre</div></a></li>
+      <li class="LiSandwich"><a class="menu_link" onclick="LoadCSS('/Projetwebl1/ENT/css/color2.css')"><div class="pointer"><i class="fas fa-sun icone"></i>Theme Clair</div></a></li>
+      <li class="LiSandwich"><a class="menu_link" href="/Projetwebl1/ENT/settings/parametres/parametres.php"><div class="textesandwich"><i class="fas fa-cogs icone"></i>Paramètres</div></a></li>
+      <li class="LiSandwich"><a class="menu_link" href="/Projetwebl1/ENT/auth/logout.php"><div class="textesandwich"><i class="fas fa-sign-out-alt icone"></i>Se déconnecter</div></a></li>
     </ul>
   </nav>
   <div class="site_content">
