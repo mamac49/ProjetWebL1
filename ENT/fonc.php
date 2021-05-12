@@ -108,6 +108,7 @@ function securisation ($donnee){ // pour protéger les champs après un formulai
     $donnee = str_replace('""', "", $donnee);
     $donnee = str_replace("''", "", $donnee);
     $donnee = str_replace("``", "", $donnee);
+     echo "<script>console.log('suppression des caractères spéciaux')</script>";
   }
   $donnee = htmlspecialchars($donnee);
   $donnee = trim($donnee);
