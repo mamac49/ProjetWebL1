@@ -49,7 +49,7 @@ if ($_SESSION["Connected"] == "True") {
       <div class="has_cols">
         <!--affiche les anniversaires du mois actuel-->
         <div class="Anniversaire">
-          <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
+          <h4 class="texteB AnnivTitre"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
             <?php
             echo "<p class='texteB'>Ce mois ci :</p>";
