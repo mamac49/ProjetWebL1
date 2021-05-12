@@ -840,14 +840,15 @@ textarea {
   /*font-size: 200%;*/
   font-size: 2rem;
   color: var(--font-color);
+  text-align: center;
 }
 
 .PPannuaire {
-  /*
   width: 50px;
   height: 50px;
   border-radius: 5000px;
-  border: 1px black solid;*/
+  border: 1px black solid;
+
   width: 4rem;
   height: 4rem;
   border-radius: 40rem;
@@ -857,10 +858,11 @@ textarea {
 /* Style buttons */
 .btn-info {
  border: none; /* Remove borders */
- /*padding: 6px 16px;  Some padding 
- font-size: 16px;  Set a font size 
- cursor: pointer;  Mouse pointer on hover 
- width: 150%;*/
+ padding: 6px 16px;  /*Some padding*/ 
+ font-size: 16px;  /*Set a font size */
+ cursor: pointer;  /*Mouse pointer on hover*/ 
+
+ width: 150%;
  border: none; /* Remove borders */
  padding: 0.5rem 1.5rem; /* Some padding */
  font-size: 1.5rem; /* Set a font size */
@@ -880,13 +882,14 @@ textarea {
 
 /* Dropdown Button */
 .dropbtn {
- /*padding: 16px;
- font-size: 16px;*/
- padding: 1.5rem;
- font-size: 1.5rem;
- border: none;
- cursor: pointer;
+  padding: 16px;
+  font-size: 16px;
+  padding: 1.25rem;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
 }
+
 
 /* Dropdown button on hover & focus */
 
@@ -949,3 +952,9 @@ textarea {
   height: 50px;
   width: 50px;
 }*/
+
+.line_block_annuaire {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

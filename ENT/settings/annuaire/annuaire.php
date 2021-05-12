@@ -43,11 +43,20 @@ if ($_SESSION["Connected"] == true) {
             $mail = info($x[0])["mail"];
         ?>
           <li class="contact conctact_rem">
-            <div class="debut"><a class="<?php echo $contact_id;?> texte" id="contact"><span><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
-              <?php echo $contact_name;?></span></a>
+            <div class="debut line_block_annuaire">
+              <a class="<?php echo $contact_id;?> texte" id="contact">
+                <span>
+                  <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
+                </span>
+              </a>
             </div>
-            <div class="fin">
-            <div class="dropdown">
+            <div class="milieu line_block_annuaire">
+              <p>
+                <?php echo $contact_name;?>
+              </p>
+            </div>
+            <!--<div class="fin">-->
+            <div class="dropdown line_block_annuaire">
               <button onclick="down(<?php print $x[0];?>)" class="dropbtn">Information</button>
             </div>
             <div id="myDropdown-<?php echo $x[0];?>" class="dropdown-content">
