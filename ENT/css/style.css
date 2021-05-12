@@ -674,6 +674,12 @@ textarea {
   margin: 0px;
 }
 
+.fichier {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* Cahier Multimédia */
 
 .leaf {
