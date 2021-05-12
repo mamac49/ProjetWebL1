@@ -229,11 +229,13 @@
 .qwant input {
   width: 80%;
   height: 35px;
+  margin-left: 10%;
 }
 
 .qwant button {
   width: 80%;
   height: 35px;
+  margin-left: 10%;
 }
 
 .qwant img {
