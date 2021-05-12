@@ -68,7 +68,7 @@ if ($_SESSION["Connected"] == true) {
                 foreach (nbPub() as $x) {
                   if (nature($x[0])["nature"] == "2") {
                 ?>
-                  <li class="texte"><div class="chip"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><?php echo "<i class='". $matiere[nature($x[0])["matiere"]] ."'></i>"?></i><?php echo nature($x[0])["titre"]; ?></a></div></li>
+                  <li class="texte LiCM"><div class="chip"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><?php echo "<i class='". $matiere[nature($x[0])["matiere"]] ."'></i>"?></i><?php echo nature($x[0])["titre"]; ?></a></div></li>
                 <?php
                   }
                 }
