@@ -6,15 +6,26 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 include ("../../base.php");
 
+function Create($titre) {
+  $link = dbConnect();
 
+  $date = date("Y-m-d");
+  $IDu = $_SESSION['ID'];
 
-/*if (isset($_POST['Valider'])) {
-  $texte = array();
-  $len = count($n);
-  for ($i = 1 ; $x < $len ; $i++) {
-    $texte[$i] = $_POST[$i];
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`) VALUES ('$titre', '$date', '1', '$IDu')";
+  if (mysqli_query($link, $sql)) {
+    echo "succès";
+  } else {
+    echo 'Erreur d accès à la base de données - FIN' . mysqli_error($link);
   }
-}*/
+}
+
+
+if (isset($_POST['Valider'])) {
+  $titre = securisation($_POST['titre']);
+  }
+  Create($titre);
+}
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -41,9 +52,10 @@ if ($_SESSION["Connected"] == true) {
 
       </ul>
       <button name="create" class="bouton" method="PUT"><span>Ajouter une case </span></button>
-    <input type="submit" name="Valider" class="bouton" value="Valider le blog">
-  </form>
-</div>
+      <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
+    </form>
+  </div>
+</html>
 
 <?php
 } else {
