@@ -34,7 +34,7 @@
 
   .logo_millocheau {
     position: absolute;
-    display: flex;
+    display: block;
     width: 180px;
     height: 200px;
     top: 0;
@@ -48,14 +48,14 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 275px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
     padding-left: 10px;
     z-index: 3;
-    transform: translateX(-275px);
+    transform: translateX(-500px);
     transition: 300ms all ease-in-out;
     }
 
