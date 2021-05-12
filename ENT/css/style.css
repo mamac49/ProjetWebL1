@@ -588,9 +588,7 @@ textarea {
 
 /* Style buttons */
 .btn-info {
- background-color: DodgerBlue; /* Blue background */
  border: none; /* Remove borders */
- color: white; /* White text */
  padding: 6px 16px; /* Some padding */
  font-size: 16px; /* Set a font size */
  cursor: pointer; /* Mouse pointer on hover */
@@ -605,9 +603,6 @@ textarea {
 }
 
 /* Darker background on mouse-over */
-.btn-info:hover {
- background-color: RoyalBlue;
-}
 
 /* Dropdown Button */
 .dropbtn {
