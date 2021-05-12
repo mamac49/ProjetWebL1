@@ -15,7 +15,7 @@
   .site_content {
     z-index: 1;
     height: 50%;
-    width: 100%;
+    margin-left: auto;
   }
 
 
@@ -37,8 +37,9 @@
 
   .logo_millocheau {
     display: block;
-    width: 180px;
-    height: 200px;
+    position: fixed;
+    max-width: 180px;
+    height: auto;
     top: 0;
     right: 0;
     }
