@@ -209,17 +209,13 @@
     transform: rotate(360deg);
   }
 
-.ligne {
-  display: flex;
-  flex-direction: row;
-}
-
 .qwant {
   width: 300px;
-  margin-left: 50px;
+  margin-left: 25px;
   padding: 10px;
   padding-top: 25px;
   text-align: center;
+  height: 200px;
 }
 
 .qwant img {
