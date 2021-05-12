@@ -912,7 +912,7 @@ textarea {
  box-shadow: 0rem 0.75rem 1.5rem 0rem rgba(0,0,0,0.2);
  z-index: 1;
 }
-  
+
 /* Links inside the dropdown */
 .dropdown-content a {
  color: black;
@@ -959,4 +959,9 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.hrcontact {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
