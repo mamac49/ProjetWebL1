@@ -19,7 +19,7 @@
 }
 
 .infos_detaillee{
-	display: flex;
+	display: none;
 	flex-direction: row;
 	width: 0rem;
 }
