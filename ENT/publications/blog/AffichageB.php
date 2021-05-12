@@ -300,9 +300,9 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             } elseif (substr_count($line, "ImageContenu") == 1) {
               echo "image non changeable";
             } else { ?>
-              <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
+              <textarea name="<?php print $x; ?>" rows="4" cols="40"><?php echo $line; ?></textarea>
             <?php }
-            $x++
+            $x++;
           } ?>
           <p><button type="submit" class="bouton" name="ValiderChgt"><span>Valider</span></button></p>
         </div>
