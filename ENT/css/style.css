@@ -267,6 +267,10 @@
     src: url("../data/HomemadeApple.ttf");
 }
 
+.LiUser {
+  padding: bottom 15px;
+}
+
 .Publication_texte p {
   border: solid black 2px;
   border-radius: 4px;
