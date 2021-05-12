@@ -74,7 +74,7 @@ if ($_SESSION["Connected"] == "True") {
       include '../../base.php';
     ?>
 
-    <div class="Center">
+    <div class="CenterCahier">
       <div class="semaine">
         <button class="tablinks" onmouseover="openDay(event, 'Lundi')" autofocus>Lundi</button>
         <button class="tablinks" onmouseover="openDay(event, 'Mardi')">Mardi</button>
