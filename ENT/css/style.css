@@ -741,6 +741,10 @@ textarea {
   bottom: 15px;
 }
 
+.AdminMulti select{
+  width: 960px
+}
+
 .textePre {
   white-space: break-spaces;
   font-size: 1.1em;
