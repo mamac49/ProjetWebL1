@@ -10,8 +10,6 @@
   .site_container {
     -webkit-overflow-scrolling: touch;
     height: 50%;
-    display: flex;
-    justify-content: center;
   }
 
   .site_content {
@@ -118,6 +116,13 @@
 
 
   /*contenu*/
+
+.Site_mid {
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
 
 .Center_adap {
   background-color: white;
