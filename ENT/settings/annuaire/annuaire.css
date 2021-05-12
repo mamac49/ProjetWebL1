@@ -12,6 +12,11 @@
 	text-align: center;
   }
   
+  .infos_basiques {
+	  display: flex;
+	  flex-direction: row;
+	}
+
   .PPannuaire {
 	width: 4rem;
 	height: 4rem;
