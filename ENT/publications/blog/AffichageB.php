@@ -206,6 +206,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
 
             <div class="corps">
               <?php
+                $res = auteurB($IDblog);
                 foreach (AffichageCahier($IDblog) as $line) {
                   if (substr_count($line, "http") == 1) {
                     if (substr_count($line, "https://www.deezer.com/") == 1) {
