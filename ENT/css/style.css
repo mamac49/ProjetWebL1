@@ -56,7 +56,6 @@
     z-index: 3;
     transform: translateX(-275px);
     transition: 300ms all ease-in-out;
-    font-size: 1.2em;
     }
 
     .sandwich_icon{
@@ -102,6 +101,7 @@
   .menu_link {
     text-decoration: none;
     font-size: 1.1em;
+    margin-bottom: 15px;
     transition: font-size 400ms ease-in-out;
   }
 
