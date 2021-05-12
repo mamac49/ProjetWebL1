@@ -33,10 +33,12 @@
 	font-size: 1.5rem;
 	height: 3rem;
 	padding: revert;
-	border: none;
+	border-bottom: black 0.2rem solid;
 	cursor: pointer;
 	background-color: var(--main-color);
 	color: var(--font-color);
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .contact {
