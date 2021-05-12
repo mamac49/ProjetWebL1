@@ -46,13 +46,9 @@ if ($_SESSION["Connected"] == true) {
           <li class="contact">
               <div class="debut">
                 <a class="<?php echo $contact_id;?> texte" id="contact">
-                  <span>
-                    <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
-                  </span>
+                  <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
+                  <p class="user_name"><?php echo $contact_name;?></p>
                 </a>
-                <p class="user_name">
-                  <?php echo $contact_name;?>
-                </p>
               </div>
 
               <div class="fin">
