@@ -51,7 +51,7 @@ if ($_SESSION["Connected"] == true) {
               </div>
 
               <div class="fin">
-                <button class="infos_button" onclick="copy(<?php echo $x[0]; ?>)"><i class="fas fa-envelope"></i></button>
+                <button class="infos_button" onclick="copy(<?php echo $x[0]; ?>)"><i class="fas fa-envelope"></i>Copier le mail</button>
                 <textarea id="<?php echo 'ToCopy' . $x[0]; ?>" class="AreaMail"><?php echo $mail; ?></textarea>
               </div>
           </li>
