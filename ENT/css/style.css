@@ -737,7 +737,7 @@ textarea {
 }
 
 .AdminMulti {
-  position: absolute;
+  position: relative;
   bottom: 15px;
 }
 
