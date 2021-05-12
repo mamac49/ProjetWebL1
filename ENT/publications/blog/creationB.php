@@ -51,6 +51,7 @@ if (isset($_POST['Valider'])) {
     $nb++;
   }
   Create($titre, $matiere, $contenu);
+}
 
 if ($_SESSION["Connected"] == true) {
 ?>
