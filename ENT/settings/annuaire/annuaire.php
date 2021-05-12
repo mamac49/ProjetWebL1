@@ -44,7 +44,6 @@ if ($_SESSION["Connected"] == true) {
             $mail = info($x[0])["mail"];
         ?>
           <li class="contact">
-            <div class="infos_basiques">
               <div class="debut line_block_annuaire">
                 <a class="<?php echo $contact_id;?> texte" id="contact">
                   <span>
