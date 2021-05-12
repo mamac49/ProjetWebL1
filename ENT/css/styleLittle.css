@@ -42,7 +42,7 @@
   /*Menu sandwich*/
 
   .sandwich {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
@@ -58,6 +58,7 @@
   }
 
   .sandwich_icon{
+    position: fixed;
     padding: 10px;
     font-size: 35px;
     width: 65px;
