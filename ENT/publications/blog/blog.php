@@ -78,8 +78,10 @@ if ($_SESSION["Connected"] == true) {
                   $auteur=auteur($i[0]);
                   $date=jour($i[0]);
               ?>
+              <br/>
               <li class="sujets"><a href="AffichageB.php?id=<?php print $i[0]?>"><?php echo "<i class='". $matiere[nature($i[0])["matiere"]] ."'></i>"?> <?php echo $titre; ?>
               </a> <span class="texte">Créé par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
+              <br/>
               <li class="espaces"><hr></li>
               <?php
                   }
