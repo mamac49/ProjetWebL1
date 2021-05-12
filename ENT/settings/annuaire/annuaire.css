@@ -20,8 +20,7 @@
   }
   
 
-  /* Dropdown Button */
-  .dropbtn {
+  .infos_button {
 	padding: 16px;
 	font-size: 16px;
 	height: 3rem;
@@ -30,7 +29,6 @@
 	cursor: pointer;
   }
   
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   
   .contact {
 	display: flex;
@@ -39,9 +37,6 @@
   
   .debut {
 	display: inline;
-	/*padding: 0 25px;
-	height: 50px;
-	line-height: 50px;*/
 	padding: 0rem 2.5rem;
 	height: 4rem;
 	line-height: 4rem;

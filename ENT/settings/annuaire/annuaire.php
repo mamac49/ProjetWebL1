@@ -43,7 +43,7 @@ if ($_SESSION["Connected"] == true) {
             $contact_id = "contact_" . $x[0];
             $mail = info($x[0])["mail"];
         ?>
-          <li class="contact conctact_rem">
+          <li class="contact">
             <div class="infos_basiques">
               <div class="debut line_block_annuaire">
                 <a class="<?php echo $contact_id;?> texte" id="contact">
@@ -58,12 +58,12 @@ if ($_SESSION["Connected"] == true) {
                 </p>
               </div>
               <!--<div class="fin">-->
-              <div class="dropdown line_block_annuaire">
-                <button onclick="down(<?php print $x[0];?>)" class="dropbtn">Information</button>
+              <div class="line_block_annuaire">
+                <button onclick="down(<?php print $x[0];?>)" class="infos_button">Information</button>
               </div>
             </div>
-            <div class="infos_avancee">
-              <div id="myDropdown-<?php echo $x[0];?>" class="dropdown-content">
+            <div class="infos_detaillee">
+              <div id="myInfos-<?php echo $x[0];?>" class="contenu_infos_detaillee">
                 <button class="bouton" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fas fa-envelope"></i><p id="ToCopyMail-<?php echo $x[0];?>"><?php echo $mail; ?></p></button>
                 <button class="bouton" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fas fa-user-tag"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
               </div>
