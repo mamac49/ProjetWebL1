@@ -59,12 +59,12 @@ if ($_SESSION["Connected"] == true) {
               </div>
               <!--<div class="fin">-->
               <div class="line_block_annuaire">
-                <button onclick="down(<?php print $x[0];?>)" class="infos_button">Information</button>
+                <button onclick="down(<?php print $x[0];?>)" class="infos_button">Informations</button>
               </div>
             </div>
             <div class="infos_detaillee">
               <div id="myInfos-<?php echo $x[0];?>" class="contenu_infos_detaillee">
-                <button class="bouton" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fas fa-envelope"></i><p id="ToCopyMail-<?php echo $x[0];?>"><?php echo $mail; ?></p></button>
+                <button class="bouton" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fas fa-envelope"></i><p id="ToCopyMail-<?php echo $x[0];?>" class="copy_infos"><?php echo $mail; ?></p></button>
                 <button class="bouton" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fas fa-user-tag"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
               </div>
             </div>

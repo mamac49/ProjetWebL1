@@ -56,3 +56,7 @@
 	margin-top: auto;
 	margin-bottom: auto;
   }
+
+  .copy_infos {
+	  display: none;
+  }
