@@ -142,6 +142,14 @@
     text-align: center;
   }
 
+  .AnnivTitre {
+    margin-bottom: 5px;
+  }
+
+  .AnnivP {
+    margin-top: 5px;
+  }
+
   h4 {
     font-size: 1.2em;
   }
@@ -614,7 +622,8 @@ textarea {
   height: 90%;
   display: flex;
   justify-content: space-between;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .chip {
@@ -681,8 +690,6 @@ textarea {
   text-decoration: none;
 }
 
-
-
 .Creation {
   margin: 10px;
 }
@@ -737,12 +744,20 @@ textarea {
 }
 
 .AdminMulti {
-  position: absolute;
-  bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.AdminMulti select{
+  width: auto;
+  height: 40px;
+  margin: 15px;
 }
 
 .textePre {
   white-space: break-spaces;
+  font-size: 1.1em;
 }
 
 /* Blog */
@@ -774,6 +789,7 @@ textarea {
   font-size: 19px;
   text-decoration: none;
   margin-left: 10px;
+  word-break: break-word;
 }
 
 .sujets span{
@@ -824,5 +840,79 @@ textarea {
   float:right;
 }
 
+.ImgCM{
+  max-width: 400px;
+}
 
+.texte{
+  word-break: break-word;
+}
+
+/* Annuaire */
+
+
+.AreaMail {
+	display: none;
+  transform: scaleX(+10000);
+}
+
+/* ------------------------------------------ */
+/* Annuaire */
+
+.center_rem {
+	font-size: 100%;
+}
+
+.titre_liste{
+	font-size: 2rem;
+	color: var(--font-color);
+	text-align: center;
+}
+
+.contact {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: black 0.2rem solid;
+}
+
+.PPannuaire {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 40rem;
+	border: 0.1rem black solid;
+}
+
+.infos_button {
+	padding: 1.5rem;
+	font-size: 1.1rem;
+	height: 3rem;
+	padding: revert;
+	border: none;
+	cursor: pointer;
+	background-color: var(--main-color);
+	color: var(--font-color);
+}
+
+.infos_button i {
+  font-size: 1.5rem;
+  padding-right: 15px;
+}
+
+.debut {
+	display: inline;
+	padding: 0rem 2.5rem;
+	height: 4rem;
+	line-height: 4rem;
+}
+
+.debut img {
+	float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }

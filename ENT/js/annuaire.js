@@ -1,3 +1,4 @@
+/*
 var toCopy  = document.getElementById( 'to-ToCopyMail' )
 var btnCopy = document.getElementById( 'copyMail' );
 btnCopy.addEventListener( 'click',
@@ -5,11 +6,11 @@ function() {
   toCopy.select();
   document.execCommand( 'copyMail' );
   return false;
-});
+});*/
 
 
 /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content 
+toggle between hiding and showing the dropdown content
 function down(x) {
   document.getElementById("myDropdown-".concat(x.toString())).classList.toggle("show");
 }
@@ -26,16 +27,20 @@ window.onclick = function(event) {
       }
     }
   }
-}
+}*/
 
 function copy(x) {
-   Get the text field 
+  // Get the text field
   var copyText = document.getElementById("ToCopy".concat(x.toString()));
+  console.log(x)
   console.log(copyText);
 
-   Copy the text inside the text field 
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
+  // Copy the text inside the text field
   document.execCommand("copy");
 
-   Alert the copied text 
+   //Alert the copied text
   alert("Copied the text: " + copyText.textContent);
-}*/
+}

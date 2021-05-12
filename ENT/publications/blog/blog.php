@@ -69,7 +69,6 @@ if ($_SESSION["Connected"] == true) {
           <div class="Center_adap">
             <h2 class="texte">Liste des sujets</h2>
             <ul class="liste_sujets">
-              <li class="espaces"><hr></li>
               <?php
               foreach (nbPub() as $i){
                 if (nature($i[0])["nature"] == "1"){

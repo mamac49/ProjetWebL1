@@ -49,14 +49,15 @@ if ($_SESSION["Connected"] == "True") {
       <div class="has_cols">
         <!--affiche les anniversaires du mois actuel-->
         <div class="Anniversaire">
-          <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
+          <h4 class="texteB AnnivTitre"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
             <?php
+            echo "<p class='texteB AnnivP'>Ce mois ci :</p>";
             if (is_null(annivs())) {
               echo "pas d'anniversaire";
                 } else {
               foreach (Annivs() as $i) { ?>
-              <li class="texteB"><?php echo "C'est l'anniversaire de ".$i[1] . " " . $i[2]; ?></li>
+              <li class="texteB AnnivP"><?php echo "C'est l'anniversaire de ".$i[1] . " " . $i[2]; ?></li>
             <?php } } ?>
           </ul>
         </div>
