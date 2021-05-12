@@ -742,6 +742,7 @@ textarea {
 
 .AdminMulti select{
   width: auto;
+  height: 40px;
 }
 
 .textePre {
