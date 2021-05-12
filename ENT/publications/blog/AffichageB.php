@@ -192,7 +192,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
       <h2 class="texte"><?php echo nature($IDblog)["titre"]; ?></h2>
       <br/>
       <div class="corpsB">
-        <div class="Publication_texte">
+        <div>
           <?php if (textevide($IDblog)==""){ ?>
             <span>Il n'y a pas encore de publication!</span>
             <br/>
@@ -203,7 +203,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             $temps=temps_ecriture_P($IDblog); ?>
             <span class="texte"> Edité par <?php echo $auteur; ?> le <?php echo $temps; ?></span>
 
-            <div class="corps blog-border">
+            <div class="corps Publication_texte">
               <?php
                 $res = auteurB($IDblog);
                 foreach (AffichageCahier($IDblog) as $line) {
