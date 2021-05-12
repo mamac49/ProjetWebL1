@@ -365,7 +365,7 @@ textarea {
 
 .has_cols {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 /* The Modal (background) */
