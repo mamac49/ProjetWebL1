@@ -156,13 +156,14 @@ function message($x) { //renvoie le texte de chaque commentaire relié à leur p
 function UpdatePubli($contenu, $ID) {
   $link = dbConnect();
 
+  $pos = 0;
   foreach ($contenu as $element) {
     if (filter_var($element, FILTER_VALIDATE_URL)) {
       $nb = array_key_last(nombreTxt("liens"))+1;
-      $sqlp = "INSERT INTO `liens` (`idliens`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID') WHERE `idpublications`='$ID'";
+      $sqlp = "UPDATE `liens` SET `idliens` = '$nb', `data` = '$element', `position` = '$pos', `idpublications` = '$ID' WHERE `idpublications`='$ID'";
     } else {
       $nb = array_key_last(nombreTxt("texte"))+1;
-      $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID') WHERE `idpublications`='$ID'";
+      $sqlp = "UPDATE `texte` SET `idtexte` = '$nb', `data` = '$element', `position` = '$pos', `idpublications` = '$ID' WHERE `idpublications`='$ID'";
     }
     $pos++;
     if (mysqli_query($link, $sqlp)) {
