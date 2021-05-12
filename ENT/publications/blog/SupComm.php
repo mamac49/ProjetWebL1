@@ -11,6 +11,7 @@ function SuppressionCom($id) {
   if ($result = mysqli_query($link, $sql2)) {
     $row = mysqli_fetch_array($result);
     $IDPubli = $row[0];
+  }
 
   $sql = "DELETE FROM `Commentaires` WHERE `idtxt`='$id' ";
   if (mysqli_query($link, $sql)) {
