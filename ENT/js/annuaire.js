@@ -32,6 +32,7 @@ window.onclick = function(event) {
 function copy(x) {
   // Get the text field
   var copyText = document.getElementById("ToCopy".concat(x.toString()));
+  console.log(x)
   console.log(copyText);
 
   // Copy the text inside the text field
