@@ -249,7 +249,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                   <div class="Bouton-com">
                     <?php $res=message($x[0])["iduser"];
                     if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
-                      <a href="SupComm.php?id=<?php print $x[0] ?>"><i class="fas fa-times fermer"></i></a>
+                      <a href="SupComm.php?id=<?php print $x[0] ?>"><i class="fas fa-times bouton"></i></a>
                       <?php if ($_SESSION["ID"]==$res){?>
                         <button type="submit" name="EditCom"><span>Editer</span></button>
                       <?php } ?>
