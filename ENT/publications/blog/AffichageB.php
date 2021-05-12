@@ -282,10 +282,28 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
 
     <div id="EditPub" class="modal">
         <form class="modal-content animate" method="POST">
-        <span onclick="document.getElementById('AddComm').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+        <span onclick="document.getElementById('EditPub').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
           <h3 class="titre">Contenu</h3>
-          <p><textarea name="commentaire" rows="6" cols="40"></textarea></p>
+          <?php $x = 0;
+          foreach (AffichageCahier($IDblog) as $line) {
+            if (substr_count($line, "http") == 1) {
+              if (substr_count($line, "https://www.deezer.com/") == 1) { ?>
+                <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
+              <?php
+            } elseif (substr_count($line, "https://youtu.be/") == 1) { ?>
+                <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
+            <?php
+          } else { ?>
+              <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
+            <?php  }
+            } elseif (substr_count($line, "ImageContenu") == 1) {
+              echo "image non changeable";
+            } else { ?>
+              <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
+            <?php }
+            $x++
+          } ?>
           <p><button type="submit" class="bouton" name="ValiderChgt"><span>Valider</span></button></p>
         </div>
       </form>
