@@ -98,19 +98,19 @@
     min-width: 30px;
   }
 
+  .menu_link {
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: font-size 400ms ease-in-out;
+  }
+
+  .menu_link:hover {
+    transform: scale(2);
+    font-size: 1.5em;
+  }
+
 
   /*contenu*/
-
-  .Center {
-    background-color: white;
-    height: 655px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 15px;
-    border-radius: 4px;
-    width: 1000px;
-    margin-left: 25%;
-    }
 
 .Center_adap {
   background-color: white;
@@ -125,13 +125,13 @@
   z-index: 1
 }
 
-  .Centre_main {
-    width: 1000px;
-    margin-left: 30%;
-    margin-right: 10%;
-    padding-top: 50px;
-    background-color: inherit;
-  }
+.Centre_main {
+  width: 1000px;
+  margin-left: 30%;
+  margin-right: 10%;
+  padding-top: 50px;
+  background-color: inherit;
+}
 
   /*Anniversaire*/
 
@@ -186,20 +186,6 @@
   }
 
 
-  /*liens animés*/
-
-  .menu_link {
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: font-size 400ms ease-in-out;
-  }
-
-  .menu_link:hover {
-    transform: scale(2);
-    font-size: 1.5em;
-  }
-
-
   /*???*/
 
   .retour {
@@ -210,7 +196,6 @@
   .retour:hover {
     transform: rotate(360deg);
   }
-}
 
 .ligne {
   display: flex;
@@ -687,4 +672,17 @@ textarea {
 .file-txt p {
   height: auto;
   margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 }
