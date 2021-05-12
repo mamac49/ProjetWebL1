@@ -743,6 +743,7 @@ textarea {
 
 .textePre {
   white-space: break-spaces;
+  font-size: 15;
 }
 
 /* Blog */
@@ -824,5 +825,6 @@ textarea {
   float:right;
 }
 
-
+.ImgCM{
+  max-width: 500px;
 }
