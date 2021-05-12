@@ -162,7 +162,7 @@ function idauteurC($x) { //renvoie l'id de l'auteur du commentaire
   }
 }
 
-if (isset($_POST['ValiderAjout'])) {
+if (isset($_POST['ValiderEnvoi'])) {
   $_SESSION['commentaires'] = array(securisation($_POST['commentaire']), $IDblog);
   header("Location: AjoutComm.php");
 }
