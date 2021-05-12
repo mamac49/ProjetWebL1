@@ -279,6 +279,10 @@
   padding: 10pt 6pt 10pt 6pt;
 }
 
+.blog-border {
+  border: solid black 2px;
+}
+
 /*curseur en pointer sur les boutons de thème*/
 .pointer{
   cursor: pointer

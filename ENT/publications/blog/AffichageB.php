@@ -203,7 +203,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             $temps=temps_ecriture_P($IDblog); ?>
             <span class="texte"> Edité par <?php echo $auteur; ?> le <?php echo $temps; ?></span>
 
-            <div class="corps">
+            <div class="corps blog-border">
               <?php
                 $res = auteurB($IDblog);
                 foreach (AffichageCahier($IDblog) as $line) {
