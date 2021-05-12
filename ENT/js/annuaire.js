@@ -35,6 +35,9 @@ function copy(x) {
   console.log(x)
   console.log(copyText);
 
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
   // Copy the text inside the text field
   document.execCommand("copy");
 

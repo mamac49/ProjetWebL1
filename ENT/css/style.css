@@ -834,3 +834,9 @@ textarea {
   width: 1000px;
   word-break: break-word;
 }
+
+/* Annuaire */
+
+.AreaMail {
+	display: none;
+}
