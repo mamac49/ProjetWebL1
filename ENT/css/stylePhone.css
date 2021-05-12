@@ -132,6 +132,7 @@
   margin-right: 10%;
   padding-top: 50px;
   background-color: inherit;
+  display: flex;
 }
 
   /*Anniversaire*/
