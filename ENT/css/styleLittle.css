@@ -1,9 +1,9 @@
 @media all and (max-width: 1024px) {
 
   /* html */
-  html {
-  font-family: sans-serif;
-  height: 100%;
+    html {
+    font-family: sans-serif;
+    height: 100%;
   }
 
   .site_container {
@@ -15,7 +15,6 @@
     z-index: 1;
     height: 100%;
   }
-
 
   /*header*/
 
@@ -38,7 +37,7 @@
     height: auto;
     position: sticky;
     right: 0;
-    }
+  }
 
   /*Menu sandwich*/
 
@@ -56,15 +55,15 @@
     z-index: 3;
     transform: translateX(-275px);
     transition: 300ms all ease-in-out;
-    }
+  }
 
-    .sandwich_icon{
-      padding: 10px;
-      font-size: 35px;
-      width: 65px;
-      height: 65px;
-      cursor: pointer;
-    }
+  .sandwich_icon{
+    padding: 10px;
+    font-size: 35px;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+  }
 
   .move_menu {
     transform: translateX(0px);
@@ -113,26 +112,26 @@
 
   /*contenu*/
 
-.Center_adap {
-  background-color: white;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  border-radius: 4px;
-  width: 1000px;
-  min-height: 655px;
-  margin-left: 25%;
-  position: relative;
-  z-index: 1
-}
+  .Center_adap {
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    border-radius: 4px;
+    width: 1000px;
+    min-height: 655px;
+    margin-left: 25%;
+    position: relative;
+    z-index: 1
+  }
 
-.Centre_main {
-  width: 1000px;
-  margin-left: 30%;
-  margin-right: 10%;
-  padding-top: 50px;
-  background-color: inherit;
-}
+  .Centre_main {
+    width: 1000px;
+    margin-left: 30%;
+    margin-right: 10%;
+    padding-top: 50px;
+    background-color: inherit;
+  }
 
   /*Anniversaire*/
 
@@ -198,115 +197,116 @@
     transform: rotate(360deg);
   }
 
-.ligne {
-  display: flex;
-  flex-direction: row;
-}
+  .ligne {
+    display: flex;
+    flex-direction: row;
+  }
 
-.qwant {
-  width: 300px;
-  margin-left: 50px;
-  padding: 10px;
-  padding-top: 25px;
-  text-align: center;
-}
+  .qwant {
+    width: 300px;
+    margin-left: 50px;
+    padding: 10px;
+    padding-top: 25px;
+    text-align: center;
+  }
 
-.qwant img {
-  width: 200px;
-  padding-bottom: 25px;
-}
+  .qwant img {
+    width: 200px;
+    padding-bottom: 25px;
+  }
 
-.raccourciM {
-  width: 300px;
-  height: 200px;
-  text-align: center;
-  margin-left: 15px;
-  margin-top: 50px;
-  padding: 10px;
-}
+  .raccourciM {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 50px;
+    padding: 10px;
+  }
 
-.raccourciB {
-  width: 300px;
-  height: 200px;
-  text-align: center;
-  margin-left: 50px;
-  margin-top: 50px;
-  margin-right: 20px;
-  padding: 10px;
-}
+  .raccourciB {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-right: 20px;
+    padding: 10px;
+  }
 
-.rac {
-  width: 650px;
-}
+  .rac {
+    width: 650px;
+  }
 
-.raccourci p {
-  font-size: 0.8em;
-  text-decoration: none;
-}
+  .raccourci p {
+    font-size: 0.8em;
+    text-decoration: none;
+  }
 
-.racicone {
-  font-size: 3em;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-decoration: none;
-  transition: font-size 400ms ease-in-out;
-}
+  .racicone {
+    font-size: 3em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    transition: font-size 400ms ease-in-out;
+  }
 
-.racicone:hover {
-  font-size: 4em;
-}
+  .racicone:hover {
+    font-size: 4em;
+  }
 
-.craie {
-  font-family: "Craies";
-  font-size: 2em;
-}
-
-@font-face
-{
+  .craie {
     font-family: "Craies";
-    src: url("../data/HomemadeApple.ttf");
-}
+    font-size: 2em;
+  }
 
-.LiUser {
-  padding-bottom: 15px;
-}
+  @font-face
+  {
+      font-family: "Craies";
+      src: url("../data/HomemadeApple.ttf");
+  }
 
-.Publication_texte p {
-  border: solid black 2px;
-  border-radius: 4px;
-  margin-left: 5pt;
-  margin-right: 5pt;
-  padding: 10pt 6pt 10pt 6pt;
-}
+  .LiUser {
+    padding-bottom: 15px;
+  }
 
-/*curseur en pointer sur les boutons de thème*/
-.pointer{
-  cursor: pointer
-}
+  .Publication_texte p {
+    border: solid black 2px;
+    border-radius: 4px;
+    margin-left: 5pt;
+    margin-right: 5pt;
+    padding: 10pt 6pt 10pt 6pt;
+  }
 
-textarea {
-  resize: none;
-}
+  /*curseur en pointer sur les boutons de thème*/
+  .pointer{
+    cursor: pointer
+  }
 
-/* pour avoir des boutons avec animation dynamique */
-.bouton{
-  border-radius: 5px;
-  border: none;
-  text-align: left;
-  cursor: pointer;
-  margin: 15px;
-  height: 40px;
-  width: 200px;
-  padding: 5px;
-  font-size: 1em;
-}
+  textarea {
+    resize: none;
+  }
 
-.bouton span {
-  display: inline-block;
-  position: relative;
-  width: 100%
-}
-.bouton span:after{
+  /* pour avoir des boutons avec animation dynamique */
+  .bouton{
+    border-radius: 5px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    margin: 15px;
+    height: 40px;
+    width: 200px;
+    padding: 5px;
+    font-size: 1em;
+  }
+
+  .bouton span {
+    display: inline-block;
+    position: relative;
+    width: 100%
+  }
+
+  .bouton span:after{
     content: '\00bb';
     font-size: 1.5em;
     font-family: sans-serif;
@@ -316,593 +316,588 @@ textarea {
     transition: 0.5s cubic-bezier(1,.19,.47,.96);
   }
 
-.bouton:hover span:after {
-  right: 0px;
-}
+  .bouton:hover span:after {
+    right: 0px;
+  }
 
-.ListeDeroulante {
-  width: 350px;
-  height: 30px;
-  margin-bottom: 15px;
-}
+  .ListeDeroulante {
+    width: 350px;
+    height: 30px;
+    margin-bottom: 15px;
+  }
 
 
-.colonne {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  min-height: 640px;
-}
-
-.fermer {
-  color: rgba(88, 89, 93);
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.fermer:hover {
-  color: red;
-  cursor: pointer;
-}
-
-.suppression {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-right: 15px;
-}
-
-.code {
-  font-size: 4em;
-}
-
-.IconeProfil {
-  font-size: 1.8em;
-  padding-right: 10px;
-}
-
-.has_cols {
-  display: flex;
-  flex-direction: row;
-}
-
-/* The Modal (background) */
-.modal {
- display: none; /* Hidden by default */
- position: fixed; /* Stay in place */
- z-index: 1; /* Sit on top */
- left: 0;
- top: 0;
- width: 100%; /* Full width */
- height: 100%; /* Full height */
- overflow: auto; /* Enable scroll if needed */
- background-color: rgb(0,0,0); /* Fallback color */
- background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
- padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
- background-color: #fefefe;
- margin: 5px auto; /* 15% from the top and centered */
- border: 1px solid #888;
- width: 20%; /* Could be more or less, depending on screen size */
- display: flex;
- flex-direction: column;
- padding: 5px;
- word-wrap: break-word;
-}
-
-/* The Close Button */
-.close {
- /* Position it in the top right corner outside of the modal */
- position: absolute;
- right: 775px;
- top: 75px;
- color: #000;
- font-size: 35px;
- font-weight: bold;
-}
-
-/* Close button on hover */
-.close:hover,
-.close:focus {
- color: red;
- cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
- -webkit-animation: animatezoom 0.6s;
- animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
- from {-webkit-transform: scale(0)}
- to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
- from {transform: scale(0)}
- to {transform: scale(1)}
-}
-
-.fermer {
-  color: rgba(88, 89, 93);
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.fermer:hover {
-  color: red;
-  cursor: pointer;
-}
-
-.avis-area {
-  width: 90%;
-}
-
-.avis {
-  display: flex;
-  flex-direction: column;
-  overflow : auto;
-}
-
-/* Cahier de texte */
-
-/* Style the tab */
-.semaine {
- display: flex;
- flex-direction: row;
- border: 1px solid #ccc;
- width: 100%;
- height: 50px;
-}
-
-/* Style the buttons that are used to open the tab content */
-.semaine button {
- display: block;
- background-color: inherit;
- padding: 5px;
- padding-left: 15px;
- width: 100%;
- border: none;
- outline: none;
- text-align: left;
- cursor: pointer;
- font-size: 1.5em;
-}
-
-/* Style the tab content */
-.tabcontent {
- float: left;
- padding-left: 12px;
- border-bottom: 1px solid #ccc;
- width: 988px;
- border-left: none;
- height: 80%;
- display: none;
-}
-
-.matiere {
-  font-size: 2em;
-  transform: rotate(0deg);
-  transition: transform 300ms ease-in-out;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.matiere:hover {
-  transform: rotate(360deg);
-}
-
-.MG {
-  font-weight: bold;
-}
-
-.suppression {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-right: 15px;
-}
-
-.DevoirC{
-  width: 930px;
-  margin-bottom: 15px;
-}
-
-.CenterCahier {
-  padding: 0px;
-}
-
-/* Admin */
-
-.Formulaire {
+  .colonne {
     display: flex;
     flex-direction: column;
     width: 50%;
-}
+    min-height: 640px;
+  }
 
-.Centrer{
+  .fermer {
+    color: rgba(88, 89, 93);
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .fermer:hover {
+    color: red;
+    cursor: pointer;
+  }
+
+  .suppression {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+
+  .code {
+    font-size: 4em;
+  }
+
+  .IconeProfil {
+    font-size: 1.8em;
+    padding-right: 10px;
+  }
+
+  .has_cols {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 20%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    word-wrap: break-word;
+  }
+
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    position: absolute;
+    right: 775px;
+    top: 75px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  .fermer {
+    color: rgba(88, 89, 93);
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .fermer:hover {
+    color: red;
+    cursor: pointer;
+  }
+
+  .avis-area {
+    width: 90%;
+  }
+
+  .avis {
+    display: flex;
+    flex-direction: column;
+    overflow : auto;
+  }
+
+  /* Cahier de texte */
+
+  /* Style the tab */
+  .semaine {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 50px;
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .semaine button {
+    display: block;
+    background-color: inherit;
+    padding: 5px;
+    padding-left: 15px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    float: left;
+    padding-left: 12px;
+    border-bottom: 1px solid #ccc;
+    width: 988px;
+    border-left: none;
+    height: 80%;
+    display: none;
+  }
+
+  .matiere {
+    font-size: 2em;
+    transform: rotate(0deg);
+    transition: transform 300ms ease-in-out;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .matiere:hover {
+    transform: rotate(360deg);
+  }
+
+  .MG {
+    font-weight: bold;
+  }
+
+  .suppression {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 15px;
+  }
+
+  .DevoirC{
+    width: 930px;
+    margin-bottom: 15px;
+  }
+
+  .CenterCahier {
+    padding: 0px;
+  }
+
+  /* Admin */
+
+  .Formulaire {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .Centrer{
     margin-left: 20px;
     text-align: center;
-}
-
-.Séparer{
-  margin-top: 20px;
-}
-
-/* Style the input container */
-.input-container {
-  display: flex;
-  width: 350px;
-  margin-bottom: 15px;
-}
-
-/* Style the form icons */
-.iconCrea {
-  padding: 10px;
-  color: white;
-  min-width: 50px;
-  text-align: center;
-  font-size: 1.5em;
-}
-
-/* Style the input fields */
-.input-field {
-  width: 100%;
-  padding: 10px;
-  outline: none;
-}
-
-.input-field:focus {
-  border: 2px solid;
-}
-]¤
-.suppression {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.Fdroite {
-  margin-right: 30px;
-}
-
-/* ------------------------------------------ */
-/* Annuaire */
-
-.titre_liste{
-  font-size: 200%;
-  color: var(--font-color);
-}
-
-.PPannuaire {
-  width: 75px;
-  height: 75px;
-  border-radius: 5000px;
-  border: 1px black solid;
-}
-
-/* Style buttons */
-.btn-info {
- background-color: DodgerBlue; /* Blue background */
- border: none; /* Remove borders */
- color: white; /* White text */
- padding: 12px 16px; /* Some padding */
- font-size: 16px; /* Set a font size */
- cursor: pointer; /* Mouse pointer on hover */
- width: 100%;
-}
-
-/* Darker background on mouse-over */
-.btn-info:hover {
- background-color: RoyalBlue;
-}
-
-/* Dropdown Button */
-.dropbtn {
- background-color: #3498DB;
- color: white;
- padding: 16px;
- font-size: 16px;
- border: none;
- cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
- background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
- position: relative;
- display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
- display: none;
- position: absolute;
- background-color: #f1f1f1;
- min-width: 160px;
- box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
- color: black;
- padding: 12px 16px;
- text-decoration: none;
- display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd}
-
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-.show {display:block;}
-
-.contact {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-/* ---------------------------------------- */
-/* Fichier */
-
-.Dropzone {
-  border: 3px dotted black;
-}
-
-.file-txt {
-  margin-left: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 2px;
-  height: 45px;
-  text-align: left;
-}
-
-.file {
-  font-size: 2em;
-  margin: 5px;
-}
-
-.file-txt p {
-  height: auto;
-  margin: 0px;
-}
-
-.fichier {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-/* Cahier Multimédia */
-
-.leaf {
-  height: 90%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-.chip {
-  display: inline-block;
-  padding: 0 25px;
-  height: 50px;
-  font-size: 16px;
-  line-height: 50px;
-  border-radius: 25px;
-  background-color: #f1f1f1;
-  margin-top: 15px;
-  padding-left: 0px;
-  transition: 300ms background-color ease-in-out;
-  color: black;
-}
-
-.chip i {
-  float: left;
-  margin: 0 10px 0 -25px;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
-
-.chip:hover {
-  background-color: rgb(100, 100, 100);
-}
-
-
-.liste {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height: 90%;
-}
-
-.Copybook i {
-  font-size: 2em;
-  margin: 5px;
-  text-align: center;
-  overflow : auto;
-}
-
-.Copybook {
-  transform: scale(1);
-  font-size: 1em;
-  text-align: center;
-  text-decoration: none;
-  transition: transform 300ms ease-in-out;
-  transition: font-size 300ms ease-in-out;
-}
-
-.Copybook:hover {
-  font-size: 1.15em;
-  transform: scale(1.15);
-}
-
-.chip a:visited {
-  text-decoration: none;
-}
-
-.chip a{
-  text-decoration: none;
-}
-
-
-
-.Creation {
-  margin: 10px;
-}
-
-.templateCahierMulimedia {
-  display: none;
-}
-
-.imageCahierMulimedia {
-  display: block;
-  width: 40%;
-  margin-top: 25px;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 25px;
-  border: 2px solid black;
-  padding: 10px;
-  height: 25px;
-  text-align: center;
-}
-
-.boutonsCahierMultimedia {
-  display: flex;
-  flex-direction: row;
-}
-
-.Saisie {
-  margin-bottom: 150px;
-  padding-bottom: 25px;
-}
-
-.CM-area {
-  display: block;
-  width: 65%;
-  font-size: 100%;
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5rem;
-  height:10rem;
-}
-
-.videoArea{
-  display: block;
-  width: 65%;
-  font-size: 100%;
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5rem;
-  height:1rem;
-}
-
-.AdminMulti {
-  position: absolute;
-  bottom: 15px;
-}
-
-.textePre {
-  white-space: break-spaces;
-}
-
-/* Blog */
-
-.liste_sujets{
-  border:solid black 2px;
-  border-radius: 4px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-
-.espaces{
-  display:flex;
-  flex-direction: row;
-}
-
-.espaces hr{
-  flex:start;
-  margin-left: 20px;
-}
-
-.sujets{
-  display:flex;
-  flex-direction: row;
-}
-
-.sujets a{
-  flex:auto;
-  font-size: 19px;
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-.sujets span{
-  flex:end;
-  color:black;
-  margin-right: 10px;
-}
-
-.Blog {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.Commentaire {
-  width: 500px;
-}
-
-.Comm {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 5px;
-}
-
-.ComDiv {
-  display: flex;
-  flex-direction: column;
-}
-
-.Bouton-com {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 10px;
-}
-
-.Comm legend{
-  text-align:right;
-}
-
-.commentairefield fieldset{
-  width:50%;
-  float:right;
-}
-
-
-
-
-
-
+  }
+
+  .Séparer{
+    margin-top: 20px;
+  }
+
+  /* Style the input container */
+  .input-container {
+    display: flex;
+    width: 350px;
+    margin-bottom: 15px;
+  }
+
+  /* Style the form icons */
+  .iconCrea {
+    padding: 10px;
+    color: white;
+    min-width: 50px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  /* Style the input fields */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+
+  .input-field:focus {
+    border: 2px solid;
+  }
+
+  .suppression {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .Fdroite {
+    margin-right: 30px;
+  }
+
+  /* ------------------------------------------ */
+  /* Annuaire */
+
+  .titre_liste{
+    font-size: 200%;
+    color: var(--font-color);
+  }
+
+  .PPannuaire {
+    width: 75px;
+    height: 75px;
+    border-radius: 5000px;
+    border: 1px black solid;
+  }
+
+  /* Style buttons */
+  .btn-info {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+    width: 100%;
+  }
+
+  /* Darker background on mouse-over */
+  .btn-info:hover {
+    background-color: RoyalBlue;
+  }
+
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display:block;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* ---------------------------------------- */
+  /* Fichier */
+
+  .Dropzone {
+    border: 3px dotted black;
+  }
+
+  .file-txt {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2px;
+    height: 45px;
+    text-align: left;
+  }
+
+  .file {
+    font-size: 2em;
+    margin: 5px;
+  }
+
+  .file-txt p {
+    height: auto;
+    margin: 0px;
+  }
+
+  .fichier {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  /* Cahier Multimédia */
+
+  .leaf {
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    margin-top: 15px;
+    padding-left: 0px;
+    transition: 300ms background-color ease-in-out;
+    color: black;
+  }
+
+  .chip i {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .chip:hover {
+    background-color: rgb(100, 100, 100);
+  }
+
+
+  .liste {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 90%;
+  }
+
+  .Copybook i {
+    font-size: 2em;
+    margin: 5px;
+    text-align: center;
+    overflow : auto;
+  }
+
+  .Copybook {
+    transform: scale(1);
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 300ms ease-in-out;
+    transition: font-size 300ms ease-in-out;
+  }
+
+  .Copybook:hover {
+    font-size: 1.15em;
+    transform: scale(1.15);
+  }
+
+  .chip a:visited {
+    text-decoration: none;
+  }
+
+  .chip a{
+    text-decoration: none;
+  }
+
+
+  .Creation {
+    margin: 10px;
+  }
+
+  .templateCahierMulimedia {
+    display: none;
+  }
+
+  .imageCahierMulimedia {
+    display: block;
+    width: 40%;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 10px;
+    height: 25px;
+    text-align: center;
+  }
+
+  .boutonsCahierMultimedia {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .Saisie {
+    margin-bottom: 150px;
+    padding-bottom: 25px;
+  }
+
+  .CM-area {
+    display: block;
+    width: 65%;
+    font-size: 100%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+    height:10rem;
+  }
+
+  .videoArea{
+    display: block;
+    width: 65%;
+    font-size: 100%;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+    height:1rem;
+  }
+
+  .AdminMulti {
+    position: absolute;
+    bottom: 15px;
+  }
+
+  .textePre {
+    white-space: break-spaces;
+  }
+
+  /* Blog */
+
+  .liste_sujets{
+    border:solid black 2px;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .espaces{
+    display:flex;
+    flex-direction: row;
+  }
+
+  .espaces hr{
+    flex:start;
+    margin-left: 20px;
+  }
+
+  .sujets{
+    display:flex;
+    flex-direction: row;
+  }
+
+  .sujets a{
+    flex:auto;
+    font-size: 19px;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
+  .sujets span{
+    flex:end;
+    color:black;
+    margin-right: 10px;
+  }
+
+  .Blog {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .Commentaire {
+    width: 500px;
+  }
+
+  .Comm {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .ComDiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Bouton-com {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 10px;
+  }
+
+  .Comm legend{
+    text-align:right;
+  }
+
+  .commentairefield fieldset{
+    width:50%;
+    float:right;
+  }
 }
