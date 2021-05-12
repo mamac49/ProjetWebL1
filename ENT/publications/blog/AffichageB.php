@@ -179,7 +179,7 @@ if (isset($_POST["ValiderChgt"])) {
   $contenu = array();
   $nb = 0;
   while (isset($_POST[$nb])) {
-    $temp = $_POST[$nb];
+    $temp = securisation($_POST[$nb]);
     $contenu[] = $temp;
     $nb++;
   }
