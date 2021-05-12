@@ -15,6 +15,7 @@
   .infos_basiques {
 	  display: flex;
 	  flex-direction: row;
+	  width: 100%;
 	}
 
   .PPannuaire {
