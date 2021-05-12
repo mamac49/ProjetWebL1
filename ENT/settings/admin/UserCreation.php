@@ -61,7 +61,6 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <script src="/Projetwebl1/ENT/js/Admin.js"></script>
-    <link rel="stylesheet" href="styleAd.css">
   </head>
 
     <?php

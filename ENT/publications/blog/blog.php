@@ -53,7 +53,6 @@ if ($_SESSION["Connected"] == true) {
   <head>
     <meta charset="utf-8">
     <title>Blogs</title>
-    <link rel="stylesheet" href="styleB.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
