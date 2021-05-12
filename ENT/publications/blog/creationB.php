@@ -10,9 +10,11 @@ function Create($titre, $matiere, $contenu) {
   $link = dbConnect();
 
   $date = date("Y-m-d");
+  $heure= date("H:i");
+
   $IDu = $_SESSION['ID'];
 
-  $sql = "INSERT INTO `Publications` (`titre`, `date`, `nature`, `iduser`, `matiere`) VALUES ('$titre', '$date', '1', '$IDu', '$matiere')";
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `date_ecriture`, `heure_ecriture`, `nature`, `iduser`, `matiere`) VALUES ('$titre', '$date', '$date', '$heure', '1', '$IDu', '$matiere')";
   if (mysqli_query($link, $sql)) {
     $sqlID = max(max(nbPub()));
     $pos = 0;

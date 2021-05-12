@@ -1,4 +1,4 @@
-@media all and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
   /* html */
   html {
@@ -8,12 +8,12 @@
 
   .site_container {
     -webkit-overflow-scrolling: touch;
-    height: 100%;
+    height: 50%;
   }
 
   .site_content {
     z-index: 1;
-    height: 100%;
+    height: 50%;
   }
 
 
@@ -28,14 +28,14 @@
   .Title {
     background-color: inherit;
     text-align: center;
-    width: 70%;
-    margin-left: 5%;
+    width: 100%;
+    margin: auto;
   }
 
   .logo_millocheau {
     display: block;
     width: 20px;
-    height: auto;
+    height: 20px ;
     position: sticky;
     right: 0;
     }
