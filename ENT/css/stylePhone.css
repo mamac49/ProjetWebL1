@@ -36,7 +36,7 @@
     display: block;
     width: 180px;
     height: 200px;
-    position: sticky;
+    top: 0;
     right: 0;
     }
 
@@ -900,6 +900,10 @@ textarea {
 .commentairefield fieldset{
   width:50%;
   float:right;
+}
+
+.PP{
+
 }
 
 
