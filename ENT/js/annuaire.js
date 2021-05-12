@@ -1,3 +1,11 @@
+var toCopy  = document.getElementById( 'to-ToCopyMail' )
+var btnCopy = document.getElementById( 'copyMail' );
+btnCopy.addEventListener( 'click',
+function() {
+  toCopy.select();
+  document.execCommand( 'copyMail' );
+  return false;
+});
 
 
 /* When the user clicks on the button,
