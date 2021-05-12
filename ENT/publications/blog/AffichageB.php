@@ -258,9 +258,9 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                   <div class="Bouton-com">
                     <?php $res=idauteurC($x[0]);
                     if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
-                      <input type="button" class="bouton" value="Effacer le commentaire">
+                      <a href="SupComm.php?id=<?php print $x[0] ?>"><i class="fas fa-times fermer"></i></a>
                       <?php if ($_SESSION["ID"]==$res){?>
-                        <input type="button" class="bouton" value="Editer le commentaire">
+                        <button type="submit" name="EditCom"><span>Editer</span></button>
                       <?php } ?>
                       <br/>
                       <br/>
