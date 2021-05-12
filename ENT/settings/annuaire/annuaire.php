@@ -44,7 +44,7 @@ if ($_SESSION["Connected"] == true) {
             $mail = info($x[0])["mail"];
         ?>
           <li class="contact">
-              <div class="debut line_block_annuaire">
+              <div class="debut">
                 <a class="<?php echo $contact_id;?> texte" id="contact">
                   <span>
                     <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
