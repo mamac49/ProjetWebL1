@@ -682,11 +682,6 @@ textarea {
   text-decoration: none;
 }
 
-.LiCM {
-  width:auto;
-}
-
-
 .Creation {
   margin: 10px;
 }
@@ -839,7 +834,6 @@ textarea {
 }
 
 .texte{
-  width: 1000px;
   word-break: break-word;
 }
 
