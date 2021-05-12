@@ -11,7 +11,7 @@
 	text-align: center;
 }
 
-.infos_basiques {
+.contact {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -19,10 +19,6 @@
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
 	border-bottom: black 0.2rem solid;
-}
-
-.infos_detaillee{
-	display: none;
 }
 
 .PPannuaire {
@@ -43,11 +39,6 @@
 	color: var(--font-color);
 }
 
-.contact {
-	display: flex;
-	flex-direction: row;
-}
-
 .debut {
 	display: inline;
 	padding: 0rem 2.5rem;
@@ -55,18 +46,10 @@
 	line-height: 4rem;
 }
 
-.line_block_annuaire {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 4rem;
-}
-
-.hrcontact {
-	width: 100%;
-}
-
-.user_name {
-	margin-top: auto;
-	margin-bottom: auto;
+.debut img {
+	float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }

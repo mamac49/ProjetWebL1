@@ -44,39 +44,17 @@ if ($_SESSION["Connected"] == true) {
             $mail = info($x[0])["mail"];
         ?>
           <li class="contact">
-            <div class="infos_basiques">
-              <div class="debut line_block_annuaire">
+              <div class="debut">
                 <a class="<?php echo $contact_id;?> texte" id="contact">
-                  <span>
-                    <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
-                  </span>
-                </a>
-              </div>
-              <div class="milieu line_block_annuaire">
-                <p class="user_name">
+                  <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
                   <?php echo $contact_name;?>
-                </p>
+                </a>
               </div>
 
               <div class="fin">
                 <button class="infos_button" onclick="copy(<?php echo $x[0]; ?>)"><i class="fas fa-envelope"></i></button>
                 <textarea id="<?php echo 'ToCopy' . $x[0]; ?>" class="AreaMail"><?php echo $mail; ?></textarea>
               </div>
-              <!--<div class="line_block_annuaire">
-                <button type="button" id="add_com" onclick="document.getElementById('infos_block').style.display='block'" class="infos_button">Informations</button>
-              </div>
-            </div>
-            <div class="infos_detaillee">
-              <div id="infos_block" class="modal">
-                <div class="modal-content animate" method="POST">
-                  <span onclick="document.getElementById('infos_block').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
-                    <div class="container">
-                      <div id="myInfos-<?php echo $x[0];?>" class="contenu_infos_detaillee">
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>-->
           </li>
         <?php
           }
