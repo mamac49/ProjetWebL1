@@ -600,6 +600,10 @@ textarea {
  justify-content: space-around;
 }
 
+.btn-info i {
+  font-size: 3em;
+}
+
 /* Darker background on mouse-over */
 .btn-info:hover {
  background-color: RoyalBlue;
