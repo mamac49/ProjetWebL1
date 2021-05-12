@@ -886,8 +886,8 @@ textarea {
 .dropbtn {
   padding: 16px;
   font-size: 16px;
-  padding: 1.25rem;
-  font-size: 1.25rem;
+  height: 3rem;
+  padding: revert;
   border: none;
   cursor: pointer;
 }
