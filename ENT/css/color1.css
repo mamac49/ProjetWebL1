@@ -7,7 +7,7 @@
 
 /* Background Color */
 
-.move_menu, .sandwich, .Login, .qwant, .bouton, .Login, .semaine, .iconCrea, .ListeDeroulante, .btn-info {
+.move_menu, .sandwich, .Login, .qwant, .bouton, .Login, .semaine, .iconCrea, .ListeDeroulante, .btn-info, .drop-btn {
   background-color: var(--main-color);
 }
 
@@ -42,7 +42,7 @@
   color: var(--font-color);
 }
 
-.FormCrea, .semaine button, #navbar a, .bouton, .Login, .texteB , .ListeDeroulante, .btn-info {
+.FormCrea, .semaine button, #navbar a, .bouton, .Login, .texteB , .ListeDeroulante, .btn-info, .drop-btn {
   color: var(--font-color);
 }
 
