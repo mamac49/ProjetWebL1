@@ -841,6 +841,64 @@ textarea {
 
 /* Annuaire */
 
+
 .AreaMail {
 	display: none;
+  transform: scaleX(+10000);
+}
+
+/* ------------------------------------------ */
+/* Annuaire */
+
+.center_rem {
+	font-size: 100%;
+}
+
+.titre_liste{
+	font-size: 2rem;
+	color: var(--font-color);
+	text-align: center;
+}
+
+.contact {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	border-bottom: black 0.2rem solid;
+}
+
+.PPannuaire {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 40rem;
+	border: 0.1rem black solid;
+}
+
+.infos_button {
+	padding: 1.5rem;
+	font-size: 1.5rem;
+	height: 3rem;
+	padding: revert;
+	border: none;
+	cursor: pointer;
+	background-color: var(--main-color);
+	color: var(--font-color);
+}
+
+.debut {
+	display: inline;
+	padding: 0rem 2.5rem;
+	height: 4rem;
+	line-height: 4rem;
+}
+
+.debut img {
+	float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
