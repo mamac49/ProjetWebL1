@@ -70,7 +70,7 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
 
         <div class="Center_adap has_cols">
 
-            <form action="UserCreation.php" method="POST" class="Formulaire" enctype="multipart/form-data">
+            <form action="UserCreation.php" method="POST" class="Formulaire colonne" enctype="multipart/form-data">
                 <h2 class="texte">Création d'utilisateur</h2>
                 <div class="input-container">
                   <i class="fas fa-user iconCrea"></i>
