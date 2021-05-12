@@ -44,25 +44,29 @@ if ($_SESSION["Connected"] == true) {
             $mail = info($x[0])["mail"];
         ?>
           <li class="contact conctact_rem">
-            <div class="debut line_block_annuaire">
-              <a class="<?php echo $contact_id;?> texte" id="contact">
-                <span>
-                  <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
-                </span>
-              </a>
+            <div class="infos_basiques">
+              <div class="debut line_block_annuaire">
+                <a class="<?php echo $contact_id;?> texte" id="contact">
+                  <span>
+                    <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
+                  </span>
+                </a>
+              </div>
+              <div class="milieu line_block_annuaire">
+                <p class="user_name">
+                  <?php echo $contact_name;?>
+                </p>
+              </div>
+              <!--<div class="fin">-->
+              <div class="dropdown line_block_annuaire">
+                <button onclick="down(<?php print $x[0];?>)" class="dropbtn">Information</button>
+              </div>
             </div>
-            <div class="milieu line_block_annuaire">
-              <p class="user_name">
-                <?php echo $contact_name;?>
-              </p>
-            </div>
-            <!--<div class="fin">-->
-            <div class="dropdown line_block_annuaire">
-              <button onclick="down(<?php print $x[0];?>)" class="dropbtn">Information</button>
-            </div>
-            <div id="myDropdown-<?php echo $x[0];?>" class="dropdown-content">
-              <button class="btn-info" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fas fa-envelope"></i><p id="ToCopyMail-<?php echo $x[0];?>"><?php echo $mail; ?></p></button>
-              <button class="btn-info" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fas fa-user-tag"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
+            <div class="infos_avancee">
+              <div id="myDropdown-<?php echo $x[0];?>" class="dropdown-content">
+                <button class="bouton" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fas fa-envelope"></i><p id="ToCopyMail-<?php echo $x[0];?>"><?php echo $mail; ?></p></button>
+                <button class="bouton" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fas fa-user-tag"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
+              </div>
             </div>
           </li>
         <?php
