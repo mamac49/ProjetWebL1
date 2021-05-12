@@ -51,7 +51,7 @@ if ($_SESSION["Connected"] == true) {
               </a>
             </div>
             <div class="milieu line_block_annuaire">
-              <p>
+              <p class="user_name">
                 <?php echo $contact_name;?>
               </p>
             </div>
