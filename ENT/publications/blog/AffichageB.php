@@ -227,7 +227,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             </div>
 
             <?php if ($_SESSION["ID"]==$res){ ?>
-              <input type="button" class="bouton" value="Editer la publication">
+              <button type="button" id="add_com" onclick="document.getElementById('EditPub').style.display='block'" class="bouton">Editer le blog</button>
             <?php } ?>
             <div class="Comm">
               <?php
@@ -276,6 +276,17 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
           <h3 class="titre">Commentaire</h3>
           <p><textarea name="commentaire" rows="6" cols="40"></textarea></p>
           <p><button type="submit" class="bouton" name="ValiderEnvoi"><span>Envoyer</span></button></p>
+        </div>
+      </form>
+    </div>
+
+    <div id="EditPub" class="modal">
+        <form class="modal-content animate" method="POST">
+        <span onclick="document.getElementById('AddComm').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+        <div class="container">
+          <h3 class="titre">Contenu</h3>
+          <p><textarea name="commentaire" rows="6" cols="40"></textarea></p>
+          <p><button type="submit" class="bouton" name="ValiderChgt"><span>Valider</span></button></p>
         </div>
       </form>
     </div>
