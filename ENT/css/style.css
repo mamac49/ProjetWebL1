@@ -341,7 +341,7 @@ textarea {
   display: flex;
   flex-direction: column;
   width: 40%;
-  height: 640px;
+  min-height: 640px;
 }
 
 .fermer {
