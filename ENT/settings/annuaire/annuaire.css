@@ -37,6 +37,8 @@
 	padding: revert;
 	border: none;
 	cursor: pointer;
+	background-color: var(--main-color);
+	color: var(--font-color);
 }
 
 
