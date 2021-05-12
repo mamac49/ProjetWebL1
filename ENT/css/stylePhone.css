@@ -221,6 +221,11 @@
   height: 176.5px;
 }
 
+.qwant form {
+  display: flex;
+  flex-direction: column;
+}
+
 .qwant img {
   width: 200px;
   padding-bottom: 25px;
