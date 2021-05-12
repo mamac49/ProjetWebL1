@@ -227,8 +227,13 @@
 }
 
 .qwant input {
-  width: 60%;
-  height: 25px;
+  width: 80%;
+  height: 35px;
+}
+
+.qwant button {
+  width: 80%;
+  height: 35px;
 }
 
 .qwant img {
