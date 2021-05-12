@@ -67,7 +67,7 @@ if ($_SESSION["Connected"] == true) {
                 foreach (nbPub() as $x) {
                   if (nature($x[0])["nature"] == "2") {
                 ?>
-                  <li class="texte"><div class="chip"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><?php echo "<i class='". $matiere[nature($x[0])["matiere"]] ."'></i>"?></i><?php echo titre($x[0]); ?></a></div></li>
+                  <li class="texte"><div class="chip"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><?php echo "<i class='". $matiere[nature($x[0])["matiere"]] ."'></i>"?></i><?php echo nature($x[0])["titre"]; ?></a></div></li>
                 <?php
                   }
                 }
@@ -83,7 +83,7 @@ if ($_SESSION["Connected"] == true) {
                   foreach (nbPub() as $x) {
                     if (nature($x[0])["nature"] == "2") {
                   ?>
-                    <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
+                    <option class="texte" value="<?php echo $x[0] ?>"><?php echo nature($x[0])["titre"]; ?></option>
                   <?php }} ?>
                 </select>
                 <button type="submit" class="bouton" name="ValiderSupp"><span>Supprimer</span> </button>

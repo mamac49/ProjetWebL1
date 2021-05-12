@@ -74,7 +74,7 @@ if ($_SESSION["Connected"] == true) {
               foreach (nbPub() as $i){
                 if (nature($i[0])["nature"] == "1"){
                   if (textevide($i[0])!=="" OR $_SESSION["Admin"] == true){
-                  $titre=titre($i[0]);
+                  $titre=nature($i[0])["titre"];
                   $auteur=auteur($i[0]);
                   $date=jour($i[0]);
               ?>
@@ -98,7 +98,7 @@ if ($_SESSION["Connected"] == true) {
               foreach (nbPub() as $x){
                   if (nature($x[0])["nature"] == "1") {
                 ?>
-                  <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
+                  <option class="texte" value="<?php echo $x[0] ?>"><?php echo nature($x[0])["titre"]; ?></option>
                 <?php }} ?>
               </select>
               <button type="submit" class="bouton" name="ValiderSupp"><span>Supprimer</span></button>
