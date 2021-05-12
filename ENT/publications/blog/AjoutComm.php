@@ -14,7 +14,7 @@ function AjoutComm($message, $IDPubli) {
   $sql = "INSERT INTO `Commentaires`(`message`, `date_ecriture`, `heure_ecriture`, `iduser`, `idpublications`) VALUES ('$message', '$date', '$heure', '$ID', '$IDPubli')";
   if (mysqli_query($link, $sql)) {
     unset($_SESSION['commentaires']);
-      header("Location: AffichageB.php");
+    header("Location: AffichageB.php");
     mysqli_close($link);
   } else {
     echo mysqli_error($link);
