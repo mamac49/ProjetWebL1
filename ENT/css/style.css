@@ -597,11 +597,11 @@ textarea {
  width: 150%;
  display: flex;
  flex-direction: row;
- justify-content: space-around;
+ justify-content: space-between;
 }
 
 .btn-info i {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 /* Darker background on mouse-over */
