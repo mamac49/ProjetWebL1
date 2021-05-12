@@ -49,8 +49,8 @@ if ($_SESSION["Connected"] == true) {
                 <div class="fin">
                   <div class="dropdown"><button onclick="down(<?php print $x[0];?>)" class="dropbtn">Information</button></div>
                   <div id="myDropdown-<?php echo $x[0];?>" class="dropdown-content">
-                    <button class="btn-info" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fa fa-home"></i><p id="ToCopyMail-<?php echo $x[0];?>"><?php echo $mail; ?></p></button>
-                    <button class="btn-info" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fa fa-home"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
+                    <button class="btn-info" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fas fa-envelope"></i><p id="ToCopyMail-<?php echo $x[0];?>"><?php echo $mail; ?></p></button>
+                    <button class="btn-info" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fas fa-user-tag"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
                   </div>
 
                 </div>
