@@ -146,19 +146,10 @@ function idCom($x) { //renvoie l'id de la publication à laquelle appartient le 
 
 function message($x) { //renvoie le texte de chaque commentaire relié à leur publication
   $link = dbConnect();
-  $sql = "SELECT `message` FROM `Commentaires` WHERE `idcom`='$x'";
+  $sql = "SELECT * FROM `Commentaires` WHERE `idcom`='$x'";
   if ($result = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($result);
-    return $row[0];
-  }
-}
-
-function idauteurC($x) { //renvoie l'id de l'auteur du commentaire
-  $link = dbConnect();
-  $sql = "SELECT `iduser` FROM `Commentaires` WHERE `idcom`='$x'";
-  if ($result = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_array($result);
-    return $row[0];
+    return $row;
   }
 }
 
@@ -244,7 +235,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                 if (idCom($x[0]) == $IDblog){
                   $auteurC=auteurC($x[0]);
                   $tempsC=temps_ecriture_C($x[0]);
-                  $message=message($x[0]);
+                  $message=message($x[0])["message"];
                 ?>
                   <div class="ComDiv">
                     <div class="commentairefield">
@@ -256,7 +247,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                       </fieldset>
                     </div>
                   <div class="Bouton-com">
-                    <?php $res=idauteurC($x[0]);
+                    <?php $res=message($x[0])["iduser"];
                     if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
                       <a href="SupComm.php?id=<?php print $x[0] ?>"><i class="fas fa-times fermer"></i></a>
                       <?php if ($_SESSION["ID"]==$res){?>
