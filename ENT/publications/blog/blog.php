@@ -89,7 +89,7 @@ if ($_SESSION["Connected"] == true) {
             <?php
               if ($_SESSION["Admin"] == true) {
             ?>
-            <form>
+            <form class="noclass" action="blog.php" method="post">
               <button type="button" class="bouton" onclick="window.location.href = 'creationB.php';" name="CreationBlog"><span>Créer un blog</span></button>
               <select name="BlogD">
                 <?php
