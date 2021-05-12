@@ -106,7 +106,7 @@ if ($_SESSION["Connected"] == true) {
 
     <!--<p> <?php echo $_GET['id'] ?></p> -->
     <div class="Center_adap">
-      <h2 class="texte"><?php echo titre($IDcahier); ?></h2>
+      <h2 class="texte"><?php echo nature($IDcahier)["titre"]; ?></h2>
       <div class="corps">
         <?php
           foreach (AffichageCahier($IDcahier) as $line) {
