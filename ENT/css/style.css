@@ -738,11 +738,13 @@ textarea {
 .AdminMulti {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .AdminMulti select{
   width: auto;
   height: 40px;
+  margin: 15px;
 }
 
 .textePre {
