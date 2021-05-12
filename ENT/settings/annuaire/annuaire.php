@@ -57,9 +57,9 @@ if ($_SESSION["Connected"] == true) {
                   <?php echo $contact_name;?>
                 </p>
               </div>
-              <button class="infos_button" id="<?php echo 'ToCopy' . $x[0]; ?>" onclick="copy(<?php echo $x[0]; ?>)"><i class="fas fa-envelope"></i>
+              <button class="infos_button" onclick="copy(<?php echo $x[0]; ?>)"><i class="fas fa-envelope"></i>
                 </button>
-                <textarea id="ToCopyMail"><?php echo $mail; ?></textarea>
+                <textarea id="<?php echo 'ToCopy' . $x[0]; ?>"><?php echo $mail; ?></textarea>
                 <!--<div class="fin">-->
               <!--<div class="line_block_annuaire">
                 <button type="button" id="add_com" onclick="document.getElementById('infos_block').style.display='block'" class="infos_button">Informations</button>
