@@ -14,6 +14,7 @@
 .infos_basiques {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	width: 100%;
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
