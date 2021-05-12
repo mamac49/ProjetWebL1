@@ -830,5 +830,6 @@ textarea {
 }
 
 .texte{
-  max-width: 1000px;
+  width: 1000px;
+  word-break: break-word;
 }
