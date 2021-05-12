@@ -13,7 +13,7 @@ function SuppressionCom($id) {
     $IDPubli = $row[0];
   }
 
-  $sql = "DELETE FROM `Commentaires` WHERE `idtxt`='$id' ";
+  $sql = "DELETE FROM `Commentaires` WHERE `idcom`='$id' ";
   if (mysqli_query($link, $sql)) {
     echo "succès";
     mysqli_query($link, "FLUSH `users`");
