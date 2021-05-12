@@ -21,10 +21,6 @@
 	border-bottom: black 0.2rem solid;
 }
 
-.infos_detaillee{
-	display: none;
-}
-
 .PPannuaire {
 	width: 4rem;
 	height: 4rem;
@@ -43,27 +39,11 @@
 	color: var(--font-color);
 }
 
-.contact {
-	display: flex;
-	flex-direction: row;
-}
-
 .debut {
 	display: inline;
 	padding: 0rem 2.5rem;
 	height: 4rem;
 	line-height: 4rem;
-}
-
-.line_block_annuaire {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 4rem;
-}
-
-.hrcontact {
-	width: 100%;
 }
 
 .user_name {
