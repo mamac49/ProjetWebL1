@@ -5,7 +5,7 @@
   --second-color: rgba(168, 168, 168, 0.74);
 }
 
-.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .icon  {
+.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .icon, .dropbtn:hover, .dropbtn:focus  {
   background-color: var(--main-color);
 }
 

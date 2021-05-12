@@ -27,7 +27,7 @@
   background-color: var(--font-color);
 }
 
-.FormCrea, .semaine button:hover, .semaine button.active, #navbar, .btn-info:hover, .dropbtn:hover {
+.FormCrea, .semaine button:hover, .semaine button.active, #navbar, .btn-info:hover, .dropbtn:hover, .dropbtn:focus {
   background-color: var(--second-color);
 }
 
