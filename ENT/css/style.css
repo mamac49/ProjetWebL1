@@ -580,8 +580,8 @@ textarea {
 }
 
 .PPannuaire {
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   border-radius: 5000px;
   border: 1px black solid;
 }
@@ -652,13 +652,16 @@ textarea {
 
 .debut {
   display: inline;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 45%;
+  padding: 0 25px;
+  height: 50px;
+  line-height: 50px;
 }
 
 .debut img {
   float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
 }
 
 
