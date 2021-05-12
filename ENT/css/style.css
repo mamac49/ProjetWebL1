@@ -441,7 +441,6 @@ textarea {
   color: rgba(88, 89, 93);
   font-size: 35px;
   font-weight: bold;
-  margin-right: 30px;
 }
 
 .fermer:hover {
@@ -575,4 +574,8 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.Fdroite {
+  margin-right: 30px;
 }
