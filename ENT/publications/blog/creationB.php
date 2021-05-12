@@ -72,7 +72,7 @@ if ($_SESSION["Connected"] == true) {
   </head>
 <!--ajout de la méthode PUT-->
 <div class="Center_adap Saisie">
-  <form action="creationC.php" method="POST" enctype="multipart/form-data">
+  <form action="creationB.php" method="POST" enctype="multipart/form-data">
     <input type="text" name="titre" placeholder="Titre du cahier" >
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
