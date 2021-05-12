@@ -207,7 +207,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
 
             <div class="corps">
               <?php
-                foreach (AffichageCahier($IDcahier) as $line) {
+                foreach (AffichageCahier($IDblog) as $line) {
                   if (substr_count($line, "http") == 1) {
                     if (substr_count($line, "https://www.deezer.com/") == 1) {
                       $track = str_replace("https://www.deezer.com/us/track/", "", $line); ?>
@@ -229,7 +229,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                   }} ?>
 
             </div>
-            
+
             <?php if ($_SESSION["ID"]==$res){ ?>
               <input type="button" class="bouton" value="Editer la publication">
             <?php } ?>
