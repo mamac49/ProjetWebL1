@@ -2,67 +2,73 @@
 /* ------------------------------------------ */
 /* Annuaire */
 
-	.center_rem {
+.center_rem {
 	font-size: 100%;
-  }
-  
-  .titre_liste{
+}
+
+.titre_liste{
 	font-size: 2rem;
 	color: var(--font-color);
 	text-align: center;
-  }
-  
-  .infos_basiques {
-	  display: flex;
-	  flex-direction: row;
-	  width: 100%;
-	}
+}
 
-  .PPannuaire {
+.infos_basiques {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.infos_detaillee{
+	display: flex;
+	flex-direction: row;
+	width: 0rem;
+}
+
+.PPannuaire {
 	width: 4rem;
 	height: 4rem;
 	border-radius: 40rem;
 	border: 0.1rem black solid;
-  }
-  
-  .infos_button {
+}
+
+.infos_button {
 	padding: 16px;
 	font-size: 16px;
 	height: 3rem;
 	padding: revert;
 	border: none;
 	cursor: pointer;
-  }
-  
-  
-  .contact {
+}
+
+
+.contact {
 	display: flex;
 	flex-direction: row;
-  }
-  
-  .debut {
+}
+
+.debut {
 	display: inline;
 	padding: 0rem 2.5rem;
 	height: 4rem;
 	line-height: 4rem;
-  }
-  
-  .line_block_annuaire {
+}
+
+.line_block_annuaire {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 4rem;
-  }
-  
-  .hrcontact {
+}
+
+.hrcontact {
 	width: 100%;
-  }
-  
-  .user_name {
+}
+
+.user_name {
 	margin-top: auto;
 	margin-bottom: auto;
-  }
+}
 
-  .copy_infos {
-	  display: none;
-  }
+.copy_infos {
+	display: none;
+}
