@@ -775,6 +775,7 @@ textarea {
   font-size: 19px;
   text-decoration: none;
   margin-left: 10px;
+  word-break: break-word;
 }
 
 .sujets span{
