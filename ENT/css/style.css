@@ -959,6 +959,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 4rem;
 }
 
 .hrcontact {
@@ -970,3 +971,4 @@ textarea {
   margin-top: auto;
   margin-bottom: auto;
 }
+
