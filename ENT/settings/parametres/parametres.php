@@ -89,8 +89,8 @@ if ($_SESSION["Connected"] == true) {
       include ("../../base.php");
   ?>
       <div class="Center_adap has_cols">
-        <h1 class="texte titre_p">Paramètres</h1>
           <div class="colonnes">
+            <h1 class="texte titre_p">Paramètres</h1>
             <form method="POST" name="password">
               <p>
               <h2 class="texte">Réinitialisation du mot de passe</h2>
