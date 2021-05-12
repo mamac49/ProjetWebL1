@@ -661,3 +661,30 @@ textarea {
   flex-direction: row;
   justify-content: space-between;
 }
+
+/* ---------------------------------------- */
+/* Fichier */
+
+.Dropzone {
+  border: 3px dotted black;
+}
+
+.file-txt {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2px;
+  height: 45px;
+  text-align: left;
+}
+
+.file {
+  font-size: 2em;
+  margin: 5px;
+}
+
+.file-txt p {
+  height: auto;
+  margin: 0px;
+}

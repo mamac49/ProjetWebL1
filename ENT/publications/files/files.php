@@ -23,10 +23,10 @@ if ($_SESSION["Connected"] == true) {
     ?>
 
           <div class="Center">
-            <h4 class="texte">Archivage des fichiers - Maquette</h4>
+            <h4 class="texte files-txt">Archivage des fichiers - Maquette</h4>
             <fieldset class="Dropzone">
               <legend>Dropzone</legend>
-              <p class="texte">Listes de fichiers :</p>
+              <p class="texte files-txt">Listes de fichiers :</p>
               <ul>
                 <li class="texte"><p><i class="fas fa-folder icone file"></i>Nom de dossier 1</p><i class="fas fa-ellipsis-v icone"></i></li>
                 <li class="texte"><p><i class="fas fa-folder icone file"></i>Nom de dossier 2</p><i class="fas fa-ellipsis-v icone"></i></li>
