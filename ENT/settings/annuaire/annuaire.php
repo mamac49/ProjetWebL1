@@ -65,9 +65,6 @@ if ($_SESSION["Connected"] == true) {
               <button class="btn-info" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fas fa-user-tag"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
             </div>
           </li>
-          <li>
-            <hr class="hrcontact">
-          </li>
         <?php
           }
         ?>
