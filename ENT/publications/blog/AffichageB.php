@@ -153,11 +153,38 @@ function message($x) { //renvoie le texte de chaque commentaire relié à leur p
   }
 }
 
+function UpdatePubli($contenu, $ID) {
+  $link = dbConnect();
+
+  $pos = 0;
+  foreach ($contenu as $element) {
+    if (filter_var($element, FILTER_VALIDATE_URL)) {
+      $sqlp = "UPDATE `liens` SET `data` = '$element' WHERE `idpublications`='$ID' AND `position` = '$pos'";
+    } else {
+      $sqlp = "UPDATE `texte` SET `data` = '$element' WHERE `idpublications`='$ID' AND `position` = '$pos'";
+    }
+    $pos++;
+    if (mysqli_query($link, $sqlp)) {
+      echo "succès";
+    } else { echo mysqli_error($link);}
+  }
+}
+
 if (isset($_POST['ValiderEnvoi'])) {
   $_SESSION['commentaires'] = array(securisation($_POST['commentaire']), $IDblog);
   header("Location: AjoutComm.php");
 }
 
+if (isset($_POST["ValiderChgt"])) {
+  $contenu = array();
+  $nb = 0;
+  while (isset($_POST[$nb])) {
+    $temp = $_POST[$nb];
+    $contenu[] = $temp;
+    $nb++;
+  }
+  UpdatePubli($contenu, $IDblog);
+}
 
 if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l'authentification (auth.php)
 ?>
@@ -227,7 +254,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
             </div>
 
             <?php if ($_SESSION["ID"]==$res){ ?>
-              <input type="button" class="bouton" value="Editer la publication">
+              <button type="button" id="add_com" onclick="document.getElementById('EditPub').style.display='block'" class="bouton">Editer le blog</button>
             <?php } ?>
             <div class="Comm">
               <?php
@@ -250,9 +277,6 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                     <?php $res=message($x[0])["iduser"];
                     if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
                       <a href="SupComm.php?id=<?php print $x[0] ?>" class="bouton"><span>Supprimer</span></a>
-                      <?php if ($_SESSION["ID"]==$res){?>
-                        <button type="submit" class="bouton" name="EditCom"><span>Editer</span></button>
-                      <?php } ?>
                       <br/>
                       <br/>
                       <br/>
@@ -276,6 +300,35 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
           <h3 class="titre">Commentaire</h3>
           <p><textarea name="commentaire" rows="6" cols="40"></textarea></p>
           <p><button type="submit" class="bouton" name="ValiderEnvoi"><span>Envoyer</span></button></p>
+        </div>
+      </form>
+    </div>
+
+    <div id="EditPub" class="modal">
+        <form class="modal-content animate" method="POST">
+        <span onclick="document.getElementById('EditPub').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+        <div class="container">
+          <h3 class="titre">Contenu</h3>
+          <?php $x = 0;
+          foreach (AffichageCahier($IDblog) as $line) {
+            if (substr_count($line, "http") == 1) {
+              if (substr_count($line, "https://www.deezer.com/") == 1) { ?>
+                <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
+              <?php
+            } elseif (substr_count($line, "https://youtu.be/") == 1) { ?>
+                <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
+            <?php
+          } else { ?>
+              <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
+            <?php  }
+            } elseif (substr_count($line, "ImageContenu") == 1) {
+              echo "Image non changeable";
+            } else { ?>
+              <textarea name="<?php print $x; ?>" rows="4" cols="40"><?php echo $line; ?></textarea>
+            <?php }
+            $x++;
+          } ?>
+          <p><button type="submit" class="bouton" name="ValiderChgt"><span>Valider</span></button></p>
         </div>
       </form>
     </div>
