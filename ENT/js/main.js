@@ -157,3 +157,16 @@ function ReadMore(x) {
     moreText.style.display = "inline";
   }
 }
+
+
+/*désactivation du choix de la classe, si l'on souhaite créer un compte administrateur*/
+
+function admin_checked() {
+  var checkboxAdmin = document.getElementById("checkbox_admin");
+  var radioClasse = document.getElementById("classe");
+  if (checkboxAdmin.checked == true) {
+    radioClasse.style.display = "none";
+  } else {
+    radioClasse.style.display = "";
+  }
+}
