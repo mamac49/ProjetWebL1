@@ -47,7 +47,7 @@ if ($_SESSION["Connected"] == true) {
               <div class="debut">
                 <a class="<?php echo $contact_id;?> texte" id="contact">
                   <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
-                  <p class="user_name"><?php echo $contact_name;?></p>
+                  <?php echo $contact_name;?>
                 </a>
               </div>
 
