@@ -9,7 +9,7 @@ function AjoutComm($message, $IDPubli) {
   mysqli_query($link, "FLUSH `Commentaires`");
   $date = date("Y-m-d");
   $heure= date("H:i");
-  $ID = $_SESSION['ID']
+  $ID = $_SESSION['ID'];
 
   $sql = "INSERT INTO `Commentaires`(`message`, `date_ecriture`, `heure_ecriture`, `iduser`, `idpublications`) VALUES ('$message', '$date', '$heure', '$ID', '$IDPubli')";
   if (mysqli_query($link, $sql)) {
