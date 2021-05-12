@@ -159,11 +159,9 @@ function UpdatePubli($contenu, $ID) {
   $pos = 0;
   foreach ($contenu as $element) {
     if (filter_var($element, FILTER_VALIDATE_URL)) {
-      $nb = array_key_last(nombreTxt("liens"))+1;
-      $sqlp = "UPDATE `liens` SET `idliens` = '$nb', `data` = '$element', `position` = '$pos', `idpublications` = '$ID' WHERE `idpublications`='$ID'";
+      $sqlp = "UPDATE `liens` SET `data` = '$element' WHERE `idpublications`='$ID' AND `position` = '$pos'";
     } else {
-      $nb = array_key_last(nombreTxt("texte"))+1;
-      $sqlp = "UPDATE `texte` SET `idtexte` = '$nb', `data` = '$element', `position` = '$pos', `idpublications` = '$ID' WHERE `idpublications`='$ID'";
+      $sqlp = "UPDATE `texte` SET `data` = '$element' WHERE `idpublications`='$ID' AND `position` = '$pos'";
     }
     $pos++;
     if (mysqli_query($link, $sqlp)) {
