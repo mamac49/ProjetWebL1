@@ -28,13 +28,13 @@ if ($_SESSION["Connected"] == true) {
               <legend>Dropzone</legend>
               <p class="texte files-txt">Listes de fichiers :</p>
               <ul>
-                <li class="texte fichier" style="margin 0px;"><p><i class="fas fa-folder icone file"></i>Nom de dossier 1</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
-                <li class="texte fichier" style="margin 0px;"><p><i class="fas fa-folder icone file"></i>Nom de dossier 2</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
-                <li class="texte fichier" style="margin 0px;"><p><i class="fas fa-folder icone file"></i>Nom de dossier 3</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
-                <li class="texte fichier" style="margin 0px;"><p><i class="fas fa-file-pdf icone file"></i>Nom de fichier.pdf</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
-                <li class="texte fichier" style="margin 0px;"><p><i class="fas fa-file-code icone file"></i>Nom de fichier.py</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
-                <li class="texte fichier" style="margin 0px;"><p><i class="fas fa-file-archive icone file"></i>Nom de fichier.tar.gz</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
-                <li class="texte fichier" style="margin 0px;"><p><i class="fas fa-file icone file"></i>Nom de fichier.txt</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin 0px;"><i class="fas fa-folder icone file"></i>Nom de dossier 1</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin 0px;"><i class="fas fa-folder icone file"></i>Nom de dossier 2</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin 0px;"><i class="fas fa-folder icone file"></i>Nom de dossier 3</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin 0px;"><i class="fas fa-file-pdf icone file"></i>Nom de fichier.pdf</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin 0px;"><i class="fas fa-file-code icone file"></i>Nom de fichier.py</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin 0px;"><i class="fas fa-file-archive icone file"></i>Nom de fichier.tar.gz</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin 0px;"><i class="fas fa-file icone file"></i>Nom de fichier.txt</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
               </ul>
             </fieldset>
           </div>
