@@ -23,8 +23,7 @@ function copyMail(x) {
   var copyText = document.getElementById("ToCopyMail-".concat(x.toString()));
 
   /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  copyText.p();
 
   /* Copy the text inside the text field */
   document.execCommand("copy");
@@ -38,7 +37,7 @@ function copyContact(x) {
   var copyText = document.getElementById("ToCopyContact-".concat(x.toString()));
 
   /* Select the text field */
-  copyText.select();
+  copyText.p();
   copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
   /* Copy the text inside the text field */
