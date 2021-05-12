@@ -162,6 +162,12 @@ function idauteurC($x) { //renvoie l'id de l'auteur du commentaire
   }
 }
 
+if (isset($_POST['ValiderAjout'])) {
+  $_SESSION['commentaires'] = array(securisation($_POST['commentaire']), $IDblog);
+  header("Location: AjoutComm.php");
+}
+
+
 if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l'authentification (auth.php)
 ?>
 
@@ -277,8 +283,8 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
         <span onclick="document.getElementById('AddComm').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
           <h3 class="titre">Commentaire</h3>
-          <p><textarea name="consigne" rows="6" cols="40"></textarea></p>
-          <p><button type="submit" class="bouton" name="ValiderAjout"><span>Envoyer</span></button></p>
+          <p><textarea name="commentaire" rows="6" cols="40"></textarea></p>
+          <p><button type="submit" class="bouton" name="ValiderEnvoi"><span>Envoyer</span></button></p>
         </div>
       </form>
     </div>
