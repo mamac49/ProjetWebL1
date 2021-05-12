@@ -226,6 +226,11 @@
   flex-direction: column;
 }
 
+.qwant input {
+  width: 60%;
+  height: 25px;
+}
+
 .qwant img {
   width: 200px;
   padding-bottom: 25px;
