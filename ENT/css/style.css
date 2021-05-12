@@ -736,8 +736,8 @@ textarea {
 }
 
 .AdminMulti {
-  position: relative;
-  bottom: 15px;
+  display: flex;
+  flex-direction: row;
 }
 
 .AdminMulti select{
