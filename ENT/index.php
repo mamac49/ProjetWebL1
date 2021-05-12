@@ -52,7 +52,7 @@ if ($_SESSION["Connected"] == "True") {
           <h4 class="texteB"><i class="fas fa-birthday-cake icone"></i>Anniversaires<i class="fas fa-birthday-cake icone"></i></h4>
           <ul>
             <?php
-            echo "Ce mois ci :<br>";
+            echo "<p class='texteB'>Ce mois ci :</p>";
             if (is_null(annivs())) {
               echo "pas d'anniversaire";
                 } else {
