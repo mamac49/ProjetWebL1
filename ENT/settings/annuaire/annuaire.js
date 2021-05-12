@@ -23,6 +23,7 @@ function copy(x) {
   var copyText = document.getElementById("ToCopy".concat(x.toString()));
   console.log(copyText);
   console.log("ToCopy".concat(x.toString()));
+  console.log(Object.values(copyText));
 
   /* Select the text field */
   copyText.select();
