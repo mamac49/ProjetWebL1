@@ -148,7 +148,6 @@
 
   .Anniversaire {
     width: 500px;
-    margin-left: 25px;
     padding: 10px;
     text-align: center;
   }
@@ -215,7 +214,6 @@
 
 .qwant {
   width: 500px;
-  margin-left: 25px;
   margin-top: 50px;
   padding: 10px;
   padding-top: 25px;
@@ -232,7 +230,6 @@
   width: 500px;
   height: 200px;
   text-align: center;
-  margin-left: 25px;
   margin-top: 50px;
   padding: 10px;
 }
@@ -241,7 +238,6 @@
   width: 500px;
   height: 200px;
   text-align: center;
-  margin-left: 25px;
   margin-top: 50px;
   margin-right: 20px;
   padding: 10px;
