@@ -153,11 +153,39 @@ function message($x) { //renvoie le texte de chaque commentaire relié à leur p
   }
 }
 
+function UpdatePubli($contenu, $ID) {
+  $link = dbConnect();
+
+  foreach ($contenu as $element) {
+    if (filter_var($element, FILTER_VALIDATE_URL)) {
+      $nb = array_key_last(nombreTxt("liens"))+1;
+      $sqlp = "INSERT INTO `liens` (`idliens`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID') WHERE `idpublications`='$ID'";
+    } else {
+      $nb = array_key_last(nombreTxt("texte"))+1;
+      $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID') WHERE `idpublications`='$ID'";
+    }
+    $pos++;
+    if (mysqli_query($link, $sqlp)) {
+      echo "succès";
+    } else { echo mysqli_error($link);}
+  }
+}
+
 if (isset($_POST['ValiderEnvoi'])) {
   $_SESSION['commentaires'] = array(securisation($_POST['commentaire']), $IDblog);
   header("Location: AjoutComm.php");
 }
 
+if (isset($_POST["ValiderChgt"])) {
+  $contenu = array();
+  $nb = 0;
+  while (isset($_POST[$nb])) {
+    $temp = $_POST[$nb];
+    $contenu[] = $temp;
+    $nb++;
+  }
+  UpdatePubli($contenu, $IDblog);
+}
 
 if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l'authentification (auth.php)
 ?>
@@ -250,9 +278,6 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
                     <?php $res=message($x[0])["iduser"];
                     if ($_SESSION["ID"]==$res OR $_SESSION["Admin"] == true){ ?>
                       <a href="SupComm.php?id=<?php print $x[0] ?>" class="bouton"><span>Supprimer</span></a>
-                      <?php if ($_SESSION["ID"]==$res){?>
-                        <button type="submit" class="bouton" name="EditCom"><span>Editer</span></button>
-                      <?php } ?>
                       <br/>
                       <br/>
                       <br/>
@@ -298,7 +323,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
               <textarea name="<?php print $x; ?>" rows="1" cols="40"><?php echo $line; ?></textarea>
             <?php  }
             } elseif (substr_count($line, "ImageContenu") == 1) {
-              echo "image non changeable";
+              echo "Image non changeable";
             } else { ?>
               <textarea name="<?php print $x; ?>" rows="4" cols="40"><?php echo $line; ?></textarea>
             <?php }
