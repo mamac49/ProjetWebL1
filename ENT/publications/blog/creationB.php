@@ -44,7 +44,7 @@ if ($_SESSION["Connected"] == true) {
 <!--ajout de la méthode PUT-->
   <input type="hidden" name="_METHOD" value="PUT"/>
 
-  <div class="Center">
+  <div class="Center_adap">
     <form class="" action="creationB.php" method="POST" enctype="multipart/form-data">
       <input type="text" name="titre" placeholder="Titre du blog" >
       <ul class="publicationsBlog" id="publications_blog">

@@ -40,15 +40,6 @@
     right: 0;
     }
 
-  .sandwich_icon{
-    padding: 10px;
-    font-size: 35px;
-    width: 65px;
-    height: 65px;
-    cursor: pointer;
-  }
-
-
   /*Menu sandwich*/
 
   .sandwich {
@@ -65,6 +56,14 @@
     z-index: 3;
     transform: translateX(-275px);
     transition: 300ms all ease-in-out;
+    }
+
+    .sandwich_icon{
+      padding: 10px;
+      font-size: 35px;
+      width: 65px;
+      height: 65px;
+      cursor: pointer;
     }
 
   .move_menu {

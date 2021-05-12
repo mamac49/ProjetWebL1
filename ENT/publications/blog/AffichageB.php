@@ -110,7 +110,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
   <!--<p> <?php echo $_GET['id'] ?></p> -->
 
   <body>
-    <div class="Center">
+    <div class="Center_adap">
       <h2 class="texte"><?php echo titre($IDblog); ?></h2>
       <br/>
       <div class="corpsB">

@@ -64,7 +64,7 @@ if ($_SESSION["Connected"] == true) {
       include ("../../base.php");
     ?>
 
-          <div class="Center">
+          <div class="Center_adap">
             <h2 class="texte">Liste des sujets</h2>
             <ul class="liste_sujets">
               <li class="espaces"><hr></li>
