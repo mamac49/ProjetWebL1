@@ -15,7 +15,7 @@ if ($_SESSION["Connected"] == true) {
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/styleLittle.css">
-    <link rel="stylesheet" media="all and (max-width: 600px)" href="/Projetwebl1/ENT/css/stylePhone.css">
+    <link rel="stylesheet" media="all and (min-width: 480px) and (max-width: 1023px)" href="/Projetwebl1/ENT/css/stylePhone.css">
     <link rel="stylesheet" href="annuaire.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
