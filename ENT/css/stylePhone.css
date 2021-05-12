@@ -153,10 +153,10 @@
   #navbar {
     position: fixed; /* Make it stick/fixed */
     bottom: 0; /* Hide the navbar 50 px outside of the top view */
-    width: 100%; /* Full width */
+    width: 150%; /* Full width */
     transition: bottom 0.3s; /* Transition effect when sliding down (and up) */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     z-index: 2;
   }
