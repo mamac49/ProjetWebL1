@@ -31,7 +31,7 @@ if ($_SESSION["Connected"] == true) {
   <body onload="move_menu_sandwich(); detect_click();">
 
     <div class="site_container">
-      <div class="Center_adap">
+      <div class="Center_adap center_rem">
         <!-- les contacts seront listé avec en premier le professeur
           et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
         <h2 class="titre_liste texte">Liste des contacts</h2>
@@ -42,7 +42,7 @@ if ($_SESSION["Connected"] == true) {
             $contact_id = "contact_" . $x[0];
             $mail = info($x[0])["mail"];
         ?>
-          <li class="contact">
+          <li class="contact conctact_rem">
             <div class="debut"><a class="<?php echo $contact_id;?> texte" id="contact"><span><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
               <?php echo $contact_name;?></span></a>
             </div>

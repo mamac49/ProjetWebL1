@@ -574,16 +574,26 @@ textarea {
 /* ------------------------------------------ */
 /* Annuaire */
 
+.center_rem {
+  font-size: 100%;
+}
+
 .titre_liste{
-  font-size: 200%;
+  /*font-size: 200%;*/
+  font-size: 2rem;
   color: var(--font-color);
 }
 
 .PPannuaire {
+  /*
   width: 50px;
   height: 50px;
   border-radius: 5000px;
-  border: 1px black solid;
+  border: 1px black solid;*/
+  width: 4rem;
+  height: 4rem;
+  border-radius: 40rem;
+  border: 0.1rem black solid;
 }
 
 /* Style buttons */
