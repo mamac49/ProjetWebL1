@@ -59,7 +59,8 @@ if ($_SESSION["Connected"] == true) {
               </div>
               <!--<div class="fin">-->
               <div class="line_block_annuaire">
-                <button onclick="down(<?php print $x[0];?>)" class="infos_button">Informations</button>
+                <button onclick="down(<?php print $x[0];?>)" >Informations</button>
+                <button type="button" id="add_com" onclick="document.getElementById('infos_block').style.display='block'" class="infos_button">Informations</button>
               </div>
             </div>
             <div class="infos_detaillee">
