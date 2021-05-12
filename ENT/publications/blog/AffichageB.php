@@ -94,7 +94,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title><?php echo titre($IDblog); ?></title> <!--renvoie le titre du blog via l'id de ce dernier-->
+    <title><?php echo nature($IDblog)["titre"]; ?></title> <!--renvoie le titre du blog via l'id de ce dernier-->
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/style.css">
     <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/styleLittle.css">
@@ -113,7 +113,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
 
   <body>
     <div class="Center_adap">
-      <h2 class="texte"><?php echo titre($IDblog); ?></h2>
+      <h2 class="texte"><?php echo nature($IDblog)["titre"]; ?></h2>
       <br/>
       <div class="corpsB">
         <div class="Publication_texte">
