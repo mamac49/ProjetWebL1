@@ -105,9 +105,9 @@ function info($x) {
 
 function securisation ($donnee){ // pour protéger les champs après un formulaire
   if (is_string($donnee)) {
-    $donnee = str_replace('/"', "", $donnee);
-    $donnee = str_replace("/'", "", $donnee);
-    $donnee = str_replace("/`", "", $donnee);
+    $donnee = str_replace('\"', "", $donnee);
+    $donnee = str_replace("\'", "", $donnee);
+    $donnee = str_replace("\`", "", $donnee);
      echo "<script>console.log('suppression des caractères spéciaux')</script>";
   }
   $donnee = htmlspecialchars($donnee);
