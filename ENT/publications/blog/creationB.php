@@ -23,7 +23,6 @@ function Create($titre) {
 
 if (isset($_POST['Valider'])) {
   $titre = securisation($_POST['titre']);
-  }
   Create($titre);
 }
 
