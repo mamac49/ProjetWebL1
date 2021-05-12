@@ -25,7 +25,7 @@ function copy(x) {
   console.log("ToCopy".concat(x.toString()));
 
   /* Select the text field */
-  copyText.textContent();
+  copyText.select();
 
   /* Copy the text inside the text field */
   document.execCommand("copy");
