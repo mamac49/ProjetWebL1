@@ -1,8 +1,8 @@
 .PP {
   border: 3px black solid;
   border-radius: 5000px;
-  width: 199px;
-  height: 199px;
+  width: 150px;
+  height: 150px;
 }
 
 .colonnes {
@@ -17,5 +17,39 @@
 }
 
 .titre_p {
-  padding-bottom: 0px;
+  margin: 0px;
+}
+
+h2 {
+  margin-top: 5px;
+}
+
+/* Style the input container */
+.input-container {
+  display: flex;
+  width: 350px;
+  margin-bottom: 15px;
+}
+
+/* Style the form icons */
+.iconCrea {
+  padding: 10px;
+  color: white;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Style the input fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid;
+}
+
+::placeholder {
+  text-align: center;
 }

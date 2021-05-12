@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  border-radius: 10px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: left;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.button span {
+  display: inline-block;
+  position: relative;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  top: 0;
+  right: -20px;
+  transition: 0.5s cubic-bezier(1,.19,.47,.96);
+}
+
+.button:hover span:after {
+  right: -150px;
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Button</h2>
+
+<button class="button" style="vertical-align:middle"><span>Hover </span></button>
+
+</body>
+</html>

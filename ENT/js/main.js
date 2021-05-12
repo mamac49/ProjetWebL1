@@ -41,34 +41,52 @@ function getNbLines() {
 
 /*Fonction d'ajout de texte ou d'image*/
 
-/*déclaration des variables :
+  /*déclaration des variables :
+  -publicationCahierMultimedia : liste où sont affichés les zones de saisie
   -textArea : template de la saisie de texte
   -inputImage : template du dépot d'image
-  -line : ligne de la zone*/
-textArea = '<textarea name="line_0" class="texteCahierMulimedia" id="text_cahier_multimedia" title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
-inputImage = '<input name="line_0" class="imageCahierMulimedia" type="image" id="image_cahier_multimedia" accept="image/*" required>';
-line = 0;
+  -line : ligne de la zone
+  -publicationCahierMultimedia : liste où sont affichés les zones de saisie*/
+  textArea = '<textarea name="line_0" class="texteCahierMulimedia CM-area" id="text_cahier_multimedia"  title="texte" rows="8" cols="80" resize="none" create="false" required=""></textarea>';
+  inputImage = '<input name="line_0" class="imageCahierMulimedia" type="file" id="image_cahier_multimedia" accept="image/*" required>';
+  videoArea = '<input name="line_0" type="url" class="videoCahierMulimedia videoArea" id="video_cahier_multimedia" title="video" rows="8" cols="80" resize="none" create="false" required=""></videoarea>';
+  line = 0;
 
-/*conditions pour poster image à corriger
-ajout des cases de texte par deux à corriger*/
 function addLine(lineType) {
-  /*publicationCahierMultimedia = liste où sont affichés les zones de saisie*/
   var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+
   /*vérifie si l'on a commencé par un texte*/
-  if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'text') {
-    /* DEBUT DU MONDE !!!*/
-  } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
-  else if (publicationCahierMultimedia.innerHTML.indexOf(textArea) == -1 && lineType == 'image') {
-    /* FIN DU MONDE !!!*/
-    alert("Veuillez ajouter un texte avant votre image." );
-    return false;
-  } /*une fois le tout vérifié on ajoute un ligne*/
-  
+  if (line == 0) {
+    if (publicationCahierMultimedia.innerHTML.indexOf(textArea == -1) && lineType == 'text') {
+      /*DEBUT DU MONDE !!!*/
+    } /*si l'on a pas encore entré de texte on alerte l'utilisateur*/
+    else if (publicationCahierMultimedia.innerHTML.indexOf(textArea == -1) && lineType == 'image') {
+      /*FIN DU MONDE !!!*/
+      alert("Veuillez ajouter un texte avant votre image." );
+      return false;
+    }
+    else if (publicationCahierMultimedia.innerHTML.indexOf(textArea == -1) && lineType == 'video') {
+      /*FIN DU MONDE !!!*/
+      alert("Veuillez ajouter un texte avant votre lien vidéo." );
+      return false;
+    } /*une fois le tout vérifié on ajoute la première ligne*/
+  }
   /*PAS FIN DU MONDE !!!*/
-  textArea.replace('line_'+ line, 'line_' + line + 1);
-  inputImage.replace('line_'+ line, 'line_' + line + 1);
-  line += 1;
-  
+
+  /*logs tests
+  console.log('text area = ' + textArea);
+  console.log('image area = ' + inputImage);
+  console.log('image area = ' + inputImage);*/
+
+  textArea = textArea.replace('line_' + line, 'line_' + (line + 1));
+  inputImage = inputImage.replace('line_' + line, 'line_' + (line + 1));
+  videoArea = videoArea.replace('line_' + line, 'line_' + (line += 1));
+  console.log('Line ' + line + ' added.');
+  /*logs tests
+  console.log('text area = ' + textArea);
+  console.log('image area = ' + inputImage);
+  console.log(line);*/
+
   /* ajoute en fonction du type de ligne demandé
   -un texte*/
   if (lineType == 'text') {
@@ -76,21 +94,79 @@ function addLine(lineType) {
   }
 /*-ou une image*/
   else if (lineType == 'image') {
-    return inputImage
-  } 
+    return inputImage;
+  }
+/*-ou une video*/
+  else if (lineType == 'video') {
+    return videoArea;
+  }
 /*-et une erreur si aucun type n'a été spécifié, peut arriver en cas de bug au niveau des boutons*/
   else {
-    console.log('Error : Undefined lineType')
+    console.log('Error : Undefined lineType');
   }
 }
 
-/*ajoute au début de la liste l'élément souhaité (texte / image)*/
-function addText() {
-  var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-  publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('text'));
+  /*ajoute au début de la liste l'élément souhaité (texte / image)*/
+  function addText() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+    publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('text'));
+  }
+
+  function addImage() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+    if (line == 0 && addLine('image') == false) {
+      /*FIN DU MONDE!!!*/
+    } else {
+      /*PAS FIN DU MONDE !!!*/
+      publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
+    }
+  }
+
+  function addVideo() {
+    var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
+    if (line == 0 && addLine('video') == false) {
+      /*FIN DU MONDE!!!*/
+    } else {
+      /*PAS FIN DU MONDE !!!*/
+      publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('video'));
+    }
+  }
+
+/*Zone de saisie adaptative
+
+function textAdapt(){
+  var textadapt = document.getElementById("text_cahier_multimedia");
+  var textAreaHeight = textadapt.style.height;
+  Si l'on appuie sur entrée on adpate la taille de la zone de texte
+  textArea.addEventListener("keyup", function(event) {
+    if (event.keycode === 13) {
+      textAreaHeight = textAreaHeight.replace(textAreaHeight[0] + "rem", textAreaHeight = (textAreaHeight[0] + 1) + "rem")
+    }
+  });
+}*/
+
+function ReadMore(x) {
+  var moreText = document.getElementById("more-" + x);
+  var btnText = document.getElementById("Mybtn-" + x);
+
+  if (moreText.style.display === "inline") {
+    btnText.innerHTML = "Lire plus";
+    moreText.style.display = "none";
+  } else {
+    btnText.innerHTML = "Lire moins";
+    moreText.style.display = "inline";
+  }
 }
 
-function addImage() {
-  var publicationCahierMultimedia = document.getElementById("publications_cahier_multimedia");
-  publicationCahierMultimedia.insertAdjacentHTML("beforeend", addLine('image'));
+
+/*désactivation du choix de la classe, si l'on souhaite créer un compte administrateur*/
+
+function admin_checked() {
+  var checkboxAdmin = document.getElementById("checkbox_admin");
+  var radioClasse = document.getElementById("classe");
+  if (checkboxAdmin.checked == true) {
+    radioClasse.style.display = "none";
+  } else {
+    radioClasse.style.display = "";
+  }
 }

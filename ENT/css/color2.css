@@ -5,7 +5,7 @@
   --second-color: rgba(168, 168, 168, 0.74);
 }
 
-.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login  {
+.move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .icon, .dropbtn:hover, .dropbtn:focus  {
   background-color: var(--main-color);
 }
 
@@ -29,12 +29,16 @@
   background-color: var(--second-color);
 }
 
-.file, .IcoBook, .Copybook i {
+.file, .IcoBook, .Copybook i, .IconeProfil {
   color: var(--main-color);
 }
 
 
-html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, .legal, footer ul, footer ul:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login, .texte {
+html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, .legal, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login, .texte {
+  color: var(--font-color);
+}
+
+.FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover {
   color: var(--font-color);
 }
 
@@ -42,12 +46,8 @@ html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, 
   color: var(--font-color-nde);
 }
 
-.FormCrea {
-  color: var(--font-color);
-}
-
-.contact {
-  color: black;
+.input_field:focus {
+  border-color: var(--main-color);
 }
 
 html {

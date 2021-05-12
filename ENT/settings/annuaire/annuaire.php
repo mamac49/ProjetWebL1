@@ -8,20 +8,21 @@ if ($_SESSION["Connected"] == true) {
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
+
   <head>
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
-    <link rel="stylesheet" href="styleA.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/styleLittle.css">
+    <link rel="stylesheet" media="all and (min-width: 480px) and (max-width: 1023px)" href="/Projetwebl1/ENT/css/stylePhone.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/Taoki.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
-    <script src="menu_clic.js"></script>
-    <script src="/Projetwebl1/ENT/js/scroll.js">
-
-    </script>
+    <script src="/Projetwebl1/ENT/js/annuaire.js"></script>
+    <script src="/Projetwebl1/ENT/js/scroll.js"></script>
   </head>
+
     <?php
       include ("../../base.php");
     ?>
@@ -30,54 +31,37 @@ if ($_SESSION["Connected"] == true) {
   <body onload="move_menu_sandwich(); detect_click();">
 
     <div class="site_container">
-      <script src="menu_clic.js"></script>
-        <div class="contenu">
-            <div class="Center_adap">
-              <!-- les contacts seront listé avec en premier le professeur
-                et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
-              <h2 class="texte">Liste des contacts</h2>
-              <ul class="contact_list">
-              <?php
-                foreach (nombre() as $x) {
-                  $contact_name = info($x[0])['prenom'] . " " . info($x[0])['nom'];
-                  $contact_id = "contact" . $x[0];
-                  $mail = info($x[0])["mail"];
-              ?>
-                <li class="contact">
-                  <a class="<?php echo $contact_id;?> texte" id="contact"><span><img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire"><?php echo $contact_name;?></span></a>
-                </li>
-                <li><hr class="hrcontact"></li>
-              <?php
-                 }
-              ?>
-              </ul>
-            </div>
-      </div>
-      <!-- menu clic droit/-->
+      <div class="Center_adap center_rem">
+        <!-- les contacts seront listé avec en premier le professeur
+          et ensuite les élèves de la classe dans l'ordre alphabétique des noms/-->
+        <h2 class="titre_liste texte">Liste des contacts</h2>
+        <ul class="contact_list">
+        <?php
+          foreach (nombre() as $x) {
+            $contact_name = info($x[0])['prenom'] . " " . info($x[0])['nom'];
+            $contact_id = "contact_" . $x[0];
+            $mail = info($x[0])["mail"];
+        ?>
+          <li class="contact">
+              <div class="debut">
+                <a class="<?php echo $contact_id;?> texte" id="contact">
+                  <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($mail)) . ' '?>" alt="Photo de profil" class="PPannuaire">
+                  <?php echo $contact_name;?>
+                </a>
+              </div>
 
-      <div id="context_menu" class="context_menu" >
-      <ul class="context_menu_list">
-        <li class="context_menu_element" id="show_profile">
-          <p class="context_menu_button"><i class="fa fa-address-card" id="context_menu_icons"></i>Profil</p>
-        </li>
-        <li>
-          <hr class="context_menu_hr">
-        </li>
-        <li class="context_menu_element" id="copy_phone">
-          <p class="context_menu_button"><i class="fa fa-copy" id="context_menu_icons"></i>Copier le numéro de téléphone</p>
-        </li>
-        <li>
-          <hr class="context_menu_hr">
-        </li>
-        <li class="context_menu_element" id="copy_mail">
-          <p class="context_menu_button"><i class="fa fa-envelope-open" id="context_menu_icons"></i>Copier le mail</p>
-        </li>
-      </ul>
+              <div class="fin">
+                <button class="infos_button" onclick="copy(<?php echo $x[0]; ?>)"><i class="fas fa-envelope"></i>Copier le mail</button>
+                <textarea id="<?php echo 'ToCopy' . $x[0]; ?>" class="AreaMail"><?php echo $mail; ?></textarea>
+              </div>
+          </li>
+        <?php
+          }
+        ?>
+        </ul>
       </div>
     </div>
-
-  </div>
-</body>
+  </body>
 </html>
 
 <?php

@@ -1,19 +1,30 @@
-.PPannuaire {
-  width: 75px;
-  height: 75px;
-  border-radius: 5000px;
-  border: 1px black solid;
+/* .contenu_annuaire {
+  font-size: 75%;
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem;
+  border: 1rem solid;
+  border-radius: .5rem 4rem 4rem 4rem;
 }
 
-@media all and (min-width: 1024px) { /*Pour les écrans de plus de 750pixels
+.center_annuaire{
+  display: block;
+  text-align : center;
+} */
 
-/*html*/
+
+/*
+Pour les écrans de plus de 750pixels
+
+html
 
 .task {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: solid 1px white;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: solid 1px white;
 
 }
 
@@ -36,7 +47,6 @@
   flex-direction: column;
 }
 
-
 .contact{
   font-size: 19px;
   margin-right: 10px;
@@ -48,8 +58,6 @@
   cursor:pointer;
 }
 
-
-
 .hrcontact{
   display:flex;
   flex-direction: row;
@@ -59,10 +67,7 @@
   margin-bottom: 25px;
 }
 
-
-
-/*menu clic*/
-
+menu contextuel
 
 .context_menu {
   width: 260px;
@@ -102,51 +107,4 @@
   display: block;
   position: relative;
   }
-
-/* context menu
-
-.context-menu {
-  display: none;
-  position: absolute;
-  z-index: 10;
-  width: 240px;
-  background-color: rgb(29, 64, 65);
-  border: dashed 1px #dfdfdf;
-  box-shadow: 1px 1px 2px #cfcfcf;
-  width: auto;
-  height: auto;
-  padding: 10px 10px 10px 10px;
-}
-
-.context-menu--active {
-  display: block;
-}
-
-.context-menu__items {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.context-menu__item {
-  display: block;
-  margin-bottom: 4px;
-}
-
-.context-menu__item:last-child {
-  margin-bottom: 0;
-}
-
-.context-menu__link {
-  display: block;
-  padding: 4px 12px;
-  color: #0066aa;
-  text-decoration: none;
-}
-
-.context-menu__link:hover {
-  color: #fff;
-  background-color: #0066aa;
-} */
-
-}
+*/

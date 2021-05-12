@@ -10,8 +10,28 @@ function Delete($Contact) {
   } else {
     echo mysqli_error($link);
   }
+  $sql = "DELETE FROM `texte` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+  $sql = "DELETE FROM `image` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+  $sql = "DELETE FROM `liens` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
+
   mysqli_query($link, "FLUSH `Publications`");
+  mysqli_query($link, "FLUSH `texte`");
+  mysqli_query($link, "FLUSH `image`");
+  mysqli_query($link, "FLUSH `liens`");
 }
+
 
 if ( isset($_POST['ValiderSupp'])) {
   $Cmulti = $_POST['Cmulti'];
@@ -27,12 +47,14 @@ if ($_SESSION["Connected"] == true) {
   <head>
     <meta charset="utf-8">
     <title>Cahier Multimédia</title>
-    <link rel="stylesheet" href="styleC.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/styleLittle.css">
+    <link rel="stylesheet" media="all and (min-width: 480px) and (max-width: 1023px)" href="/Projetwebl1/ENT/css/stylePhone.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
+    <script src="/Projetwebl1/ENT/js/scroll.js"></script>
   </head>
     <?php
       include ("../../base.php");
@@ -44,9 +66,9 @@ if ($_SESSION["Connected"] == true) {
               <ul class="liste">
                 <?php
                 foreach (nbPub() as $x) {
-                  if (nature($x[0]) == "2") {
+                  if (nature($x[0])["nature"] == "2") {
                 ?>
-                  <li class="texte"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><i class="fas fa-book IcoBook"></i><br><?php echo titre($x[0]); ?></a></li>
+                  <li class="texte"><div class="chip"><a class="Copybook" href="AffichageC.php?id=<?php print $x[0] ?>"><?php echo "<i class='". $matiere[nature($x[0])["matiere"]] ."'></i>"?></i><?php echo nature($x[0])["titre"]; ?></a></div></li>
                 <?php
                   }
                 }
@@ -56,16 +78,16 @@ if ($_SESSION["Connected"] == true) {
                 if ($_SESSION["Admin"] == true) {
               ?>
               <form class="AdminMulti" action="cmedia.php" method="post">
-                <a href="creationC.php">Créer un cahier multimédia</a>
+                <button type="button" class="bouton" name="CreationCmedia" onclick="window.location.href = 'creationC.php';"><span>Créer un cahier</span></button>
                 <select name="Cmulti">
                   <?php
                   foreach (nbPub() as $x) {
-                    if (nature($x[0]) == "2") {
+                    if (nature($x[0])["nature"] == "2") {
                   ?>
-                    <option class="texte" value="<?php echo $x[0] ?>"><?php echo titre($x[0]); ?></option>
+                    <option class="texte" value="<?php echo $x[0] ?>"><?php echo nature($x[0])["titre"]; ?></option>
                   <?php }} ?>
                 </select>
-                <input type="submit" name="ValiderSupp" value="Supprimer le cahier multimédia" class="bouton">
+                <button type="submit" class="bouton" name="ValiderSupp"><span>Supprimer</span> </button>
               </form>
 
               <?php

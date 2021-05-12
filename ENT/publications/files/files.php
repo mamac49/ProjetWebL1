@@ -11,9 +11,10 @@ if ($_SESSION["Connected"] == true) {
   <head>
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
-    <link rel="stylesheet" href="styleF.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/styleLittle.css">
+    <link rel="stylesheet" media="all and (min-width: 480px) and (max-width: 1023px)" href="/Projetwebl1/ENT/css/stylePhone.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
@@ -22,19 +23,19 @@ if ($_SESSION["Connected"] == true) {
       include ("../../base.php");
     ?>
 
-          <div class="Center">
-            <h4 class="texte">Archivage des fichiers - Maquette</h4>
+          <div class="Center_adap">
+            <h4 class="texte files-txt">Archivage des fichiers - Maquette</h4>
             <fieldset class="Dropzone">
               <legend>Dropzone</legend>
-              <p class="texte">Listes de fichiers :</p>
+              <p class="texte files-txt">Listes de fichiers :</p>
               <ul>
-                <li class="texte"><p><i class="fas fa-folder icone file"></i>Nom de dossier 1</p><i class="fas fa-ellipsis-v icone"></i></li>
-                <li class="texte"><p><i class="fas fa-folder icone file"></i>Nom de dossier 2</p><i class="fas fa-ellipsis-v icone"></i></li>
-                <li class="texte"><p><i class="fas fa-folder icone file"></i>Nom de dossier 3</p><i class="fas fa-ellipsis-v icone"></i></li>
-                <li class="texte"><p><i class="fas fa-file-pdf icone file"></i>Nom de fichier.pdf</p><i class="fas fa-ellipsis-v icone"></i></li>
-                <li class="texte"><p><i class="fas fa-file-code icone file"></i>Nom de fichier.py</p><i class="fas fa-ellipsis-v icone"></i></li>
-                <li class="texte"><p><i class="fas fa-file-archive icone file"></i>Nom de fichier.tar.gz</p><i class="fas fa-ellipsis-v icone"></i></li>
-                <li class="texte"><p><i class="fas fa-file icone file"></i>Nom de fichier.txt</p><i class="fas fa-ellipsis-v icone"></i></li>
+                <li class="texte fichier"><p style="margin: 0px;"><i class="fas fa-folder icone file"></i>Nom de dossier 1</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin: 0px;"><i class="fas fa-folder icone file"></i>Nom de dossier 2</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin: 0px;"><i class="fas fa-folder icone file"></i>Nom de dossier 3</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin: 0px;"><i class="fas fa-file-pdf icone file"></i>Nom de fichier.pdf</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin: 0px;"><i class="fas fa-file-code icone file"></i>Nom de fichier.py</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin: 0px;"><i class="fas fa-file-archive icone file"></i>Nom de fichier.tar.gz</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
+                <li class="texte fichier"><p style="margin: 0px;"><i class="fas fa-file icone file"></i>Nom de fichier.txt</p><i class="fas fa-ellipsis-v icone Ificher"></i></li>
               </ul>
             </fieldset>
           </div>

@@ -6,15 +6,54 @@ error_reporting(E_ALL);
 include ("../../fonc.php");
 include ("../../base.php");
 
+function Create($titre, $matiere, $contenu) {
+  $link = dbConnect();
+
+  $date = date("Y-m-d");
+  $heure= date("H:i");
+
+  $IDu = $_SESSION['ID'];
+
+  $sql = "INSERT INTO `Publications` (`titre`, `date`, `date_ecriture`, `heure_ecriture`, `nature`, `iduser`, `matiere`) VALUES ('$titre', '$date', '$date', '$heure', '1', '$IDu', '$matiere')";
+  if (mysqli_query($link, $sql)) {
+    $sqlID = max(max(nbPub()));
+    $pos = 0;
+
+    foreach ($contenu as $element) {
+      if (filter_var($element, FILTER_VALIDATE_URL)) {
+        $nb = array_key_last(nombreTxt("liens"))+1;
+        $sqlp = "INSERT INTO `liens` (`idliens`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
+      } elseif (substr_count($element, "ImageContenu") == 1) {
+        $nb = array_key_last(nombreTxt("image"))+1;
+        $line = str_replace("ImageContenu", "", $element);
+        $img = mysqli_real_escape_string($link, $line);
+        $sqlp = "INSERT INTO `image` (`idimage`, `data`, `position`, `idpublications`) VALUES ('$nb', '$img', '$pos', '$sqlID')";
+      } else {
+        $nb = array_key_last(nombreTxt("texte"))+1;
+        $sqlp = "INSERT INTO `texte` (`idtexte`, `data`, `position`, `idpublications`) VALUES ('$nb', '$element', '$pos', '$sqlID')";
+      }
+      $pos++;
+      if (mysqli_query($link, $sqlp)) {
+        echo "<script>console.log('succes')</script>";
+      } else { echo mysqli_error($link);}
+    }
+  } else {
+    echo 'Erreur d accès à la base de données - FIN' . mysqli_error($link); }
+}
 
 
-/*if (isset($_POST['Valider'])) {
-  $texte = array();
-  $len = count($n);
-  for ($i = 1 ; $x < $len ; $i++) {
-    $texte[$i] = $_POST[$i];
+if (isset($_POST['Valider'])) {
+  $titre = securisation($_POST['titre']);
+  $matiere = securisation($_POST['matiere']);
+  $contenu = array();
+  $nb = 1;
+  while (isset($_POST['line_' . $nb]) or isset($_FILES['line_' . $nb]['tmp_name'])) {
+    $temp = isset($_POST['line_' . $nb]) ? securisation($_POST['line_' . $nb]) : "ImageContenu" . file_get_contents($_FILES['line_' . $nb]['tmp_name']);
+    $contenu[] = $temp;
+    $nb++;
   }
-}*/
+  Create($titre, $matiere, $contenu);
+}
 
 if ($_SESSION["Connected"] == true) {
 ?>
@@ -24,49 +63,49 @@ if ($_SESSION["Connected"] == true) {
   <head>
     <meta charset="utf-8">
     <title>Nouveau blog</title>
-    <link rel="stylesheet" href="styleB.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
-    <link rel="stylesheet" href="styleC.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/styleLittle.css">
+    <link rel="stylesheet" media="all and (min-width: 480px) and (max-width: 1023px)" href="/Projetwebl1/ENT/css/stylePhone.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
+    <script src="/Projetwebl1/ENT/js/scroll.js"></script>
+    <script src="/Projetwebl1/ENT/js/blog.js"></script>
   </head>
 <!--ajout de la méthode PUT-->
-<input type="hidden" name="_METHOD" value="PUT"/>
+<div class="Center_adap Saisie">
+  <form action="creationB.php" method="POST" enctype="multipart/form-data">
+    <input type="text" name="titre" placeholder="Titre du cahier" >
+    <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
-<div class="Center">
-  <form class="" action="creationB.php" method="POST" enctype="multipart/form-data">
-    <input type="text" name="titre" placeholder="Titre du blog" >
-    <ul class="publicationsBlog" id="publications_blog">
-      <!--<textarea class="textareaId" id="textareaBlog" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
--->
     </ul>
-      <button name="create" class="bouton" method="PUT">Ajouter une case</button>
-    <input type="submit" name="Valider" class="bouton" value="Valider le blog">
+    <div class="boutonsCahierMultimedia">
+      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addTextB()"><span>Ajouter un texte</span></button>
+      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImageB()"><span>Ajouter une image</span></button>
+      <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideoB()"><span>Ajouter une vidéo</span></button>
+      <select name="matiere">
+        <option value="Francais">Français</option>
+        <option value="Maths">Mathématiques</option>
+        <option value="Sciences">Science</option>
+        <option value="Espace">Espace</option>
+        <option value="Temps">Temps</option>
+        <option value="Musique">Musique</option>
+        <option value="Arts">Arts</option>
+        <option value="Anglais">Anglais</option>
+        <option value="EPS">EPS</option>
+        <option value="Contes">Contes</option>
+        <option value="Rituels">Rituels</option>
+        <option value="Education civique">Education civique</option>
+      </select>
+      <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
+    </div>
   </form>
 </div>
-<!--publication liée à la bdd-->
-<template id="template">
-  <textarea class="textareaId" id="template_blog" title="template" name="texte_0" rows="8" cols="80" resize="none" create=false required></textarea>
-</template>
-
-
-<!--zone de texte éditable
-<textarea class="textareaId" id="textareaCahierMultimedia" name="" rows="8" cols="80" resize="none" nb=0 nb_max=1 required></textarea>
--->
+</html>
 
 <?php
-  if (isset($_PUT['create'])) {
-    $idpublication = "NONE";
-    $titre = "NONE" ;
-    $texte = "NONE" ;
-    $image = "NONE" ;
-    $date = "NONE" ;
-    $nature = "NONE" ;
-    $iduser = "NONE" ;
-    echo "<script>createLine();</script>";
-  }
-
+} else {
+  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
 }
 ?>

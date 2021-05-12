@@ -1,4 +1,23 @@
 <?php
+
+// Création d'une liste permettant de définir une icone par matière
+$matiere = array();
+$matiere["Maths"] = "fas fa-square-root-alt";
+$matiere["Francais"] = "fas fa-book";
+$matiere["Sciences"] = "fas fa-flask";
+$matiere["Espace"] = "fas fa-map";
+$matiere["Temps"] = "fas fa-clock";
+$matiere["Musique"] = "fas fa-music";
+$matiere["Arts"] = "fas fa-palette";
+$matiere["Anglais"] = "fas fa-cloud-rain";
+$matiere["EPS"] = "fas fa-biking";
+$matiere["Contes"] = "fas fa-dragon";
+$matiere["Rituels"] = "fas fa-chalkboard-teacher";
+$matiere["Education civique"] = "fas fa-school";
+
+// Créatiion d'une liste contenant uniquement les matières
+$ListMatiere = array("Maths", "Francais", "Sciences", "Espace", "Temps", "Musique", "Arts", "Anglais", "EPS", "Contes", "Rituels", "Education civique");
+
 function dbConnect() {
     // On se connecte à la BD ENT en utilisant le nom d'utilisateur et le mot de passe
     $link = new mysqli('localhost', 'ENT', 'uWBs4M9kIX4PVa2o', 'ENT');
@@ -13,6 +32,7 @@ function dbConnect() {
     return $link;
 }
 
+// Cette fonction permet d'afficher l'image de profil en fonction du mail, elle est utilisée dans les paramètres et l'annuaire.
 function Affichage($mail) {
   # On se connecte à la BD
   $link = dbConnect();
@@ -45,6 +65,7 @@ function Affichage($mail) {
 }
 
 function nombre() {
+  // Cette fonction renvoie une liste avec tous les ID des users
   $link = dbConnect();
   $sql = "SELECT `iduser` FROM `users`";
   $result = mysqli_query($link, $sql);
@@ -57,7 +78,22 @@ function nombre() {
   return $IDUser;
 }
 
+function nombreTxt($table) {
+  // Cette fonction renvoie une liste contenant les ID de tous les textes/images/liens en fonction du paramètres
+  $link = dbConnect();
+  $sql = "SELECT * FROM `$table`";
+  $result = mysqli_query($link, $sql);
+  $IDdata = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDdata[$row["0"]] = $row["1"];
+    }
+  } else {echo mysqli_error($link);}
+  return $IDdata;
+}
+
 function info($x) {
+  // Cette fonction permet de récupérer les données de l'utilisatuer d'ID $x.
   $link = dbConnect();
   $sql = "SELECT * FROM `users` WHERE `iduser` = '$x';";
   if ($result = mysqli_query($link, $sql)) {
@@ -67,7 +103,13 @@ function info($x) {
   }
 }
 
-function securisation ($donnee){ // pour protéger les champs
+function securisation ($donnee){ // pour protéger les champs après un formulaire
+  if (is_string($donnee)) {
+    $donnee = str_replace('"', " ", $donnee);
+    $donnee = str_replace("'", " ", $donnee);
+    $donnee = str_replace("`", " ", $donnee);
+     echo "<script>console.log('suppression des caractères spéciaux')</script>";
+  }
   $donnee = htmlspecialchars($donnee);
   $donnee = trim($donnee);
   $donnee = stripslashes($donnee);
@@ -76,6 +118,7 @@ function securisation ($donnee){ // pour protéger les champs
 }
 
 function nbPub() {
+  // Cette fonction renvoie la liste des ids de publications, elle est utilisée pour faire la liste des blogs et des cahiermultimédias
   $link = dbConnect();
   $sql = "SELECT `idpublications` FROM `Publications`";
   $result = mysqli_query($link, $sql);
@@ -88,49 +131,28 @@ function nbPub() {
   return $IDpubli;
 }
 
-function nature($x) {
+function nbCom() {
+  // Cette fonction renvoie la liste des ids de commentaires, elle est utilisée lors de l'affichage du blog
   $link = dbConnect();
-  $sql = "SELECT * FROM `Publications` WHERE `idpublications`='$x'";
-  if ($result = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_array($result);
-    return $row["nature"];
-  }
-}
-
-function titre($x) {
-  $link = dbConnect();
-  $sql = "SELECT * FROM `Publications` WHERE `idpublications`='$x'";
-  if ($result = mysqli_query($link, $sql)) {
-    $row = mysqli_fetch_array($result);
-    return $row["titre"];
-  }
-}
-
-
-function adPublication($idpublication, $titre, $texte, $image, $date, $nature, $iduser) {
-  $link = dbConnect();
-  mysqli_query($link, "FLUSH `Publications`");
-
-  /*désactivé car auto increment
-  $Publications = nombre() + 1;*/
-
-  $sql = "INSERT INTO `Publications` (`idpublication`, `titre`, `texte`, `image`, `date`, `nature`, `iduser`) VALUES ($idpublication, '$titre', '$texte', $image, '$date', $nature, $iduser);";
-  /*Peut être utilisable pour image (voir avec mattéo ^^)*/
-  if (mysqli_query($link, $sql)) {
-    $pp = mysqli_real_escape_string($link, $pp);
-    $sql2 = "INSERT INTO `users` (`data`) VALUE ('$pp');";
-    if (mysqli_query($link, $sql2)) {
-      reset($_POST);
-      mysqli_close($link);
-      header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
-      exit();
-    } else {
-      echo mysqli_error($link);
+  $sql = "SELECT `idcom` FROM `Commentaires`";
+  $result = mysqli_query($link, $sql);
+  $IDcommen = array();
+  if ($result) {
+    while($row = $result->fetch_array(MYSQLI_NUM)) {
+      $IDcommen[] = $row;
     }
-  } else {
-    echo mysqli_error($link);
   }
-  mysqli_close($link);
+  return $IDcommen;
+}
+
+function nature($x) {
+  // Cette fonction renvoie la nature d'une publication en fonction de son ID
+  $link = dbConnect();
+  $sql = "SELECT * FROM `Publications` WHERE `idpublications`='$x'";
+  if ($result = mysqli_query($link, $sql)) {
+    $row = mysqli_fetch_array($result);
+    return $row;
+  }
 }
 
 ?>

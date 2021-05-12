@@ -17,7 +17,7 @@ function ChgtMdp($mdpA, $mdpN) {
   $sql = "UPDATE `users` SET `mdp` = '$mdpN' WHERE `mail`= '$_SESSION[Mail]'";
   if (password_verify($mdpA, $mdp)) {
     if (mysqli_query($link, $sql)) {
-        echo "succès";
+        echo "<script>console.log('succes')</script>";
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/');
     } else {
       echo "erreur" . mysqli_error($link);
@@ -77,8 +77,9 @@ if ($_SESSION["Connected"] == true) {
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
-    <link rel="stylesheet" href="styleP.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/styleLittle.css">
+    <link rel="stylesheet" media="all and (min-width: 480px) and (max-width: 1023px)" href="/Projetwebl1/ENT/css/stylePhone.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
@@ -88,32 +89,37 @@ if ($_SESSION["Connected"] == true) {
   <?php
       include ("../../base.php");
   ?>
-      <div class="Center">
-        <h1 class="texte titre_p">Paramètres</h1>
-        <div class="page">
+      <div class="Center_adap has_cols">
           <div class="colonnes">
+            <h1 class="texte titre_p">Paramètres</h1>
             <form method="POST" name="password">
               <p>
               <h2 class="texte">Réinitialisation du mot de passe</h2>
-              <label class="texte">Ancien mot de passe</label>
-              <input type="password" class="texte" name="passwordA" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-key iconCrea"></i>
+                  <input type="password" class="texte" name="passwordA" placeholder="Ancien mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
+                </div>
               </p>
               <p>
-              <label class="texte">Nouveau mot de passe</label>
-              <input class="texte" type="password" name="passwordN" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-lock iconCrea"></i>
+                  <input class="texte" type="password" name="passwordN" placeholder="Nouveau mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
+                </div>
               </p>
               <p>
-                <label class="texte">Valider le nouveau mot de passe</label>
-                <input class="texte" type="password" name="passwordNN" minlengh="8" maxlength="16" required>
+                <div class="input-container">
+                  <i class="fas fa-unlock iconCrea"></i>
+                  <input class="texte" type="password" name="passwordNN" placeholder="Valider le nouveau mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
+                </div>
               </p>
-              <input class="texte" type="submit" name="Valider" value="Valider">
+              <button type="submit" class="bouton" name="Valider"><span>Valider</span></button>
             </form>
             <form action="parametres.php" method="POST" enctype="multipart/form-data">
               <h2 class="texte">Changement de l'image de profil</h2>
               <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($_SESSION['Mail'])) . ' '?>" alt="Photo de profil" class="PP">
               <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
-              <input type="file" id="file" name="PP" accept="image/*">
-              <input type="submit" name="ChgtIMG" value="Valider" class="Bouton">
+              <input type="file" id="file" name="PP" accept="image/*" required>
+              <button type="submit" class="bouton" name="ChgtIMG"><span>Valider</span></button>
             </form>
           </div>
           <div class="colonnes">
@@ -127,10 +133,9 @@ if ($_SESSION["Connected"] == true) {
                 <label class="texte" for="sombre">Thème sombre</label>
                 <input type="radio" name="theme" id="sombre" value="1">
               </p>
-              <input type="submit" name="ValiderTheme" value="Valider le thème par défault">
+              <button type="submit" class="bouton" name="ValiderTheme"><span>Valider le thème</span></button>
             </form>
           </div>
-        </div>
       </div>
   </div>
 </div>

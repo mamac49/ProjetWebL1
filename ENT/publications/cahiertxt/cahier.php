@@ -31,10 +31,10 @@ function NbPubJour($jour, $classe) {
   return count($nb);
 }
 
-function AfficherDevoir($jour, $classe) {
+function AfficherDevoir($jour, $classe, $matiere) {
   $link = dbConnect();
 
-  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe');";
+  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe' AND `matiere`='$matiere');";
   if ($resultat = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($resultat);
     mysqli_free_result($resultat);
@@ -43,63 +43,15 @@ function AfficherDevoir($jour, $classe) {
   }
 }
 
-function AjoutDevoir($classe, $matiere, $consigne, $jour) {
-  $link = dbConnect();
-  mysqli_query($link, "FLUSH `cahiertxt`");
-
-  $sql = "INSERT INTO `cahiertxt`(`jour`, `matiere`, `consigne`, `classe`) VALUES ('$jour', '$matiere', '$consigne', '$classe')";
-  if (mysqli_query($link, $sql)) {
-    echo "<script> document.getElementById('AddHW').style.display='none' </script>";
-    echo "succès";
-    mysqli_close($link);
-
-  } else {
-    echo mysqli_error($link);
-    mysqli_close($link);
-  }
-}
-
-function SuppressionDevoir($jour, $classe, $matiere) {
-  $link = dbConnect();
-
-  $sql = "DELETE FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe' AND `matiere`='$matiere')";
-  if (mysqli_query($link, $sql)) {
-    echo "succès";
-  } else {
-    echo mysqli_error($link);
-  }
-  mysqli_query($link, "FLUSH `users`");
-}
-
-if (isset($_POST['ValideAdd'])) {
-  $classe = $_POST['classe'];
-  $matiere = $_POST['matiere'];
-  $consigne = securisation($_POST['consigne']);
-  $jour = $_POST['jour'];
-  AjoutDevoir($classe, $matiere, $consigne, $jour);
-}
-
-if (isset($_POST['ValiderRemo'])) {
-  $str = explode(" ", $_POST['devoirs']);
-  SuppressionDevoir($str[0], $str[1], $str[2]);
+if (isset($_POST['ValiderAjout'])) {
+  $_SESSION['devoirs'] = array($_POST['classe'], $_POST['matiere'], securisation($_POST['consigne']), $_POST['jour']);
+  header("Location: AjoutDevoir.php");
 }
 
 
 $semaine = array("Lundi", "Mardi", "Jeudi", "Vendredi");
 
-$matiere = array();
-$matiere["Maths"] = "fas fa-square-root-alt";
-$matiere["Francais"] = "fas fa-book";
-$matiere["Sciences"] = "fas fa-flask";
-$matiere["Espace"] = "fas fa-map";
-$matiere["Temps"] = "fas fa-clock";
-$matiere["Musique"] = "fas fa-music";
-$matiere["Arts"] = "fas fa-palette";
-$mmatiere["Anglais"] = "fas fa-cloud-rain";
-$matiere["EPS"] = "fas fa-biking";
-$matiere["Contes"] = "fas fa-dragon";
-$matiere["Rituels"] = "fas fa-chalkboard-teacher";
-$matiere["Education civique"] = "fas fa-school";
+$ListMatiere = array("Maths", "Francais", "Sciences", "Espace", "Temps", "Musique", "Arts", "Anglais", "EPS", "Contes", "Rituels", "Education civique");
 
 if ($_SESSION["Connected"] == "True") {
 ?>
@@ -109,10 +61,11 @@ if ($_SESSION["Connected"] == "True") {
   <head>
     <meta charset="utf-8">
     <title>ENT Millocheau</title>
-    <link rel="stylesheet" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/style.css">
+    <link rel="stylesheet" media="all and (min-width: 1024px)" href="/Projetwebl1/ENT/css/styleLittle.css">
+    <link rel="stylesheet" media="all and (min-width: 480px) and (max-width: 1023px)" href="/Projetwebl1/ENT/css/stylePhone.css">
     <link rel="stylesheet" href="/Projetwebl1/ENT/css/color1.css">
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
-    <link rel="stylesheet" href="styletxt.css">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
     <script src="/Projetwebl1/ENT/js/cahiertxt.js"></script>
@@ -122,7 +75,7 @@ if ($_SESSION["Connected"] == "True") {
       include '../../base.php';
     ?>
 
-    <div class="Center">
+    <div class="CenterCahier Center_adap">
       <div class="semaine">
         <button class="tablinks" onmouseover="openDay(event, 'Lundi')" autofocus>Lundi</button>
         <button class="tablinks" onmouseover="openDay(event, 'Mardi')">Mardi</button>
@@ -131,25 +84,28 @@ if ($_SESSION["Connected"] == "True") {
       </div>
 
       <?php foreach ($semaine as $jour) {?>
-              <div id="<?php echo $jour; ?>" class="tabcontent">
-                <h3><?php echo $jour; ?></h3>
-                <ul>
-                  <?php for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
-                        if ($_SESSION["Classe"] == "GS" OR $_SESSION["Admin"] == True) {
-                            $info = AfficherDevoir($jour, "GS");
-                            $matiereP = $info['matiere'];
-                            $consigne = $info['consigne']; ?>
-                            <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-                    <?php }} ?>
+        <div id="<?php echo $jour; ?>" class="tabcontent">
+          <h3 class=texte><?php echo $jour; ?></h3>
+            <ul>
+              <?php
+                  foreach ($ListMatiere as $x) {
+                    if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
+                       $info = AfficherDevoir($jour, "GS", $x);
+                       $consigne = $info['consigne']; ?>
+                      <li class="texte suppression"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
+                        <?php if ($_SESSION["Admin"] == True) { ?> <a href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"><i class="fas fa-times fermer"></i></a> <?php } ?></li>
+              <?php }} ?>
 
-                    <?php for ($i=1 ; $i <= NbPubJour($jour, "CP") ; $i++) {
-                          if ($_SESSION["Classe"] == "CP" OR $_SESSION["Admin"] == True) {
-                              $info = AfficherDevoir($jour, "CP");
-                              $matiereP = $info['matiere'];
-                              $consigne = $info['consigne']; ?>
-                              <li class="texte"><?php echo "<i class='$matiere[$matiereP] matiere'></i>" . $matiereP . " : " . $consigne; ?></li>
-                    <?php }} ?>
-          </ul>
+              <?php
+                  foreach ($ListMatiere as $x) {
+                    if (gettype(AfficherDevoir($jour, "CP", $x)) != "NULL") {
+                       $info = AfficherDevoir($jour, "CP", $x);
+                       $matiereP = $info['matiere'];
+                       $consigne = $info['consigne']; ?>
+                       <li class="texte suppression"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
+                         <?php if ($_SESSION["Admin"] == True) { ?> <a href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"><i class="fas fa-times fermer"></i></a> <?php } ?></li>
+              <?php }} ?>
+            </ul>
         </div>
       <?php } ?>
 
@@ -158,25 +114,22 @@ if ($_SESSION["Connected"] == "True") {
       <?php
         if ($_SESSION["Admin"] == True) {
       ?>
-        <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button">Ajouter des devoirs</button>
-        <button type="button" onclick="document.getElementById('RemoveHW').style.display='block'" name="button">Supprimer des devoirs</button>
-      <?php
-      }
-      ?>
+        <button type="button" onclick="document.getElementById('AddHW').style.display='block'" name="button" class="bouton"><span>Ajouter des devoirs </span></button>
+      <?php } ?>
 
     </div>
 
     <div id="AddHW" class="modal">
 
-      <form class="modal-content animate" action="cahier.php" method="post">
+        <form class="modal-content animate" method="POST">
         <span onclick="document.getElementById('AddHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
           <h3>Classe</h3>
           <select name="jour">
-            <option value="lundi">Lundi</option>
-            <option value="mardi">Mardi</option>
-            <option value="jeudi">Jeudi</option>
-            <option value="vendredi">Vendredi</option>
+            <option value="Lundi">Lundi</option>
+            <option value="Mardi">Mardi</option>
+            <option value="Jeudi">Jeudi</option>
+            <option value="Vendredi">Vendredi</option>
           </select>
           <div>
             <input type="radio" name="classe" id="GS" value="GS" checked>
@@ -202,31 +155,7 @@ if ($_SESSION["Connected"] == "True") {
           </select>
           <h3>Consigne</h3>
           <p><textarea name="consigne" rows="6" cols="40"></textarea></p>
-          <p><input type="submit" name="ValiderAdd" value="Ajouter"></p>
-        </div>
-      </form>
-    </div>
-
-    <div id="RemoveHW" class="modal">
-
-        <form class="modal-content animate" action="cahier.php" method="POST">
-        <span onclick="document.getElementById('RemoveHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
-        <div class="container">
-          <h3>Devoirs</h3>
-          <select name="devoirs">
-            <?php foreach ($semaine as $jour) {
-                      for ($i=1 ; $i <= NbPubJour($jour, "GS") ; $i++) {
-                        if (null!==AfficherDevoir($jour, "GS")) { ?>
-                          <option value="<?php print $jour . " GS " . AfficherDevoir($jour, 'GS')['matiere'] ?>"><?php echo AfficherDevoir($jour, "GS")['matiere'] . ":" . AfficherDevoir($jour, "GS")['consigne'] ?></option>
-                      <?php }}
-                      for ($i=1 ; $i <= NbPubJour($jour, "CP") ; $i++) {
-                        if (null!==AfficherDevoir($jour, "CP")) { ?>
-                          <option value="<?php print $jour . " CP " . AfficherDevoir($jour, 'CP')['matiere'] ?>"><?php echo AfficherDevoir($jour, "CP")['matiere'] . ":" . AfficherDevoir($jour, "CP")['consigne'] ?></option>
-            <?php }}} ?>
-
-          </select>
-
-          <p><input type="submit" name="ValiderRemo" value="Supprimer"></p>
+          <p><button type="submit" class="bouton" name="ValiderAjout"><span>Ajouter</span></button></p>
         </div>
       </form>
     </div>
