@@ -63,9 +63,16 @@ if ($_SESSION["Connected"] == true) {
               </div>
             </div>
             <div class="infos_detaillee">
-              <div id="myInfos-<?php echo $x[0];?>" class="contenu_infos_detaillee">
-                <button class="bouton" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fas fa-envelope"></i><p id="ToCopyMail-<?php echo $x[0];?>" class="copy_infos"><?php echo $mail; ?></p></button>
-                <button class="bouton" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fas fa-user-tag"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
+              <div id="infos_block" class="modal">
+                <div class="modal-content animate" method="POST">
+                  <span onclick="document.getElementById('infos_block').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+                    <div class="container">
+                      <div id="myInfos-<?php echo $x[0];?>" class="contenu_infos_detaillee">
+                        <button class="bouton" onclick="copy('<?php print 'Mail-' . $x[0];?>')"><i class="fas fa-envelope"></i><p id="ToCopyMail-<?php echo $x[0];?>"><?php echo $mail; ?></p></button>
+                        <button class="bouton" onclick="copy('<?php print 'Contact-' . $x[0];?>')"><i class="fas fa-user-tag"></i><p id="ToCopyContact-<?php echo $x[0];?>"><?php echo $contact_name; ?></p></button>
+                      </div>
+                    </div>
+                </div>
               </div>
             </div>
           </li>
