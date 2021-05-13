@@ -741,6 +741,7 @@ textarea {
   flex-direction: row;
 }
 
+/*Pour plus tard
 .lines_buttons {
   display: flex;
   width: 50%;
@@ -750,7 +751,7 @@ textarea {
   width: 50%;
   display: flex;
   justify-content: space-around;
-}
+}*/
 
 .Saisie {
   margin-bottom: 150px;
