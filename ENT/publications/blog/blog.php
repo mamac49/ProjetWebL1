@@ -101,7 +101,7 @@ if ($_SESSION["Connected"] == true) {
                   $date=jour($i[0]);
               ?>
               <br/>
-              <li class="sujets"><span class="texte"><a href="AffichageB.php?id=<?php print $i[0]?>"><?php echo "<i class='". $matiere[nature($i[0])["matiere"]] ."'></i>"?> </span><?php echo $titre; ?>
+              <li class="sujets"><span class="texte"><a href="AffichageB.php?id=<?php print $i[0]?>"><?php echo "<i class='". $matiere[nature($i[0])["matiere"]] ."'></i>"?> <?php echo $titre; ?></span>
               </a> <span class="texte">Créé par <?php echo $auteur; ?> le <?php echo $date; ?></span></li>
               <br/>
               <li class="espaces"><hr></li>
