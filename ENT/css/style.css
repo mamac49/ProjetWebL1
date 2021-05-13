@@ -684,6 +684,7 @@ textarea {
   margin: 5px;
   text-align: center;
   overflow : auto;
+  color: var(--font-color);
 }
 
 .Copybook {
