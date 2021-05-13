@@ -71,7 +71,7 @@ function AfficheAvis($id) {
 if (isset($_POST['ValiderEnvoi'])) {
   $type = $_POST['Type'];
   $message = securisation($_POST['Rapport']);
-  if ($message = "NeverGonnaGiveYouUp") {
+  if (substr_count($message, "NeverGonnaGiveYouUp") == 1) {
     header('Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     die();
   } else {
