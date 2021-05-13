@@ -78,7 +78,7 @@
 
   .move_menu {
     transform: translateX(0px);
-    
+
     }
 
   .menu_cross {
@@ -383,6 +383,11 @@ textarea {
 .has_cols {
   display: flex;
   flex-direction: row;
+}
+
+.PP {
+  width: 75px;
+  border-radius: 1000px;
 }
 
 /* The Modal (background) */
