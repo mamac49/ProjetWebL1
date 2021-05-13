@@ -597,13 +597,9 @@ textarea {
   margin-right: 30px;
 }
 
-.colonnes {
-  display: flex;
-  justify-content: space-between;
+.colonne2 {
+  margin-left: 10%;
 }
-
-
-
 
 /* ---------------------------------------- */
 /* Fichier */

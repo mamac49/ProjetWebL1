@@ -116,7 +116,7 @@ if ($_SESSION["Connected"] == true) {
             </form>
             
           </div>
-          <div class="colonnes">
+          <div class="colonnes colonne2">
             <form action="parametres.php" method="post">
               <h2 class="texte">Thème par défault</h2>
               <p>
