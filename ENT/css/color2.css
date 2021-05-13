@@ -38,11 +38,11 @@ html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, 
   color: var(--font-color);
 }
 
-.FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover {
+.FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover, .Copybook:visited, .Copybook {
   color: var(--font-color);
 }
 
-.sujets a, .Dropzone, .Copybook:visited, .texteF, .sujets a:visited  {
+.sujets a, .Dropzone, .texteF, .sujets a:visited  {
   color: var(--font-color-nde);
 }
 
