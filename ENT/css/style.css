@@ -736,6 +736,12 @@ textarea {
   flex-direction: row;
 }
 
+.lines_buttons {
+  display: flex;
+}
+
+
+
 .Saisie {
   margin-bottom: 150px;
   padding-bottom: 25px;
