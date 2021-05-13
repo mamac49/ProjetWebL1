@@ -597,6 +597,11 @@ textarea {
   margin-right: 30px;
 }
 
+.colonnes {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 
 
@@ -739,8 +744,6 @@ textarea {
 .lines_buttons {
   display: flex;
 }
-
-
 
 .Saisie {
   margin-bottom: 150px;
