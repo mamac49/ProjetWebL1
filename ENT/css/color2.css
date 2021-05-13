@@ -38,7 +38,7 @@ html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, 
   color: var(--font-color);
 }
 
-.FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover, .Copybook:visited, .Copybook {
+.FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover, .Copybook:visited, .Copybook, .Copybook a {
   color: var(--font-color);
 }
 
