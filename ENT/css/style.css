@@ -874,7 +874,7 @@ textarea {
 
 .AreaMail {
   position: relative;
-  z-index: -5;
+  transform: translateX(10000); 
 }
 
 /* ------------------------------------------ */
