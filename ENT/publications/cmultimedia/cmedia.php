@@ -5,7 +5,7 @@ include '../../fonc.php';
 
 function Delete($Contact) {
   $link = dbConnect();
-  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Contact'";
+  $sql = "DELETE FROM `Commentaires` WHERE `idpublications`='$Contact'";
   if (mysqli_query($link, $sql)) {
   } else {
     echo mysqli_error($link);
@@ -25,11 +25,17 @@ function Delete($Contact) {
   } else {
     echo mysqli_error($link);
   }
+  $sql = "DELETE FROM `Publications` WHERE `idpublications`='$Contact'";
+  if (mysqli_query($link, $sql)) {
+  } else {
+    echo mysqli_error($link);
+  }
 
   mysqli_query($link, "FLUSH `Publications`");
   mysqli_query($link, "FLUSH `texte`");
   mysqli_query($link, "FLUSH `image`");
   mysqli_query($link, "FLUSH `liens`");
+  mysqli_query($link, "FLUSH `Commentaires`");
 }
 
 
