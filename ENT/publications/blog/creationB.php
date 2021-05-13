@@ -45,10 +45,9 @@ function Create($titre, $matiere, $contenu) {
 if (isset($_POST['Valider'])) {
   $titre = securisation($_POST['titre']);
   if ($titre = "NeverGonnaGiveYouUp") {
-    header("Status: 301 Moved Permanently", false, 301);
     header('Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ');
     die();
-  }
+  } else {
   $matiere = securisation($_POST['matiere']);
   $contenu = array();
   $nb = 1;
@@ -58,7 +57,7 @@ if (isset($_POST['Valider'])) {
     $nb++;
   }
   Create($titre, $matiere, $contenu);
-}
+}}
 
 if ($_SESSION["Connected"] == true) {
 ?>
