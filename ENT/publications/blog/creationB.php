@@ -47,7 +47,7 @@ if (isset($_POST['Valider'])) {
   if ($titre = "NeverGonnaGiveYouUp") {
     header("Status: 301 Moved Permanently", false, 301);
     header('Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ');
-    exit();
+    die();
   }
   $matiere = securisation($_POST['matiere']);
   $contenu = array();
