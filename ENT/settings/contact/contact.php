@@ -71,8 +71,12 @@ function AfficheAvis($id) {
 if (isset($_POST['ValiderEnvoi'])) {
   $type = $_POST['Type'];
   $message = securisation($_POST['Rapport']);
+  if ($message = "NeverGonnaGiveYouUp") {
+    header('Location: https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+    die();
+  } else {
   Save($type, $message);
-}
+}}
 
 if ($_SESSION["Connected"] == true) {
 ?>
