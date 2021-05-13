@@ -129,7 +129,7 @@ if ($_SESSION["Connected"] == true) {
               </p>
               <button type="submit" class="bouton" name="ValiderTheme"><span>Valider le thème</span></button>
             </form>
-            <form action="parametres.php" method="POST" enctype="multipart/form-data">
+            <form action="parametres.php" method="POST" enctype="multipart/form-data" class="changement_pdp">
               <h2 class="texte">Changement de l'image de profil</h2>
               <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($_SESSION['Mail'])) . ' '?>" alt="Photo de profil" class="PP">
               <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>

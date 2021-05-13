@@ -576,6 +576,10 @@ textarea {
   font-size: 1.5em;
 }
 
+.changement_pdp {
+  margin-top: 5rem;
+}
+
 /* Style the input fields */
 .input-field {
   width: 100%;
