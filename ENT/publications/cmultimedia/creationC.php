@@ -79,9 +79,12 @@ if ($_SESSION["Connected"] == true) {
 
     </ul>
     <div class="boutonsCahierMultimedia">
+    <div class="lines_buttons">
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
       <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
+      <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Supprimer une ligne</span></button>
+    </div>
       <select name="matiere">
         <option value="Francais">Français</option>
         <option value="Maths">Mathématiques</option>
