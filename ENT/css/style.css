@@ -317,7 +317,7 @@ textarea {
   margin: 15px;
   height: 40px;
   width: 200px;
-  padding: 5px;
+  padding: 5px 15px 5px 5px;
   font-size: 1em;
 }
 
@@ -883,7 +883,7 @@ textarea {
 
 .AreaMail {
   position: relative;
-  transform: translateX(10000px); 
+  transform: translateX(10000px);
 }
 
 /* ------------------------------------------ */
