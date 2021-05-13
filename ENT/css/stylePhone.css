@@ -926,13 +926,11 @@ textarea {
   float:right;
 }
 
-.PP{
-
+.PP {
+  width: 100px;
+  height: 100px;
+  border-radius: 1000px;
 }
-
-
-
-
 
 
 }
