@@ -29,17 +29,16 @@
   background-color: var(--second-color);
 }
 
-.file, .IcoBook, .Copybook i, .IconeProfil {
-  color: var(--main-color);
-}
-
-
 html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, .legal, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login, .texte {
   color: var(--font-color);
 }
 
 .FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover, .Copybook:visited, .Copybook, .Copybook a {
   color: var(--font-color);
+}
+
+.file, .IcoBook, .Copybook i, .IconeProfil {
+  color: var(--main-color);
 }
 
 .sujets a, .Dropzone, .texteF, .sujets a:visited  {
