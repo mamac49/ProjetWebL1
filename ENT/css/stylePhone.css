@@ -167,7 +167,6 @@
     transition: bottom 0.3s; /* Transition effect when sliding down (and up) */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
   }
 
   /* Style the navbar links */
