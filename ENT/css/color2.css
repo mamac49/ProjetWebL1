@@ -50,6 +50,6 @@ html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, 
 }
 
 html {
-  background: radial-gradient(ellipse at right, rgb(255,255,255), rgb(210,210,210)),
-              radial-gradient(ellipse at left, rgb(255,255,255), rgb(210,210,210))
+  background: radial-gradient(ellipse at right, rgb(255,255,255), rgb(220,220,220)),
+              radial-gradient(ellipse at left, rgb(255,255,255), rgb(220,220,220))
 }
