@@ -114,13 +114,7 @@ if ($_SESSION["Connected"] == true) {
               </p>
               <button type="submit" class="bouton" name="Valider"><span>Valider</span></button>
             </form>
-            <form action="parametres.php" method="POST" enctype="multipart/form-data">
-              <h2 class="texte">Changement de l'image de profil</h2>
-              <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($_SESSION['Mail'])) . ' '?>" alt="Photo de profil" class="PP">
-              <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
-              <input type="file" id="file" name="PP" accept="image/*" required>
-              <button type="submit" class="bouton" name="ChgtIMG"><span>Valider</span></button>
-            </form>
+            
           </div>
           <div class="colonnes">
             <form action="parametres.php" method="post">
@@ -134,6 +128,13 @@ if ($_SESSION["Connected"] == true) {
                 <input type="radio" name="theme" id="sombre" value="1">
               </p>
               <button type="submit" class="bouton" name="ValiderTheme"><span>Valider le thème</span></button>
+            </form>
+            <form action="parametres.php" method="POST" enctype="multipart/form-data">
+              <h2 class="texte">Changement de l'image de profil</h2>
+              <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($_SESSION['Mail'])) . ' '?>" alt="Photo de profil" class="PP">
+              <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
+              <input type="file" id="file" name="PP" accept="image/*" required>
+              <button type="submit" class="bouton" name="ChgtIMG"><span>Valider</span></button>
             </form>
           </div>
       </div>

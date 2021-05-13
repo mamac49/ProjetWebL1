@@ -78,13 +78,14 @@ if ($_SESSION["Connected"] == true) {
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
     </ul>
-    <div class="boutonsCahierMultimedia">
+    
     <div class="lines_buttons">
       <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
       <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
       <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Supprimer une ligne</span></button>
     </div>
+    <div class="option_buttons">
       <select name="matiere">
         <option value="Francais">Français</option>
         <option value="Maths">Mathématiques</option>
@@ -100,6 +101,7 @@ if ($_SESSION["Connected"] == true) {
         <option value="Education civique">Education civique</option>
       </select>
       <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
+    </div>
     </div>
   </form>
 </div>
