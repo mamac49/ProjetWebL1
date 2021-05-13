@@ -618,7 +618,7 @@ textarea {
  background-color: DodgerBlue; /* Blue background */
  border: none; /* Remove borders */
  color: white; /* White text */
- padding: 12px 16px; /* Some padding */
+ padding: 15px 23px; /* Some padding */
  font-size: 16px; /* Set a font size */
  cursor: pointer; /* Mouse pointer on hover */
  width: 100%;
@@ -633,7 +633,7 @@ textarea {
 .dropbtn {
  background-color: #3498DB;
  color: white;
- padding: 16px;
+ padding: 25px;
  font-size: 16px;
  border: none;
  cursor: pointer;
