@@ -229,7 +229,8 @@
 
 .qwant input {
   width: 80%;
-  height: 35px;
+  height: 1rem;
+  font-size: 1rem;
   margin-left: 10%;
 }
 
