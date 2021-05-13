@@ -80,14 +80,13 @@ if ($_SESSION["Connected"] == true) {
     </ul>
     
     <div class="lines_buttons">
-      <div>
-        <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
-        <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
-      </div>
-      <div>
-        <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
-        <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Supprimer une ligne</span></button>
-      </div>
+    
+      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
+      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
+      <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
+      <!--A intégrer ensuite
+      <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Supprimer une ligne</span></button>
+      -->
     </div>
     <div class="option_buttons">
       <select name="matiere">
