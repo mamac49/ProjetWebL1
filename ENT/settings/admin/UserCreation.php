@@ -113,9 +113,10 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
               <h2 class="texte">Suppression d'utilisateur</h2>
               <ul>
                 <?php
-                foreach (nombre() as $x) { ?>
+                foreach (nombre() as $x) {
+                  if ($x[0] != $_SESSION['ID']) { ?>
                   <li class="texte suppression"><?php echo info($x[0])["prenom"] . " " . info($x[0])["nom"]; ?><a href="SupUser.php?id=<?php print $x[0] ?>"><i class="fas fa-times fermer Fdroite"></i></a></li>
-                <?php } ?>
+                <?php }} ?>
               </ul>
             </div>
 
