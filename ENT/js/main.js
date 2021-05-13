@@ -164,6 +164,7 @@ function ReadMore(x) {
 function admin_checked() {
   var checkboxAdmin = document.getElementById("checkbox_admin");
   var radioClasse = document.getElementById("classe");
+  /*Si l'on a coché la case pour créer un compte administrateur, on ne donne plus la possibilité de choisir la classe GS/CP*/
   if (checkboxAdmin.checked == true) {
     radioClasse.style.display = "none";
   } else {
