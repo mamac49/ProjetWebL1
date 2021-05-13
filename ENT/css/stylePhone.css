@@ -167,6 +167,8 @@
     transition: bottom 0.3s; /* Transition effect when sliding down (and up) */
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    z-index: 2;
   }
 
   /* Style the navbar links */
@@ -184,7 +186,7 @@
   }
 
   #navbar .icone {
-    font-size: 2em;
+    font-size: 1em;
   }
 
   /*icones fontawesome*/
