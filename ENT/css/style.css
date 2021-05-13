@@ -4,12 +4,11 @@
   html {
     font-family: sans-serif;
     font-size: 100%;
-    position: fixed;
     width: 100%;
   }
 
   .site_container {
-    -webkit-overflow-scrolling: touch;
+    /*-webkit-overflow-scrolling: touch;*/
     height: 100%;
   }
 
