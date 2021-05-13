@@ -160,7 +160,8 @@
 
   /*footer*/
 
-  #navbar { /* Make it stick/fixed */
+  #navbar {
+    position: sticky; /* Make it stick/fixed */
     bottom: 0; /* Hide the navbar 50 px outside of the top view */
     width: 100%; /* Full width */
     transition: bottom 0.3s; /* Transition effect when sliding down (and up) */
