@@ -37,12 +37,8 @@
   color: var(--main-color);
 }
 
-
-.Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .legal, #navbar, #navbar a:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF {
-  color: var(--font-color);
-}
-
-.FormCrea, .semaine button, #navbar a, .bouton, .Login, .texteB , .ListeDeroulante, .btn-info, .dropbtn {
+.Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .legal, #navbar, #navbar a:visited, .link_footer:checked, .link_footer:link, .link_footer, .link_footer:active, .shortcut,
+.shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, .FormCrea, .semaine button, #navbar a, .bouton, .Login, .texteB , .ListeDeroulante, .btn-info, .dropbtn  {
   color: var(--font-color);
 }
 
@@ -53,6 +49,8 @@
 .input_field:focus {
   border-color: var(--main-color);
 }
+
+/* main background */
 
 html {
   background: radial-gradient(ellipse farthest-corner at 50% 140%, rgba(0, 0, 0, 0.75) 10%, rgba(0, 0, 0, 0.85) 90%);

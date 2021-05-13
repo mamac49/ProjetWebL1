@@ -40,16 +40,6 @@
     right: 0;
     }
 
-  .sandwich_icon{
-    position: fixed;
-    padding: 10px;
-    font-size: 35px;
-    width: 65px;
-    height: 65px;
-    cursor: pointer;
-  }
-
-
   /*Menu sandwich*/
 
   .sandwich {
@@ -70,6 +60,7 @@
     }
 
     .sandwich_icon{
+      position: fixed;
       padding: 10px;
       font-size: 35px;
       width: 65px;
@@ -120,7 +111,6 @@
     transform: scale(2);
     font-size: 1.5em;
   }
-
 
   /*contenu*/
 
@@ -281,8 +271,7 @@
   font-size: 2em;
 }
 
-@font-face
-{
+@font-face {
     font-family: "Craies";
     src: url("../data/HomemadeApple.ttf");
 }
@@ -354,21 +343,11 @@ textarea {
   min-height: 640px;
 }
 
-.fermer {
-  color: rgba(88, 89, 93);
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.fermer:hover {
-  color: red;
-  cursor: pointer;
-}
-
 .suppression {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding-right: 15px;
 }
 
@@ -431,8 +410,7 @@ textarea {
 }
 
 /* Close button on hover */
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
  color: red;
  cursor: pointer;
 }
@@ -526,14 +504,6 @@ textarea {
   font-weight: bold;
 }
 
-.suppression {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-right: 15px;
-}
-
 .DevoirC{
   width: 930px;
   margin-bottom: 15px;
@@ -589,12 +559,6 @@ textarea {
 
 .input-field:focus {
   border: 2px solid;
-}
-
-.suppression {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .Fdroite {
@@ -954,5 +918,4 @@ textarea {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-}
 }

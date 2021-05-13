@@ -5,6 +5,8 @@
   --second-color: rgba(168, 168, 168, 0.74);
 }
 
+/* Background Color */
+
 .move_menu, .sandwich, .Login, .qwant, input[type=button], .bouton, .Login, .icon, .dropbtn:hover, .dropbtn:focus  {
   background-color: var(--main-color);
 }
@@ -21,19 +23,14 @@
   background-color: yellow;
 }
 
-.Center, .site {
+.Center, .site, .FormCrea {
   background-color: var(--second-color);
 }
 
-.FormCrea {
-  background-color: var(--second-color);
-}
+/* Color */
 
-html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, .legal, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button], .bouton, .Login, .texte {
-  color: var(--font-color);
-}
-
-.FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover, .Copybook:visited, .Copybook, .Copybook a, .chip, .chip a {
+html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, .legal, .shortcut, .shortcut:visited, .shortcut:active, .shortcut:checked, .texteF, input[type=button],
+.bouton, .Login, .texte, .FormCrea, .contact, #navbar a, footer ul, footer ul:visited, .link_footer, #navbar a:hover, .Copybook:visited, .Copybook, .Copybook a, .chip, .chip a {
   color: var(--font-color);
 }
 
@@ -48,6 +45,8 @@ html, ul, h4, .Title, .taoki, .sandwich_icon, .menu_cross, .menu_link, .retour, 
 .input_field:focus {
   border-color: var(--main-color);
 }
+
+/* main background */
 
 html {
   background: radial-gradient(ellipse at right, rgb(255,255,255), rgb(220,220,220)),
