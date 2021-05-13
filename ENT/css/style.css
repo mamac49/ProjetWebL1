@@ -3,6 +3,7 @@
   /* html */
   html {
     font-family: sans-serif;
+    font-size: 100%;
     height: 100%;
   }
 
@@ -39,10 +40,20 @@
     right: 0;
     }
 
+  .sandwich_icon{
+    position: fixed;
+    padding: 10px;
+    font-size: 35px;
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+  }
+
+
   /*Menu sandwich*/
 
   .sandwich {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
@@ -67,6 +78,7 @@
 
   .move_menu {
     transform: translateX(0px);
+
     }
 
   .menu_cross {
@@ -127,7 +139,7 @@
 
 .Centre_main {
   width: 1000px;
-  margin-left: 30%;
+  margin-left: 25%;
   margin-right: 10%;
   padding-top: 50px;
   background-color: inherit;
@@ -137,9 +149,13 @@
 
   .Anniversaire {
     width: 300px;
-    margin-left: 15px;
+    margin-left: 100px;
     padding: 10px;
     text-align: center;
+  }
+
+  .Anniversaire ul {
+    margin-top: 0px;
   }
 
   .AnnivTitre {
@@ -205,17 +221,13 @@
     transform: rotate(360deg);
   }
 
-.ligne {
-  display: flex;
-  flex-direction: row;
-}
-
 .qwant {
   width: 300px;
-  margin-left: 50px;
+  margin-left: 25px;
   padding: 10px;
   padding-top: 25px;
   text-align: center;
+  height: 176.5px;
 }
 
 .qwant img {
@@ -227,7 +239,7 @@
   width: 300px;
   height: 200px;
   text-align: center;
-  margin-left: 15px;
+  margin-left: 100px;
   margin-top: 50px;
   padding: 10px;
 }
@@ -236,7 +248,7 @@
   width: 300px;
   height: 200px;
   text-align: center;
-  margin-left: 50px;
+  margin-left: 25px;
   margin-top: 50px;
   margin-right: 20px;
   padding: 10px;
@@ -371,6 +383,12 @@ textarea {
 .has_cols {
   display: flex;
   flex-direction: row;
+}
+
+.PP {
+  width: 100px;
+  height: 100px;
+  border-radius: 1000px;
 }
 
 /* The Modal (background) */
@@ -757,7 +775,8 @@ textarea {
 
 .textePre {
   white-space: break-spaces;
-  font-size: 1.1em;
+  font-size: 1.2em;
+  font-family: sans-serif;
 }
 
 /* Blog */
@@ -915,4 +934,5 @@ textarea {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+}
 }

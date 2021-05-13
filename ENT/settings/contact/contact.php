@@ -70,7 +70,7 @@ function AfficheAvis($id) {
 
 if (isset($_POST['ValiderEnvoi'])) {
   $type = $_POST['Type'];
-  $message = $_POST['Rapport'];
+  $message = securisation($_POST['Rapport']);
   Save($type, $message);
 }
 

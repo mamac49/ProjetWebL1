@@ -1,9 +1,10 @@
-@media all and (min-width: 480px) and (max-width: 1023px) {
+@media screen and (min-width: 480px) and (max-width: 1023px) {
 
   /* html */
   html {
   font-family: sans-serif;
   height: 100%;
+  font-size: 1.9em;
   }
 
   .site_container {
@@ -14,6 +15,7 @@
   .site_content {
     z-index: 1;
     height: 50%;
+    margin-left: auto;
   }
 
 
@@ -23,19 +25,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
   }
 
   .Title {
     background-color: inherit;
     text-align: center;
     width: 100%;
-    margin: auto;
+    margin-right: 150px;
   }
 
   .logo_millocheau {
     display: block;
-    width: 180px;
-    height: 200px;
+    position: fixed;
+    max-width: 200px;
+    height: auto;
     top: 0;
     right: 0;
     }
@@ -60,7 +64,7 @@
 
     .sandwich_icon{
       padding: 10px;
-      font-size: 35px;
+      font-size: 50px;
       width: 65px;
       height: 65px;
       cursor: pointer;
@@ -113,6 +117,13 @@
 
   /*contenu*/
 
+.Site_mid {
+  width: 100%;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
 .Center_adap {
   background-color: white;
   padding-left: 15px;
@@ -127,18 +138,16 @@
 }
 
 .Centre_main {
-  width: 1000px;
-  margin-left: 30%;
-  margin-right: 10%;
+  width: 500px;
   padding-top: 50px;
   background-color: inherit;
+  display: flex;
 }
 
   /*Anniversaire*/
 
   .Anniversaire {
-    width: 300px;
-    margin-left: 15px;
+    width: 500px;
     padding: 10px;
     text-align: center;
   }
@@ -204,37 +213,51 @@
 }
 
 .qwant {
-  width: 300px;
-  margin-left: 50px;
+  width: 500px;
+  margin-top: 50px;
   padding: 10px;
   padding-top: 25px;
   text-align: center;
+  height: auto;
+}
+
+.qwant form {
+  display: flex;
+  flex-direction: column;
+}
+
+.qwant input {
+  width: 80%;
+  height: 35px;
+  margin-left: 10%;
+}
+
+.qwant button {
+  width: 80%;
+  height: 35px;
+  margin-left: 11%;
 }
 
 .qwant img {
-  width: 200px;
+  width: 300px;
   padding-bottom: 25px;
 }
 
 .raccourciM {
-  width: 300px;
+  width: 500px;
   height: 200px;
   text-align: center;
-  margin-left: 15px;
   margin-top: 50px;
   padding: 10px;
-  font-size:16px;
 }
 
 .raccourciB {
-  width: 300px;
+  width: 500px;
   height: 200px;
   text-align: center;
-  margin-left: 50px;
   margin-top: 50px;
   margin-right: 20px;
   padding: 10px;
-  font-size:16px;
 }
 
 .rac {
@@ -365,7 +388,7 @@ textarea {
 
 .has_cols {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 /* The Modal (background) */

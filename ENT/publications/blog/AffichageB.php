@@ -165,7 +165,7 @@ function UpdatePubli($contenu, $ID) {
     }
     $pos++;
     if (mysqli_query($link, $sqlp)) {
-      echo "succès";
+      echo "<script>console.log('succes')</script>";
     } else { echo mysqli_error($link);}
   }
 }
@@ -179,7 +179,7 @@ if (isset($_POST["ValiderChgt"])) {
   $contenu = array();
   $nb = 0;
   while (isset($_POST[$nb])) {
-    $temp = $_POST[$nb];
+    $temp = securisation($_POST[$nb]);
     $contenu[] = $temp;
     $nb++;
   }

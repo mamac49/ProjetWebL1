@@ -17,7 +17,7 @@ function ChgtMdp($mdpA, $mdpN) {
   $sql = "UPDATE `users` SET `mdp` = '$mdpN' WHERE `mail`= '$_SESSION[Mail]'";
   if (password_verify($mdpA, $mdp)) {
     if (mysqli_query($link, $sql)) {
-        echo "succès";
+        echo "<script>console.log('succes')</script>";
         header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/');
     } else {
       echo "erreur" . mysqli_error($link);
@@ -109,7 +109,7 @@ if ($_SESSION["Connected"] == true) {
               <p>
                 <div class="input-container">
                   <i class="fas fa-unlock iconCrea"></i>
-                  <input class="texte" type="password" name="passwordNN" placeholder="Valider le nouveau mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
+                  <input class="texte" type="password" name="passwordNN" placeholder="Répéter le nouveau mot de passe" class="input-field" size="30px" minlengh="8" maxlength="16" required>
                 </div>
               </p>
               <button type="submit" class="bouton" name="Valider"><span>Valider</span></button>

@@ -12,7 +12,7 @@ function SuppressionDevoir($id) {
 
   $sql = "DELETE FROM `cahiertxt` WHERE `idtxt`='$id' ";
   if (mysqli_query($link, $sql)) {
-    echo "succès";
+    echo "<script>console.log('succes')</script>";
     mysqli_query($link, "FLUSH `users`");
     header("Location: cahier.php");
   } else {
