@@ -743,6 +743,13 @@ textarea {
 
 .lines_buttons {
   display: flex;
+  width: 50%;
+}
+
+.option_buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .Saisie {
