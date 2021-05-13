@@ -5,11 +5,6 @@ include '../../fonc.php';
 
 function Delete($Contact) {
   $link = dbConnect();
-  $sql = "DELETE FROM `Commentaires` WHERE `idpublications`='$Contact'";
-  if (mysqli_query($link, $sql)) {
-  } else {
-    echo mysqli_error($link);
-  }
   $sql = "DELETE FROM `texte` WHERE `idpublications`='$Contact'";
   if (mysqli_query($link, $sql)) {
   } else {
