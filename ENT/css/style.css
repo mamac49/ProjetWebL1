@@ -386,7 +386,8 @@ textarea {
 }
 
 .PP {
-  width: 75px;
+  width: 150px;
+  height: 150px;
   border-radius: 1000px;
 }
 
