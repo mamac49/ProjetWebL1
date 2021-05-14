@@ -133,7 +133,7 @@ if ($_SESSION["Connected"] == true) {
               <h2 class="texte">Changement de l'image de profil</h2>
               <img src="<?php echo ' data:image/png;base64,' . base64_encode(Affichage($_SESSION['Mail'])) . ' '?>" alt="Photo de profil" class="PP">
               <p class="texte"><i class='fas fa-folder-open'></i> Charger une image à partir de mon ordinateur (maximum 64ko)</p>
-              <input type="file" id="file" name="PP" accept="image/*" required>
+              <input type="file" id="file" name="PP" accept="image/*" class="input_image_parametres"required>
               <button type="submit" class="bouton" name="ChgtIMG"><span>Valider</span></button>
             </form>
           </div>
