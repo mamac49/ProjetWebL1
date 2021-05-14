@@ -205,9 +205,16 @@
   /*???*/
 
   .retour {
+    transform: rotate(0deg);
+    transition: transform 300ms ease-in-out;
     margin-bottom: 25px;
     font-size: 2rem;
     color: black;
+    
+  }
+
+  .retour:hover {
+    transform: rotate(360deg);
   }
 
 .qwant {
@@ -540,7 +547,6 @@ textarea {
   display: flex;
   width: 350px;
   margin-bottom: 15px;
-  font-size: 1rem;
 }
 
 /* Style the form icons */
@@ -561,7 +567,7 @@ textarea {
   width: 100%;
   padding: 10px;
   outline: none;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .input-field:focus {
@@ -865,13 +871,9 @@ textarea {
   text-align: center;
 }
 
-
-.titre_creation_blog, .titre_creation_cahier_mulimedia{
+input[type=text]{
   font-size: 18pt;
 }
-/*input[type=text]{
-  font-size: 18pt;
-}*/
 
 /* Annuaire */
 
