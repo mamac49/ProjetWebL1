@@ -61,7 +61,6 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
     <link rel="icon" type="image/png" href="/Projetwebl1/ENT/data/logo_millocheau.png">
     <script src="https://kit.fontawesome.com/f0c5800638.js" crossorigin="anonymous"></script>
     <script src="/Projetwebl1/ENT/js/main.js"></script>
-    <script src="/Projetwebl1/ENT/js/Admin.js"></script>
   </head>
 
     <?php
