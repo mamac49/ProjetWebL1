@@ -543,6 +543,7 @@ textarea {
   display: flex;
   width: 350px;
   margin-bottom: 15px;
+  font-size: 1.2em;
 }
 
 /* Style the form icons */
