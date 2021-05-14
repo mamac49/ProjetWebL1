@@ -104,7 +104,9 @@ if ($_SESSION["Connected"] == true) {
           <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
         </div>
       </form>
-    <a class="Retour" href="blog.php"> <i class="fas fa-undo"></i>bonjour</a>
+      <div class="retour">
+        <a href="blog.php"> <i class="fas fa-undo"></i>bonjour</a>
+      </div>
     </div>
 
   </body>
