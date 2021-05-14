@@ -216,6 +216,10 @@
     transform: rotate(360deg);
   }
 
+  .retour_blog{
+    color: black;
+  }
+
 .qwant {
   width: 300px;
   margin-left: 25px;
