@@ -210,7 +210,6 @@
     transform: rotate(0deg);
     transition: transform 300ms ease-in-out;
     font-size: 2rem;
-    color: black;
   }
 
   .retour:hover {
