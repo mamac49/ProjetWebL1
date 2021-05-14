@@ -205,15 +205,9 @@
   /*???*/
 
   .retour {
-    transform: rotate(0deg);
-    transition: transform 300ms ease-in-out;
     margin-bottom: 25px;
     font-size: 2rem;
-    text-decoration: none;
-  }
-
-  .retour:hover {
-    transform: rotate(360deg);
+    color: black;
   }
 
 .qwant {
