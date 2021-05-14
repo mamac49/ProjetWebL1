@@ -398,12 +398,15 @@ textarea {
  word-wrap: break-word;
 }
 
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* The Close Button */
 .close {
  /* Position it in the top right corner outside of the modal */
- position: absolute;
- right: 775px;
- top: 75px;
+ display: block;
  color: #000;
  font-size: 35px;
  font-weight: bold;

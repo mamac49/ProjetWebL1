@@ -88,7 +88,6 @@ if (isset($_SESSION["Connected"])) {
       </div>
     </div>
 
-
   </body>
 </html>
  <?php
