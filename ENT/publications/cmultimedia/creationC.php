@@ -74,11 +74,13 @@ if ($_SESSION["Connected"] == true) {
 <!--ajout de la méthode PUT-->
 <div class="Center_adap Saisie">
   <form action="creationC.php" method="POST" enctype="multipart/form-data">
-    <input type="text" name="titre" placeholder="Titre du cahier" >
+    <div class="titreblog">
+      <input type="text" name="titre" placeholder="Titre du cahier" >
+    </div>
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
     </ul>
-    
+
     <button class="boutonAjouterTexte bouton" id="add_text" onclick="addText()"><span>Ajouter un texte</span></button>
     <button class="boutonAjouterImage bouton" id="add_image" onclick="addImage()"><span>Ajouter une image</span></button>
     <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideo()"><span>Ajouter une vidéo</span></button>
