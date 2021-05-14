@@ -295,9 +295,11 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
 
     <div id="AddComm" class="modal">
         <form class="modal-content animate" method="POST">
-        <span onclick="document.getElementById('AddComm').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
-          <h3 class="titre">Commentaire</h3>
+          <div class="modal_header">
+            <h3 class="titre">Commentaire</h3>
+            <span onclick="document.getElementById('AddComm').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
+          </div>
           <p><textarea name="commentaire" rows="6" cols="40" class="texte_ajout_commentaire"></textarea></p>
           <p><button type="submit" class="bouton" name="ValiderEnvoi"><span>Envoyer</span></button></p>
         </div>
