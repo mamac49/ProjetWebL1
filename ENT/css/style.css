@@ -208,8 +208,7 @@
     transform: rotate(0deg);
     transition: transform 300ms ease-in-out;
     margin-bottom: 25px;
-    width: 2rem;
-    height: 2rem;
+    font-size: 2rem;
   }
 
   .retour:hover {
