@@ -131,7 +131,7 @@
 
 .Centre_main {
   width: 1000px;
-  margin-left: 20%;
+  margin: auto;
   padding-top: 50px;
   background-color: inherit;
 }
