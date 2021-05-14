@@ -865,6 +865,10 @@ textarea {
   text-align: center;
 }
 
+
+.titre_creation_blog, .titre_creation_cahier_mulimedia{
+  font-size: 18pt;
+}
 /*input[type=text]{
   font-size: 18pt;
 }*/

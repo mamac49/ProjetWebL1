@@ -75,7 +75,7 @@ if ($_SESSION["Connected"] == true) {
 <div class="Center_adap Saisie">
   <form action="creationC.php" method="POST" enctype="multipart/form-data">
     <div class="titreblog">
-      <input type="text" name="titre" placeholder="Titre du cahier" >
+      <input type="text" name="titre" placeholder="Titre du cahier" class="titre_creation_cahier_mulimedia">
     </div>
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
