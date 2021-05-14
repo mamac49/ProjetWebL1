@@ -76,7 +76,9 @@ if ($_SESSION["Connected"] == true) {
 <!--ajout de la méthode PUT-->
 <div class="Center_adap Saisie">
   <form action="creationB.php" method="POST" enctype="multipart/form-data">
-    <input type="text" name="titre" placeholder="Titre du cahier" >
+    <div class="titreblog">
+      <input type="text" name="titre" placeholder="Titre du cahier" >
+    </div>
     <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
     </ul>

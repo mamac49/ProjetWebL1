@@ -850,9 +850,12 @@ textarea {
   word-break: break-word;
 }
 
+.titreblog{
+  margin:auto;
+}
+
 input[type=text]{
   font-size: 16pt;
-  margin:auto;
 }
 
 /* Annuaire */
