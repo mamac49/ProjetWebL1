@@ -565,7 +565,7 @@ textarea {
   width: 100%;
   padding: 10px;
   outline: none;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .input-field:focus {
