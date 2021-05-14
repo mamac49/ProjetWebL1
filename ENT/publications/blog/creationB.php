@@ -74,36 +74,38 @@ if ($_SESSION["Connected"] == true) {
     <script src="/Projetwebl1/ENT/js/blog.js"></script>
   </head>
 <!--ajout de la méthode PUT-->
-<div class="Center_adap Saisie">
-  <form action="creationB.php" method="POST" enctype="multipart/form-data">
-    <div class="titreblog">
-      <input type="text" name="titre" placeholder="Titre du cahier" >
-    </div>
-    <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
+  <body>
+    <div class="Center_adap Saisie">
+      <form action="creationB.php" method="POST" enctype="multipart/form-data">
+        <div class="titreblog">
+          <input type="text" name="titre" placeholder="Titre du cahier" >
+        </div>
+        <ul class="publicationsCahierMultimedia" id="publications_cahier_multimedia">
 
-    </ul>
-    <div class="boutonsCahierMultimedia">
-      <button class="boutonAjouterTexte bouton" id="add_text" onclick="addTextB()"><span>Ajouter un texte</span></button>
-      <button class="boutonAjouterImage bouton" id="add_image" onclick="addImageB()"><span>Ajouter une image</span></button>
-      <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideoB()"><span>Ajouter une vidéo</span></button>
-      <select name="matiere">
-        <option value="Francais">Français</option>
-        <option value="Maths">Mathématiques</option>
-        <option value="Sciences">Science</option>
-        <option value="Espace">Espace</option>
-        <option value="Temps">Temps</option>
-        <option value="Musique">Musique</option>
-        <option value="Arts">Arts</option>
-        <option value="Anglais">Anglais</option>
-        <option value="EPS">EPS</option>
-        <option value="Contes">Contes</option>
-        <option value="Rituels">Rituels</option>
-        <option value="Education civique">Education civique</option>
-      </select>
-      <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
+        </ul>
+        <div class="boutonsCahierMultimedia">
+          <button class="boutonAjouterTexte bouton" id="add_text" onclick="addTextB()"><span>Ajouter un texte</span></button>
+          <button class="boutonAjouterImage bouton" id="add_image" onclick="addImageB()"><span>Ajouter une image</span></button>
+          <button class="boutonAjouterVideo bouton" id="add_video" onclick="addVideoB()"><span>Ajouter une vidéo</span></button>
+          <select name="matiere">
+            <option value="Francais">Français</option>
+            <option value="Maths">Mathématiques</option>
+            <option value="Sciences">Science</option>
+            <option value="Espace">Espace</option>
+            <option value="Temps">Temps</option>
+            <option value="Musique">Musique</option>
+            <option value="Arts">Arts</option>
+            <option value="Anglais">Anglais</option>
+            <option value="EPS">EPS</option>
+            <option value="Contes">Contes</option>
+            <option value="Rituels">Rituels</option>
+            <option value="Education civique">Education civique</option>
+          </select>
+          <input type="submit" name="Valider" class="bouton Validerbouton" value="Valider">
+        </div>
+      </form>
     </div>
-  </form>
-</div>
+  </body>
 </html>
 
 <?php
