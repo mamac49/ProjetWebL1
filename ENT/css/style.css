@@ -817,6 +817,10 @@ textarea {
   width: 500px;
 }
 
+.texte_ajout_commentaire {
+  width: 98%;
+}
+
 .Comm {
   display: flex;
   justify-content: space-around;
