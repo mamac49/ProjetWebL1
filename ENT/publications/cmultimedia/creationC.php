@@ -105,7 +105,7 @@ if ($_SESSION["Connected"] == true) {
     </div>
   </form>
 </div>
-<a class="retour" href="cmedia.php"> <i class="fas fa-undo"></i></a>
+<a class="Retour" href="cmedia.php"> <i class="fas fa-undo"></i></a>
 
 <?php
 } else {

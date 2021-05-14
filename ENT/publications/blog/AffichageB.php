@@ -332,7 +332,7 @@ if ($_SESSION["Connected"] == true) { // vérifie si on est bien connecté via l
         </div>
       </form>
     </div>
-    <a class="retour" href="blog.php"> <i class="fas fa-undo"></i></a>
+    <a class="Retour" href="blog.php"> <i class="fas fa-undo"></i></a>
   </body>
 </html>
 
