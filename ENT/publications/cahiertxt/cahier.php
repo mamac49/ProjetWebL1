@@ -34,7 +34,9 @@ function NbPubJour($jour, $classe) {
 function AfficherDevoir($jour, $classe, $matiere) {
   $link = dbConnect();
 
-  $sql = "SELECT * FROM `cahiertxt` WHERE (`jour`='$jour' AND `classe`='$classe' AND `matiere`='$matiere');";
+  $ID = $_SESSION["ID"]
+
+  $sql = "SELECT * FROM `cahiertxt` LEFT JOIN `users` ON (`cahiertxt`.`classe` = `users`.`classe`) OR (`users`.`admin`=true) WHERE (`cahiertxt`.`jour`='Mardi' AND `cahiertxt`.`matiere`='Maths' AND `users`.`iduser` = '1')";
   if ($resultat = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($resultat);
     mysqli_free_result($resultat);
@@ -89,21 +91,11 @@ if ($_SESSION["Connected"] == "True") {
             <ul>
               <?php
                   foreach ($ListMatiere as $x) {
-                    if (gettype(AfficherDevoir($jour, "GS", $x)) != "NULL") {
-                       $info = AfficherDevoir($jour, "GS", $x);
+                    if (gettype(AfficherDevoir($jour, $x)) != "NULL") {
+                       $info = AfficherDevoir($jour, $x);
                        $consigne = $info['consigne']; ?>
                       <li class="texte suppression"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
                         <?php if ($_SESSION["Admin"] == True) { ?> <a href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"><i class="fas fa-times fermer"></i></a> <?php } ?></li>
-              <?php }} ?>
-
-              <?php
-                  foreach ($ListMatiere as $x) {
-                    if (gettype(AfficherDevoir($jour, "CP", $x)) != "NULL") {
-                       $info = AfficherDevoir($jour, "CP", $x);
-                       $matiereP = $info['matiere'];
-                       $consigne = $info['consigne']; ?>
-                       <li class="texte suppression"><div class="DevoirC"> <?php echo "<i class='$matiere[$x] matiere'></i>" . "<span class='MG'>" . $x .  " : " . "</span>" . $consigne; ?></div>
-                         <?php if ($_SESSION["Admin"] == True) { ?> <a href="SupDevoir.php?id=<?php print $info['idtxt'] ?>"><i class="fas fa-times fermer"></i></a> <?php } ?></li>
               <?php }} ?>
             </ul>
         </div>
