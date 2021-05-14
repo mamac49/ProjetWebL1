@@ -34,7 +34,7 @@ function NbPubJour($jour, $classe) {
 function AfficherDevoir($jour, $classe, $matiere) {
   $link = dbConnect();
 
-  $ID = $_SESSION["ID"]
+  $ID = $_SESSION["ID"];
 
   $sql = "SELECT * FROM `cahiertxt` LEFT JOIN `users` ON (`cahiertxt`.`classe` = `users`.`classe`) OR (`users`.`admin`=true)
   WHERE (`cahiertxt`.`jour`='Mardi' AND `cahiertxt`.`matiere`='Maths' AND `users`.`iduser` = '1')";
