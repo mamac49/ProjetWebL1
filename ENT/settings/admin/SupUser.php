@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include '../../fonc.php';
+
 function Delete($Contact) {
   $link = dbConnect();
   $sql = "DELETE FROM `users` WHERE `iduser`='$Contact'";
