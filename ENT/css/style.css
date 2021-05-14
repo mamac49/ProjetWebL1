@@ -540,7 +540,7 @@ textarea {
   display: flex;
   width: 350px;
   margin-bottom: 15px;
-  font-size: 100%;
+  font-size: 1rem;
 }
 
 /* Style the form icons */
