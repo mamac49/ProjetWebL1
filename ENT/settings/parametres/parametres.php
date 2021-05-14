@@ -18,7 +18,7 @@ function ChgtMdp($mdpA, $mdpN) {
   if (password_verify($mdpA, $mdp)) {
     if (mysqli_query($link, $sql)) {
         echo "<script>console.log('succes')</script>";
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/');
+        header('Location: /Projetwebl1/ENT/');
     } else {
       echo "erreur" . mysqli_error($link);
     }
@@ -145,6 +145,6 @@ if ($_SESSION["Connected"] == true) {
 
 <?php
 } else {
-  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
+  header('Location: /Projetwebl1/ENT/auth/auth.php');
 }
 ?>

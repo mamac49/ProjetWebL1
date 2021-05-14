@@ -18,7 +18,7 @@ function Create($nom, $prenom, $mail, $password, $date, $admin, $classe) {
     if (mysqli_query($link, $sql)) {
         reset($_POST);
         mysqli_close($link);
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
+        header('Location: /Projetwebl1/ENT/settings/admin/UserCreation.php');
     } else {
       echo mysqli_error($link);
     }
@@ -130,8 +130,8 @@ if ($_SESSION["Connected"] == true and $_SESSION["Admin"] == True) {
 
 <?php
 } elseif ($_SESSION['Connected'] == False) {
-  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
+  header('Location: /Projetwebl1/ENT/auth/auth.php');
 } else {
-  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT');
+  header('Location: /Projetwebl1/ENT');
 }
 ?>

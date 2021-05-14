@@ -34,7 +34,7 @@ function Connexion($mail, $password) {
         $_SESSION["Id"] = $id;
         $_SESSION["Classe"] = $classe;
 
-        header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+        header('Location: /Projetwebl1/ENT');
     } else {
       echo "<script> alert('Identifiant ou mot de passe faux'); </script>";
       header("refresh: 0");
@@ -50,7 +50,7 @@ if (isset($_POST['Valider'])) {
 
 
 if (isset($_SESSION["Connected"])) {
-    header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT');
+    header('Location: /Projetwebl1/ENT');
 } else {
 ?>
 

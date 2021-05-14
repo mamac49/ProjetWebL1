@@ -27,7 +27,7 @@ if ($_SESSION["Connected"] == "True") {
         <ul class="texte">
           <li class="LiUser"><i class="fas fa-user-circle IconeProfil"></i>Antoine Beunas</li>
           <li class="LiUser"><i class="fab fa-discord IconeProfil"></i> Benjamin Humbert</li>
-          <li class="LiUser"><i class="fas fa-cocktail IconeProfil"></i>Enzo Creuzet</li>
+          <li class="LiUser"><i class="fab fa-ubuntu"></i></i>Enzo Creuzet</li>
           <li class="LiUser"><i class="fab fa-steam IconeProfil"></i> Liam Kern</li>
           <li class="LiUser"><i class="fab fa-linux IconeProfil"></i> Mattéo Langlois</li>
         </ul>
@@ -44,6 +44,6 @@ if ($_SESSION["Connected"] == "True") {
 
 <?php
 } else {
-  header('Location: https://mlanglois.freeboxos.fr//Projetwebl1/ENT/auth/auth.php');
+  header('Location: /Projetwebl1/ENT/auth/auth.php');
 }
 ?>
