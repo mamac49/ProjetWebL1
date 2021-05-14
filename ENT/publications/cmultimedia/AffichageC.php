@@ -139,6 +139,7 @@ if ($_SESSION["Connected"] == true) {
 </div>
 </div>
 </div>
+<a class="retour" href="cmedia.php"> <i class="fas fa-undo"></i></a>
 </body>
 </html>
 

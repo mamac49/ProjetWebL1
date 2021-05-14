@@ -105,6 +105,7 @@ if ($_SESSION["Connected"] == true) {
         </div>
       </form>
     </div>
+    <a class="retour" href="blog.php"> <i class="fas fa-undo"></i></a>
   </body>
 </html>
 
