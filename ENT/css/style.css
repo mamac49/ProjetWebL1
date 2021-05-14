@@ -56,7 +56,8 @@
     text-align: left;
     padding-left: 10px;
     z-index: 3;
-    transform: translateX(-290px);
+    transform: translateX(-275px);
+    transition: 300ms all ease-in-out;
     }
 
     .sandwich_icon{
@@ -70,7 +71,6 @@
 
   .move_menu {
     transform: translateX(0px);
-    transition: 300ms all ease-in-out;
     }
 
   .menu_cross {
