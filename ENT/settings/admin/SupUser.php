@@ -17,6 +17,6 @@ function Delete($Contact) {
 if ($_SESSION["Admin"] == True) {
 
 Delete($_GET['id']);
-header('Location: https://mlanglois.freeboxos.fr/Projetwebl1/ENT/settings/admin/UserCreation.php');
+header('Location: /Projetwebl1/ENT/settings/admin/UserCreation.php');
 }
 ?>
