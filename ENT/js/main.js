@@ -1,13 +1,13 @@
 /*On lance une fonction si l'on clique sur la balise p*/
 function move_menu_sandwich()
 {
-  //On change la classe "menu_sandwich" en "move_menu" (problème avec l'ajout de classe à regler)
+  //On change le css du menu si l'on clique sur l'icone dédié à l'ouverture du menu
   var sandwich = document.getElementById("menu_sandwich");
   sandwich.style.transform = 'translateX(0px)';
   sandwich.style.transition = '300ms all ease-in-out';
 }
 
-//même fonctionnement que précedemment en sens inverse, si l'on clique sur la croix
+//même fonctionnement mais en sens inverse, si l'on clique sur la croix
 function close_menu_sandwich()
 {
   var sandwich = document.getElementById("menu_sandwich");
