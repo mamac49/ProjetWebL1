@@ -36,7 +36,8 @@ function AfficherDevoir($jour, $classe, $matiere) {
 
   $ID = $_SESSION["ID"]
 
-  $sql = "SELECT * FROM `cahiertxt` LEFT JOIN `users` ON (`cahiertxt`.`classe` = `users`.`classe`) OR (`users`.`admin`=true) WHERE (`cahiertxt`.`jour`='Mardi' AND `cahiertxt`.`matiere`='Maths' AND `users`.`iduser` = '1')";
+  $sql = "SELECT * FROM `cahiertxt` LEFT JOIN `users` ON (`cahiertxt`.`classe` = `users`.`classe`) OR (`users`.`admin`=true)
+  WHERE (`cahiertxt`.`jour`='Mardi' AND `cahiertxt`.`matiere`='Maths' AND `users`.`iduser` = '1')";
   if ($resultat = mysqli_query($link, $sql)) {
     $row = mysqli_fetch_array($resultat);
     mysqli_free_result($resultat);
