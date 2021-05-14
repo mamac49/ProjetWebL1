@@ -122,8 +122,8 @@ if ($_SESSION["Connected"] == "True") {
     <div id="AddHW" class="modal">
 
         <form class="modal-content animate" method="POST">
-        <span onclick="document.getElementById('AddHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
         <div class="container">
+          <span onclick="document.getElementById('AddHW').style.display='none'" class="close" title="Close Modal"><i class="fas fa-times"></i></span>
           <h3>Classe</h3>
           <select name="jour">
             <option value="Lundi">Lundi</option>
