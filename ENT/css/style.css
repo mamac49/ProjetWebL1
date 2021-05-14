@@ -851,7 +851,7 @@ textarea {
 }
 
 .titreblog input{
-  margin:auto;
+  text-align: center;
 }
 
 input[type=text]{
